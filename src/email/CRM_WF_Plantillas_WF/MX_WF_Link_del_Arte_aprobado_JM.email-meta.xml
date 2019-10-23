@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Link del Arte aprobado JM</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de Liga para Arte {!CRM_WF_Artes__c.Name}</subject>
+    <textOnly>Estimad@ {!CRM_WF_Artes__c.CreatedBy}
+
+Favor de ingresar la liga del Arte {!CRM_WF_Artes__c.CRM_WF_Nombre_De_La_Version_Arte__c} con número de folio {!CRM_WF_Artes__c.Name} en el campo &quot;Link del Arte aprobado&quot;.
+
+Puedes ingresar desde la siguiente liga para hacer la actualización del registro:
+
+Registro Arte {!CRM_WF_Artes__c.Name}
+
+Al ingresar la liga del Arte y guardar el registro, les llegará por correo electrónico a Línea Bancomer y al Buzón de tu Squad.
+
+¡Muchas gracias por tu colaboración!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

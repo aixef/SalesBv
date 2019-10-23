@@ -1,0 +1,73 @@
+.THIS img .tamanio{
+	max-width: 30%;
+}
+.THIS .tamanio2{
+    width:20px;
+    height:22px;
+    max-width: 20px;
+}
+.THIS .colorTRIni{
+    background-color: #0B610B;
+    color: #FFFFFF;
+}
+.THIS .colorTR2{
+    background-color: #04B431;
+}
+.THIS .tamanioInput{
+    width: 20%;
+}
+.THIS .tallTextArea textarea {
+    height: 5rem;
+}
+.THIS .slds-section__title{
+    display:block;
+}
+.THIS .slds-button-section{
+    font-size:.8125rem !important;
+}
+.THIS .slds-question{
+    padding: 0.5rem
+}
+.THIS .slds-radio_button-group{
+    float:right;
+}
+.THIS .slds-section__content{
+    padding: 0 1rem;
+}
+
+.THIS .slds-destructive .slds-button{
+    color:#A61A14;
+}
+.THIS .slds-destructive .slds-radio_button [type=radio]:checked+.slds-radio_button__label{
+    background-color:#A61A14;
+}
+.THIS .slds-float-span{
+    float:right
+}
+.THIS .slds-question-divisor{
+    border-right: 2px solid #f3f2f2;
+}
+.THIS .slds-button-calcula-porcentaje{
+    float:right; padding-right:0.75rem;
+}
+.THIS .td-first-label{
+    background-color:#f9f9f9;
+}
+.THIS .td-first-value{
+    background-color:#f9f9f9;
+    text-align:right;
+}
+.THIS .td-second-label{
+    padding-left:3rem;
+}
+.THIS .td-second-value{
+    text-align:right;
+}
+.THIS .slds-puntos__entrenamiento{
+    width:50% !important;
+}
+.THIS .div-puntos__entrenamiento{
+    padding-top:0.5rem;
+    width: 100%;
+    text-align: right;
+}

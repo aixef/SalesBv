@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla utilizada para los intervinientes del proceso de aprobacion del plan de cuenta de la Banca Patrimonial</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BBVA_CS</letterhead>
+    <name>Revisión de Plan de Cuenta</name>
+    <style>formalLetter</style>
+    <subject>Revisión de Plan de Cuenta</subject>
+    <textOnly>Buen día
+
+Se le notifica que el usuario {!Ficha_de_conocimiento__c.OwnerFullName} se encuentra en espera de su visto bueno para el Plan de Cuenta {!Ficha_de_conocimiento__c.Name} que pertenece al cliente:
+
+{!Ficha_de_conocimiento__c.Cliente__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

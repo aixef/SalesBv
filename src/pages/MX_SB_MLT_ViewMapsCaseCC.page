@@ -1,0 +1,309 @@
+<apex:page standardController="Case" showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false"  docType="html-5.0">   
+    <apex:includeScript value="{!$Label.MX_SB_MLT_JQuery}"/>
+	<apex:includeScript value="{!$Label.MX_SB_MLT_GoogleApisURL}{!$Label.MX_SB_MLT_GoogleApiKey}&callback=initMap" html-async="defer"/>
+    <apex:includeScript value="{!$Label.MX_SB_MLT_GoogleURL}{!$Label.MX_SB_MLT_GoogleApiKey}"/>
+	<body>
+        <div id= "map" class="div-map"></div> 
+        <div id="floating-panel" align="right">
+		<div id="directions-panel"></div>
+		</div>
+		<div id="floating-panelP">
+         <apex:form >
+                <br/>
+				<h1 class="h3-stl" hidden="true"><apex:outputText value=""/></h1>
+                <apex:inputHidden id="Origintxt" value="{!Case.Origin}" ></apex:inputHidden>
+                <apex:inputHidden id="Casetxt" value="{!Case.CaseNumber}"></apex:inputHidden>
+                <p><apex:outputText value="Dirección:" styleClass ="{!IF(Case.Origin == 'Phone', 'display-block','display-none')} out-text" ></apex:outputText></p>
+                <apex:inputText id="dirtxt" value="{!Case.MX_SB_MLT_Address__c}" size="50" styleClass="{!IF(Case.Origin == 'Phone', 'display-block','display-none')} in-text" html-readonly="true" ></apex:inputText>
+                <p><apex:outputText value="Coordenadas:" styleClass ="{!IF(Case.Origin == 'Phone', 'display-block','display-none')} out-text" ></apex:outputText></p>
+				<p><apex:inputText id="loctxt" value="{!Case.MX_SB_MLT_URLLocation__c}" size="50" styleClass="{!IF(Case.Origin == 'Phone', 'display-block','display-none')} in-text" html-readonly="true"></apex:inputText></p>
+				<div align= "center" draggable="false">
+					<apex:commandButton action="{!save}" value="Guardar"  styleClass="{!IF(Case.Origin == 'Phone', 'display-block','display-none')}"/>
+            </div>
+               			<apex:actionFunction action="{!save}" id="SaveButton" name="SaveButton" reRender="true" />
+                <apex:inputHidden id="StNumbertxt" value="{!Case.MX_SB_MLT_NumeroCalle__c}"></apex:inputHidden>
+                <apex:inputHidden id="StreetNametxt" value="{!Case.MX_SB_MLT_Calle__c}"></apex:inputHidden>
+                <apex:inputHidden id="Colonytxt" value="{!Case.MX_SB_MLT_Colonia__c}"></apex:inputHidden>
+                <apex:inputHidden id="Statetxt" value="{!Case.MX_SB_MLT_Estado__c}"></apex:inputHidden>
+                <apex:inputHidden id="PostalCodetxt" value="{!Case.MX_SB_MLT_CodigoPostal__c}" ></apex:inputHidden>
+				<p hidden="true"><apex:outputText value="Buscar dirección:" styleClass="{!IF(Case.Origin == 'Phone', 'display-block','display-none')} in-text;text-align: left;font-family:verdana;color:#1464A5;" /></p>
+			</apex:form>
+            <p hidden="true"><input id="address" type="textbox" value="" maxlength="200" size="50" styleClass="{!IF(Case.Origin == 'Phone', 'display-block','display-none')} in-text" placeholder="Ingrese dirección o coordenadas"/></p>
+            <p hidden="true"><input id="submit" type="button"  align="center" value=" Buscar " styleClass="{!IF(Case.Origin == 'Phone', 'display-block','display-none')} in-text"/></p>
+			<apex:form >
+				<p hidden="true"><apex:outputText value="Ingrese destino:" styleClass="{!IF(Case.Origin == 'Phone', 'display-block','display-none')}in-text;text-align: left;font-family:verdana;color:#1464A5;" /></p>
+				<p><apex:inputHidden id="start" value="{!Case.MX_SB_MLT_Address__c}"></apex:inputHidden></p>
+			</apex:form>
+            <p hidden="true"><input id = "end" type="textbox" value="" styleClass="{!IF(Case.Origin == 'Phone', 'display-block','display-none')} in-text;width:100%;" placeholder="Ingrese dirección o coordenadas" /></p><br/>
+		</div>
+		
+	</body>
+
+<script type="text/javascript"> 
+if(document.getElementById('j_id0:j_id5:Origintxt').value='Phone'){
+    if(document.getElementById('j_id0:j_id5:dirtxt').value.includes(", México")){}
+    else{
+		if(document.getElementById('j_id0:j_id5:dirtxt').value.length>0){
+			if(document.getElementById('j_id0:j_id5:loctxt').value.length < 1){
+				window.onload=function(){
+				SaveButton();
+				}
+			}
+    	}
+	}
+}
+var map;
+    initMap();
+    var marker2;    
+    var id;
+    var markers= {};
+    var infowindow= new google.maps.InfoWindow;
+    function initMap() {
+    var directionsService=new google.maps.DirectionsService();
+    var directionsDisplay=new google.maps.DirectionsRenderer();
+      var Origen = document.getElementById('j_id0:j_id5:Origintxt').value;
+        if(Origen == "Phone") {
+        var coordtexto = document.getElementById('j_id0:j_id5:loctxt').value;
+        var array = coordtexto.split(',');
+        var latIni = parseFloat(array[0]);
+        var lonIni = parseFloat(array[1]);
+        var mapOptions= {
+            zoom: 17,
+            accuracy: 10,
+            center: new google.maps.LatLng(latIni,lonIni),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map= new google.maps.Map(document.getElementById('map'),  mapOptions);           
+        directionsDisplay.setMap(map);
+        directionsDisplay.setPanel(document.getElementById('right-panel'));
+        var control=document.getElementById('floating-panel');
+        control.style.display='block';
+        var onChangeHandler=function() {
+            calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+        document.getElementById('j_id0:j_id22:start').addEventListener('change', onChangeHandler);
+        document.getElementById('end').addEventListener('change', onChangeHandler);
+        var geocoder= new google.maps.Geocoder();
+        document.getElementById('submit').addEventListener('click', function() {
+            directionsDisplay.set('directions', null);
+            geocodeAddress(geocoder, map,infowindow); 
+        });
+        marker2= new google.maps.Marker({
+            map: map,
+            draggable: true,
+            animation: true,
+		label: 'A', 
+            position: new google.maps.LatLng(latIni,lonIni),
+        });
+        google.maps.event.addListener(marker2, 'dragend', function(evt){
+            var a = document.getElementById('j_id0:j_id5:loctxt').value = evt.latLng.lat().toFixed(7) +' , '+evt.latLng.lng().toFixed(7);
+            geocoder.geocode({'address': a}, function(results, status) {
+                if (status === 'OK') {
+                    document.getElementById('j_id0:j_id5:dirtxt').value=results[0].formatted_address;
+                    document.getElementById('j_id0:j_id22:start').value=results[0].formatted_address;
+                    document.getElementById('j_id0:j_id5:PostalCodetxt').value=results[0].address_components[6].long_name;
+                    document.getElementById('j_id0:j_id5:StNumbertxt').value=results[0].address_components[0].long_name;
+                    document.getElementById('j_id0:j_id5:StreetNametxt').value=results[0].address_components[1].long_name;
+                    document.getElementById('j_id0:j_id5:Colonytxt').value=results[1].address_components[2].long_name;
+                    document.getElementById('j_id0:j_id5:Statetxt').value=results[0].address_components[4].long_name;
+                    document.getElementById('j_id0:j_id5:Countrytxt').value=results[0].address_components[5].long_name; 
+                }
+            });
+        });
+            var address = document.getElementById('j_id0:j_id5:dirtxt').value;
+            geocoder.geocode({'address': address}, function(results, status) {
+                    id = marker2.__gm_id
+                    markers[id] = marker2; 
+                    marker2 = markers[id]; 
+                    marker2.setMap(null);
+                if (status === 'OK') {
+                    map.setCenter(results[0].geometry.location);
+                        var a = document.getElementById('j_id0:j_id5:loctxt').value = results[0].geometry.location.lat().toFixed(7)+',' +results[0].geometry.location.lng().toFixed(7);
+                        var b = document.getElementById('j_id0:j_id5:dirtxt').value=results[0].formatted_address;
+                var h=document.getElementById('address').value=results[0].formatted_address;
+                        var g = document.getElementById('j_id0:j_id5:PostalCodetxt').value=results[0].address_components[6].long_name;
+                        var c = document.getElementById('j_id0:j_id5:StNumbertxt').value=results[0].address_components[0].long_name;
+                        var d = document.getElementById('j_id0:j_id5:StreetNametxt').value=results[0].address_components[1].long_name;
+                        var e = document.getElementById('j_id0:j_id5:Colonytxt').value=results[0].address_components[2].long_name;
+                        var f = document.getElementById('j_id0:j_id5:Statetxt').value=results[0].address_components[5].long_name;
+                    map.setCenter(results[0].geometry.location);
+                    marker2 = new google.maps.Marker({
+                    map: map,
+			label: 'A',
+                    draggable: true,
+                    position: results[0].geometry.location
+                    });  
+                    google.maps.event.addListener(marker2, 'dragend', function(evt){
+                        var a = document.getElementById('j_id0:j_id5:loctxt').value = evt.latLng.lat().toFixed(7) +' , '+evt.latLng.lng().toFixed(7);
+                        geocoder.geocode({'address': a}, function(results, status) {
+                            if (status === 'OK') {
+                                document.getElementById('j_id0:j_id5:dirtxt').value=results[0].formatted_address;
+                                document.getElementById('j_id0:j_id5:PostalCodetxt').value=results[0].address_components[6].long_name;
+                            document.getElementById('address').value=results[0].formatted_address;
+                                document.getElementById('j_id0:j_id5:StNumbertxt').value=results[0].address_components[0].long_name;
+                                document.getElementById('j_id0:j_id5:StreetNametxt').value=results[0].address_components[1].long_name;
+                                document.getElementById('j_id0:j_id5:Colonytxt').value=results[1].address_components[2].long_name;
+                                document.getElementById('j_id0:j_id5:Statetxt').value=results[0].address_components[4].long_name;
+                                document.getElementById('j_id0:j_id5:Countrytxt').value=results[0].address_components[5].long_name; 
+                            }
+                        });
+                    });
+                }
+            });            
+        google.maps.event.addListener(marker2, 'click', function(evt) {
+            var a=document.getElementById('j_id0:j_id5:loctxt').value=evt.latLng.lat().toFixed(7) +' , '+evt.latLng.lng().toFixed(7);
+            geocoder.geocode({'address': a}, function(results, status) {
+                if (status==='OK') {
+                    document.getElementById('j_id0:j_id5:dirtxt').value=results[0].formatted_address;
+                    document.getElementById('address').value=results[0].formatted_address;
+                    document.getElementById('j_id0:j_id5:PostalCodetxt').value=results[0].address_components[6].long_name;
+                    document.getElementById('j_id0:j_id5:StNumbertxt').value=results[0].address_components[0].long_name;
+                    document.getElementById('j_id0:j_id5:StreetNametxt').value=results[0].address_components[1].long_name;
+                    document.getElementById('j_id0:j_id5:Colonytxt').value=results[0].address_components[2].long_name;
+                    document.getElementById('j_id0:j_id5:Statetxt').value=results[0].address_components[4].long_name;
+                    document.getElementById('j_id0:j_id5:Countrytxt').value=results[0].address_components[5].long_name;
+                }
+            });
+        });
+    }
+    else {
+    var coordtexto = document.getElementById('j_id0:j_id5:loctxt').value;
+        var array = coordtexto.split(',');
+        var latIni = parseFloat(array[0]);
+        var lonIni = parseFloat(array[1]);
+        var mapOptions= {
+            zoom: 17,
+            accuracy: 10,
+            center: new google.maps.LatLng(latIni,lonIni),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map= new google.maps.Map(document.getElementById('map'),  mapOptions);           
+                  
+        marker2= new google.maps.Marker({
+            map: map,
+            draggable: false,
+            animation: true,
+            position: new google.maps.LatLng(latIni,lonIni),
+        });
+    }
+    }   
+    function geocodeAddress(geocoder, resultsMap) {
+     var Origen = document.getElementById('j_id0:j_id5:Origintxt').value;
+      if(Origen == "Phone") {
+            var address = document.getElementById('address').value;
+            geocoder.geocode({'address': address}, function(results, status) {
+                    id = marker2.__gm_id
+                    markers[id] = marker2; 
+                    marker2 = markers[id]; 
+                    marker2.setMap(null);
+                if (status === 'OK') {
+                        resultsMap.setCenter(results[0].geometry.location);
+                        var a = document.getElementById('j_id0:j_id5:loctxt').value = results[0].geometry.location.lat().toFixed(7)+',' +results[0].geometry.location.lng().toFixed(7);
+                        var b = document.getElementById('j_id0:j_id5:dirtxt').value=results[0].formatted_address;
+                var h=document.getElementById('address').value=results[0].formatted_address;
+                var x=document.getElementById('j_id0:j_id22:start').value=results[0].formatted_address;
+                        var g = document.getElementById('j_id0:j_id5:PostalCodetxt').value=results[0].address_components[6].long_name;
+                        var c = document.getElementById('j_id0:j_id5:StNumbertxt').value=results[0].address_components[0].long_name;
+                        var d = document.getElementById('j_id0:j_id5:StreetNametxt').value=results[0].address_components[1].long_name;
+                        var e = document.getElementById('j_id0:j_id5:Colonytxt').value=results[0].address_components[2].long_name;
+                        var f = document.getElementById('j_id0:j_id5:Statetxt').value=results[0].address_components[5].long_name;
+                    resultsMap.setCenter(results[0].geometry.location);
+                    marker2 = new google.maps.Marker({
+                    map: resultsMap,
+		    label: 'A',
+                    draggable: true,
+                    position: results[0].geometry.location
+                    });            
+                    google.maps.event.addListener(marker2, 'click', function(evt){ 
+                            var a = document.getElementById('j_id0:j_id5:loctxt').value = evt.latLng.lat().toFixed(7) +' , '+evt.latLng.lng().toFixed(7);
+                            geocoder.geocode({'address': a}, function(results, status) {
+                                if (status === 'OK') {
+                                    document.getElementById('j_id0:j_id5:dirtxt').value=results[0].formatted_address;
+                            document.getElementById('j_id0:j_id22:start').value=results[0].formatted_address;
+                            document.getElementById('address').value=results[0].formatted_address;
+                                    document.getElementById('j_id0:j_id5:PostalCodetxt').value=results[0].address_components[6].long_name;
+                                    document.getElementById('j_id0:j_id5:StNumbertxt').value=results[0].address_components[0].long_name;
+                                    document.getElementById('j_id0:j_id5:StreetNametxt').value=results[0].address_components[1].long_name;
+                                    document.getElementById('j_id0:j_id5:Colonytxt').value=results[0].address_components[2].long_name;
+                                    document.getElementById('j_id0:j_id5:Statetxt').value=results[0].address_components[4].long_name;
+                                    document.getElementById('j_id0:j_id5:Countrytxt').value=results[0].address_components[5].long_name; 
+                    }
+                });
+            });
+            google.maps.event.addListener(marker2, 'dragend', function(evt){
+                var a= document.getElementById('j_id0:j_id5:loctxt').value= evt.latLng.lat().toFixed(7) +' , '+evt.latLng.lng().toFixed(7);
+                    geocoder.geocode({'address': a}, function(results, status) {
+                        if (status=== 'OK') {
+                            document.getElementById('j_id0:j_id5:dirtxt').value=results[0].formatted_address;
+                            document.getElementById('address').value=results[0].formatted_address;
+                            document.getElementById('j_id0:j_id22:start').value=results[0].formatted_address;
+                                    document.getElementById('j_id0:j_id5:PostalCodetxt').value=results[0].address_components[6].long_name;
+                                    document.getElementById('j_id0:j_id5:StNumbertxt').value=results[0].address_components[0].long_name;
+                                    document.getElementById('j_id0:j_id5:StreetNametxt').value=results[0].address_components[1].long_name;
+                                    document.getElementById('j_id0:j_id5:Colonytxt').value=results[0].address_components[2].long_name;
+                                    document.getElementById('j_id0:j_id5:Statetxt').value=results[0].address_components[4].long_name;
+                                    document.getElementById('j_id0:j_id5:Countrytxt').value=results[0].address_components[5].long_name; 
+                        }
+                    });
+                });
+                var infowindow= new google.maps.InfoWindow({
+                    content: '<p>' + marker.getPosition(6).lat()+',' + marker.getPosition(6).lng() + '</p>'+ '<p>'+ results[0].formatted_address+'</p>'
+                });
+                infowindow.open(map, marker);
+                id= marker.__gm_id
+                markers[id]= marker; 
+                google.maps.event.addListener(marker, 'rightclick', function (point) {
+                    id=this.__gm_id;
+                    delMarker(id)
+                });
+                    var delMarker= function (id) {
+                        marker= markers[id]; 
+                        marker.setMap(null);   
+                    }   
+            }
+            else {
+                        resultsMap.setCenter(results[0].geometry.location)
+                }
+        });
+      }      
+        }
+        function toggleBounce() {
+            if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+    }
+    else {
+                    marker.setAnimation(google.maps.Animation.DROP);
+                        }
+        } 
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+   directionsService.route({
+    origin: document.getElementById('j_id0:j_id22:start').value,
+    destination: document.getElementById('end').value,
+    travelMode: 'DRIVING'
+  }, function(response, status) {
+    if (status === 'OK') {
+      directionsDisplay.setDirections(response);
+      var route = response.routes[0];
+      var summaryPanel = document.getElementById('directions-panel');
+      summaryPanel.innerHTML = '';
+      for (var i = 0; i < route.legs.length; i++) {
+        var routeSegment = i + 1;
+        summaryPanel.innerHTML += '<b>Distancia: ' + 
+            '</b>';
+        summaryPanel.innerHTML += route.legs[i].distance.text + '<br>';
+      }
+        id=marker2.__gm_id 
+	    	markers[id]=marker2;
+            marker2=markers[id];
+            marker2.setMap(null);
+    } else {
+      window.alert('Directions request failed due to ' + status);
+      var summaryPanelNull = document.getElementById('directions-panel');
+      summaryPanelNull.innerHTML = ''; 
+      directionsDisplay.set('directions', null);
+    }
+  });
+} 
+    </script>
+    <apex:stylesheet value="{!$Resource.MX_SB_MLT_StyleMap}"/>
+</apex:page>

@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto que permite la carga de los registros de pagos que serán gestionados por los agentes de SAC</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>DespliegaTelefonos</fullName>
+        <description>Para mostrar los datos de los números de teléfonos.</description>
+        <displayedFields>
+            <field>Telefono_1__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Telefono_2__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Telefono_3__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Telefono_4__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Telefono_5__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Telefono_6__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Telefono_7__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Telefono_8__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Telefono_9__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Telefono_10__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>DespliegaTeléfonos</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>PagoEspejoGestionCobroCreacinRegsi</fullName>
+        <description>Conjunto de campos que se utiliza en la pagina de Gestión de cobro para crear un nuevo recibo</description>
+        <displayedFields>
+            <field>Poliza__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Factura__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CodigoProducto__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Producto__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ImportePesos__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>VencimientoDelRecibo__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Pago espejo - Gestión cobro - Creación regsitro</label>
+    </fieldSets>
+    <fields>
+        <fullName>AgendaAtencion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Agenda en atención</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Antiguedad__c</fullName>
+        <externalId>false</externalId>
+        <label>Antiguedad</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ApellidoPaterno__c</fullName>
+        <externalId>false</externalId>
+        <label>Apellido Paterno</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BloqueLupa__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo para relacionar el bloque que se va a gestionar</description>
+        <externalId>false</externalId>
+        <label>Bloque</label>
+        <referenceTo>Bloque__c</referenceTo>
+        <relationshipLabel>Pagos Espejo</relationshipLabel>
+        <relationshipName>Pagos_Espejo</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bloque_Activo__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Bloque Activo</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bloque__c</fullName>
+        <externalId>false</externalId>
+        <label>Bloque</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CausadeRechazodeCobranza__c</fullName>
+        <externalId>false</externalId>
+        <label>Causa de Rechazo de Cobranza</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Clasificacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Clasificación</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CodigoProducto__c</fullName>
+        <externalId>false</externalId>
+        <label>Código Producto</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Correo1__c</fullName>
+        <externalId>false</externalId>
+        <label>Correo1</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Correo2__c</fullName>
+        <externalId>false</externalId>
+        <label>Correo2</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Correo3__c</fullName>
+        <externalId>false</externalId>
+        <label>Correo3</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiasVencimiento__c</fullName>
+        <externalId>false</externalId>
+        <formula>TODAY() - VencimientoDelRecibo__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Días vencimiento</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Elegir_Pago__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Elegir Pago</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Factura__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Factura</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>FormadePago__c</fullName>
+        <externalId>false</externalId>
+        <label>Forma de Pago</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ImportePesos__c</fullName>
+        <externalId>false</externalId>
+        <label>Importe Pesos</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ImportePesos_exto__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ImportePesos__c &lt; 0, &quot;(&quot;, &quot;&quot;) &amp; &quot;$&quot; &amp;
+IF(ABS(ImportePesos__c) &gt;= 1000000, TEXT(FLOOR(ABS(ImportePesos__c) / 1000000)) &amp; &quot;,&quot;, &quot;&quot;) &amp;
+IF(ABS(ImportePesos__c) &gt;= 1000, RIGHT(TEXT(FLOOR(ABS(ImportePesos__c) / 1000)), 3) &amp; &quot;,&quot;, &quot;&quot;) &amp;
+RIGHT(TEXT(FLOOR(ABS(ImportePesos__c))), 3) &amp; &quot;.&quot; &amp;
+IF(MOD(ABS(ImportePesos__c) , 1) * 100 &lt; 10, &quot;0&quot; &amp; TEXT(ROUND(MOD(ABS(ImportePesos__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(ImportePesos__c) , 1), 2) * 100, 99))) &amp;
+IF(ImportePesos__c &lt; 0, &quot;)&quot;, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Importe Pesos Texto</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InsertCreaPago__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>InsertCreaPago</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NoCuentaPago__c</fullName>
+        <description>Permite guardar el número de cuenta del pago</description>
+        <externalId>false</externalId>
+        <label>No Cuenta pago</label>
+        <length>16</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NombreCuenta__c</fullName>
+        <externalId>false</externalId>
+        <formula>Poliza__r.Account.FirstName &amp; &quot; &quot; &amp; Poliza__r.Account.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nombre de la Cuenta</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nombre__c</fullName>
+        <externalId>false</externalId>
+        <label>Nombre</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Orden__c</fullName>
+        <externalId>false</externalId>
+        <label>Orden</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pagado__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Permite identificar los pagos espejos que se han pagado</description>
+        <externalId>false</externalId>
+        <label>Pagado</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PermiteGestion__c</fullName>
+        <description>Permite identificar si el registro esta apto para gestión</description>
+        <externalId>false</externalId>
+        <formula>OR (
+	AND (	OwnerId = $Setup.ConfiguracionesGenerales__c.IdColaCobranza__c,
+		NOT (ISBLANK ( Poliza__r.AccountId)),
+		NOT ( Pagado__c),
+		NOT (
+			OR (
+				ISPICKVAL (Resultado_de_Contacto__c, &quot;Desea Cancelar&quot;),
+				ISPICKVAL (Resultado_de_Contacto__c, &quot;Cuenta Pagada&quot;),
+				ISPICKVAL (Resultado_de_Contacto__c, &quot;Póliza Cancelada&quot;)
+			)
+		)
+
+	),
+	AND (	OwnerId &lt;&gt; $Setup.ConfiguracionesGenerales__c.IdColaCobranza__c,
+		NOT (ISBLANK ( Poliza__r.AccountId)),
+		OR (
+                    ROUND ( ( NOW() - LastModifiedDate) * 1440, 0) &gt; 10,
+                    ISBLANK (TEXT(Resultado_de_Contacto__c))
+                ),
+		NOT ( Pagado__c),
+		NOT (
+			OR (
+				ISPICKVAL (Resultado_de_Contacto__c, &quot;Desea Cancelar&quot;),
+				ISPICKVAL (Resultado_de_Contacto__c, &quot;Cuenta Pagada&quot;),
+				ISPICKVAL (Resultado_de_Contacto__c, &quot;Póliza Cancelada&quot;)
+		           )
+		)
+	)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Permite gestion</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Poliza__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Póliza</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Pagos Espejo</relationshipLabel>
+        <relationshipName>Pagos_Espejo</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Producto__c</fullName>
+        <externalId>false</externalId>
+        <label>Producto</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Puntos__c</fullName>
+        <externalId>false</externalId>
+        <label>Monto Puntos Bancomer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RespuestadeCobranza__c</fullName>
+        <externalId>false</externalId>
+        <label>Respuesta de Cobranza</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resultado_de_Contacto__c</fullName>
+        <description>Identifica el resultado de contacto</description>
+        <externalId>false</externalId>
+        <label>Resultado de Contacto</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Promesa de Pago</fullName>
+                    <default>false</default>
+                    <label>Promesa de Pago</label>
+                </value>
+                <value>
+                    <fullName>No Define Pago</fullName>
+                    <default>false</default>
+                    <label>No Define Pago</label>
+                </value>
+                <value>
+                    <fullName>Desea Cancelar</fullName>
+                    <default>false</default>
+                    <label>Desea Cancelar</label>
+                </value>
+                <value>
+                    <fullName>No Reconoce Producto</fullName>
+                    <default>false</default>
+                    <label>No Reconoce Producto</label>
+                </value>
+                <value>
+                    <fullName>Contestadora</fullName>
+                    <default>false</default>
+                    <label>Contestadora</label>
+                </value>
+                <value>
+                    <fullName>Deja Mensaje</fullName>
+                    <default>false</default>
+                    <label>Deja Mensaje</label>
+                </value>
+                <value>
+                    <fullName>Titular Fallecio</fullName>
+                    <default>false</default>
+                    <label>Titular Fallecio</label>
+                </value>
+                <value>
+                    <fullName>Se Agenda</fullName>
+                    <default>false</default>
+                    <label>Se Agenda</label>
+                </value>
+                <value>
+                    <fullName>No Contesta</fullName>
+                    <default>false</default>
+                    <label>No Contesta</label>
+                </value>
+                <value>
+                    <fullName>Cuenta Pagada</fullName>
+                    <default>false</default>
+                    <label>Cuenta Pagada</label>
+                </value>
+                <value>
+                    <fullName>Póliza Cancelada</fullName>
+                    <default>false</default>
+                    <label>Póliza Cancelada</label>
+                </value>
+                <value>
+                    <fullName>Ilocalizable</fullName>
+                    <default>false</default>
+                    <label>Ilocalizable</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Semaforo__c</fullName>
+        <externalId>false</externalId>
+        <label>Semáforo</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sistema__c</fullName>
+        <externalId>false</externalId>
+        <label>Sistema</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telefono_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 10</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telefono_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 1</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telefono_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 2</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telefono_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 3</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telefono_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 4</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telefono_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 5</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telefono_6__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 6</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telefono_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 7</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telefono_8__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 8</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telefono_9__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 9</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TienePoliza__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (  ISBLANK(Poliza__c) , false, true)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tiene Poliza</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TipoResultadoContacto__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de resultado de contacto</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pago TPV</fullName>
+                    <default>true</default>
+                    <label>Pago TPV</label>
+                </value>
+                <value>
+                    <fullName>Endoso</fullName>
+                    <default>false</default>
+                    <label>Endoso</label>
+                </value>
+                <value>
+                    <fullName>Pago TPV / Endoso</fullName>
+                    <default>false</default>
+                    <label>Pago TPV / Endoso</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>VencimientoDelRecibo__c</fullName>
+        <externalId>false</externalId>
+        <label>Vencimiento Del Recibo</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>importeDolares__c</fullName>
+        <externalId>false</externalId>
+        <label>importe Dólares</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Pagos Espejo</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <listViews>
+        <fullName>Todos</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>CPE - {0000}</displayFormat>
+        <label>Consecutivo Pagos Espejo No</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Pagos Espejo</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

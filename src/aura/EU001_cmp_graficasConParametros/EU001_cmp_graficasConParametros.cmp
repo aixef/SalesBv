@@ -1,0 +1,51 @@
+<aura:component controller="EU001_graficasConParametros_Ctrl" implements="flexipage:availableForAllPageTypes" access="GLOBAL">
+    
+    <aura:attribute name="TipoGrafica" type="String" default="horizontalBar" />
+    <aura:attribute name="NombreCanvas" type="String" default="Título Canvas Gráfica" />
+    <aura:attribute name="Colores" type="List" default="#79B8E2, #004481, #A7EBA2, #f7cc50, #EEB480" /> 
+    <aura:attribute name="posicionLeyenda" type="String" default="bottom" />
+    <aura:attribute name="ParametrosDina" type="List" default="[15, 19, 20]" />
+    <aura:attribute name="ParametrosDina2" type="List" default="[18, 25, 30]"/>
+    <aura:attribute name="ParametrosDina3" type="List" default=""/>
+    <aura:attribute name="ParametrosDina4" type="List" default=""/>
+    <aura:attribute name="ParametrosDina5" type="List" default=""/>
+    <aura:attribute name="labelColumnas" type="List" default="Indicador1, Indicador2, Indicador3"/>
+    <aura:attribute name="NombreInforme" type="String" default="" />    
+    <aura:attribute name="NombreInforme2" type="String" default="" />
+    <aura:attribute name="numerosdegraficas" type="Decimal" default="1"/>
+    <aura:attribute name="JsonConsultas" type="List" default="" />
+    <aura:attribute name="ListaLabels" type="List" default="" />
+    <aura:attribute name="banderaJsonConsulta" type="Boolean" default="false"/>
+    <aura:attribute name="conceptoList" type="List" default="" /> 
+    <aura:attribute name="parametrosCirculo" type="List" default="" />
+    <aura:attribute name="BanderaEjecucion" type="Boolean" default="false" />
+    <aura:attribute name="UgUserg" type="String" />
+    <aura:attribute name="riOwner" type="String" />
+    <aura:attribute name="numeroCentro" type="Integer" />
+    <aura:attribute name="tamanoValorCentro" type="Integer" />
+    <aura:attribute name="tamanoValorCentro2" type="Integer" />
+    <aura:attribute name="Indicador" type="String" />
+    <ltng:require scripts="{!join(',', 
+                           $Resource.ChartjsAP + '/chartjs/Chart.bundle.js',
+                           $Resource.ChartjsAP + '/chartjs/Chart.bundle.min.js',
+                           $Resource.ChartjsAP  + '/chartjs/Chart.js',
+                           $Resource.ChartjsAP  + '/chartjs/Chart.min.js'
+                           )}" 
+                  afterScriptsLoaded="{!c.iniciaGraficas}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+    <aura:handler name="change" value="{!v.BanderaEjecucion}" action="{!c.cambio}"/>
+    
+    <div class="c-container" onchange="c.rerender">
+        <div class="slds-box">
+            <lightning:layout >
+                <lightning:layoutItem flexibility="grow" padding="around-small" size="10" mediumDeviceSize="10" largeDeviceSize="10">
+                    <div class="slds-text-heading_small" style="color:#292366" >{!v.NombreCanvas}</div>
+                    <div class="slds-align--absolute-center slds-p-horizontal_small slds-size_7-of-12 grafic">
+                        <canvas aura:id="grafEvolucion" height="200" ></canvas>
+                    </div>
+                </lightning:layoutItem>               
+            </lightning:layout>
+        </div>
+    </div>
+</aura:component>

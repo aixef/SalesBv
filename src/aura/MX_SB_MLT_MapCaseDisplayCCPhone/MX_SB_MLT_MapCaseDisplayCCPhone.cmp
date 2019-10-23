@@ -1,0 +1,3 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <iframe src="{! '/apex/MX_SB_MLT_ViewMapsCaseCC?Id=' + v.recordId }" style="width:100%!important;height:550px;" frameBorder="0"  />
+</aura:component>

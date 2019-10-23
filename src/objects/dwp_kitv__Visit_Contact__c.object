@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Object to relate a contact with a visit. These records will appear on related list of Visit object.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Decisor_Ejecutor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indica si el contacto relacionado es decisor o ejecutor.</description>
+        <externalId>false</externalId>
+        <label>Decisor/Ejecutor</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_BPP_KitV_Title__c</fullName>
+        <description>Se utiliza para mostrar en titulo en formato compacto.</description>
+        <externalId>false</externalId>
+        <formula>dwp_kitv__contact_id__r.Title</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Title</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_EUSV_NoEnviarEncuestasUnsuscribed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Este campo se utiliza para determinar que a este contacto no se le deben enviar encuestas, si está activo en la funcionalidad que lo mande a llamar deberá bloquear el envío de correos de encuestas.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Activar esta casilla si se desea que no se le envíe ningún tipo de encuestas a este contacto.</inlineHelpText>
+        <label>No Enviar Encuestas (Unsuscribed)</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_EUSV_SurveySent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check que permite determinar si la survey se ha enviado.</description>
+        <externalId>false</externalId>
+        <label>Encuesta Enviada</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_EU_Correo_contacto__c</fullName>
+        <description>Se copia correo del contacto relacionado para envío de encuesta.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Correo de contacto</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SuveySent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check que permite determinar si la survey se ha enviado.</description>
+        <externalId>false</externalId>
+        <label>SuveySent</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dwp_kitv__Main_contact__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Field to identify the main contact of the visit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selecciona para marcar como contacto principal</inlineHelpText>
+        <label>Main contact</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dwp_kitv__Send_minutes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field to know if the minutes were sent and how</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selecciona para enviar minuta</inlineHelpText>
+        <label>Send minutes</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Do not send</fullName>
+                    <default>false</default>
+                    <label>Do not send</label>
+                </value>
+                <value>
+                    <fullName>To</fullName>
+                    <default>true</default>
+                    <label>To</label>
+                </value>
+                <value>
+                    <fullName>CC</fullName>
+                    <default>false</default>
+                    <label>CC</label>
+                </value>
+                <value>
+                    <fullName>CCO</fullName>
+                    <default>false</default>
+                    <label>CCO</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>dwp_kitv__contact_called_type__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checkbox to determinate if this contact has been arranged.</description>
+        <externalId>false</externalId>
+        <label>Arranged</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>dwp_kitv__contact_email_desc__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Retrieve the contact&apos;s email</description>
+        <externalId>false</externalId>
+        <formula>dwp_kitv__contact_id__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dwp_kitv__contact_id__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Relation with a contact record.</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Visit Contacts</relationshipLabel>
+        <relationshipName>Visit_Contacts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>dwp_kitv__contact_phone_desc__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Retrieves the contact&apos;s phone</description>
+        <externalId>false</externalId>
+        <formula>dwp_kitv__contact_id__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dwp_kitv__visit_id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Relation with a visit record.</description>
+        <externalId>false</externalId>
+        <label>Visit</label>
+        <referenceTo>dwp_kitv__Visit__c</referenceTo>
+        <relationshipLabel>Visit Contacts</relationshipLabel>
+        <relationshipName>Visit_Contacts</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Visit Contact</label>
+    <nameField>
+        <displayFormat>VC-{0000000000}</displayFormat>
+        <label>Reference</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Visit Contacts</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>MX_PF_obligaContactoUnico</fullName>
+        <active>true</active>
+        <description>Permite que solo haya un contacto seleccionado en las visitas de PFLEAN</description>
+        <errorConditionFormula>IF(
+    AND( ISNEW(),
+         dwp_kitv__visit_id__r.dwp_kitv__visit_contact_persons_number__c &gt;= 1,
+         OR(dwp_kitv__visit_id__r.RecordType.DeveloperName = &apos;Reporte_de_visita_PF_LEAN_MEDIANA&apos;,
+            dwp_kitv__visit_id__r.RecordType.DeveloperName = &apos;Reporte_de_visita_PF_LEAN_Otro_Seg&apos;,
+            dwp_kitv__visit_id__r.RecordType.DeveloperName = &apos;Reporte_de_visita_PF_LEAN&apos;
+           )
+       ),
+    true,
+    false
+   )</errorConditionFormula>
+        <errorMessage>La visita solo puede tener un contacto Asignado</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>dwp_kitv__Change_contact</fullName>
+        <active>true</active>
+        <description>You cannot change the contact.</description>
+        <errorConditionFormula>ISCHANGED(  dwp_kitv__contact_id__c )</errorConditionFormula>
+        <errorMessage>It is not allowed to change the contact. Please, delete the visit contact.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

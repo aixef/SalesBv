@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>2</activeVersionNumber>
+    <description>Este flujo nos  ayuda a crear duplicados de los casos después de identificar al cliente.</description>
+    <masterLabel>Duplicar Caso</masterLabel>
+</FlowDefinition>

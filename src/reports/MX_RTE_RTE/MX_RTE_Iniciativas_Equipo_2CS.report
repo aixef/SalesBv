@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>MX_RTE_Programas__c$Name</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Programas__c.Iniciativas__r$Name</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Programas__c.Iniciativas__r.Equipo__r$Name</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Programas__c.Iniciativas__r.Equipo__r$MX_RTE_Nombre__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <filter>
+        <criteriaItems>
+            <column>MX_RTE_Programas__c.Iniciativas__r.Equipo__r$MX_RTE_Fecha_de_Baja__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Iniciativas &amp; Equipo</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>MX_RTE_Programa_con_Iniciativas_con_Equipo__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>MX_RTE_Programas__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

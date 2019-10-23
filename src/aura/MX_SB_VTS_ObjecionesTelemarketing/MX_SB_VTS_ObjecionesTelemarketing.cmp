@@ -1,0 +1,79 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="MX_SB_VTS_Objeciones_cls">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="isActive" type="Boolean" default="false" required="true" description="Bandera que sirve para controlar la visualización del componente."/>
+    <aura:attribute name="listaTextos" type="List" description="Textos asociados a la etapa actual" />
+    <aura:attribute name="genericRecord" type="sObject" />
+    <aura:attribute name="lstHeader" type="List" default="['Se utilizo', 'No se Utilizo', 'Objeción']"/>
+    <aura:attribute name="activeButton" type="Boolean" default="false"/>
+    <aura:attribute name="isObjecSave" type="Boolean" default="false"/>
+    <aura:attribute name="typeObject" type="String" default="Lead"/>
+    <aura:attribute name="errorMsj" type="String" default="''"/>
+    <aura:attribute name="activeCall" type="String" default=""/>
+    <aura:attribute name="errorMsjTitle" type="String" default="''"/>
+    <aura:attribute name="isLoading" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <force:recordData aura:id="genericDataObject" layoutType="FULL" recordId="{!v.recordId}" recordUpdated="{!c.afterUpDate}" targetFields="{!v.genericRecord}" mode="VIEW"/>
+    <div class="{! 'container' + (v.width=='SMALL'?' narrowRegion':'')}">
+    <div class="slds-grid">
+        <aura:if isTrue="{!v.isLoading}">
+            <div class="loadSpinner">
+                <lightning:spinner alternativeText="Loading" size="large" />
+            </div>
+        </aura:if>
+        <div class="slds-row slds-size_1-of-1">
+            <div class="slds-scoped-notification slds-media slds-media_center slds-scoped-notification_light" role="status">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-utility-info" title="Información">
+                        <lightning:icon iconName="utility:info" variant="info"/>
+                        <span class="slds-assistive-text">Módulo Objeciones</span>
+                    </span>
+                    <span class="note">&nbsp; &nbsp; Objeciones</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-grid">
+        <div class="slds-row slds-size_1-of-1">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="slds-col slds-size_1-of-8" scope="col">
+                            <div class="slds-truncate slds-text-heading_x-small slds-text-align_center" title="Funcionó">Funcionó</div>
+                        </th>
+                        <th class="slds-col slds-size_1-of-8" scope="col">
+                            <div class="slds-truncate slds-text-heading_x-small slds-text-align_center" title="No funcionó">No funcionó</div>
+                        </th>
+                        <th class="slds-col slds-size_6-of-4" scope="col">
+                            <div class="slds-truncate slds-text-heading_x-small slds-text-align_center" title="Detalle Objeción">Detalle Objeción</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.listaTextos}" var="objecion" indexVar="indexObjec">
+                        <tr class="slds-hint-parent">
+                            <td data-label="{!objecion.nomObjecion}" class="slds-text-align_center">
+                                <div class="slds-checkbox" title="{!objecion.nomObjecion}">
+                                    <lightning:input type="radio" name="{!'objecionesOps'+indexObjec}" value="{!indexObjec}" checked="{!objecion.usoObjecion}" onchange="{!c.changeValLeft}" disabled="{!v.isObjecSave}"/>
+                                </div>
+                            </td>
+                            <td data-label="{!objecion.nomObjecion}" class="slds-text-align_center">
+                                <div class="slds-checkbox" title="{!objecion.nomObjecion}">
+                                    <lightning:input type="radio" name="{!'objecionesOps'+indexObjec}" value="{!indexObjec}" 
+                                    checked="{!objecion.noUsoCatObject}" onchange="{!c.changeValRight}" disabled="{!v.isObjecSave}"/>
+                                </div>
+                            </td>
+                            <td data-label="{!objecion.nomObjecion}" class="slds-text-align_center">
+                                <lightning:textarea disabled="true" class="slds-truncate tallTextArea" title="{!objecion.nomObjecion}" value="{!objecion.detObjecion}"/>
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+            <div class="slds-box slds-theme--default slds-size_1-of-1 slds-align_absolute-center">
+                    <lightning:button variant="brand" label="Guardar" title="Guardar" onclick="{! c.saveObjections }" disabled="{!v.activeButton}"/>
+                </div>
+        </div>
+    </div>
+</div>
+</aura:component>

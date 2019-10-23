@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>DeleteSurvey</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditSurvey</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <searchLayouts>
+        <customTabListAdditionalFields>VersionNumber</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Survey</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>VersionNumber</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Survey</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>VersionNumber</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Survey</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>VersionNumber</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Survey</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

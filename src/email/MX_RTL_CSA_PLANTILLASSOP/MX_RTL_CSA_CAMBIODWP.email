@@ -1,0 +1,12 @@
+*** NOTIFICACIÓN SEGUIMIENTO DE TICKET *** 
+
+Se le notifica el cambio de etapa de su ticket con la siguiente información:   
+
+N° de Caso:  {!Case.CaseNumber}
+Estado: {!Case.Status}
+
+Asunto:  {!Case.Subject}
+Descripción: {!Case.Description}
+
+
+Haga clic en el vínculo para acceder directamente al ticket: {!Case.Link}

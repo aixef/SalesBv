@@ -1,0 +1,9 @@
+<aura:documentation>
+	<aura:description>Retorna informacion del componete seleccionado.</aura:description>
+	<aura:example name="MX_SB_VTS_LookResult" ref="MX_SB_VTS_LookResult" label="Resultados de busqueda">
+		<p>oRecord: Registro obtenido en la busqueda del componente Padre</p>
+        <p>oSelectedRecordEvent: Evento que se dispara cuando se cambia el valor seleccionado</p>
+		<p>IconName: Icono a mostrar en el resultado</p>
+		<p>Se crea el componente.</p>
+	</aura:example>
+</aura:documentation>

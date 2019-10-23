@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Telemarketing</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>Reason__c</fieldNames>
+        <picklistValueName>Objeciones</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <picklistValueName>Objeciones Reales</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>NombreCliente__c</fieldNames>
+        <picklistValueName>Políticas</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>NumerodePoliza__c</fieldNames>
+        <fieldNames>Nombre_del_Contratante__c</fieldNames>
+        <fieldNames>correoElectronicoContratante__c</fieldNames>
+        <fieldNames>CorreoCliente__c</fieldNames>
+        <picklistValueName>Venta Autorizada</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>MX_WB_RT_Telemarketing</recordTypeName>
+</PathAssistant>

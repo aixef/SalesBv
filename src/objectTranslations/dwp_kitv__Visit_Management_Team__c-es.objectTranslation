@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Colaborador</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Colaboradores</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cargo --></label>
+        <name>MX_HP_Cargo__c</name>
+    </fields>
+    <fields>
+        <help>Selecciona para enviar minuta</help>
+        <label>Enviar minuta</label>
+        <name>dwp_kitv__Send_minutes__c</name>
+        <picklistValues>
+            <masterLabel>CC</masterLabel>
+            <translation><!-- CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CCO</masterLabel>
+            <translation><!-- CCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do not send</masterLabel>
+            <translation>No enviar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To</masterLabel>
+            <translation><!-- To --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Correo</label>
+        <name>dwp_kitv__contact_email_desc__c</name>
+    </fields>
+    <fields>
+        <label>Teléfono</label>
+        <name>dwp_kitv__contact_phone_desc__c</name>
+    </fields>
+    <fields>
+        <label>Usuario</label>
+        <name>dwp_kitv__user_id__c</name>
+        <relationshipLabel>Equipo</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Visita</label>
+        <name>dwp_kitv__visit_id__c</name>
+        <relationshipLabel>Equipo</relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Folio</nameFieldLabel>
+    <validationRules>
+        <errorMessage>No está permitido cambiar el usuario. Por favor borre el equipo administrador de visita.</errorMessage>
+        <name>dwp_kitv__Change_user</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No se puede insertar dueño de la visita</errorMessage>
+        <name>dwp_kitv__User_owner</name>
+    </validationRules>
+</CustomObjectTranslation>

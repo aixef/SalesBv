@@ -1,0 +1,150 @@
+<!--
+*Proyecto:               Banca Patrimonial y Privada
+*Descripción:            Componente Lightning para gestión de contactabilidad del cliente.
+*Cambios (Versiones)
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0	| 		N/A	     |	   N/A					|	  	Creación
+*2.0    |   15-01-2019   |    Francisco J Licona    |       Se modifica el componente para añadir lista de clientes contactados y no contactados.
+*2.1    |   11-02-2019   |    Francisco J Licona    |       Se elimina la bandera que muestra la tabla de contactabilidad, se deja tabla default.
+*2.2	|   28/01/2019	 |   Adrián Pastor Pineda   |       Se agrega la variable RISelect que guarda la RI del banquero y se quita el dato por default de la variable seltitle
+															y bandera para saber si la consulta la hace desde inicio o RI.
+*3.0	|	11/03/2019	 |	 Francisco J Licona	    |		Se re estructura tabla de contactabilidad del cliente creando una tabla dinámica.
+*3.1	|	19/03/2019	 |	 Francisco J Licona	    |		Se elimina el paginado para concentrar la lista en una sola vista con scroll.
+-->
+<aura:component controller="BPyP_Contact_Acc" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+	<ltng:require styles="{!$Resource.SLDS_MAXBBVA + '/assets/styles/salesforce-lightning-design-system-ltng.css'}" />
+	<ltng:require scripts="{!$Resource.JqueryLightning}"  />
+	<ltng:require scripts="{!join(',',
+        $Resource.chartjsalm + '/chartjs/Chart.bundle.js',
+        $Resource.chartjsalm + '/chartjs/Chart.bundle.min.js',
+         $Resource.chartjsalm  + '/chartjs/Chart.js',
+           $Resource.chartjsalm  + '/chartjs/Chart.min.js'
+                               )}" afterScriptsLoaded="{!c.generateChart}"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="body1" type="String" description="Body table"/>
+    <aura:attribute name="seldiv" type="String" description="Selected Division"/>
+    <aura:attribute name="seltitle" type="String" description="Selected Title for Bankmans"/>
+    <aura:attribute name="seloff" type="String" description="Selected Office"/>
+    <aura:attribute name="selbkm" type="String" description="Selected Bankman"/>
+	<aura:attribute name="RISelect" type="String" description="RI del Bankman"/>
+    <aura:attribute name="bandera" type="Boolean" default="False" description="Boolean para identificar si entra por RI o Inicio en contactabilidad"/>
+    <aura:attribute name="priv" type="String" default="PRIVADO" description="Text for User title"/>
+    <aura:attribute name="patr" type="String" default="PATRIMONIAL" description="Text for User title"/>
+    <aura:attribute name="patrs" type="String" default="PATRIMONIAL SR" description="Text for User title"/>
+    <aura:attribute name="isOff" type="Boolean" default="False" description="Boolean to know if user is office director"/>
+    <aura:attribute name="isDiv" type="Boolean" default="False" description="Boolean to know if user is div director"/>
+    <aura:attribute name="isBkm" type="Boolean" default="False" description="Boolean to know if user is Standard BPyP user"/>
+    <aura:attribute name="ListOfOpp" type="Opportunity[]" description="store accounts of BPyP"/>
+    <aura:attribute name="ListOfDiv" type="List" description="store option of Divisions of BPyP"/>
+    <aura:attribute name="ListOfOff" type="List" description="store option of Offices based on Div of BPyP"/>
+    <aura:attribute name="ListOfBkMn" type="List" description="store Bankmans on offices and divisions based on Div and offices of BPyP"/>
+    <aura:attribute name="ListOfTyOpp" type="List" description="store option of Divisions of BPyP"/>
+    <aura:attribute name="chartHeight" type="Integer" description="Chart height" />
+    <aura:attribute name="chart2Height" type="Integer" description="Chart 2 height" />
+    <aura:attribute name="sDate" type="Date" default="" access="GLOBAL"/>
+    <aura:attribute name="eDate" type="Date" default="" access="GLOBAL"/>
+    <aura:handler name="changeEDate" value="{!v.eDate}" action="{!c.updOpAc}"/>
+    <aura:handler name="changeSDate" value="{!v.sDate}" action="{!c.updOpAc}"/>
+    <aura:attribute name="contactStatus" type="String" description="Estatus de los clientes, ya sea Contactado o No contactado"/>
+    <aura:attribute name="url" type="String" description="URL la cual se le añadira el id de la cuenta a la cual se deseé dirigir, de la lista de cuentas de tabla de contactabilidad"/>
+    <!--PRUEBA PAGINADO-->
+    <aura:attribute name="ContactData" 			type="Object" 				description="Objeto inicial de contactabilidad de clientes."/>
+    <aura:attribute name="columns" 				type="List" 				description="Lista del objeto de columnas que se usa para definir los tipos de datos."/>
+    <aura:attribute name="PaginationList" 		type="Account" 				description="Conjunto de datos de contactabilidad del cliente."/>
+    <aura:attribute name="startPage" 			type="Integer" 				description="Número de página de inicio del listado de contactabilidad del cliente."/>
+    <aura:attribute name="endPage" 				type="Integer" 				description="Número de página final del listado de contactabilidad del cliente."/>
+    <aura:attribute name="totalRecords" 		type="Integer" 				description="Número total de registros obtenidos correspondientes a contactabilidad del cliente."/>
+    <aura:attribute name="pageSize" 			type="Integer" default="500"			description="Número total de registros que se muestra en la tabla de contactabilidad del cliente."/>
+    <aura:attribute name="sortedBy" 			type="String"				description="Nombre de la columna que define el orden de los datos."/>
+    <aura:attribute name="sortedDirection" 		type="String"				description="Especifica el la dirección de ordenamiento de los datos, asc o desc."/>
+    <aura:attribute name="defaultSortDirection" type="String"				description="Valor predeterminado de ordenamiento de los datos de contactabilidad, asc o desc."/>
+    <aura:attribute name="tableHeight" 			type="String"  default="height:0px;"	description="Tamaño de la tabla de contactabilidad del cliente."/>
+    <!--FIN DE PRUEBA PAGINADO-->
+    <div class="slds-page-header" style="">
+        <div class="slds-media__body">
+          	<h1 class="slds-page-header__title slds-truncate slds-align-middle slds-clearfix" title="Tipo de reporte"><strong>Contactabilidad</strong>
+				<!-- <lightning:icon class="slds-float_right" iconName="utility:info" size="xx-small" title="Reporte que muestra la contactabilidad a los clientes analizando su distribución permitiendo acceder a los datos por división oficina y banquero"/> -->
+				<lightning:helptext title="Reporte que muestra la contactabilidad a los clientes analizando su distribución permitiendo acceder a los datos por división oficina y banquero" content="Reporte que muestra la contactabilidad a los clientes analizando su distribución permitiendo acceder a los datos por división oficina y banquero" iconName="utility:info"/>
+      		</h1>
+        </div>
+    </div>
+
+    <div class="slds-grid slds-wrap slds-grid_pull-padded">
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+            <lightning:select aura:id="pklTyAccBpyP" name="selectDiv" label="Tipo de Figura" value="{!v.seltitle}" onchange="{!c.updOpAc}">
+                <option value="Pr" text="{!v.priv}" selected="{!v.seltitle==v.priv}"></option>
+                <option value="Pa" text="{!v.patr}" selected="{!v.seltitle==v.patr}"></option>
+                <option value="Pas" text="{!v.patrs}" selected="{!v.seltitle==v.patrs}"></option>
+            </lightning:select>
+        </div>
+	<!-- </div> -->
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+            <lightning:select aura:id="pklDivBpyP" name="selectDiv" label="División" value="{!v.seldiv}" onchange="{!c.updDiv}" >
+                <option value="" selected="{!v.seldiv==''}">TODAS</option>
+                <aura:iteration items="{!v.ListOfDiv}" var="div">
+                    <br/><option value="{!div.Divisi_n__c}" text="{!div.Divisi_n__c}" selected="{!div.Divisi_n__c==v.seldiv}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+            <lightning:select aura:id="pklOffBpyP" name="selectOff" label="Oficina" value="{!v.seloff}" onchange="{!c.updOffice}" >
+                <option value="" selected="{!v.seloff==''}">TODAS</option>
+                <aura:iteration items="{!v.ListOfOff}" var="off">
+                    <br/><option value="{!off.BPyP_ls_NombreSucursal__c}" text="{!off.BPyP_ls_NombreSucursal__c}" selected="{!off.BPyP_ls_NombreSucursal__c==v.seloff}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+            <lightning:select aura:id="pklBkMnBpyP" name="selectBkMn" label="Banquero" value="{!v.selbkm}" onchange="{!c.updBkM}" >
+                <option value="" selected="{!v.selbkm==''}">TODAS</option>
+                <aura:iteration items="{!v.ListOfBkMn}" var="BkMn">
+                    <br/><option value="{!BkMn.Id}" text="{!BkMn.Name}" selected="{!BkMn.Name==v.selbkm}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+        	<ui:inputDate aura:id="expsdate" label="Fecha Inicio" class="field" value="{!v.sDate}" displayDatePicker="true" change="{!c.updOpAc}"/>
+		</div>
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+			<ui:inputDate aura:id="expedate" label="Fecha Fin" class="field" value="{!v.eDate}" displayDatePicker="true" change="{!c.updOpAc}"/>
+		</div>
+    </div>
+    <div class="slds-grid slds-wrap slds-grid_pull-padded slds-p-around_large">
+        <div class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1">
+            <canvas class="c1" aura:id="myChartt" style="{! 'height: ' + v.chartHeight +'px'}"></canvas>
+        </div>
+        <div class="slds-table slds-table_bordered slds-table_cell-buffer slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 slds-p-around_large slds-scrollable" id="wrapper">
+        </div>
+    </div>
+    <!-- LISTA CLIENTES/PROSPECTOS CONTACTABILIDAD-->
+    <div class="slds-page-header">
+        <div class="slds-media">
+            <div class="slds-media__body">
+                <p>Tipo de Contacto:</p>
+    <div class="slds-p-horizontal_large slds-large-size_1-of-2">
+                    <lightning:select aura:id="contactStatus" name="selectDiv" value="{!v.contactStatus}" onchange="{!c.updateAcc}">
+            <option value="">--Ninguno--</option>
+            <option value="Contact">Contactado</option>
+            <option value="NonContact">No Contactado</option>
+        </lightning:select>
+    </div>
+    <br/>
+            </div>
+            </div>
+        </div>
+    <div class="container" style="{!v.tableHeight}">
+        <lightning:datatable data="{!v.PaginationList}" class="slds-m-top_medium"
+                             columns="{!v.columns}"
+                             keyField="id"
+                             hideCheckboxColumn="true"
+                             sortedBy="{!v.sortedBy}"
+                			 sortedDirection="{!v.sortedDirection}"
+                             defaultSortDirection="{!v.defaultSortDirection}"
+                             onsort="{!c.updateColumnSorting}"
+                             showRowNumberColumn="true"/>
+        </div>
+</aura:component>

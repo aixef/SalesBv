@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="Event template" >
+    <aura:attribute name="idConcepto" type="String"/>
+    <aura:attribute name="label" type="String"/>
+    <aura:attribute name="checked" type="Boolean"/>
+</aura:event>

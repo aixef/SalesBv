@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label>Informar al propietario de la campaña para que verifique el cliente.</label>
+        <name>MX_PYME_AccCampAccErrOpp</name>
+    </customLabels>
+    <customLabels>
+        <label>El ejecutivo seleccionado no tiene asignado una división, favor de contactar con su administrador de sistema</label>
+        <name>MX_PyME_Error_2_Division_Faltante</name>
+    </customLabels>
+    <customLabels>
+        <label>Ya existe una solicitud de traspaso relacionado a los siguientes clientes :</label>
+        <name>MX_PyME_Error_5_Folio_Existente</name>
+    </customLabels>
+    <customLabels>
+        <label>La división del propietario actual del cliente no corresponde a la de los ejecutivos dentro de su división, favor de seleccionar otro cliente</label>
+        <name>MX_PyME_Error_6_UG_Erronea_Divsion</name>
+    </customLabels>
+    <customLabels>
+        <label>Falta el número de cliente o el número capturado es incorrecto para algunos clientes que han sido seleccionados</label>
+        <name>MX_PyME_Error_7_UG_Faltante</name>
+    </customLabels>
+    <customLabels>
+        <label>Es necesario buscar y seleccionar al menos un cliente para crear una solicitud de transferencia.</label>
+        <name>MX_PyME_Error_8_Referencia_a_cliente_faltante</name>
+    </customLabels>
+    <customLabels>
+        <label>Las oportunidades relacionadas a Campañas deben tener Cliente.</label>
+        <name>MX_PYME_OppAccErrAccCamp</name>
+    </customLabels>
+    <customLabels>
+        <label>Las oportunidades relacionadas a Campañas deben tener producto seleccionado.</label>
+        <name>MX_PYME_OppPrdErrAccCamp</name>
+    </customLabels>
+    <customLabels>
+        <label>Los productos no coinciden, revisar productos en la oportunidad.</label>
+        <name>MX_PYME_OppPrdDifAccCamp</name>
+    </customLabels>
+    <customLabels>
+        <label>Informar al propietario de la campaña para que actualice los productos.</label>
+        <name>MX_PYME_AccCampPrdErrOpp</name>
+    </customLabels>
+    <customLabels>
+        <label>Este perfil no puede finalizar una visita</label>
+        <name>dwp_kitv__Allowed_profile</name>
+    </customLabels>
+    <customLabels>
+        <label>Cancelar</label>
+        <name>dwp_kitv__Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label>Por favor revisa los datos</label>
+        <name>dwp_kitv__Check_data</name>
+    </customLabels>
+    <customLabels>
+        <label>Es necesario configurar las opciones para finalizar una visita</label>
+        <name>dwp_kitv__Custom_finalize_error</name>
+    </customLabels>
+    <customLabels>
+        <label>No puedes convocar una visita en una fecha pasada</label>
+        <name>dwp_kitv__Date_launch_past</name>
+    </customLabels>
+    <customLabels>
+        <label>Es necesario marcar los temas como tratados para visualizarlos como tareas cerradas</label>
+        <name>dwp_kitv__Done_topic_check</name>
+    </customLabels>
+    <customLabels>
+        <label>Es necesario capturar este campo</label>
+        <name>dwp_kitv__EmptyFields</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Empty_topics --></label>
+        <name>dwp_kitv__Empty_topics</name>
+    </customLabels>
+    <customLabels>
+        <label>Este contacto ya fue agregado a la visita</label>
+        <name>dwp_kitv__Error_Visit_Contact</name>
+    </customLabels>
+    <customLabels>
+        <label>No tienes permiso para eliminar una visita en el estado actual</label>
+        <name>dwp_kitv__Error_Visit_Not_Finalized</name>
+    </customLabels>
+    <customLabels>
+        <label>Este colaborador ya fue agregado a la visita</label>
+        <name>dwp_kitv__Error_Visit_User</name>
+    </customLabels>
+    <customLabels>
+        <label>Error inesperado. Por favor, contacte a la administración del sistema</label>
+        <name>dwp_kitv__Error_server</name>
+    </customLabels>
+    <customLabels>
+        <label>El valor de dwp_kitv__LeadId__c en la configuración personalizada dwp_kitv__Lead_Opportunity_Field_cs__c no existe</label>
+        <name>dwp_kitv__ErrorcustomLeadInfo</name>
+    </customLabels>
+    <customLabels>
+        <label>Estás seguro de finalizar la visita</label>
+        <name>dwp_kitv__Finalize_visit</name>
+    </customLabels>
+    <customLabels>
+        <label>Estos comentarios serán enviados en el anuncio</label>
+        <name>dwp_kitv__Launch_meeting_atention</name>
+    </customLabels>
+    <customLabels>
+        <label>Esta visita se empalma con uno o más eventos, para confirmar da clic en el botón Enviar</label>
+        <name>dwp_kitv__Launch_meeting_confirmoverlappingevent</name>
+    </customLabels>
+    <customLabels>
+        <label>Esta visita se empalma con los eventos siguientes:</label>
+        <name>dwp_kitv__Launch_meeting_overlappingevent</name>
+    </customLabels>
+    <customLabels>
+        <label>Convocar</label>
+        <name>dwp_kitv__Launch_title</name>
+    </customLabels>
+    <customLabels>
+        <label>Se necesita uno o más contactos para poder enviar la convocatoria</label>
+        <name>dwp_kitv__Min_number_contacts_error</name>
+    </customLabels>
+    <customLabels>
+        <label>Se necesitan uno o más temas a tratar para enviar la convocatoria</label>
+        <name>dwp_kitv__Min_number_topics_error</name>
+    </customLabels>
+    <customLabels>
+        <label>Se necesitan uno o más colaboradores para poder enviar la minuta</label>
+        <name>dwp_kitv__Min_number_users_error</name>
+    </customLabels>
+    <customLabels>
+        <label>Selecciona las destinatarios de la minuta</label>
+        <name>dwp_kitv__Minute_Heading_01</name>
+    </customLabels>
+    <customLabels>
+        <label>Vista previa</label>
+        <name>dwp_kitv__Minute_Heading_Title</name>
+    </customLabels>
+    <customLabels>
+        <label>Colaborador</label>
+        <name>dwp_kitv__Minute_content_01</name>
+    </customLabels>
+    <customLabels>
+        <label>Contacto</label>
+        <name>dwp_kitv__Minute_content_02</name>
+    </customLabels>
+    <customLabels>
+        <label>La vista previa no esta disponible, sin embargo puedes enviar la minuta</label>
+        <name>dwp_kitv__Minute_content_03</name>
+    </customLabels>
+    <customLabels>
+        <label>Para este tipo de plantilla la vista previa no está disponible, sin embargo puedes enviar la minuta (para obtener más información consulte a su administrador del sistema)</label>
+        <name>dwp_kitv__Minute_content_04</name>
+    </customLabels>
+    <customLabels>
+        <label>Plantilla de correo electrónico</label>
+        <name>dwp_kitv__Minute_content_05</name>
+    </customLabels>
+    <customLabels>
+        <label>Nombre</label>
+        <name>dwp_kitv__Minute_content_06</name>
+    </customLabels>
+    <customLabels>
+        <label>Correo</label>
+        <name>dwp_kitv__Minute_content_07</name>
+    </customLabels>
+    <customLabels>
+        <label>Documentos</label>
+        <name>dwp_kitv__Minute_content_09</name>
+    </customLabels>
+    <customLabels>
+        <label>Adjuntar</label>
+        <name>dwp_kitv__Minute_content_10</name>
+    </customLabels>
+    <customLabels>
+        <label>Nombre del docuemento</label>
+        <name>dwp_kitv__Minute_content_11</name>
+    </customLabels>
+    <customLabels>
+        <label>La visita ha sido finalizada</label>
+        <name>dwp_kitv__Minute_message_01</name>
+    </customLabels>
+    <customLabels>
+        <label>No existe una configuración personalizada para este tipo de registro</label>
+        <name>dwp_kitv__Minute_message_02</name>
+    </customLabels>
+    <customLabels>
+        <label>Se necesita un contacto principal</label>
+        <name>dwp_kitv__Minute_message_03</name>
+    </customLabels>
+    <customLabels>
+        <label>La información ha sido enviada correctamente</label>
+        <name>dwp_kitv__Minute_message_04</name>
+    </customLabels>
+    <customLabels>
+        <label>Se necesitan uno o más acuerdos</label>
+        <name>dwp_kitv__Minute_message_05</name>
+    </customLabels>
+    <customLabels>
+        <label>Se necesitan uno o más colaboradores</label>
+        <name>dwp_kitv__Minute_message_06</name>
+    </customLabels>
+    <customLabels>
+        <label>No existe una plantilla asignada</label>
+        <name>dwp_kitv__Minute_message_07</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No --></label>
+        <name>dwp_kitv__No</name>
+    </customLabels>
+    <customLabels>
+        <label>No es posible crear una vista sin un cliente o prospecto</label>
+        <name>dwp_kitv__NoAccNoLeadVisit</name>
+    </customLabels>
+    <customLabels>
+        <label>Se necesitan agregar notas para finalizar la vista</label>
+        <name>dwp_kitv__Note_visit_filled</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Ok --></label>
+        <name>dwp_kitv__Ok</name>
+    </customLabels>
+    <customLabels>
+        <label>Planeación</label>
+        <name>dwp_kitv__Plan_Visit</name>
+    </customLabels>
+    <customLabels>
+        <label>Este perfil no tiene permisos para convocar</label>
+        <name>dwp_kitv__Profile_can_not_launch</name>
+    </customLabels>
+    <customLabels>
+        <label>Cliente</label>
+        <name>dwp_kitv__RTvisitAcc</name>
+    </customLabels>
+    <customLabels>
+        <label>Prospecto</label>
+        <name>dwp_kitv__RTvisitLead</name>
+    </customLabels>
+    <customLabels>
+        <label>Guardar</label>
+        <name>dwp_kitv__Save</name>
+    </customLabels>
+    <customLabels>
+        <label>Enviar</label>
+        <name>dwp_kitv__Send</name>
+    </customLabels>
+    <customLabels>
+        <label>No se puede finalizar una visita cerrada o cancelada</label>
+        <name>dwp_kitv__Status_visit_to_finalize</name>
+    </customLabels>
+    <customLabels>
+        <label>Se ha guardado con éxito</label>
+        <name>dwp_kitv__Toast_saved_ko</name>
+    </customLabels>
+    <customLabels>
+        <label>Se ha guardado con éxito</label>
+        <name>dwp_kitv__Toast_saved_ok</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- VISITS CONFIDENTIAL INFORMATION --></label>
+        <name>dwp_kitv__VISITS_CONFIDENTIAL_INFORMATION</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Visit_disclosure_non_applicable --></label>
+        <name>dwp_kitv__Visit_disclosure_non_applicable</name>
+    </customLabels>
+    <customLabels>
+        <label>La visita se ha finalizado</label>
+        <name>dwp_kitv__Visit_finalized</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Visit_status_arranged --></label>
+        <name>dwp_kitv__Visit_status_arranged</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Visit_status_finalized --></label>
+        <name>dwp_kitv__Visit_status_finalized</name>
+    </customLabels>
+    <customLabels>
+        <label>No se puede convocar en el estado actual</label>
+        <name>dwp_kitv__Visit_status_not_valid</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Visit_status_planning --></label>
+        <name>dwp_kitv__Visit_status_planning</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Visit_status_updated --></label>
+        <name>dwp_kitv__Visit_status_updated</name>
+    </customLabels>
+    <customLabels>
+        <label>Si</label>
+        <name>dwp_kitv__Yes</name>
+    </customLabels>
+    <customLabels>
+        <label>Es necesario capturar la descripción</label>
+        <name>dwp_kitv__description_not_empty</name>
+    </customLabels>
+     <customLabels>
+        <label>Convocatoria</label>
+        <name>dwp_kitv__invite</name>
+    </customLabels>
+</Translations>

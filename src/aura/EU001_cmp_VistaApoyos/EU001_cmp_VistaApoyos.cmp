@@ -1,0 +1,100 @@
+<!--
+*Desarrollado por:       Indra
+*Autor:                  Isaías Velzquez
+*Proyecto:               Experiencia Única
+*Descripción:            Componente Lightning de Reunión Individula
+*Cambios (Versiones)
+*******************************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*******************************************************************************************************
+*1.0    | 08-09-2017     |    Isaías Velzquez       |          Creación
+*2.0    | 20-03-2018     |    Abraham Tinajero      |   Se modifica redireccionamiento de detalle de apoyo
+*3.0    | 20-03-2018     |    Abraham Tinajero      |   Se actualiza filtro de estatus
+*3.1    | 04-04-2018     |    Abraham Tinajero      |   Estilo para ajustar tabla en vista
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasrecordId,force:hasSObjectName" access="GLOBAL" controller="EU001_VistaApoyos_Ctrl">
+	<aura:attribute name="IdRICompromiso" type="String" default=""/>
+	<aura:attribute name="RecordTypeFilter" type="String" default="Apoyos"/>
+    <aura:attribute name="picklistValuesApoyosComp" type="Object" />
+	<aura:attribute name="VerMas" type="String" default=""/>
+    <aura:attribute name="isDO" type="Boolean" default="true"/>
+	<aura:attribute name="rows" type="Object[]" />
+	<aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:attribute name="showModalNuevoApoyo" type="Boolean" default="false" />
+    <aura:attribute name="RISelName" type="String"/>
+    <lightning:layoutitem flexibility="grow" size="12" mediumDeviceSize="12" largeDeviceSize="12">
+
+
+      <div class="slds-page-header">
+        <div class="slds-grid slds-table_resizable-cols slds-table_fixed-layout">
+            <div class="slds-p-horizontal--small slds-size--1-of-2">
+                <nav role="navigation" aria-label="Breadcrumbs">
+
+                </nav>
+            </div>
+
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                <span></span>
+                 <lightning:select aura:id="selEstatusApoyoTab" name="selEstatusApoyoTab" label="Filtrar estatus" class="slds-size_1-of-2 slds-p-horizontal_x-small"  onchange="{!c.init}">
+                    <option value="">--Ninguno--</option>
+                    <option value="Abierto">Abierto</option>
+                    <option value="Descartado">Descartado</option>
+                    <option value="Hecho">Hecho</option>
+                    <option value="Reprogramado">Reprogramado</option>
+                    <option value="Vencido">Vencido</option>
+                </lightning:select>
+            </div>
+
+        </div>
+    </div>
+        <br/>
+        <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout" role="grid">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Agrupación">Caso</div>
+                    </th>
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Agrupación">Tipo de Apoyo</div>
+                    </th>
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Agrupación">Descripción</div>
+                    </th>
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Agrupación">Fecha Propuesta de Cierre</div>
+                    </th>
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Agrupación">Estado</div>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.rows}" var="row" indexVar="rowIndex">
+                    <tr class="slds-is-sortable slds-is-resizable" style="overflow-x:auto;">
+                        <th>
+                            <a data-index="{!rowIndex}"  id="{!row.Id}" href="{!'/lightning/r/Case/'+ row.Id + '/view'}" target="_blank">
+                                {!row.CaseNumber}
+                            </a>
+                        </th>
+                        <th>
+                            <ui:outputText value="{!row.EU001_ls_Tipo_de_apoyo__c}" />
+                        </th>
+                        <th class="slds-truncate">
+                            <ui:outputText value="{!row.Description}" title="{!row.Description}"/>
+                        </th>
+                        <th scope="col" class="slds-is-sortable slds-is-resizable">
+                            <ui:outputText value="{!row.EU001_fh_Fecha_propuesta_de_cierre__c}" />
+                        </th>
+                        <th>
+                            <ui:outputText value="{!row.Status}" />
+                        </th>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </lightning:layoutitem>
+      <aura:if isTrue="{!v.showModalNuevoApoyo}">
+            <c:EU001_cmp_modApoyos IdRICompromiso="{!v.IdRICompromiso}" NombreRI="{!v.RISelName}" isActive="{!v.showModalNuevoApoyo}"/>
+  </aura:if>
+</aura:component>

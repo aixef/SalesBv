@@ -1,0 +1,102 @@
+<aura:component controller="BPyP_Contact_Acc" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+	<ltng:require scripts="{!$Resource.JqueryLightning}"  />
+	<ltng:require styles="{!$Resource.SLDS_MAXBBVA + '/assets/styles/salesforce-lightning-design-system-ltng.css'}" />
+	<ltng:require scripts="{!join(',', 
+        $Resource.chartjsalm + '/chartjs/Chart.bundle.js',
+        $Resource.chartjsalm + '/chartjs/Chart.bundle.min.js',
+         $Resource.chartjsalm  + '/chartjs/Chart.js',
+           $Resource.chartjsalm  + '/chartjs/Chart.min.js'
+                               )}" afterScriptsLoaded="{!c.generateChart}"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="seldiv" type="String" description="Selected Division"/>
+    <aura:attribute name="body1" type="String" description="Body table"/>
+    <aura:attribute name="seloff" type="String" description="Selected Office"/>
+    <aura:attribute name="seltitle" type="String" default="Pr" description="Selected Title for Bankmans"/>
+    <aura:attribute name="priv" type="String" default="PRIVADO" description="Text for User title"/>
+    <aura:attribute name="selbkm" type="String" description="Selected Bankman"/>
+    <aura:attribute name="patrs" type="String" default="PATRIMONIAL SR" description="Text for User title"/>
+    <aura:attribute name="patr" type="String" default="PATRIMONIAL" description="Text for User title"/>
+    <aura:attribute name="isDiv" type="Boolean" default="False" description="Boolean to know if user is div director"/>
+    <aura:attribute name="isOff" type="Boolean" default="False" description="Boolean to know if user is office director"/>
+    <aura:attribute name="ListOfOpp" type="Opportunity[]" description="store accounts of BPyP"/>
+    <aura:attribute name="isBkm" type="Boolean" default="False" description="Boolean to know if user is Standard BPyP user"/>
+    <aura:attribute name="ListOfOff" type="List" description="store option of Offices based on Div of BPyP"/>
+    <aura:attribute name="ListOfDiv" type="List" description="store option of Divisions of BPyP"/>
+    <aura:attribute name="ListOfTyOpp" type="List" description="store option of Divisions of BPyP"/>
+    <aura:attribute name="ListOfBkMn" type="List" description="store Bankmans on offices and divisions based on Div and offices of BPyP"/>
+    <aura:attribute name="sDate" type="Date" default="" access="GLOBAL"/>
+    <aura:attribute name="chart2Height" type="Integer" description="Chart 2 height" />
+    <aura:handler name="changeEDate" value="{!v.eDate}" action="{!c.updOpAc}"/>
+    <aura:attribute name="eDate" type="Date" default="" access="GLOBAL"/>
+    <aura:handler name="changeSDate" value="{!v.sDate}" action="{!c.updOpAc}"/> 
+
+    <!--style>
+        canvas.c2{
+          height:{!v.chart2Height}px !important;
+        }
+        th {
+            text-align: center;
+        }
+        td{
+            text-align: center;
+        }
+    </style-->
+    <div class="slds-page-header" style="">
+        <div class="slds-media__body">
+          	<h1 class="slds-page-header__title slds-truncate slds-align-middle slds-clearfix" title="Tipo de reporte"><strong>Tipo Contactabilidad</strong>
+				<!-- <lightning:icon class="slds-float_right" iconName="utility:info" size="xx-small" title="Reporte que muestra los tipos de contactabilidad analizando su distribución permitiendo acceder a los datos por división oficina y banquero"/> -->
+				<lightning:helptext title="Reporte que muestra los tipos de contactabilidad analizando su distribución permitiendo acceder a los datos por división oficina y banquero" content="Reporte que muestra los tipos de contactabilidad analizando su distribución permitiendo acceder a los datos por división oficina y banquero" iconName="utility:info"/>
+      		</h1>
+        </div>
+    </div>
+
+    <div class="slds-grid slds-wrap slds-grid_pull-padded">
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+            <lightning:select aura:id="pklTyAccBpyP" name="selectDiv" label="Tipo de Figura" value="{!v.seltitle}" onchange="{!c.updOpAc}">
+                <option value="Pr" text="{!v.priv}" selected="{!v.seltitle==v.priv}"></option>
+                <option value="Pa" text="{!v.patr}" selected="{!v.seltitle==v.patr}"></option>
+                <option value="Pas" text="{!v.patrs}" selected="{!v.seltitle==v.patrs}"></option>
+            </lightning:select>
+        </div>
+	<!-- </div> -->
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+            <lightning:select aura:id="pklDivBpyP" name="selectDiv" label="División" value="{!v.seldiv}" onchange="{!c.updDiv}" >
+                <option value="" selected="{!v.seldiv==''}">TODAS</option>
+                <aura:iteration items="{!v.ListOfDiv}" var="div">
+                    <br/><option value="{!div.Divisi_n__c}" text="{!div.Divisi_n__c}" selected="{!div.Divisi_n__c==v.seldiv}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+        
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+            <lightning:select aura:id="pklOffBpyP" name="selectOff" label="Oficina" value="{!v.seloff}" onchange="{!c.updOffice}" >
+                <option value="" selected="{!v.seloff==''}">TODAS</option>
+                <aura:iteration items="{!v.ListOfOff}" var="off">
+                    <br/><option value="{!off.BPyP_ls_NombreSucursal__c}" text="{!off.BPyP_ls_NombreSucursal__c}" selected="{!off.BPyP_ls_NombreSucursal__c==v.seloff}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+            <lightning:select aura:id="pklBkMnBpyP" name="selectBkMn" label="Banquero" value="{!v.selbkm}" onchange="{!c.updBkM}" >
+                <option value="" selected="{!v.selbkm==''}">TODAS</option>
+                <aura:iteration items="{!v.ListOfBkMn}" var="BkMn">
+                    <br/><option value="{!BkMn.Id}" text="{!BkMn.Name}" selected="{!BkMn.Name==v.selbkm}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+        	<ui:inputDate aura:id="expsdate" label="Fecha Inicio" class="field" value="{!v.sDate}" displayDatePicker="true" change="{!c.updOpAc}"/>
+		</div>
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+			<ui:inputDate aura:id="expedate" label="Fecha Fin" class="field" value="{!v.eDate}" displayDatePicker="true" change="{!c.updOpAc}"/>
+		</div>
+    </div>
+    <div class="slds-grid slds-wrap slds-grid_pull-padded slds-p-around_large">
+        <div class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1">
+            <canvas class="c2" aura:id="myChartt2" style="{! 'height: ' + v.chart2Height +'px'}"></canvas>
+        </div>
+        <div  id="wrapper2">
+        </div>
+    </div>
+</aura:component>

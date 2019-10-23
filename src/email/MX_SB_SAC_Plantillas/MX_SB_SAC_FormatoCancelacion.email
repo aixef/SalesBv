@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><font face="Arial, sans-serif" style=""><span style="color: rgb(31, 73, 125);">Estimad@&nbsp;<b style="">“</b></span><font style=""><b>{!Case.Account}</b></font><b style="color: rgb(31, 73, 125);">”</b><span style="color: rgb(31, 73, 125);">,</span></font></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="color: rgb(31, 73, 125);"><font face="Arial, sans-serif"><br><o:p></o:p></font></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify;"><font face="Arial, sans-serif"><span style="color: rgb(31, 73, 125);">Seguros BBVA Bancomer agradece su preferencia. Le informamos que el día de hoy “</span><b><u>{!Case.ClosedDate}</u></b><b style="color: rgb(31, 73, 125);">”,&nbsp;&nbsp;</b><font color="#1f497d">su tramite por&nbsp;</font><b>"</b><b>{!Case.Reason}"</b><b style="color: rgb(31, 73, 125);">&nbsp;</b><font color="#1f497d">por&nbsp;</font><b>"{!Case.MX_SB_SAC_Detalle__c}"&nbsp;</b><span style="line-height: 115%; color: rgb(31, 73, 125);">inició con el </span><font color="#1f497d">folio&nbsp;</font><b style="color: rgb(31, 73, 125);">“</b><font style=""><b><u>{!Case.CaseNumber}</u></b></font><b style="color: rgb(31, 73, 125);">”&nbsp;</b></font></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="color: rgb(31, 73, 125);"><font face="Arial, sans-serif">&nbsp;</font></span></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span style="color: rgb(31, 73, 125);"><font face="Arial, sans-serif" style="">Para cualquier duda relacionada a su solicitud, favor de comunicarse a nuestra línea de atención a Clientes.</font></span></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[<div style="text-align: right;"><span style="font-size: x-small; background-color: rgb(255, 255, 255);"><font color="#ffffff">&nbsp; {!Case.Thread_Id}</font></span></div>]]></td>
+</tr>
+</table>

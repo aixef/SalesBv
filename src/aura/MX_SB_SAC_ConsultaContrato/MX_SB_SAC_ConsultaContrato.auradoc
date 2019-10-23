@@ -1,0 +1,19 @@
+<aura:documentation>
+  <aura:description>Documentation consulta cotrato</aura:description>
+  <aura:example name="MX_SB_SAC_ConsultaContrato" ref="MX_SB_SAC_ConsultaContrato" label="Consulta Contrato">
+    <!--
+    * @author Jose luis
+    * @date 2019
+    * |2019-07-16  Componente consulta contrato
+    -->
+    El componente consulta cotrato ligado a cliente
+    <p> Atributo recordId : Id del Registro</p>
+    <p> Atributo params : mapa de datos para iterar</p>
+    <p> Atributo msgResponse : Mensaje de respuesta del servicio</p>
+    <p> Atributo polizaDetail : mapa con el detalle de la poliza</p>
+    <p> Atributo HideSpinner : Boleano para mostrar ocultar spiner</p>
+    <p> Atributo HideCreatModify : Boleano para ocultar la edicion del registro</p>
+    <p> Atributo isResponse : Booleano para validar si la respuesta del servicio fue correcta</p>
+    <p> Handler init : Inicializa el componente</p>
+  </aura:example>
+</aura:documentation>

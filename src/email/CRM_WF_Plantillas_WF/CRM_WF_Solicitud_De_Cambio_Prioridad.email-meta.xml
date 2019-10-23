@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Solicitud de cambio de Prioridad</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de cambio de prioridad a la Campaña {!Campaign.Name}</subject>
+    <textOnly>Por medio de la presente solicitamos de su apoyo para realizar el cambio de la prioridad a Urgente en la Campaña {!Campaign.Name}
+
+Con la siguiente Justificación: {!Campaign.CRM_WF_Justificacion_del__c}
+
+Para realizar el cambio favor de dar clic en el siguiente vínculo:
+
+{!Campaign.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Esta configuración almacena los Motivos de no contacti por los que un Prospecto puede no ser enviado nuevamente a CTI</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>MX_SB_VTS_HoraDuracion__c</fullName>
+        <description>Duración en Horas de la acción</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Horas de duración</inlineHelpText>
+        <label>Duración</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_IDACCION__c</fullName>
+        <description>Numero de accion a detonar.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Acción a detonar (1,2,3)</inlineHelpText>
+        <label>Numero de accion</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Nivel_10__c</fullName>
+        <description>Décimo nivel de tipificación de árbol de decisión.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Décimo nivel de tipificación de árbol de decisión.</inlineHelpText>
+        <label>Nivel 10</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Nivel_1__c</fullName>
+        <description>Nivel 1 del arbol de tipificación</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Nivel 1 de revision</inlineHelpText>
+        <label>Nivel 1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Nivel_2__c</fullName>
+        <description>Crea el segundo nivel de iteración en el árbol de tipificación.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Segundo nivel de iteración</inlineHelpText>
+        <label>Nivel 2</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Nivel_3__c</fullName>
+        <description>Tercer Nivel de Iteración del árbol de decisiones.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Tercer nivel de Iteración.</inlineHelpText>
+        <label>Nivel 3</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Nivel_4__c</fullName>
+        <description>Cuarto Nivel de Iteración del árbol de tipificación</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Cuarto nivel de Tipificación</inlineHelpText>
+        <label>Nivel 4</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Nivel_5__c</fullName>
+        <description>Quinto Nivel de Tipificación del árbol de procesos.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Quinto Nivel de tipificación</inlineHelpText>
+        <label>Nivel 5</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Nivel_6__c</fullName>
+        <description>Sexto Nivel de tipificación del árbol de procesos.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Sexto nivel de tipificación.</inlineHelpText>
+        <label>Nivel 6</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Nivel_7__c</fullName>
+        <description>Séptimo nivel de tipificación del árbol de tipificación.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Séptimo nivel de tipificación.</inlineHelpText>
+        <label>Nivel 7</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Nivel_8__c</fullName>
+        <description>Octavo nivel de tipificación de árbol de decisión.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Octavo nivel de tipificación de árbol de decisión.</inlineHelpText>
+        <label>Nivel 8</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Nivel_9__c</fullName>
+        <description>Noveno nivel de tipificación de árbol de decisión.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Noveno nivel de tipificación de árbol de decisión.</inlineHelpText>
+        <label>Nivel 9</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>	
+    <fields>
+        <fullName>MX_WB_MotivoNoContacto__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo no contacto</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Motivos de no contacto</label>
+    <visibility>Public</visibility>
+</CustomObject>

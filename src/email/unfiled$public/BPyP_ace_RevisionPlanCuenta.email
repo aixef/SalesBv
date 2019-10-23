@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Buen día]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style=""><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);">Se le notifica que el usuario&nbsp;</span><font face="arial"><b>{!Ficha_de_conocimiento__c.OwnerFullName} </b>se encuentra en espera de su visto bueno para el Plan de Cuenta&nbsp;<b>{!Ficha_de_conocimiento__c.Name} </b>que pertenece al cliente:</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial"><b>{!Ficha_de_conocimiento__c.Cliente__c}</b></font></div><div style=""><font face="arial"><b><br></b></font></div><div style=""><font face="arial"><b><br></b></font></div><div style=""><font face="arial"><b><br></b></font></div><div style=""><font face="arial"><b><br></b></font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial"><br></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

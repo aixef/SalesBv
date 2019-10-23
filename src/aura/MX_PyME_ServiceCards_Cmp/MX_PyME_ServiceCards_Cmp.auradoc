@@ -1,0 +1,8 @@
+<aura:documentation>
+    <aura:description>
+        <code>c:MX_PyME_ServiceCards_Cmp</code>The component shows a carrousel of cards with information about the client financial situation.
+    </aura:description>
+    <aura:example name="CardsCarrousel" ref="c:MX_PyME_ServiceCards_Cmp" label="Info Cards Component">
+        <p>Info Cards Component <code>c:MX_PyME_ServiceCards_Cmp</code>.</p>
+    </aura:example>
+</aura:documentation>

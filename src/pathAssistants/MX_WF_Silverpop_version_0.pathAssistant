@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>CRM_WF_Artes__c</entityName>
+    <fieldName>CRM_WF_Estatus__c</fieldName>
+    <masterLabel>Silverpop versión 0</masterLabel>
+    <recordTypeName>MX_WF_Email_Silverpop_versi_n_0</recordTypeName>
+</PathAssistant>

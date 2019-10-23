@@ -1,0 +1,69 @@
+<!--
+*Desarrollado por:       Accenture SC
+*Autor:                  Mario A. Calderón Muñoz
+*Proyecto:               BPyP
+*Descripción:            Componente Lightning para recuperar valores dependientes de otros valores y
+*						 mostrarlos de manera dinámica (Basado en MX_BPP_Opportunity_Creator).
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0	| 24-01-2019	 |	  Mario Calderón		|	Creación
+*1.1	| 25-01-2019	 |	  Mario Calderón		|	Se reciben los siguientes atributos a la creación del
+*														componente: tipos de registro de oportunidad 
+*														de los cuales se deben buscar los valores
+*														dependientes, el nombre API del campo controlador,
+*														el nombre API del campo dependiente, una etiqueta 
+*														para el campo controlador y una etiqueta para el campo
+*														dependiente.																											
+-->
+
+<aura:component description="Crear Oportunidad" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasrecordId,force:hasSObjectName" access="GLOBAL" controller="MX_BPP_CamposDependientes_Ctrl">
+    <!-- call doInit function on component load -->  
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+    
+    <!-- aura attributes-->  
+    <aura:attribute name="listControllingValues" type="list" default="[]" description="Almacena valores del campo controlador"/>
+    <aura:attribute name="listDependingValues" type="list" default="['--- Ninguno ---']" description="Almacena valores del campo dependiente"/>
+    <aura:attribute name="listRecordTypes" type="list" default="[]" description="Almacena los tipos de registro de los cuales se buscarán los valores dependientes"/>
+    <aura:attribute name="depnedentFieldMap" type="map" description="Mapa para almacenar valores dependientes con al valor controlador"/>
+    <aura:attribute name="bDisabledDependentFld" type="boolean" default="true" description="Activa o desactiva el campo dependiente según el valor seleccionado en el campo controlador"/>
+    <aura:attribute name="campoPadre" type="string" description="Este campo recibe el campo padre seleccionado del objeto"/> 
+    <aura:attribute name="campoHijo" type="string" description="Este campo recibe el campo hijo seleccionado del objeto"/> 
+    
+    <aura:attribute name="objDetail" type="contact" default=""/>
+    <aura:attribute name="controllingFieldAPI" type="string" default="" description="Almacena el nombre API del campo controlador"/>
+    <aura:attribute name="dependingFieldAPI" type="string" default="" description="Almacena el nombre API del campo dependiente"/>
+    <aura:attribute name="etiquetaCampoControlador" type="string" default="" description="Almacena la etiqueta del campo controlador"/>
+    <aura:attribute name="etiquetaCampoDependiente" type="string" default="" description="Almacena la etiqueta del campo dependiente"/>
+    
+    <aura:registerEvent name="PasoFiltrosOpp" type="c:MX_BPP_CamposDependientes_CompEvent"/>
+    
+    <!--Campo controlador-->
+    <div class="slds-grid slds-table_resizable-cols slds-table_fixed-layout">
+    <div class="slds-p-horizontal--small slds-resizable slds-size--1-of-1">
+        <lightning:select name="controllerFld"
+                          value="{!v.objDetail.Padre__c}"
+                          label="{!v.etiquetaCampoControlador}"
+                          onchange="{!c.onControllerFieldChange}">
+            			  <option value="" text="--Ninguno--"></option>
+            <aura:iteration items="{!v.listControllingValues}" var="val">
+                <option value="{!val}">{!val}</option>
+            </aura:iteration>
+        </lightning:select>
+    </div>
+    
+    <!--Campo dependiente-->
+    <div class="slds-p-horizontal--small slds-resizable slds-size--2-of-2">
+        <lightning:select name="dependentFld"
+                          label="{!v.etiquetaCampoDependiente}"
+                          value="{!v.objDetail.Hijo__c}"
+                          disabled="{!v.bDisabledDependentFld}"
+            			  onchange="{!c.onControllerdependentFieldChange}">
+            			  <option value="" text="--Ninguno--"></option>
+            <aura:iteration items="{!v.listDependingValues}" var="val">
+                <option value="{!val}">{!val}</option>
+            </aura:iteration>
+        </lightning:select>
+    </div>
+    </div>
+</aura:component>

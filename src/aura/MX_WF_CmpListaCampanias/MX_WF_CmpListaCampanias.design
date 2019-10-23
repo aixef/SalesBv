@@ -1,0 +1,7 @@
+<design:component>
+
+    <design:attribute name="campana_seleccionada" label="Campaña Seleccionada" />
+    <design:attribute name="FechaInicioVigenciaCampania" label="Fecha Inicio Vigencia" />
+    <design:attribute name="FechaFinVigenciaCampania" label="Fecha Fin Vigencia" />
+
+</design:component>

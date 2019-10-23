@@ -1,0 +1,2765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+<actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>BPyP_fco_Plan_de_Cuenta</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>BPyP_fco_Plan_de_Cuenta</fullName>
+        <fields>Cliente__c</fields>
+        <fields>BPyP_pr_porcentajeCompletado__c</fields>
+        <label>BPyP Plan de Cuenta</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>BPyP_ca_AprobacionDD__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Utilizado para el proceso de aprobacion de Plan de Cuenta</description>
+        <externalId>false</externalId>
+        <label>Aprobacion Director Divisional</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_ca_AprobacionDO__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo utilizado para el proceso de aprobacion</description>
+        <externalId>false</externalId>
+        <label>Aprobacion Director de Oficina</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_ca_AprobacionDP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Utilizado para el proceso de aprobacion</inlineHelpText>
+        <label>Aprobacion Director Promocional</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BPYP_fm_NoCliente__c</fullName>
+        <description>Numero de cliente relacionado con el Plan de Cuenta</description>
+        <externalId>false</externalId>
+        <formula>Cliente__r.No_de_cliente__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Número de cliente.</inlineHelpText>
+        <label>Número de Cliente (o Prospecto)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BPyP_fm_NoGpoFam__c</fullName>
+        <description>Numero de Gpo Familiar del cliente asignado al Plan de Cuenta</description>
+        <externalId>false</externalId>
+        <formula>Cliente__r.MX_GroupItBelongs__r.Id</formula>
+        <inlineHelpText>Número de Grupo familiar asociado al cliente.</inlineHelpText>
+        <label>Número Grupo Familiar</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BPyP_fm_NombreCliente__c</fullName>
+        <description>Nombre del cliente</description>
+        <externalId>false</externalId>
+        <formula>Cliente__r.Name</formula>
+        <inlineHelpText>Formula con nombre del cliente</inlineHelpText>
+        <label>Nombre Cliente Completo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BPyP_fm_NomGpoFam__c</fullName>
+        <description>Nombre de Gpo Familiar del cliente relacionado con el Plan de cuenta</description>
+        <externalId>false</externalId>
+        <formula>Cliente__r.MX_GroupItBelongs__r.Name</formula>
+        <inlineHelpText>Nombre de Grupo familiar asociado al cliente.</inlineHelpText>
+        <label>Nombre Grupo Familiar</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BPyP_fm_NoPromotor__c</fullName>
+        <description>Numero de Promotor BPyP</description>
+        <externalId>false</externalId>
+        <formula>Owner:User.FirstName +&apos; &apos;+ Owner:User.LastName</formula>
+        <inlineHelpText>Nombre del Banquero</inlineHelpText>
+        <label>Banquero</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BPyP_fm_Segmento__c</fullName>
+        <description>Segmento del cliente relacionado con el plan de cuenta</description>
+        <externalId>false</externalId>
+        <formula>Cliente__r.Segmento__c</formula>
+        <inlineHelpText>Formula del Segmento del cliente relacionado con el plan de cuenta</inlineHelpText>
+        <label>Segmento</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+     <fields>
+        <fullName>BPyP_lm_Digital__c</fullName>
+        <description>Digital
+Se informa tenencia de Productos
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Digital,
+se informa tenencia de Productos</inlineHelpText>
+        <label>Digital</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bancomer.com</fullName>
+                    <default>false</default>
+                    <label>Bancomer.com</label>
+                </value>
+                <value>
+                    <fullName>Bancomer movil</fullName>
+                    <default>false</default>
+                    <label>Bancomer movil</label>
+                </value>
+                <value>
+                    <fullName>Bancomer SMS</fullName>
+                    <default>false</default>
+                    <label>Bancomer SMS</label>
+                </value>
+                <value>
+                    <fullName>Bancomer Trader</fullName>
+                    <default>false</default>
+                    <label>Bancomer Trader</label>
+                </value>
+                <value>
+                    <fullName>BBVA Send</fullName>
+                    <default>false</default>
+                    <label>BBVA Send</label>
+                </value>
+                <value>
+                    <fullName>BBVA Wallet</fullName>
+                    <default>false</default>
+                    <label>BBVA Wallet</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BPyP_lm_SegContr__c</fullName>
+        <description>Seguros contratados con Bancomer
+Se informa tenencia de Productos
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Seguros contratados con Bancomer,
+se informa tenencia de Productos</inlineHelpText>
+        <label>Seguros contratados con Bancomer</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Auto Seguro</fullName>
+                    <default>false</default>
+                    <label>Auto Seguro</label>
+                </value>
+                <value>
+                    <fullName>Gastos Medicos Mayores Indemnizatorio</fullName>
+                    <default>false</default>
+                    <label>Gastos Medicos Mayores Indemnizatorio</label>
+                </value>
+                <value>
+                    <fullName>Hogar Seguro Plus</fullName>
+                    <default>false</default>
+                    <label>Hogar Seguro Plus</label>
+                </value>
+                <value>
+                    <fullName>Inversión Libre Patrimonial</fullName>
+                    <default>false</default>
+                    <label>Inversión Libre Patrimonial</label>
+                </value>
+                <value>
+                    <fullName>Meta Segura</fullName>
+                    <default>false</default>
+                    <label>Meta Segura</label>
+                </value>
+                <value>
+                    <fullName>Vida Segura Personal</fullName>
+                    <default>false</default>
+                    <label>Vida Segura Personal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+<fields>
+        <fullName>BPyP_ls_2GenCurs__c</fullName>
+        <description>Han asistido a los cursos para segundas generaciones?
+(Solo si es Cliente B. Privada)&quot;
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Han asistido a los cursos para segundas generaciones?
+(Solo si es Cliente B. Privada)&quot;</inlineHelpText>
+        <label>¿Asistió a los cursos de 2° generación?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BpyP_ls_accionesBBVA__c</fullName>
+        <description>Tiene acciones de BBVA en Bancomer
+BPyP</description>
+        <externalId>false</externalId>
+        <label>Tiene acciones de BBVA en Bancomer</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_Advanced_Medical__c</fullName>
+        <description>¿Tiene Advanced Medical?
+BPyP</description>
+        <externalId>false</externalId>
+        <label>¿Tiene Advanced Medical?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_AnnlInc__c</fullName>
+        <description>Informar Ingreso Anual por Rango establecido BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Informar Ingreso Anual por Rango establecido</inlineHelpText>
+        <label>Ingreso anual por Rango</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0              500 mil</fullName>
+                    <default>false</default>
+                    <label>0              -500 mil</label>
+                </value>
+                <value>
+                    <fullName>500 mil    1   mill</fullName>
+                    <default>false</default>
+                    <label>500 mil    -1   millón</label>
+                </value>
+                <value>
+                    <fullName>1 mill        5   mill</fullName>
+                    <default>false</default>
+                    <label>1 millón       -5   millones</label>
+                </value>
+                <value>
+                    <fullName>5 mill        10 mill</fullName>
+                    <default>false</default>
+                    <label>5 millones        -10 millones</label>
+                </value>
+                <value>
+                    <fullName>10 mill      15 mill</fullName>
+                    <default>false</default>
+                    <label>10 millones      -15 millones</label>
+                </value>
+                <value>
+                    <fullName>&gt;               15 mill</fullName>
+                    <default>false</default>
+                    <label>&gt;               15 millones</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+<fields>
+        <fullName>BPyP_ls_Contactos_Operadores__c</fullName>
+        <description>Contactos Operadores
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>¿El Cliente se apoya en alguna persona para realizar sus Operaciones?</inlineHelpText>
+        <label>Contactos Operadores</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+<fields>
+        <fullName>BPyP_ls_CtcDes__c</fullName>
+        <description>Contactos decisores
+¿El Cliente toma la decisión sobre su inversión?
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contactos decisores
+¿El Cliente toma la decisión sobre su inversión?
+BPyP</inlineHelpText>
+        <label>Contactos decisores</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_ctrlBanc__c</fullName>
+        <description>¿Tiene posiciones de control en Bancomer?
+BpyP</description>
+        <externalId>false</externalId>
+        <label>¿Tiene posición de control en Bancomer?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+<fields>
+        <fullName>BPyP_ls_DepEco__c</fullName>
+        <description>Indicar si el Cliente tiene dependientes económicos.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicar si el Cliente tiene dependientes económicos.</inlineHelpText>
+        <label>Dependientes económicos</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_EmpresaFamiliar__c</fullName>
+        <description>¿Tiene Empresa Familiar?
+BPyP</description>
+        <externalId>false</externalId>
+        <label>¿Tiene Empresa Familiar?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_Es_Consejero__c</fullName>
+        <description>¿Es Consejero?
+BPyP</description>
+        <externalId>false</externalId>
+        <label>¿Es Consejero?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_Fideicomiso__c</fullName>
+        <description>Indicador de tenencia de Fideicomiso</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicador de tenencia de Fideicomiso</inlineHelpText>
+        <label>Fideicomiso(s)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_Main_bank__c</fullName>
+        <description>¿Cual es su principal Banco?
+BPyP</description>
+        <externalId>false</externalId>
+        <label>¿Cual es su principal Banco?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ABA</fullName>
+                    <default>false</default>
+                    <label>ABA</label>
+                </value>
+                <value>
+                    <fullName>ACCIVAL</fullName>
+                    <default>false</default>
+                    <label>ACCIVAL</label>
+                </value>
+                <value>
+                    <fullName>ACTINVER BANCO</fullName>
+                    <default>false</default>
+                    <label>ACTINVER BANCO</label>
+                </value>
+                <value>
+                    <fullName>ACTINVER CASA DE BOLSA</fullName>
+                    <default>false</default>
+                    <label>ACTINVER CASA DE BOLSA</label>
+                </value>
+                <value>
+                    <fullName>ACTINVER LLOYD</fullName>
+                    <default>false</default>
+                    <label>ACTINVER LLOYD</label>
+                </value>
+                <value>
+                    <fullName>AFIRME</fullName>
+                    <default>false</default>
+                    <label>AFIRME</label>
+                </value>
+                <value>
+                    <fullName>AMERICAN EXPRESS</fullName>
+                    <default>false</default>
+                    <label>AMERICAN EXPRESS</label>
+                </value>
+                <value>
+                    <fullName>ASEA</fullName>
+                    <default>false</default>
+                    <label>ASEA</label>
+                </value>
+                <value>
+                    <fullName>ASP FINANCIERA</fullName>
+                    <default>false</default>
+                    <label>ASP FINANCIERA</label>
+                </value>
+                <value>
+                    <fullName>AUTOFIN</fullName>
+                    <default>false</default>
+                    <label>AUTOFIN</label>
+                </value>
+                <value>
+                    <fullName>AZTECA</fullName>
+                    <default>false</default>
+                    <label>AZTECA</label>
+                </value>
+                <value>
+                    <fullName>BAJIO</fullName>
+                    <default>false</default>
+                    <label>BAJIO</label>
+                </value>
+                <value>
+                    <fullName>BAMSA</fullName>
+                    <default>false</default>
+                    <label>BAMSA</label>
+                </value>
+                <value>
+                    <fullName>BANAMEX</fullName>
+                    <default>false</default>
+                    <label>BANAMEX</label>
+                </value>
+                <value>
+                    <fullName>BANCEN</fullName>
+                    <default>false</default>
+                    <label>BANCEN</label>
+                </value>
+                <value>
+                    <fullName>BANCO AMIGO</fullName>
+                    <default>false</default>
+                    <label>BANCO AMIGO</label>
+                </value>
+                <value>
+                    <fullName>BANCO COMPARTAMOS</fullName>
+                    <default>false</default>
+                    <label>BANCO COMPARTAMOS</label>
+                </value>
+                <value>
+                    <fullName>BANCO DEUNO</fullName>
+                    <default>false</default>
+                    <label>BANCO DEUNO</label>
+                </value>
+                <value>
+                    <fullName>BANCO FACIL</fullName>
+                    <default>false</default>
+                    <label>BANCO FACIL</label>
+                </value>
+                <value>
+                    <fullName>BANCO FAMSA</fullName>
+                    <default>false</default>
+                    <label>BANCO FAMSA</label>
+                </value>
+                <value>
+                    <fullName>BANCO INMOBILIARIO MEXICANO</fullName>
+                    <default>false</default>
+                    <label>BANCO INMOBILIARIO MEXICANO</label>
+                </value>
+                <value>
+                    <fullName>BANCOMER</fullName>
+                    <default>false</default>
+                    <label>BANCOMER</label>
+                </value>
+                <value>
+                    <fullName>BANCOMEXT</fullName>
+                    <default>false</default>
+                    <label>BANCOMEXT</label>
+                </value>
+                <value>
+                    <fullName>BANCOPPEL</fullName>
+                    <default>false</default>
+                    <label>BANCOPPEL</label>
+                </value>
+                <value>
+                    <fullName>BANCO REGIONAL</fullName>
+                    <default>false</default>
+                    <label>BANCO REGIONAL</label>
+                </value>
+                <value>
+                    <fullName>BANJERCITO</fullName>
+                    <default>false</default>
+                    <label>BANJERCITO</label>
+                </value>
+                <value>
+                    <fullName>BANK ONE</fullName>
+                    <default>false</default>
+                    <label>BANK ONE</label>
+                </value>
+                <value>
+                    <fullName>BANOBRAS</fullName>
+                    <default>false</default>
+                    <label>BANOBRAS</label>
+                </value>
+                <value>
+                    <fullName>BANORTE</fullName>
+                    <default>false</default>
+                    <label>BANORTE</label>
+                </value>
+                <value>
+                    <fullName>BANREGIO</fullName>
+                    <default>false</default>
+                    <label>BANREGIO</label>
+                </value>
+                <value>
+                    <fullName>BANSEFI</fullName>
+                    <default>false</default>
+                    <label>BANSEFI</label>
+                </value>
+                <value>
+                    <fullName>BANSI</fullName>
+                    <default>false</default>
+                    <label>BANSI</label>
+                </value>
+                <value>
+                    <fullName>BANXICO</fullName>
+                    <default>false</default>
+                    <label>BANXICO</label>
+                </value>
+                <value>
+                    <fullName>BARCLAYS</fullName>
+                    <default>false</default>
+                    <label>BARCLAYS</label>
+                </value>
+                <value>
+                    <fullName>BASE INTERNACIONAL CASA DE BOLSA</fullName>
+                    <default>false</default>
+                    <label>BASE INTERNACIONAL CASA DE BOLSA</label>
+                </value>
+                <value>
+                    <fullName>BBASE</fullName>
+                    <default>false</default>
+                    <label>BBASE</label>
+                </value>
+                <value>
+                    <fullName>BMULTIVA</fullName>
+                    <default>false</default>
+                    <label>BMULTIVA</label>
+                </value>
+                <value>
+                    <fullName>BOSTON</fullName>
+                    <default>false</default>
+                    <label>BOSTON</label>
+                </value>
+                <value>
+                    <fullName>BYB CASA DE CAMBIO</fullName>
+                    <default>false</default>
+                    <label>BYB CASA DE CAMBIO</label>
+                </value>
+                <value>
+                    <fullName>CASA DE BOLSA BANORTE</fullName>
+                    <default>false</default>
+                    <label>CASA DE BOLSA BANORTE</label>
+                </value>
+                <value>
+                    <fullName>CASA DE BOLSA MONEX</fullName>
+                    <default>false</default>
+                    <label>CASA DE BOLSA MONEX</label>
+                </value>
+                <value>
+                    <fullName>CLSBANK</fullName>
+                    <default>false</default>
+                    <label>CLSBANK</label>
+                </value>
+                <value>
+                    <fullName>COMERICA BAN</fullName>
+                    <default>false</default>
+                    <label>COMERICA BAN</label>
+                </value>
+                <value>
+                    <fullName>CONSULTORIA INTERNACIONAL BANCO</fullName>
+                    <default>false</default>
+                    <label>CONSULTORIA INTERNACIONAL BANCO</label>
+                </value>
+                <value>
+                    <fullName>CREDIT SUISSE</fullName>
+                    <default>false</default>
+                    <label>CREDIT SUISSE</label>
+                </value>
+                <value>
+                    <fullName>DEUTSCHE BANK</fullName>
+                    <default>false</default>
+                    <label>DEUTSCHE BANK</label>
+                </value>
+                <value>
+                    <fullName>FINAMEX CASA DE BOLSA</fullName>
+                    <default>false</default>
+                    <label>FINAMEX CASA DE BOLSA</label>
+                </value>
+                <value>
+                    <fullName>GBM</fullName>
+                    <default>false</default>
+                    <label>GBM</label>
+                </value>
+                <value>
+                    <fullName>GE CAPITAL</fullName>
+                    <default>false</default>
+                    <label>GE CAPITAL</label>
+                </value>
+                <value>
+                    <fullName>HIPOTECARIA FED</fullName>
+                    <default>false</default>
+                    <label>HIPOTECARIA FED</label>
+                </value>
+                <value>
+                    <fullName>HSBC</fullName>
+                    <default>false</default>
+                    <label>HSBC</label>
+                </value>
+                <value>
+                    <fullName>INBURSA</fullName>
+                    <default>false</default>
+                    <label>INBURSA</label>
+                </value>
+                <value>
+                    <fullName>INDEVAL2</fullName>
+                    <default>false</default>
+                    <label>INDEVAL2</label>
+                </value>
+                <value>
+                    <fullName>INDUSTRIAL</fullName>
+                    <default>false</default>
+                    <label>INDUSTRIAL</label>
+                </value>
+                <value>
+                    <fullName>ING BANK</fullName>
+                    <default>false</default>
+                    <label>ING BANK</label>
+                </value>
+                <value>
+                    <fullName>INTERACCIONES</fullName>
+                    <default>false</default>
+                    <label>INTERACCIONES</label>
+                </value>
+                <value>
+                    <fullName>INVEX</fullName>
+                    <default>false</default>
+                    <label>INVEX</label>
+                </value>
+                <value>
+                    <fullName>IXE</fullName>
+                    <default>false</default>
+                    <label>IXE</label>
+                </value>
+                <value>
+                    <fullName>JP MORGAN</fullName>
+                    <default>false</default>
+                    <label>JP MORGAN</label>
+                </value>
+                <value>
+                    <fullName>JP SOFIEXPRESS</fullName>
+                    <default>false</default>
+                    <label>JP SOFIEXPRESS</label>
+                </value>
+                <value>
+                    <fullName>KUSPIT</fullName>
+                    <default>false</default>
+                    <label>KUSPIT</label>
+                </value>
+                <value>
+                    <fullName>MAPFRE TEPEYAC</fullName>
+                    <default>false</default>
+                    <label>MAPFRE TEPEYAC</label>
+                </value>
+                <value>
+                    <fullName>MASARI CASA DE BOLSA</fullName>
+                    <default>false</default>
+                    <label>MASARI CASA DE BOLSA</label>
+                </value>
+                <value>
+                    <fullName>MERRIL LYNCH</fullName>
+                    <default>false</default>
+                    <label>MERRIL LYNCH</label>
+                </value>
+                <value>
+                    <fullName>MIFEL</fullName>
+                    <default>false</default>
+                    <label>MIFEL</label>
+                </value>
+                <value>
+                    <fullName>MULTIVALORES</fullName>
+                    <default>false</default>
+                    <label>MULTIVALORES</label>
+                </value>
+                <value>
+                    <fullName>NAFIN</fullName>
+                    <default>false</default>
+                    <label>NAFIN</label>
+                </value>
+                <value>
+                    <fullName>OPERADORA DE RECURSOS REFORMA</fullName>
+                    <default>false</default>
+                    <label>OPERADORA DE RECURSOS REFORMA</label>
+                </value>
+                <value>
+                    <fullName>OPGBM</fullName>
+                    <default>false</default>
+                    <label>OPGBM</label>
+                </value>
+                <value>
+                    <fullName>PROFUTURO GNP</fullName>
+                    <default>false</default>
+                    <label>PROFUTURO GNP</label>
+                </value>
+                <value>
+                    <fullName>PROTEGO CASA DE BOLSA</fullName>
+                    <default>false</default>
+                    <label>PROTEGO CASA DE BOLSA</label>
+                </value>
+                <value>
+                    <fullName>SANTANDER</fullName>
+                    <default>false</default>
+                    <label>SANTANDER</label>
+                </value>
+                <value>
+                    <fullName>SCOTIABANK</fullName>
+                    <default>false</default>
+                    <label>SCOTIABANK</label>
+                </value>
+                <value>
+                    <fullName>SEGMTY</fullName>
+                    <default>false</default>
+                    <label>SEGMTY</label>
+                </value>
+                <value>
+                    <fullName>SISTEMA DE TRANSF Y PAGOS STP</fullName>
+                    <default>false</default>
+                    <label>SISTEMA DE TRANSF Y PAGOS STP</label>
+                </value>
+                <value>
+                    <fullName>SKANDIA OPERADORA DE FONDOS</fullName>
+                    <default>false</default>
+                    <label>SKANDIA OPERADORA DE FONDOS</label>
+                </value>
+                <value>
+                    <fullName>SKANDIA VIDA</fullName>
+                    <default>false</default>
+                    <label>SKANDIA VIDA</label>
+                </value>
+                <value>
+                    <fullName>SURESTE</fullName>
+                    <default>false</default>
+                    <label>SURESTE</label>
+                </value>
+                <value>
+                    <fullName>TELECOMM</fullName>
+                    <default>false</default>
+                    <label>TELECOMM</label>
+                </value>
+                <value>
+                    <fullName>THE ROYAL BANK</fullName>
+                    <default>false</default>
+                    <label>THE ROYAL BANK</label>
+                </value>
+                <value>
+                    <fullName>TIBER</fullName>
+                    <default>false</default>
+                    <label>TIBER</label>
+                </value>
+                <value>
+                    <fullName>TIBER CAPITAL</fullName>
+                    <default>false</default>
+                    <label>TIBER CAPITAL</label>
+                </value>
+                <value>
+                    <fullName>TOKYO</fullName>
+                    <default>false</default>
+                    <label>TOKYO</label>
+                </value>
+                <value>
+                    <fullName>UNAGRA S.A. DE C.V</fullName>
+                    <default>false</default>
+                    <label>UNAGRA S.A. DE C.V</label>
+                </value>
+                <value>
+                    <fullName>UNICA CASA DE CAMBIO</fullName>
+                    <default>false</default>
+                    <label>UNICA CASA DE CAMBIO</label>
+                </value>
+                <value>
+                    <fullName>UNION</fullName>
+                    <default>false</default>
+                    <label>UNION</label>
+                </value>
+                <value>
+                    <fullName>USB BANK MEXICO</fullName>
+                    <default>false</default>
+                    <label>USB BANK MEXICO</label>
+                </value>
+                <value>
+                    <fullName>VALORES MEXICANOS CASA DE BOLSA</fullName>
+                    <default>false</default>
+                    <label>VALORES MEXICANOS CASA DE BOLSA</label>
+                </value>
+                <value>
+                    <fullName>VALUE</fullName>
+                    <default>false</default>
+                    <label>VALUE</label>
+                </value>
+                <value>
+                    <fullName>VECTOR</fullName>
+                    <default>false</default>
+                    <label>VECTOR</label>
+                </value>
+                <value>
+                    <fullName>VE POR MAS</fullName>
+                    <default>false</default>
+                    <label>VE POR MAS</label>
+                </value>
+                <value>
+                    <fullName>VOLKSWAGEN BANK</fullName>
+                    <default>false</default>
+                    <label>VOLKSWAGEN BANK</label>
+                </value>
+                <value>
+                    <fullName>WAL-MART</fullName>
+                    <default>false</default>
+                    <label>WAL-MART</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_MnIncome__c</fullName>
+        <description>Principal fuente de ingresos
+&quot;Combo opciones:
+- Dividendos
+- Sueldos y Salarios
+- Honorarios
+- Rendimientos
+- Rentas
+- Actividad Empresarial.
+- Otro (especificar)
+(catalogo Banco)&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Principal fuente de ingresos
+&quot;Combo opciones:
+- Dividendos
+- Sueldos y Salarios
+- Honorarios
+- Rendimientos
+- Rentas
+- Actividad Empresarial.
+- Otro (especificar)</inlineHelpText>
+        <label>Principal fuente de ingresos</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dividendos</fullName>
+                    <default>false</default>
+                    <label>Dividendos</label>
+                </value>
+                <value>
+                    <fullName>Sueldos y Salarios</fullName>
+                    <default>false</default>
+                    <label>Sueldos y Salarios</label>
+                </value>
+                <value>
+                    <fullName>Honorarios</fullName>
+                    <default>false</default>
+                    <label>Honorarios</label>
+                </value>
+                <value>
+                    <fullName>Rendimientos</fullName>
+                    <default>false</default>
+                    <label>Rendimientos</label>
+                </value>
+                <value>
+                    <fullName>Rentas</fullName>
+                    <default>false</default>
+                    <label>Rentas</label>
+                </value>
+                <value>
+                    <fullName>Actividad Empresarial.</fullName>
+                    <default>false</default>
+                    <label>Actividad Empresarial.</label>
+                </value>
+                <value>
+                    <fullName>Otro (especificar)</fullName>
+                    <default>false</default>
+                    <label>Otro (especificar)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_N_mina__c</fullName>
+        <description>Indicador de si es Cliente Nominado o con Portabilidad</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicador de si es Cliente Nominado o con Portabilidad</inlineHelpText>
+        <label>Nómina</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_PercBan__c</fullName>
+        <description>¿Que % del patrimonio esta en Bancomer?
+BPyP</description>
+        <externalId>false</externalId>
+        <label>¿Que % del patrimonio esta en Bancomer?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Hasta 25%</fullName>
+                    <default>false</default>
+                    <label>Hasta 25%</label>
+                </value>
+                <value>
+                    <fullName>de 26% a 50%</fullName>
+                    <default>false</default>
+                    <label>de 26% a 50%</label>
+                </value>
+                <value>
+                    <fullName>de 51% a 75%</fullName>
+                    <default>false</default>
+                    <label>de 51% a 75%</label>
+                </value>
+                <value>
+                    <fullName>de 76% a 100%</fullName>
+                    <default>false</default>
+                    <label>de 76% a 100%</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_Relaci_n_con_Compass__c</fullName>
+        <description>Relación con Compass
+BPyP</description>
+        <externalId>false</externalId>
+        <label>Relación con Compass</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_Relaci_n_con_Suiza__c</fullName>
+        <description>Relación con Suiza
+BPyP</description>
+        <externalId>false</externalId>
+        <label>Relación con Suiza</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_Servicio_TEN__c</fullName>
+        <externalId>false</externalId>
+        <label>Tiene Servicio TEN (solo para UHN)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_ValoracionPromocional__c</fullName>
+        <description>Para seleccionar valoracion con el Director Promocional si el propietario del plan de cuenta es division Metropolitana</description>
+        <externalId>false</externalId>
+        <label>Valoración Promocional</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Estatus_Ficha__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excelente</fullName>
+                    <default>false</default>
+                    <label>Excelente</label>
+                </value>
+                <value>
+                    <fullName>Validado</fullName>
+                    <default>false</default>
+                    <label>Validado</label>
+                </value>
+                <value>
+                    <fullName>Incompleto</fullName>
+                    <default>false</default>
+                    <label>Incompleto</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Alto</controllingFieldValue>
+                <controllingFieldValue>Aprobado</controllingFieldValue>
+                <controllingFieldValue>En aprobación</controllingFieldValue>
+                <valueName>Excelente</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alto</controllingFieldValue>
+                <controllingFieldValue>Aprobado</controllingFieldValue>
+                <controllingFieldValue>En aprobación</controllingFieldValue>
+                <valueName>Validado</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alto</controllingFieldValue>
+                <controllingFieldValue>Rechazado</controllingFieldValue>
+                <controllingFieldValue>En aprobación</controllingFieldValue>
+                <valueName>Incompleto</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_pr_CartInstr__c</fullName>
+        <description>% Cartera en Instrumentos de Liquidez
+BPyP</description>
+        <externalId>false</externalId>
+        <label>% Cartera en Instrumentos de Liquidez</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_pr_FndEst__c</fullName>
+        <description>% Cartera en Fondos de Estrategia
+BPyP</description>
+        <externalId>false</externalId>
+        <label>% Cartera en Fondos de Estrategia</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_pr_fndInv__c</fullName>
+        <description>% Cartera en Fondos de Inversión
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>% Cartera en Fondos de Inversión
+BPyP</inlineHelpText>
+        <label>% Cartera en Fondos de Inversión</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_pr_NtEstruct__c</fullName>
+        <description>% Notas Estructuradas
+BPyP</description>
+        <externalId>false</externalId>
+        <label>% Notas Estructuradas</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_pr_porcentajeCompletado__c</fullName>
+        <description>Porcentaje completado del cuestionario</description>
+        <externalId>false</externalId>
+        <label>Porcentaje Completado</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_pr_RtaVar__c</fullName>
+        <description>% Cartera en Instrumentos de Renta Variable en directo
+BPyP</description>
+        <externalId>false</externalId>
+        <label>% Instrumentos de Renta Variable directo</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Contacto_Decisor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Contactos decisores
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Nombre del contacto decisor.</inlineHelpText>
+        <label>Contacto Decisor</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Contacto Decisor)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Contacto_Operador__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Contacto Operador
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Nombre del contacto operador.</inlineHelpText>
+        <label>Contacto Operador</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Contacto Operador)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Empresa_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Empresa relaiconada con cliente de plan de cuenta
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Empresa relacionada con cliente en plan de cuenta</inlineHelpText>
+        <label>Empresa 1</label>
+        <referenceTo>PYME001_Empresas__c</referenceTo>
+        <relationshipLabel>Plan de Cuenta</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Empresa_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Empresa relaiconada con cliente de plan de cuenta
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Empresa relacionada con cliente en plan de cuenta</inlineHelpText>
+        <label>Empresa 2</label>
+        <referenceTo>PYME001_Empresas__c</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Empresa 2)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Empresa_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Empresa relaiconada con cliente de plan de cuenta
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Empresa relacionada con cliente en plan de cuenta.</inlineHelpText>
+        <label>Empresa 3</label>
+        <referenceTo>PYME001_Empresas__c</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Empresa)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Empresa_4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Empresa relaiconada con cliente de plan de cuenta
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Empresa relacionada con cliente en plan de cuenta.</inlineHelpText>
+        <label>Empresa 4</label>
+        <referenceTo>PYME001_Empresas__c</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Empresa)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Empresa_5__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Empresa relaiconada con cliente de plan de cuenta
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Empresa relacionada con cliente en plan de cuenta.</inlineHelpText>
+        <label>Empresa 5</label>
+        <referenceTo>PYME001_Empresas__c</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Empresa)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta5</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+     <fields>
+        <fullName>BPyP_rb_Hijo_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Hijo 1
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hijo 1
+BPyP</inlineHelpText>
+        <label>Hijo 1</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Hijo 1)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta5</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Hijo_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Hijo 2
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hijo 2
+BPyP</inlineHelpText>
+        <label>Hijo 2</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Hijo 2)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta6</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Hijo_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Hijo 3
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hijo 3
+BPyP</inlineHelpText>
+        <label>Hijo 3</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Hijo 3)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta7</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Hijo_4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Hijo 4
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hijo 4
+BPyP</inlineHelpText>
+        <label>Hijo 4</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Hijo 4)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta8</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Hijo_5__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Hijo 5
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hijo 5
+BPyP</inlineHelpText>
+        <label>Hijo 5</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Hijo 5)</relationshipLabel>
+        <relationshipName>Plan_de_Cuenta9</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_rb_Hijo_6__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Hijo 6
+BPyP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hijo 6
+BPyP</inlineHelpText>
+        <label>Hijo 6</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Plan de Cuenta (Hijo 6)</relationshipLabel>
+        <relationshipName>Plan_de_CuentaVnRV</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_tx_Oportunidades_Captaci_n__c</fullName>
+        <description>&quot;Oportunidades
+Captación&quot;
+BpyP</description>
+        <externalId>false</externalId>
+        <label>Oportunidades Captación</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Incrementador</fullName>
+                    <default>false</default>
+                    <label>Incrementador</label>
+                </value>
+                <value>
+                    <fullName>Decrementador</fullName>
+                    <default>false</default>
+                    <label>Decrementador</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BPyP_tx_Oportunidades_Cr_dito__c</fullName>
+        <description>&quot;Oportunidades
+Crédito&quot;
+BPyP</description>
+        <externalId>false</externalId>
+        <label>Oportunidades  Crédito</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Nomina</fullName>
+                    <default>false</default>
+                    <label>Nomina</label>
+                </value>
+                <value>
+                    <fullName>PPI</fullName>
+                    <default>false</default>
+                    <label>PPI</label>
+                </value>
+                <value>
+                    <fullName>PPG</fullName>
+                    <default>false</default>
+                    <label>PPG</label>
+                </value>
+                <value>
+                    <fullName>Auto</fullName>
+                    <default>false</default>
+                    <label>Auto</label>
+                </value>
+                <value>
+                    <fullName>TDC Infinite</fullName>
+                    <default>false</default>
+                    <label>TDC Infinite</label>
+                </value>
+                <value>
+                    <fullName>TDC Platinum</fullName>
+                    <default>false</default>
+                    <label>TDC Platinum</label>
+                </value>
+                <value>
+                    <fullName>Hipotecario</fullName>
+                    <default>false</default>
+                    <label>Hipotecario</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BPyP_tx_Oportunidades_Inversiones__c</fullName>
+        <description>Oportunidades Inversiones
+BPyP</description>
+        <externalId>false</externalId>
+        <label>Oportunidades Inversiones</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ahorro Liquido</fullName>
+                    <default>false</default>
+                    <label>Ahorro Liquido</label>
+                </value>
+                <value>
+                    <fullName>Cuenta en Dólares</fullName>
+                    <default>false</default>
+                    <label>Cuenta en Dólares</label>
+                </value>
+                <value>
+                    <fullName>Fondos de Inversión</fullName>
+                    <default>false</default>
+                    <label>Fondos de Inversión</label>
+                </value>
+                <value>
+                    <fullName>Maestra Patrimonial Dólares</fullName>
+                    <default>false</default>
+                    <label>Maestra Patrimonial Dólares</label>
+                </value>
+                <value>
+                    <fullName>Membresía BP</fullName>
+                    <default>false</default>
+                    <label>Membresía BP</label>
+                </value>
+                <value>
+                    <fullName>Meta Ahorro</fullName>
+                    <default>false</default>
+                    <label>Meta Ahorro</label>
+                </value>
+                <value>
+                    <fullName>Nómina</fullName>
+                    <default>false</default>
+                    <label>Nómina</label>
+                </value>
+                <value>
+                    <fullName>Portabilidad</fullName>
+                    <default>false</default>
+                    <label>Portabilidad</label>
+                </value>
+                <value>
+                    <fullName>Producto 21</fullName>
+                    <default>false</default>
+                    <label>Producto 21</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BPyP_tx_Oportunidades_Servicios__c</fullName>
+        <description>&quot;Oportunidades
+Servicios&quot;
+BPyP</description>
+        <externalId>false</externalId>
+        <label>Oportunidades  Servicios</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alertas</fullName>
+                    <default>false</default>
+                    <label>Alertas</label>
+                </value>
+                <value>
+                    <fullName>Digital</fullName>
+                    <default>false</default>
+                    <label>Digital</label>
+                </value>
+                <value>
+                    <fullName>Domiciliaciones</fullName>
+                    <default>false</default>
+                    <label>Domiciliaciones</label>
+                </value>
+                <value>
+                    <fullName>No Financieros</fullName>
+                    <default>false</default>
+                    <label>No Financieros</label>
+                </value>
+                <value>
+                    <fullName>Traspaso Patrimonial</fullName>
+                    <default>false</default>
+                    <label>Traspaso Patrimonial</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BPyP_tx_Opp_Oferta_No_Financiera__c</fullName>
+        <description>&quot;Oportunidades
+Oferta No Financiera&quot;
+BPyP</description>
+        <externalId>false</externalId>
+        <label>Oportunidades  Oferta No Financiera</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Next Generation - Chicago Booth University - BBVA Madrid</fullName>
+                    <default>false</default>
+                    <label>Next Generation - Chicago Booth University - BBVA Madrid</label>
+                </value>
+                <value>
+                    <fullName>Wall Street Experience - New York Institute of Finance</fullName>
+                    <default>false</default>
+                    <label>Wall Street Experience - New York Institute of Finance</label>
+                </value>
+                <value>
+                    <fullName>Silicon Valley Immersion - Wharton University - San Francisco</fullName>
+                    <default>false</default>
+                    <label>Silicon Valley Immersion - Wharton University - San Francisco</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BPyP_tx_OthIncome__c</fullName>
+        <description>Principal fuente de ingresos al seleccionar otro</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Principal fuente de ingresos al seleccionar otro</inlineHelpText>
+        <label>Otra fuente de ingresos</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_tx_Plan_a_Corto_Plazo__c</fullName>
+        <description>Plan a Corto Plazo
+BPyP</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Descripción de los planes a corto plazo.</inlineHelpText>
+        <label>Plan a Corto Plazo</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_tx_Plan_a_Largo_Plazo__c</fullName>
+        <description>Plan a Largo Plazo
+BPyP</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Descripción de los planes a largo plazo.</inlineHelpText>
+        <label>Plan a Largo Plazo</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_tx_Saldo_en_Captaci_n__c</fullName>
+        <description>Saldo en Captación
+BPyP</description>
+        <externalId>false</externalId>
+        <label>Saldo en Captación</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+     <fields>
+        <fullName>BPyP_tx_Saldo_ILP__c</fullName>
+        <description>Saldo ILP
+BPyP</description>
+        <externalId>false</externalId>
+        <label>Saldo ILP</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cliente__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Cliente</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Fichas_de_conocimiento</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comentarios_DDDR__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Comentarios DD/DR</label>
+        <length>256</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Comentarios_DO__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Comentarios DO</label>
+        <length>256</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CR__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>CR</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>División</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division1__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Owner:User.Divisi_n__c)</formula>
+        <label>División Usuario</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Empleados_en_Cheque__c</fullName>
+        <externalId>false</externalId>
+        <label>% Empleados en Cheque</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Empleados_en_Efectivo__c</fullName>
+        <externalId>false</externalId>
+        <label>% Empleados en Efectivo</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+     <fields>
+        <fullName>Empleados_en_Electronico__c</fullName>
+        <externalId>false</externalId>
+        <label>% Empleados en Electrónico</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Estatus_Ficha__c</fullName>
+        <externalId>false</externalId>
+        <label>Estatus Ficha</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alto</fullName>
+                    <default>false</default>
+                    <label>Alto</label>
+                </value>
+                <value>
+                    <fullName>Medio</fullName>
+                    <default>false</default>
+                    <label>Medio</label>
+                </value>
+                <value>
+                    <fullName>Bajo</fullName>
+                    <default>false</default>
+                    <label>Bajo</label>
+                </value>
+                <value>
+                    <fullName>No se considera Plan de Cuenta</fullName>
+                    <default>true</default>
+                    <label>No se considera Plan de Cuenta</label>
+                </value>
+                <value>
+                    <fullName>Aprobado</fullName>
+                    <default>false</default>
+                    <label>Aprobado</label>
+                </value>
+                <value>
+                    <fullName>Rechazado</fullName>
+                    <default>false</default>
+                    <label>Rechazado</label>
+                </value>
+                <value>
+                    <fullName>En aprobación</fullName>
+                    <default>false</default>
+                    <label>En aprobación</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>fc_fm_sumaTipoVivienda__c</fullName>
+        <description>Suma de los porcentajes de tipo de vivienda para Banca Hipotecaria</description>
+        <externalId>false</externalId>
+        <formula>fc_pr_interesSocial__c  +  fc_pr_media__c  +  fc_pr_residencial__c  +  fc_pr_secondHome__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Suma de los % de tipos de vivienda</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>fc_pr_media__c</fullName>
+        <defaultValue>IF(
+   $RecordType.Name = &apos;Hipotecaria&apos; ||
+   $RecordType.Name = &apos;Hipotecaria Opp&apos;, 0, null)</defaultValue>
+        <externalId>false</externalId>
+        <label>% Media</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>fc_pr_residencial__c</fullName>
+        <defaultValue>IF(
+   $RecordType.Name = &apos;Hipotecaria&apos; ||
+   $RecordType.Name = &apos;Hipotecaria Opp&apos;, 0, null)</defaultValue>
+        <externalId>false</externalId>
+        <label>% Residencial</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+     <fields>
+        <fullName>fc_pr_secondHome__c</fullName>
+        <defaultValue>IF(
+   $RecordType.Name = &apos;Hipotecaria&apos; ||
+   $RecordType.Name = &apos;Hipotecaria Opp&apos;, 0, null)</defaultValue>
+        <externalId>false</externalId>
+        <label>% Second home</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>fc_pr_interesSocial__c</fullName>
+        <defaultValue>IF(
+   $RecordType.Name = &apos;Hipotecaria&apos; ||
+   $RecordType.Name = &apos;Hipotecaria Opp&apos;, 0, null)</defaultValue>
+        <externalId>false</externalId>
+        <label>% Interés social</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Fecha_de_caducidad_c__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha_de_caducidad__c</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fecha_Valoracion_DD_DR__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha Valoración DD/DR</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fecha_Valoracion_DG_RED__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha Valoración DG RED</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fecha_Valoracion_DO__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha Valoración DO</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_BPP_Act__c</fullName>
+        <externalId>false</externalId>
+        <formula>Cliente__r.BPyP_tx_ActividadGiro__c</formula>
+        <label>Actividad preponderante del cliente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_BPP_DesglPreapr__c</fullName>
+        <externalId>false</externalId>
+        <label>Productos Preaprobados</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Nomina</fullName>
+                    <default>false</default>
+                    <label>Nomina</label>
+                </value>
+                <value>
+                    <fullName>PPI</fullName>
+                    <default>false</default>
+                    <label>PPI</label>
+                </value>
+                <value>
+                    <fullName>Auto</fullName>
+                    <default>false</default>
+                    <label>Auto</label>
+                </value>
+                <value>
+                    <fullName>TDC Infinite</fullName>
+                    <default>false</default>
+                    <label>TDC Infinite</label>
+                </value>
+                <value>
+                    <fullName>TDC Platinum</fullName>
+                    <default>false</default>
+                    <label>TDC Platinum</label>
+                </value>
+                <value>
+                    <fullName>Hipotecario</fullName>
+                    <default>false</default>
+                    <label>Hipotecario</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_BPP_RentCliente__c</fullName>
+        <externalId>false</externalId>
+        <label>Rentabilidad Cliente (Ingreso Mensual)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_BPP_RenTClientePerc__c</fullName>
+        <externalId>false</externalId>
+        <label>Rentabilidad Cliente (Margen %)</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MX_BPP_SaldoCredito__c</fullName>
+        <description>Saldo en Crédito de BPyP</description>
+        <externalId>false</externalId>
+        <label>Saldo en Crédito</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_BPP_TieneCredPre__c</fullName>
+        <externalId>false</externalId>
+        <label>¿Tiene Creditos Preaprobados?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Oficina__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Oficina</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Propietario_name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.FirstName  &amp;&quot; &quot;&amp;  Owner:User.LastName</formula>
+        <label>Propietario name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Suma_nomina__c</fullName>
+        <externalId>false</externalId>
+        <formula>Empleados_en_Electronico__c  +  Empleados_en_Cheque__c  +  Empleados_en_Efectivo__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Suma de los % de nómina</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Valoracion_DDDR__c</fullName>
+        <externalId>false</externalId>
+        <label>Valoración DD/DR</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Valoracion_DO__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excelente</fullName>
+                    <default>false</default>
+                    <label>Excelente</label>
+                </value>
+                <value>
+                    <fullName>Validado</fullName>
+                    <default>false</default>
+                    <label>Validado</label>
+                </value>
+                <value>
+                    <fullName>Incompleto</fullName>
+                    <default>false</default>
+                    <label>Incompleto</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Excelente</controllingFieldValue>
+                <controllingFieldValue>Validado</controllingFieldValue>
+                <valueName>Excelente</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Excelente</controllingFieldValue>
+                <controllingFieldValue>Validado</controllingFieldValue>
+                <valueName>Validado</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Excelente</controllingFieldValue>
+                <controllingFieldValue>Validado</controllingFieldValue>
+                <valueName>Incompleto</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+    <fullName>Valoracion_DO__c</fullName>
+        <externalId>false</externalId>
+        <label>Valoración DO</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Estatus_Ficha__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excelente</fullName>
+                    <default>false</default>
+                    <label>Excelente</label>
+                </value>
+                <value>
+                    <fullName>Validado</fullName>
+                    <default>false</default>
+                    <label>Validado</label>
+                </value>
+                <value>
+                    <fullName>Incompleto</fullName>
+                    <default>false</default>
+                    <label>Incompleto</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Alto</controllingFieldValue>
+                <valueName>Excelente</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alto</controllingFieldValue>
+                <valueName>Validado</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Alto</controllingFieldValue>
+                <valueName>Incompleto</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Valoracion_RED__c</fullName>
+        <externalId>false</externalId>
+        <label>Valoración DG RED</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Valoracion_DDDR__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Excelente</fullName>
+                    <default>false</default>
+                    <label>Excelente</label>
+                </value>
+                <value>
+                    <fullName>Validado</fullName>
+                    <default>false</default>
+                    <label>Validado</label>
+                </value>
+                <value>
+                    <fullName>Incompleto</fullName>
+                    <default>false</default>
+                    <label>Incompleto</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Excelente</controllingFieldValue>
+                <controllingFieldValue>Validado</controllingFieldValue>
+                <valueName>Excelente</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Excelente</controllingFieldValue>
+                <controllingFieldValue>Validado</controllingFieldValue>
+                <valueName>Validado</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Excelente</controllingFieldValue>
+                <controllingFieldValue>Validado</controllingFieldValue>
+                <valueName>Incompleto</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Plan de Cuenta</label>
+    <listViews>
+        <fullName>BPyP_vl_PlanesAprobados</fullName>
+        <columns>NAME</columns>
+        <columns>Cliente__c</columns>
+        <columns>Estatus_Ficha__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Ficha_de_conocimiento__c.BPyP_tre_planDeCuenta</value>
+        </filters>
+        <filters>
+            <field>Estatus_Ficha__c</field>
+            <operation>equals</operation>
+            <value>Aprobado</value>
+        </filters>
+        <label>Estatus Aprobado</label>
+        <sharedTo>
+            <roleAndSubordinates>BPYP_DIRECCI_N_GENERAL</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>BPyP_vl_PlanesEnAprobacion</fullName>
+        <columns>NAME</columns>
+        <columns>Cliente__c</columns>
+        <columns>Estatus_Ficha__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Ficha_de_conocimiento__c.BPyP_tre_planDeCuenta</value>
+        </filters>
+        <filters>
+            <field>Estatus_Ficha__c</field>
+            <operation>equals</operation>
+            <value>En aprobación</value>
+        </filters>
+        <label>Estatus En aprobación</label>
+        <sharedTo>
+            <roleAndSubordinates>BPYP_DIRECCI_N_GENERAL</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>BPyP_vl_PlanesRechazado</fullName>
+        <columns>NAME</columns>
+        <columns>Cliente__c</columns>
+        <columns>Estatus_Ficha__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Ficha_de_conocimiento__c.BPyP_tre_planDeCuenta</value>
+        </filters>
+        <filters>
+            <field>Estatus_Ficha__c</field>
+            <operation>equals</operation>
+            <value>Rechazado</value>
+        </filters>
+        <label>Estatus Rechazado</label>
+        <sharedTo>
+            <roleAndSubordinates>BPYP_DIRECCI_N_GENERAL</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>BPyP_vl_TodosPlanesCuenta</fullName>
+        <columns>NAME</columns>
+        <columns>Cliente__c</columns>
+        <columns>Estatus_Ficha__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Ficha_de_conocimiento__c.BPyP_tre_planDeCuenta</value>
+        </filters>
+        <label>Patrimonial y Privado</label>
+        <sharedTo>
+            <roleAndSubordinates>BPYP_DIRECCI_N_GENERAL</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>FC-{0000000000}</displayFormat>
+        <label>Plan de Cuenta</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Plan de Cuenta</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>BPyP_tre_planDeCuenta</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>BPyP_fco_Plan_de_Cuenta</compactLayoutAssignment>
+        <label>BPyP</label>
+        <picklistValues>
+            <picklist>Estatus_Ficha__c</picklist>
+            <values>
+                <fullName>Aprobado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En aprobación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rechazado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>BPyP_rva_ContactoDecisor</fullName>
+        <active>true</active>
+        <description>Si la respuesta es No en el campo Contactos decisores, debes dar de alta al contacto que es decisor en las inversiones.</description>
+        <errorConditionFormula>AND(RecordType.DeveloperName =&quot;BPyP_tre_planDeCuenta&quot;,
+ ISPICKVAL(BPyP_ls_CtcDes__c, &quot;NO&quot;),
+ BPyP_rb_Contacto_Decisor__c =&quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>BPyP_rb_Contacto_Decisor__c</errorDisplayField>
+        <errorMessage>Capture un contactos Decisor</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>BPyP_rva_ContactoOperador</fullName>
+        <active>true</active>
+        <description>Contactos Operadores</description>
+        <errorConditionFormula>AND ( RecordType.DeveloperName =&quot;BPyP_tre_planDeCuenta&quot;,
+ ISPICKVAL(BPyP_ls_Contactos_Operadores__c, &quot;Si&quot;),
+ BPyP_rb_Contacto_Operador__c=&quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>BPyP_rb_Contacto_Operador__c</errorDisplayField>
+        <errorMessage>Capture un Contacto Decisor/Ejecutor</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>BPyP_rva_EmpresaFamiliar</fullName>
+        <active>true</active>
+        <description>Capturar una empresa en caso de responder Si en la pregunta Tiene Empresa Familiar</description>
+        <errorConditionFormula>AND(RecordType.DeveloperName =&quot;BPyP_tre_planDeCuenta&quot;,
+ISPICKVAL(BPyP_ls_EmpresaFamiliar__c, &quot;Si&quot;),
+    BPyP_rb_Empresa_1__c=&quot;&quot;,
+    BPyP_rb_Empresa_2__c=&quot;&quot;,
+    BPyP_rb_Empresa_3__c=&quot;&quot;,
+    BPyP_rb_Empresa_4__c=&quot;&quot;,
+    BPyP_rb_Empresa_5__c=&quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>BPyP_ls_EmpresaFamiliar__c</errorDisplayField>
+        <errorMessage>Capture una Empresa  para continuar</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>BPyP_rva_NOCapturarOtraFuenteIngresos</fullName>
+        <active>true</active>
+        <description>No permite guardar el registro si capturas información en el campo Otra fuente de ingresos, y no seleccionaste la opción Otro (especificar) en el campo Principal fuente de ingresos</description>
+        <errorConditionFormula>AND (RecordType.DeveloperName = &quot;BPyP_tre_planDeCuenta&quot;,
+NOT (ISPICKVAL( BPyP_ls_MnIncome__c ,&quot;Otro (especificar)&quot;)),
+BPyP_tx_OthIncome__c&lt;&gt;&quot;&quot;)</errorConditionFormula>
+        <errorMessage>Debe seleccionar la opción Otro (especificar) en el campo Principal fuente de ingresos</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>BPyP_rva_NoEmpresaFamiliar</fullName>
+        <active>true</active>
+        <description>Valida que si reponde que no en tiene empresa familiar no tenga ninguna empresa Familiar</description>
+        <errorConditionFormula>AND(RecordType.DeveloperName =&quot;BPyP_tre_planDeCuenta&quot;,
+ISPICKVAL(BPyP_ls_EmpresaFamiliar__c, &quot;NO&quot;),
+    OR(BPyP_rb_Empresa_1__c!=&quot;&quot;,
+    BPyP_rb_Empresa_2__c!=&quot;&quot;,
+    BPyP_rb_Empresa_3__c!=&quot;&quot;,
+    BPyP_rb_Empresa_4__c!=&quot;&quot;,
+    BPyP_rb_Empresa_5__c!=&quot;&quot;))</errorConditionFormula>
+        <errorDisplayField>BPyP_ls_EmpresaFamiliar__c</errorDisplayField>
+        <errorMessage>Verifica la selección del campo tiene empresas</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>BPyP_rva_OtraFuenteIngresos</fullName>
+        <active>true</active>
+        <description>Si selecciona la opción Otro en el campo Principal fuente de ingresos, debe capturar inforación en el campo Otra fuente de ingresos</description>
+        <errorConditionFormula>AND (RecordType.DeveloperName = &quot;BPyP_tre_planDeCuenta&quot;,
+    ISPICKVAL( BPyP_ls_MnIncome__c ,&quot;Otro (especificar)&quot;),
+    BPyP_tx_OthIncome__c =&quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>BPyP_tx_OthIncome__c</errorDisplayField>
+        <errorMessage>Por favor capture Otra fuente de ingresos</errorMessage>
+    </validationRules>
+<validationRules>
+        <fullName>fc_rva_Porcentajes_100_tipo_vivienda</fullName>
+        <active>true</active>
+        <description>Valida que la suma de los porcentajes del tipo de vivienda sea 100%</description>
+        <errorConditionFormula>AND(
+    NOT( ISCHANGED( Propietario_name__c ) ),
+     fc_fm_sumaTipoVivienda__c   &lt;&gt; 0.0 &amp;&amp; fc_fm_sumaTipoVivienda__c  &lt;&gt; 1.0
+)</errorConditionFormula>
+        <errorMessage>-Suma de los % del tipo de vivienda debe ser igual 100 %</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MX_BPP_Valida_Plan_Cuenta</fullName>
+        <active>true</active>
+        <description>Valida que el plan de cuenta para los registros de clientes BPyP solo tengan un registro asociado</description>
+        <errorConditionFormula>Cliente__r.MX_BPP_Casilla__c  &amp;&amp;
+   (Cliente__r.RecordType.DeveloperName  = &apos;BPyP_tre_Cliente&apos;  || Cliente__r.RecordType.DeveloperName  = &apos;BPyP_tre_noCliente&apos; || Cliente__r.RecordType.DeveloperName  = &apos;MX_BPP_PersonAcc_Client&apos; || Cliente__r.RecordType.DeveloperName  = &apos;MX_BPP_PersonAcc_NoClient&apos;) &amp;&amp;
+   ISNEW()</errorConditionFormula>
+        <errorMessage>Solo se puede asociar un Plan de Cuenta por Cliente o Prospecto</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Suma_de_los_porcentajes_de_nomina</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+    NOT( ISCHANGED( Propietario_name__c ) ),
+    Suma_nomina__c  &lt;&gt; 0.0 &amp;&amp; Suma_nomina__c &lt;&gt; 1.0
+)</errorConditionFormula>
+        <errorMessage>-Suma de los % de nómina debe ser igual 100</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

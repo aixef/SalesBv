@@ -1,0 +1,12 @@
+.THIS .slds-button__icon_left{
+    margin-right:0px;
+}
+
+.THIS .slds-modal__container{
+    width:99% !important;
+    padding: 1rem 0 !important;
+}
+
+.THIS .slds-float__left{
+    float:left;
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación Workflow, se envía cuando una Carta Recurrente es aprobada</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Carta Recurrente Aprobada</name>
+    <style>formalLetter</style>
+    <subject>Proceso de Salida de Información con Folio  {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Folio_Carta_Recurrente__c} ha concluido</subject>
+    <textOnly>Por medio de la presente le notificamos ha concluido el proceso de Salida de Información con los siguientes datos:
+
+Nombre de la Campaña: {!Campaign.Name}
+Folio de la Campaña: {!Campaign.CRM_WF_FIC__c}
+
+Etapa de Salida de Información: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Etapa_De_Salida_De_Informacion__c}
+Tipo de Solicitud: Recurrente (Salida de Información)
+Folio Carta Recurrente: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Folio_Carta_Recurrente__c}
+Comentarios: {!ApprovalRequest.Comments}
+
+
+DATOS DE SALIDA DE INFORMACIÓN
+
+Total de Bases a enviar: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Bases_A_Enviar__c}
+Total de Registros a enviar: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Numero_De_Registros__c}
+Fecha de Salida de Información: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Fecha_De_La_C_Recurrente__c}
+Soporte de Salida: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Soporte_De_Salida__c}
+
+
+SOLICITANTE
+
+Nombre del Solicitante: {!CRM_WF_Cartas_Origen__c.GBL_WF_Nombre_Del_Solicitante__c}
+Área Solicitante: {!CRM_WF_Cartas_Origen__c.GBL_WF_Area_del_solicitante__c}
+Área DG: Campañas CRM
+
+GENERADOR
+
+Nombre del Generador de Información: {!CRM_WF_Cartas_Origen__c.GBL_WF_Generador__c}
+Correo electrónico del Generador de Información: {!CRM_WF_Cartas_Origen__c.GBL_WF_Email_generador__c}
+Teléfono del Generador de Información: {!CRM_WF_Cartas_Origen__c.GBL_WF_Tel_Ext_generador__c}
+
+
+AUTORIZADORES
+
+Nombre Autorizador Generador Campañas: {!CRM_WF_Cartas_Origen__c.GBL_WF_Generador__c}
+Nombre Autorizador DG Campañas CRM: {!CRM_WF_Cartas_Origen__c.GBL_WF_Autorizador__c}
+Nombre Autorizador Inteligencia Comercial: Victor Arrioja Bashchuk
+Nombre Autorizador Fraud Operations MX: Juan Carlos Arena Rosas
+
+DESTINO DE INFORMACIÓN
+
+Destino de la Información: {!CRM_WF_Cartas_Origen__c.CRM_WF_Empresa_Area_Bancomer__c}
+Tipo de Envío: {!CRM_WF_Cartas_Origen__c.CRM_WF_Tipo_de_Envio__c}
+Nombre del Custodio de Información (1): {!CRM_WF_Cartas_Origen__c.GBL_WF_Nombre_Custodio_1__c}
+Correo electrónico del Custodio de Información (1): {!CRM_WF_Cartas_Origen__c.GBL_WF_Correo_Electronico_Custodio_1__c}
+Teléfono del Custodio de Información (1): {!CRM_WF_Cartas_Origen__c.GBL_WF_Telefono_Custodio_1__c}
+Nombre del Custodio de Información (2): {!CRM_WF_Cartas_Origen__c.GBL_WF_Nombre_Custodio_2__c}
+Correo electrónico del Custodio de Información (2): {!CRM_WF_Cartas_Origen__c.GBL_WF_Correo_Electronico_Custodio_2__c}
+Teléfono del Custodio de Información (2): {!CRM_WF_Cartas_Origen__c.GBL_WF_Telefono_Custodio_2__c}
+
+REGRESO DE LA INFORMACIÓN
+
+¿Requiere regreso de información?: {!CRM_WF_Cartas_Origen__c.CRM_WF_Regreso_De_Informacion__c}
+Receptores adicionales: {!CRM_WF_Cartas_Origen__c.CRM_WF_Receptores_Adicionales__c}
+Uso de la información: {!CRM_WF_Cartas_Origen__c.CRM_WF_Uso_De_La_Informacion__c}
+
+Para mayor información de clic al siguiente vínculo:
+
+Detalle de Carta Recurrente en Salesforce</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

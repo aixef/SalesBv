@@ -1,0 +1,10 @@
+<aura:component controller="MX_SB_VTS_Objeciones_cls" implements="force:lightningQuickAction,force:hasRecordId" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="isLoading" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:if isTrue="{!v.isLoading}">
+        <div class="loadSpinner">
+            <lightning:spinner alternativeText="Loading" size="large" />
+        </div>
+    </aura:if>
+</aura:component>

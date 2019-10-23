@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>prod-bbva-retail@bbva.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>MX_RTL_CSA_PRIMER_NIVEL_APLICATIVO</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>MX_RTL_CSA_SEGUNDO_NIVEL_APLICATIVO</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>MX_RTL_CSA_TERCER_NIVEL_APLICATIVO</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>MX_RTL_CSA_APROBADORES_APLICATIVO</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <name>Aplicativo BBVA</name>
+</ReportFolder>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Siniestros</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>MX_SB_MLT_QueueAsistencia</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2) OR (3 AND 4 AND (5 OR 6 OR 7 OR 8))</booleanFilter>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_LegacySystem__c</field>
+                <operation>equals</operation>
+                <value>REPORTE MOVIL</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Area__c</field>
+                <operation>equals</operation>
+                <value>asistencia</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_LegacySystem__c</field>
+                <operation>equals</operation>
+                <value>REPORTE MOVIL</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Area__c</field>
+                <operation>equals</operation>
+                <value>asistencia</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Event__c</field>
+                <operation>equals</operation>
+                <value>Grua</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Event__c</field>
+                <operation>equals</operation>
+                <value>Cambio llanta</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Event__c</field>
+                <operation>equals</operation>
+                <value>Corriente</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Event__c</field>
+                <operation>equals</operation>
+                <value>Gasolina</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_SB_MLT_QueueATelefonica</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_LegacySystem__c</field>
+                <operation>equals</operation>
+                <value>ARCA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Event__c</field>
+                <operation>equals</operation>
+                <value>Grúa</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_SB_MLT_QueueMControl</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR (2 AND 3) OR  (4 AND (5 OR 6 OR 7))</booleanFilter>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_LegacySystem__c</field>
+                <operation>equals</operation>
+                <value>WEB CRISTALERA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_LegacySystem__c</field>
+                <operation>equals</operation>
+                <value>ARCA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Event__c</field>
+                <operation>notEqual</operation>
+                <value>Grúa</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_LegacySystem__c</field>
+                <operation>equals</operation>
+                <value>REPORTE MOVIL</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Event__c</field>
+                <operation>equals</operation>
+                <value>Colision</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Event__c</field>
+                <operation>equals</operation>
+                <value>Robo</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Event__c</field>
+                <operation>equals</operation>
+                <value>Cristales</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_SB_MLT_QueueMControl</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR (2 AND 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_LegacySystem__c</field>
+                <operation>equals</operation>
+                <value>WEB CRISTALERA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_LegacySystem__c</field>
+                <operation>equals</operation>
+                <value>ARCA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_SB_MLT_Event__c</field>
+                <operation>notEqual</operation>
+                <value>Grúa</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_RTL_CSA_PRIMER_NIVEL</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Primer Nivel</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Seguros BBVA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Seguros BBVA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Wibe</value>
+            </criteriaItems>
+            <template>MX_RTL_CSA_PLANTILLASSOP/MX_RTL_CSA_ASIGNACIONWEB</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_RTL_CSA_APLICATIVO1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Seguros BBVA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Primer Nivel</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Aplicativo Wibe</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Aplicativo Seguros</value>
+            </criteriaItems>
+            <template>MX_RTL_CSA_PLANTILLASSOP/MX_RTL_CSA_ASIGNACIONWEB</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_RTL_CSA_BRETAIL1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Primer Nivel</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Seguros BBVA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Soporte General</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>BPyP</value>
+            </criteriaItems>
+            <template>MX_RTL_CSA_PLANTILLASSOP/MX_RTL_CSA_ASIGNACIONWEB</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_RTL_CSA_CAMPANIAS1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Primer Nivel</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Seguros BBVA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Workflow Campañas</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Community de Proveedores</value>
+            </criteriaItems>
+            <template>MX_RTL_CSA_PLANTILLASSOP/MX_RTL_CSA_ASIGNACIONWEB</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_RTL_CSA_APLICATIVO1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Seguros BBVA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Primer Nivel</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Aplicativo Wibe</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Aplicativo Seguros</value>
+            </criteriaItems>
+            <template>MX_RTL_CSA_PLANTILLASSOP/MX_RTL_CSA_ASIGNACIONWEB</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_RTL_CSA_PRIMER_NIVEL</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Primer Nivel</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Seguros BBVA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Seguros BBVA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Wibe</value>
+            </criteriaItems>
+            <template>MX_RTL_CSA_PLANTILLASSOP/MX_RTL_CSA_ASIGNACIONWEB</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_RTL_CSA_BRETAIL1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Primer Nivel</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Seguros BBVA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Soporte General</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>BPyP</value>
+            </criteriaItems>
+            <template>MX_RTL_CSA_PLANTILLASSOP/MX_RTL_CSA_ASIGNACIONWEB</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_RTL_CSA_CAMPANIAS1</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>Primer Nivel</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Seguros BBVA</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Workflow Campañas</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.MX_RTL_CSA_UNIDADESDWP__c</field>
+                <operation>equals</operation>
+                <value>Community de Proveedores</value>
+            </criteriaItems>
+            <template>MX_RTL_CSA_PLANTILLASSOP/MX_RTL_CSA_ASIGNACIONWEB</template>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>test 2</fullName>
+        <active>false</active>
+    </assignmentRule>
+</AssignmentRules>

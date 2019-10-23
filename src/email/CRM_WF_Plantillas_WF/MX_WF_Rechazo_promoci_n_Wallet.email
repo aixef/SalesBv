@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;">Por medio de la presente se te notifica que la promoción Wallet con folio&nbsp;<b>{!MX_WF_Wallet__c.Name}</b> fue <b>rechazada</b>&nbsp;con los siguientes comentarios:</span></font><div><br></div><div>Comentarios:&nbsp;<b>{!ApprovalRequest.Comments}</b><br><div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><div style="font-size: 12pt;">Para mayor detalle favor de dar clic en el siguiente vínculo:</div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;"><a href="{!MX_WF_Wallet__c.Link}">Detalle de la promoción Wallet</a></div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;"><br></div></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

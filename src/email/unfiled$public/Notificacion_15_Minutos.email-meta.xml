@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para notificacion de no llamada 15 minutos</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>WIBE</letterhead>
+    <name>Notificacion 15 Minutos</name>
+    <style>freeForm</style>
+    <subject>Oportunidad Comercial no gestionada primeros 15 minutos</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

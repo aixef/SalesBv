@@ -1,0 +1,9 @@
+<aura:documentation>
+	<aura:description>
+        <p><code>c:MX_RTL_CallProductForm</code> Componente que ayuda a la visualización del Product Form dentro de las oportunidades</p>
+    </aura:description>
+	<aura:example name="MX_RTL_CallProductForm" ref="MX_RTL_CallProductForm" label="Visualización del Product Form dentro de oportunidades">
+        <p>Componente que ayuda a la visualización del Product Form dentro de las oportunidades</p> 
+        <p>De acuerdo a los productos seleccionados se modifica su comportamiento</p>
+	</aura:example>
+</aura:documentation>

@@ -1,0 +1,16 @@
+<aura:documentation>
+	<aura:description>
+    	<p><code>c:MX_BPP_VIstaRI</code> es un componente que muestra información sobre la RI seleccionada</p>
+    </aura:description>
+	<aura:example name="BPP_VistaRI" ref="c:MX_BPP_VIstaRI" label="BPP RI">
+		<p>Este ejemplo muestra información de RI según el usuario que visualiza el componente y posee 
+        otros componentes hijos para mostrar información más detallada</p>
+        <p>Los componentes hijos son:
+        	EU001_ConsolaDirector
+        	MX_BPP_CintilloRI
+            MX_BPP_ResumenIndicador
+            MX_BPP_GraficosRI
+            BPyP_Contact_Acc
+        </p>
+	</aura:example>
+</aura:documentation>

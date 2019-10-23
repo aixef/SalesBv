@@ -1,0 +1,25 @@
+<aura:component controller="MX_SB_VTS_GetAccountContracts" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="activeContracts" type="List" description="returns a list of active contracts" />
+    <aura:attribute name="listLength" type="Integer" description="provides the number of contracts on the account" />
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <lightning:card class="slds-p-left_small">
+        <section slot='title' class='slds-card__header-title slds-truncate slds-m-right--xx-small'>
+            <lightning:icon iconName='standard:contract' size='small'></lightning:icon>
+            &nbsp;<span class='slds-card__header-link baseCard__header-title-container'>
+                Pólizas Vendidas ({!v.listLength})
+            </span>
+        </section>
+        <aura:if isTrue="{!v.listLength > 0}">
+            <section class="slds-p-top_small">
+                <span class="slds-text-color_weak">Pólizas Activas:</span>
+            </section>
+            <aura:iteration items="{!v.activeContracts}" var="contract">
+                <section class="slds-item--label slds-truncate slds-p-top_small">
+                    <p class="slds-text-color_weak">No. de Póliza: {!contract.MX_WB_noPoliza__c}</p>
+                    <p class="slds-text-color_weak">Tipo de Producto: {!contract.MX_WB_Producto__r.Name}</p>
+                    <p class="slds-text-color_weak">Fecha origen de Compra: <lightning:formattedDateTime value="{!contract.CreatedDate}"/></p>
+                </section>
+            </aura:iteration>
+        </aura:if>
+    </lightning:card>
+</aura:component>

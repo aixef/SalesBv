@@ -1,0 +1,8 @@
+<aura:documentation>
+    <aura:description>
+        <code>c:MX_PyME_LookUpAccounts_Cmp</code>The component shows two look ups, one for accounts and one for users, and adds the account records to a table to be transfered to the selected user.
+    </aura:description>
+    <aura:example name="LookUpAccounts" ref="c:MX_PyME_LookUpAccounts_Cmp" label="Search PyME clients">
+        <p>Search PyME clients <code>c:MX_PyME_LookUpAccounts_Cmp</code>.</p>
+    </aura:example>
+</aura:documentation>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+ <sharingOwnerRules>
+        <fullName>MX_RTE_Programa_a_Implementacion_Comercial_RTE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Regla que comparte los Programas de todos a Implementación Comercial</description>
+        <label>Programa a Implementacion Comercial RTE</label>
+        <sharedTo>
+            <group>MX_RTE_Implementacion_Comercial_RTE</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>MX_RTE_Admin_RTE</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>   
+ <sharingOwnerRules>
+        <fullName>MX_RTE_Programas_a_CCC</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Programas a CCC</label>
+        <sharedTo>
+            <role>MX_RTE_CCC</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>MX_RTE_Admin_RTE</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_RTE_Programas_a_IC_RTE</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Programas a IC RTE</label>
+        <sharedTo>
+            <role>MX_RTE_Implementacion_Comercial</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>MX_RTE_Admin_RTE</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_RTE_Programas_a_RCI</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Programas a RCI</label>
+        <sharedTo>
+            <role>MX_RTE_RCI</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>MX_RTE_Admin_RTE</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

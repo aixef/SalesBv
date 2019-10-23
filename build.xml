@@ -1,0 +1,231 @@
+<project name="docker-migration-tools" default="retrieve" basedir="." xmlns:sf="antlib:com.salesforce">
+   <property file="build.properties"/>
+   <property environment="env"/>
+   <condition property="sf.username" value="${env.SF_USERNAME}">
+   <not><isset property="sf.username"/></not>
+   </condition>
+   <condition property="sf.password" value="${env.SF_PASSWORD}">
+   <not><isset property="sf.password"/></not>
+   </condition>
+   <condition property="sf.serverurl" value="${env.SF_SERVERURL}">
+   <not><isset property="sf.serverUrl"/></not>
+   </condition>
+   <condition property="sf.srcFolder" value="${env.SF_SRCFOLDER}">
+   <not><isset property="sf.srcFolder"/></not>
+   </condition>
+   <condition property="sf.srcRoot" value="${env.SF_SRCROOT}">
+   <not><isset property="sf.srcRoot"/></not>
+   </condition>
+   <condition property="sf.classesRoot" value="${env.SF_CLASSESROOT}">
+   <not><isset property="sf.classesRoot"/></not>
+   </condition>
+   <condition property="sf.testLevel" value="${env.SF_TESTLEVEL}">
+   <not><isset property="RunAllTestsInOrg"/></not>
+   </condition>
+   <condition property="sf.sessionId" value="">
+   <not><isset property="sf.sessionId"/></not>
+   </condition>
+
+   <!-- [Implementación] Se ejecutan todos los métodos de prueba para los ambientes: Integrador, UAT y Producción -->
+   <target name="deploy">
+      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployroot="${sf.classesRoot}" testLevel="RunLocalTests"
+      checkOnly="false"/>
+   </target>
+
+   <!-- [Validación] Se ejecutan únicamente los métodos de prueba especificados en ésta sección para los ambientes: Feature, Bugfix y Hotfix. ${sf.testLevel} -->
+   <!-- Cuando se envian cambios que no necesitan correr test cambiar el valor de
+   testLevel="${sf.testLevel}"  al valor testLevel="NoTestRun"
+   y no colocar clases test-->
+
+   <!--
+      Acomulado de clases en Delta
+      <runTest>Account_tgr_test</runTest>
+         <runTest>BPyP_AccFiltrTest</runTest>
+         <runTest>BpyP_Adv_OppTest</runTest>
+         <runTest>BPyP_ClienteImportar__clsTest</runTest>
+         <runTest>BPyP_Contact_AccTest</runTest>
+         <runTest>BPyP_OppRepTest</runTest>
+         <runTest>Casos_tst</runTest>
+         <runTest>CheckContactField_tst</runTest>
+         <runTest>ContarOppsGrupo_tst</runTest>
+         <runTest>EG009_OP_FinanciamientoPipeline_tst</runTest>
+         <runTest>EG009_Utility_tst</runTest>
+         <runTest>EG009_UtilitysUnitTest_tst</runTest>
+         <runTest>EU_cls_TestData</runTest>
+         <runTest>EU_Contador_Test</runTest>
+         <runTest>EU001_cls_CompHandler_Test</runTest>
+         <runTest>EU001_cls_ConsolaDirector_test</runTest>
+         <runTest>EU001_cls_customLookUpController_test</runTest>
+         <runTest>EU001_cls_GetDOTeam_Test</runTest>
+         <runTest>EU001_cls_PickListController_test</runTest>
+         <runTest>EU001_graficasConParametros_Test</runTest>
+         <runTest>EU001_modApoyos_Test</runTest>
+         <runTest>EU001_ValoracionRI_Test</runTest>
+         <runTest>EU001_VistaApoyos_Test</runTest>
+         <runTest>GBL_DataTable_Test</runTest>
+         <runTest>MX_ASD_CargarDatosPrueba_cls</runTest>
+         <runTest>MX_BPP_AccAndOppDataFactory</runTest>
+         <runTest>MX_BPP_AccountDataFactory</runTest>
+         <runTest>MX_BPP_CamposDependientes_Test</runTest>
+         <runTest>MX_BPP_CumplTest</runTest>
+         <runTest>MX_BPP_GraficosRITest</runTest>
+         <runTest>MX_BPP_RI_ListaCompromisos_Test</runTest>
+         <runTest>MX_BPP_RIRecordsDataFactory</runTest>
+         <runTest>MX_BPP_UserAndRIDataFactory</runTest>
+         <runTest>MX_BPP_VistaRI_Test</runTest>
+         <runTest>MX_BPyP_Case_ValidaVencida_Test</runTest>
+         <runTest>MX_BPyP_CompEU_ValidaVencida_Test</runTest>
+         <runTest>MX_EU_Minuta_Test</runTest>
+         <runTest>MX_PYME_Acc_OwnerAssignment_Test</runTest>
+         <runTest>MX_PYME_AccCampOpp_Test</runTest>
+         <runTest>MX_PYME_AccCampTrigHand_Test</runTest>
+         <runTest>MX_PyME_MassiveTransfer_Test</runTest>
+         <runTest>MX_PyME_ServiceCards_Test</runTest>
+         <runTest>MX_RT_TriggerHandler_Test</runTest>
+         <runTest>MX_RTL_CallProductForm_Test</runTest>
+         <runTest>MX_RTL_OppProductForm_Test</runTest>
+         <runTest>MX_SB_VTS_Hogar_Service_Test</runTest>
+         <runTest>Opportunity_Trigger_TEST</runTest>
+         <runTest>OppUpdEnvEmail_tst</runTest>
+         <runTest>QueryCustomExceptionTest</runTest>
+         <runTest>RecordTypeMemory_tst</runTest>
+         <runTest>TestCreaObjetos_cls</runTest>
+         <runTest>TriggerHandler_Test</runTest>
+         <runTest>Utilities_tst</runTest>
+         <runTest>UtilitysDataTest_tst</runTest>
+         <runTest>MX_WF_CampanasController_test</runTest>
+         <runTest>MX_WF_Reporte_Wallet_test</runTest>
+         <runTest>MX_PyME_Campaign_GenOpp_Test</runTest>
+         <runTest>MX_WB_TestData_cls</runTest>
+         <runTest>MX_SB_VTS_GetAccountContracts_Test</runTest>
+         <runTest>MX_SB_VTS_SMARTNOCONTACTO_tst</runTest>
+         <runTest>MX_SB_VTS_APX_ReagendaLead_Test</runTest>
+         <runTest>MX_SB_VTS_SendLead_helper_tst</runTest>
+         <runTest>MX_SB_VTS_QuoteFinder_Test</runTest>
+         <runTest>MX_SB_VTS_LeadAutoAssigner_Test</runTest>
+         <runTest>MX_WB_CTI_tst</runTest>
+         <runTest>MX_SB_VTS_Vida_Service_Test</runTest>
+         <runTest>MX_WB_EnvioLeadsCTI_shc_tst</runTest>
+         <runTest>MX_WB_Envio4HrsCTI_sch_test</runTest>
+         <runTest>MX_WB_EnvioLeadsCTI_bch_tst</runTest>
+         <runTest>MX_WB_EnvioLeads4HrsCTI_bch_test</runTest>
+         <runTest>MX_WB_callCTI_tst</runTest>
+         <runTest>MX_WB_CampaniasCTI_tst</runTest>
+         <runTest>MX_WB_OppUpdEmail_bch_tst</runTest>
+         <runTest>MX_SB_VTS_Objeciones_tst</runTest>
+         <runTest>MX_WB_TM_Cotizador_tst</runTest>
+         <runTest>MX_WB_ConvertirLeadController_tst</runTest>
+         <runTest>MX_WB_EvaluacionCalidad_test</runTest>
+         <runTest>MX_SB_MLT_dynamicFormController_tst</runTest>
+         <runTest>MX_SB_MLT_FederationIdTest</runTest>
+         <runTest>MX_SB_MLT_MockHttpResponseGenerator_Test</runTest>
+         <runTest>MX_SB_MLT_TareaDatosREST_TEST</runTest>
+         <runTest>MX_SB_MLT_TareaDatosUtils_TEST</runTest>
+         <runTest>MX_SB_MLT_GoogleGeolocation_Test</runTest>
+         <runTest>MX_SB_MLT_MapaTDT_TEST</runTest>
+         <runTest>MX_SB_VTS_GetListCampa_test</runTest>
+         <runTest>MX_WB_TelemarketingController_tst</runTest>
+         <runTest>MX_SB_VTS_ScripLead_tst</runTest>
+         <runTest>MX_SB_VTS_OpportunityTrigger</runTest>
+         <runTest>MX_SB_VTS_ScheduldOppsTele_tst</runTest>
+   -->
+   <target name="testDeploy">
+      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployroot="${sf.classesRoot}" testLevel="${sf.testLevel}" >
+            <runTest>Account_tgr_test</runTest>
+         <runTest>BPyP_AccFiltrTest</runTest>
+         <runTest>BpyP_Adv_OppTest</runTest>
+         <runTest>BPyP_ClienteImportar__clsTest</runTest>
+         <runTest>BPyP_Contact_AccTest</runTest>
+         <runTest>BPyP_OppRepTest</runTest>
+         <runTest>Casos_tst</runTest>
+         <runTest>CheckContactField_tst</runTest>
+         <runTest>ContarOppsGrupo_tst</runTest>
+         <runTest>EG009_OP_FinanciamientoPipeline_tst</runTest>
+         <runTest>EG009_Utility_tst</runTest>
+         <runTest>EG009_UtilitysUnitTest_tst</runTest>
+         <runTest>EU_cls_TestData</runTest>
+         <runTest>EU_Contador_Test</runTest>
+         <runTest>EU001_cls_CompHandler_Test</runTest>
+         <runTest>EU001_cls_ConsolaDirector_test</runTest>
+         <runTest>EU001_cls_customLookUpController_test</runTest>
+         <runTest>EU001_cls_GetDOTeam_Test</runTest>
+         <runTest>EU001_cls_PickListController_test</runTest>
+         <runTest>EU001_graficasConParametros_Test</runTest>
+         <runTest>EU001_modApoyos_Test</runTest>
+         <runTest>EU001_ValoracionRI_Test</runTest>
+         <runTest>EU001_VistaApoyos_Test</runTest>
+         <runTest>GBL_DataTable_Test</runTest>
+         <runTest>MX_ASD_CargarDatosPrueba_cls</runTest>
+         <runTest>MX_BPP_AccAndOppDataFactory</runTest>
+         <runTest>MX_BPP_AccountDataFactory</runTest>
+         <runTest>MX_BPP_CamposDependientes_Test</runTest>
+         <runTest>MX_BPP_CumplTest</runTest>
+         <runTest>MX_BPP_GraficosRITest</runTest>
+         <runTest>MX_BPP_RI_ListaCompromisos_Test</runTest>
+         <runTest>MX_BPP_RIRecordsDataFactory</runTest>
+         <runTest>MX_BPP_UserAndRIDataFactory</runTest>
+         <runTest>MX_BPP_VistaRI_Test</runTest>
+         <runTest>MX_BPyP_Case_ValidaVencida_Test</runTest>
+         <runTest>MX_BPyP_CompEU_ValidaVencida_Test</runTest>
+         <runTest>MX_EU_Minuta_Test</runTest>
+         <runTest>MX_PYME_Acc_OwnerAssignment_Test</runTest>
+         <runTest>MX_PYME_AccCampOpp_Test</runTest>
+         <runTest>MX_PYME_AccCampTrigHand_Test</runTest>
+         <runTest>MX_PyME_MassiveTransfer_Test</runTest>
+         <runTest>MX_PyME_ServiceCards_Test</runTest>
+         <runTest>MX_RT_TriggerHandler_Test</runTest>
+         <runTest>MX_RTL_CallProductForm_Test</runTest>
+         <runTest>MX_RTL_OppProductForm_Test</runTest>
+         <runTest>MX_SB_VTS_Hogar_Service_Test</runTest>
+         <runTest>MX_SB_SAC_Poliza_TEST</runTest>
+         <runTest>Opportunity_Trigger_TEST</runTest>
+         <runTest>OppUpdEnvEmail_tst</runTest>
+         <runTest>QueryCustomExceptionTest</runTest>
+         <runTest>RecordTypeMemory_tst</runTest>
+         <runTest>TestCreaObjetos_cls</runTest>
+         <runTest>TriggerHandler_Test</runTest>
+         <runTest>Utilities_tst</runTest>
+         <runTest>UtilitysDataTest_tst</runTest>
+         <runTest>MX_WF_CampanasController_test</runTest>
+         <runTest>MX_WF_Reporte_Wallet_test</runTest>
+         <runTest>MX_PyME_Campaign_GenOpp_Test</runTest>
+         <runTest>MX_WB_TestData_cls</runTest>
+         <runTest>MX_SB_VTS_GetAccountContracts_Test</runTest>
+         <runTest>MX_SB_VTS_SMARTNOCONTACTO_tst</runTest>
+         <runTest>MX_SB_VTS_APX_ReagendaLead_Test</runTest>
+         <runTest>MX_SB_VTS_SendLead_helper_tst</runTest>
+         <runTest>MX_SB_VTS_QuoteFinder_Test</runTest>
+         <runTest>MX_SB_VTS_LeadAutoAssigner_Test</runTest>
+         <runTest>MX_WB_CTI_tst</runTest>
+         <runTest>MX_SB_VTS_Vida_Service_Test</runTest>
+         <runTest>MX_WB_EnvioLeadsCTI_shc_tst</runTest>
+         <runTest>MX_WB_Envio4HrsCTI_sch_test</runTest>
+         <runTest>MX_WB_EnvioLeadsCTI_bch_tst</runTest>
+         <runTest>MX_WB_EnvioLeads4HrsCTI_bch_test</runTest>
+         <runTest>MX_WB_callCTI_tst</runTest>
+         <runTest>MX_WB_CampaniasCTI_tst</runTest>
+         <runTest>MX_WB_OppUpdEmail_bch_tst</runTest>
+         <runTest>MX_SB_VTS_Objeciones_tst</runTest>
+         <runTest>MX_WB_TM_Cotizador_tst</runTest>
+         <runTest>MX_WB_ConvertirLeadController_tst</runTest>
+         <runTest>MX_WB_EvaluacionCalidad_test</runTest>
+         <runTest>MX_SB_MLT_dynamicFormController_tst</runTest>
+         <runTest>MX_SB_MLT_FederationIdTest</runTest>
+         <runTest>MX_SB_MLT_MockHttpResponseGenerator_Test</runTest>
+         <runTest>MX_SB_MLT_TareaDatosREST_TEST</runTest>
+         <runTest>MX_SB_MLT_TareaDatosUtils_TEST</runTest>
+         <runTest>MX_SB_MLT_GoogleGeolocation_Test</runTest>
+         <runTest>MX_SB_MLT_MapaTDT_TEST</runTest>
+         <runTest>MX_SB_VTS_GetListCampa_test</runTest>
+         <runTest>MX_WB_TelemarketingController_tst</runTest>
+         <runTest>MX_SB_VTS_ScripLead_tst</runTest>
+         <runTest>MX_SB_VTS_OpportunityTrigger</runTest>
+         <runTest>MX_SB_VTS_ScheduldOppsTele_tst</runTest>
+		 <runTest>MX_SB_BCT_BanqueroTriggerHandler_Test</runTest>
+		 <runTest>MX_SB_BCT_UpdateAccountcla_tst</runTest>
+         <runTest>rtwCliente_tst</runTest>
+         <runTest>rtwCotizacion_tst</runTest>
+         <runTest>MX_SB_VTS_CierreOpp_Test</runTest>
+      </sf:deploy>
+   </target>
+</project>

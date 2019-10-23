@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Tema a tratar</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Temas a tratar</value>
+    </caseValues>
+    <fields>
+        <label><!-- Descripción --></label>
+        <name>Descripcion_tema__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan de Cuenta --></label>
+        <name>MX_EU_TopicVisPlanCuenta__c</name>
+        <relationshipLabel><!-- Temas a tratar --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Campaña del Cliente --></label>
+        <name>MX_PYME_AccCamp__c</name>
+        <relationshipLabel><!-- Temas a tratar --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tema Oportunidad --></label>
+        <name>Tema_Oportunidad__c</name>
+    </fields>
+    <fields>
+        <help>Selecciona un caso</help>
+        <label>Caso</label>
+        <name>dwp_kitv__Case__c</name>
+        <relationshipLabel>Temas a tratar</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- More Recent Visits (Deprecated) --></label>
+        <name>dwp_kitv__More_Recent_Visits__c</name>
+    </fields>
+    <fields>
+        <label>Visitas más recientes</label>
+        <name>dwp_kitv__most_recent_visits__c</name>
+    </fields>
+    <fields>
+        <label>Oportunidad</label>
+        <name>dwp_kitv__opportunity_id__c</name>
+        <relationshipLabel>Temas a tratar</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Resumen</label>
+        <name>dwp_kitv__summary__c</name>
+    </fields>
+    <fields>
+        <label>Descripción</label>
+        <name>dwp_kitv__topic_desc__c</name>
+    </fields>
+    <fields>
+        <label>Tema tratado</label>
+        <name>dwp_kitv__visit_done_type__c</name>
+    </fields>
+    <fields>
+        <label>Visita</label>
+        <name>dwp_kitv__visit_id__c</name>
+        <relationshipLabel>Temas a tratar</relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Titulo</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- No se puede seleccionar una oportunidad cerrada --></errorMessage>
+        <name>MX_EU_NoPermiteOportunidadesCerradas</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puedes tener más de una relación --></errorMessage>
+        <name>MX_EU_Visit_Topic_Relacion_Unica</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe haber al menos un Tema con una oportunidad relacionada para convocar. --></errorMessage>
+        <name>MX_EU_Visita_Topic_Opp</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No está permitido agregar un tema a tratar vacío a la visita</errorMessage>
+        <name>dwp_kitv__empty_topic</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Acuerdo --></label>
+        <name>Acuerdo</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto para administrar los productos que los ejecutivos podrán registrar en las oportunidades.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Tipo_de_oportunidad__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de oportunidad</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Adquirente</fullName>
+                    <default>false</default>
+                    <label>Adquirente</label>
+                </value>
+                <value>
+                    <fullName>Alianzas Comerciales</fullName>
+                    <default>false</default>
+                    <label>Alianzas Comerciales</label>
+                </value>
+                <value>
+                    <fullName>Aportaciones</fullName>
+                    <default>false</default>
+                    <label>Aportaciones</label>
+                </value>
+                <value>
+                    <fullName>ATM</fullName>
+                    <default>false</default>
+                    <label>ATM</label>
+                </value>
+                <value>
+                    <fullName>Banca electrónica</fullName>
+                    <default>false</default>
+                    <label>Banca electrónica</label>
+                </value>
+                <value>
+                    <fullName>Cadenas de valor</fullName>
+                    <default>false</default>
+                    <label>Cadenas de valor</label>
+                </value>
+                <value>
+                    <fullName>CIE</fullName>
+                    <default>false</default>
+                    <label>CIE</label>
+                </value>
+                <value>
+                    <fullName>Coberturas (Derivados)</fullName>
+                    <default>false</default>
+                    <label>Coberturas (Derivados)</label>
+                </value>
+                <value>
+                    <fullName>Coberturas y derivados</fullName>
+                    <default>false</default>
+                    <label>Coberturas y derivados</label>
+                </value>
+                <value>
+                    <fullName>Comercio internacional</fullName>
+                    <default>false</default>
+                    <label>Comercio internacional</label>
+                </value>
+                <value>
+                    <fullName>DEM</fullName>
+                    <default>false</default>
+                    <label>DEM</label>
+                </value>
+                <value>
+                    <fullName>DIE</fullName>
+                    <default>false</default>
+                    <label>DIE</label>
+                </value>
+                <value>
+                    <fullName>Disposición</fullName>
+                    <default>false</default>
+                    <label>Disposición</label>
+                </value>
+                <value>
+                    <fullName>DOM</fullName>
+                    <default>false</default>
+                    <label>DOM</label>
+                </value>
+                <value>
+                    <fullName>Domiciliación</fullName>
+                    <default>false</default>
+                    <label>Domiciliación</label>
+                </value>
+                <value>
+                    <fullName>Fiduciario</fullName>
+                    <default>false</default>
+                    <label>Fiduciario</label>
+                </value>
+                <value>
+                    <fullName>Financiamiento</fullName>
+                    <default>false</default>
+                    <label>Financiamiento</label>
+                </value>
+                <value>
+                    <fullName>Inversiones</fullName>
+                    <default>false</default>
+                    <label>Inversiones</label>
+                </value>
+                <value>
+                    <fullName>Nómina</fullName>
+                    <default>false</default>
+                    <label>Nómina</label>
+                </value>
+                <value>
+                    <fullName>Seguros</fullName>
+                    <default>false</default>
+                    <label>Seguros</label>
+                </value>
+                <value>
+                    <fullName>SIT</fullName>
+                    <default>false</default>
+                    <label>SIT</label>
+                </value>
+                <value>
+                    <fullName>Swift</fullName>
+                    <default>false</default>
+                    <label>Swift</label>
+                </value>
+                <value>
+                    <fullName>Swift / Transferencia internacional</fullName>
+                    <default>false</default>
+                    <label>Swift / Transferencia internacional</label>
+                </value>
+                <value>
+                    <fullName>Tarjeta mi despensa</fullName>
+                    <default>false</default>
+                    <label>Tarjeta mi despensa</label>
+                </value>
+                <value>
+                    <fullName>Tarjetas</fullName>
+                    <default>false</default>
+                    <label>Tarjetas</label>
+                </value>
+                <value>
+                    <fullName>Tarjetas ( TCE, TDE, TDP, TG)</fullName>
+                    <default>false</default>
+                    <label>Tarjetas ( TCE, TDE, TDP, TG)</label>
+                </value>
+                <value>
+                    <fullName>TIB</fullName>
+                    <default>false</default>
+                    <label>TIB</label>
+                </value>
+                <value>
+                    <fullName>Vista</fullName>
+                    <default>false</default>
+                    <label>Vista</label>
+                </value>
+                <value>
+                    <fullName>CIB</fullName>
+                    <default>false</default>
+                    <label>CIB</label>
+                </value>
+                <value>
+                    <fullName>Multirecaudador</fullName>
+                    <default>false</default>
+                    <label>Multirecaudador</label>
+                </value>
+                <value>
+                    <fullName>Host to Host</fullName>
+                    <default>false</default>
+                    <label>Host to Host</label>
+                </value>
+                <value>
+                    <fullName>Financiamiento PyME</fullName>
+                    <default>false</default>
+                    <label>Financiamiento PyME</label>
+                </value>
+                <value>
+                    <fullName>Tarjetas de Crédito PyME</fullName>
+                    <default>false</default>
+                    <label>Tarjetas de Crédito PyME</label>
+                </value>
+                <value>
+                    <fullName>Banca Electrónica PyME</fullName>
+                    <default>false</default>
+                    <label>Banca Electrónica PyME</label>
+                </value>
+                <value>
+                    <fullName>Domiciliación PyME</fullName>
+                    <default>false</default>
+                    <label>Domiciliación PyME</label>
+                </value>
+                <value>
+                    <fullName>Vista PyME</fullName>
+                    <default>false</default>
+                    <label>Vista PyME</label>
+                </value>
+                <value>
+                    <fullName>CIE PyME</fullName>
+                    <default>false</default>
+                    <label>CIE PyME</label>
+                </value>
+                <value>
+                    <fullName>Inversiones PyME</fullName>
+                    <default>false</default>
+                    <label>Inversiones PyME</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>pr_fr_max__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( INCLUDES(cp_lm_ambito__c , &quot;MAX&quot;) , true, false)</formula>
+        <label>MAX</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>cp_lm_ambito__c</fullName>
+        <description>Campo que identifica si el producto pertenece a un modulo</description>
+        <externalId>false</externalId>
+        <label>Ámbito</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CIC</fullName>
+                    <default>false</default>
+                    <label>CIC</label>
+                </value>
+                <value>
+                    <fullName>MAX</fullName>
+                    <default>false</default>
+                    <label>MAX</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Producto</label>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>Producto</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Productos</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>BPyP_tre_Productos</fullName>
+        <active>true</active>
+        <label>BPyP</label>
+        <picklistValues>
+            <picklist>Tipo_de_oportunidad__c</picklist>
+            <values>
+                <fullName>ATM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adquirente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alianzas Comerciales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aportaciones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banca Electrónica PyME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banca electrónica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CIB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CIE PyME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadenas de valor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coberturas %28Derivados%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coberturas y derivados</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercio internacional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disposición</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Domiciliación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Domiciliación PyME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fiduciario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financiamiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financiamiento PyME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Host to Host</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inversiones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inversiones PyME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multirecaudador</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nómina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seguros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Swift</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Swift %2F Transferencia internacional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tarjeta mi despensa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tarjetas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tarjetas %28 TCE%2C TDE%2C TDP%2C TG%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tarjetas de Crédito PyME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vista PyME</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>cp_lm_ambito__c</picklist>
+            <values>
+                <fullName>CIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAX</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingModel>Read</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

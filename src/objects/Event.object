@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Decline</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewEvent</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewSfdcEvent</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Today</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>ActivityDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ActivityDateTime</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <encryptionScheme>None</encryptionScheme>
+    </fields>
+    <fields>
+        <fullName>DurationInMinutes</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>EndDateTime</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>EventSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>IsAllDayEvent</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>IsPrivate</fullName>
+    </fields>
+    <fields>
+        <fullName>IsRecurrence2</fullName>
+    </fields>
+    <fields>
+        <fullName>IsReminderSet</fullName>
+    </fields>
+    <fields>
+        <fullName>Location</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>ShowAs</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>StartDateTime</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <recordTypes>
+        <fullName>Evento_BPyP</fullName>
+        <description>Tipo de registro para eventos de BPyP</description>
+        <active>true</active>
+        <label>Evento BPyP</label>
+        <picklistValues>
+            <picklist>Estatus_sincronizacion__c</picklist>
+            <values>
+                <fullName>Actualizar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insertar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_CF_ActividadesKPI__c</picklist>
+            <values>
+                <fullName>Acompañar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Agencias sin visita</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arrendamiento Puro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capilaridad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construir credibilidad Maximizar los resultados del cliente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enfoque al Cliente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entender al Cliente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entender la Industria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entender mi Negocio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KPI para acuerdo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nuevos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oportunidades</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personas Morales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planea un camino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planea una agenda útil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planea una interacción de valor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Productividad Inplants</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Se parte del Cliente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seguros Bancomer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminuevos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Share</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Un solo Bancomer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visitas</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_CF_KPI__c</picklist>
+            <values>
+                <fullName>KPI Experiencia Unica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KPI Gerente Triunfador</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>KPI Gestion</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_EU_Indicador__c</picklist>
+            <values>
+                <fullName>Análisis de crédito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Captación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cartera Vigente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cartera Vigente CP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cartera Vigente LP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Colocación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INF No Recurrentes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INF Recurrentes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IReNe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inversiones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Margen Bruto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan de Cuenta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resto Captación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Saneamiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seguros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Servicios</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stock Nomina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usuario Nvo de Credito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Usuarios nuevos crédito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visitas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vista MN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_EU_Responsable__c</picklist>
+            <values>
+                <fullName>BBVA Bancomer</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Cliente</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_EU_TipoOperacion__c</picklist>
+            <values>
+                <fullName>Línea existente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nueva operación</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Planeaci_n_de_visita__c</picklist>
+            <values>
+                <fullName>Visita no planeada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visita planeada</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Plataforma_origen__c</picklist>
+            <values>
+                <fullName>Google</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce%2Ecom</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quien_te_acompa_o__c</picklist>
+            <values>
+                <fullName>Director Banca Hipotecaria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Banca Mayorista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Divisional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Promoción Empresarial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Red EyGH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Regional%2FCentro Corporativo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director de Oficina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Arrendamiento%2FCadenas valor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista CIB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Cash Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Comercio Internacional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Financiamiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Inversiones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Plan Piso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Promoción Fiduciario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Promoción Nómina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Seguros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Venta y Soporte Adquirente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista de la Banca Electrónica</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resultado_de_la_visita__c</picklist>
+            <values>
+                <fullName>0%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>60%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>70%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>80%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ninguno</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Junta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Llamada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revisión propuesta</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Te_acompa_aron__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

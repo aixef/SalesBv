@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Acción para crear tema desde la visita.</description>
+    <icon>icon_Topic</icon>
+    <label>Crear Tema</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>      
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>dwp_kitv__Case__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>           
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>MX_EU_TopicVisPlanCuenta__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>dwp_kitv__opportunity_id__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>dwp_kitv__topic_desc__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>dwp_kitv__Visit_Topic__c</targetObject>
+    <targetParentField>dwp_kitv__visit_id__c</targetParentField>
+    <type>Create</type>
+</QuickAction>

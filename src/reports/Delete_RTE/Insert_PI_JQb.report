@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_PI__c.MX_RTE_Fecha_Inicio__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_PI__c.MX_RTE_Fecha_fin__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_PI__c.MX_RTE_PI_Planning__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_PI__c.MX_RTE_Demo_Party__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_PI__c.MX_RTE_Demo_Day__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_PI__c.MX_RTE_Inception__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <format>Tabular</format>
+    <name>Insert PI</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$MX_RTE_PI__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

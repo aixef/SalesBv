@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Lista de Motivos de Descarte de oportunidad para BPyP, en componente Aura, parametrizable.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>MX_BPP_Motivo__c</fullName>
+        <description>Campo donde se especifica valor real del motivo de descarte de oportunidad para BPP.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Motivo Descarte</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Motivos Descarte</label>
+    <visibility>Public</visibility>
+</CustomObject>

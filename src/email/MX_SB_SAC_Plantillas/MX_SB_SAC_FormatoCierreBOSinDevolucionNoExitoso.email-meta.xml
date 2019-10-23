@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>El formato se utilizara para 1.- Devoluciones Backoffice Cierre Folio Exitoso Sin Devolucion y 2.- Devoluciones Backoffice Cierre Folio No Exitoso</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MX_SB_SAC_FormatoCierreBOSinDevolucionNoExitoso</name>
+    <style>none</style>
+    <subject>Devolución con folio {!Case.CaseNumber}</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

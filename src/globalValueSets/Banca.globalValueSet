@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Red BEyG</fullName>
+        <default>false</default>
+        <label>Red BEyG</label>
+    </customValue>
+    <customValue>
+        <fullName>Red PyME</fullName>
+        <default>false</default>
+        <label>Red PyME</label>
+    </customValue>
+    <customValue>
+        <fullName>Red HI</fullName>
+        <default>false</default>
+        <label>Red HI</label>
+    </customValue>
+    <customValue>
+        <fullName>Red CF</fullName>
+        <default>false</default>
+        <label>Red CF</label>
+    </customValue>
+    <customValue>
+        <fullName>Red HP</fullName>
+        <default>false</default>
+        <label>Red HP</label>
+    </customValue>
+    <customValue>
+        <fullName>Red Hipotecaria</fullName>
+        <default>false</default>
+        <label>Red Hipotecaria</label>
+    </customValue>
+    <customValue>
+        <fullName>Red HI Venta Remota</fullName>
+        <default>false</default>
+        <label>Red HI Venta Remota</label>
+    </customValue>
+    <customValue>
+        <fullName>Red BPyP</fullName>
+        <default>false</default>
+        <label>Red BPyP</label>
+    </customValue>
+    <customValue>
+        <fullName>Red HIP</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Red HIP</label>
+    </customValue>
+    <masterLabel>Banca</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

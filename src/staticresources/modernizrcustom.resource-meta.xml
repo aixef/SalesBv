@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/javascript</contentType>
+    <description>JavaScript que permite que el representante de calidad y el asesor puedan firmar, para la evaluación de calidad.</description>
+</StaticResource>

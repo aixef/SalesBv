@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para aprobación cuando los registros en CalendarioCRM superen el límite</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Saturación Calendario CRM</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de aprobación de Base, volumen de registros en canal supera el límite</subject>
+    <textOnly>Nombre del Generador: {!CRM_WF_Planeacion_Calendario_CRM__c.CreatedBy}
+
+Squad o Negocio: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Area_solicitante__c}
+
+Nombre de la Campaña: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Nombre_Campana__c}
+
+Tipo de Campaña: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Tipo_de_Campa_a__c}
+
+Fecha de Carga: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c}
+
+Fecha de inició de campaña: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Inicio_Campana__c}
+
+Fecha fin de campaña: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Fin_Campana__c}
+
+Volumen de la base: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c}
+
+
+
+Da click en el siguiente vínculo para ver el detalle del registro: Planeación de Calendario CRM
+
+
+
+Da click en el siguiente vínculo para ver el detalle de la fecha del Calendario CRM: Calendario CRM</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,7 @@
+<aura:event type="APPLICATION" description="Paso de parametros a componente padre" >
+    <aura:attribute name="UserUG" type="String" default="" />
+    <aura:attribute name="RISeleccionada" type="String" default="" />     
+    <aura:attribute name="Showvista1" type="Boolean" default="false"/>
+    <aura:attribute name="Showvista2" type="Boolean" default="false"/>
+    <aura:attribute name="RISelName" type="String" default="" /> 
+</aura:event>

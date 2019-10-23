@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div><br></div><div><div style="font-size: 12pt;"><span style="font-size: 12pt;">Por medio de la presente se le informa que la prioridad de&nbsp; la Campaña&nbsp;</span><span style="font-size: medium;"><b>{!Campaign.Name}</b></span><span style="font-size: 12pt;">&nbsp;ha cambiado a Urgente</span></div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;">Por la siguiente Justificación:&nbsp;<b>{!Campaign.CRM_WF_Justificacion_del__c}</b></div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;">Para ver el detalle favor de dar clic en el siguiente vínculo:</div><div style="font-size: 12pt;"><br></div><div><font face="arial"><a href="{!Campaign.Link}">{!Campaign.Link}</a></font></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

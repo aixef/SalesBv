@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;">Se le notifica que el siguiente folio&nbsp; se le ha asignado para su atención:&nbsp;</span><br style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;"><br style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;"><span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;">Fecha de apertura: {!Case.CreatedDate}&nbsp;</span><br style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;"><span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;">Número de caso: {!Case.CaseNumber}&nbsp;</span><br style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;"><span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;">Nombre del cliente: {!Case.Account}&nbsp;</span><br style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;"><span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;">Motivo: {!Case.Reason}&nbsp;</span><br style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;"><span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;">Estado: {!Case.Status}&nbsp;</span><br style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;"><span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;">Comentario: {!Case.Description}&nbsp;</span><br style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;"><span style="color: rgb(38, 50, 56); font-family: Roboto, Arial, sans-serif; font-size: 13px;">Origen del caso: {!Case.Origin}</span><br>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="1" >
+<![CDATA[<font face="arial" color="#ffffff">{!Case.Thread_Id}</font>]]></td>
+</tr>
+</table>

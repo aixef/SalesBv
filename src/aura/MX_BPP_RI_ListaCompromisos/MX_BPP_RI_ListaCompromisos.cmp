@@ -1,0 +1,215 @@
+<!--
+*Desarrollado por:       Indra
+*Autor:                  Monserrat Gonzalez
+*Proyecto:               BPP
+*Descripción:            Basado en EU001_cmp_VistaCompromisos mostrando lista de compromisos ya creados en RI para BPyP
+*Cambios (Versiones)
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0    | 18-05-2018     |    Monserrat Gonzalez            |           Creación
+*1.1    | 04-06-2018     |    Monserrat Gonzalez            |           Modificación al campo correcto para mostrar el monto y feha de BPyP
+*2.0	| 30-01-2019	 |	  Mario Calderón				|			Se agrega componente que permite el filtrado por familia y producto de la oportunidad del compromiso,
+*																		lista con tipos de registro, atributos donde se almacena el campo controlador,
+*																		el campo dependiente y un evento que recibe valores del componente hijo
+*2.1	| 30-01-2019	 |	  Adrián Pastor Pineda 			|			Se agregan dos variables "contador" y "montocompromiso", se integra el resultado de la suma de oportunidades y suma total del monto de los compromisos
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasrecordId,force:hasSObjectName" access="GLOBAL" controller="MX_BPP_RI_ListaCompromisos_Ctrl">
+
+    <aura:attribute name="NombreRI" type="String" default="" />
+    <aura:attribute name="LeyendaError" type="String" default="" />
+    <aura:attribute name="isDO" type="Boolean" default="false" />
+    <aura:attribute name="bModal" type="Boolean" default="false" />
+    <aura:attribute name="Leyenda" type="String" default="" />
+    <aura:attribute name="contador" type="Integer" default="0" description="Contador de oportunidades"/>
+    <aura:attribute name="montocompromiso" type="string" default="" description="Guarda la suma de los montos de los compromisos"/>
+    <aura:attribute name="PropietarioRI" type="String" default="" />
+    <aura:attribute name="picklistValues" type="Object" />
+    <aura:attribute name="picklistValuesEstatusComp" type="Object" />
+	<aura:attribute name="tipoRegistros" type="String[]" default="['Captación','Colocación','Seguros','Servicios']" description="Tipos de registro de oportunidad para BPyP"/>
+    <aura:attribute name="campoPadre" type="String" description="Atributo donde se recibe el valor del campo controlador de los filtros"/>
+    <aura:attribute name="campoHijo" type="String" description="Atributo donde se recibe el valor del campo dependiente de los filtros"/>
+    <c:EU001_cmp_PickListValues sObjectName="EU_001_Compromiso__c" fieldName="EU_001_ls_Indicadores_de_cartera__c" picklistValues="{!v.picklistValues}" />
+    <c:EU001_cmp_PickListValues sObjectName="EU_001_Compromiso__c" fieldName="EU_001_ls_Estatus__c" picklistValues="{!v.picklistValuesEstatusComp}" />
+
+
+    <aura:attribute name="selectedLookUpRecordAcc" type="sObject" default="null"/>
+    <aura:attribute name="selectedLookUpRecordRI" type="sObject" default="null" />
+    <aura:attribute name="record" type="String" default=""/>
+    <aura:attribute name="IdRICompromiso" type="String" default=""/>
+    <aura:attribute name="filtroEstatusCompromisos" type="String" default=""/>
+    <aura:attribute name="rows" type="Object[]" />
+    <aura:attribute name="remoteRecordId" type="Id" />
+    <aura:attribute name="RecordTypeId" type="String" default=""/>
+    <aura:attribute name="showDialog" type="String" default="false" />
+	<aura:handler name="PasoFiltrosOpp" event="c:MX_BPP_CamposDependientes_CompEvent" action="{!c.ObtenerCamposPadreEHijo}" description="Evento que obtiene los valores de los campos controlador y dependiente del componente hijo MX_BPP_CamposDependientes_Cmp"/>
+    <aura:handler name="change" value="{!v.showDialog}" action="{!c.toggleDialog}" />
+    <aura:handler name="change" value="{!v.remoteRecordId}" action="{!c.getRecord}" />
+     <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:attribute name="EstadoRI" type="String" default="" />
+
+       <div class="slds-page-header">
+        <div class="slds-grid slds-table_resizable-cols slds-table_fixed-layout">
+            <div class="slds-p-horizontal--small slds-size--1-of-6">
+                <span></span>
+                 <c:MX_BPP_CamposDependientes_Cmp listRecordTypes="{!v.tipoRegistros}" controllingFieldAPI="MX_RTL_Familia__c"
+                 dependingFieldAPI="MX_RTL_Producto__c" objDetail="{'sobjectType' : 'Opportunity'}" etiquetaCampoControlador="Familia"
+                 etiquetaCampoDependiente="Producto"/>
+            </div>
+            <div class="slds-p-horizontal--small slds-size--1-of-6">
+                <nav role="navigation" aria-label="Breadcrumbs">
+
+                </nav>
+            </div>
+            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_2-of-12">
+                 <lightning:input type="text" label="Número de Oportunidades" value="{!v.contador}" class="slds-size_1-of-2 slds-p-horizontal_x-small" disabled="true"/>
+            </div>
+            <div class="slds-p-horizontal_small slds-size_1-of-6 slds-medium-size_1-of-6 slds-large-size_1-of-5">
+                <ui:inputCurrency labelClass="uiLabel-top" label="Suma Monto" class="slds-size_1-of-2 slds-p-horizontal_x-small" value="{!v.montocompromiso}" disabled="true"/>
+            </div>
+            <div class="slds-p-horizontal--small slds-size--1-of-3">
+                <span></span>
+                 <lightning:select aura:id="selEstatusCompTab" name="selEstatusCompTab" label="Filtrar estatus" class="slds-size_1-of-2 slds-p-horizontal_x-small"  onchange="{!c.init}">
+                    <option value="">--Ninguno--</option>
+                    <aura:iteration items="{!v.picklistValuesEstatusComp}" var="item">
+                        <option value="{!item}">{!item}</option>
+                    </aura:iteration>
+
+                </lightning:select>
+            </div>
+
+        </div>
+    </div>
+    <br/><aura:if isTrue="{!!v.isDO &amp;&amp; v.EstadoRI !='Finalizacion' &amp;&amp; v.EstadoRI !='Evaluacion'}">
+        <div class="slds-float--right">
+            <lightning:button variant="neutral" label="Nuevo" onclick="{!c.handleModalNuevoCompromisoOpen}" />  &nbsp;
+            <br/>&nbsp;
+        </div>
+    </aura:if><br/>
+
+        <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout" role="grid">
+            <thead>
+                <tr >
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Compromiso">Compromiso</div>
+                    </th>
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Cliente">Cliente</div>
+                    </th>
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+						<div class="slds-truncate" title="Familia">Familia</div>
+                    </th>
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Producto">Producto</div>
+                    </th>
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Monto">Monto</div>
+                    </th>
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Fecha de Cierre">Fecha de Cierre</div>
+                    </th>
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Estatus">Estatus</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.rows}" var="row" indexVar="rowIndex">
+                    <aura:iteration items="{!row.lsOpp}" var="child">
+                        <tr class="slds-is-sortable slds-is-resizable" style="overflow-x:auto;">
+                            <th scope="row" tabindex="0" class="slds-is-sortable slds-is-resizable">
+                            <aura:if isTrue="{!child.EU_001_Rb_Oportunidad__r.Name.length > 0}">
+                                <a data-index="{!rowIndex}"  id="{!child.EU_001_Rb_Oportunidad__id}" href="{!'/lightning/r/EU_001_Compromiso__c/'+ child.Id + '/view'}"  target="_blank">
+                                    <div class="slds-truncate" title="{!child.EU_001_Rb_Oportunidad__r.Name}">{!child.EU_001_Rb_Oportunidad__r.Name}</div>
+                                </a>
+                                <aura:set attribute="else">
+                                    <a data-index="{!rowIndex}"  id="{!child.EU_001_Rb_Oportunidad__id}" href="{!'/one/one.app?#/sObject/'+ child.Id + '/view'}" target="_blank">
+                                    <div class="slds-truncate" title="{!child.Name}">{!child.Name}</div>
+                                </a>
+                                </aura:set>
+                            </aura:if>
+                            </th>
+                            <th role="gridcell" class="slds-is-sortable slds-is-resizable">
+                                <div class="slds-truncate" title="{!child.EU_001_Fm_Cliente__c+child.Cliente__r.Name}">{!child.EU_001_Fm_Cliente__c}{!child.Cliente__r.Name}</div>
+
+                            </th>
+                          <th role="gridcell" class="slds-is-sortable slds-is-resizable">
+								<div class="slds-truncate" title="{!child.EU_001_Rb_Oportunidad__r.MX_RTL_Familia__c+child.EU_001_tx_Compromiso__c}">{!child.EU_001_Rb_Oportunidad__r.MX_RTL_Familia__c}{!child.EU_001_tx_Compromiso__c}</div>
+                            </th>
+                            <th role="gridcell" class="slds-is-sortable slds-is-resizable">
+                                <div class="slds-truncate" title="{!child.EU_001_Rb_Oportunidad__r.MX_RTL_Producto__c+child.EU_001_tx_Compromiso__c}">{!child.EU_001_Rb_Oportunidad__r.MX_RTL_Producto__c}{!child.EU_001_tx_Compromiso__c}</div>
+                            </th>
+                            <th role="gridcell" class="slds-is-sortable slds-is-resizable">
+                               <div class="slds-truncate" title="{!'$'+ child.EU_001_Fm_Monto__c +'.00'}"> <ui:outputCurrency value="{!child.EU_001_dv_Compromiso__c}"  /></div>
+                            </th>
+                            <th role="gridcell" class="slds-is-sortable slds-is-resizable">
+                                <div class="slds-truncate" title="{!child.EU_fm_Fecha_Cierre__c}"><ui:outputDate value="{!child.EU_fm_Fecha_Cierre__c}" /></div>
+                            </th>
+                            <th role="gridcell" class="slds-is-sortable slds-is-resizable">
+                                <div class="slds-truncate" title="{!child.EU_001_ls_Estatus__c}">{!child.EU_001_ls_Estatus__c}</div>
+                            </th>
+                        </tr>
+                    </aura:iteration>
+                </aura:iteration>
+            </tbody>
+        </table>
+
+    <aura:attribute name="showModalNuevoCompromiso" type="Boolean" default="false" />
+
+ <aura:if isTrue="{!v.bModal}">
+    <c:MarcoModal title="Crear Compromiso EU: General" isActive="{!v.showModalNuevoCompromiso}">
+        <div role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open"  style="z-index=9000 !important">
+        <div class="slds-modal__container style-general" >
+            <header class="slds-modal__header">
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Crear Compromiso EU</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium slds-grid slds-wrap slds-grid_align-spread" id="modal-content-id-1">
+
+                <div class="slds-size_1-of-1 slds-p-horizontal_x-small" style="padding: 0.5rem; background: rgb(243, 242, 242);"  >
+                    <div class="slds-text-heading_small">Datos General</div>
+                </div>
+                <div class="slds-size_1-of-2 slds-p-horizontal_x-small" >
+                    <c:EU001_cmp_customLookup objectAPIName="account" IconName="standard:account" selectedRecord="{!v.selectedLookUpRecordAcc}" label="Cliente" />
+                </div>
+
+                <div class="slds-size_1-of-2 slds-p-horizontal_x-small"  >
+                    <lightning:input aura:id="idRIField" name="idRIField" value="{!v.NombreRI}" disabled="true" />
+
+                </div>
+                <lightning:select aura:id="selTipoComp" name="selTipoComp" label="Tipo de Compromiso" class="slds-size_1-of-2 slds-p-horizontal_x-small" >
+                    <option value="">--Ninguno--</option>
+                    <option value="Captación">Captación</option>
+                    <option value="Colocación">Colocación</option>
+                    <option value="Seguros">Seguros</option>
+                    <option value="Servicios">Servicios</option>
+                </lightning:select>
+                <lightning:textarea required="true" aura:id="txtCompromiso" name="txtCompromiso" value="" label="Compromiso" maxlength="300" class="slds-size_1-of-2 slds-p-horizontal_x-small"/>
+                <diV class="slds-size_1-of-2 slds-p-horizontal_x-small" >
+                <ui:inputDate required="true" aura:id="dtFechaCierre" label="Fecha de Cierre" displayDatePicker="true" class="slds-size_1-of-2 slds-p-horizontal_x-small" />
+            </diV>
+                <lightning:select aura:id="selEstatusComp" name="selEstatusComp" label="Estatus del Compromiso" class="slds-size_1-of-2 slds-p-horizontal_x-small" disabled="true" >
+                    <option value="abierto">Abierto</option>
+                </lightning:select><br/>&nbsp;
+                <div class="slds-size_1-of-1 slds-p-horizontal_x-small" style="padding: 0.5rem; background: rgb(243, 242, 242);"  >
+                  <div class="slds-text-heading_small">Información Adicional</div>
+                </div>
+                <lightning:input aura:id="txtHCambios" name="txtHCambios" type="number" label="Historico Cambios Fecha Cierre" value="0" class="slds-size_1-of-2 slds-p-horizontal_x-small" />
+                <br/>&nbsp;
+                <br/>&nbsp;
+                <br/>&nbsp;
+                <div class="slds-size_1-of-1 slds-p-horizontal_x-small" style="padding: 0.5rem; background: rgb(243, 242, 242);"  >
+                    <div class="slds-text-heading_small">Información del sistema</div>
+                </div>
+                Propietario<br/>
+                    {!v.PropietarioRI}
+
+            </div>
+            <div class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" onclick="{!c.toggleDialog}">Cancel</button>
+                <lightning:button class="slds-button slds-button_brand" onclick="{!c.saveRecord}">Save</lightning:button>
+            </div>
+        </div>
+    </div>
+    </c:MarcoModal>
+</aura:if>
+</aura:component>

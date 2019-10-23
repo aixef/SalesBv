@@ -1,0 +1,511 @@
+<apex:page sidebar="false" showHeader="false" controller="MX_EU_Minuta_Ctrl" action="{!sendMail}">
+    <apex:stylesheet value="{!$Resource.minuta_css}" />
+
+    <html>
+
+    <head>
+        <title>{!$Label.MX_ENGMX_NombreBanco}</title>
+
+    </head>
+
+    <body>
+
+        <span class="preheader" id="prehead">
+        </span>
+        <table class="body" id="bod">
+            <tr class="rows">
+                <td class="center datacell" align="center" valign="top">
+                    <div data-parsed="" id="centerElem">
+
+                        <table align="center" class="wrapper header float-center tabla">
+                            <tr class="rows">
+                                <td class="wrapper-inner datacell">
+                                    <table align="center" class="container" id="tabla1">
+                                        <tbody>
+                                            <tr class="rows">
+                                                <td class="datacell">
+
+                                                    <table class="row header-preview" id="tabla2">
+                                                        <tbody>
+                                                            <tr class="rows">
+                                                                <th class="small-12 large-12 columns first last" id="header1">
+                                                                    <table class="tablas1">
+                                                                        <tr class="rows">
+                                                                            <th class="header2">
+                                                                                <table class="spacer tablas1">
+                                                                                    <tbody>
+                                                                                        <tr class="rows">
+                                                                                            <td height="25px" class="datacell1">&#xA0;</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <th class="expander header3">
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="row header-logo" id="tablelogo" height="70">
+                                                        <tbody>
+                                                            <tr class="rows">
+                                                                <th class="small-12 large-12 columns first last" id="header4">
+                                                                    <table class="tablas1">
+                                                                        <tr class="rows">
+                                                                            <th class="header2">
+                                                                                <div data-parsed="" id="centerel2">
+                                                                                    <table class="spacer float-center tabla">
+                                                                                        <tbody>
+                                                                                            <tr class="rows">
+                                                                                                <td height="24px" class="datacell2">&#xA0;
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <a href="{!$Label.MX_EUSV_BBVABancomerSite}" target="_blank" align="center" class="float-center" id="linkst">
+                                                                                        <img src="{!logoBlanco}" alt="bbva" class="header-logo-image" id="imge" width="auto" height="auto" />
+                                                                                    </a>
+                                                                                    <table class="spacer float-center tabla">
+                                                                                        <tbody>
+                                                                                            <tr class="rows">
+                                                                                                <td height="24px" class="datacell2">&#xA0;
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </th>
+                                                                            <th class="expander header3">
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <apex:outputPanel rendered="{!correoEnviado}">
+                            <script language="JavaScript" type="text/javascript"> setTimeout(function () {if ((typeof sforce != 'undefined') && sforce && (!!sforce.one)){
+                                sforce.one.navigateToSObject('{!visitObj.Id}');
+                                } else { location.href = '/' + '{!visitObj.Id}'; }}, 2000); </script>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!myCS != null}">
+                            <apex:form>
+                                <apex:pageBlock id="msgs">
+                                    <apex:pageMessages />
+                                </apex:pageBlock>
+                            </apex:form>
+                        </apex:outputPanel>
+
+                        <table align="center" class="wrapper hero float-center tabla">
+                            <tr class="rows">
+                                <td class="wrapper-inner datacell">
+                                    <table class="container contstyle" align="center">
+                                        <tbody>
+                                            <tr class="rows">
+                                                <td class="datacell">
+                                                    <table class="row hero-body tablas2">
+                                                        <tbody>
+                                                            <tr class="rows">
+                                                                <th class="small-12 large-12 columns first last" id="header5">
+                                                                    <table class="tablas1">
+                                                                        <tbody>
+                                                                            <tr class="rows">
+                                                                                <th class="header2">
+                                                                                    <table class="spacer tablas1">
+                                                                                        <tbody>
+                                                                                            <tr class="rows">
+                                                                                                <td class="datacell3" height="30px">
+                                                                                                    &nbsp;
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p align="right">{!todayS}</p>
+
+                                                                                    <div id="div1">
+                                                                                        <strong class="minuta"> Apreciable </strong>
+                                                                                        <apex:outputPanel rendered="{!IF(CONTAINS(visitObj.RecordType.DeveloperName,'MX_BPP'), 'true','false')}">
+                                                                                            <a class="minuta">
+                                                                                                {!visitObj.dwp_kitv__account_id__r.Name}
+                                                                                            </a>
+                                                                                        </apex:outputPanel>
+                                                                                        <apex:repeat value="{!visitObj.dwp_kitv__Visit_Contacts__r}" var="main_contact" id="repeatMainContact">
+                                                                                            <apex:outputPanel rendered="{!IF(CONTAINS(visitObj.RecordType.DeveloperName,'MX_BPP'), 'false','true')}">
+                                                                                                <a class="minuta">
+                                                                                                    {!main_contact.dwp_kitv__contact_id__r.Name}
+                                                                                                </a>
+                                                                                            </apex:outputPanel>
+                                                                                        </apex:repeat>
+                                                                                    </div>
+                                                                                    <apex:outputPanel rendered="{!IF(CONTAINS(visitObj.RecordType.DeveloperName,'MX_BPP'), 'false','true')}">
+                                                                                        <p id="parrafo1">
+                                                                                            {!visitObj.dwp_kitv__account_id__r.Name}
+                                                                                        </p>
+                                                                                    </apex:outputPanel>
+                                                                                    <p id="parrafo2">
+                                                                                        A continuación, presentamos la minuta de la reunión celebrada el día
+                                                                                        <apex:outputPanel rendered="{!fechCheckIn != ''}">
+                                                                                            {!fechCheckIn}
+                                                                                        </apex:outputPanel>
+                                                                                        <apex:outputPanel rendered="{!fechCheckIn == ''}">
+                                                                                            {!fechStartDate}
+                                                                                        </apex:outputPanel>, con los acuerdos
+                                                                                        y actividades realizadas:
+                                                                                    </p>
+                                                                                    <table id="tabla3">
+                                                                                        <thead id="thead1">
+                                                                                            <tr>
+                                                                                                <th>ACUERDO / ACTIVIDAD</th>
+                                                                                                <th>FECHA COMPROMISO</th>
+                                                                                                <th>RESPONSABLE</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+
+                                                                                            <apex:repeat value="{!visitObj.dwp_kitv__Activities__r}" var="agreement" id="repeatAgreement">
+                                                                                                <tr id="ro1">
+                                                                                                    <td id="datacell4">
+                                                                                                        {!agreement.Description}
+                                                                                                    </td>
+                                                                                                    <td class="ro2">
+                                                                                                        <apex:outputPanel rendered="{!agreement.dwp_kitv__visit_done__c}">
+                                                                                                            {!agreement.Status}
+                                                                                                        </apex:outputPanel>
+                                                                                                        <apex:outputPanel rendered="{!NOT(agreement.dwp_kitv__visit_done__c)}">
+                                                                                                            <apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                                                                                                                <apex:param value="{!agreement.ActivityDate}" />
+                                                                                                            </apex:outputText>
+                                                                                                        </apex:outputPanel>
+                                                                                                    </td>
+                                                                                                    <td class="ro2">
+                                                                                                        <apex:outputPanel rendered="{!agreement.MX_EU_Responsable__c == 'BBVA Bancomer'}">
+                                                                                                            <apex:outputPanel rendered="{!agreement.Owner.Name == visitObj.Owner.Name}">
+                                                                                                                {!agreement.Owner.Name}
+                                                                                                            </apex:outputPanel>
+                                                                                                            <apex:outputPanel rendered="{!agreement.Owner.Name != visitObj.Owner.Name}">
+                                                                                                                {!agreement.Owner.Name} / {!visitObj.Owner.Name}
+                                                                                                            </apex:outputPanel>
+                                                                                                        </apex:outputPanel>
+                                                                                                        <apex:outputPanel rendered="{!agreement.MX_EU_Responsable__c == 'Cliente'}">
+                                                                                                            {!visitObj.dwp_kitv__account_id__r.Name}
+                                                                                                        </apex:outputPanel>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </apex:repeat>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <table class="spacer tablas1">
+                                                                                        <tbody>
+                                                                                            <tr class="rows">
+                                                                                                <td class="datecell3" height="30px">
+                                                                                                    &nbsp;
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p class="hero-body-text highlight" id="parrafo3">Saludos,
+                                                                                    </p>
+                                                                                    <table class="spacer tablas">
+                                                                                        <tbody>
+                                                                                            <tr class="rows">
+                                                                                                <td id="datacell5" height="20px">
+                                                                                                    &nbsp;
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p class="hero-body-text" id="parrafo4">
+                                                                                        Equipo {!$Label.MX_ENGMX_NombreBanco}
+                                                                                    </p>
+                                                                                    <table id="tabla4">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td class="datacell6">
+
+                                                                                                    <p class="parrafo5">
+                                                                                                        {!userObj.Name}
+                                                                                                    </p>
+                                                                                                    <p class="parrafo6">
+                                                                                                        {!userObj.Title}
+                                                                                                    </p>
+                                                                                                    <p class="parrafo7">
+                                                                                                        <apex:outputPanel rendered="{!NOT(ISNULL(userObj.MobilePhone))}">
+                                                                                                            {!'celular: ' + userObj.MobilePhone}
+                                                                                                        </apex:outputPanel>
+                                                                                                    </p>
+                                                                                                    <p class="parrafo8">
+                                                                                                        {!userObj.Email}
+                                                                                                    </p>
+
+                                                                                                </td>
+                                                                                                <td class="datacell6">
+                                                                                                    <p class="parrafo5">
+                                                                                                        {!visitResponsible.Name}
+                                                                                                    </p>
+                                                                                                    <p class="parrafo6">
+                                                                                                        {!visitResponsible.Title}
+                                                                                                    </p>
+                                                                                                    <p class="parrafo7">
+                                                                                                        <apex:outputPanel rendered="{!NOT(ISNULL(visitResponsible.MobilePhone))}">
+                                                                                                            {!'celular: ' + visitResponsible.MobilePhone}
+                                                                                                        </apex:outputPanel>
+                                                                                                    </p>
+                                                                                                    <p class="parrafo8">
+                                                                                                        {!visitResponsible.Email}
+                                                                                                    </p>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </th>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table align="center" class="wrapper contact float-center tabla">
+                            <tr class="rows">
+                                <td class="wrapper-inner datacell">
+                                    <table align="center" class="container contstyle">
+                                        <tbody>
+                                            <tr class="rows">
+                                                <td class="datacell">
+
+                                                    <table class="row contact-location" id="tabla5">
+                                                        <tbody>
+                                                            <tr class="rows">
+                                                                <th class="small-12 large-12 columns first" id="tabHead">
+                                                                    <table class="tablas1">
+                                                                        <tr class="rows">
+                                                                            <th class="header2">
+                                                                                <table class="spacer tablas1">
+                                                                                    <tbody>
+                                                                                        <tr class="rows">
+                                                                                            <td height="14px" class="datacell7">&#xA0;
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                                <table class="spacer tablas">
+                                                                                    <tbody>
+                                                                                        <tr class="rows">
+                                                                                            <td height="14px" class="datacell7">&#xA0;
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <table class="row contact-network" id="tabla6">
+                                                        <tbody>
+                                                            <tr class="rows">
+                                                                <th class="small-12 large-12 columns first last" id="datacell8">
+                                                                    <table class="tablas1">
+                                                                        <tr class="rows">
+                                                                            <th class="header2">
+                                                                                <apex:outputPanel rendered="{!IF(CONTAINS(visitObj.RecordType.DeveloperName,'MX_BIE'), 'false','true')}">
+                                                                                    <p class="contact-network-text" id="parrafo9">
+                                                                                        Síguenos en:
+                                                                                    </p>
+                                                                                    <table class="spacer tablas1">
+                                                                                        <tbody>
+                                                                                            <tr class="rows">
+                                                                                                <td height="20px" id="datacell9">&#xA0;
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <p class="contact-network-text" id="parrafo10">
+                                                                                        <a href="{!$Label.MX_EUSV_BBVABancomerFacebook}" target="_blank" id="linkst1">
+                                                                                            <img class="contact-network-icon imag1" src="{!iconFacebook}" alt="link to facebook" hspace="6" width="auto" height="auto" />
+                                                                                        </a>
+                                                                                        <a href="{!$Label.MX_EUSV_BBVABancomerTwitter}" target="_blank" id="linkst2">
+                                                                                            <img class="contact-network-icon imag1" src="{!iconTwiter}" alt="link to twitter" hspace="6" width="auto" height="auto" />
+                                                                                        </a>
+                                                                                    </p>
+                                                                                </apex:outputPanel>
+                                                                            </th>
+                                                                            <th class="expander header3">
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table align="center" class="wrapper footer float-center tabla">
+                            <tr class="rows">
+                                <td class="wrapper-inner datacell">
+                                    <table align="center" class="container contstyle">
+                                        <tbody>
+                                            <tr class="rows">
+                                                <td class="datacell">
+                                                    <table class="row footer-brand" id="tabla7">
+                                                        <tbody>
+                                                            <tr class="rows">
+                                                                <th class="small-12 large-12 columns first last" id="tabHead1">
+                                                                    <table class="tablas1">
+                                                                        <tr class="rows">
+                                                                            <th id="tabHead2">
+                                                                                <table class="spacer tablas1">
+                                                                                    <tbody>
+                                                                                        <tr class="rows">
+                                                                                            <td height="45px" id="datacell10">
+                                                                                                &#xA0;
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                                <apex:outputPanel rendered="{!IF(CONTAINS(visitObj.dwp_kitv__disclosure_info_type__c,'Confidential'), 'true','false')}">
+                                                                                    <p class="footer-brand-text" id="parrafo11">
+                                                                                        <a class="link apple linkst3">
+                                                                                            <span class="apple-data-link spanst">
+                                                                                                {!$Label.MX_BIE_Minuta_confidencial}
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </p>
+                                                                                </apex:outputPanel>
+                                                                                <table class="spacer tablas1">
+                                                                                    <tbody>
+                                                                                        <tr class="rows">
+                                                                                            <td height="40px" id="datacell11">
+                                                                                                &#xA0;
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                                <table class="wrapper footer-brand-logo" align="center" id="tabla8">
+                                                                                    <tr id="ro3">
+                                                                                        <td class="wrapper-inner" id="datacell12">
+                                                                                            <p class="footer-brand-logo-text" id="parrafo12">
+                                                                                                <img class="footer-brand-logo-img" src="{!logoAzul}" alt="BBVA logo blue" id="imag2" width="100%" height="auto"/>
+                                                                                            </p>
+
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                                <table class="spacer tablas1">
+                                                                                    <tbody>
+                                                                                        <tr class="rows">
+                                                                                            <td height="40px" id="datacell13">
+                                                                                                &#xA0;
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                                <p class="footer-brand-text" id="parrafo13">
+                                                                                    <a class="link apple linkst3">
+                                                                                        <span class="apple-data-link spanst">
+                                                                                            <strong>{!$Label.MX_EUSV_BBVA_BusinessName}</strong>
+                                                                                            <br/> {!$Label.MX_EUSV_Address}
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </p>
+                                                                                <table class="spacer tablas1">
+                                                                                    <tbody>
+                                                                                        <tr class="rows">
+                                                                                            <td height="45px" id="datacell14">&#xA0;
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <th class="expander header3">
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="row footer-legal tablas2">
+                                                        <tbody>
+                                                            <tr class="rows">
+                                                                <th class="small-12 large-12 columns first last" id="tabHead3">
+                                                                    <table class="tablas1">
+                                                                        <tr class="rows">
+                                                                            <th class="header2">
+                                                                                <table class="spacer tablas1">
+                                                                                    <tbody>
+                                                                                        <tr class="rows">
+                                                                                            <td height="45px" id="datacell15">
+                                                                                                &#xA0;
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                                <p class="footer-legal-text" id="parrafo14">
+                                                                                    {!$Label.MX_EUSV_BBVA_PersonalinfoMessage}
+                                                                                </p>
+
+
+                                                                                <table class="spacer tablas1">
+                                                                                    <tbody>
+                                                                                        <tr class="rows">
+                                                                                            <td height="25px" class="datacell1">&#xA0;</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </th>
+                                                                            <th class="expander header3">
+                                                                            </th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div id="div2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        </div>
+    </body>
+
+    </html>
+
+</apex:page>

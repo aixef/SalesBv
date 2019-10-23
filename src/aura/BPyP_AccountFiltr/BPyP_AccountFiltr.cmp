@@ -1,0 +1,151 @@
+<!--
+1.1     06/02/2018          Cristian Espinosa           Sustitucion del campo telefono__c por el campo Phone (SHIELD)
+--><aura:component controller="BPyP_AccFiltr" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+    <ltng:require styles="{!$Resource.SLDS_MAXBBVA + '/assets/styles/salesforce-lightning-design-system-ltng.css'}" />
+    <ltng:require scripts="{!$Resource.JqueryLightning}"  />
+    <ltng:require scripts="{!join(',',
+        $Resource.chartjsalm + '/chartjs/Chart.bundle.js',
+        $Resource.chartjsalm + '/chartjs/Chart.bundle.min.js',
+         $Resource.chartjsalm  + '/chartjs/Chart.js',
+           $Resource.chartjsalm  + '/chartjs/Chart.min.js'
+                               )}" afterScriptsLoaded="{!c.generateChart}"/>
+
+    <!-- r.almanza -->
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="DateOfUpd" type="String" description="Date of Update Info"/>
+    <aura:attribute name="chartHeight" type="Integer" description="Chart height"/>
+    <aura:attribute name="baseurl" type="String" description="Base URL"/>
+    <aura:attribute name="seldiv" type="String" description="Selected Division"/>
+    <aura:attribute name="seloff" type="String" description="Selected Office"/>
+    <aura:attribute name="isOff" type="Boolean" default="False" description="Boolean to know if user is office director"/>
+    <aura:attribute name="isDiv" type="Boolean" default="False" description="Boolean to know if user is div director"/>
+    <aura:attribute name="NumOfPag" type="String" description="Number of pages on Account results"/>
+    <aura:attribute name="ActPag" type="String" description="Actual Number page on Account results"/>
+    <aura:attribute name="ListOfAccount" type="Account[]" description="store accounts of BPyP"/>
+    <aura:attribute name="ListOfDiv" type="List" description="store option of Divisions of BPyP"/>
+    <aura:attribute name="ListOfOff" type="List" description="store option of Offices based on Div of BPyP"/>
+    <aura:attribute name="ListOfBkMn" type="List" description="store Bankmans on offices and divisions based on Div and offices of BPyP"/>
+    <!-- <aura:iteration items="{!v.ListOfDiv}" var="div">
+        <br/>{!div.Divisi_n__c}
+    </aura:iteration>
+    <br/>
+    <aura:iteration items="{!v.ListOfOff}" var="off">
+        <br/>{!off.BPyP_ls_NombreSucursal__c}
+    </aura:iteration>
+    <br/>
+    <aura:iteration items="{!v.ListOfBkMn}" var="BkMn">
+        <br/>{!BkMn.Id}, {!BkMn.Name}
+    </aura:iteration>
+    <br/>-->
+    <!--style>
+        canvas.c3{
+          height:{!v.chartHeight}px !important;
+        }
+    </style-->
+    <div class="slds-page-header" style="">
+        <div class="slds-media__body">
+            <h1 class="slds-page-header__title slds-truncate slds-align-middle slds-clearfix" title="Tipo de reporte"><strong>Clientes </strong>
+                <!-- <lightning:icon class="slds-float_right" iconName="utility:info" size="xx-small" title="Reporte que muestra clientes y prospectos analizando su distribución permitiendo acceder a los datos por división oficina y banquero">
+                </lightning:icon> -->
+                <lightning:helptext title="Reporte que muestra clientes y prospectos analizando su distribución permitiendo acceder a los datos por división oficina y banquero" content="Reporte que muestra clientes y prospectos analizando su distribución permitiendo acceder a los datos por división oficina y banquero" iconName="utility:info"/>
+            </h1>
+        </div>
+    </div>
+    <br/>
+
+    <div class="slds-grid slds-wrap slds-grid_pull-padded">
+
+    <!-- </div> -->
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_3-of-12">
+            <lightning:select aura:id="pklDivBpyP" name="selectDiv" value="{!v.seldiv}" label="División" onchange="{!c.updDiv}" >
+                <option value="" selected="{!v.seldiv==''}">TODAS</option>
+                <aura:iteration items="{!v.ListOfDiv}" var="div">
+                    <br/><option value="{!div.Divisi_n__c}" text="{!div.Divisi_n__c}" selected="{!div.Divisi_n__c==v.seldiv}" ></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_3-of-12">
+            <lightning:select aura:id="pklOffBpyP" name="selectOff" label="Oficina" value="{!v.seloff}" onchange="{!c.updOffice}" >
+                <option value="" selected="{!v.seloff==''}">TODAS</option>
+                <aura:iteration items="{!v.ListOfOff}" var="off">
+                    <br/><option value="{!off.BPyP_ls_NombreSucursal__c}" text="{!off.BPyP_ls_NombreSucursal__c}" selected="{!off.BPyP_ls_NombreSucursal__c==v.seloff}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_3-of-12">
+            <lightning:select aura:id="pklBkMnBpyP" name="selectBkMn" label="Banquero" onchange="{!c.updBkM}" >
+                <option value="">TODAS</option>
+                <aura:iteration items="{!v.ListOfBkMn}" var="BkMn">
+                    <br/><option value="{!BkMn.Id}" text="{!BkMn.Name}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_3-of-12">
+            <lightning:select aura:id="pklTyInfBpyP" name="selectDiv" label="Tipo de Información" onchange="{!c.updTyInf}">
+                <option value="CP" text="CLIENTES Y PROSPECTOS"></option>
+                <option value="C" text="CLIENTES"></option>
+                <option value="P" text="PROSPECTOS"></option>
+            </lightning:select>
+        </div>
+    </div>
+    <div class="slds-grid slds-wrap slds-grid_pull-padded  slds-p-around_medium ">
+            <div class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1">
+                <canvas class="c3" aura:id="piechart" style="{! 'height: ' + v.chartHeight +'px'}"></canvas>
+                <div class="slds-text-color_inverse-weak slds-text-body_small">Última actualización {!v.DateOfUpd}.Actualizado en tiempo de ejecución. </div>
+            </div>
+        <aura:if isTrue="{!!v.isCln}">
+            <div class="slds-table slds-table_bordered slds-table_cell-buffer slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 slds-p-around_medium slds-box slds-hyphenate" id="wrapperAcc">
+            </div>
+        </aura:if>
+    </div>
+
+    <aura:attribute name="isCln" type="boolean" default="false"/>
+    <aura:if isTrue="{!v.isCln}">
+        <div class="slds-grid slds-wrap slds-grid_pull-padded " >
+            <div class="slds-table slds-table_bordered slds-table_cell-buffer slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 slds-p-around_medium slds-box slds-hyphenate slds-scrollable">
+                <table role="grid">
+                    <thead>
+                        <tr class="slds-line-height_reset " >
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate"></div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Nombre del Cliente</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Num de Cliente</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Grupo familiar</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Teléfono</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Registro</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Última visita</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Banquero</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.ListOfAccount}" var="acc" indexVar="index">
+                            <tr class="slds-hint-parent ">
+                                <td class="slds-truncate"><div>{!(index+1)+((v.ActPag-1)*10)}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div><a href="{!v.baseurl+acc.Id+'/view'}">{!acc.Name}</a></div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!acc.AccountNumber}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!acc.BPyP_Rb_Family_Group_al_que_pertenece__r.Name}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!acc.Phone}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!acc.RecordType.Name}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!acc.BPyP_Fecha_de_ultima_visita__c}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div><aura:unescapedHtml value="{!acc.Owner.Name}"/></div></td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slds-align_absolute-center slds-button-group">
+            <button class="slds-button slds-button_neutral" onclick="{! c.frst }" disabled="{!v.ActPag==1}">Primero</button>
+            <button class="slds-button slds-button_neutral" onclick="{! c.prev }" disabled="{!v.ActPag==1}">Anterior</button>
+            <ui:outputText class="slds-button slds-button_neutral" value="{!v.ActPag +'/'+ v.NumOfPag}"/>
+            <button class="slds-button slds-button_neutral" onclick="{! c.next }" disabled="{!v.ActPag==v.NumOfPag||v.NumOfPag==0}">Siguiente</button>
+            <button class="slds-button slds-button_neutral" onclick="{! c.lst }" disabled="{!v.ActPag==v.NumOfPag||v.NumOfPag==0}">Ultimo</button>
+        </div>
+    </aura:if>
+
+</aura:component>

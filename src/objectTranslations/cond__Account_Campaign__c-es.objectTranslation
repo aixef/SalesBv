@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Campaña del Cliente</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Campañas del Cliente</value>
+    </caseValues>
+    <fields>
+        <label><!-- Campaña Especial --></label>
+        <name>MX_PYME_Campania_Especial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción Larga --></label>
+        <name>MX_PYME_DescLarga__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado CRM --></label>
+        <name>MX_PYME_Estado_CRM__c</name>
+        <picklistValues>
+            <masterLabel>0002</masterLabel>
+            <translation><!-- 0002 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AVISO DE DEPOSITO AL CLIENTE</masterLabel>
+            <translation><!-- AVISO DE DEPOSITO AL CLIENTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAJA POR AUDITOR DE MOTOR DE CAPACIDADES</masterLabel>
+            <translation><!-- BAJA POR AUDITOR DE MOTOR DE CAPACIDADES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAJA POR MOTOR</masterLabel>
+            <translation><!-- BAJA POR MOTOR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CANCELACION POR PETICION DE CLIENTE</masterLabel>
+            <translation><!-- CANCELACION POR PETICION DE CLIENTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CONFIRMACION</masterLabel>
+            <translation><!-- CONFIRMACION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CONSULTA BURO (PROC. INT</masterLabel>
+            <translation><!-- CONSULTA BURO (PROC. INT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cuenta digital</masterLabel>
+            <translation><!-- Cuenta digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DESACAM POR 3 OFERTAS</masterLabel>
+            <translation><!-- DESACAM POR 3 OFERTAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EN PROCESO</masterLabel>
+            <translation><!-- EN PROCESO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EN TRAMITE DE FORMALIZACION</masterLabel>
+            <translation><!-- EN TRAMITE DE FORMALIZACION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ERROR LINEA</masterLabel>
+            <translation><!-- ERROR LINEA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0008</masterLabel>
+            <translation><!-- ESTATUS 0008 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0009</masterLabel>
+            <translation><!-- ESTATUS 0009 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0011</masterLabel>
+            <translation><!-- ESTATUS 0011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0012</masterLabel>
+            <translation><!-- ESTATUS 0012 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0013</masterLabel>
+            <translation><!-- ESTATUS 0013 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0014</masterLabel>
+            <translation><!-- ESTATUS 0014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0015</masterLabel>
+            <translation><!-- ESTATUS 0015 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0016</masterLabel>
+            <translation><!-- ESTATUS 0016 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0017</masterLabel>
+            <translation><!-- ESTATUS 0017 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0018</masterLabel>
+            <translation><!-- ESTATUS 0018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0019</masterLabel>
+            <translation><!-- ESTATUS 0019 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0021</masterLabel>
+            <translation><!-- ESTATUS 0021 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0022</masterLabel>
+            <translation><!-- ESTATUS 0022 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0023</masterLabel>
+            <translation><!-- ESTATUS 0023 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0024</masterLabel>
+            <translation><!-- ESTATUS 0024 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0025</masterLabel>
+            <translation><!-- ESTATUS 0025 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0026</masterLabel>
+            <translation><!-- ESTATUS 0026 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0027</masterLabel>
+            <translation><!-- ESTATUS 0027 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0028</masterLabel>
+            <translation><!-- ESTATUS 0028 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESTATUS 0029</masterLabel>
+            <translation><!-- ESTATUS 0029 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estado Inicial</masterLabel>
+            <translation><!-- Estado Inicial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIN DE CAMPANA 2</masterLabel>
+            <translation><!-- FIN DE CAMPANA 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIN DE CAMPANIA</masterLabel>
+            <translation><!-- FIN DE CAMPANIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIN FORZADO</masterLabel>
+            <translation><!-- FIN FORZADO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FORMALIZADO 2</masterLabel>
+            <translation><!-- FORMALIZADO 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Formalizado</masterLabel>
+            <translation><!-- Formalizado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LATENTE</masterLabel>
+            <translation><!-- LATENTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFERTA</masterLabel>
+            <translation><!-- OFERTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PIDE DESACAM POR CONTRATACION TDC</masterLabel>
+            <translation><!-- PIDE DESACAM POR CONTRATACION TDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PREAPROBADO (EN CONSULTA</masterLabel>
+            <translation><!-- PREAPROBADO (EN CONSULTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PREAPROBADO (P/AUT. CONS</masterLabel>
+            <translation><!-- PREAPROBADO (P/AUT. CONS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PREFORMALIZADO 2</masterLabel>
+            <translation><!-- PREFORMALIZADO 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PROSPECTO</masterLabel>
+            <translation><!-- PROSPECTO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PROSPECTO DE ORIGEN</masterLabel>
+            <translation><!-- PROSPECTO DE ORIGEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preformalizado</masterLabel>
+            <translation><!-- Preformalizado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RECHAZADO POR BATCH</masterLabel>
+            <translation><!-- RECHAZADO POR BATCH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RECHAZADO POR EL BURO</masterLabel>
+            <translation><!-- RECHAZADO POR EL BURO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rechazo</masterLabel>
+            <translation><!-- Rechazo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SIN RESPUESTA DE BURO</masterLabel>
+            <translation><!-- SIN RESPUESTA DE BURO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOCADOS POR SUCURSAL</masterLabel>
+            <translation><!-- TOCADOS POR SUCURSAL --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Importe --></label>
+        <name>MX_PYME_Importe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oportunidades Relacionadas --></label>
+        <name>MX_PYME_RelOpp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marca de éxito --></label>
+        <name>MX_PYME_Success__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de campaña --></label>
+        <name>MX_PYME_TipoCamp__c</name>
+        <picklistValues>
+            <masterLabel>Informativa</masterLabel>
+            <translation><!-- Informativa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venta</masterLabel>
+            <translation><!-- Venta --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Razones de descarte</label>
+        <name>cond__BBVA_rejection_reason_desc__c</name>
+        <picklistValues>
+            <masterLabel>Buró</masterLabel>
+            <translation><!-- Buró --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Capacidad de pago</masterLabel>
+            <translation><!-- Capacidad de pago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cliente/ Apoderado con marca de CCC</masterLabel>
+            <translation><!-- Cliente/ Apoderado con marca de CCC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Criterios Admisión PyME</masterLabel>
+            <translation><!-- Criterios Admisión PyME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>En proceso de crédito con otra institución</masterLabel>
+            <translation><!-- En proceso de crédito con otra institución --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Giro</masterLabel>
+            <translation><!-- Giro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monto insuficiente</masterLabel>
+            <translation><!-- Monto insuficiente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No necesita el producto</masterLabel>
+            <translation><!-- No necesita el producto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Precio</masterLabel>
+            <translation><!-- Precio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requisitos</masterLabel>
+            <translation><!-- Requisitos --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Estado</label>
+        <name>cond__Campaign_status_approval_type__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation>Cerrada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation>Preliminar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation>En progreso</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Client accepted the product --></label>
+        <name>cond__Client_product_accepted_type__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Deal awarded to competitor --></label>
+        <name>cond__Client_rejection_reason_desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Others --></label>
+        <name>cond__Others_rejection_reason_desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reasons --></label>
+        <name>cond__Rejection_reason_desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- toDelete --></label>
+        <name>cond__Remove_record_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Banker/Product Specialist --></label>
+        <name>cond__User_id__c</name>
+        <relationshipLabel><!-- Campañas del Cliente (Banker/Product Specialist) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Authorizer --></label>
+        <name>cond__campaign_authorizer_user_id__c</name>
+        <relationshipLabel><!-- Campañas del Cliente (Authorizer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label>Descripción de campaña</label>
+        <name>cond__campaign_desc__c</name>
+    </fields>
+    <fields>
+        <label>Fecha fin</label>
+        <name>cond__campaign_end_date__c</name>
+    </fields>
+    <fields>
+        <label>Id de campaña</label>
+        <name>cond__campaign_id__c</name>
+        <relationshipLabel><!-- Account Campaigns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Campaign ID load --></label>
+        <name>cond__campaign_load_id__c</name>
+    </fields>
+    <fields>
+        <label>Nombre de campaña</label>
+        <name>cond__campaign_name__c</name>
+    </fields>
+    <fields>
+        <label>Fecha inicio</label>
+        <name>cond__campaign_start_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subcampaign Name --></label>
+        <name>cond__campaign_subtitle_name__c</name>
+    </fields>
+    <fields>
+        <label>Fuente</label>
+        <name>cond__data_source_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Success Metrics --></label>
+        <name>cond__execution_indicator_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Visit Required --></label>
+        <name>cond__mandatory_visit_type__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- needsApproval --></label>
+        <name>cond__needsApproval__c</name>
+    </fields>
+    <fields>
+        <label>Cliente</label>
+        <name>cond__participant_id__c</name>
+        <relationshipLabel>Campañas del Cliente</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Client ID load --></label>
+        <name>cond__participant_load_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Name --></label>
+        <name>cond__participant_name__c</name>
+    </fields>
+    <fields>
+        <label>Prioridad</label>
+        <name>cond__priority_campaign_type__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Validated --></label>
+        <name>cond__record_verification_type__c</name>
+    </fields>
+    <fields>
+        <label>Producto</label>
+        <name>cond__solution_category_name__c</name>
+    </fields>
+    <fields>
+        <label>Familia de producto</label>
+        <name>cond__solution_category_type__c</name>
+    </fields>
+    <fields>
+        <label>Detalle del estado</label>
+        <name>cond__sub_status_type__c</name>
+        <picklistValues>
+            <masterLabel>Discarded</masterLabel>
+            <translation>Descartada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won</masterLabel>
+            <translation>Ganada</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fiscal ID --></label>
+        <name>cond__taxpayer_id__c</name>
+    </fields>
+    <fields>
+        <label>Propietario</label>
+        <name>cond__user_audit_id__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre de Campaña del Cliente</nameFieldLabel>
+    <quickActions>
+        <label><!-- Descartar --></label>
+        <name>MX_PYME_Descartar</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Gestionar Campaña --></label>
+        <name>MX_PYME_Gestionar_Campania</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Crear Oportunidad --></label>
+        <name>MX_PyME_Case_NewOpportunity</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Campañas validadas con productos --></description>
+        <label><!-- Campaña Validada con Producto --></label>
+        <name>MX_PYME_CampValiProd</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Campaña Cargada --></label>
+        <name>MX_PYME_Campania_Cargada</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Campaña con Productos --></label>
+        <name>MX_PYME_Campania_CargadaPrd</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Campaña PYME Validada --></description>
+        <label><!-- Campaña Validada --></label>
+        <name>MX_PYME_ValAccCamp</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pre-Validated Account Campaign --></label>
+        <name>cond__Pre_Validated_Account_Campaign</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Validated Account Campaign --></label>
+        <name>cond__Validated_Account_Campaign</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record type for a validated account campaign without Authorizer --></description>
+        <label><!-- Validated Account Campaign No Auth --></label>
+        <name>cond__Validated_Account_Campaign_No_Auth</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Insufficient privileges to edit Name and Currency --></errorMessage>
+        <name>cond__Edit_Account_Campaign</name>
+    </validationRules>
+</CustomObjectTranslation>

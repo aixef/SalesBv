@@ -1,0 +1,118 @@
+<!--
+*Desarrollado por:       Indra
+*Autor:                  Javier Ortiz F.
+*Proyecto:               Experiencia Única
+*Descripción:            Componente helper
+*Cambios (Versiones)
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0    | 20-12-2017     |   Javier Ortiz F.        |           Creación  ***********
+*1.1    | 10-07-2018     |   Ricardo Almanza        |    Mejora para no multiples RI
+-->
+<aura:component controller="EU001_cls_ConsolaDirector" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="GLOBAL" >
+
+    <aura:attribute name="rows" type="Object[]" />
+    <aura:attribute name="leyendaErrorGeneraRI" type="String" />
+    <aura:attribute name="idRi" type="String" />
+    <aura:attribute name="RiName" type="String" />
+    <aura:attribute name="banderaErrorGeneraRI" type="boolean"/>
+    <aura:attribute name="DORI" type="Boolean" default="false" />
+    <aura:attribute name="staff" type="Boolean" default="false" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:registerEvent name="PasoParametrosPadre" type="c:EU001_evt_EligeRICintillo"/>
+    <!--create a component attributs -->
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+
+    <!--loading spinner start... style=Brand Medium (blue dots)-->
+    <aura:if isTrue="{!v.Spinner}"> <lightning:spinner alternativeText="Cargando" size="medium" variant="brand" /> </aura:if>
+    <!-- Loading spinner end-->
+
+    <aura:if isTrue="{!!v.staff}">
+        <div align="right">
+            <lightning:layoutitem flexibility="grow" size="12" smallDeviceSize="12" mediumDeviceSize="12" largeDeviceSize="12">
+                <lightning:button label="Nuevo RI" onclick="{!c.generaNuevoRIController}" /> &nbsp;
+                <br/>&nbsp;
+            </lightning:layoutitem>
+        </div>
+    </aura:if>
+    <lightning:layoutitem flexibility="grow" size="12" smallDeviceSize="12" mediumDeviceSize="12" largeDeviceSize="12">
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                        <div class="slds-truncate" title="Agrupación">Propietario RI</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.rows}" var="row" indexVar="rowIndex">
+                    <tr>
+                        <td>
+                            <aura:if isTrue="{!!row.expanded}">
+                                <span data-index="{!rowIndex}" onclick="{!c.toggle}">
+                                    &#9654;
+                                </span>
+                            </aura:if>
+                            <aura:if isTrue="{!row.expanded}">
+                                <span data-index="{!rowIndex}" onclick="{!c.toggle}">
+                                    &#9660;
+                                </span>
+                            </aura:if>
+                            &nbsp;&nbsp;&nbsp;
+                            <lightning:icon iconName="standard:account" size="x-small"/>
+                            &nbsp;&nbsp;&nbsp;
+                            <a data-index="{!rowIndex}" onclick="{!c.toggle}">
+                                {!row.Acc.Name}
+                            </a>
+                        </td>
+                    </tr>
+
+
+                    <aura:if isTrue="{!row.expanded}">
+
+                        <tr class="slds-text-title_caps" style="overflow-x:auto;">
+                            <tr class="slds-is-sortable slds-is-resizable" style="overflow-x:auto;">
+                                <th scope="col" class="slds-is-sortable slds-is-resizable">
+                                    <div class="slds-truncate" >NO RI</div>
+                                </th>
+                                <th scope="col" class="slds-is-sortable slds-is-resizable">
+                                    <div class="slds-truncate" >ESTADO</div>
+                                </th>
+                                <th scope="col" class="slds-is-sortable slds-is-resizable">
+                                    <div class="slds-truncate" >FECHA DE INICIO</div>
+                                </th>
+                                <th scope="col" class="slds-is-sortable slds-is-resizable">
+                                    <div class="slds-truncate" >FECHA FINALIZACIÓN</div>
+                                </th>
+                            </tr>
+                            <aura:iteration items="{!row.lsOpp}" var="child">
+                                <tr class="slds-is-sortable slds-is-resizable" style="overflow-x:auto;">
+                                    <td>
+                                        <a data-index="{!rowIndex}" onclick="{!c.sendParams}" id="{!child.Id}" name="{!child.Name}">
+                                            {!child.Name}
+                                        </a>
+                                    </td>
+                                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                                        <ui:outputText value="{!child.EU001_tx_Estado__c}" />
+                                    </th>
+                                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                                        <ui:outputDate value="{!child.EU001_ft_Fecha_Inicio__c}" />
+                                    </th>
+                                    <th scope="col" class="slds-is-sortable slds-is-resizable">
+                                        <ui:outputDate value="{!child.EU001_ft_Fecha_Cierre__c}" />
+                                    </th>
+                                </tr>
+                            </aura:iteration>
+                        </tr>
+
+                    </aura:if>
+
+                </aura:iteration>
+
+            </tbody>
+        </table>
+    </lightning:layoutitem>
+
+</aura:component>

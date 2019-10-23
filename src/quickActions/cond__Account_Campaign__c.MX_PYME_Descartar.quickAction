@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Descartar Campaña del cliente</description>
+    <fieldOverrides>
+        <field>cond__Campaign_status_approval_type__c</field>
+        <literalValue>Closed</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>cond__sub_status_type__c</field>
+        <literalValue>Discarded</literalValue>
+    </fieldOverrides>
+    <icon>EU001_descartado</icon>
+    <label>Descartar</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>cond__BBVA_rejection_reason_desc__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>Campaña Descartada</successMessage>
+    <type>Update</type>
+</QuickAction>

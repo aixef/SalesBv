@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación WF, notifica que el bloque de contenido ha sido aprobado</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Bloque de contenido aprobado</name>
+    <style>formalLetter</style>
+    <subject>El canal con folio {!CRM_WF_Artes__c.Name} ha sido aprobado</subject>
+    <textOnly>Por medio de la presente se te solicita tu apoyo para aprobar o rechazar el arte con la siguiente información: Folio AR: {!CRM_WF_Artes__c.Name}
+Campaña: {!CRM_WF_Artes__c.MX_WF_Campana__c}
+Comercio: {!CRM_WF_Artes__c.MX_WF_Comercio__c}
+
+Título: {!CRM_WF_Artes__c.MX_WF_Titulo__c}
+Subtítulo: {!CRM_WF_Artes__c.MX_WF_Subtitulo__c}
+Call to Action (CTA): {!CRM_WF_Artes__c.CRM_WF_Call_to_Action__c}
+Url del CTA: {!CRM_WF_Artes__c.CRM_WF_Link_Call_To_Action__c}
+Legales: {!CRM_WF_Artes__c.CRM_WF_Legales__c}
+Texto del vínculo de los legales: {!CRM_WF_Artes__c.MX_WF_Texto_del_v_nculo_de_legales__c}
+Url de legales: {!CRM_WF_Artes__c.MX_WF_Texto_del_v_nculo_de_legales__c}
+
+Para más información puedes hacer clic en el siguiente vínculo: Registro de canal en Salesforce</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

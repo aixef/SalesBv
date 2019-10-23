@@ -1,0 +1,18 @@
+<aura:documentation>
+    <!--
+* Nombre: MX_SB_MLT_ModalFullScreenMap
+* Autor Juan Carlos Benitez Herrera
+* Proyecto: SB MLT - BBVA
+* Descripción : Página que maneja API de Google Maps
+* Versión       Fecha           Autor                               Descripción
+* 1.0           05/09/2019     Juan Carlos Benitez Herrera          Creación
+-->
+
+	<aura:description>
+	<p><b>NAME</b> MX_SB_MLT_ModalFullScreenMap</p>
+	 <p><b>DESCRIPTION</b>El componente contiene Modal para visualizar el mapa y formulario en mayor tamaño</p>
+        <p><b>ATTRIBUTES</b></p>
+    		<p><li>MX_SB_MLT_ViewMapsCaseCC: VFP que muestra  Campo de Direccion,
+         			Coordenadas, Mapa Google JS API, busqueda de ubicacion, destino, ruta, distancia.</li></p>
+    </aura:description>
+</aura:documentation>

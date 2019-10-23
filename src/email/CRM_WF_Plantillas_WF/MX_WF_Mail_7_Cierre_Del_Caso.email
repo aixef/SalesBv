@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><span style="background-color: rgb(255, 255, 255);"><span lang="ES" style=""><div style="display: inline;"><div class="gmail_default" style=""><div class="gmail_default" style=""><font face="Verdana, Helvetica, sans-serif" style="" size="2"><div class="gmail_default" style="color: rgb(0, 0, 0);"><font style="color: rgb(0, 0, 0);">Estimad@&nbsp;</font><b style="">{!Case.Contact}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><br></div><div class="gmail_default" style="color: rgb(0, 0, 0);">Tu solicitud con número de folio <b>{!Case.CaseNumber} </b>ha sido atendida y cerrada con la siguiente información:</div><div class="gmail_default" style="color: rgb(0, 0, 0);"><br></div><div class="gmail_default" style="color: rgb(0, 0, 0);">Comentarios de la aprobación:&nbsp;<b>{!ApprovalRequest.Comments}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><br></div><div class="gmail_default" style="color: rgb(0, 0, 0);">Asunto:&nbsp;<b>{!Case.Subject}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);">Descripción del cierre del caso:<b>{!Case.MX_WF_Descripcion_Cierre_Caso__c}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);">Estatus:&nbsp;<b>{!Case.Status}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);">Motivo del Caso:&nbsp;<b>{!Case.Reason}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);">Clasificación:&nbsp;<b>{!Case.MX_WF_Clasificacion__c}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><br></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><span style="font-weight: 700; white-space: pre-wrap;"><br></span></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><span style="font-weight: 700; white-space: pre-wrap;">Contacta al responsable o al administrador para cualquier duda aclaración</span></div></font></div></div></div></span></span></div><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><br></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

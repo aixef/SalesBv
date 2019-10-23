@@ -1,0 +1,15 @@
+*** NOTIFICACIÓN SEGUIMIENTO DE CIERRE DE TICKET *** 
+
+Se le ha finalizado su caso con la siguiente información:   
+
+N° de Caso:  {!Case.CaseNumber}
+Tipo:{!Case.Type}
+Unidad de Negocio: {!Case.MX_RTL_CSA_UNIDADESDWP__c}
+
+Asunto:  {!Case.Subject}
+Descripción: {!Case.Description}
+Estado: {!Case.Status}
+
+No olvides cerrar tu ticket una vez finalizado el proceso.!!!!
+
+Haga clic en el vínculo para acceder directamente al caso: {!Case.Link}

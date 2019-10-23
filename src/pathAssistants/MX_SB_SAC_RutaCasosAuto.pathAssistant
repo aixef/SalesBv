@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>MX_SB_SAC_Etapa__c</fieldName>
+    <masterLabel>MX_SB_SAC_RutaCasosAuto</masterLabel>
+    <recordTypeName>MX_SB_SAC_RT</recordTypeName>
+</PathAssistant>

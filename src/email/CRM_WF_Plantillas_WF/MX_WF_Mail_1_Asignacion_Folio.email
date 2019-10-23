@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><span style="background-color: rgb(255, 255, 255);"><span lang="ES" style=""><div style="display: inline;"><div class="gmail_default" style=""><div class="gmail_default" style=""><div class="gmail_default" style=""><font style="" face="Verdana, Helvetica, sans-serif" size="2"><font style="">Estimad@ </font><b style="">{!Case.Contact}</b></font></div><div class="gmail_default" style=""><font style="" face="Verdana, Helvetica, sans-serif" size="2"><br></font></div><div class="gmail_default" style=""><font face="Verdana, Helvetica, sans-serif" size="2"><font style="">Hemos recibido los datos de tu solicitud con número de folio <b>{!Case.CaseNumber}.</b>&nbsp;Dependiendo del análisis&nbsp;del caso te compartiremos&nbsp;</font>el tiempo de respuesta.<span style="white-space: pre;">	</span></font></div><div class="gmail_default" style="color: rgb(0, 0, 0);"></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><b style=""><font face="Verdana, Helvetica, sans-serif" size="2"><br></font></b></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><b style=""><font face="Verdana, Helvetica, sans-serif" style="" size="2">A través de este folio y por medio de Chatter podrás dar seguimiento a tu solicitud, no es necesario enviar un correo nuevo,&nbsp;ya que se duplicará tu solicitud y generará retraso en la solución de tu aclaración.</font></b></div></div><div style="font-size: 10pt; font-family: tahoma, sans-serif; color: rgb(9, 79, 164); font-weight: bold;"><br></div></div></div></span></span><b style="font-size: 12.8px; font-family: arial, sans-serif; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255);"><span lang="ES" style="font-size: 10pt; font-family: Arial, sans-serif; color: rgb(9, 79, 164);"><div style="font-family: tahoma, sans-serif; display: inline;"><div class="gmail_default"><span style="color: black; font-family: Arial, sans-serif; font-size: 11pt; font-weight: normal;"><br></span></div></div></span></b></div><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><b style="font-size: large;"><i><br></i></b></div><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><br></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CatalogoConceptos__c</fullName>
+        <externalId>false</externalId>
+        <label>Catálogo Conceptos</label>
+        <referenceTo>CatalogoConceptos__c</referenceTo>
+        <relationshipLabel>Secciones - Subsecciones - Conceptos</relationshipLabel>
+        <relationshipName>Secciones_Subsecciones_Conceptos</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>CatalogoSeccion__c</fullName>
+        <externalId>false</externalId>
+        <label>Catálogo Seccion</label>
+        <referenceTo>CatalogoSeccion__c</referenceTo>
+        <relationshipLabel>Secciones - Subsecciones - Conceptos</relationshipLabel>
+        <relationshipName>Secciones_Subsecciones_Conceptos</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>CatalogoSubseccion__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Catálogo Subsección</label>
+        <referenceTo>CatalogoSubsecciones__c</referenceTo>
+        <relationshipLabel>Secciones - Subsecciones - Conceptos</relationshipLabel>
+        <relationshipName>Secciones_Subsecciones_Conceptos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Sección - Subsección - Concepto</label>
+    <listViews>
+        <fullName>Todos</fullName>
+        <columns>NAME</columns>
+        <columns>CatalogoSeccion__c</columns>
+        <columns>CatalogoSubseccion__c</columns>
+        <columns>CatalogoConceptos__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>RSSC-{00000}</displayFormat>
+        <label>Número de Sección - Subsección - Concept</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Secciones - Subsecciones - Conceptos</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Outbound</fullName>
+        <active>true</active>
+        <label>Outbound</label>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>CatalogoConceptos__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CatalogoSeccion__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CatalogoSubseccion__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

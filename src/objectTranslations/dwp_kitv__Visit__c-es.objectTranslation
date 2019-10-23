@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Visita</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Visitas</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Fields To Identify A Visit Change --></label>
+        <name>dwp_kitv__Fields_To_Identify_A_Visit_Change</name>
+    </fieldSets>
+    <fields>
+        <label>Dirección del check in</label>
+        <name>Check_In_Address__c</name>
+    </fields>
+    <fields>
+        <label>Fecha y hora del check in</label>
+        <name>Check_In_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label>Geolocalización del check in</label>
+        <name>Check_In_Geolocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check Out Address --></label>
+        <name>Check_Out_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check Out Date Time --></label>
+        <name>Check_Out_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Geolocalización del check out --></label>
+        <name>Check_Out_Geolocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Producto --></label>
+        <name>MX_BIE_Producto__c</name>
+        <picklistValues>
+            <masterLabel>CSL</masterLabel>
+            <translation><!-- CSL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DCM</masterLabel>
+            <translation><!-- DCM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECM</masterLabel>
+            <translation><!-- ECM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M&amp;A</masterLabel>
+            <translation><!-- M&amp;A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PF</masterLabel>
+            <translation><!-- PF --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo --></label>
+        <name>MX_BIE_TipoVisitaLLamada__c</name>
+        <picklistValues>
+            <masterLabel>Call</masterLabel>
+            <translation><!-- Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comercial</masterLabel>
+            <translation><!-- Comercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estratégica</masterLabel>
+            <translation><!-- Estratégica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market update</masterLabel>
+            <translation><!-- Market update --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pitch</masterLabel>
+            <translation><!-- Pitch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seguimiento</masterLabel>
+            <translation><!-- Seguimiento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teaching</masterLabel>
+            <translation><!-- Teaching --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Calificación --></label>
+        <name>MX_CF_BBVAlsRating__c</name>
+        <picklistValues>
+            <masterLabel>Bueno</masterLabel>
+            <translation><!-- Bueno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Malo</masterLabel>
+            <translation><!-- Malo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Muy Bueno</masterLabel>
+            <translation><!-- Muy Bueno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regular</masterLabel>
+            <translation><!-- Regular --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Actividades/Objetivos de la Visita --></label>
+        <name>MX_CF_ObjetivoVisita__c</name>
+        <picklistValues>
+            <masterLabel>ANC</masterLabel>
+            <translation><!-- ANC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP – PM</masterLabel>
+            <translation><!-- AP – PM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Capacitación</masterLabel>
+            <translation><!-- Capacitación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comisiones</masterLabel>
+            <translation><!-- Comisiones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compra Inteligente</masterLabel>
+            <translation><!-- Compra Inteligente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contrato Mercantil</masterLabel>
+            <translation><!-- Contrato Mercantil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oferta comercial del mes</masterLabel>
+            <translation><!-- Oferta comercial del mes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PDM</masterLabel>
+            <translation><!-- PDM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan Piso</masterLabel>
+            <translation><!-- Plan Piso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Programa de Lealtad</masterLabel>
+            <translation><!-- Programa de Lealtad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referencias Banca Comercial</masterLabel>
+            <translation><!-- Referencias Banca Comercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rentabilidad distribuidor</masterLabel>
+            <translation><!-- Rentabilidad distribuidor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seguros Bancomer</masterLabel>
+            <translation><!-- Seguros Bancomer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminuevos</masterLabel>
+            <translation><!-- Seminuevos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Share / Actividad</masterLabel>
+            <translation><!-- Share / Actividad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tasa de aprobación</masterLabel>
+            <translation><!-- Tasa de aprobación --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo de reunión --></label>
+        <name>MX_CF_TipoReunion__c</name>
+        <picklistValues>
+            <masterLabel>Audio Conferencia</masterLabel>
+            <translation><!-- Audio Conferencia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Centro de Negocios</masterLabel>
+            <translation><!-- Centro de Negocios --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presencial</masterLabel>
+            <translation><!-- Presencial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reunión en sede</masterLabel>
+            <translation><!-- Reunión en sede --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traslados</masterLabel>
+            <translation><!-- Traslados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visita Ocular</masterLabel>
+            <translation><!-- Visita Ocular --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vídeo Conferencia</masterLabel>
+            <translation><!-- Vídeo Conferencia --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo de visita --></label>
+        <name>MX_CF_TipoVisita__c</name>
+        <picklistValues>
+            <masterLabel>Reunión Individual</masterLabel>
+            <translation><!-- Reunión Individual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visita Ejecutiva</masterLabel>
+            <translation><!-- Visita Ejecutiva --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visita Operativa</masterLabel>
+            <translation><!-- Visita Operativa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visita de Negocio</masterLabel>
+            <translation><!-- Visita de Negocio --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Etapa --></help>
+        <label><!-- Etapa PF LEAN --></label>
+        <name>MX_PF_Etapa_PF_LEAN__c</name>
+        <picklistValues>
+            <masterLabel>Autorizado</masterLabel>
+            <translation><!-- Autorizado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Con Check In</masterLabel>
+            <translation><!-- Con Check In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>En Espera de Vo. Bo</masterLabel>
+            <translation><!-- En Espera de Vo. Bo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nueva Visita</masterLabel>
+            <translation><!-- Nueva Visita --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporte Generado</masterLabel>
+            <translation><!-- Reporte Generado --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Segmento de cliente --></help>
+        <label><!-- Segmento del cliente --></label>
+        <name>MX_PF_Segmento_del_cliente__c</name>
+        <picklistValues>
+            <masterLabel>Corporativo</masterLabel>
+            <translation><!-- Corporativo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Empresarial</masterLabel>
+            <translation><!-- Empresarial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gobierno</masterLabel>
+            <translation><!-- Gobierno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mediana Empresa</masterLabel>
+            <translation><!-- Mediana Empresa --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Objetivo --></label>
+        <name>MX_PYME_ObjetivoBPyP__c</name>
+        <picklistValues>
+            <masterLabel>Actualización de información</masterLabel>
+            <translation><!-- Actualización de información --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asesoria en productos o servicios BBVA Bancomer</masterLabel>
+            <translation><!-- Asesoria en productos o servicios BBVA Bancomer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atención a Proyectos y Planes de cuenta (Sinergia)</masterLabel>
+            <translation><!-- Atención a Proyectos y Planes de cuenta (Sinergia) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contratacion de producto o servicio</masterLabel>
+            <translation><!-- Contratacion de producto o servicio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estructuracion de operación de credito</masterLabel>
+            <translation><!-- Estructuracion de operación de credito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invitación de Eventos</masterLabel>
+            <translation><!-- Invitación de Eventos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oferta de Producto o servicio de BBVA Bancomer</masterLabel>
+            <translation><!-- Oferta de Producto o servicio de BBVA Bancomer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ofrecer soluciones integrales</masterLabel>
+            <translation><!-- Ofrecer soluciones integrales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presentar a BBVA Bancomer como socio estrategico</masterLabel>
+            <translation><!-- Presentar a BBVA Bancomer como socio estrategico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospeccción de clientes Nuevos</masterLabel>
+            <translation><!-- Prospeccción de clientes Nuevos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resolver inquietudes sobre incidencias o aclarciones</masterLabel>
+            <translation><!-- Resolver inquietudes sobre incidencias o aclarciones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Servicios no Financieros</masterLabel>
+            <translation><!-- Servicios no Financieros --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Conteo de todos los tópicos cerrados de la visita. --></help>
+        <label><!-- Resumen Topic --></label>
+        <name>Resumen_Topic__c</name>
+    </fields>
+    <fields>
+        <help>Selecciona para cerrar todos los temas a tratar</help>
+        <label>¿Cerrar todos lo temas a tratar?</label>
+        <name>dwp_kitv__CloseAllTopics__c</name>
+    </fields>
+    <fields>
+        <help>Contacto principal</help>
+        <label>Contacto principal</label>
+        <name>dwp_kitv__Main_Contact__c</name>
+    </fields>
+    <fields>
+        <help>Indica el tiempo de traslado</help>
+        <label>Traslado</label>
+        <name>dwp_kitv__TravelTime__c</name>
+        <picklistValues>
+            <masterLabel>10 Minutes</masterLabel>
+            <translation>10 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>120 Minutes</masterLabel>
+            <translation>120 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>150 Minutes</masterLabel>
+            <translation>150 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>180 Minutes</masterLabel>
+            <translation>180 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 Minutes</masterLabel>
+            <translation>20 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 Minutes</masterLabel>
+            <translation>30 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40 Minutes</masterLabel>
+            <translation>40 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 Minutes</masterLabel>
+            <translation>60 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90 Minutes</masterLabel>
+            <translation>90 min</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Cliente</label>
+        <name>dwp_kitv__account_id__c</name>
+        <relationshipLabel>Visitas</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Tipo de cliente</label>
+        <name>dwp_kitv__account_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>dwp_kitv__country_name__c</name>
+        <picklistValues>
+            <masterLabel>Argentina</masterLabel>
+            <translation><!-- Argentina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Belgium</masterLabel>
+            <translation><!-- Belgium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chile</masterLabel>
+            <translation><!-- Chile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colombia</masterLabel>
+            <translation><!-- Colombia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compass</masterLabel>
+            <translation><!-- Compass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>France</masterLabel>
+            <translation><!-- France --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Germany</masterLabel>
+            <translation><!-- Germany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hong Kong</masterLabel>
+            <translation><!-- Hong Kong --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>India</masterLabel>
+            <translation><!-- India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indonesia</masterLabel>
+            <translation><!-- Indonesia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italy</masterLabel>
+            <translation><!-- Italy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Japan</masterLabel>
+            <translation><!-- Japan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico</masterLabel>
+            <translation><!-- Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY</masterLabel>
+            <translation><!-- NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peru</masterLabel>
+            <translation><!-- Peru --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portugal</masterLabel>
+            <translation><!-- Portugal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Singapore</masterLabel>
+            <translation><!-- Singapore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spain</masterLabel>
+            <translation><!-- Spain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taiwan</masterLabel>
+            <translation><!-- Taiwan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Kingdom</masterLabel>
+            <translation><!-- United Kingdom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uruguay</masterLabel>
+            <translation><!-- Uruguay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venezuela</masterLabel>
+            <translation><!-- Venezuela --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Tipo de Información</label>
+        <name>dwp_kitv__disclosure_info_type__c</name>
+        <picklistValues>
+            <masterLabel>Confidential information</masterLabel>
+            <translation>Confidencial</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not applicable</masterLabel>
+            <translation>No Aplica</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Indica el tiempo de traslado</help>
+        <label>Traslado</label>
+        <name>dwp_kitv__dwp_kitv_TravelTime__c</name>
+        <picklistValues>
+            <masterLabel>10 Minutos</masterLabel>
+            <translation>10 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 Minutos</masterLabel>
+            <translation>20 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 Minutos</masterLabel>
+            <translation>30 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40 Minutos</masterLabel>
+            <translation>40 min</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 Minutos</masterLabel>
+            <translation>60 min</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Evento cambiado</label>
+        <name>dwp_kitv__event_changed_bool__c</name>
+    </fields>
+    <fields>
+        <label>Convocatoria cambiada</label>
+        <name>dwp_kitv__invitee_changed_type__c</name>
+    </fields>
+    <fields>
+        <label>Prospecto</label>
+        <name>dwp_kitv__lead_id__c</name>
+        <relationshipLabel>Visitas</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Reunión cambiada</label>
+        <name>dwp_kitv__meeting_changed_type__c</name>
+    </fields>
+    <fields>
+        <label>Visitas recientes</label>
+        <name>dwp_kitv__most_recent_visits__c</name>
+    </fields>
+    <fields>
+        <help>Recuerda dar clic en el botón &quot;Convocar&quot;</help>
+        <label>Notificar sí la reunión cambió</label>
+        <name>dwp_kitv__notify_meeting_changed__c</name>
+    </fields>
+    <fields>
+        <label>Número de eventos relacionados</label>
+        <name>dwp_kitv__number_of_event_relations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>dwp_kitv__region_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Involved areas --></label>
+        <name>dwp_kitv__solution_name_path_desc__c</name>
+        <picklistValues>
+            <masterLabel>CIB</masterLabel>
+            <translation><!-- CIB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GCC</masterLabel>
+            <translation><!-- GCC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GF</masterLabel>
+            <translation><!-- GF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GM</masterLabel>
+            <translation><!-- GM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GTB</masterLabel>
+            <translation><!-- GTB --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Canal</label>
+        <name>dwp_kitv__visit_channel__c</name>
+        <picklistValues>
+            <masterLabel>Online</masterLabel>
+            <translation><!-- Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Onsite</masterLabel>
+            <translation><!-- Onsite --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Número de contactos</help>
+        <label>Número de contactos</label>
+        <name>dwp_kitv__visit_contact_persons_number__c</name>
+    </fields>
+    <fields>
+        <label>Descripción</label>
+        <name>dwp_kitv__visit_desc__c</name>
+    </fields>
+    <fields>
+        <help>Indica la duración de la visita/llamada</help>
+        <label>Duración</label>
+        <name>dwp_kitv__visit_duration_number__c</name>
+        <picklistValues>
+            <masterLabel>120</masterLabel>
+            <translation><!-- 120 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>150</masterLabel>
+            <translation><!-- 150 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>180</masterLabel>
+            <translation><!-- 180 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>210</masterLabel>
+            <translation><!-- 210 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>240</masterLabel>
+            <translation><!-- 240 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30</masterLabel>
+            <translation><!-- 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45</masterLabel>
+            <translation><!-- 45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60</masterLabel>
+            <translation><!-- 60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90</masterLabel>
+            <translation><!-- 90 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Fecha fin</label>
+        <name>dwp_kitv__visit_end_date__c</name>
+    </fields>
+    <fields>
+        <label>Ubicación</label>
+        <name>dwp_kitv__visit_location_desc__c</name>
+    </fields>
+    <fields>
+        <label>Tipo</label>
+        <name>dwp_kitv__visit_purpose_type__c</name>
+        <picklistValues>
+            <masterLabel>Acquisition</masterLabel>
+            <translation><!-- Acquisition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strategic</masterLabel>
+            <translation><!-- Strategic --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Fecha/hora inicio</label>
+        <name>dwp_kitv__visit_start_date__c</name>
+    </fields>
+    <fields>
+        <label>Estado</label>
+        <name>dwp_kitv__visit_status_type__c</name>
+        <picklistValues>
+            <masterLabel>Planning</masterLabel>
+            <translation>Planeación</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arranged</masterLabel>
+            <translation>Convocada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arranged - Pending Updates</masterLabel>
+            <translation><!--Arranged - Pending Updates--></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visit Completed - Pending Feedback</masterLabel>
+            <translation><!--Visit Completed - Pending Feedback--></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visit Completed - Minute Sent</masterLabel>
+            <translation>Finalizada/minuta enviada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finalized</masterLabel>
+            <translation>Finalizada</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Resumen</label>
+        <name>dwp_kitv__visit_summary_desc__c</name>
+    </fields>
+    <fields>
+        <help>Número de temas a tratar</help>
+        <label>Número de temas a tratar</label>
+        <name>dwp_kitv__visit_topics_number__c</name>
+    </fields>
+    <fields>
+        <help>Número de colaboradores</help>
+        <label>Número de colaboradores</label>
+        <name>dwp_kitv__visit_users_number__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Titulo</nameFieldLabel>
+    <quickActions>
+        <label>Añadir Contacto</label>
+        <name>dwp_kitv__Add_Contact</name>
+    </quickActions>
+    <quickActions>
+        <label>Añadir Equipo</label>
+        <name>dwp_kitv__Add_member_team</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Check In --></label>
+        <name>Check_In</name>
+    </quickActions>
+    <quickActions>
+        <label>Convoca</label>
+        <name>dwp_kitv__Launch_Update_Meeting</name>
+    </quickActions>
+    <quickActions>
+        <label>Cerrar Temas</label>
+        <name>dwp_kitv__CloseAllTopics</name>
+    </quickActions>
+    <quickActions>
+        <label>Crear Tema</label>
+        <name>dwp_kitv__New_Topic</name>
+    </quickActions>
+    <quickActions>
+        <label>Finalizar Visita</label>
+        <name>dwp_kitv__End_Visit</name>
+    </quickActions>
+    <quickActions>
+        <label>Minuta</label>
+        <name>dwp_kitv__Minutes</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Check In --></label>
+        <name>MX_BHP_Check_In</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Check Out --></label>
+        <name>MX_BHP_Check_Out</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Nuevo caso --></label>
+        <name>MX_BIE_New_VisitCaseSupport</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Check Out --></label>
+        <name>MX_CF_CheckOut</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Crear Acuerdo --></label>
+        <name>MX_CF_CrearAcuerdo</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Crear Acuerdo --></label>
+        <name>MX_CF_CrearAcuerdoRI</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Crear Tema --></label>
+        <name>MX_CF_CrearTema</name>
+    </quickActions>
+    <quickActions>
+        <label>Crear Tema</label>
+        <name>MX_EU_Crear_Tema</name>
+    </quickActions>
+    <quickActions>
+        <label>Crear Apoyo</label>
+        <name>MX_EU_Visit_Apoyo</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Iniciar Visita --></label>
+        <name>MX_HI_Iniciar_Visita</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Finalizar Visita --></label>
+        <name>MX_HP_Visit_Finalizar_Visita_Seg</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Crear Tema --></label>
+        <name>MX_IRENE_Nuevo_Tema</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Agregar Campaña --></label>
+        <name>MX_PYME_AgrCamp</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Crear nuevo Tema a tratar --></label>
+        <name>MX_PYME_VisitTema</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reporte PyME --></label>
+        <name>MX_PyME_Reporte_PyME</name>
+    </quickActions>
+    <quickActions>
+        <label>Añadir Contacto</label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label>Añadir Equipo</label>
+        <name>Nueva_visit_Team</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Cuando tenga un acuerdo asociado a la minuta muestra envío de minuta. --></description>
+        <label><!-- Llamada Comercial Realizada --></label>
+        <name>GBL_Llamada_Comercial_Realizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se muestra envió de minuta cuando se tiene un acuerdo ligado a la minuta --></description>
+        <label><!-- Llamada de Seguimiento Realizada --></label>
+        <name>GBL_Llamada_de_Seguimiento_Realizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se muestra botón para envió de minuta --></description>
+        <label><!-- Cierre de ciclo realizada --></label>
+        <name>GBL_VIisita_c_erre_de_ciclo_Realizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se muestra el quick action para envió de minuta --></description>
+        <label><!-- Visita Comercial Realizada --></label>
+        <name>GBL_Visita_Comercial_Realizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se muestra el envió de minuta, una vez asociado un acuerdo. --></description>
+        <label><!-- Visita Estrategica Realizada --></label>
+        <name>GBL_Visita_Estrat_gica_Realizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Se muestra envió de minuta después de tener un acuerdo asociado a la minuta --></description>
+        <label><!-- Visita Oficina Realizada --></label>
+        <name>GBL_Visita_Oficina_Realizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- se muestra la opción enviar minuta. --></description>
+        <label><!-- Visita Seguimiento Finalizada --></label>
+        <name>GBL_Visita_Seguimiento_Finalizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- no muestra el botón de envió de minuta, hasta que se tengan acuerdos con el check en true. --></description>
+        <label><!-- Valida acuerdos para envió de minuta --></label>
+        <name>GBL_acuerdosEnvioMinuta</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- LLamada Comercial. --></label>
+        <name>LLamada_Comercial_Arranged</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Llamada Seguimiento. --></label>
+        <name>Llamada_Seguimiento_Arrenged</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Llamada comercial --></label>
+        <name>Llamada_comercial</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Llamada seguimiento --></label>
+        <name>Llamada_seguimiento</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Capacitación --></label>
+        <name>MX_BHI_Visita_Capacitacion</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Capacitación CI --></label>
+        <name>MX_BHI_Visita_Capacitacion_CI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Capacitación CO --></label>
+        <name>MX_BHI_Visita_Capacitacion_CO</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- VIsita Capacitación FI --></label>
+        <name>MX_BHI_Visita_Capacitacion_FI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Capacitación MI --></label>
+        <name>MX_BHI_Visita_Capacitacion_MI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Negociación --></label>
+        <name>MX_BHI_Visita_Negociacion</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Negociación CI --></label>
+        <name>MX_BHI_Visita_Negociacion_CI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Negociación CO --></label>
+        <name>MX_BHI_Visita_Negociacion_CO</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Negociación FI --></label>
+        <name>MX_BHI_Visita_Negociacion_FI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Negociación MI --></label>
+        <name>MX_BHI_Visita_Negociacion_MI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Guardia y Prospección --></label>
+        <name>MX_BHI_Visita_Prospeccion</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Prospección CI --></label>
+        <name>MX_BHI_Visita_Prospeccion_CI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Prospección CO --></label>
+        <name>MX_BHI_Visita_Prospeccion_CO</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Prospección FI --></label>
+        <name>MX_BHI_Visita_Prospeccion_FI</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Comercial HP Check In --></description>
+        <label><!-- Visita Comercial CI --></label>
+        <name>MX_BHP_VisitaComercial</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Comercial Check Out --></description>
+        <label><!-- Visita Comercial CO --></label>
+        <name>MX_BHP_VisitaComercial_CO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita comercial finalizada --></description>
+        <label><!-- Visita Comercial FI --></label>
+        <name>MX_BHP_VisitaComercial_FI</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Comercial Minuta --></description>
+        <label><!-- Visita Comercial MI --></label>
+        <name>MX_BHP_VisitaComercial_MI</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Comercial HP --></description>
+        <label><!-- Visita Comercial HP --></label>
+        <name>MX_BHP_VisitaComercial_st</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Estratégica para la BHP Check In --></description>
+        <label><!-- Visita Estratégica CI --></label>
+        <name>MX_BHP_VisitaEstrategica</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Estratégica Check Out --></description>
+        <label><!-- Visita Estratégica CO --></label>
+        <name>MX_BHP_VisitaEstrategica_CO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Estrategica Finalizada --></description>
+        <label><!-- Visita Estrategica FI --></label>
+        <name>MX_BHP_VisitaEstrategica_FI</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Estrategica Minuta --></description>
+        <label><!-- Visita Estrategica MI --></label>
+        <name>MX_BHP_VisitaEstrategica_MI</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Estratégica HP --></description>
+        <label><!-- Visita Estratégica HP --></label>
+        <name>MX_BHP_VisitaEstrategica_st</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita de Seguimiento para la BHP Check In --></description>
+        <label><!-- Visita de Seguimiento CI --></label>
+        <name>MX_BHP_VisitaSeguimiento</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita de Seguimiento Check Out --></description>
+        <label><!-- Visita de Seguimiento CO --></label>
+        <name>MX_BHP_VisitaSeguimiento_CO</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita de Seguimiento Finalizada --></description>
+        <label><!-- Visita Seguimiento FI --></label>
+        <name>MX_BHP_VisitaSeguimiento_FI</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Seguimiento Minuta --></description>
+        <label><!-- Visita Seguimiento MI --></label>
+        <name>MX_BHP_VisitaSeguimiento_MI</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita de Seguimiento HP --></description>
+        <label><!-- Visita de Seguimiento --></label>
+        <name>MX_BHP_VisitaSeguimiento_st</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Llamada BIE --></description>
+        <label><!-- Llamada BIE --></label>
+        <name>MX_BIE_Llamada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Llamada Bie Convocada --></description>
+        <label><!-- Llamada BIE. --></label>
+        <name>MX_BIE_LlamadaConvocada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Llamada BIE realizada --></description>
+        <label><!-- Llamada BIE Realizada --></label>
+        <name>MX_BIE_LlamadaRealizada</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita BIE convocada --></description>
+        <label><!-- Visita BIE. --></label>
+        <name>MX_BIE_VisitaCon</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro inicial para visitas BIE --></description>
+        <label><!-- Visita BIE --></label>
+        <name>MX_BIE_VisitaIN</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita BIE Realizada --></description>
+        <label><!-- Visita Realizada --></label>
+        <name>MX_BIE_VisitaRealizada</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Llamada BPyP --></label>
+        <name>MX_BPP_Llamada_BPyP</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Llamada BPyP CI --></label>
+        <name>MX_BPP_Llamada_BPyP_CI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Llamada BPyP FI --></label>
+        <name>MX_BPP_Llamada_BPyP_FI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita BPyP --></label>
+        <name>MX_BPP_VisitaBPyP</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita BPyP CI --></label>
+        <name>MX_BPP_Visita_BPyP_CI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita BPyP FI --></label>
+        <name>MX_BPP_Visita_BPyP_Fi</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita BPyP St --></label>
+        <name>MX_BPP_Visita_BPyP_St</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para Reunión Individual --></description>
+        <label><!-- Reunión Individual CF --></label>
+        <name>MX_CF_ReunionIndividualConsumerFinanceEstado01</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para visualizar los campos de Reunión Individual Consumer Finance del estado 02 para Director Divisional --></description>
+        <label><!-- Reunión Individual CF Convocada --></label>
+        <name>MX_CF_ReunionIndividualConsumerFinanceEstado02</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para visualizar los campos de Reunión Individual Consumer Finance del estado 05 para Director Divisional --></description>
+        <label><!-- Reunión Individual CF Finalizada/minuta enviada --></label>
+        <name>MX_CF_ReunionIndividualConsumerFinanceEstado05</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para visualizar los campos de Reunión Individual Consumer Finance del estado 06 para Director Divisional --></description>
+        <label><!-- Reunión Individual CF Finalizada --></label>
+        <name>MX_CF_ReunionIndividualConsumerFinanceEstado06</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para Visita Consumer Finance de Gerente Regional --></description>
+        <label><!-- Visita CF --></label>
+        <name>MX_CF_VisitaConsumerFinanceEstado01</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para visualizar los campos de Visita Consumer Finance del estado 02 para Gerente Regional --></description>
+        <label><!-- Visita CF Convocada --></label>
+        <name>MX_CF_VisitaConsumerFinanceEstado02</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para visualizar los campos de Visita Consumer Finance del estado 05 para Gerente Regional --></description>
+        <label><!-- Visita CF Finalizada/minuta enviada --></label>
+        <name>MX_CF_VisitaConsumerFinanceEstado05</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para visualizar los campos de Visita Consumer Finance del estado 06 para Gerente Regional --></description>
+        <label><!-- Visita CF Finalizada --></label>
+        <name>MX_CF_VisitaConsumerFinanceEstado06</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Cambia el formato de pagina cuando esta autorizado el reporte de visita --></description>
+        <label><!-- Reporte  PF LEAN Autorizado --></label>
+        <name>MX_PF_01_tr_Autorizado</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Llamada PyME --></description>
+        <label><!-- Llamada PyME --></label>
+        <name>MX_PYME_Llamada_PyME</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Llamada PyME FI --></label>
+        <name>MX_PYME_Llamada_PyME_FI</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Llamada con Cliente --></description>
+        <label><!-- Llamada PyMe CI --></label>
+        <name>MX_PYME_Llamada_PyMe_CI</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita PyMe --></label>
+        <name>MX_PYME_Visita_PyMe_Plus</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- After pyme plus --></description>
+        <label><!-- Visita PyMe CI --></label>
+        <name>MX_PYME_Visita_PyMe_Plus_CI</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visita Pyme Finalizada --></description>
+        <label><!-- Visita PyMe Fi --></label>
+        <name>MX_PYME_Visita_PyMe_Plus_Fi</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Started pyme plus --></description>
+        <label><!-- Visita PyMe St --></label>
+        <name>MX_PYME_Visita_PyMe_Plus_St</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para la etapa generar reporte activa el botón --></description>
+        <label><!-- Reporte PF Generar Report --></label>
+        <name>MX_Reporte_PF_01_Generar_Report</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Reporte de visita PF LEAN --></label>
+        <name>Reporte_de_visita_PF_LEAN</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para el tipo de segmento median empresa del reporte de vista PF LEAN --></description>
+        <label><!-- Reporte de visita PF LEAN MEDIANA --></label>
+        <name>Reporte_de_visita_PF_LEAN_MEDIANA</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tipo de registro para los segmentos distintos de mediana empresa --></description>
+        <label><!-- Reporte de visita PF LEAN Otro Seg --></label>
+        <name>Reporte_de_visita_PF_LEAN_Otro_Seg</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Cierre de Ciclo --></label>
+        <name>Visita_Cierre_de_Ciclo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Cierre de Ciclo. --></label>
+        <name>Visita_Cierre_de_Ciclo_Arrenged</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Comercial --></label>
+        <name>Visita_Comercial</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Comercial. --></label>
+        <name>Visita_Comercial_Arrenged</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Estratégica --></label>
+        <name>Visita_Estrategica</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Estratégica. --></label>
+        <name>Visita_Estrategica_Arrenged</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Oficina --></label>
+        <name>Visita_Oficina</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Oficina. --></label>
+        <name>Visita_Oficina_Arrenged</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Seguimiento --></label>
+        <name>Visita_Seguimiento</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Seguimiento. --></label>
+        <name>Visita_Seguimiento_Arrenged</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Visita Test --></label>
+        <name>Visita_test</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visit Recordtype from Account --></description>
+        <label><!-- AccountVisit --></label>
+        <name>dwp_kitv__AccountVisit</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Visit RecordType from Lead --></description>
+        <label><!-- LeadVisit --></label>
+        <name>dwp_kitv__LeadVisit</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Después de finalizada la visita, solo se pueden modificar las Notas. --></errorMessage>
+        <name>Block_Visit_Record_Finished</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Selecciona un cliente por favor. --></errorMessage>
+        <name>Cliente_obligatorio_PLD</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puedes crear una visita con fecha y hora anterior a hoy. --></errorMessage>
+        <name>Dias_para_crear_visita</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El plan de cuenta del grupo del cliente actualmente no es factible para valorar, favor de validar y finalizar visita. --></errorMessage>
+        <name>Evaluar_Plan_de_Cuenta_Factible</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puede finalizar una visita si no contiene un acuerdo. --></errorMessage>
+        <name>Finalizar_sin_Acuerdo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No es posible enviar la minuta sin hacer check out antes --></errorMessage>
+        <name>MX_CF_MinutaEnviadaGR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puede seleccionar una Fecha/hora inicio menor a hoy --></errorMessage>
+        <name>MX_CF_ValidaFechaInicioVisita</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puede realizar el check in antes de la Fecha/hora inicio de la visita --></errorMessage>
+        <name>MX_CF_ValidarCheckInMayorFechaInicio</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No es posible realizar una visita a un Grupo Económico. --></errorMessage>
+        <name>MX_ENGMX_GruposEconomicos</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No puede finalizar una visita estratégica si no ha enviado la minuta. --></errorMessage>
+        <name>MX_ENGMX_SendMinuteBeforeFinish</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- - Es necesario realizar notas en la visita para poder finalizarla. --></errorMessage>
+        <name>Notes_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Se debe cubrir el mínimo de temas tratados para continuar. --></errorMessage>
+        <name>Topic_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Ingrese una fecha válida --></errorMessage>
+        <name>Valida_fecha_inicio</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debes elegir un segmento --></errorMessage>
+        <name>Validacion_de_segmento_de_cliente</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe seleccionarse al menos un Contacto decisor o ejecutor para convocar/Debe haber al menos un Tema con una oportunidad relacionada para convocar --></errorMessage>
+        <name>Visit_Contacto_Decisor_Ejecutor</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No es posible finalizar la visita con fecha de vencimiento atrasada. --></errorMessage>
+        <name>Visit_Overdue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No es posible cambiar el cliente</errorMessage>
+        <name>dwp_kitv__Account_is_Changed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No es posible cerrar los temas a tratar</errorMessage>
+        <name>dwp_kitv__CSIsActiveToCloseAllTopicsAccounts</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No es posible cerrar los temas a tratar</errorMessage>
+        <name>dwp_kitv__CSIsActiveToCloseAllTopicsLeads</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No es posible crear la visita antes de los días permitidos</errorMessage>
+        <name>dwp_kitv__Days_to_create_account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No es posible crear la visita antes de los días permitidos</errorMessage>
+        <name>dwp_kitv__Days_to_create_lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No es posible cambiar el prospecto</errorMessage>
+        <name>dwp_kitv__Lead_is_Changed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No es posible agregar más de 50 contactos</errorMessage>
+        <name>dwp_kitv__Max_number_of_contacts</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- MX_PDF_Reporte_de_Visita --></label>
+        <name>MX_PDF_Reporte_de_Visita</name>
+    </webLinks>
+</CustomObjectTranslation>

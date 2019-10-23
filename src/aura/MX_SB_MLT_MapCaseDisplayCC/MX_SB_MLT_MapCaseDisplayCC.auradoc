@@ -1,0 +1,19 @@
+<aura:documentation>
+    <!--
+* Nombre: MX_SB_MLT_ViewMapsCaseCC
+* Autor Juan Carlos Benitez Herrera
+* Proyecto: SB MLT - BBVA
+* Descripción : Página que maneja API de Google Maps
+* Versión       Fecha           Autor                               Descripción
+* 1.0           19/08/2019     Juan Carlos Benitez Herrera          Creación
+* 1.1           07/10/2019     Juan Carlos Benitez Herrera          Se modifica URL de IFrame
+-->
+
+	<aura:description>
+	<p><b>NAME</b> MX_SB_MLT_MapCaseDisplayCC</p>
+	 <p><b>DESCRIPTION</b>El componente contiene iFrame de VFP que muestra Mapa y campos de Tarea de Datos de Origen Web </p>
+        <p><b>ATTRIBUTES</b></p>
+    		<p><li>MX_SB_MLT_ViewMapsCaseCC: VFP que muestra  Campo de Direccion,
+         			Coordenadas, Mapa Google JS API y busqueda de ubicacion.</li></p>
+    </aura:description>
+</aura:documentation>

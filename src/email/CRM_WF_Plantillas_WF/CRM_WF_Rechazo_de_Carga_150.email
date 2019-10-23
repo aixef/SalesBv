@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;">Por medio de la presente se le informa que la base con folio&nbsp;</span></font><font face="arial" style=""><b>{!CRM_WF_Planeacion_Calendario_CRM__c.Name}</b><span style="font-size: 12pt;">&nbsp;y fecha de carga&nbsp;</span></font><b style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">{!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c}</b><font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;"> ha sido rechazada con los siguientes comentarios:</span></font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial" color="#cc0000"><b>{!ApprovalRequest.Comments}</b></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[Para ver el detalle de su registro de click en el siguiente vínculo <a href="{!CRM_WF_Planeacion_Calendario_CRM__c.Link}">Planeación Calendario CRM</a>]]></td>
+</tr>
+</table>

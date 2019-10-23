@@ -1,0 +1,140 @@
+<!--
+*Desarrollado por:       Indra
+*Autor:                  Monserrat Gonzalez
+*Proyecto:               BPyP
+*Descripción:            Basado en EU001_cmp_listOpp componente creado para convertir oportunidades a compromisos para RI de BPyP
+*Cambios (Versiones)
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0    | 17-05-2018     |    Monserrat Gonzalez      |           Creación
+*1.1    | 05-06-2018     |    Monserrat Gonzalez      |           Modificación de componente para acualización de monto y fecha
+*2.0	| 23-01-2019	 |	  Mario Calderón		  |			  Se agrega componente que recibe una lista con tipo de registros de
+																  oportunidad, el campo controlador, el campo dependiente, el objeto
+																  que contiene estos campos, una etiqueta para el campo controlador
+																  , una etiqueta para el campo dependiente y devuelve al componente
+																  padre mediante un evento los valores para que sean agregados
+																  a los filtros.
+-->
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasrecordId" access="global" controller="EU001_cls_CompHandler">
+    <!--Atributos-->
+    <aura:attribute name="listaOportunidades" type="List"/>
+    <aura:attribute name="DOEJEC" type="Boolean" default="false" />
+    <aura:attribute name="DATEINIT" type="Boolean" default="false" />
+    <aura:attribute name="fechaInicio" type="date"/>
+    <aura:attribute name="fechaFin" type="date"/>
+    <aura:attribute name="idRI" type="String"/>
+	<aura:attribute name="tipoRegistros" type="String[]" default="['Captación','Colocación','Seguros','Servicios']" description="Tipos de registro de oportunidad para BPyP"/>
+    <aura:attribute name="campoPadre" type="String" description="Atributo donde se recibe el valor del campo controlador de los filtros"/>
+    <aura:attribute name="campoHijo" type="String" description="Atributo donde se recibe el valor del campo dependiente de los filtros"/>
+    <!--Handler's-->
+    <aura:attribute name="pestania" type="Boolean" description="Consulta"/>
+    <aura:handler name="change" value="{!v.fechaInicio}" action="{!c.getOppRange}"/>
+    <aura:handler name="change" value="{!v.fechaFin}" action="{!c.getOppRange}"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+	<aura:handler name="PasoFiltrosOpp" event="c:MX_BPP_CamposDependientes_CompEvent" action="{!c.ObtenerCamposPadreEHijo}" description="Evento que obtiene los valores de los campos controlador y dependiente del componente hijo MX_BPP_CamposDependientes_Cmp"/>
+
+    <div class="slds-resizable slds-page-header">
+        <br/>
+        <div class="slds-grid slds-table_resizable-cols slds-table_fixed-layout">
+
+            <div class="slds-p-horizontal--small slds-resizable slds-size--1-of-5">
+                <h1 title="Rohde Corp - 80,000 Widgets">Filtros de Fechas:</h1>
+                <ui:inputDate aura:id="dateInit" value="{!v.fechaInicio}" displayDatePicker="true"/>
+            </div>
+            <div class="slds-p-horizontal--small slds-resizable slds-size--1-of-14">
+                <h1 class="slds-resizable" style="width: 32%;">&nbsp;</h1>
+                <h1 class="slds-resizable" style="width: 32%;margin-top:15px;">a</h1>
+            </div>
+            <div class="slds-p-horizontal--small slds-resizable slds-size--1-of-5" >
+                <h1 title="Rohde Corp - 80,000 Widgets">&nbsp;</h1>
+                <ui:inputDate aura:id="dateEnd" value="{!v.fechaFin}" displayDatePicker="true"/>
+            </div>
+            <div class="slds-p-horizontal--small slds-resizable slds-size--1-of-5">
+                <c:MX_BPP_CamposDependientes_Cmp listRecordTypes="{!v.tipoRegistros}" controllingFieldAPI="MX_RTL_Familia__c"
+                dependingFieldAPI="MX_RTL_Producto__c" objDetail="{'sobjectType' : 'Opportunity'}" etiquetaCampoControlador="Familia" 
+                etiquetaCampoDependiente="Producto"/>
+            </div>
+        </div>
+        <aura:set attribute="else">&nbsp;</aura:set>
+    </div>
+
+    <div>
+        <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout" role="grid">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="slds-text-align_right" scope="col" style="width: 3.25rem;">
+                        <div class="slds-th__action slds-th__action_form">
+                            <span class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-221" tabindex="-1" value="on" />
+                                <label class="slds-checkbox__label" for="checkbox-221">
+                                    <span class="slds-checkbox_faux"></span>
+                                    <span class="slds-form-element__label slds-assistive-text">Select All</span>
+                                </label>
+                            </span>
+                        </div>
+                    </th>
+                    <th aria-sort="none" class="slds-is-sortable slds-is-resizable" aria-label="Nombre de la Opp" scope="col">
+                        <span class="slds-truncate" title="Nombre de la Opp">Oportunidad</span>
+                    </th>
+                    <th aria-sort="none" class="slds-is-sortable slds-is-resizable" aria-label="Nombre del Cliente" scope="col">
+                        <span class="slds-truncate" title="Nombre del Cliente">Cliente</span>
+                    </th>
+                    <th aria-sort="none" class="slds-is-sortable slds-is-resizable" aria-label="Familia" scope="col">
+                        <span class="slds-truncate" title="Familia">Familia</span>
+                    </th>
+                   	 <th aria-sort="none" class="slds-is-sortable slds-is-resizable" aria-label="Producto" scope="col">
+                        <span class="slds-truncate" title="Producto">Producto</span>
+                    </th>
+                    <th aria-sort="none" class="slds-is-sortable slds-is-resizable" aria-label="Monto" scope="col">
+                        <span class="slds-truncate" title="Monto">Monto</span>
+                    </th>
+                    <th aria-sort="none" class="slds-is-sortable slds-is-resizable" aria-label="Fecha de Cierre" scope="col">
+                        <span class="slds-truncate" title="Fecha de Cierre">Fecha de Cierre</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration var="oppWrapper" items="{!v.listaOportunidades}">
+                    <tr class="slds-hint-parent">
+                        <td class="slds-text-align_right" role="gridcell">
+                            <div class="slds-form-element__control">
+                                <label class="slds-checkbox">
+                                    <ui:inputCheckbox aura:id="boxPack" value="{!oppWrapper.seleccion}" />
+                                    <span class="slds-checkbox--faux"></span>
+                                    <span class="slds-form-element__label text"></span>
+                                </label>
+                            </div>
+                        </td>
+                        <th scope="row" tabindex="0">
+                            <a data-index="{!rowIndex}"  id="{!oppWrapper.oppId}" href="{!'/lightning/r/Opportunity/'+ oppWrapper.oppId + '/view'}"  target="_blank">
+                                <div class="slds-truncate" title="{!oppWrapper.oppName}">{!oppWrapper.oppName}</div>
+                            </a>
+                        </th>
+                        <td role="gridcell">
+                            <div class="slds-truncate" title="{!oppWrapper.nombCliente}">{!oppWrapper.nombCliente}</div>
+                        </td>
+                        <td role="gridcell">
+                            <div class="slds-truncate" title="{!oppWrapper.MX_RTL_Familia}">{!oppWrapper.MX_RTL_Familia}</div>
+                        </td>
+                        <td role="gridcell">
+                            <div class="slds-truncate" title="{!oppWrapper.MX_RTL_Producto}">{!oppWrapper.MX_RTL_Producto}</div>
+                        </td>
+                        <td role="gridcell">
+                             <ui:inputNumber aura:id="num" disabled="{!!oppWrapper.seleccion}"  value="{!oppWrapper.oppAmount}"/>
+                        </td>
+                        <td role="gridcell">
+                             <ui:inputDate aura:id="dateField" disabled="{!!oppWrapper.seleccion}" value="{!oppWrapper.oppCloseDate}" displayDatePicker="true"/>
+                        </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+        <br/>
+    <div style="padding-left: 25;" aura:id="mySpinner">
+        <aura:if isTrue="{!!v.DOEJEC}">
+            <lightning:button label="Generar Compromisos" class="slds-button slds-button_neutral" onclick="{!c.generaCompromisosView}" />
+        </aura:if>
+        </div>
+    </div>
+</aura:component>

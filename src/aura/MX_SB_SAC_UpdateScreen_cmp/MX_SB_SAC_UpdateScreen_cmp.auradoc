@@ -1,0 +1,10 @@
+<aura:documentation>
+	<aura:description>
+        Componente para realizar la actualización de la pantalla
+        <p>Attribute: <b>recordId: </b> Id del registro</p>
+        <p>Attribute: <b>recordError: </b> Posible error existente en el registro</p>
+    </aura:description>
+	<aura:example name="UpdateScreen" ref="c:MX_SB_SAC_UpdateScreen_cmp" label="Actualización de pantalla">
+		Actualiza la pantalla embebiendo dicho componente en los flows requeridos
+	</aura:example>
+</aura:documentation>

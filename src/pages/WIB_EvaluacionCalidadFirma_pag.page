@@ -1,0 +1,66 @@
+<apex:page controller="WIB_EvaluacionCalidadFirma_cls" >
+    <apex:stylesheet value="{!$Resource.WIB_EvaluacionCalidadFirma_css}"/>
+
+    <head>
+		<apex:includeScript value="{!$Resource.modernizrcustom}" />
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+        <apex:includeScript value="/soap/ajax/28.0/connection.js" />
+        <apex:includeScript value="/soap/ajax/28.0/apex.js" />
+        <apex:includeScript value="{!$Resource.WIB_EvaluacionCalidadFirma_js}" />
+    </head>
+
+    <body>
+    <apex:form >
+
+
+        <div class="cuerpo">
+            <table width="100%" height="100%">
+                <tr width="100%" height="50%">
+                    <td width="50%" >
+                        <div id="canvasContainer" width="100%" heigth="100%">
+                            <canvas id="signature" width="100%" height="200px"/>
+                        </div>
+                    </td>
+                    <td width="50%">
+                        <div id="canvasContainer" width="100%" heigth="100%">
+                            <canvas id="signature2" width="100%" height="200px"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr  width="100%" height="50%">
+                    <td width="50%" align="Left">
+                        <div id="detalleFirma">
+                            Representate de Calidad <BR/>
+                            {!Eval.RepresentanteCalidad__c}<BR/>
+                            <apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                                <apex:param value="{!Eval.CreatedDate}" />
+                            </apex:outputText>
+                        </div>
+                    </td>
+                    <td width="50%" align="Left">
+                        <div id="detalleFirma">
+                            Asesor evaluado <BR/>
+                            {!Eval.Encuestado__c} <BR/>
+                            <apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+                                <apex:param value="{!Eval.CreatedDate}" />
+                            </apex:outputText>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr width="100%" height="50%">
+                    <td colspan="2">
+                        <div id="buttonsContainer">
+                         <button type="button" id="submit" class="boton">Guardar</button>
+                         <button type="button" id="cancel" class="boton">Borrar</button>
+
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </apex:form>
+    </body>
+
+</apex:page>

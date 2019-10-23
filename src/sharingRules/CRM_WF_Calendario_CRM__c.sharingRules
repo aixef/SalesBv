@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Gerencia_Squads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Regla para la aplicación WF, permite a los usuarios tener acceso a modificación de los registros de Planeación Calendario CRM al estar controlado por Calendario CRM</description>
+        <label>Gerencia Squads</label>
+        <sharedTo>
+            <roleAndSubordinates>CRM_WF_Gerencia_Squads</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Crm</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

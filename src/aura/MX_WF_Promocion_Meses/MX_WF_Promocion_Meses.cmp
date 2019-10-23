@@ -1,0 +1,145 @@
+<aura:component implements="force:appHostable,lightning:availableForFlowScreens" access="global" >
+    <aura:attribute name="mes2" type="Boolean" default="true"/>
+    <aura:attribute name="mes3" type="Boolean" default="true"/>
+    <aura:attribute name="mes4" type="Boolean" default="true"/>
+    <aura:attribute name="mes5" type="Boolean" default="true"/>
+    <aura:attribute name="mes6" type="Boolean" default="true"/>
+    <aura:attribute name="mes7" type="Boolean" default="true"/>
+    <aura:attribute name="mes8" type="Boolean" default="true"/>
+    <aura:attribute name="mes9" type="Boolean" default="true"/>
+    <aura:attribute name="mes10" type="Boolean" default="true"/>
+    <aura:attribute name="mes11" type="Boolean" default="true"/>
+    <aura:attribute name="mes12" type="Boolean" default="true"/>
+    <aura:attribute name="mes13" type="Boolean" default="true"/>
+    <aura:attribute name="mes14" type="Boolean" default="true"/>
+    <aura:attribute name="mes15" type="Boolean" default="true"/>
+    <aura:attribute name="mes16" type="Boolean" default="true"/>
+    <aura:attribute name="mes17" type="Boolean" default="true"/>
+    <aura:attribute name="mes18" type="Boolean" default="true"/>
+    <aura:attribute name="Minimo2" type="integer" /> 
+    <aura:attribute name="Maximo2" type="integer" />
+    <aura:attribute name="Minimo3" type="integer" /> 
+    <aura:attribute name="Maximo3" type="integer" />
+    <aura:attribute name="Minimo4" type="integer" /> 
+    <aura:attribute name="Maximo4" type="integer" />
+    <aura:attribute name="Minimo5" type="integer" /> 
+    <aura:attribute name="Maximo5" type="integer" />
+    <aura:attribute name="Minimo6" type="integer" /> 
+    <aura:attribute name="Maximo6" type="integer" />
+    <aura:attribute name="Minimo7" type="integer" /> 
+    <aura:attribute name="Maximo7" type="integer" />
+    <aura:attribute name="Minimo8" type="integer" /> 
+    <aura:attribute name="Maximo8" type="integer" />
+    <aura:attribute name="Minimo9" type="integer" /> 
+    <aura:attribute name="Maximo9" type="integer" />
+    <aura:attribute name="Minimo10" type="integer" /> 
+    <aura:attribute name="Maximo10" type="integer" />
+    <aura:attribute name="Minimo11" type="integer" /> 
+    <aura:attribute name="Maximo11" type="integer" />
+    <aura:attribute name="Minimo12" type="integer" /> 
+    <aura:attribute name="Maximo12" type="integer" />
+    <aura:attribute name="Minimo13" type="integer" /> 
+    <aura:attribute name="Maximo13" type="integer" />
+    <aura:attribute name="Minimo14" type="integer" /> 
+    <aura:attribute name="Maximo14" type="integer" />
+    <aura:attribute name="Minimo15" type="integer" /> 
+    <aura:attribute name="Maximo15" type="integer" />
+    <aura:attribute name="Minimo16" type="integer" /> 
+    <aura:attribute name="Maximo16" type="integer" />
+    <aura:attribute name="Minimo17" type="integer" /> 
+    <aura:attribute name="Maximo17" type="integer" />
+    <aura:attribute name="Minimo18" type="integer" /> 
+    <aura:attribute name="Maximo18" type="integer" />
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+       <tr> 
+        <th><div>Mes</div></th>
+        <th><div>Monto Mínimo</div></th>
+        <th><div>Monto Máximo</div></th>
+       </tr>
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox2" name="2" label="2" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo2" class="field" value="{!v.Minimo2}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo2" class="field" value="{!v.Maximo2}" updateOn="keyup" disabled="true"/> </div> </th>
+        </tr>     
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox3" name="3" label="3" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo3" class="field" value="{!v.Minimo3}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo3" class="field" value="{!v.Maximo3}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox4" name="4" label="4" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo4" class="field" value="{!v.Minimo4}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo4" class="field" value="{!v.Maximo4}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox5" name="5" label="5" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo5" class="field" value="{!v.Minimo5}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo5" class="field" value="{!v.Maximo5}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox6" name="6" label="6" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo6" class="field" value="{!v.Minimo6}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo6" class="field" value="{!v.Maximo6}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox7" name="7" label="7" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo7" class="field" value="{!v.Minimo7}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo7" class="field" value="{!v.Maximo7}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox8" name="8" label="8" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo8" class="field" value="{!v.Minimo8}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo8" class="field" value="{!v.Maximo8}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox9" name="9" label="9" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo9" class="field" value="{!v.Minimo9}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo9" class="field" value="{!v.Maximo9}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox10" name="10" label="10" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo10" class="field" value="{!v.Minimo10}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo10" class="field" value="{!v.Maximo10}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox11" name="11" label="11" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo11" class="field" value="{!v.Minimo11}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo11" class="field" value="{!v.Maximo11}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox12" name="12" label="12" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo12" class="field" value="{!v.Minimo12}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo12" class="field" value="{!v.Maximo12}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox13" name="13" label="13" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo13" class="field" value="{!v.Minimo13}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo13" class="field" value="{!v.Maximo13}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox14" name="14" label="14" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo14" class="field" value="{!v.Minimo14}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo14" class="field" value="{!v.Maximo14}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox15" name="15" label="15" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo15" class="field" value="{!v.Minimo15}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo15" class="field" value="{!v.Maximo15}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox16" name="16" label="16" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo16" class="field" value="{!v.Minimo16}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo16" class="field" value="{!v.Maximo16}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox17" name="17" label="17" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo17" class="field" value="{!v.Minimo17}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo17" class="field" value="{!v.Maximo17}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+       <tr>	
+           <th><div><ui:inputCheckbox aura:id="checkbox18" name="18" label="18" change="{!c.Showhide}" /> </div></th>   
+           <th> <div> <ui:inputCurrency aura:id="Minimo18" class="field" value="{!v.Minimo18}" updateOn="keyup" disabled="true"/></div> </th>
+           <th> <div> <ui:inputCurrency aura:id="Maximo18" class="field" value="{!v.Maximo18}" updateOn="keyup" disabled="true"/> </div> </th>
+       </tr> 
+    </table>
+</aura:component>

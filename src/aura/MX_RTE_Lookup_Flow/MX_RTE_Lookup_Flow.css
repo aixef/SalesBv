@@ -1,0 +1,6 @@
+.THIS label.slds-form-element__label {
+    display: none;
+}
+.THIS .fieldLabel {
+    font-size: .75rem;
+}

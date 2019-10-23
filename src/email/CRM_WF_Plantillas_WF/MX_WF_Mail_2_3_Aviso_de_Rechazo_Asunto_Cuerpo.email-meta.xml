@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Mail 2-3 Aviso de rechazo asunto y cuerpo</name>
+    <style>formalLetter</style>
+    <subject>Número de Incidencia {!Case.CaseNumber}</subject>
+    <textOnly>Estimad@ {!Case.Contact}
+
+Hemos recibido tu solicitud con número de folio {!Case.CaseNumber} y hemos identificado que no cumple con las características para su asignación. Recuerda que el nombre del asunto debe de estar completo, sin abreviaciones y haciendo énfasis en el tema de la solicitud, adicional en el cuerpo del email debes detallar a fondo la solicitud con la información necesario sobre el caso a resolver.
+
+Datos de la Incidencia:
+
+Asunto: {!Case.Subject}
+Descripción del cierre del caso: {!Case.MX_WF_Descripcion_Cierre_Caso__c}
+
+Por favor envía nuevamente tu solicitud bien detallada</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

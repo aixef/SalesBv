@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Configuration of the check in/out by object</description>
+    <fields>
+        <fullName>cico__Allow_multiple_check_in__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Allows to do more than one check in on the configurated SObject</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Allow multiple check in</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>cico__Allow_multiple_check_out__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Allows to do more than one check out on the configurated SObject</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Allow multiple check out</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>cico__Check_in_address_field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API name of field on wich you want to save the address info of the check in</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Check in address field</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cico__Check_in_date_time_field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API name of field on wich you want to save the date time info of the check in</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Check in date time field</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cico__Check_in_geolocation_field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API name of field on wich you want to save the geolocation info of the check in</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Check in geolocation field</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cico__Check_out_address_field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API name of field on wich you want to save the address info of the check out</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Check out address field</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cico__Check_out_date_time_field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API name of field on wich you want to save the date time info of the check out</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Check out date time field</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cico__Check_out_geolocation_field__c</fullName>
+        <deprecated>false</deprecated>
+        <description>API name of field on wich you want to save the geolocation info of the check out</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Check out geolocation field</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cico__Enable_check_in__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable check in functionality</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Enable check in</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>cico__Enable_check_out__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable check in functionality</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Enable check out</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Check in/out configuration</label>
+    <pluralLabel>Check in/out configurations</pluralLabel>
+    <validationRules>
+        <fullName>cico__GBL_CheckInConfiguration</fullName>
+        <active>true</active>
+        <description>Only can set values in check in fields if &quot;Enable check in&quot; is checked</description>
+        <errorConditionFormula>AND(
+NOT(cico__Enable_check_in__c),
+OR(
+NOT(ISBLANK(cico__Check_in_address_field__c)),
+NOT(ISBLANK(cico__Check_in_date_time_field__c)),
+NOT(ISBLANK(cico__Check_in_geolocation_field__c)),
+cico__Allow_multiple_check_in__c
+)
+)</errorConditionFormula>
+        <errorMessage>Only can set values in check in fields if &quot;Enable check in&quot; is checked</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>cico__GBL_CheckInMandatoryFields</fullName>
+        <active>true</active>
+        <description>Mandatory fields when &quot;Enable check in&quot; is checked</description>
+        <errorConditionFormula>AND(
+cico__Enable_check_in__c,
+OR(
+  ISBLANK(cico__Check_in_date_time_field__c ),
+  ISBLANK(cico__Check_in_geolocation_field__c)
+)
+)</errorConditionFormula>
+        <errorMessage>&quot;Check in date time field&quot; and &quot;Check in geolocation field&quot; are mandatory when &quot;Enable check in&quot; is checked</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>cico__GBL_CheckOutConfiguration</fullName>
+        <active>true</active>
+        <description>Only can set values in check out fields if &quot;Enable check out&quot; is checked</description>
+        <errorConditionFormula>AND(
+NOT(cico__Enable_check_out__c),
+OR(
+NOT(ISBLANK(cico__Check_out_address_field__c)),
+NOT(ISBLANK(cico__Check_out_date_time_field__c)),
+NOT(ISBLANK(cico__Check_out_geolocation_field__c)),
+cico__Allow_multiple_check_out__c
+)
+)</errorConditionFormula>
+        <errorMessage>Only can set values in check out fields if &quot;Enable check out&quot; is checked</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>cico__GBL_CheckOutMandatoryFields</fullName>
+        <active>true</active>
+        <description>Mandatory fields when &quot;Enable check out&quot; is checked</description>
+        <errorConditionFormula>AND(
+cico__Enable_check_out__c,
+OR(
+ISBLANK(cico__Check_out_date_time_field__c ),
+ISBLANK(cico__Check_out_geolocation_field__c)
+)
+)</errorConditionFormula>
+        <errorMessage>&quot;Check out date time field&quot; and &quot;Check out geolocation field&quot; are mandatory when &quot;Enable check out&quot; is checked</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>cico__GBL_CheckOutWithoutCheckIn</fullName>
+        <active>true</active>
+        <description>Only can check &quot;Enable Check Out&quot; checkbox when &quot;Enable Check In&quot; is checked</description>
+        <errorConditionFormula>AND(
+cico__Enable_check_out__c,
+NOT(cico__Enable_check_in__c)
+)</errorConditionFormula>
+        <errorMessage>You can&apos;t check &quot;Enable check out&quot; field if you dont check &quot;Enable check in&quot; field</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

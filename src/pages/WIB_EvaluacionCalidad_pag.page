@@ -1,0 +1,255 @@
+<!--/**
+* Avanxo México
+* @author       KB
+* Project:      WIBE
+*
+*
+*            No.    Date            Author             Description
+*
+*                                                     JIRA SAN1-113
+* @version  1.0   2017-02-21      Karen Belem (KB)    Esta página muestra las secciones, subsecciones,
+                                                      los conceptos de la encuesta de *calidad que con
+                                                      la ayuda del controlador WIB_EvaluacionCalidad_cls
+                                                      se puede tener * toda la funcionalidad , como calcular,
+                                                      guardar para mandar a firmar, etc.
+*
+************************************************************************************************************************************/-->
+<apex:page showHeader="true" sidebar="false" extensions="WIB_EvaluacionCalidad_cls" standardController="Evaluacion__c">
+    <apex:stylesheet value="{!$Resource.WIB_EvaluacionCalidad_css}"/>
+    <head>
+    </head>
+    <body>
+        <apex:form id="myForm" >
+            <apex:pageMessages id="Mensajes"/>
+            <div class="encabezado">
+                <table width="100%" height="100%">
+                    <tr >
+                        <td width="25%">
+                            <apex:image id="imglogo" value="{!$Resource.Logo_wibe}" width="150" height="95"/>
+                        </td>
+                        <td width="75%" >
+                        <div id="titulo">
+                           <BR/>
+                           <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evaluaci&oacute;n de tu señal wibe</strong>
+                        </div>
+                        </td>
+                    </tr>
+               </table>
+            </div>
+
+            <div class="cuerpo">
+                <table width="100%" height="100%" border="0" cellpadding="1" cellspacing="1">
+                    <tr><td width="100%" align="center"><strong> INSTRUCCIONES DE LLENADO</strong></td></tr>
+                </table>
+
+                <table width="100%" height="100%" border="0" cellpadding="1" cellspacing="1">
+                    <tr><td width="100%" align="left">Evaluar el desempe&ntilde;o con la siguiente escala</td></tr>
+                </table>
+
+                <div class="desempenio">
+                    <table width="100%" height="100%" border="0" cellpadding="1" cellspacing="2">
+                         <tr>
+                            <td width="25%" align="left" >
+                                <strong>2 (dos)</strong>
+                            </td>
+                            <td width="45%" align="left">
+                                Esta opci&oacute;n no aplica a la pregunta realizada
+                            </td>
+                            <td width="40%" align="left">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="left" >
+                                <strong>0 (cero)</strong>
+                            </td>
+                            <td align="left" >
+                                Deficiente
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  align="left" >
+                                <strong>1 (uno)</strong>
+                            </td>
+                            <td align="left" >
+                                Destacado
+                            </td>
+                        </tr>
+
+
+                    </table>
+                </div>
+            </div>
+            <table width="100%" height="10px" border="0" cellpadding="0" cellspacing="0" ></table>
+            <div class="encuesta1">
+                <div align="center">
+                    <apex:commandButton id="cbGdar" action="{!guardaEvaluacion}" value="Guardar Evaluación y Firmar" reRender="view" status="pbGuardaEval" rendered="{!!bModificar}" />
+                    <apex:actionStatus startText=" Guardando la evaluación..." stopText="" id="pbGuardaEval"/>
+                    <apex:commandButton id="cbAct" action="{!actEvaluacion}" value="Actualizar Evaluación" status="pbActEval" reRender="myForm" rendered="{!bModificar}" />
+                    <apex:actionStatus startText=" Actualizando la evaluación..." stopText="" id="pbActEval"/>
+                    <apex:commandButton id="cbCanc" action="{!cancelActEvaluacion}" value="Cancelar Actualizacion" status="pbCancEval" reRender="myForm" immediate="true" rendered="{!bModificar}" />
+                    <apex:actionStatus startText=" Cancelando..." stopText="" id="pbCancEval"/>
+                    <apex:commandButton id="cbCancEva" value="Cancelar Evaluacion" action="{!cancelEvaluacion}" immediate="true" rendered="{!!bModificar}"/>
+
+
+                </div>
+                <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" >
+                    <tr>
+                        <td width="30%" align="left" valign="top">
+                            <BR/>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                                 <tr>
+                                    <td align="center" colspan="4" class="datosCalidad">
+                                        <strong><h1> DATOS DE LA EVALUACI&Oacute;N DE CALIDAD</h1></strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                <td width="25%" align="left" ><br/>
+                                        Nombre del asesor evaluado:
+                                    </td>
+                                    <td width="25%" align="left" ><br/>
+                                        <apex:selectList id="slEvalEncs" value="{!sEvalEncs}" multiselect="false" size="1">
+                                            <apex:selectOptions value="{!lEvalEnc}"/>
+                                        </apex:selectList>
+                                    </td>
+                                    <td width="25%" align="left" ><br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre del representante de calidad:
+                                    </td>
+                                    <td width="25%" align="left" ><br/>
+                                        <apex:selectList id="slEvalRep" value="{!sEvalRep}" multiselect="false" size="1" >
+                                            <apex:selectOptions value="{!lEvalRep}" />
+                                        </apex:selectList>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td width="25%" align="top">
+                                       <strong>Id Grabaci&oacute;n</strong><br/><br/>
+                                       <strong>Motivo de la Oportunidad Comercial</strong><br/><br/>
+                                       <strong>Motivo de no Contacto</strong><br/><br/>
+                                       <strong>Motivo de no Venta</strong>
+
+
+                                    </td>
+
+                                    <td align="top" >
+                                        <apex:inputField value="{!EvaluacionCalificacion.Evaluacion.IDGrabacion__c}" required="false"/><br/>
+                                        <apex:inputField value="{!EvaluacionCalificacion.Evaluacion.MotivoOportunidadComercial__c}" /><br/>
+                                        <apex:inputField value="{!EvaluacionCalificacion.Evaluacion.MotivoNoContacto__c}"  /><br/>
+                                        <apex:inputField value="{!EvaluacionCalificacion.Evaluacion.MotivoNoventa__c}" />
+
+                                    </td>
+                                    <td>
+                                        <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Observaciones:</strong>
+                                    </td>
+                                    <td><br/><apex:inputTextarea value="{!EvaluacionCalificacion.Evaluacion.Observaciones__c}" cols="60" rows="10" /></td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <apex:outputPanel id="outpEval">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <apex:repeat value="{!lWrpSeccSubSeccConc}" var="lWrpSSSP" id="SSCP">
+                                        <tr>
+                                            <td width="25%" align="left" >
+                                                Porcentaje de secci&oacute;n&nbsp;&nbsp;&nbsp;&nbsp; <apex:outputText value="{!LEFT(lWrpSSSP.Seccion.Nombre__c,Find(".", lWrpSSSP.Seccion.Nombre__c) -1)}"/>
+                                            </td>
+                                            <td width="7%" align="center" >
+                                                {!lWrpSSSP.promediosecciones}%
+
+                                            </td>
+                                            <td  width="10%" height="10%"></td>
+                                            <td  width="58%"></td>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr><td height="10%">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+                                    <tr>
+                                    <br/>
+                                        <td align="left" >
+                                            <strong>¿En cuanto esta tu señal Wibe?</strong>
+                                        </td>
+                                        <td align="center" >
+                                            {!EvaluacionCalificacion.Evaluacion.PorcentajeTotal__c}%
+                                        </td>
+                                        <td><strong>Barra de porcentaje</strong></td>
+                                        <td>
+
+                                        <apex:image id="barracero" value="{!$Resource.BarraCero}" width="30" height="30" rendered="{!imagenporcentajecero}"/>
+                                        <apex:image id="barrauno" value="{!$Resource.BarraUno}" width="30" height="30" rendered="{!imagenporcentajeuno}"/>
+                                        <apex:image id="barrados" value="{!$Resource.BarraDos}" width="30" height="30" rendered="{!imagenporcentajedos}"/>
+                                        <apex:image id="barratres" value="{!$Resource.BarraTres}" width="30" height="30" rendered="{!imagenporcentajetres}"/>
+                                        <apex:image id="barracuatro" value="{!$Resource.BarraCuatro}" width="30" height="30" rendered="{!imagenporcentajecuatro}"/>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+                        </td>
+                    </tr>
+                    <tr><td height="10%">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+                    <tr>
+                        <td width="100%" align="center" colspan="2" >
+                            <apex:commandButton action="{!calculaCalificacion}" value="Calcula porcentaje de sección"  status="calcula"/>
+                            <apex:actionStatus startText=" Calculando la calificación..." stopText=""  id="calcula"/>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" height="10px" border="0" cellpadding="0" cellspacing="0" ></table>
+            </div>
+
+
+            <table width="100%" height="10px" border="0" cellpadding="0" cellspacing="0" >
+                <tr class="campos" >
+                    <td width="30%"  align="center" class="colorBlanco">Cat&aacute;logo de atributos</td>
+                    <td width="30%" align="center" class="colorBlanco">Concepto</td>
+                    <td width="10%" align="center" class="colorBlanco">Check List</td>
+                    <td width="30%" align="center" class="colorBlanco">Ejemplos</td>
+                </tr>
+            </table>
+
+            <div class="encuesta">
+
+                <table width="100%" cellpadding="0" cellspacing="0"  border="0">
+                    <apex:repeat value="{!lWrpSeccSubSeccConc}" var="lWrpSSSP" id="theRSSSP">
+                        <tr>
+                            <td width="30%" height="11px" align="left">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<strong><h1>{!lWrpSSSP.Seccion.NumeroSeccion__c}&nbsp;&nbsp;&nbsp;&nbsp;
+                               <apex:outputText value="{!LEFT(lWrpSSSP.Seccion.Nombre__c,Find(".", lWrpSSSP.Seccion.Nombre__c) -1)}"/></h1></strong>
+                            </td>
+
+                            <td width="30%" height="11px" align="left">
+                                <apex:outputText value="{!RIGHT(lWrpSSSP.Seccion.Nombre__c, (LEN(lWrpSSSP.Seccion.Nombre__c) - FIND(".", lWrpSSSP.Seccion.Nombre__c)) )}"/>
+                            </td>
+
+                            <td width="10%" height="11px" align="left">
+                            </td>
+                            <td width="30%" height="11px" align="left"></td>
+                        </tr>
+
+
+                        <apex:repeat value="{!lWrpSSSP.lWrpSubSecConcs}" var="lWrpSSP" id="theRSSP" rendered="{!lWrpSSSP.bTieneSec}">
+                            <tr>
+                                <td width="30%" align="center" valign="middle"><br/>{!lWrpSSP.SubSeccion.Nombre__c}</td>
+                                <apex:repeat value="{!lWrpSSP.lWrpConcEval}" var="lWrpSP" id="theRSP" rendered="{!lWrpSSP.bTieneConceptos}">
+
+                                    <td width="30%" align="left" valign="middle">{!lWrpSP.Conceptos.Descripcion__c}</td>
+                                    <td width="10%" align="center" valign="middle">
+                                        <apex:inputText value="{!lWrpSP.EvalConc.Calificacion__c}" size="5" maxlength="5" />
+                                    </td>
+                                    <td width="30%" height="100%" align="right">
+                                        <apex:outputField value="{!lWrpSP.Conceptos.Ejemplo__c}" dir="right" />
+                                    </td>
+                                </apex:repeat>
+                            </tr>
+                        </apex:repeat>
+                    </apex:repeat>
+                </table>
+            </div>
+        </apex:form>
+        <apex:outputPanel id="view"></apex:outputPanel>
+    </body>
+</apex:page>

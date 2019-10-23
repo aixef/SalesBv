@@ -1,0 +1,4 @@
+<design:component label="Input">
+    <design:attribute name="recordId" label="recordId" />
+    <design:attribute name="pkValue" label="pkValue" />
+</design:component>

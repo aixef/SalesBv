@@ -1,0 +1,4 @@
+<design:component>
+   <design:attribute name="recordId" label="IdContrato"/>
+   <design:attribute name="trueFlow" label="trueFlow" default="false"/>
+</design:component>

@@ -1,0 +1,79 @@
+<aura:documentation>
+	<aura:description>
+        <p><b>NAME</b>MX_WB_EvaluacionCalidad</p>
+        <p><b>DESCRIPTION</b>This component shows the concepts defined to be part of an evaluation</p>
+        <p><b>ATTRIBUTES</b>
+            <ul>
+                <li><p><b>configuraciones</b>The list of Wrapper with Sections - Subsections and Concepts</p></li>
+                <li><p><b>clasificacionSecciones</b>It represents a list of Strings for a Section</p></li>
+                <li><p><b>evaluacion</b>It is a empty record type Evaluacion__c</p></li>
+                <li><p><b>isUpdate</b>Determines if a records is new or if it exists</p></li>
+
+                <li><p><b>isUpdate</b>Help to detect if a record has a Training point selected</p></li>
+
+                <li><p><b>lstEvaluacionCon</b>A list of records EvaluacionConcepto__c to save or update</p></li>
+
+                <li><p><b>lstPuntosEntrenamiento</b>A list training points this list is used to open the training points Modal</p></li>
+                <li><p><b>evaluaConcepto</b>List of EvaluacionConcepto__c retrieved fron the APEX Controller if the Evaluation already exists</p></li>
+                <li><p><b>openModal</b>Determines if the Training Points Modal is shown</p></li>
+                <li><p><b>crearModificarEvaluacion</b>Determines if the user can create or modify a record</p></li>
+                <li><p><b>options</b>A list of options for the RadioGroup Buttons</p></li>
+                <li><p><b>optionsEFENF</b>The options for the Error Fatal / Error No Fatal RadioButtons</p></li>
+
+                <li><p><b>tipoVenta</b>Indicates if the Opportunity is Closed Lost o Won</p></li>
+                <li><p><b>evaluacionCalidad</b>Indicates if the Opportunity's evaluation has been done</p></li>
+                <li><p><b>oppId</b>The Id of the opportunity to evaluate</p></li>
+                <li><p><b>folioCotizacion</b>The CTI Folio to identify the call</p></li>
+                <li><p><b>nombrePropietario</b>The Owner of the opportunity</p></li>
+                <li><p><b>stage</b>Control variable for the Lightning:PATH</p></li>
+            </ul>
+        </p>
+
+        <p><b>HANDLERS</b>
+            <ul>
+                <li><p><b>notifyConcept</b> type: MX_WB_PuntosEntrenamientoEvent description: Handle when the event has been fired in the child component
+                		and saves the training points selected for a concept</p></li>
+                <li><p><b>init</b> Fire when the component is ready and loads the records list calling the helper method inicializaConfiguracion</p></li>
+            </ul>
+        </p>
+
+        <p><b>AURA METHODS</b>
+            <ul>
+                <li><p><b>toSave</b>Called by the parent component, it fires the save process</p></li>
+            </ul>
+        </p>
+
+        <p><b>CONTROLLER METHODS</b>
+            <ul>
+                <li><p><b>initSelect</b> Call the helper method inicializaConfiguracion</p></li>
+                <li><p><b>guardarEvaluacion</b> Call the helper method to save the Evaluation</p></li>
+                <li><p><b>calcularPorcentaje</b> Call the helper method to calculate the percentage obtained</p></li>
+                <li><p><b>updatePath</b> Analize the Concepts change the stage color of a section tha has been answered</p></li>
+                <li><p><b>radioChanged</b> Call the helper method openModalPuntosEntrenamiento and disables the Save Button</p></li>
+                <li><p><b>openModalPuntos</b> Set true the OpenModal Attribute and shows the Modal</p></li>
+                <li><p><b>closeModal</b> Close the modal changing its css classes</p></li>
+                <li><p><b>addTrainingPonit</b> Add the selected Training points to the concept related</p></li>
+            </ul>
+        </p>
+
+        <p><b>HELPER METHODS</b>
+            <ul>
+                <li><p><b>inicializaConfiguracion</b> Initialize the data retrived by the Apex Controller</p></li>
+                <li><p><b>inicializaEvaluacion</b> Get the already existing evaluation record and its related data</p></li>
+                <li><p><b>obtenerPuntosEntrenamiento</b> Organize the data between training points and Concepts in the general list wrapper configuraciones</p></li>
+                <li><p><b>conceptosActualiza</b> Check if the Concept has a evaluation record</p></li>
+                <li><p><b>seccionActualiza</b> Set the values of "Seguir haciendo", "empezar a hacer" and "dejar de hacer" on the section</p></li>
+                <li><p><b>handlePath</b> Analize the stage and the concepts answers to change the css class of a Section</p></li>
+                <li><p><b>checkComplete</b> Help the handlePath function to check the data</p></li>
+                <li><p><b>porcentajes</b> Check the answers of the evaluation and analize the total score</p></li>
+                <li><p><b>getResults, analizaNiveles, analizaSegundoTercerNivel</b> Help the porcentajes function</p></li>
+                <li><p><b>guardaOActualiza</b> Analize and save the data of the evaluation and related records</p></li>
+                <li><p><b>getPuntosEntrenamiento</b> Create a list of Training points to save</p></li>
+                <li><p><b>getDeletedPuntosEntrenamiento</b> Create a list of Id of the Training points to delete</p></li>
+                <li><p><b>radioCheck</b> Analize the radio option selected for a Concept and shows or saves the Error Fata / Error No Fatal feature</p></li>
+                <li><p><b>analizeRadioLevel, setErrorFatalNoVenta, setErrorFatalVenta</b> Help the radioCheck function</p></li>
+                <li><p><b>openModalPuntosEntrenamiento</b> Creates the content of the modal dynamically</p></li>
+            </ul>
+        </p>
+    </aura:description>
+</aura:documentation>

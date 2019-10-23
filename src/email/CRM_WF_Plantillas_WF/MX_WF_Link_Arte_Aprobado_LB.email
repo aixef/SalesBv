@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><span style="background-color: rgb(255, 255, 255);"><span lang="ES" style=""><div style="display: inline;"><div class="gmail_default" style=""><div class="gmail_default" style=""><font face="Verdana, Helvetica, sans-serif" style="" size="2"><div class="gmail_default" style=""><div class="gmail_default" style="">La solicitud del Arte&nbsp;<b>{!CRM_WF_Artes__c.CRM_WF_Nombre_De_La_Version_Arte__c}</b> con número de folio <b>{!CRM_WF_Artes__c.Name},&nbsp;</b>ha sido aprobado.</div><div class="gmail_default" style=""><br></div><div class="gmail_default" style="">La&nbsp;<b>Liga del Arte aprobado&nbsp;</b>es:</div><div class="gmail_default" style=""><b><br></b></div><div class="gmail_default" style=""><b>{!CRM_WF_Artes__c.MX_WF_URL_Final_Del_Arte__c}</b>.</div><div class="gmail_default" style=""><br></div><div class="gmail_default" style="">Datos de la Campaña:&nbsp;</div><div class="gmail_default" style="">Nombre:<b>{!Campaign.Name}</b></div><div class="gmail_default" style="">Folio (FIC):&nbsp;<b>{!Campaign.CRM_WF_FIC__c}</b></div><div class="gmail_default" style="">Área Solicitante:<b>{!Campaign.CRM_WF_Area_Solicitante__c}</b></div><div class="gmail_default" style=""><br></div><div class="gmail_default" style=""><br></div></div></font></div></div></div></span></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

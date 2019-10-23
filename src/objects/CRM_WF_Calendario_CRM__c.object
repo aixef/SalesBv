@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_WF_Calendario_CRM_P_gina_de_registro1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto para la aplicación Workflow, lleva el registro de las cargas aprobadas, en lista de espera, rechazadas y canceladas para los días de la semana seleccionados</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CRM_WF_Actualizar_Acumulados__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Campo de control para actualizar los campos que resumen el volumen aprobado por cada área, se actualiza por medio de un Process Builder y no es visible en el formato de página</description>
+        <externalId>false</externalId>
+        <label>Actualizar Acumulados</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Bloqueo_de_fecha__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Impide que los squads que no son consumo carguen bases en este día</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Campo de tipo casilla para la aplicación Workflow, al seleccionarlo el process builder asociado a planeación CRM cambia el estatus del registro a  cancelado</inlineHelpText>
+        <label>Bloqueo de fecha</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Dia__c</fullName>
+        <description>Campo para la aplicación Workflow, devuelve el nombre del día de la semana</description>
+        <externalId>false</externalId>
+        <formula>CASE ( MOD(  CRM_WF_Fecha_de_Carga__c  - DATE(1900, 1, 7), 7), 0, &quot;Domingo&quot;, 
+                                        1, &quot;Lunes&quot;,
+                                        2, &quot;Martes&quot;,
+                                        3, &quot;Miércoles&quot;,
+                                        4, &quot;Jueves&quot;,
+                                        5, &quot;Viernes&quot;,
+                                        6, &quot;Sábado&quot;, &quot;ERROR&quot;
+      )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Día</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_de_Carga__c</fullName>
+        <description>Campo para la aplicación Workflow, devuelve la fecha de calendario del nombre</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de Carga</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Limite_de_Carga_Multicanal__c</fullName>
+        <description>Objeto para la aplicación Workflow, guarda el límite de registros del canal multicanal para día</description>
+        <externalId>false</externalId>
+        <label>Límite de Carga Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Limite_de_Carga_SMS_Push__c</fullName>
+        <description>Campo para la aplicación Workflow, guarda el  límite de registros para el día</description>
+        <externalId>false</externalId>
+        <label>Límite de Carga SMS/Push</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Lista_de_Espera_CRM__c</fullName>
+        <description>Campo para la aplicación Workflow, suma el nùmero de registros que se encuentran en lista de espera para el canal CRM</description>
+        <externalId>false</externalId>
+        <label>Lista de Espera Multicanal</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Lista de espera</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga Multicanal</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Lista_de_Espera__c</fullName>
+        <description>Campo para la aplicación Workflow, cuenta el número de registros en lista de espera para el canal SMS Push</description>
+        <externalId>false</externalId>
+        <label>Lista de Espera SMS/Push</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Lista de espera</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga SMS Push</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nume_bases_lista_espera_SMS_Push__c</fullName>
+        <description>Campo resumen para la aplicación Workflow. Suma el número de bases lista de espera en el día seleccionado para el canal SMS/Push</description>
+        <externalId>false</externalId>
+        <label>Bases en lista de espera SMS/Push</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga SMS Push</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Lista de espera</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_Bases_Aprobadas_CRM__c</fullName>
+        <description>Campo resumen para la aplicación Workflow. Suma el número de bases aprobadas en el día seleccionado para el canal CRM</description>
+        <externalId>false</externalId>
+        <label>Bases Aprobadas Multicanal</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga Multicanal</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Aprobado</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_Bases_Aprobadas_SMS_Push__c</fullName>
+        <description>Campo resumen para la aplicación Workflow. Suma el número de bases aprobadasen el día seleccionado para el canal SMS o Push Notification</description>
+        <externalId>false</externalId>
+        <label>Bases Aprobadas SMS/Push</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga SMS Push</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Aprobado</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_Bases_Lista_Espera_CRM__c</fullName>
+        <description>Campo resumen para la aplicación Workflow. Suma el número de bases en lista de espera en el día seleccionado para el canal CRM</description>
+        <externalId>false</externalId>
+        <label>Bases en lista de espera  Multicanal</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga Multicanal</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Lista de espera</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_Bases_Rechazadas_CRM__c</fullName>
+        <description>Campo resumen para la aplicación Workflow. Suma el número de bases rechazadas en el día seleccionado para el canal CRM</description>
+        <externalId>false</externalId>
+        <label>Bases Rechazadas Multicanal</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga Multicanal</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Rechazado</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_Bases_rechazadas_SMS_Push__c</fullName>
+        <description>Campo resumen para la aplicación Workflow. Suma el número de bases rechazadas en el día seleccionado para el canal SMS o Push Notification</description>
+        <externalId>false</externalId>
+        <label>Bases Rechazadas SMS/Push</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga SMS Push</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Rechazado</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_bases_Canceladas_SMS_Push__c</fullName>
+        <description>Campo resumen para la aplicación Workflow. Suma el número de bases canceladas en el día seleccionado para el canal SMS o Push Notification</description>
+        <externalId>false</externalId>
+        <label>Bases Canceladas SMS/Push</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga SMS Push</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Cancelar_Carga__c</field>
+            <operation>equals</operation>
+            <value>Sí</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_de_bases_Canceladas_CRM__c</fullName>
+        <description>Campo resumen para la aplicación Workflow. Suma el número de bases canceladas en el día seleccionado para el canal CRM</description>
+        <externalId>false</externalId>
+        <label>Bases Canceladas Multicanal</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga Multicanal</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Cancelar_Carga__c</field>
+            <operation>equals</operation>
+            <value>Sí</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Rechazado_CRM__c</fullName>
+        <description>Campo para la aplicación Workflow, suma el volumen de registros de todas las bases canceladas en el día seleccionado</description>
+        <externalId>false</externalId>
+        <label>Rechazado Multicanal</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Rechazado</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga Multicanal</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Rechazado_SMS_Push__c</fullName>
+        <description>Campo para la aplicación Workflow, suma el volumen de  las bases rechazadas en el canal SMS Push</description>
+        <externalId>false</externalId>
+        <label>Rechazado SMS/Push</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga SMS Push</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Rechazado</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Reserva_SMS_Push__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Limite_de_Carga_SMS_Push__c  -  CRM_WF_Lista_de_Espera__c  - CRM_WF_Volumen_Aprobado_SMS_Push__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Reserva para SMS/Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Total_Registros__c</fullName>
+        <description>Campo para la aplicación Workflow, suma  el volumen de todas las bases que fueron solicitadas para ese día</description>
+        <externalId>false</externalId>
+        <label>Volumen total de registros</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Acumulado_CRM__c</fullName>
+        <description>Campo para la aplicación Workflow, suma el volumen de todas las bases que se han solicitado para Multicanal</description>
+        <externalId>false</externalId>
+        <label>Volumen solicitado Multicanal</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga Multicanal</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Acumulado_SMS_Push__c</fullName>
+        <description>Campo para la aplicación Workflow,. suma el volumen de las bases solicitadas para los canales SMS o Push Notification</description>
+        <externalId>false</externalId>
+        <label>Volumen Solicitado SMS/Push</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga SMS Push</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Aprobado_CRM__c</fullName>
+        <description>Campo para la aplicación Workflow, suma el volumen de todas las bases aprobadas para multicanal (CRM)</description>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Multicanal</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga Multicanal</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Aprobado</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Aprobado_SMS_Push__c</fullName>
+        <description>Campo para la aplicación Workflow, suma el volumen de las bases aprobadas para el canal SMS Push</description>
+        <externalId>false</externalId>
+        <label>Volumen aprobado SMS/Push</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga SMS Push</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Aprobado</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_cancelado_CRM__c</fullName>
+        <description>Campo de resumen para la aplicación Workflow. Cuenta el volumen de bases canceladas en el canal CRM para la fecha elegida</description>
+        <externalId>false</externalId>
+        <label>Cancelado Multicanal</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga Multicanal</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Cancelar_Carga__c</field>
+            <operation>equals</operation>
+            <value>Sí</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_cancelado_SMS_Push__c</fullName>
+        <description>Campo resumen para la aplicación Workflow. Suma el volumen de las bases canceladas en el día seleccionado para el canal de SMS o Push Notification</description>
+        <externalId>false</externalId>
+        <label>Cancelado SMS/Push</label>
+        <summarizedField>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carga SMS Push</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Cancelar_Carga__c</field>
+            <operation>equals</operation>
+            <value>Sí</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Cargas_aprobadas_Adquirente_Multi__c</fullName>
+        <externalId>false</externalId>
+        <label>Cargas aprobadas Adquirente Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Limite_Por_Persona_Multicanal__c</fullName>
+        <description>Campo para la aplicación WF, permite determinar el volumen de registros válidos por persona para Multicanal</description>
+        <externalId>false</externalId>
+        <label>Límite por persona Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Limite_Por_Persona_SMS_Push__c</fullName>
+        <description>Campo para la aplicación WF, permite determinar el volumen de registros válidos por persona para el canal SMS o Push Notification</description>
+        <externalId>false</externalId>
+        <label>Límite por persona SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Reserva_Multicanal__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Limite_de_Carga_Multicanal__c  -   CRM_WF_Lista_de_Espera_CRM__c  -  CRM_WF_Volumen_Aprobado_CRM__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Reserva para Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_Aprobado_DIY_Digital_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen Aprobado DIY Digital S. Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_Aprobado_DIY_Digital_S_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen Aprobado DIY Digital S. SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprob_Open_Mkt_Hip_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprob Open Mkt Hipotecario Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprob_Open_Mkt_Hipot_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprob Open Mkt Hipotecario SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Adq_Multicanal__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>campo para la aplicación wf, mide el volumen aprobado para adquirente en multicanal</description>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Adquirente Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Adq_SMS_Push__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Campo para la aplicación wf, mide el volumen aprobado para el squad adquirente</description>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Adquirente SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Apps_Vert_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Apps Verticales Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Apps_Vert_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Apps Verticales SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Clientes_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Clientes C Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Clientes_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Clientes C SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Consumer_Fin_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Consumer Finance Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Consumer_Fin_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Consumer Finance SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Consumo_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Consumo Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Consumo_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Consumo SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Cuentas_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Cuentas Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Cuentas_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Cuentas SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Digital_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Digital Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Digital_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Digital SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Hipoteca_SMS_Push__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Hipotecario SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Hipotecario_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Hipotecario Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Inversiones_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Inversiones Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Inversiones_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Inversiones SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Medios_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Medios de pago Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Medios_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Medios de pago SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Nomina_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Nómina Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Nomina_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Nómina SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Open_Mk_Auto_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Open Market Auto Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Open_Mk_Auto_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Open Market Auto SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Open_Mk_TDC_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Open Market TDC Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_Open_Mk_TDC_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado Open Market TDC SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_PYME_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado PYME Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_PYME_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado PYME SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_S_Auto_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado S. Auto Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_S_Auto_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado S. Auto SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_S_Danos_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado S. Daños Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_S_Danos_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado S. Daños SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_S_Salud_Mult__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado S. Salud Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_aprobado_S_Salud_SMS__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Volumen aprobado S. Salud SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Calendario CRM</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <listViews>
+        <fullName>CRM_WF_Detalles</fullName>
+        <columns>CRM_WF_Fecha_de_Carga__c</columns>
+        <columns>CRM_WF_Dia__c</columns>
+        <columns>CRM_WF_Volumen_Aprobado_CRM__c</columns>
+        <columns>CRM_WF_Volumen_Aprobado_SMS_Push__c</columns>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>Detalles</label>
+    </listViews>
+    <listViews>
+        <fullName>CRM_WF_Fecha_y_d_a</fullName>
+        <columns>NAME</columns>
+        <columns>CRM_WF_Dia__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>Fecha y día</label>
+    </listViews>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>Fecha</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Calendarios CRM</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MilestoneType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Utilizado en los niveles de servicio del flujo de &quot;SERVICIOS&quot;</description>
+    <recurrenceType>none</recurrenceType>
+</MilestoneType>

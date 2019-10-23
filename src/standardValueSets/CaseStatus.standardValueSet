@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Abierto</fullName>
+        <default>false</default>
+        <label>Abierto</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Aceptado</fullName>
+        <default>false</default>
+        <label>Aceptado</label>
+        <closed>false</closed>
+    </standardValue>
+    <!--App Casos-->
+    <standardValue>
+        <fullName>Análisis</fullName>
+        <default>false</default>
+        <label>Análisis</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>En Espera de Insumos</fullName>
+        <default>false</default>
+        <label>En Espera de Insumos</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Resolución</fullName>
+        <default>false</default>
+        <label>Resolución</label>
+        <closed>false</closed>
+    </standardValue>
+<!---->
+    <standardValue>
+        <fullName>Aprobada</fullName>
+        <default>false</default>
+        <label>Aprobada</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Aprobado</fullName>
+        <default>false</default>
+        <label>Aprobado</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Áreas técnicas y Operación emisión</fullName>
+        <default>false</default>
+        <label>Áreas técnicas y Operación emisión</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Asignación de equipo Scrum</fullName>
+        <default>false</default>
+        <label>Asignación de equipo Scrum</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Asignado</fullName>
+        <default>false</default>
+        <label>Asignado</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Atendido</fullName>
+        <default>false</default>
+        <label>Atendido</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Backlog</fullName>
+        <default>false</default>
+        <label>Backlog</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelado</fullName>
+        <default>false</default>
+        <label>Cancelado</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cerrado</fullName>
+        <default>false</default>
+        <label>Cerrado</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cumplimiento Features</fullName>
+        <default>false</default>
+        <label>Cumplimiento Features</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Demo Day</fullName>
+        <default>false</default>
+        <label>Demo Day</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Descartado</fullName>
+        <default>false</default>
+        <label>Descartado</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Deslizado</fullName>
+        <default>false</default>
+        <label>Deslizado</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ejecución</fullName>
+        <default>false</default>
+        <label>Ejecución</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>En Desarrollo</fullName>
+        <default>false</default>
+        <label>En Desarrollo</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>En proceso</fullName>
+        <default>false</default>
+        <label>En proceso</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>En pruebas</fullName>
+        <default>false</default>
+        <label>En pruebas</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>En espera del tramite</fullName>
+        <default>false</default>
+        <label>En espera del tramite</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ejecución de tramite</fullName>
+        <default>false</default>
+        <label>Ejecución de tramite</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Hecho</fullName>
+        <default>false</default>
+        <label>Hecho</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Identificación de cliente</fullName>
+        <default>false</default>
+        <label>Identificación de cliente</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Instalado</fullName>
+        <default>false</default>
+        <label>Instalado</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Integración de documentos</fullName>
+        <default>false</default>
+        <label>Integración de documentos</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Mesa de Soporte</fullName>
+        <default>false</default>
+        <label>Mesa de Soporte</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Módulo RCI</fullName>
+        <default>false</default>
+        <label>Módulo RCI</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Nuevo</fullName>
+        <default>false</default>
+        <label>Nuevo</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente Análisis Comercial</fullName>
+        <default>false</default>
+        <label>Pendiente Análisis Comercial</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente Asesor de Seguimiento y Control</fullName>
+        <default>false</default>
+        <label>Pendiente Asesor de Seguimiento y Control</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente Banca PyME</fullName>
+        <default>false</default>
+        <label>Pendiente Banca PyME</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente de asignación de CR y UG</fullName>
+        <default>false</default>
+        <label>Pendiente de asignación de CR y UG</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente de Asignación</fullName>
+        <default>false</default>
+        <label>Pendiente de Asignación</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente de migrar</fullName>
+        <default>false</default>
+        <label>Pendiente de migrar</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente de Recarterizacion</fullName>
+        <default>false</default>
+        <label>Pendiente de Recarterizacion</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente de Validación</fullName>
+        <default>false</default>
+        <label>Pendiente de Validación</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente Director de Oficina asignación CR y UG</fullName>
+        <default>false</default>
+        <label>Pendiente Director de Oficina asignación CR y UG</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente Segmento Empresa</fullName>
+        <default>false</default>
+        <label>Pendiente Segmento Empresa</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pendiente Segmento Gobierno</fullName>
+        <default>false</default>
+        <label>Pendiente Segmento Gobierno</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>PI Planning</fullName>
+        <default>false</default>
+        <label>PI Planning</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Presentación de Iniciativas</fullName>
+        <default>false</default>
+        <label>Presentación de Iniciativas</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Presupuesto Features</fullName>
+        <default>false</default>
+        <label>Presupuesto Features</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Priorización de Features</fullName>
+        <default>false</default>
+        <label>Priorización de Features</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Rechazada</fullName>
+        <default>false</default>
+        <label>Rechazada</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Rechazado</fullName>
+        <default>false</default>
+        <label>Rechazado</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Refinamiento Features</fullName>
+        <default>false</default>
+        <label>Refinamiento Features</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reprogramado</fullName>
+        <default>false</default>
+        <label>Reprogramado</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Revision Control Comercial</fullName>
+        <default>false</default>
+        <label>Revision Control Comercial</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Segmentos</fullName>
+        <default>false</default>
+        <label>Segmentos</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Seguimiento Features</fullName>
+        <default>false</default>
+        <label>Seguimiento Features</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Sin asignar</fullName>
+        <default>false</default>
+        <label>Sin asignar</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Solicitada</fullName>
+        <default>false</default>
+        <label>Solicitada</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Terminado</fullName>
+        <default>false</default>
+        <label>Terminado</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Validación Pentágono</fullName>
+        <default>false</default>
+        <label>Validación Pentágono</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Validación Portafolio</fullName>
+        <default>false</default>
+        <label>Validación Portafolio</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Valoración</fullName>
+        <default>false</default>
+        <label>Valoración</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Vencido</fullName>
+        <default>false</default>
+        <label>Vencido</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Venta</fullName>
+        <default>false</default>
+        <label>Venta</label>
+        <closed>false</closed>
+    </standardValue>
+</StandardValueSet>

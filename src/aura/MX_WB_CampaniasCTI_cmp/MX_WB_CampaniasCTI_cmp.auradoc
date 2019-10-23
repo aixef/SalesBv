@@ -1,0 +1,5 @@
+<aura:documentation>
+	<aura:description>Componente de envio de lead a cti	 y creacion de bandejas dependiendo del los valores en los proveedores.</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+	</aura:example>
+</aura:documentation>

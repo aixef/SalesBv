@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <decisions>
+        <name>Funcion_Asesor_Comercial</name>
+        <label>Función Asesor Comercial</label>
+        <locationX>330</locationX>
+        <locationY>52</locationY>
+        <defaultConnectorLabel>Otra Función</defaultConnectorLabel>
+        <rules>
+            <name>Funci_n_Asesor</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>FuncionUsuario</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Asesor Comercial</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_enviar_alerta</targetReference>
+            </connector>
+            <label>Función Asesor</label>
+        </rules>
+    </decisions>
+    <description>Se envía una alerta cuando el asesor comercial modifica un registro de campañas</description>
+    <formulas>
+        <name>f_funcionusuario</name>
+        <dataType>String</dataType>
+        <expression>{!$User.UserRoleId}</expression>
+    </formulas>
+    <interviewLabel>Enviar Alerta Cambio por Asesor {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Enviar Alerta Cambio por Asesor</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>ObtenerFuncion</name>
+        <label>ObtenerFunción</label>
+        <locationX>178</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Funcion_Asesor_Comercial</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>f_funcionusuario</elementReference>
+            </value>
+        </filters>
+        <object>UserRole</object>
+        <outputAssignments>
+            <assignToReference>FuncionUsuario</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Check_enviar_alerta</name>
+        <label>Check enviar alerta</label>
+        <locationX>519</locationX>
+        <locationY>51</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>VR_Campana.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MX_WF_Enviar_alerta_de_correo_Adquirente__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <startElementReference>ObtenerFuncion</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>FuncionUsuario</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>VR_Campana</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Campaign</objectType>
+    </variables>
+</Flow>

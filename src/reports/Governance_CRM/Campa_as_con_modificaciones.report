@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign.CRM_WF_FIC__c</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CRM_WF_Modificacion__c.CRM_WF_Descripcion__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_NAME</field>
+    </columns>
+    <columns>
+        <field>CRM_WF_Modificacion__c.Estado_de_Modificaci_n__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <filter>
+        <criteriaItems>
+            <column>CRM_WF_Modificacion__c.Estado_de_Modificaci_n__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>En Proceso</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.CRM_WF_Area_Solicitante__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Campañas con modificaciones</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignCustomEntity$CRM_WF_Modificacion__c</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

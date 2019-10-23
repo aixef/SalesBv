@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>2</activeVersionNumber>
+    <description>Flujo hijo de  &quot;ActualizarCasoSAC&quot; para  &quot;Criterio 2&quot; que corresponde a un &quot; Motivo - Detalle - Subdetalle&quot;</description>
+    <masterLabel>ActualizarCasoSAC - Criterio 2: Motivo - Detalle - Subdetalle</masterLabel>
+</FlowDefinition>

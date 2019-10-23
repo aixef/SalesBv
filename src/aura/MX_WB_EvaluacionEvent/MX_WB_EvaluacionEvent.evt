@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Determina si se dio click al botón Guardar y notifica al componente Hijo">
+    <aura:attribute name="disabled" type="boolean"/>
+</aura:event>

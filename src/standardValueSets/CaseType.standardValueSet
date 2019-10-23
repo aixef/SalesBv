@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Problem</fullName>
+        <default>false</default>
+        <label>Problem</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Request</fullName>
+        <default>false</default>
+        <label>Feature Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Question</fullName>
+        <default>false</default>
+        <label>Question</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelación</fullName>
+        <default>false</default>
+        <label>Cancelación</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelación (Malas ventas)</fullName>
+        <default>false</default>
+        <label>Cancelación (Malas ventas)</label>
+    </standardValue>
+    <!--App Casos-->
+    <standardValue>
+        <fullName>Consulta</fullName>
+        <default>false</default>
+        <label>Consulta</label>
+    </standardValue>
+    <!---->
+    <standardValue>
+        <fullName>Consultas</fullName>
+        <default>false</default>
+        <label>Consultas</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Derechos ARCO</fullName>
+        <default>false</default>
+        <label>Derechos ARCO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Devolución</fullName>
+        <default>false</default>
+        <label>Devolución</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Endoso (Con afectación a primas)</fullName>
+        <default>false</default>
+        <label>Endoso (Con afectación a primas)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Endoso (Sin afectación a primas)</fullName>
+        <default>false</default>
+        <label>Endoso (Sin afectación a primas)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Incidencia</fullName>
+        <default>false</default>
+        <label>Incidencia</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mejora</fullName>
+        <default>false</default>
+        <label>Mejora</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Duda</fullName>
+        <default>false</default>
+        <label>Duda</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Proyecto</fullName>
+        <default>false</default>
+        <label>Proyecto</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mantenimiento</fullName>
+        <default>false</default>
+        <label>Mantenimiento</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pregunta</fullName>
+        <default>false</default>
+        <label>Pregunta</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Problema</fullName>
+        <default>false</default>
+        <label>Problema</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reactivación</fullName>
+        <default>false</default>
+        <label>Reactivación</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reclamaciones</fullName>
+        <default>false</default>
+        <label>Reclamaciones</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rescate/Rehabilitación</fullName>
+        <default>false</default>
+        <label>Rescate/Rehabilitación</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retención</fullName>
+        <default>false</default>
+        <label>Retención</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Servicios</fullName>
+        <default>false</default>
+        <label>Servicios</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Solicitud de función</fullName>
+        <default>false</default>
+        <label>Solicitud de función</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Solicitudes</fullName>
+        <default>false</default>
+        <label>Solicitudes</label>
+    </standardValue>
+    <!---->
+    <standardValue>
+        <fullName>Tarea</fullName>
+        <default>false</default>
+        <label>Tarea</label>
+    </standardValue>
+    <!---->
+    <standardValue>  
+        <fullName>Transferencias</fullName>
+        <default>false</default>
+        <label>Transferencias</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Venta</fullName>
+        <default>false</default>
+        <label>Venta</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User.Lead$OwnerId$Name</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>cotizaciones general</description>
+    <filter>
+        <criteriaItems>
+            <column>User.Lead$OwnerId$LeadSource</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Profile</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Asesor Atencion a Clientes,Asesor ASD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Lead$OwnerId$Producto_Interes__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Seguro de Moto Bancomer,Seguro de auto fronterizo bancomer,Seguro de auto nacionalizado,Auto Seguro Dinamico,Auto Seguro Dinámico,AUTOSEGURO DINÁMICO,FRONTERIZOS,MOTOS BANCOMER,NACIONALIZADOS,AUTOSEGURO DINAMICO</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Cotizaciones General Quote</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>UsuariosCandidatos__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>User.Lead$OwnerId$CreatedDate</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

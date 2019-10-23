@@ -1,0 +1,51 @@
+<!--
+  @Component Name     : MX_SB_SAC_ConsultaContrato.cmp
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 26/8/2019 16:18:20
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    26/8/2019 16:11:41   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+  2.0    29/08/2019           José Luis Vargas Lara               Se agrega atributo polizaDetail
+                                                                  para almacenar el detalle de la poliza
+-->
+<aura:component  implements="force:appHostable,flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:lightningQuickActionWithoutHeader,force:hasRecordId,force:hasSObjectName" access="global" controller="MX_SB_SAC_ConsultaContrato">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:attribute name="HideSpinner" type="Boolean" default="false"/>
+	<aura:attribute name="HideCreatModify" type="Boolean" default="false"/>
+	<aura:attribute name="isResponse" type="Boolean" default="false"/>
+	<aura:attribute name="recordId" type="String"/>
+	<aura:attribute name="params" access="public" type="Map"/>
+	<aura:attribute name="msgResponse" type="String"/>
+    <aura:attribute name="polizaDetail" type="Map"/>
+    
+	<lightning:select aura:id="sTipoConsulta" name="sTipoConsulta" label="{!$Label.c.MX_SB_SAC_TipoBusqueda}">
+        <aura:iteration items="{!v.params}" var="param">
+            <option value="{!param.key}" text="{!param.value}"></option>
+        </aura:iteration>
+    </lightning:select>
+    <div aura:id="divFormAllInputs">
+		<lightning:input aura:id="numeroPoliza" name="numeroPoliza" label="{!$Label.c.MX_SB_SAC_BusquedaPoliza}"  maxlength="400"/>
+	</div>
+  <div class="slds-grid slds-grid_vertical slds-size_1-of-1 slds-align_absolute-center slds-m-top_large">
+    <lightning:button variant="brand" label="{!$Label.c.MX_SB_SAC_ButBuscarPoliza}" onclick="{!c.searchPol}" />
+  </div>
+	<aura:renderIf isTrue="{!v.HideCreatModify}">
+      <div class="slds-grid slds-grid_vertical slds-size_1-of-1 slds-align_absolute-center slds-m-top_large">
+          <lightning:button variant="brand" label="{!$Label.c.MX_SB_SAC_ModificaCreaPoliza}" onclick="{!c.modifCreatPoliza}" /> 
+      </div>		
+	</aura:renderIf>
+	<aura:renderIf isTrue="{!v.HideSpinner}">
+        <lightning:spinner alternativeText="Loading" size="medium" />
+    </aura:renderIf>
+    <br/>
+    <aura:If isTrue="{!v.isResponse}">
+        <div class="slds-notify__content slds-align_absolute-center slds-theme_success">
+            <span class="slds-text-heading_small">{!v.msgResponse}</span>
+        </div>
+    </aura:If>
+</aura:component>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Motivo</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>case_reason</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Comentarios</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>description_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Estatus</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>status_case</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Correo electrónico alterno</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>web_email_case</name>
+    </fields>
+</CustomObjectTranslation>

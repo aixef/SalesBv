@@ -1,0 +1,249 @@
+<aura:component controller="MX_SB_VTS_QuoteFinder" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:registerEvent name="selectedQuote" type="c:MX_SB_VTS_UpdateQuoteCot"/>
+    <aura:attribute name="updateQuote" type="Quote" description="Quote a actualizar"/>
+    <aura:attribute name="opp" type="Opportunity" description="Objeto Opportunidad" />
+    <aura:attribute name="recordId" type="String" description="Id de la oportunidad actual"/>
+    <aura:attribute name="searchTerm" type="String" description="Parametro para buscar folio de cotizacion" />
+    <aura:attribute name="last5Quotes" type="Quote[]" description="Retorna las ultimas 5 quotes de la oportunidad" />
+    <aura:attribute name="hasErrors" type="Boolean" description="Indica si hay errores" />
+    <aura:attribute name="verification" type="String" description="Codigo de verificacion sms" />
+    <aura:attribute name="hasRecord" type="Boolean" description="Bandera para renderizar quote buscado por folio" />
+    <aura:attribute name="options" type="String[]"  default="[
+    {'label': 'Cliente molesto', 'value': 'Cliente molesto'},
+    {'label': 'No cumple políticas de contratación', 'value': 'No cumple políticas de contratación'},
+    {'label': 'Cliente cuelga', 'value': 'Cliente cuelga'},
+	{'label': 'Cliente lo va a pensar', 'value': 'Cliente lo va a pensar'},
+	{'label': 'Cliente molesto', 'value': 'Cliente molesto'},
+	{'label': 'Cliente no tiene tiempo', 'value': 'Cliente no tiene tiempo'},
+	{'label': 'Cliente prefiere ir a sucursal', 'value': 'Cliente prefiere ir a sucursal'},
+	{'label': 'Economía personal', 'value': 'Economía personal'},
+	{'label': 'No utiliza TDC / TDD', 'value': 'No utiliza TDC / TDD'},
+	{'label': 'Precio alto del producto', 'value': 'Precio alto del producto'},
+	{'label': 'Prefiere otros productos', 'value': 'Prefiere otros productos'},
+	{'label': 'Producto no cubre expectativas', 'value': 'Producto no cubre expectativas'},
+	{'label': 'Requiere mayor suma asegurada', 'value': 'Requiere mayor suma asegurada'},
+	]" description="Valores de Motivo de No Venta" />
+    <aura:attribute name="esAuto" type="Boolean" description="Bandera para renderizar seccion de auto" />
+    <aura:attribute name="esHogar" type="Boolean" description="Bandera para renderizar seccion de Hogar" />
+    <aura:attribute name="esVida" type="Boolean" description="Bandera para renderizar seccion de Vida" />
+    <aura:attribute name="selectedOption" type="String" description="Opcion seleccionada para Motivo de No Venta" />
+    <aura:handler name="init" value="{!this}" action="{!c.get5Quotes}" />
+    <aura:handler event="force:showToast" action="{!c.get5Quotes}" />
+
+    <aura:if isTrue="{!v.hasErrors}">
+        <div class="userCreateError">
+            <ui:message title="Error" severity="error" closable="true">
+                Por favor revise los valores.
+            </ui:message>
+        </div>
+    </aura:if>
+    <lightning:card title="Cotizaciones de la Oportunidad">
+        <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Opportunity">
+            <lightning:layout horizontalAlign="end" class="align-button slds-p-right_large">
+                <lightning:button variant="brand"
+                    label="Actualizar Vista"
+                    onclick="{!c.isRefreshed}"
+                    title="Actualizar Vista"
+                    type="button"/>
+            </lightning:layout>
+            <lightning:input
+                        class="slds-m-bottom_x-small slds-p-left_large slds-p-right_large"
+                        label="Buscar por folio de Cotizacion"
+                        value="{!v.searchTerm}"
+                        onchange="{!c.handleChange}"
+                        type="search"
+                        placeholder="Ingrese el folio de cotizacion a buscar"
+                        maxlength="10"
+                        minlength="5"
+                        />
+            <aura:if isTrue="{!v.hasRecord}">
+                    <div class="slds-grid slds-gutters slds-p-top_small slds-p-left_xx-large slds-p-right_x-large">
+                        <div class="slds-col">
+                            <p class="slds-m-bottom_xx-small">
+                                Folio Cotizacion<br />
+                                {!v.updateQuote.MX_SB_VTS_Folio_Cotizacion__c}
+                            </p>
+                        </div>
+                        <div class="slds-col">
+                            <p class="slds-m-bottom_xx-small">
+                                Precio Prima<br />
+                                {!v.updateQuote.QuoteLineItems[0].TotalPrice}
+                            </p>
+                        </div>
+                        <div class="slds-col">
+                            <p class="slds-m-bottom_xx-small">
+                                Contratante<br />
+                                {!v.updateQuote.MX_SB_VTS_Nombre_Contrante__c}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-p-top_medium slds-p-left_xx-large slds-p-right_x-large">
+                        <div class="slds-col">
+                            <p class="slds-m-bottom_xx-small">
+                                Producto<br />
+                                {!v.updateQuote.QuoteLineItems[0].Product2.Name}
+                            </p>
+                        </div>
+                        <div class="slds-col">
+                            <lightning:combobox
+                            label="Motivos de No Venta"
+                            value="{!v.selectedOption}"
+                            placeholder="--Ninguno--"
+                            options="{!v.options}"
+                            onchange="{!c.handleSelectChange}"
+                            />
+                        </div>
+                        <div class="slds-col">
+                            <label>Propietario de la Cotizacion</label><br />
+                            {!v.updateQuote.Owner.Name}
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-p-top_medium slds-p-left_xx-large slds-p-right_x-large">
+                        <div class="slds-col">
+                            <lightning:input
+                                label="Codigo de verificacion"
+                                value="{!v.verification}"
+                                onchange="{!c.handleVerificationCode}"
+                                maxlength="5"
+                                />
+                        </div>
+                        <div class="slds-col">
+                            <label>Fecha en que se intento Vender</label><br />
+                            {!v.updateQuote.LastModifiedDate}
+                        </div>
+                        <div class="slds-col">
+                            <label>Nombre Asegurado</label><br />
+                            {!v.updateQuote.QuoteLineItems[0].MX_WB_nombreAsegurado__c}
+                        </div>
+                        <aura:if isTrue="{!v.esAuto}">
+                            <div class="slds-col">
+                                <label>Tipo de Auto</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_WB_Tipo_de_auto__c}
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!v.esHogar}">
+                            <div class="slds-col">
+                                <label>Casa o Departmento</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_SB_VTS_Casa_o_Departamento__c}
+                            </div>
+                        </aura:if>
+                        <div class="slds-col">
+                            <label>Plan</label><br />
+                            {!v.updateQuote.QuoteLineItems[0].MX_SB_VTS_Plan__c}
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-gutters slds-p-top_medium slds-p-left_xx-large slds-p-right_x-large">
+                        <aura:if isTrue="{!v.esAuto}">
+                            <div class="slds-col">
+                                <label>Placas</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_WB_placas__c}
+                            </div>
+                            <div class="slds-col">
+                                <label>Modelo</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_WB_Modelo__c}
+                            </div>
+                            <div class="slds-col">
+                                <label>Marca</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_WB_Marca__c}
+                            </div>
+                            <div class="slds-col">
+                                <label>SubMarca</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_WB_subMarca__c}
+                            </div>
+                            <div class="slds-col">
+                                <label>Año</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_SB_VTS_Anio__c}
+                            </div>
+                            <div class="slds-col">
+                                <label>Serie</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_WB_numeroSerie__c}
+                            </div>
+                            <div class="slds-col">
+                                <label>Version</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_SB_VTS_Version__c}
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!v.esHogar}">
+                            <div class="slds-col">
+                                <label>Daños a Contenidos</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_SB_VTS_Danos_Contenidos__c}
+                            </div>
+                            <div class="slds-col">
+                                <label>Daños Inmueble</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_SB_VTS_Danos_Inmueble__c}
+                            </div>
+                            <div class="slds-col">
+                                <label>Equipo Electronico</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_SB_VTS_Equipo_Electronico__c}
+                            </div>
+                            <div class="slds-col">
+                                <label>Resp Privada Familiar</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_SB_VTS_RespPrivada_Familiar__c}
+                            </div>
+                            <div class="slds-col">
+                                <label>Rotura Cristales</label><br />
+                                {!v.updateQuote.QuoteLineItems[0].MX_SB_VTS_Rotura_Cristales__c}
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!v.esVida}">
+
+                        </aura:if>
+                    </div>
+                <lightning:layout horizontalAlign="center" class="slds-m-top_large">
+                    <lightning:button variant="brand" label="Actualizar" onclick="{!c.handleSave}" title="Actualizar" type="submit"/>
+                </lightning:layout>
+            </aura:if>
+        </lightning:recordEditForm>
+        <aura:if isTrue="{!v.last5Quotes}">
+            <div class="slds-text-heading_small slds-p-top_small slds-p-bottom_small slds-p-left_small">
+                Ultimas cotizaciones creadas de la Oportunidad
+            </div>
+            <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+                <thead>
+                    <tr>
+                        <th>
+                            Folio
+                        </th>
+                        <th>
+                            Etapa
+                        </th>
+                        <th>
+                            Producto
+                        </th>
+                        <th>
+                            Fecha de Creacion
+                        </th>
+                        <th>
+                            Propietario
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.last5Quotes}" var="quote">
+                        <tr>
+                            <td>
+                                {!quote.MX_SB_VTS_Folio_Cotizacion__c}
+                            </td>
+                            <td>
+                                {!quote.Status}
+                            </td>
+                            <td>
+                                {!quote.QuoteLineItems[0].Product2.Name}
+                            </td>
+                            <td>
+                                {!quote.CreatedDate}
+                            </td>
+                            <td>
+                                {!quote.Owner.Name}
+                            </td>
+                            <td>
+                                <lightning:input type="radio" value="{!quote.MX_SB_VTS_Folio_Cotizacion__c}" name="radioButtonQuotes" aura:id="{!quote.Id}" onchange="{!c.changeQuote}" />
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </aura:if>
+    </lightning:card>
+</aura:component>

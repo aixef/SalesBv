@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>CRM_WF_Checklist_Principal__c</fullName>
+        <externalId>false</externalId>
+        <label>Checklist Principal</label>
+        <referenceTo>CRM_WF_Checklist__c</referenceTo>
+        <relationshipName>Checklist_Adicionales</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Documento_Variable__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Documento Variable</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Otro__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Otro</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Variables__c</fullName>
+        <externalId>false</externalId>
+        <label>Checklist Variable</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Arrancón</fullName>
+                    <default>false</default>
+                    <label>Arrancón</label>
+                </value>
+                <value>
+                    <fullName>Arte</fullName>
+                    <default>false</default>
+                    <label>Arte</label>
+                </value>
+                <value>
+                    <fullName>Capacitación a Franquicia</fullName>
+                    <default>false</default>
+                    <label>Capacitación a Franquicia</label>
+                </value>
+                <value>
+                    <fullName>Capacitación al SUN</fullName>
+                    <default>false</default>
+                    <label>Capacitación al SUN</label>
+                </value>
+                <value>
+                    <fullName>Capacitación DAR</fullName>
+                    <default>false</default>
+                    <label>Capacitación DAR</label>
+                </value>
+                <value>
+                    <fullName>Capacitación JPNs</fullName>
+                    <default>false</default>
+                    <label>Capacitación JPNs</label>
+                </value>
+                <value>
+                    <fullName>Capacitación Línea Bancomer / #1000</fullName>
+                    <default>false</default>
+                    <label>Capacitación Línea Bancomer / #1000</label>
+                </value>
+                <value>
+                    <fullName>Certificación nuevos productos</fullName>
+                    <default>false</default>
+                    <label>Certificación nuevos productos</label>
+                </value>
+                <value>
+                    <fullName>Circuito de atención a incidencias</fullName>
+                    <default>false</default>
+                    <label>Circuito de atención a incidencias</label>
+                </value>
+                <value>
+                    <fullName>Circuito de contratacion EECC</fullName>
+                    <default>false</default>
+                    <label>Circuito de contratacion EECC</label>
+                </value>
+                <value>
+                    <fullName>Circuitos de atención LB</fullName>
+                    <default>false</default>
+                    <label>Circuitos de atención LB</label>
+                </value>
+                <value>
+                    <fullName>Circuitos de atención SUN, DAR, LB, #1000, Redes Sociales</fullName>
+                    <default>false</default>
+                    <label>Circuitos de atención SUN, DAR, LB, #1000, Redes Sociales</label>
+                </value>
+                <value>
+                    <fullName>Comité ARO o GRO (Normativa, auditorías, etc.)</fullName>
+                    <default>false</default>
+                    <label>Comité ARO o GRO (Normativa, auditorías, etc.)</label>
+                </value>
+                <value>
+                    <fullName>Comité de DAR</fullName>
+                    <default>false</default>
+                    <label>Comité de DAR</label>
+                </value>
+                <value>
+                    <fullName>Comité Franquicia</fullName>
+                    <default>false</default>
+                    <label>Comité Franquicia</label>
+                </value>
+                <value>
+                    <fullName>Concurso a la Red</fullName>
+                    <default>false</default>
+                    <label>Concurso a la Red</label>
+                </value>
+                <value>
+                    <fullName>Etiquetas en EECC (Campañas especiales)</fullName>
+                    <default>false</default>
+                    <label>Etiquetas en EECC (Campañas especiales)</label>
+                </value>
+                <value>
+                    <fullName>Formación online</fullName>
+                    <default>false</default>
+                    <label>Formación online</label>
+                </value>
+                <value>
+                    <fullName>Formación presencial (escuela comercial)</fullName>
+                    <default>false</default>
+                    <label>Formación presencial (escuela comercial)</label>
+                </value>
+                <value>
+                    <fullName>Guía operativa Apps / Herramientas / Procesos</fullName>
+                    <default>false</default>
+                    <label>Guía operativa Apps / Herramientas / Procesos</label>
+                </value>
+                <value>
+                    <fullName>Incentivación</fullName>
+                    <default>false</default>
+                    <label>Incentivación</label>
+                </value>
+                <value>
+                    <fullName>Insumos diarios para la Red</fullName>
+                    <default>false</default>
+                    <label>Insumos diarios para la Red</label>
+                </value>
+                <value>
+                    <fullName>Intranet / Site de atención a la Red</fullName>
+                    <default>false</default>
+                    <label>Intranet / Site de atención a la Red</label>
+                </value>
+                <value>
+                    <fullName>Mkt dinámico ejecutivo</fullName>
+                    <default>false</default>
+                    <label>Mkt dinámico ejecutivo</label>
+                </value>
+                <value>
+                    <fullName>Modificación en las condiciones / Vigencia de la campaña</fullName>
+                    <default>false</default>
+                    <label>Modificación en las condiciones / Vigencia de la campaña</label>
+                </value>
+                <value>
+                    <fullName>Nuevos Protocolos</fullName>
+                    <default>false</default>
+                    <label>Nuevos Protocolos</label>
+                </value>
+                <value>
+                    <fullName>Postales a ejecutivos</fullName>
+                    <default>false</default>
+                    <label>Postales a ejecutivos</label>
+                </value>
+                <value>
+                    <fullName>Presentación comercial</fullName>
+                    <default>false</default>
+                    <label>Presentación comercial</label>
+                </value>
+                <value>
+                    <fullName>Presentación comercial para la Red</fullName>
+                    <default>false</default>
+                    <label>Presentación comercial para la Red</label>
+                </value>
+                <value>
+                    <fullName>Prontuario</fullName>
+                    <default>false</default>
+                    <label>Prontuario</label>
+                </value>
+                <value>
+                    <fullName>Protocolos</fullName>
+                    <default>false</default>
+                    <label>Protocolos</label>
+                </value>
+                <value>
+                    <fullName>Red al día</fullName>
+                    <default>false</default>
+                    <label>Red al día</label>
+                </value>
+                <value>
+                    <fullName>Reunión de entendimiento con Scrum</fullName>
+                    <default>false</default>
+                    <label>Reunión de entendimiento con Scrum</label>
+                </value>
+                <value>
+                    <fullName>REVECA (CRM)</fullName>
+                    <default>false</default>
+                    <label>REVECA (CRM)</label>
+                </value>
+                <value>
+                    <fullName>Segmento / Producto</fullName>
+                    <default>false</default>
+                    <label>Segmento / Producto</label>
+                </value>
+                <value>
+                    <fullName>Seguimiento (Tableros o Reportes)</fullName>
+                    <default>false</default>
+                    <label>Seguimiento (Tableros o Reportes)</label>
+                </value>
+                <value>
+                    <fullName>Seguros:  Formatos de aviso a #1500, Multiasistencia, UNE, SAC, SACE, ATE</fullName>
+                    <default>false</default>
+                    <label>Seguros:  Formatos de aviso a #1500, Multiasistencia, UNE, SAC, SACE, ATE</label>
+                </value>
+                <value>
+                    <fullName>Seguros: Mapas MKT SAC</fullName>
+                    <default>false</default>
+                    <label>Seguros: Mapas MKT SAC</label>
+                </value>
+                <value>
+                    <fullName>Staff de la Red</fullName>
+                    <default>false</default>
+                    <label>Staff de la Red</label>
+                </value>
+                <value>
+                    <fullName>Task Force</fullName>
+                    <default>false</default>
+                    <label>Task Force</label>
+                </value>
+                <value>
+                    <fullName>Validación de comunicación para el cliente</fullName>
+                    <default>false</default>
+                    <label>Validación de comunicación para el cliente</label>
+                </value>
+                <value>
+                    <fullName>Video Semanal Asesores</fullName>
+                    <default>false</default>
+                    <label>Video Semanal Asesores</label>
+                </value>
+                <value>
+                    <fullName>Videoteca</fullName>
+                    <default>false</default>
+                    <label>Videoteca</label>
+                </value>
+                <value>
+                    <fullName>Vobo Jurírico (legales campaña, comunicación cliente)</fullName>
+                    <default>false</default>
+                    <label>Vobo Jurírico (legales campaña, comunicación cliente)</label>
+                </value>
+                <value>
+                    <fullName>Wiki Red (Temas comerciales)</fullName>
+                    <default>false</default>
+                    <label>Wiki Red (Temas comerciales)</label>
+                </value>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                    <label>SMS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Checklist Variable</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CLV-{0000000}</displayFormat>
+        <label>Folio</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Checklist Variables</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

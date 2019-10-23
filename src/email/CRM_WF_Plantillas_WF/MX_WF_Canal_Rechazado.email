@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" face="arial"><span style="font-size: 12pt;"></span></font><font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;">Por medio de la presente te informamos que el Canal con </span>folio<span style="font-size: 12pt;">&nbsp;</span></font><font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><b>{!CRM_WF_Artes__c.Name}</b>&nbsp;fue rechazado con los siguientes comentarios.</font><div style=""><br><div style=""><font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;">Comentarios: </span></font><b style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">{!ApprovalRequest.Comments}&nbsp;&nbsp;</b><br><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><br><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Para mayor detalle favor de dar clic en la siguiente liga:</div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><a href="{!CRM_WF_Artes__c.Link}"><br></a></div><div style=""><font face="arial"><a href="{!CRM_WF_Artes__c.Link}">Registro de Canal en Salesforce</a></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><br><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

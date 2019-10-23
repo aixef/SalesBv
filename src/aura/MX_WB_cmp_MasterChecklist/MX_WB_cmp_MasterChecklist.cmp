@@ -1,0 +1,50 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="MX_WB_controllerMasterChecklist_cls">
+    <aura:attribute name="isActive" type="Boolean" default="false" required="true" description="Bandera que sirve para controlar la visualización del componente."/>
+    <aura:attribute name="etapaActual" type="String" default="" required="true" description="Etapa que servira de referencia para buscar los textos que se mostraran."/>
+    <aura:attribute name="producto" type="String" default="" required="true" description="Producto de la oportunidad"/>
+    <aura:attribute name="guardarView" type="Boolean" default="false" required="true" description="Bandera que sirve para mostrar botones de guardado de respuestas."/>
+    <aura:attribute name="listaTextos" type="List" description="Textos asociados a la etapa actual" />
+    <aura:attribute name="idOpp" type="String" description="Id de la oportunidad que se modifica." />
+    <aura:attribute name="showSave" type="boolean" default="true" description="bandera que controla la vista del guardardado"/>
+    <aura:attribute name="respSave" type="boolean" description="Muestra si los elementos fueron guardados con exito" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <lightning:layoutitem flexibility="grow" size="12" mediumDeviceSize="12" largeDeviceSize="12" >
+        <table class="slds-table slds-table--cell-buffer" role="grid">
+            <tbody>
+                <aura:iteration items="{!v.listaTextos}" var="x">
+                    <tr class="slds-line-height_reset slds-size--12-of-12" >
+
+                        <th scope="col" class="slds-is-sortable slds-is-resizable slds-size--3-of-12 slds-vertical-align_absolute-center">
+                            <p>{!x.MX_WB_CheckList_Name__c}</p>
+                        </th>
+                        <th scope="col" class="slds-is-sortable slds-is-resizable slds-size--8-of-12">
+                            <div class="slds-rich-text-area__content slds-grow slds-cell-wrap">
+                                <ui:outputRichText value="{!x.MX_WB_objecion__c}"/>
+                            </div>
+                        </th>
+                        <th scope="col" class="slds-is-sortable slds-is-resizable slds-size--1-of-12 slds-vertical-align_absolute-center">
+                            <lightning:input type="radio" value="{!x.Id}" name="radioButtonGroup" aura:id="{!x.Id}" onchange="{!c.changeRes}" />
+                        </th>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+        <br/>
+        <aura:renderIf isTrue="{!v.guardarView}">
+            <aura:if isTrue="{!v.showSave}">
+                <div class="slds-align_absolute-center">
+                    <ui:button label="Guardar" press="{!c.guardar}"/>
+                </div>
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!v.respSave}">
+                        Respuesta Guardada
+                        <aura:set attribute="else">
+                            Falló en guardado
+                        </aura:set>
+                    </aura:if>
+                </aura:set>
+            </aura:if>
+        </aura:renderIf>
+    </lightning:layoutitem>
+</aura:component>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>No iniciada</fullName>
+        <default>true</default>
+        <label>No iniciada</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Aplazada</fullName>
+        <default>false</default>
+        <label>Aplazada</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Completada</fullName>
+        <default>false</default>
+        <label>Completada</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Completado</fullName>
+        <default>false</default>
+        <label>Completado</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>En progreso</fullName>
+        <default>false</default>
+        <label>En progreso</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Esperando a alguien más</fullName>
+        <default>false</default>
+        <label>Esperando a alguien más</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Descartado</fullName>
+        <default>false</default>
+        <label>Descartado</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Diferido</fullName>
+        <default>false</default>
+        <label>Diferido</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Hecho</fullName>
+        <default>false</default>
+        <label>Hecho</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Vencido</fullName>
+        <default>false</default>
+        <label>Vencido</label>
+        <closed>false</closed>
+    </standardValue>
+</StandardValueSet>

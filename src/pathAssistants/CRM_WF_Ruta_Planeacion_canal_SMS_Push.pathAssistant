@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>CRM_WF_Planeacion_Calendario_CRM__c</entityName>
+    <fieldName>CRM_WF_Estatus__c</fieldName>
+    <masterLabel>WF_Ruta para Planeacion canal SMS/Push</masterLabel>
+    <recordTypeName>CRM_WF_Carga_SMS_Push</recordTypeName>
+</PathAssistant>

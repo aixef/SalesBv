@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Catalogos para sincronización de información de claim center  multiasistencia y salesforce</description>
+    <fields>
+        <fullName>MX_SB_MLT_Catalogos__c</fullName>
+        <description>Nombre de catalogo al que pertenece el registro para multiasistencia</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Catalogos</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>ContactRole</fullName>
+                    <default>true</default>
+                    <label>ContactRole</label>
+                </value>
+                <value>
+                    <fullName>LossType</fullName>
+                    <default>false</default>
+                    <label>LossType</label>
+                </value>
+                <value>
+                    <fullName>MA_Insurance</fullName>
+                    <default>false</default>
+                    <label>MA_Insurance</label>
+                </value>
+                <value>
+                    <fullName>MA_InsuranceMood</fullName>
+                    <default>false</default>
+                    <label>MA_InsuranceMood</label>
+                </value>
+                <value>
+                    <fullName>MA_PhoneType</fullName>
+                    <default>false</default>
+                    <label>MA_PhoneType</label>
+                </value>
+                <value>
+                    <fullName>MA_Product</fullName>
+                    <default>false</default>
+                    <label>MA_Product</label>
+                </value>
+                <value>
+                    <fullName>State</fullName>
+                    <default>false</default>
+                    <label>State</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_SB_MLT_Estado__c</fullName>
+        <description>Estado del registro para actualizaciones futuras para multiasistencia </description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Estado</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Activo</fullName>
+                    <default>true</default>
+                    <label>Activo</label>
+                </value>
+                <value>
+                    <fullName>Inactivo</fullName>
+                    <default>false</default>
+                    <label>Inactivo</label>
+                </value>
+                <value>
+                    <fullName>Ya no se atiende</fullName>
+                    <default>false</default>
+                    <label>Ya no se atiende</label>
+                </value>
+                <value>
+                    <fullName>No aplica</fullName>
+                    <default>false</default>
+                    <label>No aplica</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_SB_MLT_Valor__c</fullName>
+        <description>Valor del registro para su sincronización de información entre claim center y salesforce multiasistencia</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Valor</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Catalogos Claim  Center</label>
+    <pluralLabel>Catalogos Claim  Center</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

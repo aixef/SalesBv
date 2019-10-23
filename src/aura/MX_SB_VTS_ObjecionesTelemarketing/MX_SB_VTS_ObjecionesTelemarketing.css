@@ -1,0 +1,16 @@
+.THIS.loadSpinner{
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.THIS .eachField.narrowRegion{
+    width:100%;
+}
+.THIS .eachField{
+    width:50%;
+    display:inline-block;
+}
+.THIS .tallTextArea textarea {
+    height: 5rem;
+  }

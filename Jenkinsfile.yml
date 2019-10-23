@@ -1,0 +1,78 @@
+---
+domain: salesforce.app
+stages:
+  staticAnalysis:
+    skip: false
+    params:
+      skipEslint: true
+      skipLintSpaces: true
+      skipStyleLint: true
+      skipPmdApex: true
+      skipSonar: false
+  unitTesting:
+    skip: true
+  deploy:
+    skip: true
+  functionalTesting:
+    skip: true
+  structuralTesting:
+    skip: true
+  publish:
+    skip: false
+    params:
+      delta:
+        strategy: majorMinorFix@LastCommitterDate
+
+branches:
+    feature:
+        stages:
+            publish:
+                params:
+                    mdapiConfig:
+                        apiVersion: 46.0
+                        credentialId: Integrado
+                        command: testDeploy
+                        testLevel: RunSpecifiedTests
+    develop:
+        stages:
+            publish:
+                params:
+                    mdapiConfig:
+                        apiVersion: 46.0
+                        credentialId: Integrado
+                        testLevel: RunLocalTests
+    bugfix:
+        stages:
+            publish:
+                params:
+                    mdapiConfig:
+                        apiVersion: 46.0
+                        credentialId: UAT
+                        command: testDeploy
+                        testLevel: RunSpecifiedTests
+    release:
+        stages:
+            publish:
+                params:
+                    mdapiConfig:
+                        apiVersion: 46.0
+                        credentialId: UAT
+                        testLevel: RunLocalTests
+    hotfix:
+        stages:
+            publish:
+                params:
+                    mdapiConfig:
+                        apiVersion: 46.0
+                        credentialId: Produccion
+                        serverUrl: login.salesforce.com
+                        command: testDeploy
+                        testLevel: RunSpecifiedTests
+    master:
+        stages:
+            publish:
+                params:
+                    mdapiConfig:
+                        apiVersion: 46.0
+                        credentialId: Produccion
+                        testLevel: RunLocalTests

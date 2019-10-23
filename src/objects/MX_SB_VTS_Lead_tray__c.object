@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto Creado para almacenar las bandejas generadas en los servicios. El objeto es Genérico para la creación de nuevos servicios.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>MX_SB_VTS_Campa_a_relacionada__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campaña relacionada a la bandeja</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Ingresa la campaña relacionada.</inlineHelpText>
+        <label>Campaña</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Lead_trays</relationshipLabel>
+        <relationshipName>Lead_trays</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Description__c</fullName>
+        <description>Descripción de las bandejas creadas.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Descripción</inlineHelpText>
+        <label>Descripcion</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_ID_Bandeja__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Id Generado en el servicio.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>ID de servicio generado.</inlineHelpText>
+        <label>ID Bandeja</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Producto__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Producto Relacionado con la bandeja.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Inserta el producto relacionado con la bandeja,</inlineHelpText>
+        <label>Producto</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Bandejas leads</relationshipLabel>
+        <relationshipName>Bandejas_leads</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_ProveedorCTI__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo relación a proveedor CTI</description>
+        <externalId>false</externalId>
+        <label>ProveedorCTI</label>
+        <referenceTo>MX_SB_VTS_ProveedoresCTI__c</referenceTo>
+        <relationshipLabel>Bandejas leads</relationshipLabel>
+        <relationshipName>Bandejas_leads</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Tipo_bandeja__c</fullName>
+        <description>Tipo de bandeja</description>
+        <externalId>false</externalId>
+        <label>Tipo bandeja HotLeads</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>HotLeads</fullName>
+                    <default>false</default>
+                    <label>HotLeads</label>
+                </value>
+                <value>
+                    <fullName>TrackingWeb</fullName>
+                    <default>false</default>
+                    <label>TrackingWeb</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+	<fields>
+        <fullName>MX_SB_VTS_ServicioID__c</fullName>
+        <description>ID del servicio relacionado con la bandeja</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>ID del servicio relacionado con la bandeja</inlineHelpText>
+        <label>Servicio</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Bandejas lead</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>Nombre de la bandeja</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Bandejas leads</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

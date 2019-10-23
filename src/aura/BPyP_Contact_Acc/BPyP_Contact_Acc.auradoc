@@ -1,0 +1,9 @@
+<aura:documentation>
+	<aura:description>
+        <p> <code>c:BPyP_COntact_Acc</code> componente que gestiona la contactabilidad de clientes por medio de gráficas, el cual cuenta con vistas </p>
+        <p>Sin parámetros de entrada.</p>
+    </aura:description>
+	<aura:example name="BPyP_COntact_Acc" ref="c:BPyP_COntact_Acc" label="Gestión de contactabilidad del Cliente c:BPyP_COntact_Acc">
+        <p>Componente que realiza la gestión de contactabilidad del cliente a partir de Gráficas y reporte de detalle del cliente.</p>
+	</aura:example>
+</aura:documentation>

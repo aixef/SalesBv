@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla que notificara al equipo de incidencias que un caso se les asigno.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Caso: Asignación Automática</name>
+    <style>none</style>
+    <subject>Asignación de Caso</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

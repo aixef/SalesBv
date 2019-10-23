@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>MX_SB_MLT_Contacto__c</fullName>
+        <description>Referencia a los Datos de contacto como participante del siniestro para multiasistencia</description>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contacto</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Participantes Siniestro</relationshipLabel>
+        <relationshipName>Participantes_Siniestro</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_MLT_Marca__c</fullName>
+        <description>Marca del vehículo para el participante siniestro tipo Auto para multiasistencia</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Marca del vehículo</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_MLT_Modelo__c</fullName>
+        <description>Modelo del vehiculo para el participante siniestro tipo Auto para multiasistencia</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Modelo del vehículo</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_MLT_Placas__c</fullName>
+        <description>Placa del vehiculo asegurado para el participante siniestro tipo Auto para multiasistencia</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Placas del vehículo</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_MLT_Siniestro__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Referencia del participante a un siniestro para multiasistencia</description>
+        <externalId>false</externalId>
+        <label>Siniestro</label>
+        <referenceTo>Siniestro__c</referenceTo>
+        <relationshipLabel>Participantes Siniestro</relationshipLabel>
+        <relationshipName>Participantes_Siniestro</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_MLT_Submarca__c</fullName>
+        <description>Submarca del vehículo para el participante siniestro tipo Auto para multiasistencia</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Submarca del vehículo</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_MLT_TipoParticipante__c</fullName>
+        <description>Tipo de participante en un siniestro puede ser persona, automovil, o motocicleta para multiasistencia</description>
+        <externalId>false</externalId>
+        <label>Tipo de participante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Persona</fullName>
+                    <default>false</default>
+                    <label>Persona</label>
+                </value>
+                <value>
+                    <fullName>Automóvil</fullName>
+                    <default>false</default>
+                    <label>Automóvil</label>
+                </value>
+                <value>
+                    <fullName>Motocicleta</fullName>
+                    <default>false</default>
+                    <label>Motocicleta</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Participante Siniestro</label>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>Nombre de Participante Siniestro</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Participantes Siniestro</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

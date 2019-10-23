@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>WIB_EvaluacionCalidad_pag</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>WIB_EvaluacionCalidad_pag</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>BarraPorcentaje__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( PorcentajeTotal__c&gt;= 0 &amp;&amp; PorcentajeTotal__c&lt; 0.25, 
+   IMAGE(&quot;/resource/1484850172000/BarraCero&quot;,&apos;CERO&apos;,25,25), 
+   IF( PorcentajeTotal__c&gt;= 0.25 &amp;&amp; PorcentajeTotal__c&lt; 0.50, 
+      IMAGE(&quot;/resource/1484858764000/BarraUno&quot;,&apos;UNO&apos;,25,25), 
+      IF( PorcentajeTotal__c&gt;= 0.50 &amp;&amp; PorcentajeTotal__c&lt; 0.75, 
+          IMAGE(&quot;/resource/1484858836000/BarraDos&quot;,&apos;DOS&apos;,25,25), 
+          IF( PorcentajeTotal__c&gt;= 0.75 &amp;&amp; PorcentajeTotal__c &lt; 1, 
+              IMAGE(&quot;/resource/1484858856000/BarraTres&quot;,&apos;TRES&apos;,25,25), 
+              IF( PorcentajeTotal__c= 1, 
+                  IMAGE(&quot;/resource/1484858876000/BarraCuatro&quot;,&apos;CUATRO&apos;,25,25), 
+                  &quot;No esta definido&quot; 
+              ) 
+          ) 
+      ) 
+   ) 
+)</formula>
+        <label>Barra de porcentaje</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Encuestado__c</fullName>
+        <externalId>false</externalId>
+        <label>Asesor wibe</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IDGrabacion__c</fullName>
+        <externalId>false</externalId>
+        <label>ID Grabación</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WB_Cotizacion__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Cotización</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Evaluaciones</relationshipLabel>
+        <relationshipName>Evaluaciones</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WB_ErroresFatales__c</fullName>
+        <externalId>false</externalId>
+        <label>Errores fatales</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WB_ErroresNoFatales__c</fullName>
+        <externalId>false</externalId>
+        <label>Errores no fatales</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WB_PuntajeBase__c</fullName>
+        <externalId>false</externalId>
+        <label>Puntaje Base</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WB_PuntajeTotal__c</fullName>
+        <externalId>false</externalId>
+        <label>Puntaje Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MotivoNoContacto__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo De No Contacto</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AGENDA</fullName>
+                    <default>false</default>
+                    <label>AGENDA</label>
+                </value>
+                <value>
+                    <fullName>BUZON/CONTESTADORA/FAX</fullName>
+                    <default>false</default>
+                    <label>BUZON/CONTESTADORA/FAX</label>
+                </value>
+                <value>
+                    <fullName>CLIENTE CUELGA NO ESCUCHA SCRIPT</fullName>
+                    <default>false</default>
+                    <label>CLIENTE CUELGA NO ESCUCHA SCRIPT</label>
+                </value>
+                <value>
+                    <fullName>CLIENTE SOLICITA LLAMAR DESPUES</fullName>
+                    <default>false</default>
+                    <label>CLIENTE SOLICITA LLAMAR DESPUES</label>
+                </value>
+                <value>
+                    <fullName>CONTACTO MERCADOTECNIA</fullName>
+                    <default>false</default>
+                    <label>CONTACTO MERCADOTECNIA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESA SIN EXTENSION</fullName>
+                    <default>false</default>
+                    <label>EMPRESA SIN EXTENSION</label>
+                </value>
+                <value>
+                    <fullName>EQUIVOCADO INCORRECTO</fullName>
+                    <default>false</default>
+                    <label>EQUIVOCADO INCORRECTO</label>
+                </value>
+                <value>
+                    <fullName>FUERA DEL AREA DE SERVICIO/SUSPENDID</fullName>
+                    <default>false</default>
+                    <label>FUERA DEL AREA DE SERVICIO/SUSPENDID</label>
+                </value>
+                <value>
+                    <fullName>INFORMACIÓN SOBRE SU POLIZA</fullName>
+                    <default>false</default>
+                    <label>INFORMACIÓN SOBRE SU POLIZA</label>
+                </value>
+                <value>
+                    <fullName>NO CONTESTA</fullName>
+                    <default>false</default>
+                    <label>NO CONTESTA</label>
+                </value>
+                <value>
+                    <fullName>NO SE ENCUENTRA</fullName>
+                    <default>false</default>
+                    <label>NO SE ENCUENTRA</label>
+                </value>
+                <value>
+                    <fullName>PRUEBA</fullName>
+                    <default>false</default>
+                    <label>PRUEBA</label>
+                </value>
+                <value>
+                    <fullName>TEL. INEXISTENTE</fullName>
+                    <default>false</default>
+                    <label>TEL. INEXISTENTE</label>
+                </value>
+                <value>
+                    <fullName>TEL. OCUPADO</fullName>
+                    <default>false</default>
+                    <label>TEL. OCUPADO</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MotivoNoventa__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo De No Venta</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AUTOFINANCIAMIENTO</fullName>
+                    <default>false</default>
+                    <label>AUTOFINANCIAMIENTO</label>
+                </value>
+                <value>
+                    <fullName>AUTO NO EN LA BASE</fullName>
+                    <default>false</default>
+                    <label>AUTO NO EN LA BASE</label>
+                </value>
+                <value>
+                    <fullName>AUTO SINIESTRADO</fullName>
+                    <default>false</default>
+                    <label>AUTO SINIESTRADO</label>
+                </value>
+                <value>
+                    <fullName>AUTO USO COMERCIAL</fullName>
+                    <default>false</default>
+                    <label>AUTO USO COMERCIAL</label>
+                </value>
+                <value>
+                    <fullName>FUERA DE POLITICA</fullName>
+                    <default>false</default>
+                    <label>FUERA DE POLITICA</label>
+                </value>
+                <value>
+                    <fullName>LEGALIZADO/FONTERIZO</fullName>
+                    <default>false</default>
+                    <label>LEGALIZADO/FONTERIZO</label>
+                </value>
+                <value>
+                    <fullName>MALA EXPERIENCIA CON LOS SEGUROS</fullName>
+                    <default>false</default>
+                    <label>MALA EXPERIENCIA CON LOS SEGUROS</label>
+                </value>
+                <value>
+                    <fullName>MODELO</fullName>
+                    <default>false</default>
+                    <label>MODELO</label>
+                </value>
+                <value>
+                    <fullName>NO TIENE AUTO</fullName>
+                    <default>false</default>
+                    <label>NO TIENE AUTO</label>
+                </value>
+                <value>
+                    <fullName>TRANSFERENCIA A ATENCIÓN A CLIENTES</fullName>
+                    <default>false</default>
+                    <label>TRANSFERENCIA A ATENCIÓN A CLIENTES</label>
+                </value>
+                <value>
+                    <fullName>TRANSFERENCIA A SINIESTROS</fullName>
+                    <default>false</default>
+                    <label>TRANSFERENCIA A SINIESTROS</label>
+                </value>
+                <value>
+                    <fullName>TRANSFERENCIA MOTOS</fullName>
+                    <default>false</default>
+                    <label>TRANSFERENCIA MOTOS</label>
+                </value>
+                <value>
+                    <fullName>YA CUENTA CON SEGURO WIBE</fullName>
+                    <default>false</default>
+                    <label>YA CUENTA CON SEGURO WIBE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MotivoOportunidadComercial__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo de la Oportunidad Comercial</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Venta</fullName>
+                    <default>false</default>
+                    <label>Venta</label>
+                </value>
+                <value>
+                    <fullName>Venta Pre emisión</fullName>
+                    <default>false</default>
+                    <label>Venta Pre emisión</label>
+                </value>
+                <value>
+                    <fullName>No Venta</fullName>
+                    <default>false</default>
+                    <label>No Venta</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Observaciones__c</fullName>
+        <externalId>false</externalId>
+        <label>Observaciones</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PorcentajeExperienciaConCliente__c</fullName>
+        <externalId>false</externalId>
+        <label>Porcentaje Experiencia con el cliente</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PorcentajeProductoProceso__c</fullName>
+        <externalId>false</externalId>
+        <label>Porcentaje Producto / Proceso.</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PorcentajeReglasJuego__c</fullName>
+        <externalId>false</externalId>
+        <label>Porcentaje Reglas del Juego</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PorcentajeTotal__c</fullName>
+        <externalId>false</externalId>
+        <label>Porcentaje total</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PorcentajeVentas__c</fullName>
+        <externalId>false</externalId>
+        <label>Porcentaje Ventas.</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>RepresentanteCalidad__c</fullName>
+        <externalId>false</externalId>
+        <label>Representante Calidad</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Evaluación</label>
+    <listViews>
+        <fullName>Todos</fullName>
+        <columns>NAME</columns>
+        <columns>Encuestado__c</columns>
+        <columns>RepresentanteCalidad__c</columns>
+        <columns>IDGrabacion__c</columns>
+        <columns>MotivoOportunidadComercial__c</columns>
+        <columns>MotivoNoContacto__c</columns>
+        <columns>MotivoNoventa__c</columns>
+        <columns>PorcentajeExperienciaConCliente__c</columns>
+        <columns>PorcentajeProductoProceso__c</columns>
+        <columns>PorcentajeReglasJuego__c</columns>
+        <columns>PorcentajeVentas__c</columns>
+        <columns>PorcentajeTotal__c</columns>
+        <columns>BarraPorcentaje__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>EVAL-{000000000}</displayFormat>
+        <label>Número de Evaluación</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Evaluaciones</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Outbound</fullName>
+        <active>true</active>
+        <label>Outbound</label>
+        <picklistValues>
+            <picklist>MotivoNoContacto__c</picklist>
+            <values>
+                <fullName>AGENDA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BUZON%2FCONTESTADORA%2FFAX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLIENTE CUELGA NO ESCUCHA SCRIPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLIENTE SOLICITA LLAMAR DESPUES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONTACTO MERCADOTECNIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMPRESA SIN EXTENSION</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EQUIVOCADO INCORRECTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUERA DEL AREA DE SERVICIO%2FSUSPENDID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INFORMACIÓN SOBRE SU POLIZA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO CONTESTA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO SE ENCUENTRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRUEBA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TEL%2E INEXISTENTE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TEL%2E OCUPADO</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MotivoNoventa__c</picklist>
+            <values>
+                <fullName>AUTO NO EN LA BASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTO SINIESTRADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTO USO COMERCIAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTOFINANCIAMIENTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUERA DE POLITICA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LEGALIZADO%2FFONTERIZO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MALA EXPERIENCIA CON LOS SEGUROS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MODELO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO TIENE AUTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRANSFERENCIA A ATENCIÓN A CLIENTES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRANSFERENCIA A SINIESTROS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRANSFERENCIA MOTOS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>YA CUENTA CON SEGURO WIBE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MotivoOportunidadComercial__c</picklist>
+            <values>
+                <fullName>No Venta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta Pre emisión</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RepresentanteCalidad__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Observaciones__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Encuestado__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IDGrabacion__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PorcentajeTotal__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>BarraPorcentaje__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Motivo_de_contacto_y_venta_no_obligados</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+
+ ISPICKVAL(MotivoOportunidadComercial__c, &apos;No Venta&apos;),
+
+OR(
+ ISPICKVAL(MotivoNoventa__c, &apos;&apos;),
+ ISPICKVAL(MotivoNoContacto__c, &apos;&apos;)
+)
+)</errorConditionFormula>
+        <errorDisplayField>MotivoOportunidadComercial__c</errorDisplayField>
+        <errorMessage>***DEBE ELEGIR UN VALOR EN MOTIVO DE NO CONTACTO Y NO VENTA SI ELIGIÓ MOTIVO DE LA OPORTUNIDAD COMERCIAL COMO NO VENTA.***</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,2824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>Asigna_No_cotizza</name>
+        <label>Asigna No cotizza</label>
+        <locationX>1894</locationX>
+        <locationY>50</locationY>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Motivos_de_no_Cotizaci_n</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Venta (No acepta cotización)</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No acepta cotización</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Interesado</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto Efectivo</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV1__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Closed Lost</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Actualiza_Oportunidad_update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>asignacion_de_lv5</name>
+        <label>asignacion de lv5</label>
+        <locationX>1456</locationX>
+        <locationY>1979</locationY>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Cliente_no_acepta</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Venta (No acepta cotización)</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No acepta cotización</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Interesado</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto Efectivo</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.Resultadollamada__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Stage_name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EtapaOportunidad_Cotizacion</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selecciona_Objeto_a_atualizar</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>asignacion_ventas</name>
+        <label>asignacion_ventas</label>
+        <locationX>1895</locationX>
+        <locationY>172</locationY>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV1__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto Efectivo</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Interesado</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Acepta contratación</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Venta</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Tipo_de_venta_list</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Actualiza_Oportunidad_update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Asigna el valor de la variable de apoyo a  NombredelRegistro.Email</description>
+        <name>AsignacionApoyoEmail</name>
+        <label>AsignacionApoyoEmail</label>
+        <locationX>1264</locationX>
+        <locationY>1885</locationY>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EmailApoyo</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Convertir_en_oportunidad</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>asina_id_destino</name>
+        <label>asina id destino</label>
+        <locationX>479</locationX>
+        <locationY>1261</locationY>
+        <assignmentItems>
+            <assignToReference>VariableNotification</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Nombredelregistro.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Etapa_de_inicio_Flujo</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Convertir_en_oportunidad</name>
+        <label>Convertir en oportunidad</label>
+        <locationX>1570</locationX>
+        <locationY>1706</locationY>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Apertura de Cuenta</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.Email</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EmailApoyo</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Interesado</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ninguno</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ninguno</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ninguno</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Stage_name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EtapadelaoportunidadVentaAutorizada</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto Efectivo</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.Resultadollamada__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selecciona_Objeto_a_atualizar</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Equipara_valores_REgistro_Oportunidad</name>
+        <label>Equipara valores REgistro Oportunidad</label>
+        <locationX>2016</locationX>
+        <locationY>1146</locationY>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV1__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Nombredelregistro.Resultadollamada__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV2__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV3__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV4__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV5__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV6__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Stage_name</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Actualiza_Oportunidad_update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Etapa_emitida</name>
+        <label>Etapa emitida</label>
+        <locationX>1670</locationX>
+        <locationY>172</locationY>
+        <assignmentItems>
+            <assignToReference>Quote_var.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Emitida</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Tipo_de_venta_Lista_venta</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Fue_contacto_efectivo_asig</name>
+        <label>Fue contacto efectivo</label>
+        <locationX>1679</locationX>
+        <locationY>1706</locationY>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto Efectivo</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Información y Condiciones</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.Resultadollamada__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ninguno</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ninguno</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ninguno</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ninguno</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Stage_name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EtapaOportunidad_Cotizacion</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selecciona_Objeto_a_atualizar</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>LeadNoventa</name>
+        <label>LeadNoventa</label>
+        <locationX>1907</locationX>
+        <locationY>302</locationY>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV1__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto Efectivo</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Interesado</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Acepta contratación</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Venta</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Motivos_de_no_venta</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Closed Lost</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Actualiza_Oportunidad_update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>No disponible</description>
+        <name>Motivo_de_contacto_no_efectivo</name>
+        <label>Motivo de contacto no efectivo</label>
+        <locationX>1930</locationX>
+        <locationY>1836</locationY>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Motivos_de_contacto_no_efectivo</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.Resultadollamada__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Venta (CNE)</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Aplica(CNE)</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Interesado (CNE)</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto No Efectivo</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Stage_name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Etapa_Inicio_Opotunidad</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selecciona_Objeto_a_atualizar</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Motivo_de_no_venta_quote</name>
+        <label>Motivo de no venta</label>
+        <locationX>1672</locationX>
+        <locationY>302</locationY>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV1__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto Efectivo</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Interesado</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Acepta cotización</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Venta (acepta cotización)</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Motivo_de_no_venta</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Nace_trackin_web</name>
+        <label>Nace trackin web</label>
+        <locationX>1898</locationX>
+        <locationY>427</locationY>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV1__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contacto Efectivo</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Interesado</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Acepta cotización</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ninguno</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.MX_SB_VTS_Tipificacion_LV6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Ninguno</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Oportunidad_Registro.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Venta Autorizada</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Actualiza_Oportunidad_update</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>No_cotizar_asig</name>
+        <label>No cotizar asig</label>
+        <locationX>1664</locationX>
+        <locationY>50</locationY>
+        <assignmentItems>
+            <assignToReference>Quote_var.Status</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>No_Acepta_cotizar</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>No_hubo_contacto_asig</name>
+        <label>No hubo contacto asig</label>
+        <locationX>2074</locationX>
+        <locationY>2026</locationY>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.Resultadollamada__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Contacto</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Aplica</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV4__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Aplica</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV5__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Venta (No contacto)</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Nombredelregistro.MX_SB_VTS_Tipificacion_LV6__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>No_contacto</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Stage_name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Etapa_Inicio_Opotunidad</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Selecciona_Objeto_a_atualizar</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <description>Acepta cotización</description>
+        <name>Aceptacotizacion</name>
+        <choiceText>SI</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Acepta cotización</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Agendar</description>
+        <name>Agendar</name>
+        <choiceText>Agendar</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Agendar</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Asistido B.com</description>
+        <name>AsistidoBcom</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11px; font-family: docs-Calibri; color: rgb(0, 0, 0);&quot;&gt;Asistido B.com&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Asistido B.com</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Asistido Bmóvil</description>
+        <name>AsistidoBmovil</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; color: rgb(0, 0, 0);&quot;&gt;Asistido Bmóvil&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Asistido Bmóvil</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Asistido Cotizadores</description>
+        <name>AsistidoCotizadores</name>
+        <choiceText>Asistido Cotizadores</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Asistido Cotizadores</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>(Asistido) Dificil contratar mediante App</description>
+        <name>AsistidoDificilcontratarmedianteApp</name>
+        <choiceText>(Asistido) Dificil contratar mediante App</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>(Asistido) Dificil contratar mediante App</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>(Asistido) Dificil contratar mediante Tmkt</description>
+        <name>AsistidoDificilcontratarmedianteTmkt</name>
+        <choiceText>(Asistido) Dificil contratar mediante Tmkt</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>(Asistido) Dificil contratar mediante Tmkt</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Atendido por Call me Back</description>
+        <name>AtendidoporCallmeBack</name>
+        <choiceText>Atendido por Call me Back</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Atendido por Call me Back</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Atendido por Tracking Web</description>
+        <name>AtendidoporTrackingWeb</name>
+        <choiceText>Atendido por Tracking Web</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Atendido por Tracking Web</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Bloquear Sanas Prácticas</description>
+        <name>BloquearSanasPracticas</name>
+        <choiceText>Bloquear Sanas Prácticas</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Bloquear Sanas Prácticas</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Cliente cuelga</description>
+        <name>Clientecuelga</name>
+        <choiceText>Cliente cuelga</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cliente cuelga</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Cliente lo va a pensar (Indeciso)</description>
+        <name>ClientelovaapensarIndeciso</name>
+        <choiceText>Cliente lo va a pensar (Indeciso)</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cliente lo va a pensar (Indeciso)</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Cliente molesto</description>
+        <name>Clientemolesto</name>
+        <choiceText>Cliente molesto</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cliente molesto</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Cliente molesto (no llamar)</description>
+        <name>Clientemolestonollamar</name>
+        <choiceText>Cliente molesto (no llamar)</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cliente molesto (no llamar)</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No Interesado</description>
+        <name>ClienteNointeresado</name>
+        <choiceText>NO</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No Interesado</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Cliente no tiene tiempo</description>
+        <name>Clientenotienetiempo</name>
+        <choiceText>Cliente no tiene tiempo</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cliente no tiene tiempo</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Cliente no tiene trabajo</description>
+        <name>Clientenotienetrabajo</name>
+        <choiceText>Cliente no tiene trabajo</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cliente no tiene trabajo</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Cliente predispuesto por SMS</description>
+        <name>ClientepredispuestoporSMS</name>
+        <choiceText>Cliente predispuesto por SMS</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cliente predispuesto por SMS</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Motivo Contacto</description>
+        <name>Contacto</name>
+        <choiceText>SI</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Contacto</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Contacto No Efectivo</description>
+        <name>ContactoNoEfectivo</name>
+        <choiceText>&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;NO&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Contacto No Efectivo</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Contestadora o Buzón</description>
+        <name>ContestadoraoBuzon</name>
+        <choiceText>Contestadora o Buzón</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Contestadora o Buzón</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Contestó el titular</description>
+        <name>ContestoTitular</name>
+        <choiceText>SI</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Contacto Efectivo</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Cotizador TLMK - Salvo buen cobro</description>
+        <name>CotizadorTLMKSalvobuencobro</name>
+        <choiceText>Cotizador TLMK - Salvo buen cobro</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cotizador TLMK - Salvo buen cobro</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Desconfianza del medio de comunicación</description>
+        <name>Desconfianzadelmediodecomunicacion</name>
+        <choiceText>Desconfianza del medio de comunicación</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Desconfianza del medio de comunicación</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Desconfianza del producto ofertado</description>
+        <name>Desconfianzadelproductoofertado</name>
+        <choiceText>Desconfianza del producto ofertado</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Desconfianza del producto ofertado</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Desconfianza por llamada reciente</description>
+        <name>Desconfianzaporllamadareciente</name>
+        <choiceText>Desconfianza por llamada reciente</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Desconfianza por llamada reciente</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Error con App / Web</description>
+        <name>ErrorconAppWeb</name>
+        <choiceText>Error con App / Web</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Error con App / Web</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Finado</description>
+        <name>Finado</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11px; font-family: docs-Calibri; color: rgb(0, 0, 0);&quot;&gt;Finado&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Finado</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Fuera del área de servicio (Móvil)</description>
+        <name>Fueradelareadeservicio</name>
+        <choiceText>Fuera del área de servicio (Móvil)</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Fuera del área de servicio (Móvil)</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Fuera de servicio (Fijo)</description>
+        <name>Fueradeservicio</name>
+        <choiceText>Fuera de servicio (Fijo)</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Fuera de servicio (Fijo)</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Cliente interesado</description>
+        <name>Interesado</name>
+        <choiceText>SI</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Interesado</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Línea ocupada</description>
+        <name>Lineaocupada</name>
+        <choiceText>Línea ocupada</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Línea ocupada</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Mala calidad de audio</description>
+        <name>Malacalidaddeaudio</name>
+        <choiceText>Mala calidad de audio</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Mala calidad de audio</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Mala experiencia BBVA</description>
+        <name>MalaexperienciaBBVA</name>
+        <choiceText>Mala experiencia BBVA</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Mala experiencia BBVA</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Medio de Pago Rechazado</description>
+        <name>MediodePagoRechazado</name>
+        <choiceText>Medio de Pago Rechazado</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Medio de Pago Rechazado</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Valor vacio</description>
+        <name>Ninguno</name>
+        <choiceText>---Ninguno---</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <description>No acepta cotización</description>
+        <name>Noaceptacotizacion</name>
+        <choiceText>NO</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No acepta cotización</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Opción de no contacto.</description>
+        <name>Nocontacto</name>
+        <choiceText>NO</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No contacto</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No contesta</description>
+        <name>Nocontesta</name>
+        <choiceText>No contesta</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No contesta</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No cuenta con datos para contratación</description>
+        <name>Nocuentacondatosparacontratacion</name>
+        <choiceText>No cuenta con datos para contratación&amp;nbsp;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No cuenta con datos para contratación</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No cumple política cliente BBVA</description>
+        <name>NocumplepoliticaclienteBBVA</name>
+        <choiceText>No cumple política cliente BBVA</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No cumple política cliente BBVA</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No cumple política de edad</description>
+        <name>Nocumplepoliticadeedad</name>
+        <choiceText>No cumple política de edad</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No cumple política de edad</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No cumple política domicilio</description>
+        <name>Nocumplepoliticadomicilio</name>
+        <choiceText>No cumple política domicilio</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No cumple política domicilio</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No cumple política médica</description>
+        <name>Nocumplepoliticamedica</name>
+        <choiceText>No cumple política médica</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No cumple política médica</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No disponible</description>
+        <name>Nodisponible</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11px; font-family: docs-Calibri; color: rgb(0, 0, 0);&quot;&gt;No disponible&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No disponible</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No le gustan los seguros</description>
+        <name>Nolegustanlosseguros</name>
+        <choiceText>No le gustan los seguros</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No le gustan los seguros</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No lo sabe usar</description>
+        <name>Nolosabeusar</name>
+        <choiceText>No lo sabe usar</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No lo sabe usar</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No pasa autenticación</description>
+        <name>Nopasaautenticacion</name>
+        <choiceText>No pasa autenticación</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No pasa autenticación</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No permite explicación de producto</description>
+        <name>Nopermiteexplicaciondeproducto</name>
+        <choiceText>No permite explicación de producto</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No permite explicación de producto</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No Quiere Cargos en TDC / TDD</description>
+        <name>NoQuiereCargosenTDCTDD</name>
+        <choiceText>No Quiere Cargos en TDC / TDD</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No Quiere Cargos en TDC / TDD</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No quiere recibir publicidad</description>
+        <name>Noquiererecibirpublicidad</name>
+        <choiceText>No quiere recibir publicidad</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No quiere recibir publicidad</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No se acuerda de su contraseña</description>
+        <name>Noseacuerdadesucontrasena</name>
+        <choiceText>No se acuerda de su contraseña</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No se acuerda de su contraseña</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No se escucha cliente</description>
+        <name>Noseescuchacliente</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11px; font-family: docs-Calibri; color: rgb(0, 0, 0);&quot;&gt;No se escucha cliente&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No se escucha cliente</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No tiene</description>
+        <name>Notiene</name>
+        <choiceText>No tiene</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No tiene</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No utiliza Objeción</description>
+        <name>NoutilizaObjecion</name>
+        <choiceText>No se utiliza Objeción</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No Utiliza Objeción</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>No utiliza TDC / TDD</description>
+        <name>NoutilizaTDCTDD</name>
+        <choiceText>No utiliza TDC / TDD</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No utiliza TDC / TDD</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Número equivocado (Llamada entrante)</description>
+        <name>NumeroequivocadoLlamadaentrante</name>
+        <choiceText>Número equivocado (Llamada entrante)</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Número equivocado (Llamada entrante)</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Otro idioma</description>
+        <name>Otroidioma</name>
+        <choiceText>Otro idioma</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Otro idioma</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Otros Servicios</description>
+        <name>OtrosServicios</name>
+        <choiceText>Otros Servicios</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Otros Servicios</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Requiere Otro Medio de Pago</description>
+        <name>RequiereOtroMediodePago</name>
+        <choiceText>Requiere Otro Medio de Pago</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Requiere Otro Medio de Pago</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Se corta llamada</description>
+        <name>Secortallamada</name>
+        <choiceText>Se corta llamada</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Se corta llamada</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Se cortó llamada</description>
+        <name>Secortollamada</name>
+        <choiceText>Se cortó llamada</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Se cortó llamada</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Se dejó mensaje</description>
+        <name>Sedejomensaje</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11px; font-family: docs-Calibri; color: rgb(0, 0, 0);&quot;&gt;Se dejó mensaje&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Se dejó mensaje</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Seleccione una opción</description>
+        <name>Seleccioneunaopcion</name>
+        <choiceText>Seleccione una opción</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Seleccione una opción</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Sin Saldo Suficiente</description>
+        <name>SinSaldoSuficiente</name>
+        <choiceText>Sin Saldo Suficiente</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Sin Saldo Suficiente</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Tarjeta Digital Wallet</description>
+        <name>TarjetaDigitalWallet</name>
+        <choiceText>Tarjeta Digital Wallet</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Tarjeta Digital Wallet</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Tarjeta Digital Wallet MSI</description>
+        <name>TarjetaDigitalWalletMSI</name>
+        <choiceText>Tarjeta Digital Wallet MSI</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Tarjeta Digital Wallet MSI</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>TDC / TDD / BBVA</description>
+        <name>TDCTDDBBVA</name>
+        <choiceText>TDC / TDD / BBVA</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>TDC / TDD / BBVA</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>TDC / TDD / BBVA MSI</description>
+        <name>TDCTDDBBVAMSI</name>
+        <choiceText>TDC / TDD / BBVA MSI</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>TDC / TDD / BBVA MSI</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>TDC / TDD / BBVA Rechazada</description>
+        <name>TDCTDDBBVARechazada</name>
+        <choiceText>TDC / TDD / BBVA Rechazada</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>TDC / TDD / BBVA Rechazada</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>TDC / TDD / CDC Otro Banco Rechazada</description>
+        <name>TDCTDDCDCOtroBancoRechazada</name>
+        <choiceText>TDC / TDD / CDC Otro Banco Rechazada</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>TDC / TDD / CDC Otro Banco Rechazada</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>TDC / TDD Otro Banco</description>
+        <name>TDCTDDOtroBanco</name>
+        <choiceText>TDC / TDD Otro Banco</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>TDC / TDD Otro Banco</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Teléfono equivocado</description>
+        <name>Telefonoequivocado</name>
+        <choiceText>Teléfono equivocado</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Teléfono equivocado</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Teléfono inexistente o tritono</description>
+        <name>Telefonoinexistenteotritono</name>
+        <choiceText>Teléfono inexistente o tritono</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Teléfono inexistente o tritono</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Teléfono necesita extensión</description>
+        <name>Telefononecesitaextension</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11px; font-family: docs-Calibri; color: rgb(0, 0, 0);&quot;&gt;Teléfono necesita extensión&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Teléfono necesita extensión</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Teléfono suspendido</description>
+        <name>Telefonosuspendido</name>
+        <choiceText>Teléfono suspendido</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Teléfono suspendido</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>UtilizasteObjeciones</name>
+        <choiceText>Utilización de Objeción.</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Objeción</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Status cobrada</description>
+        <name>Venta_Cobrada</name>
+        <choiceText>SI</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cobrada</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Venta no cobrada</description>
+        <name>VentanoCobrada</name>
+        <choiceText>NO</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No cobrada</stringValue>
+        </value>
+    </choices>
+    <constants>
+        <name>Etapa_Inicio_Opotunidad</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Contacto</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>EtapadelaoportunidadVentaAutorizada</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Venta Autorizada</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>EtapaOportunidad_Cotizacion</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Cotización</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>CANDIDATO ID</description>
+        <name>IDENTIFICADORIDCANDIDATO</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>00Q</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>IDENTIFICAOPORTUNIDADID</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>006</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>LEadObject</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>LEAD</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>tamano</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>^(\d{10})$</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Cliente_acepta_cotizacion</name>
+        <label>Cliente acepta cotizacion</label>
+        <locationX>714</locationX>
+        <locationY>189</locationY>
+        <defaultConnector>
+            <targetReference>Acepto_cotizar</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default</defaultConnectorLabel>
+        <rules>
+            <name>Cliente_acepta_cotizacionList</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Acepta_cotizacion</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Aceptacotizacion</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Nace_trackin_web</targetReference>
+            </connector>
+            <label>Cliente acepta cotizacion</label>
+        </rules>
+        <rules>
+            <name>Cliente_No_acepta_cotizacion</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Acepta_cotizacion</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Noaceptacotizacion</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>No_cotizar_asig</targetReference>
+            </connector>
+            <label>Cliente No acepta cotizacion</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Valida que los clientes aceptaron recibir informacion</description>
+        <name>Cliente_acepto_recibir_info</name>
+        <label>Cliente acepto recibir info</label>
+        <locationX>780</locationX>
+        <locationY>1475</locationY>
+        <defaultConnector>
+            <targetReference>Informacion_y_condiciones</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Cliente_acepta_recibir_info</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Cliente_est_interesado</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Interesado</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Oportunidad</targetReference>
+            </connector>
+            <label>Cliente acepta recibir info</label>
+        </rules>
+        <rules>
+            <name>Cliente_no_acepta_recibir_info</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Cliente_est_interesado</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>ClienteNointeresado</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Motivos_de_no_seleccion</targetReference>
+            </connector>
+            <label>Cliente no acepta recibir info</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Evalua si el cliente ingreso correo electrónico, de no ser así, envia a la lista de selección de &quot;Motivos de no correo&quot;</description>
+        <name>Cliente_ingresa_correo_electr_nico_decision</name>
+        <label>Cliente ingresa correo electrónico</label>
+        <locationX>1060</locationX>
+        <locationY>1830</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Cliente_ingresa_correo_electr_nico</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>EmailApoyo</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Motivo_de_no_correo</targetReference>
+            </connector>
+            <label>Nombre del registro nulo</label>
+        </rules>
+        <rules>
+            <name>Cliente_ingresa_correo_electr_nico_No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>EmailApoyo</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AsignacionApoyoEmail</targetReference>
+            </connector>
+            <label>Nombre del registro no nulo</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Evalua si el cliente selecciono motivo de no correo, de no seleccionar, envia un error, en caso contrario, Convierte en oportunidad</description>
+        <name>Cliente_selecciona_motivo_de_no_correo_decision</name>
+        <label>Cliente selecciona motivo de no correo</label>
+        <locationX>1198</locationX>
+        <locationY>1601</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Cliente_selecciona_motivo_de_no_correo</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Motivos_de_no_correo</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>Seleccioneunaopcion</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Convertir_en_oportunidad</targetReference>
+            </connector>
+            <label>Cliente selecciona motivo de no correo</label>
+        </rules>
+        <rules>
+            <name>Cliente_No_selecciona_motivo_de_no_correo</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Motivos_de_no_correo</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Seleccioneunaopcion</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Error_de_No_seleccion_motivo_de_no_correo</targetReference>
+            </connector>
+            <label>Cliente No selecciona motivo de no correo</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Contacto_Primera_decisi_n</name>
+        <label>Contacto_Primera decisión</label>
+        <locationX>1658</locationX>
+        <locationY>1077</locationY>
+        <defaultConnector>
+            <targetReference>Vista_contacto</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Is_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Contest_una_persona</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Contacto</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Hay_contacto</targetReference>
+            </connector>
+            <label>Is True</label>
+        </rules>
+        <rules>
+            <name>Is_false</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Contest_una_persona</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Nocontacto</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>No_hay_contacto</targetReference>
+            </connector>
+            <label>Is false</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Decripcion_Cliente_no_acepta</name>
+        <label>Decripcion_Cliente_no_acepta</label>
+        <locationX>1018</locationX>
+        <locationY>1986</locationY>
+        <defaultConnector>
+            <targetReference>asignacion_de_lv5</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>List_Cliente_no_acepta</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Cliente_no_acepta</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Ninguno</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Motivos_de_no_seleccion</targetReference>
+            </connector>
+            <label>List_Cliente_no_acepta</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>DescripcionMotivos_de_contacto_no_efectivo</name>
+        <label>DescripcionMotivos_de_contacto_no_efectivo</label>
+        <locationX>1815</locationX>
+        <locationY>1549</locationY>
+        <defaultConnector>
+            <targetReference>Motivo_de_contacto_no_efectivo</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Motivos_de_contacto_no_efectivo_Desc</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Motivos_de_contacto_no_efectivo</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Ninguno</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Motivos_contacto_no_efetivo</targetReference>
+            </connector>
+            <label>Motivos_de_contacto_no_efectivo_Desc</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Evalua si el cliente despues de mostrar el error, selecciona un motivo de no correo</description>
+        <name>Error_Cliente_selecciona_motivo_de_no_correo</name>
+        <label>Error Cliente selecciona motivo de no correo</label>
+        <locationX>1489</locationX>
+        <locationY>1463</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Cliente_selecciona_motivo_de_no_correo_error</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Motivo_de_no_correo_error</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Seleccioneunaopcion</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Error_de_No_seleccion_motivo_de_no_correo</targetReference>
+            </connector>
+            <label>Cliente no selecciona motivo de no correo</label>
+        </rules>
+        <rules>
+            <name>si_el_cliente_selecciona_motivo_de_correo</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Motivo_de_no_correo_error</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>Seleccioneunaopcion</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Convertir_en_oportunidad</targetReference>
+            </connector>
+            <label>si el cliente selecciona motivo de correo</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>IDENTIFICA EL TIPO DE OBJETO.</description>
+        <name>ES_UNA_OPORTUNIDAD</name>
+        <label>ES UNA OPORTUNIDAD</label>
+        <locationX>413</locationX>
+        <locationY>1045</locationY>
+        <defaultConnector>
+            <targetReference>Pantalla_Error</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>OBJETO AJENO.</defaultConnectorLabel>
+        <rules>
+            <name>ES_UNA_OPORTUNIDAD_DESC</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ID_Lead</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <elementReference>IDENTIFICAOPORTUNIDADID</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>BuscaOportunidad</targetReference>
+            </connector>
+            <label>ES UNA OPORTUNIDAD</label>
+        </rules>
+        <rules>
+            <name>ES_UN_CANDIDATO</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ID_Lead</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <elementReference>IDENTIFICADORIDCANDIDATO</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Buscar_contacto</targetReference>
+            </connector>
+            <label>ES UN CANDIDATO</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Etapa_de_inicio_Flujo</name>
+        <label>Etapa de inicio Flujo</label>
+        <locationX>1025</locationX>
+        <locationY>1130</locationY>
+        <defaultConnector>
+            <targetReference>Pantalla_Error</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Salida_Etapa_contacto</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Nombredelregistro.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contacto</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Vista_contacto</targetReference>
+            </connector>
+            <label>Salida Etapa contacto</label>
+        </rules>
+        <rules>
+            <name>Salida_Informaci_n_y_Condiciones</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Nombredelregistro.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Información y Condiciones</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Informacion_y_condiciones</targetReference>
+            </connector>
+            <label>Salida Información y Condiciones</label>
+        </rules>
+        <rules>
+            <name>Salida_convers</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Nombredelregistro.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Apertura de Cuenta</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Pantalla_final</targetReference>
+            </connector>
+            <label>Salida convers</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Etapa_de_la_oportunidad</name>
+        <label>Etapa de la oportunidad</label>
+        <locationX>416</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Pantalla_Error</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Etapa_de_la_oportunidad_Contacto</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Oportunidad_Registro.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contacto</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Vista_contacto</targetReference>
+            </connector>
+            <label>Etapa de la oportunidad Contacto</label>
+        </rules>
+        <rules>
+            <name>Etapa_de_la_oportunidad_Cotizaci_n</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Oportunidad_Registro.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cotización</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Acepto_cotizar</targetReference>
+            </connector>
+            <label>Etapa de la oportunidad Cotización</label>
+        </rules>
+        <rules>
+            <name>Etapa_de_la_oportunidad_Venta_Autorizada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Oportunidad_Registro.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Venta Autorizada</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Pantalla_cobro</targetReference>
+            </connector>
+            <label>Etapa de la oportunidad Venta Autorizada</label>
+        </rules>
+        <rules>
+            <name>Closed_Won</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Oportunidad_Registro.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Won</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Close_Won</targetReference>
+            </connector>
+            <label>Closed Won</label>
+        </rules>
+        <rules>
+            <name>Close_lost</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Oportunidad_Registro.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Closed_Lose</targetReference>
+            </connector>
+            <label>Close lost</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>No_contactodeci</name>
+        <label>No_contactodeci</label>
+        <locationX>2070</locationX>
+        <locationY>1698</locationY>
+        <defaultConnector>
+            <targetReference>No_hubo_contacto_asig</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>No_contacto_des</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>No_contacto</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Ninguno</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>No_hay_contacto</targetReference>
+            </connector>
+            <label>No_contacto_des</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Oportunidad</name>
+        <label>Oportunidad</label>
+        <locationX>883</locationX>
+        <locationY>1621</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Salida_Oportunidad</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ID_Lead</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <elementReference>IDENTIFICAOPORTUNIDADID</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Convertir_en_oportunidad</targetReference>
+            </connector>
+            <label>Salida Oportunidad</label>
+        </rules>
+        <rules>
+            <name>Salida_Candidato</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ID_Lead</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <elementReference>IDENTIFICADORIDCANDIDATO</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Telef_no_y_Correo_Informacion_y_Condiciones</targetReference>
+            </connector>
+            <label>Salida Candidato</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Selecciona_Objeto_a_atualizar</name>
+        <label>Selecciona Objeto a atualizar</label>
+        <locationX>1765</locationX>
+        <locationY>2038</locationY>
+        <defaultConnector>
+            <targetReference>Equipara_valores_REgistro_Oportunidad</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Actualiza_Candidato</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ID_Lead</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <elementReference>IDENTIFICADORIDCANDIDATO</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Actualiza_lead</targetReference>
+            </connector>
+            <label>Actualiza Candidato</label>
+        </rules>
+        <rules>
+            <name>Actualiza_Oportunidad</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ID_Lead</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>IDENTIFICAOPORTUNIDADID</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Equipara_valores_REgistro_Oportunidad</targetReference>
+            </connector>
+            <label>Actualiza Oportunidad</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Valida_contacto_efectivo</name>
+        <label>Valida contacto efectivo</label>
+        <locationX>1638</locationX>
+        <locationY>1447</locationY>
+        <defaultConnector>
+            <targetReference>Hay_contacto</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Contacto_efectivo</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Pudiste_hablar_con_el_titular</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>ContestoTitular</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Fue_contacto_efectivo_asig</targetReference>
+            </connector>
+            <label>Contacto efectivo</label>
+        </rules>
+        <rules>
+            <name>Contacto_no_efectivo</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Pudiste_hablar_con_el_titular</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>ContactoNoEfectivo</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Motivos_contacto_no_efetivo</targetReference>
+            </connector>
+            <label>Contacto no efectivo</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Valida_Venta_cobrada</name>
+        <label>Valida Venta cobrada</label>
+        <locationX>948</locationX>
+        <locationY>475</locationY>
+        <defaultConnector>
+            <targetReference>Pantalla_cobro</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Venta no cobrada</defaultConnectorLabel>
+        <rules>
+            <name>Venta_Cobrada_lista</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Lista_Cobro</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Venta_Cobrada</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Etapa_emitida</targetReference>
+            </connector>
+            <label>Venta Cobrada lista</label>
+        </rules>
+        <rules>
+            <name>Venta_no_cobrada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Lista_Cobro</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>VentanoCobrada</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Motivo_de_no_venta_quote</targetReference>
+            </connector>
+            <label>Venta no cobrada</label>
+        </rules>
+    </decisions>
+    <description>Version de desarrollo entraga v1</description>
+    <interviewLabel>Campos Clave en la oportunidad y en el candidato {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Campos Clave en la oportunidad y en el candidato</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>Busca la oportunidad</description>
+        <name>BuscaOportunidad</name>
+        <label>BuscaOportunidad</label>
+        <locationX>426</locationX>
+        <locationY>881</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Etapa_de_la_oportunidad</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ID_Lead</elementReference>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <outputReference>Oportunidad_Registro</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>StageName</queriedFields>
+        <queriedFields>OwnerId</queriedFields>
+        <queriedFields>LeadSource</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Buscar_contacto</name>
+        <label>Buscar contacto</label>
+        <locationX>577</locationX>
+        <locationY>1153</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>asina_id_destino</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Pantalla_Error</targetReference>
+        </faultConnector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ID_Lead</elementReference>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <outputReference>Nombredelregistro</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Status</queriedFields>
+        <queriedFields>Email</queriedFields>
+        <queriedFields>MobilePhone</queriedFields>
+        <queriedFields>OwnerId</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <description>Cambio de etapa</description>
+        <name>Actualiza_lead</name>
+        <label>Actualiza lead</label>
+        <locationX>1783</locationX>
+        <locationY>2374</locationY>
+        <faultConnector>
+            <targetReference>Pantalla_Error_Update</targetReference>
+        </faultConnector>
+        <inputReference>Nombredelregistro</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Actualiza_Oportunidad_update</name>
+        <label>Actualiza Oportunidad</label>
+        <locationX>1906</locationX>
+        <locationY>877</locationY>
+        <faultConnector>
+            <targetReference>Pantalla_Error_Update</targetReference>
+        </faultConnector>
+        <inputReference>Oportunidad_Registro</inputReference>
+    </recordUpdates>
+    <screens>
+        <name>Acepto_cotizar</name>
+        <label>Acepto cotizar</label>
+        <locationX>424</locationX>
+        <locationY>193</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Cliente_acepta_cotizacion</targetReference>
+        </connector>
+        <fields>
+            <name>Acepta_cotizacion</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>Aceptacotizacion</choiceReferences>
+            <choiceReferences>Noaceptacotizacion</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>¿Pudiste terminar de Cotizar?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Close_Won</name>
+        <label>Close Won</label>
+        <locationX>1308</locationX>
+        <locationY>653</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>textofeli</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-family: Roboto, sans-serif; color: rgb(9, 142, 208); font-size: 24px;&quot;&gt;“¡Felicidades¡, tu venta se ha concretado”&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Closed_Lose</name>
+        <label>Closed Lose</label>
+        <locationX>1231</locationX>
+        <locationY>777</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>closetext</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-family: Roboto, sans-serif; color: rgb(38, 50, 56);&quot;&gt;El flujo ha terminado&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Error_de_No_seleccion_motivo_de_no_correo</name>
+        <label>Error de No seleccion motivo de no correo</label>
+        <locationX>1217</locationX>
+        <locationY>1197</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Error_Cliente_selecciona_motivo_de_no_correo</targetReference>
+        </connector>
+        <fields>
+            <name>ErrorNoSeleccionMotivoDeNoCorreo</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(241, 11, 11); font-family: sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;Recuerda que debes llenar los campos de correo electrónico, en caso de no tener correo electrónico debes seleccionar el motivo&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Motivo_de_no_correo_error</name>
+            <choiceReferences>Seleccioneunaopcion</choiceReferences>
+            <choiceReferences>Nolosabeusar</choiceReferences>
+            <choiceReferences>Notiene</choiceReferences>
+            <choiceReferences>Noquiererecibirpublicidad</choiceReferences>
+            <choiceReferences>Noseacuerdadesucontrasena</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>Seleccioneunaopcion</defaultSelectedChoiceReference>
+            <fieldText>Motivo de no correo</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Hay_contacto</name>
+        <label>Hay contacto</label>
+        <locationX>1641</locationX>
+        <locationY>1212</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Valida_contacto_efectivo</targetReference>
+        </connector>
+        <fields>
+            <name>Pudiste_hablar_con_el_titular</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>ContestoTitular</choiceReferences>
+            <choiceReferences>ContactoNoEfectivo</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>¿Pudiste hablar con el titular?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Informacion_y_condiciones</name>
+        <label>¿Cliente está interesado?</label>
+        <locationX>942</locationX>
+        <locationY>1394</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Cliente_acepto_recibir_info</targetReference>
+        </connector>
+        <fields>
+            <name>Cliente_est_interesado</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>Interesado</choiceReferences>
+            <choiceReferences>ClienteNointeresado</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>¿El cliente está interesado?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Motivo_de_no_correo</name>
+        <label>Motivo de no correo</label>
+        <locationX>1066</locationX>
+        <locationY>1568</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Cliente_selecciona_motivo_de_no_correo_decision</targetReference>
+        </connector>
+        <fields>
+            <name>Motivos_de_no_correo</name>
+            <choiceReferences>Nolosabeusar</choiceReferences>
+            <choiceReferences>Notiene</choiceReferences>
+            <choiceReferences>Noquiererecibirpublicidad</choiceReferences>
+            <choiceReferences>Noseacuerdadesucontrasena</choiceReferences>
+            <choiceReferences>Seleccioneunaopcion</choiceReferences>
+            <dataType>String</dataType>
+            <defaultSelectedChoiceReference>Seleccioneunaopcion</defaultSelectedChoiceReference>
+            <fieldText>Motivos de no correo</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Motivo_de_no_venta</name>
+        <label>Motivo de no venta</label>
+        <locationX>1803</locationX>
+        <locationY>301</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>LeadNoventa</targetReference>
+        </connector>
+        <fields>
+            <name>Motivos_de_no_venta</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>AsistidoDificilcontratarmedianteApp</choiceReferences>
+            <choiceReferences>AsistidoDificilcontratarmedianteTmkt</choiceReferences>
+            <choiceReferences>ClientelovaapensarIndeciso</choiceReferences>
+            <choiceReferences>Nopasaautenticacion</choiceReferences>
+            <choiceReferences>Nocumplepoliticadeedad</choiceReferences>
+            <choiceReferences>Nocumplepoliticamedica</choiceReferences>
+            <choiceReferences>Nocumplepoliticadomicilio</choiceReferences>
+            <choiceReferences>NocumplepoliticaclienteBBVA</choiceReferences>
+            <choiceReferences>ErrorconAppWeb</choiceReferences>
+            <choiceReferences>TDCTDDBBVARechazada</choiceReferences>
+            <choiceReferences>TDCTDDCDCOtroBancoRechazada</choiceReferences>
+            <choiceReferences>MediodePagoRechazado</choiceReferences>
+            <choiceReferences>NoQuiereCargosenTDCTDD</choiceReferences>
+            <choiceReferences>RequiereOtroMediodePago</choiceReferences>
+            <choiceReferences>SinSaldoSuficiente</choiceReferences>
+            <choiceReferences>Nocuentacondatosparacontratacion</choiceReferences>
+            <choiceReferences>Clientecuelga</choiceReferences>
+            <choiceReferences>Clientemolesto</choiceReferences>
+            <choiceReferences>Agendar</choiceReferences>
+            <choiceReferences>OtrosServicios</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Motivos de no venta</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Motivos_contacto_no_efetivo</name>
+        <label>Motivos contacto no efetivo</label>
+        <locationX>1743</locationX>
+        <locationY>1498</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>DescripcionMotivos_de_contacto_no_efectivo</targetReference>
+        </connector>
+        <fields>
+            <name>Motivos_de_contacto_no_efectivo</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>Telefonoequivocado</choiceReferences>
+            <choiceReferences>Noseescuchacliente</choiceReferences>
+            <choiceReferences>Sedejomensaje</choiceReferences>
+            <choiceReferences>Finado</choiceReferences>
+            <choiceReferences>Telefononecesitaextension</choiceReferences>
+            <choiceReferences>Nodisponible</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Motivos de contacto no efectivo</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Motivos_de_no_seleccion</name>
+        <label>Motivos de no seleccion</label>
+        <locationX>775</locationX>
+        <locationY>1952</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Decripcion_Cliente_no_acepta</targetReference>
+        </connector>
+        <fields>
+            <name>Cliente_no_acepta</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>Clientecuelga</choiceReferences>
+            <choiceReferences>Clientenotienetiempo</choiceReferences>
+            <choiceReferences>Nopermiteexplicaciondeproducto</choiceReferences>
+            <choiceReferences>Clientemolesto</choiceReferences>
+            <choiceReferences>Clientemolestonollamar</choiceReferences>
+            <choiceReferences>BloquearSanasPracticas</choiceReferences>
+            <choiceReferences>Desconfianzadelmediodecomunicacion</choiceReferences>
+            <choiceReferences>Clientenotienetrabajo</choiceReferences>
+            <choiceReferences>NoutilizaTDCTDD</choiceReferences>
+            <choiceReferences>MalaexperienciaBBVA</choiceReferences>
+            <choiceReferences>Nolegustanlosseguros</choiceReferences>
+            <choiceReferences>Desconfianzadelproductoofertado</choiceReferences>
+            <choiceReferences>Otroidioma</choiceReferences>
+            <choiceReferences>ClientepredispuestoporSMS</choiceReferences>
+            <choiceReferences>Secortollamada</choiceReferences>
+            <choiceReferences>Desconfianzaporllamadareciente</choiceReferences>
+            <choiceReferences>NumeroequivocadoLlamadaentrante</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Motivo de no interés</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>No_Acepta_cotizar</name>
+        <label>No Acepta cotizar</label>
+        <locationX>1797</locationX>
+        <locationY>50</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Asigna_No_cotizza</targetReference>
+        </connector>
+        <fields>
+            <name>Motivos_de_no_Cotizaci_n</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>Clientecuelga</choiceReferences>
+            <choiceReferences>Clientenotienetiempo</choiceReferences>
+            <choiceReferences>Nopermiteexplicaciondeproducto</choiceReferences>
+            <choiceReferences>Clientemolesto</choiceReferences>
+            <choiceReferences>Clientemolestonollamar</choiceReferences>
+            <choiceReferences>BloquearSanasPracticas</choiceReferences>
+            <choiceReferences>Desconfianzadelmediodecomunicacion</choiceReferences>
+            <choiceReferences>Clientenotienetrabajo</choiceReferences>
+            <choiceReferences>NoutilizaTDCTDD</choiceReferences>
+            <choiceReferences>MalaexperienciaBBVA</choiceReferences>
+            <choiceReferences>Nolegustanlosseguros</choiceReferences>
+            <choiceReferences>Desconfianzadelproductoofertado</choiceReferences>
+            <choiceReferences>Otroidioma</choiceReferences>
+            <choiceReferences>ClientepredispuestoporSMS</choiceReferences>
+            <choiceReferences>Secortollamada</choiceReferences>
+            <choiceReferences>Desconfianzaporllamadareciente</choiceReferences>
+            <choiceReferences>NumeroequivocadoLlamadaentrante</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Motivo de No Venta (acepta cotización)</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>No_hay_contacto</name>
+        <label>No hay contacto</label>
+        <locationX>1792</locationX>
+        <locationY>1197</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>No_contactodeci</targetReference>
+        </connector>
+        <fields>
+            <name>No_contacto</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>ContestadoraoBuzon</choiceReferences>
+            <choiceReferences>Lineaocupada</choiceReferences>
+            <choiceReferences>Malacalidaddeaudio</choiceReferences>
+            <choiceReferences>Nocontesta</choiceReferences>
+            <choiceReferences>Telefonosuspendido</choiceReferences>
+            <choiceReferences>Telefonoinexistenteotritono</choiceReferences>
+            <choiceReferences>Fueradelareadeservicio</choiceReferences>
+            <choiceReferences>Fueradeservicio</choiceReferences>
+            <choiceReferences>Secortallamada</choiceReferences>
+            <choiceReferences>AtendidoporCallmeBack</choiceReferences>
+            <choiceReferences>AtendidoporTrackingWeb</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Motivos de No contacto.</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Pantalla_cobro</name>
+        <label>Pantalla cobro</label>
+        <locationX>659</locationX>
+        <locationY>463</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Valida_Venta_cobrada</targetReference>
+        </connector>
+        <fields>
+            <name>Lista_Cobro</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>Venta_Cobrada</choiceReferences>
+            <choiceReferences>VentanoCobrada</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>¿Pudiste realizar el cobro?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Pantalla_Error</name>
+        <label>Pantalla Error</label>
+        <locationX>619</locationX>
+        <locationY>825</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ObjetoEquivocado</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 24px; color: rgb(244, 18, 18);&quot;&gt;La etapa que estas consultando no es válida.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Pantalla_Error_Update</name>
+        <label>Pantalla Error Update</label>
+        <locationX>2439</locationX>
+        <locationY>2258</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ES_UNA_OPORTUNIDAD</targetReference>
+        </connector>
+        <fields>
+            <name>MsjError</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 24px; color: rgb(231, 35, 35);&quot;&gt;Ocurrió Un error al Realizar el update &lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 24px; color: rgb(38, 36, 36);&quot;&gt;(Pulsa siguiente para continuar)&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Pantalla_final</name>
+        <label>Pantalla Final</label>
+        <locationX>1031</locationX>
+        <locationY>934</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Pantalla_final_textosalida</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Calibri, sans-serif; font-size: 20px; background-color: rgb(255, 255, 255);&quot;&gt;Para continuar con la oportunidad, da clic en el botón “Iniciar proceso de venta”&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Telef_no_y_Correo_Informacion_y_Condiciones</name>
+        <label>Telefóno y Correo</label>
+        <locationX>912</locationX>
+        <locationY>1828</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Cliente_ingresa_correo_electr_nico_decision</targetReference>
+        </connector>
+        <fields>
+            <name>Numero_Telefonico_Informacion_y_Condiciones</name>
+            <extensionName>flowruntime:phone</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Número Telefónico</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>required</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>readonly</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>value</name>
+                <value>
+                    <elementReference>Nombredelregistro.MobilePhone</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>pattern</name>
+                <value>
+                    <elementReference>tamano</elementReference>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <outputParameters>
+                <assignToReference>Nombredelregistro.MobilePhone</assignToReference>
+                <name>value</name>
+            </outputParameters>
+        </fields>
+        <fields>
+            <name>Correo_Electronico_Informacion_y_Condiciones</name>
+            <extensionName>flowruntime:email</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>disabled</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>readonly</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>value</name>
+                <value>
+                    <elementReference>Nombredelregistro.Email</elementReference>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <outputParameters>
+                <assignToReference>EmailApoyo</assignToReference>
+                <name>value</name>
+            </outputParameters>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Tipo_de_venta_Lista_venta</name>
+        <label>Tipo de venta</label>
+        <locationX>1790</locationX>
+        <locationY>172</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>asignacion_ventas</targetReference>
+        </connector>
+        <fields>
+            <name>Tipo_de_venta_list</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>AsistidoBcom</choiceReferences>
+            <choiceReferences>AsistidoBmovil</choiceReferences>
+            <choiceReferences>CotizadorTLMKSalvobuencobro</choiceReferences>
+            <choiceReferences>AsistidoCotizadores</choiceReferences>
+            <choiceReferences>TDCTDDBBVA</choiceReferences>
+            <choiceReferences>TDCTDDBBVAMSI</choiceReferences>
+            <choiceReferences>TDCTDDOtroBanco</choiceReferences>
+            <choiceReferences>TarjetaDigitalWallet</choiceReferences>
+            <choiceReferences>TarjetaDigitalWalletMSI</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Tipo de venta</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Hubo contacto primer nivel</description>
+        <name>Vista_contacto</name>
+        <label>Contacto</label>
+        <locationX>1378</locationX>
+        <locationY>1074</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Contacto_Primera_decisi_n</targetReference>
+        </connector>
+        <fields>
+            <name>Contest_una_persona</name>
+            <choiceReferences>Ninguno</choiceReferences>
+            <choiceReferences>Contacto</choiceReferences>
+            <choiceReferences>Nocontacto</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>¿Contestó una persona?</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>ES_UNA_OPORTUNIDAD</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>EmailApoyo</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ID_Lead</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>Nombredelregistro</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+    <variables>
+        <name>Objeciones_Para_Cotizar</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Oportunidad_Registro</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>Quote_var</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Quote</objectType>
+    </variables>
+    <variables>
+        <description>Stage_name</description>
+        <name>Stage_name</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>NotificationTExt</description>
+        <name>VariableNotification</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

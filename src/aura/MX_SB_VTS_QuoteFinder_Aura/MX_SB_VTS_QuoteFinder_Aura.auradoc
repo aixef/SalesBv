@@ -1,0 +1,8 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="MX_SB_VTS_QuoteFinder_Aura" ref="QuoteFinder" label="Resultados de busqueda">
+		<p>retorna los ultimos 5 quotes de la oportunidad, asi como permite la busqueda
+			de un quote por medio del folio de cotizacion
+		</p>
+    </aura:example>
+</aura:documentation>

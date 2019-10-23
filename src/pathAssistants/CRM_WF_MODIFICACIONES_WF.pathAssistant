@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>CRM_WF_Modificacion__c</entityName>
+    <fieldName>Estado_de_Modificaci_n__c</fieldName>
+    <masterLabel>WF MODIFICACIONES</masterLabel>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

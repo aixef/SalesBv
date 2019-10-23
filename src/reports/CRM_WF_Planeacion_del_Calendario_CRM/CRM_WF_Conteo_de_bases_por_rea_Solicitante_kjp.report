@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CRM_WF_Calendario_CRM__c.CRM_WF_Numero_Bases_Aprobadas_SMS_Push__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CRM_WF_Calendario_CRM__c.CRM_WF_Numero_Bases_rechazadas_SMS_Push__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CRM_WF_Calendario_CRM__c.CRM_WF_Numero_bases_Canceladas_SMS_Push__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CRM_WF_Calendario_CRM__c.CRM_WF_Numero_Bases_Aprobadas_CRM__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CRM_WF_Calendario_CRM__c.CRM_WF_Numero_Bases_Rechazadas_CRM__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CRM_WF_Calendario_CRM__c.CRM_WF_Numero_de_bases_Canceladas_CRM__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>Informe para la aplicación WF que muestra el numero de bases aprobadas, rechazadas y canceladas por área</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Area_solicitante__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Conteo de bases por Área Solicitante</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$CRM_WF_Calendario_CRM__c$CRM_WF_Planeacion_Calendario_CRM__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CRM_WF_Calendario_CRM__c.CRM_WF_Fecha_de_Carga__c</dateColumn>
+        <interval>INTERVAL_CURY</interval>
+    </timeFrameFilter>
+</Report>

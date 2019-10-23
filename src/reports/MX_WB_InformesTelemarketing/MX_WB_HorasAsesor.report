@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B0</blockId>
+            <joinTable>Opportunity</joinTable>
+        </blockInfo>
+        <columns>
+            <aggregateTypes>Sum</aggregateTypes>
+            <field>Opportunity.Activities$MX_WB_duracionLlamada__c</field>
+        </columns>
+        <columns>
+            <aggregateTypes>Sum</aggregateTypes>
+            <field>Opportunity.Activities$DurationInMinutes</field>
+        </columns>
+        <currency>MXN</currency>
+        <filter>
+            <criteriaItems>
+                <column>Opportunity$RecordType</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Opportunity.MX_WB_RT_Telemarketing</value>
+            </criteriaItems>
+        </filter>
+        <format>Tabular</format>
+        <name>Oportunidades con Tareas bloque 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>MX_WB_OportunidadesTareas__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>Opportunity$CreatedDate</dateColumn>
+            <interval>INTERVAL_THISMONTH</interval>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>o</joinTable>
+        </blockInfo>
+        <columns>
+            <field>CAMPAIGN_NAME</field>
+        </columns>
+        <currency>MXN</currency>
+        <filter>
+            <criteriaItems>
+                <column>Campaign.MX_SB_VTS_NombreProveedorCTI__c</column>
+                <isUnlocked>false</isUnlocked>
+                <operator>equals</operator>
+                <value>VCIP</value>
+            </criteriaItems>
+        </filter>
+        <format>Tabular</format>
+        <name>Campañas con Oportunidades bloque 1</name>
+        <params>
+            <name>open</name>
+            <value>all</value>
+        </params>
+        <params>
+            <name>probability</name>
+            <value>&gt;0</value>
+        </params>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>OpportunityCampaign</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>CAMPAIGN_STARTDATE</dateColumn>
+            <interval>INTERVAL_CURRENT</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>Opportunity</joinTable>
+    </blockInfo>
+    <description>Horas trabajadas por Asesor</description>
+    <format>MultiBlock</format>
+    <name>Horas trabajadas por Asesor</name>
+    <params>
+        <name>lsk</name>
+        <value>41</value>
+    </params>
+    <reportType>MX_WB_OportunidadesTareas__c</reportType>
+    <showDetails>true</showDetails>
+</Report>

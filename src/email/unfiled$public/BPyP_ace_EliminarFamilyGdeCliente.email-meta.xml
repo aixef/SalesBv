@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para notificar al Director de Oficina que desean eliminar el Family Group de un Cliente</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BBVA_CS</letterhead>
+    <name>Eliminar Family Group de Cliente</name>
+    <style>formalLetter</style>
+    <subject>Solicitud para eliminar Family Group de Cliente</subject>
+    <textOnly>Buen día
+
+Se le notifica que el usuario {!Account.OwnerFullName} desea eliminar el Family Group 
+
+       {!Account.BPyP_rb_Family_Group_Candidato__r}
+
+que pertenece al Cliente
+
+	{!Account.Name}
+
+El cual esta pendiente.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

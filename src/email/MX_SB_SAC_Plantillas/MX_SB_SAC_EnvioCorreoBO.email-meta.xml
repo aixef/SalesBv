@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Se mandara el caso cuando el BO valide la información y este errónea, podrá mandar el correo para pedir la información adicional</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MX_SB_SAC_MembreteEnviosSac</letterhead>
+    <name>MX_SB_SAC_EnvioCorreoBO</name>
+    <style>formalLetter</style>
+    <subject>Documentación faltante de folio {!Case.CaseNumber}</subject>
+    <textOnly>Estimad@ “{!Case.Account}”,
+
+
+
+Seguros BBVA Bancomer agradece su preferencia. Con la finalidad de dar seguimiento a su trámite de “{!Case.MX_SB_SAC_Detalle__c}”, correspondiente  a  la  póliza “{!Case.MX_SB_SAC_Contrato__c}”, con el número de folio “{!Case.CaseNumber}”. ”. Le notificamos que la documentación correspondiente al trámite, aún no está completa.
+
+
+
+
+Es importante realizar el envío de los siguientes documentos para llevar a cabo el trámite de forma exitosa:
+
+
+
+{!Case.MX_SB_SAC_DocumentosRequeridos__c}
+
+
+
+Recuerde que después de la llamada, solo tiene 72 horas como máximo para enviar los documentos, de lo contrario su trámite será cancelado y tendrá que volver a comunicarse para iniciar con su solicitud nuevamente.
+
+
+
+
+Para cualquier duda relacionada a su solicitud, favor de comunicarse a nuestra línea de atención a Clientes.
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

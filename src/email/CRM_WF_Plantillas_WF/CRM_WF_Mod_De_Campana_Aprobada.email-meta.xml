@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Modificación de Campaña aprobada</name>
+    <style>formalLetter</style>
+    <subject>La Modificación de Campaña {!CRM_WF_Modificacion__c.Name} ha sido aprobada</subject>
+    <textOnly>Por medio de la presente le informamos que la Modificación de  Campaña {!CRM_WF_Modificacion__c.Name} ha sido aprobada con los siguientes datos:
+
+
+Campaña: {!Campaign.CRM_WF_FIC__c}
+FIC: {!CRM_WF_Modificacion__c.CRM_WF_FIC__c}
+Estado de Modificación: {!CRM_WF_Modificacion__c.Estado_de_Modificaci_n__c}
+Clasificación: {!CRM_WF_Modificacion__c.CRM_WF_Clasificacion__c}
+Descripción: {!CRM_WF_Modificacion__c.CRM_WF_Descripcion__c}
+
+Para mayor detalle favor de dar clic en el siguiente vínculo:
+
+Detalle Modificación en Campaña</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

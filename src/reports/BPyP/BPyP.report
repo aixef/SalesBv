@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>HI001_VisitReport__c.CF001_rb_NombreComercialCliente__c</field>
+    </columns>
+    <columns>
+        <field>HI001_VisitReport__c.EG_ls_ObjetivoVisita__c</field>
+    </columns>
+    <columns>
+        <field>HI001_VisitReport__c.EG_ft_HoraVisitaLlamada__c</field>
+    </columns>
+    <columns>
+        <field>HI001_VisitReport__c.EG_rb_PersonaVisitadaContactada__c</field>
+    </columns>
+    <columns>
+        <field>HI001_VisitReport__c.EG_ls_TipoVisitaLlamadaRealizar__c</field>
+    </columns>
+    <columns>
+        <field>HI001_VisitReport__c.CF001_ca_CorreoEnviado__c</field>
+    </columns>
+    <description>Total de actividades abiertas Clientes &amp; Cadidatos</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>HI001_VisitReport__c.EG_tr_ReporteLlamadaComercialSL,HI001_VisitReport__c.EG_tr_ReporteLlamadaSeguimientoSL,HI001_VisitReport__c.EG_tr_ReporteVisitaComercialSL,HI001_VisitReport__c.EG_tr_ReporteVisitaSeguimientoSL,HI001_VisitReport__c.EG_tr_ReporteVisitaEstrategicaSL</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Tabular</format>
+    <name>BPyP Total de Actividades Mensuales</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$HI001_VisitReport__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

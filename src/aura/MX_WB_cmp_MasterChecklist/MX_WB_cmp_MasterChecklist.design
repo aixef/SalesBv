@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="guardarView" label="Mostrar Guardado" description="Bandera que sirve para mostrar botones de guardado de respuestas."/>
+    <design:attribute name="etapaActual" label="Etapa" description="Etapa que servira de referencia para buscar los textos que se mostraran."/>
+</design:component>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Seguros BBVA</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>MX_RTL_CSA_OBJETOSDWP__c</fieldNames>
+        <fieldNames>MX_RTL_CSA_SOLUCIONDWP__c</fieldNames>
+        <fieldNames>MX_RTL_CSA_DETALLESOLUCION__c</fieldNames>
+        <picklistValueName>Análisis</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Status</fieldNames>
+        <fieldNames>MX_RTL_CSA_RAZONCIERRE__c</fieldNames>
+        <picklistValueName>Cerrado</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <picklistValueName>En Espera de Insumos</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>MX_RTL_CSA_COMMIT__c</fieldNames>
+        <fieldNames>MX_RTL_CSA_OSERVACIONES_SEGUROS__c</fieldNames>
+        <picklistValueName>Resolución</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>MX_RTL_CSA_INCIDENTES_DWP</recordTypeName>
+</PathAssistant>

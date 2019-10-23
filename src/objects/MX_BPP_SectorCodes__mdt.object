@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permite guardar los códigos de sector que corresponden a cada tipo de cuenta, por ejemplo, para el tipo de cuenta personal se pueden guardar los códigos de sector F32  y F33.</description>
+    <fields>
+        <fullName>MX_BPP_SectorAccountType__c</fullName>
+        <description>Permite elegir el tipo de cuenta que requiere cada código de sector, por ejemplo, el código de sector F32 corresponde a una cuenta personal, mientras que el código de sector M31 corresponde a una cuenta empresarial.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Tipo de cuenta para el sector</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cuenta empresarial</fullName>
+                    <default>true</default>
+                    <label>Cuenta empresarial</label>
+                </value>
+                <value>
+                    <fullName>Cuenta personal</fullName>
+                    <default>false</default>
+                    <label>Cuenta personal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_BPP_SectorCode__c</fullName>
+        <description>Código de sector, por ejemplo, F32, M31.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Código de sector</label>
+        <required>true</required>
+        <type>TextArea</type>
+    </fields>
+    <label>Configuración de códigos de sector</label>
+    <pluralLabel>Configuraciones de códigos de sector</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

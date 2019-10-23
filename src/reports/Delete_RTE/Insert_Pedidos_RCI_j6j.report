@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c$MX_RTE_Estatus__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$MX_RTE_Completado__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c$MX_RTE_Area__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$MX_RTE_Documento__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$MX_RTE_Descripci_n__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$MX_RTE_Fecha_compromiso__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c$MX_RTE_Fecha_de_cumplimiento__c</field>
+    </columns>
+    <crossFilters>
+        <operation>with</operation>
+        <primaryTableColumn>MX_RTE_Check_List_Modulo__c$Id</primaryTableColumn>
+        <relatedTable>MX_RTE_Pedido_RCI__c</relatedTable>
+        <relatedTableJoinColumn>MX_RTE_Check_List_M_dulo__c</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>MXN</currency>
+    <format>Tabular</format>
+    <name>Insert Pedidos RCI</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>MX_RTE_Check_List_con_Condicionantes__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>MX_RTE_Check_List_Modulo__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

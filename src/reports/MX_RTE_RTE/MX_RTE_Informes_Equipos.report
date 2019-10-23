@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Miembros_del_equipo__r$MX_RTE_Rol__c</field>
+    </columns>
+    <columns>
+        <field>Contact$MX_WF_Usuario_de_red__c</field>
+    </columns>
+    <columns>
+        <field>Contact$MX_RTE_Edificio__c</field>
+    </columns>
+    <columns>
+        <field>Contact$MX_RTE_Piso__c</field>
+    </columns>
+    <columns>
+        <field>Contact$MX_RTE_Codigo_Lugar__c</field>
+    </columns>
+    <columns>
+        <field>Contact$MX_WB_txt_Extension__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <format>Tabular</format>
+    <name>Informes Equipos</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Equipos_y_contactos__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<table cellpadding="0" width="500" cellspacing="0" id="topTable" height="450" style="font-family: &quot;Times New Roman&quot;; background-color: rgb(204, 204, 204);"><tbody><tr valign="top"><td style="background-color: rgb(255, 255, 255); vertical-align: top; height: 100px;"><img border="0" beditid="r1sp1" blabel="headerImage" id="r1sp1" src="https://bancomer-retail--bo.my.salesforce.com/servlet/servlet.ImageServer?id=0151U000001YpSm&amp;oid=00D1U000000p5cy"></td></tr><tr valign="top"><td style="background-color: rgb(170, 170, 255); height: 5px;"></td></tr><tr valign="top"><td styleinsert="1" height="300" style="background-color: rgb(255, 255, 255); font-size: 12pt; font-family: arial;"><table border="0" cellpadding="5" width="600" cellspacing="5" height="400"><tbody><tr valign="top" height="50"><td teditid="c1r1" aeditid="c1r1" locked="0" style="font-size: 12pt;">Estimad@&nbsp;{!Case.Account},<br><br><div><font face="arial">Seguros BBVA Bancomer agradece su preferencia. Le informamos que el día de hoy&nbsp;{!Case.CreatedDate}</font>, se adjunta el documento para inicio de su trámite correspondiente a:&nbsp;<font face="arial">{!Case.Reason}</font>&nbsp;y fue atendido</div><div><font face="arial">exitosamente con el folio {!Case.CaseNumber}.</font></div><div><font face="arial"><br></font></div><div><font face="arial"><div>Por favor, ayúdenos a contestar la siguiente encuesta de la atención proporcionada:</div><div>“liga de encuesta”</div><div>Para cualquier duda relacionada a su solicitud, favor de comunicarse a nuestra línea de atención a Clientes.</div></font></div></td></tr></tbody></table></td></tr></tbody></table>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

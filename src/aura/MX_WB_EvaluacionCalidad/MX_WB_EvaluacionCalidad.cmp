@@ -1,0 +1,278 @@
+<aura:component  controller="MX_WB_EvaluacionCalidad_ctrl" implements="lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,force:appHostable" access="global">
+    <aura:handler name="init" action="{!c.initSelect}" value="{!this}" />
+    <aura:attribute name="configuraciones" type="List" />
+    <aura:attribute name="clasificacionSecciones" type="List" />
+    <aura:attribute name="evaluacion" type="Evaluacion__c" access="global" default="{}" />
+    <aura:attribute name="isUpdate" type="Boolean" default="false" />
+
+    <aura:attribute name="idConcepto" type="String" />
+    <aura:attribute name="PuntosEntrenamientoSelected" type="List" />
+
+    <aura:attribute name="lstEvaluacionCon" type="List" />
+    <aura:attribute name="lstPuntosEntrenamiento" type="List" />
+    <aura:attribute name="evaluaConcepto" type="Map" />
+    <aura:attribute name="openModal" type="Boolean" default="false"/>
+
+    <aura:attribute name="crearModificarEvaluacion" type="Boolean" default="true"
+                    description="Determines if the user can create or modify a record"/>
+
+    <aura:attribute name="options" type="List" default="[{'label': 'Sí cumple', 'value': '1'},{'label': 'No cumple', 'value': '0'},{'label': 'No aplica', 'value': '2'}]"/>
+    <aura:attribute name="optionsEFENF" type="List" default="[{'label': 'Error fatal', 'value': 'true', 'checked':'true'},{'label': 'Error no fatal', 'value': 'false'}]"/>
+	<aura:attribute name="tipoVenta" type="String" />
+    <aura:attribute name="evaluacionCalidad" type="String" description="Revisada o pendiente para la opp"/>
+    <aura:attribute name="oppId" type="Id" />
+    <aura:attribute name="folioCotizacion" type="String" />
+    <aura:attribute name="nombrePropietario" type="String" />
+
+    <aura:attribute name="stage" type="Integer" default="1"/>
+    <aura:registerEvent name="saveDisabled" type="c:MX_WB_EvaluacionEvent"/>
+    <aura:handler name="notifyConcept" event="c:MX_WB_PuntosEntrenamientoEvent" action="{!c.addTrainingPoint}"/>
+    <aura:method name="toSave" action="{!c.guardarEvaluacion}"/>
+    <div class="slds-section slds-is-open">
+        <h1 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="DATOS DE LA EVALUACIÓN DE CALIDAD">Datos de la evaluación de calidad</span>
+            <span class="slds-float-span"> Folio CTI: {!v.folioCotizacion}</span>
+        </h1>
+        <div aria-hidden="false" class="slds-section__content">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_6-of-12">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_12-of-12">
+                            <lightning:input label="Asesor de ventas a evaluar" disabled="true" value="{!v.nombrePropietario}" />
+                        </div>
+                        <div class="slds-col slds-size_12-of-12">
+                            <lightning:textarea disabled="{!v.crearModificarEvaluacion == true ? false:true}" name="txtObservaciones" label="Observaciones" value="{!v.evaluacion.Observaciones__c}" class="tallTextArea" maxlength="255" />
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <table class="slds-table slds-table_cell-buffer">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th scope="col" colspan="2">
+                                    <div class="slds-truncate">
+                                        <strong class="slds-text-title_caps" >INSTRUCCIONES DE LLENADO</strong>
+                                        <p>Evaluar el desempeño con la siguiente escala</p>
+
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>No aplica</td>
+                                <td>Esta opción no aplica a la pregunta realizada</td>
+                            </tr>
+                            <tr>
+                                <td>No cumple</td>
+                                <td>Deficiente</td>
+                            </tr>
+                            <tr>
+                                <td>Si cumple</td>
+                                <td>Destacado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-section slds-is-open">
+        <h1 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="Encuesta">Registro de la evaluación</span>
+        </h1>
+        <div aria-hidden="false" class="slds-section__content">
+            <div class="slds-path">
+                <div class="slds-grid slds-path__track">
+                    <div class="slds-grid slds-path__scroller-container">
+                        <div class="slds-path__scroller" role="application">
+                            <div class="slds-path__scroller_inner">
+                                <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                    <aura:iteration items="{!v.configuraciones}" var="val">
+                                        <li class="{!val.seccion.Clase}" role="presentation" id="{!val.seccion.NumeroSeccion__c}"  onclick="{!c.updatePath}">
+                                            <a aria-selected="true" class="slds-path__link" href="javascript:void(0);" role="option" tabindex="-1">
+                                                <span class="slds-path__stage">
+                                                    <lightning:icon iconName="utility:check" size="x-small"/>
+                                                    <span class="slds-assistive-text">Etapa completada</span>
+                                                </span>
+                                                <span class="slds-path__title" title="Hello">{!val.seccion.NumeroSeccion__c}&nbsp;{!val.nombreInicial}</span>
+                                            </a>
+                                        </li>
+                                    </aura:iteration>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aura:iteration items="{!v.configuraciones}" var="val">
+                <aura:If isTrue="{!v.stage == val.seccion.NumeroSeccion__c &amp;&amp; val.seccion.NumeroSeccion__c != v.configuraciones.length}">
+                    <div>
+                        <aura:iteration items="{!val.listWrapperSubseccionConceptos}" var="valSub">
+                            <div class="slds-section slds-is-open">
+                                <h1 class="slds-section__title slds-theme_shade">
+                                    <span class="slds-truncate slds-p-horizontal_small" title="{!valSub.subseccion.Nombre__c}">{!valSub.subseccion.Nombre__c}</span>
+                                </h1>
+                                <div aria-hidden="false" class="slds-section__content">
+                                    <div class="slds-grid slds-wrap">
+                                        <aura:iteration items="{!valSub.listWrapperEvaluacionConcepto}" var="valSubConcepto" indexVar="indexssc">
+                                            <div class="slds-col slds-size_4-of-12 slds-question">
+                                                <div class="slds-box">
+                                                    <lightning:radioGroup name="{!valSubConcepto.conceptos.Id}" label="{!valSubConcepto.conceptos.Descripcion__c}"
+                                                    		options="{!v.options}" value="{!valSubConcepto.evaluacionConcepto.Calificacion__c}" type="button" onchange="{!c.radioChanged}"
+                                                            disabled="{!v.crearModificarEvaluacion == true ? false:true}"/>
+                                                    <aura:If isTrue="{!v.tipoVenta == 'Closed Lost'}">
+                                                        <lightning:radioGroup name="{!valSubConcepto.conceptos.Id+indexssc}" label="Tipo de error" options="{! v.optionsEFENF }"
+                                                                class="{!valSubConcepto.conceptos.MX_WB_ClasificacionErrorNoVenta__c == 'Selecciona' &amp;&amp; valSubConcepto.evaluacionConcepto.Calificacion__c == '0' ? '':'slds-hide'}"
+                                                        		 value="{!valSubConcepto.evaluacionConcepto.ErrorFatal}" type="button" disabled="{!v.crearModificarEvaluacion == true ? false:true}"/>
+                                                        <aura:set attribute="else">
+                                                            <lightning:radioGroup name="{!valSubConcepto.conceptos.Id+indexssc}" label="Tipo de error" options="{! v.optionsEFENF }"
+                                                                    class="{!valSubConcepto.conceptos.MX_WB_ClasificacionErrorVenta__c == 'Selecciona' &amp;&amp; valSubConcepto.evaluacionConcepto.Calificacion__c == '0' ? '':'slds-hide'}"
+                                                            		value="{!valSubConcepto.evaluacionConcepto.ErrorFatal }" type="button" disabled="{!v.crearModificarEvaluacion == true ? false:true}"/>
+                                                        </aura:set>
+                                                    </aura:If>
+                                                    <div class="div-puntos__entrenamiento">
+                                                        <lightning:buttonIcon class="{!valSubConcepto.evaluacionConcepto.Calificacion__c == '0' ? '':'slds-hide'}"
+                                                                name="{!valSubConcepto.conceptos.Id}" iconName ="utility:new_window" variant="border-filled" onclick="{! c.openModalPuntos }"
+                                                        		alternativeText="Abrir puntos de entrenamiento"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </aura:iteration>
+                                    </div>
+                                </div>
+                            </div>
+                        </aura:iteration>
+                    </div>
+                    <div>
+                        <div class="slds-section slds-is-open">
+                            <h1 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small" title="Clasificación">Clasificación</span>
+                            </h1>
+                            <div aria-hidden="false" class="slds-section__content">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_4-of-12 slds-question">
+                                        <lightning:textarea name="shaciendo" value="{!val.seccion.SeguirHaciendo__c}" label="Seguir haciendo" maxlength="255" disabled="{!v.crearModificarEvaluacion == true ? false:true}"/>
+                                    </div>
+                                    <div class="slds-col slds-size_4-of-12 slds-question">
+                                        <lightning:textarea name="ehacer" value="{!val.seccion.EmpezarAHacer__c}" label="Empezar a hacer" maxlength="255" disabled="{!v.crearModificarEvaluacion == true ? false:true}"/>
+                                    </div>
+                                    <div class="slds-col slds-size_4-of-12 slds-question">
+                                        <lightning:textarea name="dhacer" value="{!val.seccion.DejarDeHacer__c}" label="Dejar de hacer" maxlength="255" disabled="{!v.crearModificarEvaluacion == true ? false:true}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aura:If>
+            </aura:iteration>
+            <aura:If isTrue="{!v.stage == v.configuraciones.length}">
+                <div class="slds-section slds-is-open">
+                    <h1 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Encuesta">Resultados obtenidos</span>
+                    </h1>
+                    <div aria-hidden="false" class="slds-section__content">
+                        <div class="slds-grid slds-wrap" >
+                            <div class="slds-col slds-size_6-of-12 slds-question slds-question-divisor">
+                                <div class="slds-section slds-is-open">
+                                    <h1 class="slds-section__title">
+                                        <span class="slds-truncate slds-p-horizontal_small" title="Porcentaje de secciones">Puntaje secciones y subsecciones</span>
+                                        <span class="slds-button-calcula-porcentaje">
+                                            <lightning:button disabled="{!v.crearModificarEvaluacion == true ? false:true}" class="slds-button-section" variant="brand"
+                                                              label="Calcula porcentaje de sección" title="Calcula porcentaje de sección" onclick="{! c.calcularPorcentaje }" />
+                                        </span>
+                                    </h1>
+                                    <div aria-hidden="false" class="slds-section__content">
+                                        <table class="slds-table slds-table_cell-buffer ">
+                                            <tbody>
+                                                <aura:iteration items="{!v.configuraciones}" var="val">
+                                                    <tr class="{!v.configuraciones.length == val.seccion.NumeroSeccion__c ?'slds-hidden':''}">
+                                                        <td class="td-first-label"><strong>{!val.nombreInicial}</strong></td>
+                                                        <td class="td-first-value"><strong>{!val.promediosecciones} / {!val.baseseccion}</strong></td>
+                                                    </tr>
+                                                    <aura:iteration items="{!val.listWrapperSubseccionConceptos}" var="valSub">
+                                                        <tr>
+                                                            <td class="td-second-label">{!valSub.subseccion.Nombre__c}</td>
+                                                            <td class="td-second-value">{!valSub.promediosubseccion}</td>
+                                                        </tr>
+                                                    </aura:iteration>
+                                                </aura:iteration>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12 slds-question">
+                                <div class="slds-section slds-is-open">
+                                    <h1 class="slds-section__title">
+                                        <span class="slds-truncate slds-p-horizontal_small" title="Porcentaje de secciones">Evaluación general</span>
+                                    </h1>
+                                    <div aria-hidden="false" class="slds-section__content">
+                                        <table class="slds-table slds-table_cell-buffer ">
+                                            <tbody>
+                                                <tr>
+                                                    <td><label><strong>Puntaje total</strong></label> </td>
+                                                    <td>{!v.evaluacion.MX_WB_PuntajeTotal__c}</td>
+                                                    <td><label><strong>Puntaje Base</strong></label> </td>
+                                                    <td>{!v.evaluacion.MX_WB_PuntajeBase__c}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><strong>Errores fatales</strong></label> </td>
+                                                    <td>{!v.evaluacion.MX_WB_ErroresFatales__c}</td>
+                                                    <td><label><strong>Errores no fatales</strong></label> </td>
+                                                    <td>{!v.evaluacion.MX_WB_ErroresNoFatales__c}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><strong>¿Porcentaje de la evaluación?</strong></label> </td>
+                                                    <td><lightning:formattedNumber value="{!v.evaluacion.PorcentajeTotal__c/100}" style="percent" maximumFractionDigits="2"/></td>
+                                                    <td><label><strong>Barra de porcentaje</strong></label> </td>
+                                                    <td>
+                                                        <aura:if isTrue="{!and(v.evaluacion.PorcentajeTotal__c >= 0 , lessthan(v.evaluacion.PorcentajeTotal__c ,25))}">
+                                                            <img src="{!$Resource.BarraCero}" alt="logo" class="tamanio2" width="auto" height="auto"/>
+                                                        </aura:if>
+                                                        <aura:if isTrue="{!and(v.evaluacion.PorcentajeTotal__c >= 25 , lessthan(v.evaluacion.PorcentajeTotal__c, 50))}">
+                                                            <img src="{!$Resource.BarraUno}" alt="logo" class="tamanio2" width="auto" height="auto"/>
+                                                        </aura:if>
+                                                        <aura:if isTrue="{!and(v.evaluacion.PorcentajeTotal__c >= 50 , lessthan(v.evaluacion.PorcentajeTotal__c, 75))}">
+                                                            <img src="{!$Resource.BarraDos}" alt="logo" class="tamanio2" width="auto" height="auto"/>
+                                                        </aura:if>
+                                                        <aura:if isTrue="{!and(v.evaluacion.PorcentajeTotal__c >= 75 , lessthan(v.evaluacion.PorcentajeTotal__c, 100))}">
+                                                            <img src="{!$Resource.BarraTres}" alt="logo" class="tamanio2" width="auto" height="auto"/>
+                                                        </aura:if>
+                                                        <aura:if isTrue="{!v.evaluacion.PorcentajeTotal__c >= 100}">
+                                                            <img src="{!$Resource.BarraCuatro}" alt="logo" class="tamanio2" width="auto" height="auto"/>
+                                                        </aura:if>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aura:If>
+        </div>
+    </div>
+
+    <aura:if isTrue="{!v.openModal}">
+        <div>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container slds-puntos__entrenamiento">
+                    <header class="slds-modal__header">
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Evaluación de calidad</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        {!v.body}
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_brand" onclick="{!c.closeSaveModal}">Guardar</button>
+                        <button class="slds-button slds-button_neutral" onclick="{!c.closeModal}">Cancelar</button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+</aura:component>

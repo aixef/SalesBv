@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>MX_SB_SAC_invEncuestaColaboracion</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sirve para compartir las invitaciones de encuestas entre los asesores de SAC</description>
+        <label>MX_SB_SAC_invEncuestaColaboracion</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>MX_SB_SAC_GerenteConsultorSeguros</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>MX_SB_SAC_GerenteConsultorSeguros</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

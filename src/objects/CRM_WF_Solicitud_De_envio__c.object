@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_WF_Solicitud_Online_P_gina_de_registro1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>MX_WF_Solicitud_de_envIo</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>MX_WF_Solicitud_de_envIo</fullName>
+        <fields>Name</fields>
+        <fields>MX_WF_Tipo_de_Solicitud__c</fields>
+        <label>Solicitud de envío</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Bomberazo__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bomberazo</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Canal__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.GBL_WF_Canal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Canal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Folio_gasto__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Folio de gasto - Primera parte</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Justificacion_de_Bomberazo__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Justificación de Bomberazo</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Liga_con_Editable__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.CRM_WF_Liga_con_Editable__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Liga con Editable</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Mes_Real_Envio__c</fullName>
+        <externalId>false</externalId>
+        <formula>MONTH( MX_WF_Fecha_real_de_envio__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mes real de Envío</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Mes_de_Envio__c</fullName>
+        <externalId>false</externalId>
+        <formula>MONTH(MX_WF_Fecha_Programada_de_envio__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mes de Envío</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_de_la_Campana__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.CRM_WF_Nombre_Del_Brief__r.CRM_WF_Campana_Brief__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nombre de la Campaña</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_del_Remitente__c</fullName>
+        <externalId>false</externalId>
+        <label>Nombre del Remitente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A/B test sender name</fullName>
+                    <default>false</default>
+                    <label>A/B test sender name</label>
+                </value>
+                <value>
+                    <fullName>BBVA Bancomer</fullName>
+                    <default>false</default>
+                    <label>BBVA Bancomer</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Objetivo_de_la_Version__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(MX_WF_Canal__r.CRM_WF_Objetivo_De_La_Version__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Objetivo de la Versión</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_PEP_8_digitos__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>PEP - 8 digitos</label>
+        <length>11</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_PEP__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;GB.&quot; + CRM_WF_PEP_8_digitos__c + &quot;-&quot; + PEP_3_digitos__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PEP</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Pixeles__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Pixeles</label>
+        <length>6000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Preheader_B__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Preheader B</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Preheader__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Preheader A</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Producto__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.GBL_WF_Producto__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Producto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Razon_prueba__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Hipótesis (Razón de ser de la prueba)</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Subject_B__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Subject B</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Subject__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Subject A</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Subproducto__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.GBL_WF_Subproducto__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subproducto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tipo_de_Canal__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.GBL_WF_Tipo_de_Canal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de Canal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tracking_Code__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Tracking Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_URL_TC_Analytics__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(CRM_WF_URL__c), &quot;&quot;,CRM_WF_URL__c + &quot;/&quot; +  CRM_WF_Tracking_Code__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>URL TC Analytics</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_URL__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Nombre_del_Solicitante__c</fullName>
+        <description>Campo de tipo fórmula para la aplicación Workflow, devuelve el nombre del solicitante del Brief asociado al registro de solicitud Online</description>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.CRM_WF_Nombre_Del_Brief__r.GBL_WF_Solicitante__r.GBL_WF_Nombre_Completo__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nombre del Solicitante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_AB_Testing__c</fullName>
+        <description>Campo para la aplicación workflow, permite verificar si la solicitud llevará un A/B Testing</description>
+        <externalId>false</externalId>
+        <label>AB/Testing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sí</fullName>
+                    <default>false</default>
+                    <label>Sí</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_A_Real_De_Env_o__c</fullName>
+        <description>Campo tipo fórmula para la aplicación Workflow, dvuelve el año en el que se envió la solicitud</description>
+        <externalId>false</externalId>
+        <formula>TEXT ( YEAR ( MX_WF_Fecha_real_de_envio__c ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Año real de Envío</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Area_Solicitante__c</fullName>
+        <description>Campo tipo fórmula para la aplicación workflow, muestra el área solicitante</description>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.CRM_WF_Nombre_Del_Brief__r.CRM_WF_Area_Solicitante__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Área Solicitante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Bases_a_Enviar__c</fullName>
+        <description>Campo para la aplicación workflow devuelve el número de bases que se envían en el objeto Carta Recurrente</description>
+        <externalId>false</externalId>
+        <formula>MX_WF_Carta_Recurrente__r.CRM_WF_Bases_A_Enviar__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bases a Enviar</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Brief__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo principal detalle para la aplicación workflow, hace una búsqueda hacia el Brief principal</description>
+        <externalId>false</externalId>
+        <label>Brief</label>
+        <referenceTo>CRM_WF_Brief__c</referenceTo>
+        <relationshipName>Solicitudes_Online</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_CR_6_digitos__c</fullName>
+        <description>Campo para la aplicación workflow, permite escribir los primeros 6 dígitos del código CR</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>CR (6 dígitos)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_CR__c</fullName>
+        <description>Campo para la aplicación workflow, devuelve un código de distinción del registro</description>
+        <externalId>false</externalId>
+        <formula>IF( MX_WF_CR_6_digitos__c  &lt;&gt; &quot;&quot;, &quot;MX11&quot;+MX_WF_CR_6_digitos__c, &quot;MX11&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Cambiar_a_en_revision__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Cambiar a en revisión</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Canal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Nombre del Arte</label>
+        <referenceTo>CRM_WF_Artes__c</referenceTo>
+        <relationshipLabel>Solicitudes de Envío</relationshipLabel>
+        <relationshipName>Solicitudes_de_Env_o</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Carta_Recurrente__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo principal detalle para la aplicación workflow, hace una búsqueda hacia el detalle Carta Recurrente</description>
+        <externalId>false</externalId>
+        <label>Carta Recurrente</label>
+        <referenceTo>CRM_WF_Cartas_Recurrentes__c</referenceTo>
+        <relationshipName>Solicitudes_Online</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Comentarios__c</fullName>
+        <description>Campo para la aplicación workflow, permite detallar los comentarios sobre la Solicitud Online</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Comentarios</label>
+        <length>6000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Cuantas_Versiones__c</fullName>
+        <description>Campo tipo fórmula para la aplicación workflow,muestra el número de versiones del arte</description>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.CRM_WF_Nombre_Del_Brief__r.CRM_WF_ArtesEG_Aprobados__c + MX_WF_Canal__r.CRM_WF_Nombre_Del_Brief__r.CRM_WF_ArtesGM_Aprobados__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>¿Cuántas Versiones?</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Cuenta_del_Remitente__c</fullName>
+        <description>Campo tipo texto para la aplicación workflow, permite determinar la cuenta del remitente</description>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Clientes - info@email.bbva.mx</fullName>
+                    <default>false</default>
+                    <label>Clientes - info@email.bbva.mx</label>
+                </value>
+                <value>
+                    <fullName>No clientes - comunicados@info.bbva.mx</fullName>
+                    <default>false</default>
+                    <label>No clientes - comunicados@info.bbva.mx</label>
+                </value>
+                <value>
+                    <fullName>Alianzas Comerciales - promociones@promociones.bbva.mx</fullName>
+                    <default>false</default>
+                    <label>Alianzas Comerciales - promociones@promociones.bbva.mx</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Cuentas_de_correo_Remitente__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+ ISPICKVAL(MX_WF_Cuenta_del_Remitente__c, &quot;Clientes - info@email.bbva.mx&quot;) , 
+ &quot;info@email.bbva.mx&quot;, 
+ IF(
+  ISPICKVAL(MX_WF_Cuenta_del_Remitente__c, &quot;No clientes - comunicados@info.bbva.mx&quot;) , 
+  &quot;comunicados@info.bbva.mx&quot;, 
+  IF(
+   ISPICKVAL(MX_WF_Cuenta_del_Remitente__c, &quot;Alianzas Comerciales - promociones@promociones.bbva.mx&quot;) , 
+   &quot;promociones@promociones.bbva.mx&quot;, 
+   &quot;&quot;
+  ) 
+ ) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Cuentas de correo (Remitente)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Data_Extension__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.CRM_WF_Data_Extension__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Data Extension</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Dia_Real_De_Env_o__c</fullName>
+        <description>Campo tipo fórmula para la aplicación workflow, devuelve el día que se envió la solicitud</description>
+        <externalId>false</externalId>
+        <formula>TEXT ( DAY( MX_WF_Fecha_real_de_envio__c ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Día real de Envío</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Estatus_Bomberazo__c</fullName>
+        <externalId>false</externalId>
+        <label>Estatus Bomberazo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pendiente</fullName>
+                    <default>false</default>
+                    <label>Pendiente</label>
+                </value>
+                <value>
+                    <fullName>Aprobado</fullName>
+                    <default>false</default>
+                    <label>Aprobado</label>
+                </value>
+                <value>
+                    <fullName>Rechazado</fullName>
+                    <default>false</default>
+                    <label>Rechazado</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Etapa_Solicitud_Online__c</fullName>
+        <description>Campo de tipo lista de selección para la aplicación workflow, muestra la etapa en la que se encuentra el registro</description>
+        <externalId>false</externalId>
+        <label>Etapa Solicitud</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Revisión Spoc Email</fullName>
+                    <default>true</default>
+                    <label>Revisión spoc email</label>
+                </value>
+                <value>
+                    <fullName>TC Analytics</fullName>
+                    <default>false</default>
+                    <label>TC analytics</label>
+                </value>
+                <value>
+                    <fullName>Envío de pruebas perso</fullName>
+                    <default>false</default>
+                    <label>Envío de pruebas perso</label>
+                </value>
+                <value>
+                    <fullName>Vo.Bo. pruebas perso</fullName>
+                    <default>false</default>
+                    <label>Vo.Bo. pruebas perso</label>
+                </value>
+                <value>
+                    <fullName>En Proceso de Envió</fullName>
+                    <default>false</default>
+                    <label>En proceso de envió</label>
+                </value>
+                <value>
+                    <fullName>Enviado</fullName>
+                    <default>false</default>
+                    <label>Enviado</label>
+                </value>
+                <value>
+                    <fullName>Cancelado</fullName>
+                    <default>false</default>
+                    <label>Cancelado</label>
+                </value>
+                <value>
+                    <fullName>Rechazada</fullName>
+                    <default>false</default>
+                    <label>Rechazada</label>
+                </value>
+                <value>
+                    <fullName>Aprobación Solicitud Online</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Aprobación Solicitud Online</label>
+                </value>
+                <value>
+                    <fullName>En revisión</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>En revisión</label>
+                </value>
+                <value>
+                    <fullName>Finalizada</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Finalizada</label>
+                </value>
+                <value>
+                    <fullName>Solicitud</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Solicitud</label>
+                </value>
+                <value>
+                    <fullName>Vo.Bo. Administrador</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Vo.Bo. Administrador</label>
+                </value>
+                <value>
+                    <fullName>Vo.Bo. Pixel</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Vo.Bo. Pixel</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_De_Solicitud_Online__c</fullName>
+        <description>Campo tipo fecha para la aplicación workflow permite seleccionar la fecha en la que se crea la solicitud online</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de Solicitud de Envío</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_Final_Testing__c</fullName>
+        <description>Campo tipo fecha para la aplicación workflow, permite seleccionar la fecha en la que termina el testing del email</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha Final Testing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_Programada_de_envio__c</fullName>
+        <description>Campo tipo fecha para la aplicación workflow, permite seleccionar la fecha en la que se envió el registro</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha programada de envío</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_Solicitud_NS__c</fullName>
+        <description>Campo tipo fórmula para la aplicación workflow, muestra la fecha de envío o la fecha de solicitud online de acuerdo a las reglas de negocio</description>
+        <externalId>false</externalId>
+        <formula>IF ( MX_WF_Fecha_De_Solicitud_Online__c &gt; MX_WF_Fecha_Programada_de_envio__c , MX_WF_Fecha_Programada_de_envio__c  , MX_WF_Fecha_De_Solicitud_Online__c + 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fecha de Solicitud</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_de_Inicio_Testing__c</fullName>
+        <description>Campo tipo fecha para la aplicación workflow, permite seleccionar la fecha en la que inicia el testing del email</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de Inicio Testing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_en_que_requiere_el_envio__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha en que requiere el envío</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_real_de_envio__c</fullName>
+        <description>Campo tipo fecha para la aplicación workflow, permite seleccionar la fecha en la que realmente se envió la solicitud</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha real de envío</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Folio_de_Gasto__c</fullName>
+        <description>Campo tipo fórmula para la aplicación workflow, permite crear un folio al registro</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Folio_gasto__c + &quot;-&quot; + MX_WF_Folio_del_Gasto_Segunda_Parte__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Folio de Gasto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Folio_del_Gasto_Segunda_Parte__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Folio del Gasto - Segunda Parte</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Id_Data_Extension__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.CRM_WF_Data_Extension__r.CRM_WF_External_Key__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Id. Data Extension</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Iniciales_Del_A_o_Real__c</fullName>
+        <description>Campo tipo fórmula para la aplicación workflow, muestra los primeros dos dígitos del mes</description>
+        <externalId>false</externalId>
+        <formula>RIGHT( MX_WF_A_Real_De_Env_o__c , 2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Iniciales del Año real</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Iniciales_Dia_Real__c</fullName>
+        <description>Campo tipo fórmula para la aplicación workflow, muestra el valor numérico del día que se envió la solicitud</description>
+        <externalId>false</externalId>
+        <formula>IF ( MX_WF_Dia_Real_De_Env_o__c  = &quot;1&quot;, &quot;01&quot;,
+IF ( MX_WF_Dia_Real_De_Env_o__c  = &quot;2&quot;, &quot;02&quot;,
+IF ( MX_WF_Dia_Real_De_Env_o__c  = &quot;3&quot;, &quot;03&quot;,
+IF ( MX_WF_Dia_Real_De_Env_o__c  = &quot;4&quot;, &quot;04&quot;,
+IF ( MX_WF_Dia_Real_De_Env_o__c  = &quot;5&quot;, &quot;05&quot;,
+IF ( MX_WF_Dia_Real_De_Env_o__c  = &quot;6&quot;, &quot;06&quot;,
+IF ( MX_WF_Dia_Real_De_Env_o__c  = &quot;7&quot;, &quot;07&quot;,
+IF ( MX_WF_Dia_Real_De_Env_o__c  = &quot;8&quot;, &quot;08&quot;,
+IF ( MX_WF_Dia_Real_De_Env_o__c  = &quot;9&quot;, &quot;09&quot;, MX_WF_Dia_Real_De_Env_o__c  )))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Iniciales del Día real</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Iniciales_Mes_Real__c</fullName>
+        <description>Campo de tipo fórmula para la aplicación workflow, muestra las iniciales del mes en el qe se envía la solicitud</description>
+        <externalId>false</externalId>
+        <formula>IF ( CRM_WF_Mes_Real_Envio__c = 1, &quot;ENE&quot;, 
+IF ( CRM_WF_Mes_Real_Envio__c = 2, &quot;FEB&quot;, 
+IF ( CRM_WF_Mes_Real_Envio__c = 3, &quot;MAR&quot;,
+IF ( CRM_WF_Mes_Real_Envio__c = 4, &quot;ABR&quot;,
+IF ( CRM_WF_Mes_Real_Envio__c = 5, &quot;MAY&quot;,
+IF ( CRM_WF_Mes_Real_Envio__c = 6, &quot;JUN&quot;,
+IF ( CRM_WF_Mes_Real_Envio__c = 7, &quot;JUL&quot;,
+IF ( CRM_WF_Mes_Real_Envio__c = 8, &quot;AGO&quot;,
+IF ( CRM_WF_Mes_Real_Envio__c = 9, &quot;SEP&quot;,
+IF ( CRM_WF_Mes_Real_Envio__c = 10, &quot;OCT&quot;,
+IF ( CRM_WF_Mes_Real_Envio__c = 11, &quot;NOV&quot;,
+IF ( CRM_WF_Mes_Real_Envio__c = 12, &quot;DIC&quot;, NULL ))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Iniciales del Mes real</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Nombre_Arte_de_Prueba__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Nombre Arte de Prueba</label>
+        <referenceTo>CRM_WF_Artes__c</referenceTo>
+        <relationshipLabel>Solicitudes de Envío (Nombre Arte de Prueba)</relationshipLabel>
+        <relationshipName>Solicitudes_de_Env_o1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Nombre_del_Arte_Control__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Arte Control</label>
+        <referenceTo>CRM_WF_Artes__c</referenceTo>
+        <relationshipLabel>Solicitudes de Envío (Control)</relationshipLabel>
+        <relationshipName>Solicitudes_de_Env_o2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Nombre_del_Remitente_Txt__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Nombre del Remitente</label>
+        <length>300</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Por_qu_se_debe_enviar_esta_campa_a__c</fullName>
+        <description>Por qué es indispensable enviar esta campaña fuera de los niveles de servicio.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Por qué es indispensable enviar esta campaña fuera de los niveles de servicio.</inlineHelpText>
+        <label>¿Porqué enviar la campaña fuera de N.S?</label>
+        <length>2500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Por_que_qu_sali_tarde_la_campa_a__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>¿Por que qué salió tarde la campaña?</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Preheader_A__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.CRM_WF_Preheader__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Preheader A</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Subject_A__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.CRM_WF_Subject__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subject A</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipo_de_Arte__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Tipo_de_Arte_txt__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de Arte</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipo_de_Arte_txt__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Tipo de Arte</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipo_de_Solicitud__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF
+(
+  Bomberazo__c = TRUE,
+  IMAGE(&quot;/servlet/servlet.FileDownload?file=0156C000000HboI&quot;, &quot;Bomberazo&quot;, 40, 40 ),
+  IMAGE(&quot;/servlet/servlet.FileDownload?file=0156C000000HboN&quot;, &quot;Niveles de Servicio&quot;, 40, 40 )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de Solicitud</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Universo_Muestra_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF
+(
+ TEXT(MX_WF_AB_Testing__c)=&quot;No&quot;,
+ 0,
+ IF
+  (
+   TEXT(Tipo_A_B_Testing__c)= &quot;CTA&quot; || TEXT(Tipo_A_B_Testing__c) = &quot;Diseño&quot;,
+    MX_WF_Universo_Muestra__c *0.5,
+    MX_WF_Universo_Muestra__c
+  )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Universo Muestra</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Universo_Muestra__c</fullName>
+        <description>Campo numérico para la aplicación workflow, permite seleccionar el universo de la muestra para el A/B Testing</description>
+        <externalId>false</externalId>
+        <label>Universo Muestra</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_de_la_Base__c</fullName>
+        <description>Campo tipo fórmula para la aplicación workflow, muestra el número de registros en la base asociada al registro</description>
+        <externalId>false</externalId>
+        <formula>MX_WF_Canal__r.CRM_WF_Data_Extension__r.CRM_WF_Total_de_Registros__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Debe de sumar el total de registros de cada una de las versiones capturadas</inlineHelpText>
+        <label>Volumen de la Base</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PEP_3_digitos__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>PEP - 3 dígitos</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tipo_A_B_Testing__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo A/B Testing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CTA</fullName>
+                    <default>false</default>
+                    <label>CTA</label>
+                </value>
+                <value>
+                    <fullName>Diseño</fullName>
+                    <default>false</default>
+                    <label>Diseño</label>
+                </value>
+                <value>
+                    <fullName>Nombre del Remitente</fullName>
+                    <default>false</default>
+                    <label>Nombre del Remitente</label>
+                </value>
+                <value>
+                    <fullName>Subject</fullName>
+                    <default>false</default>
+                    <label>Subject</label>
+                </value>
+                <value>
+                    <fullName>Preheader</fullName>
+                    <default>false</default>
+                    <label>Preheader</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Solicitud de Envío</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MX_WF_Canal__c</columns>
+        <columns>MX_WF_Nombre_Arte_de_Prueba__c</columns>
+        <columns>MX_WF_Nombre_del_Arte_Control__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>MX_WF_Etapa_Solicitud_Online__c</columns>
+        <columns>MX_WF_Universo_Muestra_Formula__c</columns>
+        <columns>MX_WF_Universo_Muestra__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SE {0000000000}</displayFormat>
+        <label>Folio</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Solicitudes de Envío</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>MX_WF_Fecha_envio_bomberazo</fullName>
+        <active>true</active>
+        <description>Solo se puede editar la fecha programada de envío, si el bomberazo fue aprobado</description>
+        <errorConditionFormula>AND
+(
+ ISCHANGED(MX_WF_Fecha_Programada_de_envio__c),
+ OR
+ (
+   Bomberazo__c = FALSE,
+   OR
+   (
+    ISPICKVAL(MX_WF_Estatus_Bomberazo__c,&quot;Rechazado&quot;),
+    ISPICKVAL(MX_WF_Estatus_Bomberazo__c,&quot;Pendiente&quot;)   
+   )
+ )
+)</errorConditionFormula>
+        <errorMessage>Solo se puede editar la fecha programada de envío, si el bomberazo fue aprobado</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>URL_sin_Tracking_Code</fullName>
+        <active>true</active>
+        <description>No se puede aprobar TC Analytics si todas las URL no han sido validadas</description>
+        <errorConditionFormula>AND
+(
+ISPICKVAL(PRIORVALUE(MX_WF_Etapa_Solicitud_Online__c),&quot;TC Analytics&quot;),
+ISPICKVAL(MX_WF_Etapa_Solicitud_Online__c,&quot;En revisión&quot;),
+(MX_WF_Canal__r.CRM_WF_Total_De_URL_Secundarias__c &lt;&gt; MX_WF_Canal__r.MX_WF_Validacion_URL__c)
+)</errorConditionFormula>
+        <errorMessage>No se puede aprobar TC Analytics si todas las URL del Arte no han sido validadas</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>MX_WF_Cancelar_Solicitud</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Cancelar Solicitud</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/flow/MX_WF_Cancelar_Solicitud_de_Envio?varIdSolicitud={!CRM_WF_Solicitud_De_envio__c.Id}&amp;varIdCanal={!CRM_WF_Solicitud_De_envio__c.MX_WF_CanalId__c}&amp;retURL={!CRM_WF_Solicitud_De_envio__c.Id}</url>
+    </webLinks>
+</CustomObject>

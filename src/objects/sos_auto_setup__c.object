@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>names of objects for auto create</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>deployment__c</fullName>
+        <defaultValue>&quot;SOS Deployment&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>deployment</label>
+        <length>32</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>permission_set__c</fullName>
+        <defaultValue>&quot;SOS Permission&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>permission_set</label>
+        <length>32</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>queue__c</fullName>
+        <defaultValue>&quot;SOS Queue&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>queue</label>
+        <length>32</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>routing_config__c</fullName>
+        <defaultValue>&quot;SOS Route&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>routing_config</label>
+        <length>32</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>service_presence__c</fullName>
+        <defaultValue>&quot;SOS Online&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>service_presence</label>
+        <length>32</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>sos_auto_setup</label>
+    <visibility>Public</visibility>
+</CustomObject>

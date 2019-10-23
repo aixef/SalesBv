@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Asesoria Legal Telefonica</fullName>
+        <default>false</default>
+        <label>Asesoria Legal Telefonica</label>
+    </customValue>
+    <customValue>
+        <fullName>Asesoria legal telefónica</fullName>
+        <default>false</default>
+        <label>Asesoria legal telefónica</label>
+    </customValue>
+    <customValue>
+        <fullName>Asistencia Funeraria</fullName>
+        <default>false</default>
+        <label>Asistencia Funeraria</label>
+    </customValue>
+    <customValue>
+        <fullName>Asistencia Handyman</fullName>
+        <default>false</default>
+        <label>Asistencia Handyman</label>
+    </customValue>
+    <customValue>
+        <fullName>Asistencia Hogar</fullName>
+        <default>false</default>
+        <label>Asistencia Hogar</label>
+    </customValue>
+    <customValue>
+        <fullName>Asistencia Legal</fullName>
+        <default>false</default>
+        <label>Asistencia Legal</label>
+    </customValue>
+    <customValue>
+        <fullName>Asistencia Médica</fullName>
+        <default>false</default>
+        <label>Asistencia Médica</label>
+    </customValue>
+    <customValue>
+        <fullName>Asistencia Viajes</fullName>
+        <default>false</default>
+        <label>Asistencia Viajes</label>
+    </customValue>
+    <customValue>
+        <fullName>Asistencia Vial</fullName>
+        <default>false</default>
+        <label>Asistencia Vial</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Ajuste</fullName>
+        <default>false</default>
+        <label>Auto Ajuste</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto sustituto</fullName>
+        <default>false</default>
+        <label>Auto sustituto</label>
+    </customValue>
+    <customValue>
+        <fullName>Cirugía segura</fullName>
+        <default>false</default>
+        <label>Cirugía segura</label>
+    </customValue>
+    <customValue>
+        <fullName>Colision</fullName>
+        <default>false</default>
+        <label>Colision</label>
+    </customValue>
+    <customValue>
+        <fullName>Consulta de Cobranza</fullName>
+        <default>false</default>
+        <label>Consulta de Cobranza</label>
+    </customValue>
+    <customValue>
+        <fullName>Cristales</fullName>
+        <default>false</default>
+        <label>Cristales</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversos</fullName>
+        <default>false</default>
+        <label>Diversos</label>
+    </customValue>
+    <customValue>
+        <fullName>GASTOS MEDICOS MAYORES COLECTIVO</fullName>
+        <default>false</default>
+        <label>GASTOS MEDICOS MAYORES COLECTIVO</label>
+    </customValue>
+    <customValue>
+        <fullName>GASTOS MEDICOS MAYORES INDIVIDUAL FAMILIAR</fullName>
+        <default>false</default>
+        <label>GASTOS MEDICOS MAYORES INDIVIDUAL FAMILIAR</label>
+    </customValue>
+    <customValue>
+        <fullName>Grua Siniestro</fullName>
+        <default>false</default>
+        <label>Grua Siniestro</label>
+    </customValue>
+    <customValue>
+        <fullName>Kidzania</fullName>
+        <default>false</default>
+        <label>Kidzania</label>
+    </customValue>
+    <customValue>
+        <fullName>Otros</fullName>
+        <default>false</default>
+        <label>Otros</label>
+    </customValue>
+    <customValue>
+        <fullName>Plan 10</fullName>
+        <default>false</default>
+        <label>Plan 10</label>
+    </customValue>
+    <customValue>
+        <fullName>Plan 25</fullName>
+        <default>false</default>
+        <label>Plan 25</label>
+    </customValue>
+    <customValue>
+        <fullName>Plan 5</fullName>
+        <default>false</default>
+        <label>Plan 5</label>
+    </customValue>
+    <customValue>
+        <fullName>Recuperacion</fullName>
+        <default>false</default>
+        <label>Recuperacion</label>
+    </customValue>
+    <customValue>
+        <fullName>Robo</fullName>
+        <default>false</default>
+        <label>Robo</label>
+    </customValue>
+    <customValue>
+        <fullName>Vida Segura</fullName>
+        <default>false</default>
+        <label>Vida Segura</label>
+    </customValue>
+    <description>Productos de Seguros atendidos en Multiasistencia</description>
+    <masterLabel>Producto</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

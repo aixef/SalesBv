@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Auto_Seguro_Dinamico__c</fullName>
+        <externalId>false</externalId>
+        <label>Auto Seguro Dinamico</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Seguro_Fronterizo__c</fullName>
+        <externalId>false</externalId>
+        <label>Seguro Fronterizo</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Seguro_Moto_Bancomer__c</fullName>
+        <externalId>false</externalId>
+        <label>Seguro Moto Bancomer</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Seguro_Nacionalizado__c</fullName>
+        <externalId>false</externalId>
+        <label>Seguro Nacionalizado</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Constantes ASD</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,102 @@
+<!--
+*Desarrollado por:       Indra
+*Autor:                  Monserrat Gonzalez
+*Proyecto:               BPyP
+*Descripción:            Componente con tabla de detalle de puntos para BPyP
+*Cambios (Versiones)
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0    | 05-06-2018     |    Monserrat Gonzalez      |           Creación   
+-->
+<aura:component controller="MX_BPP_GraficosRI" implements="force:appHostable,flexipage:availableForAllPageTypes"
+                description="Detalle por Indicador">
+    <aura:attribute name="objectName" type="String" required="true" default="ExpUni_Tablero_Grupal__c"/>
+    <aura:attribute name="fieldName" type="String" required="true" default="EU_001_tx_Indicador__c"/>
+    <aura:attribute name="fieldEmpleado" type="String" />
+    
+    <aura:attribute name="label" type="String" default="Label" description="Valor de etiqueta"/>
+    <aura:attribute name="value" type="String" description="Valor seleccionado"/>    
+    <aura:attribute name="class" type="String" description="CSS estilo que se aplicara al component"/>
+    
+    <aura:attribute name="objTablero" type="Object" description="Objeto de tablero"/>    
+    <aura:attribute name="indicador" type="String" description="Valor indicador"/>  
+    
+    
+    <aura:attribute name="onchange" type="Aura.Action" description="Accion desencadenada"/>    
+    <aura:attribute name="options" type="List" access="private" description="Opciones de la lista a elegir"/>   
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-p-around_medium slds-col slds-size_12-of-12 slds-text-color_inverse-weak slds-text-body_small">
+            <div class="slds-p-left_small">
+                Fecha de Tablero: {!v.objTablero[0].EU_Fe_Act__c}<br/>
+                Fecha Cierre:&nbsp;{!v.objTablero[0].MX_BPP_FechaCierre__c}<br/>
+            </div>
+        </div>
+    </div>
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped">
+        <thead>
+            <tr>
+                <th scope= "col">
+                    <div class="slds-truncate" title='INDICADOR'>INDICADOR</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title='REAL'>REAL</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title='META'>META</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title='LOGRO'>LOGRO</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title='PUNTOS'>PUNTOS</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title='FALTANTE'>FALTANTE</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title='FECHA'>FECHA INDICADOR</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration var="tabl" items="{!v.objTablero}">
+                <tr>                   
+                    <th scope="row">
+                        <div >{!tabl.EU_001_tx_Indicador__c}</div>
+                    </th>
+                    <th scope="row">
+                        <div ><ui:outputNumber aura:id="number" value="{!tabl.EU_Real__c}" /></div>
+                    </th>
+                    <th scope="row">
+                        <div ><ui:outputNumber aura:id="number" value="{!tabl.MX_BPP_Valor3__c}" /></div>
+                    </th>
+                    <th scope="row">
+                        <div ><ui:outputNumber aura:id="number" value="{!tabl.MX_BPP_Valor4__c}" /></div>
+                    </th>
+                    <th scope="row">
+                        <div ><ui:outputNumber aura:id="number" value="{!tabl.MX_BPP_Valor5__c}" /></div>
+                    </th>
+                    <th scope="row">
+                        <div ><ui:outputNumber aura:id="number" value="{!tabl.EU_Logro_Proy_Comp__c}" /></div>
+                    </th>
+                    <th scope="row">
+                        <div >{!tabl.MX_BPP_FechaIndicador__c}</div>
+                    </th>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+    <br/>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_12-of-12">
+            <div class="slds-align_absolute-center"> 
+                <lightning:button class="slds-align--absolute-center slds-m-bottom--small" variant="neutral" label="IGBPYP" title="IGBPYP">
+                    <a href="{!$Label.c.Url_igbpyp}"  target="_blank">IGBPYP</a>
+                </lightning:button>   
+            </div>
+        </div>
+    </div>
+</aura:component>

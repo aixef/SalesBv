@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>TDC / TDD / BBVA</fullName>
+        <default>false</default>
+        <label>TDC / TDD / BBVA</label>
+    </customValue>
+    <customValue>
+        <fullName>TDC / TDD / BBVA MSI</fullName>
+        <default>false</default>
+        <label>TDC / TDD / BBVA MSI</label>
+    </customValue>
+    <customValue>
+        <fullName>TDC / TDD Otro Banco</fullName>
+        <default>false</default>
+        <label>TDC / TDD Otro Banco</label>
+    </customValue>
+    <customValue>
+        <fullName>Tarjeta Digital Wallet</fullName>
+        <default>false</default>
+        <label>Tarjeta Digital Wallet</label>
+    </customValue>
+    <customValue>
+        <fullName>Tarjeta Digital Wallet MSI</fullName>
+        <default>false</default>
+        <label>Tarjeta Digital Wallet MSI</label>
+    </customValue>
+    <customValue>
+        <fullName>TDC / TDD / BBVA Rechazada</fullName>
+        <default>false</default>
+        <label>TDC / TDD / BBVA Rechazada</label>
+    </customValue>
+    <customValue>
+        <fullName>TDC / TDD / CDC BBVA Rechazada</fullName>
+        <default>false</default>
+        <label>TDC / TDD / CDC BBVA Rechazada</label>
+    </customValue>
+    <customValue>
+        <fullName>No cuenta con datos para contratación</fullName>
+        <default>false</default>
+        <label>No cuenta con datos para contratación</label>
+    </customValue>
+    <customValue>
+        <fullName>Cliente lo va a pensar</fullName>
+        <default>false</default>
+        <label>Cliente lo va a pensar</label>
+    </customValue>
+    <customValue>
+        <fullName>Cuenta con producto similar otro banco</fullName>
+        <default>false</default>
+        <label>Cuenta con producto similar otro banco</label>
+    </customValue>
+    <customValue>
+        <fullName>TDC / TDD robada o extraviada</fullName>
+        <default>false</default>
+        <label>TDC / TDD robada o extraviada</label>
+    </customValue>
+    <customValue>
+        <fullName>Comparando precios</fullName>
+        <default>false</default>
+        <label>Comparando precios</label>
+    </customValue>
+    <customValue>
+        <fullName>Cliente prefiere ir a sucursal</fullName>
+        <default>false</default>
+        <label>Cliente prefiere ir a sucursal</label>
+    </customValue>
+    <customValue>
+        <fullName>Economía personal</fullName>
+        <default>false</default>
+        <label>Economía personal</label>
+    </customValue>
+    <customValue>
+        <fullName>Precio alto del producto</fullName>
+        <default>false</default>
+        <label>Precio alto del producto</label>
+    </customValue>
+    <customValue>
+        <fullName>Prefiere otros productos</fullName>
+        <default>false</default>
+        <label>Prefiere otros productos</label>
+    </customValue>
+    <customValue>
+        <fullName>Producto no cubre expectativas</fullName>
+        <default>false</default>
+        <label>Producto no cubre expectativas</label>
+    </customValue>
+    <customValue>
+        <fullName>Requiere mayor suma asegurada</fullName>
+        <default>false</default>
+        <label>Requiere mayor suma asegurada</label>
+    </customValue>
+    <customValue>
+        <fullName>Cliente necesita otro servicio (Llamada entrante)</fullName>
+        <default>false</default>
+        <label>Cliente necesita otro servicio (Llamada entrante)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cuenta con producto similar BBVA</fullName>
+        <default>false</default>
+        <label>Cuenta con producto similar BBVA</label>
+    </customValue>
+    <customValue>
+        <fullName>No permite explicación de producto</fullName>
+        <default>false</default>
+        <label>No permite explicación de producto</label>
+    </customValue>
+    <customValue>
+        <fullName>Teléfono equivocado</fullName>
+        <default>false</default>
+        <label>Teléfono equivocado</label>
+    </customValue>
+    <customValue>
+        <fullName>Cliente molesto (no llamar)</fullName>
+        <default>false</default>
+        <label>Cliente molesto (no llamar)</label>
+    </customValue>
+    <customValue>
+        <fullName>No se escucha cliente</fullName>
+        <default>false</default>
+        <label>No se escucha cliente</label>
+    </customValue>
+    <customValue>
+        <fullName>Desconfianza del medio de comunicación</fullName>
+        <default>false</default>
+        <label>Desconfianza del medio de comunicación</label>
+    </customValue>
+    <customValue>
+        <fullName>Mala experiencia BBVA</fullName>
+        <default>false</default>
+        <label>Mala experiencia BBVA</label>
+    </customValue>
+    <customValue>
+        <fullName>Se dejó mensaje</fullName>
+        <default>false</default>
+        <label>Se dejó mensaje</label>
+    </customValue>
+    <customValue>
+        <fullName>No le gustan los seguros</fullName>
+        <default>false</default>
+        <label>No le gustan los seguros</label>
+    </customValue>
+    <customValue>
+        <fullName>Finado</fullName>
+        <default>false</default>
+        <label>Finado</label>
+    </customValue>
+    <customValue>
+        <fullName>Desconfianza del producto ofertado</fullName>
+        <default>false</default>
+        <label>Desconfianza del producto ofertado</label>
+    </customValue>
+    <customValue>
+        <fullName>Teléfono necesita extensión</fullName>
+        <default>false</default>
+        <label>Teléfono necesita extensión</label>
+    </customValue>
+    <customValue>
+        <fullName>Otro idioma</fullName>
+        <default>false</default>
+        <label>Otro idioma</label>
+    </customValue>
+    <customValue>
+        <fullName>Cliente predispuesto por SMS</fullName>
+        <default>false</default>
+        <label>Cliente predispuesto por SMS</label>
+    </customValue>
+    <customValue>
+        <fullName>Desconfianza por llamada reciente</fullName>
+        <default>false</default>
+        <label>Desconfianza por llamada reciente</label>
+    </customValue>
+    <customValue>
+        <fullName>Número equivocado (Llamada entrante)</fullName>
+        <default>false</default>
+        <label>Número equivocado (Llamada entrante)</label>
+    </customValue>
+    <customValue>
+        <fullName>No disponible</fullName>
+        <default>false</default>
+        <label>No disponible</label>
+    </customValue>
+    <customValue>
+        <fullName>(Asistido) Dificil contratar mediante Tmkt</fullName>
+        <default>false</default>
+        <label>(Asistido) Dificil contratar mediante Tmkt</label>
+    </customValue>
+    <customValue>
+        <fullName>(Asistido) Dificil contratar mediante App</fullName>
+        <default>false</default>
+        <label>(Asistido) Dificil contratar mediante App</label>
+    </customValue>
+    <customValue>
+        <fullName>No pasa autenticación</fullName>
+        <default>false</default>
+        <label>No pasa autenticación</label>
+    </customValue>
+    <customValue>
+        <fullName>No cumple política de edad</fullName>
+        <default>false</default>
+        <label>No cumple política de edad</label>
+    </customValue>
+    <customValue>
+        <fullName>No cumple política médica</fullName>
+        <default>false</default>
+        <label>No cumple política médica</label>
+    </customValue>
+    <customValue>
+        <fullName>No cumple política domicilio</fullName>
+        <default>false</default>
+        <label>No cumple política domicilio</label>
+    </customValue>
+    <customValue>
+        <fullName>No cumple política cliente BBVA</fullName>
+        <default>false</default>
+        <label>No cumple política cliente BBVA</label>
+    </customValue>
+    <customValue>
+        <fullName>Error con App / Web</fullName>
+        <default>false</default>
+        <label>Error con App / Web</label>
+    </customValue>
+    <customValue>
+        <fullName>TDC / TDD / CDC Otro Banco Rechazada</fullName>
+        <default>false</default>
+        <label>TDC / TDD / CDC Otro Banco Rechazada</label>
+    </customValue>
+    <customValue>
+        <fullName>Medio de Pago Rechazado</fullName>
+        <default>false</default>
+        <label>Medio de Pago Rechazado</label>
+    </customValue>
+    <customValue>
+        <fullName>No Quiere Cargos en TDC / TDD</fullName>
+        <default>false</default>
+        <label>No Quiere Cargos en TDC / TDD</label>
+    </customValue>
+    <customValue>
+        <fullName>Requiere Otro Medio de Pago</fullName>
+        <default>false</default>
+        <label>Requiere Otro Medio de Pago</label>
+    </customValue>
+    <customValue>
+        <fullName>Sin Saldo Suficiente</fullName>
+        <default>false</default>
+        <label>Sin Saldo Suficiente</label>
+    </customValue>
+    <customValue>
+        <fullName>Cliente cuelga</fullName>
+        <default>false</default>
+        <label>Cliente cuelga</label>
+    </customValue>
+    <customValue>
+        <fullName>Cliente molesto</fullName>
+        <default>false</default>
+        <label>Cliente molesto</label>
+    </customValue>
+    <customValue>
+        <fullName>Agendar</fullName>
+        <default>false</default>
+        <label>Agendar</label>
+    </customValue>
+    <customValue>
+        <fullName>Asistido B.com</fullName>
+        <default>false</default>
+        <label>Asistido B.com</label>
+    </customValue>
+    <customValue>
+        <fullName>Asistido Bmóvil</fullName>
+        <default>false</default>
+        <label>Asistido Bmóvil</label>
+    </customValue>
+    <customValue>
+        <fullName>Asistido Cotizadores</fullName>
+        <default>false</default>
+        <label>Asistido Cotizadores</label>
+    </customValue>
+    <customValue>
+        <fullName>Cliente no tiene tiempo</fullName>
+        <default>false</default>
+        <label>Cliente no tiene tiempo</label>
+    </customValue>
+    <customValue>
+        <fullName>Cliente no tiene trabajo</fullName>
+        <default>false</default>
+        <label>Cliente no tiene trabajo</label>
+    </customValue>
+    <customValue>
+        <fullName>No utiliza TDC / TDD</fullName>
+        <default>false</default>
+        <label>No utiliza TDC / TDD</label>
+    </customValue>
+    <customValue>
+        <fullName>Se cortó llamada</fullName>
+        <default>false</default>
+        <label>Se cortó llamada</label>
+    </customValue>
+    <customValue>
+        <fullName>Bloquear Sanas Prácticas</fullName>
+        <default>false</default>
+        <label>Bloquear Sanas Prácticas</label>
+    </customValue>
+    <customValue>
+        <fullName>Contestadora o Buzón</fullName>
+        <default>false</default>
+        <label>Contestadora o Buzón</label>
+    </customValue>
+    <customValue>
+        <fullName>Línea ocupada</fullName>
+        <default>false</default>
+        <label>Línea ocupada</label>
+    </customValue>
+    <customValue>
+        <fullName>Mala calidad de audio</fullName>
+        <default>false</default>
+        <label>Mala calidad de audio</label>
+    </customValue>
+    <customValue>
+        <fullName>No contesta</fullName>
+        <default>false</default>
+        <label>No contesta</label>
+    </customValue>
+    <customValue>
+        <fullName>Teléfono suspendido</fullName>
+        <default>false</default>
+        <label>Teléfono suspendido</label>
+    </customValue>
+    <customValue>
+        <fullName>Teléfono inexistente o tritono</fullName>
+        <default>false</default>
+        <label>Teléfono inexistente o tritono</label>
+    </customValue>
+    <customValue>
+        <fullName>Fuera del área de servicio (Móvil)</fullName>
+        <default>false</default>
+        <label>Fuera del área de servicio (Móvil)</label>
+    </customValue>
+    <customValue>
+        <fullName>Fuera de servicio (Fijo)</fullName>
+        <default>false</default>
+        <label>Fuera de servicio (Fijo)</label>
+    </customValue>
+    <customValue>
+        <fullName>Se corta llamada</fullName>
+        <default>false</default>
+        <label>Se corta llamada</label>
+    </customValue>
+    <customValue>
+        <fullName>Cliente lo va a pensar (Indeciso)</fullName>
+        <default>false</default>
+        <label>Cliente lo va a pensar (Indeciso)</label>
+    </customValue>
+    <customValue>
+        <fullName>Cotizador TLMK - Salvo buen cobro</fullName>
+        <default>false</default>
+        <label>Cotizador TLMK - Salvo buen cobro</label>
+    </customValue>
+    <customValue>
+        <fullName>Atendido por Call me Back</fullName>
+        <default>false</default>
+        <label>Atendido por Call me Back</label>
+    </customValue>
+    <customValue>
+        <fullName>Atendido por Tracking Web</fullName>
+        <default>false</default>
+        <label>Atendido por Tracking Web</label>
+    </customValue>
+    <customValue>
+        <fullName>Otros Servicios</fullName>
+        <default>false</default>
+        <label>Otros Servicios</label>
+    </customValue>
+    <description>Resultado final del árbol de tipificación para el flujo de venta Telemarketing</description>
+    <masterLabel>Tipificación CTI</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

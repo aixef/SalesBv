@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto que sirve para relacionar miembros a un equipo con iniciativas, y asi lograr una relación de muchos a muchos.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>MX_RTE_Activo__c</fullName>
+        <description>Campo para la aplicación RTE, distingue los miembros del equipo activos</description>
+        <externalId>false</externalId>
+        <label>Activo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sí</fullName>
+                    <default>true</default>
+                    <label>Sí</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Correo__c</fullName>
+        <description>Campo que muestra el correo electrónico del usuario asociado</description>
+        <externalId>false</externalId>
+        <formula>MX_RTE_Nombre__r.GBL_WF_Correo_Electronico__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Correo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Fecha_de_Alta__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <description>Campo para indicar la fecha en que un miembro es agregado al equipo</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de Alta</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Fecha_de_Baja__c</fullName>
+        <description>Campo para capturar la fecha en que un miembro deja de pertencer al equipo</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de Baja</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Iniciativa__c</fullName>
+        <description>Campo para seleccionar la iniciativa a la que pertenecerá un equipo.</description>
+        <externalId>false</externalId>
+        <label>Iniciativa</label>
+        <referenceTo>MX_RTE_Iniciativa__c</referenceTo>
+        <relationshipLabel>Equipo</relationshipLabel>
+        <relationshipName>Equipo</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Nombre__c</fullName>
+        <description>Campo para seleccionar el contacto que pertenecerá a un equipo</description>
+        <externalId>false</externalId>
+        <label>Nombre</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Equipo</relationshipLabel>
+        <relationshipName>Miembros_del_equipo</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Nombre_completo_formula__c</fullName>
+        <description>Campo de fórmula para obtener el nombre y apellido de la persona que se unió al equipo.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot;+ MX_RTE_Nombre__r.Id , MX_RTE_Nombre__r.FirstName  &amp; &quot; &quot; &amp;  MX_RTE_Nombre__r.LastName )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nombre completo fórmula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Numero_de_dias_en_el_SCRUM__c</fullName>
+        <description>Campo de fórmula que devuelve el número de días que la persona en el equipo ha estado en el Scrum.</description>
+        <externalId>false</externalId>
+        <formula>IF (  ISNULL(  MX_RTE_Fecha_de_Baja__c ) , TODAY () -  MX_RTE_Fecha_de_Alta__c +1,  MX_RTE_Fecha_de_Baja__c  -  MX_RTE_Fecha_de_Alta__c +1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Número de días en el SCRUM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Propietario_del_Programa__c</fullName>
+        <description>Campo utilizado en vistas de lista para dar visibilidad de registros al propietario del Programa</description>
+        <externalId>false</externalId>
+        <formula>IF(MX_RTE_Iniciativa__r.MX_RTE_Programa_Global__r.OwnerId =  $User.Id, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Propietario del Programa</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Rol__c</fullName>
+        <description>Campo que indica el rol del miembro del equipo</description>
+        <externalId>false</externalId>
+        <formula>TEXT ( MX_RTE_Nombre__r.MX_RTE_Rol__c )</formula>
+        <label>Rol</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Equipo</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Nombre__c</columns>
+        <columns>MX_RTE_Rol__c</columns>
+        <columns>MX_RTE_Iniciativa__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <listViews>
+        <fullName>MX_RTE_Equipo_del_Programa</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Nombre__c</columns>
+        <columns>MX_RTE_Rol__c</columns>
+        <columns>MX_RTE_Iniciativa__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MX_RTE_Propietario_del_Programa__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Equipo del Programa</label>
+        <sharedTo>
+            <role>MX_RTE_Program_Manager</role>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>MT-{0000}</displayFormat>
+        <label>No. Miembro del Equipo</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Equipo</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>MX_RTE_Baja_no_puede_ser_menor_al_alta</fullName>
+        <active>true</active>
+        <description>Regla de validación para la aplicación RTE que impide que un usuario escriba una fecha de baja menor a la fecha de alta</description>
+        <errorConditionFormula>MX_RTE_Fecha_de_Baja__c &lt; MX_RTE_Fecha_de_Alta__c</errorConditionFormula>
+        <errorMessage>La Fecha de Baja no puede ser menor a la Fecha de Alta</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MX_RTE_Debes_especificar_fecha_de_baja</fullName>
+        <active>true</active>
+        <description>Regla de validación que obliga a especificar la fecha de baja cuando se desactiva a un usuario</description>
+        <errorConditionFormula>AND (  ISPICKVAL(MX_RTE_Activo__c, &quot;No&quot;)  ,
+         ISNULL(MX_RTE_Fecha_de_Baja__c ) 
+    )</errorConditionFormula>
+        <errorMessage>Debes especificar la fecha de baja</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MX_RTE_PO_MS_y_Team_no_pueden_estar_2_eq</fullName>
+        <active>true</active>
+        <description>Impide que se asocie a un PO,MS o Team a más de una iniciativa</description>
+        <errorConditionFormula>AND( OR( CONTAINS( MX_RTE_Rol__c, &quot;Product Owner&quot;),
+         CONTAINS( MX_RTE_Rol__c, &quot;Scrum Master&quot;),
+         CONTAINS( MX_RTE_Rol__c, &quot;Scrum Team&quot;)
+        ),
+     MX_RTE_Nombre__r.MX_RTE_Control_Equipo__c &gt;0,
+     ISPICKVAL(MX_RTE_Activo__c , &quot;Sí&quot;) 
+    )</errorConditionFormula>
+        <errorMessage>Este usuario no puede pertenecer a más de una iniciativa</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MX_RTE_Product_Owner_Y_Scrum_Master</fullName>
+        <active>true</active>
+        <description>Regla de validacion que verifica que no haya mas de un Scrum Master y Product Owner</description>
+        <errorConditionFormula>OR(
+  AND(
+   MX_RTE_Iniciativa__r.MX_RTE_Scrum_Master_Check__c = TRUE,
+    ISPICKVAL(MX_RTE_Nombre__r.MX_RTE_Rol__c, &quot;SCRUM MASTER&quot;),
+     ISPICKVAL(MX_RTE_Activo__c, &quot;Sí&quot;)
+  ),
+  AND(
+    MX_RTE_Iniciativa__r.MX_RTE_Product_Owner_Check__c = TRUE,
+    ISPICKVAL(MX_RTE_Nombre__r.MX_RTE_Rol__c, &quot;PRODUCT OWNER&quot;),
+    ISPICKVAL(MX_RTE_Activo__c, &quot;Sí&quot;)     
+  )
+)</errorConditionFormula>
+        <errorMessage>Un equipo solo puede tener 1 Scrum Master y 1 Product Owner</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MX_RTE_Solo_2_Stakeholders</fullName>
+        <active>true</active>
+        <description>Sólo puede haber 1 o 2 Stakeholders, no más.</description>
+        <errorConditionFormula>AND
+(ISPICKVAL(   MX_RTE_Nombre__r.MX_RTE_Rol__c   , &quot;Stake Holder&quot;) ,
+(NOT( ISBLANK( MX_RTE_Iniciativa__r.MX_RTE_Stake_Holder__c ))),
+ NOT( ISBLANK( MX_RTE_Iniciativa__r.MX_RTE_Stake_holder_2__c ) ) )</errorConditionFormula>
+        <errorMessage>Sólo puede haber 1 o 2 Stakeholders, no más.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MX_RTE_Usuario_activo_con_fecha_de_baja</fullName>
+        <active>true</active>
+        <description>Regla de validación para la aplicación RTE que impide que un usuario tenga una fecha de baja si está activo</description>
+        <errorConditionFormula>AND (  ISPICKVAL( MX_RTE_Activo__c , &quot;Sí&quot;) ,
+        NOT( ISNULL( MX_RTE_Fecha_de_Baja__c ) )
+     )</errorConditionFormula>
+        <errorMessage>Si el usuario está Activo no puedes poner una Fecha de Baja</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

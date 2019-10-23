@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Script__c</fullName>
+        <defaultValue>&quot;NO SE HAN VALIDADO CORRECTAMENTE LAS PREGUNTAS REALIZADAD, POR LO QUE LO INVITAMOS A VOLVER A CONTACTARNOS CUANDO CUENTE CON LA INFORMACIÓN. GRACIAS. EL CASO SE CERRÓ CON PERO NO PROCEDE EL SEGUIMIENTO.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Script</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Script de No Validación</label>
+    <visibility>Public</visibility>
+</CustomObject>

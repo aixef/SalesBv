@@ -1,0 +1,10 @@
+.THIS .checkbox-group li{
+    border: 1px solid rgb(221, 219, 218);
+    width:fit-content;
+    float:right;
+    clear:right;
+}
+
+.THIS .slds-align-right{
+    text-align:right;
+}

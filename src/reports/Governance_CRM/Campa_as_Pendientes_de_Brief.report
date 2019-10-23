@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign.CRM_WF_FIC__c</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_STATUS</field>
+    </columns>
+    <columns>
+        <field>Campaign.CRM_WF_Requiere_Brief__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.CRM_WF_Numero_de_Briefs__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Campaign.CRM_WF_Numero_de_Briefs_Aprobados__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>Campañas que requieren Brief y no se ha creado o no se ha aprobado</description>
+    <filter>
+        <criteriaItems>
+            <column>Campaign.CRM_WF_Requiere_Brief__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Sí</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.CRM_WF_Area_Solicitante__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>SQUAD_ADQUIRENCIA,SQUAD_CONSUMO,SQUAD_INVERSIONES,SQUAD_MEDIOS_PAGO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Vo.Bo. Carta y/o Brief,Carga Multicanal</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.CRM_WF_Area_Solicitante__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Campañas Pendientes de Brief</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

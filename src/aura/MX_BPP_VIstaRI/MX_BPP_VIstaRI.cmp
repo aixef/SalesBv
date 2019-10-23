@@ -1,0 +1,435 @@
+<!--
+*Desarrollado por:       Indra
+*Autor:                  Ricardo Almanza
+*Proyecto:               BPP
+*Descripción:            Basado en EU001_cmp_VistaReunionIndividual Vista general de Ri para BPyP con acceso a Ri's y datos obtenidos
+*Cambios (Versiones)
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0    | 17-05-2018     |    Ricardo Almanza		    |           Creación
+*2.0    | 04-06-2018     |    Ricardo Almanza		    |Se agregaron gráficos
+*2.1	| 23-01-2019	 |	  Mario Calderón			|Se modifica texto de evaluación de RI
+														 de "Satisfactorio" a "Insatisfactorio"
+*2.2    | 23-01-2019	 |    Adrián Pastor				|Se agregan los componentes de Oportunidades y Compromisos a la RI
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasrecordId" access="GLOBAL" controller="MX_BPP_VistaRI_Ctrl" >
+
+    <aura:attribute name="RISelect" type="String"/>
+    <aura:attribute name="Titulo" type="String"/>
+    <aura:attribute name="CintilloSelect" type="String"/>
+    <aura:attribute name="Cintillo" type="Object"/>
+    <aura:attribute name="CompApoyo" type="Object"/>
+    <aura:attribute name="RISelName" type="String"/>
+    <aura:attribute name="RESUMENDIV" type="Boolean" default="true"/>
+    <aura:attribute name="CARTERACPDIV" type="Boolean" default="false"/>
+    <aura:attribute name="CARTERALPDIV" type="Boolean" default="false"/>
+    <aura:attribute name="VISTAMNDIV" type="Boolean" default="false"/>
+    <aura:attribute name="INVRESTCAPDIV" type="Boolean" default="false"/>
+    <aura:attribute name="CAPTACIONMEDIV" type="Boolean" default="false"/>
+    <aura:attribute name="INVERSIONESDIV" type="Boolean" default="false"/>
+    <aura:attribute name="RESTOCAPTACIONDIV" type="Boolean" default="false"/>
+    <aura:attribute name="INFORECURRENTEDIV" type="Boolean" default="false"/>
+    <aura:attribute name="INFONORECURRENTEDIV" type="Boolean" default="false"/>
+    <aura:attribute name="MARGENBRUTODIV" type="Boolean" default="false"/>
+    <aura:attribute name="STOCKNOMINADIV" type="Boolean" default="false"/>
+    <aura:attribute name="ACCIONESCOMERCIALESDIV" type="Boolean" default="false"/>
+    <aura:attribute name="PLANDECHOQUEDIV" type="Boolean" default="false"/>
+    <aura:attribute name="RESUMENEXPDIV" type="Boolean" default="false"/>
+    <aura:attribute name="DIRECCIONDIV" type="Boolean" default="false"/>
+    <aura:attribute name="GESTIONCOMERCIALDIV" type="Boolean" default="false"/>
+    <aura:attribute name="OPORTUNIDADESACTIVDIV" type="Boolean" default="false"/>
+    <aura:attribute name="COMPEJECDIV" type="Boolean" default="false" />
+    <aura:attribute name="PRIORCOMPDIV" type="Boolean" default="false" />
+    <aura:attribute name="RESUMENCRMDIV" type="Boolean" default="false" />
+    <aura:attribute name="RESUMENDGMDIV" type="Boolean" default="false" />
+    <aura:attribute name="EUDECSDIV" type="Boolean" default="false" />
+    <aura:attribute name="ACRMDECSDIV" type="Boolean" default="false" />
+    <aura:attribute name="OPORTUNIDADESCOMPDIV" type="Boolean" default="false"/>
+    <aura:attribute name="COMPROMISOSCOMPDIV" type="Boolean" default="false"/>
+    <aura:attribute name="GRAPHPUNTOS" type="Boolean" default="false"/>
+    <aura:attribute name="GRAPHEU" type="Boolean" default="false"/>
+    <aura:attribute name="RESUMENAPOYOSDIV" type="Boolean" default="false"/>
+    <aura:attribute name="ABIERTOSAPOYOSDIV" type="Boolean" default="false"/>
+    <aura:attribute name="ABIERTOSCONTACTABILIDADIV" type="Boolean" default="false"/>
+    <aura:attribute name="ABIERTOSOPORTUNIDADESDIV" type="Boolean" default="false"/>
+    <aura:attribute name="sDetalle" type="Boolean" default="false"/>
+
+    <aura:attribute name="banderaEtapa1" type="Boolean" default="false"/>
+    <aura:attribute name="banderaEtapa2" type="Boolean" default="false"/>
+    <aura:attribute name="banderaEtapa3" type="Boolean" default="false"/>
+    <aura:attribute name="banderaEtapa4" type="Boolean" default="false"/>
+    <aura:attribute name="EtapaTemporal" type="String" default=""/>
+    <aura:attribute name="EtapaRI" type="String" default=""/>
+    <aura:attribute name="Showvista1" type="Boolean" default="false"  />
+    <aura:attribute name="Showvista2" type="Boolean" default="true"  />
+    <aura:attribute name="VistaPropiedad1" type="String" default="slds-path__item slds-is-incomplete"/>
+    <aura:attribute name="VistaPropiedad2" type="String" default="slds-path__item slds-is-incomplete"/>
+    <aura:attribute name="VistaPropiedad3" type="String" default="slds-path__item slds-is-incomplete"/>
+    <aura:attribute name="VistaPropiedad4" type="String" default="slds-path__item slds-is-incomplete"/>
+    <aura:attribute name="Button" type="String" default="Siguiente Etapa"/>
+    <aura:attribute name="EtapaRIButton" type="String" default=""/>
+    <aura:attribute name="rows" type="Object[]" />
+
+
+    <aura:attribute name="apiName" type="String" description="Api Name del registro concurrido"/>
+    <aura:attribute name="createdBy" type="List" description="Nombre del Ejecutivo"/>
+    <aura:attribute name="nameEV" type="String" description="Nombre del Ejecutivo"/>
+    <aura:attribute name="nameDO" type="String" description="Nombre del Director"/>
+    <aura:attribute name="comentarioEV" type="String" description="comentarios del EV"/>
+    <aura:attribute name="comentarioDO" type="String" description="comentarios del DO"/>
+    <aura:attribute name="comentario" type="String"  description="Comentarios del Ejecutivo/Director"/>
+    <aura:attribute name="showEjecutivo" type="Boolean" default="false"/>
+    <aura:attribute name="showDirector" type="Boolean" default="false"/>
+    <aura:attribute name="showEvaluar" type="Boolean" default="true"/>
+    <aura:attribute name="showNotEvaluar" type="Boolean" default="false"/>
+    <aura:attribute name="showComponent" type="Boolean" default="false"/>
+    <aura:attribute name="who" type="String"/>
+    <aura:attribute name="who2" type="String" default="DR"/>
+    <aura:attribute name="MessageJson" type="sObject" />
+    <aura:attribute name="EjecutivoDO" type="Boolean" default="true"/>
+    <aura:attribute name="DORI" type="Boolean" default="false" />
+    <aura:attribute name="claseDirector" type="String" default="slds-p-horizontal--small slds-size--1-of-6" />
+    <aura:attribute name="DOValidacion" type="Boolean" default="false" />
+    <aura:attribute name="UgUser" type="String"/>
+
+    <aura:attribute name="PromDOR" type="Decimal" default="0"/>
+    <aura:attribute name="PromDORPot" type="Decimal" default="0"/>
+    <aura:attribute name="PromGM" type="Decimal" default="0"/>
+    <aura:attribute name="PromGMPot" type="Decimal" default="0"/>
+    <aura:attribute name="actualDate" type="DateTime"/>
+    <aura:attribute name="jerarquia" type="Boolean" default="false"/>
+
+    <aura:attribute name="showModalNuevoApoyo" type="Boolean" default="false" />
+    <aura:attribute name="showModalNuevoCompromiso" type="Boolean" default="false" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler name="PasoParametrosPadre" event="c:EU001_evt_EligeRICintillo" action="{!c.RecibeParametros}"/>
+    <aura:handler name="change" value="{!v.RISelect}" action="{!c.cambio}"/>
+
+
+    <aura:if isTrue="{!!v.Showvista1}">
+
+        <c:EU001_ConsolaDirector />
+
+    </aura:if>
+
+    <aura:if isTrue="{!!v.Showvista2}">
+        <lightning:layoutitem flexibility="no-grow" size="12" mediumDeviceSize="12" largeDeviceSize="12">
+
+        	<div style="background-color: #FFFFFF; ">
+                <aura:iteration items="{!v.rows}" var="row" indexVar="rowIndex">
+                	<div class="slds-grid" style="padding-top:1rem;">
+                        <div class="{!v.claseDirector}" style="padding-left:1rem; ">
+                        	<div class="slds-text-title slds-align--absolute-center slds-m-bottom--small" >Nombre</div>
+                        	<div class="slds-text-title slds-align--absolute-center slds-m-bottom--small">{!row.Acc.Name}</div>
+                        </div>
+                        <aura:if isTrue="{!!v.DORI}">
+                            <div class="{!v.claseDirector}">
+                            	<div class="slds-text-title slds-align--absolute-center slds-m-bottom--small" >Liga del Ejecutivo</div>
+                                <div class="slds-text-title slds-align--absolute-center slds-m-bottom--small">{!v.Cintillo.EU_001_tx_Atributo__c}</div>
+                            </div>
+                        </aura:if>
+                        <div class="{!v.claseDirector}">
+                            <div class="slds-text-title slds-align--absolute-center slds-m-bottom--small" >No. RI</div>
+                            <div class="slds-text-title slds-align--absolute-center slds-m-bottom--small">{!v.RISelName}</div>
+                        </div>
+                        <aura:iteration items="{!row.lsOpp}" var="child" >
+                            <div class="{!v.claseDirector}">
+                                <div class="slds-text-title slds-align--absolute-center slds-m-bottom--small" >Fecha de Inicio</div>
+                                <ui:outputDate class="slds-text-title slds-align--absolute-center slds-m-bottom--small" value="{!child.EU001_ft_Fecha_Inicio__c}" />
+                            </div>
+                            <div class="{!v.claseDirector}">
+                                <div class="slds-text-title slds-align--absolute-center slds-m-bottom--small" >Fecha de Finalización</div>
+                                <ui:outputDate class="slds-text-title slds-align--absolute-center slds-m-bottom--small" value="{!child.EU001_ft_Fecha_Cierre__c}" />
+                            </div>
+                        </aura:iteration>
+                        <div class="{!v.claseDirector}">
+                        <aura:if isTrue="{!v.EtapaRI!='Evaluacion' &amp;&amp; v.EtapaRI!='Finalizacion' }"  >
+
+                            <lightning:button class="slds-align--absolute-center slds-m-bottom--small" variant="neutral" label="Apoyos" onclick="{!c.gotoURL}" />
+
+                        </aura:if>
+                            <br />
+                            <aura:if isTrue="{!v.EtapaRIButton == 'Evaluacion'}" >
+                                <lightning:button class="slds-align--absolute-center slds-m-bottom--small" variant="neutral" label="Evaluar" onclick="{!c.handleModalNuevoCompromisoOpen}" />
+                            </aura:if>
+                        </div>
+                    </div>
+                </aura:iteration>
+                <div class="slds-path-coach" style="padding-top:15px; padding-bottom:20px;">
+                    <div class="slds-grid">
+                        <div class="slds-tabs_path" role="application">
+                            <ul class="slds-tabs_path__nav" role="tablist">
+                                <li class="{!v.VistaPropiedad1}" role="presentation" style="left:15px;" >
+                                    <a aria-selected="false" class="slds-tabs--path__link" href="javascript:void(0);" id="path-1" role="option" tabindex="-1">
+                                        <span class="slds-tabs_path__title">Preparación</span>
+                                    </a>
+                                </li>
+                                <li class="{!v.VistaPropiedad2}" role="presentation" >
+                                    <a aria-selected="false" class="slds-tabs--path__link" href="javascript:void(0);" id="path-2" role="option" tabindex="-1">
+                                        <span class="slds-tabs_path__title">Presentación</span>
+                                    </a>
+                                </li>
+                                <li class="{!v.VistaPropiedad3}" role="presentation" >
+                                    <a aria-selected="false" class="slds-tabs--path__link" href="javascript:void(0);" id="path-3" role="option" tabindex="-1">
+                                        <span class="slds-tabs_path__title">Evaluación</span>
+                                    </a>
+                                </li>
+                                <li class="{!v.VistaPropiedad4}" role="presentation" >
+                                    <a aria-selected="false" class="slds-tabs--path__link" href="javascript:void(0);" id="path-4" role="option" tabindex="-1">
+                                        <span class="slds-tabs_path__title">Finalización</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="slds-button slds-button_brand slds-path__mark-complete slds-no-flex slds-m-horizontal_small" onclick="{!c.btnsig}">{!v.Button}</button>
+
+                    </div>
+                    <div aria-labelledby="path-1" class="slds-tabs_path__content slds-hide" id="path-content-1" role="tabpanel">
+                        <h2>Path 1 Content</h2>
+                    </div>
+                    <div aria-labelledby="path-2" class="slds-tabs_path__content slds-hide" id="path-content-2" role="tabpanel">
+                        <h2>Path 2 Content</h2>
+                    </div>
+                    <div aria-labelledby="path-3" class="slds-tabs_path__content slds-hide" id="path-content-3" role="tabpanel">
+                        <h2>Path 3 Content</h2>
+                    </div>
+                    <div aria-labelledby="path-4" class="slds-tabs_path__content slds-hide" id="path-content-4" role="tabpanel">
+                        <h2>Path 4 Content</h2>
+                    </div>
+                </div>
+            </div>
+        </lightning:layoutitem>
+
+        <br />
+        <lightning:layout >
+            <lightning:layoutitem flexibility="grow" size="12" mediumDeviceSize="12" largeDeviceSize="12" >
+                <div style="z-index: 1; position:relative !important;">
+                	<c:MX_BPP_CintilloRI recordId="{!v.CintilloSelect}" simpleRecord="{!v.Cintillo}" recordCompApoyo="{!v.CompApoyo}"/>
+                </div>
+            </lightning:layoutitem>
+        </lightning:layout>
+        <br />
+        <!--MENU-->
+        <lightning:layout >
+            <lightning:layoutitem flexibility="no-grow" size="12" mediumDeviceSize="12" largeDeviceSize="12">
+                <div class="slds-grid" style="background-color: #FFFFFF; padding-top:1rem; ">
+                	<div class="slds-p-horizontal--small slds-size--1-of-5">
+                		<ui:menu >
+                			<ui:menuTrigger click="{!c.displayCOMP}" class="slds-text-heading--x-small slds-section-title--divider">PUNTOS
+	                            <button class="slds-button slds-button--icon" aria-describedby="help" title="Ayuda" >
+	                                <lightning:icon iconName="utility:right" size="xx-small" class="slds-show" alternativeText="RESUMEN PUNTOS" aura:id="menuPunt" />
+	                            </button>
+	                        </ui:menuTrigger>
+	                        <ui:menuList aura:id="actionMenu" class="slds-dropdown_right">
+	                            <ui:actionMenuItem class="slds-dropdown__item" label="RESUMEN PUNTOS" click="{!c.GRAPHPUNTOSBPP}"/>
+                                <ui:actionMenuItem class="slds-dropdown__item" label="DETALLE PUNTOS" click="{!c.DETALLEPUNTOS}"/>
+	                        </ui:menuList>
+	                    </ui:menu>
+                	</div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-5">
+                		<ui:menu >
+                			<ui:menuTrigger click="{!c.ABIERTOSCONTACTABILIDAD}" class="slds-text-heading--x-small slds-section-title--divider">
+                                CONTACTABILIDAD
+	                        </ui:menuTrigger>
+	                    </ui:menu>
+                    </div>
+                	<div class="slds-p-horizontal--small slds-size--1-of-5">
+                		<ui:menu>
+                			<ui:menuTrigger click="{!c.ABIERTOSOPORTUNIDADES}" class="slds-text-heading--x-small slds-section-title--divider">
+                                OPORTUNIDADES
+	                        </ui:menuTrigger>
+	                    </ui:menu>
+	                </div>
+                	<div class="slds-p-horizontal--small slds-size--1-of-5">
+                		<ui:menu >
+	                        <ui:menuTrigger click="{!c.displayCOMP}" class="slds-text-heading--x-small slds-section-title--divider">
+	                            COMPROMISOS
+	                            <button class="slds-button slds-button--icon" aria-describedby="help" title="Ayuda" >
+	                                <lightning:icon iconName="utility:right" size="xx-small" class="slds-show" alternativeText="Abierto" aura:id="menuCOMP" />
+	                                <lightning:icon iconName="utility:down" size="xx-small" class="slds-hide" alternativeText="Cerrado" aura:id="menuCOMP" />
+	                            </button>
+	                        </ui:menuTrigger>
+
+	                        <ui:menuList aura:id="actionMenu" class="slds-dropdown_right">
+	                            <ui:actionMenuItem class="slds-dropdown__item" label="OPORTUNIDADES" click="{!c.OPORTUNIDADESCOMP}"/>
+	                            <ui:actionMenuItem class="slds-dropdown__item" label="COMPROMISOS" click="{!c.COMPROMISOSCOMP}"/>
+	                        </ui:menuList>
+                        </ui:menu>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-5">
+                    	<ui:menu >
+                            <ui:menuTrigger click="{!c.displayAPY}" class="slds-text-heading--x-small slds-section-title--divider">
+                                APOYOS
+                                <button class="slds-button slds-button--icon" aria-describedby="help" title="Ayuda" >
+                                    <lightning:icon iconName="utility:right" size="xx-small" class="slds-show" alternativeText="Abierto" aura:id="menuAPY" />
+                                    <lightning:icon iconName="utility:down" size="xx-small" class="slds-hide" alternativeText="Cerrado" aura:id="menuAPY" />
+                                </button>
+                            </ui:menuTrigger>
+                            <ui:menuList aura:id="actionMenu" class="slds-dropdown_right">
+                                <ui:actionMenuItem class="slds-dropdown__item" label="RESUMEN" click="{!c.RESUMENAPOYOS}"/>
+                                <ui:actionMenuItem class="slds-dropdown__item" label="APOYOS" click="{!c.ABIERTOSAPOYOS}"/>
+                            </ui:menuList>
+                        </ui:menu>
+                    </div>
+                </div>
+            </lightning:layoutitem><br/>
+        </lightning:layout>
+        <lightning:layout >
+            <lightning:layoutitem flexibility="no-grow" size="12" mediumDeviceSize="12" largeDeviceSize="12">
+            	<table class="slds-table  slds-table_resizable-cols slds-table_fixed-layout">
+                    <!-- PUNTOS -->
+                    <aura:if isTrue="{!v.GRAPHPUNTOS}">
+                        <br/>
+                        <div class="slds-text-heading_small slds-align--absolute-left" style="border-top: 0.3px solid rgb(221, 219, 218); color:rgb(112, 110, 107);font-size:20px;margin-left:10px;" >Puntos</div><br/>
+                        <c:MX_BPP_GraficosRI Titulo="{!v.Titulo}" RISelect="{!v.RISelect}"/>
+                    </aura:if>
+                    <!-- FIN PUNTOS -->
+                    <!-- Detalle Puntos -->
+                    <aura:if isTrue="{!v.sDetalle}">
+                        <br/>
+                        <c:MX_BPP_ResumenIndicador fieldEmpleado="{!v.Cintillo.MX_BPP_NumEmpleado__c}"/>
+                    </aura:if>
+                    <!-- FIN Detalle Puntos -->
+                    <!-- PUNTOS -->
+                    <aura:if isTrue="{!v.GRAPHEU}">
+                        <br/>
+                        <div class="slds-text-heading_small slds-align--absolute-left" style="border-top: 0.3px solid rgb(221, 219, 218); color:rgb(112, 110, 107);font-size:20px;margin-left:10px;" >EU</div><br/>
+                        <c:MX_BPP_GraficosRI Titulo="{!v.Titulo}" RISelect="{!v.RISelect}"/>
+                    </aura:if>
+                    <!-- FIN PUNTOS -->
+					<!-- CONTACTABILIDAD -->
+                    <aura:if isTrue="{!v.ABIERTOSCONTACTABILIDADIV}">
+                        <br/>
+                        <div class="slds-text-heading_small slds-align--absolute-left" style="border-top: 0.3px solid rgb(221, 219, 218); color:rgb(112, 110, 107);font-size:20px;margin-left:10px;" ></div><br/>
+                        <c:BPyP_Contact_Acc selbkm="{!v.nameEV}" RISelect="{!v.RISelect}" bandera="true"/>
+                    </aura:if>
+                    <!-- FIN CONTACTABILIDAD -->
+                    <!-- OPORTUNIDADES -->
+                    <aura:if isTrue="{!v.ABIERTOSOPORTUNIDADESDIV}">
+                        <br/>
+                        <div class="slds-text-heading_small slds-align--absolute-left" style="border-top: 0.3px solid rgb(221, 219, 218); color:rgb(112, 110, 107);font-size:20px;margin-left:10px;" ></div><br/>
+                        <c:BPyP_OppRep selbkm="{!v.nameEV}" RISelect="{!v.RISelect}" bandera="true" />
+                    </aura:if>
+                    <!-- FIN OPORTUNIDADES -->
+                    <!--COMPROMISOS EJECUTIVOS-->
+
+                    <aura:if isTrue="{!v.OPORTUNIDADESCOMPDIV}">
+                        <br/>
+                        <div class="slds-text-heading_small slds-align--absolute-left" style="border-top: 0.3px solid rgb(221, 219, 218); color:rgb(112, 110, 107);font-size:20px;margin-left:10px;" >Oportunidades</div><br/>
+                        <c:MX_BPP_RI_Compromisos DOEJEC="{!v.DOValidacion}" idRI="{!v.RISelect}"/>
+                    </aura:if>
+                    <aura:if isTrue="{!v.COMPROMISOSCOMPDIV}">
+                        <br/>
+                        <div class="slds-text-heading_small slds-align--absolute-left" style="border-top: 0.3px solid rgb(221, 219, 218); color:rgb(112, 110, 107);font-size:20px;margin-left:10px;" >Compromisos</div><br/>
+                        <c:MX_BPP_RI_ListaCompromisos IdRICompromiso="{!v.RISelect}" isDO="{!v.DOValidacion}" EstadoRI="{!v.EtapaRI}"/>
+                    </aura:if>
+                    <!-- fin compromisos -->
+
+                    <!--APOYOS-->
+
+                    <aura:if isTrue="{!v.RESUMENAPOYOSDIV}">
+                        <br/>
+                        <div class="slds-text-heading_small slds-align--absolute-left" style="border-top: 0.3px solid rgb(221, 219, 218); color:rgb(112, 110, 107);font-size:20px;margin-left:10px;" >Resumen Apoyos</div><br/>
+                        <c:EU001_cmp_graficasConParametros TipoGrafica="doughnut"
+                                                           NombreCanvas="Apoyos"
+                                                           posicionLeyenda="right"
+                                                           NombreInforme="EU001_inf_ApoyosEU"
+                                                           banderaJsonConsulta="true"
+                                                           UgUserg="{!v.UgUser}"
+                                                           riOwner="{!v.RISelect}"/>
+                    </aura:if>
+                    <aura:if isTrue="{!v.ABIERTOSAPOYOSDIV}">
+                        <br/>
+                        <div class="slds-text-heading_small slds-align--absolute-left" style="border-top: 0.3px solid rgb(221, 219, 218); color:rgb(112, 110, 107);font-size:20px;margin-left:10px;" >Apoyos</div><br/>
+                        <c:EU001_cmp_VistaApoyos IdRICompromiso="{!v.RISelect}"  VerMas="Abiertos_EU"/>
+                    </aura:if>
+                    <!-- fin apoyos -->
+
+                </table>
+            </lightning:layoutitem>
+        </lightning:layout>
+        <aura:if isTrue="{!v.showModalNuevoApoyo}">
+            <c:EU001_cmp_modApoyos IdRICompromiso="{!v.RISelect}" NombreRI="{!v.RISelName}" isActive="{!v.showModalNuevoApoyo}"/>
+        </aura:if>
+    </aura:if>
+
+    <lightning:layoutitem flexibility="grow" size="12" mediumDeviceSize="12" largeDeviceSize="12" >
+        <c:MarcoModal title="Valoración RI" isActive="{!v.showModalNuevoCompromiso}" >
+            <div role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container style-general" style="padding-top: 20px;">
+                    <!-- HEADER -->
+                    <br/>
+                    <header class="slds-modal__header">
+                        <br/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Valoración Reunión Individual</h2>
+                    </header>
+                    <!-- CONTENT -->
+                    <div class="slds-modal__content slds-p-around_medium" >
+                        <aura:if isTrue="{!v.showComponent}">
+                            <div class="slds-form-element" >
+                                <lightning:layout horizontalAlign="center" verticalAlign="center">
+                                    <aura:if isTrue="{!v.showEjecutivo}">
+                                        <ui:outputText value="{!v.nameEV}" class="slds-grid--align-center"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!v.showDirector}">
+                                        <ui:outputText value="{!v.nameDO}"  class="slds-grid--align-center"/>
+                                    </aura:if>
+                                    <br/>
+                                </lightning:layout>
+                                <br/>
+                                <c:EG_001_cmp_Valoracion_de_RI recordId="{!v.RISelect}"
+                                                               childAttribute="{!v.who}"/>
+                                <br/>
+                                <lightning:layoutitem flexibility="grow" size="12" mediumDeviceSize="12" largeDeviceSize="12">
+                                    <div class="slds-grid">
+                                        <div class="slds-p-horizontal--small slds-size--1-of-4" style="padding-left:1rem; ">
+                                            <div class="slds-align--absolute-center slds-text-heading--medium">Insatisfactorio</div>
+                                        </div>
+                                        <div class="slds-p-horizontal--small slds-size--1-of-4">
+                                            <div class="slds-align--absolute-center slds-text-heading--medium">Bueno</div>                                       </div>
+                                        <div class="slds-p-horizontal--small slds-size--1-of-4">
+                                            <div class="slds-align--absolute-center slds-text-heading--medium">Muy Bueno</div>
+                                        </div>
+                                        <div class="slds-p-horizontal--small slds-size--1-of-4">
+                                            <div class="slds-align--absolute-center slds-text-heading--medium">Excelente</div>
+                                        </div>
+                                    </div>
+
+                                </lightning:layoutitem>
+                                <br/><br/>
+                                <aura:if isTrue="{!v.showEvaluar}">
+                                    <ui:inputTextArea placeholder="Comentarios..." value="{!v.comentario}" rows="3"/>
+                                </aura:if>
+                                <aura:if isTrue="{!v.showNotEvaluar}">
+                                    Comentario Final de la RI:
+                                    <br/>
+                                    <div style="color:#000000; font-size=16px;" title="Mes">
+                                        <strong><ui:outputTextArea value="{!v.comentario}"/></strong>
+                                    </div>
+                                </aura:if>
+                                <br/>
+                                <div class="slds-text-align--center">
+                                    <h3>La valoración y los comentarios son confidenciales</h3>
+                                </div>
+                            </div>
+                        </aura:if>
+                    </div>
+                    <c:EU001_cmp_modApoyos isActive="{!v.showModalNuevoApoyo}" IdRICompromiso="{!v.RISelect}"/>
+                    <!-- FOOTER -->
+                    <div class="slds-modal__footer">
+                        <div class="slds-x-small-buttons--horizontal">
+                            <aura:if isTrue="{!v.showComponent}">
+                                <aura:if isTrue="{!v.showEvaluar}">
+                                    <ui:button label="Evaluar" press="{!c.guardar}"/>
+                                </aura:if>
+                            </aura:if>
+                            <ui:button label="Cerrar" press="{!c.handleModalNuevoCompromisoCancel}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </c:MarcoModal>
+    </lightning:layoutitem>
+</aura:component>

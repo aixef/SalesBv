@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Identificación propia</fullName>
+        <color>#0B6FCE</color>
+        <default>false</default>
+        <label>Identificación propia</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound</fullName>
+        <default>false</default>
+        <label>Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Campañas MKT Inbound</fullName>
+        <default>false</default>
+        <label>Campañas MKT Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call me back</fullName>
+        <default>false</default>
+        <label>Call me back</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referido bancas/filiales</fullName>
+        <color>#78C953</color>
+        <default>false</default>
+        <label>Referido bancas/filiales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tracking Web</fullName>
+        <default>false</default>
+        <label>Tracking Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Base de Datos</fullName>
+        <default>false</default>
+        <label>Base de Datos</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Banca de fomento</fullName>
+        <color>#A845DC</color>
+        <default>false</default>
+        <label>Banca de fomento</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bróker</fullName>
+        <color>#F3D904</color>
+        <default>false</default>
+        <label>Bróker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cámaras</fullName>
+        <color>#A53711</color>
+        <default>false</default>
+        <label>Cámaras</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Corporativos Noreste</fullName>
+        <color>#66E9BD</color>
+        <default>false</default>
+        <label>Corporativos Noreste</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referidos</fullName>
+        <default>false</default>
+        <label>Referidos</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Derivados</fullName>
+        <default>false</default>
+        <label>Derivados</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Directorios empresariales</fullName>
+        <color>#0B24BE</color>
+        <default>false</default>
+        <label>Directorios empresariales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Estados financieros</fullName>
+        <color>#419249</color>
+        <default>false</default>
+        <label>Estados financieros</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expos y eventos</fullName>
+        <color>#B6E32E</color>
+        <default>false</default>
+        <label>Expos y eventos</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inteligencia comercial</fullName>
+        <color>#641CCF</color>
+        <default>false</default>
+        <label>Inteligencia comercial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invitación a un proyecto</fullName>
+        <color>#F96FB7</color>
+        <default>false</default>
+        <label>Invitación a un proyecto</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound</fullName>
+        <default>false</default>
+        <label>Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Parques Industriales Noreste</fullName>
+        <color>#AFCADF</color>
+        <default>false</default>
+        <label>Parques Industriales Noreste</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PYMES Noreste</fullName>
+        <color>#8F6429</color>
+        <default>false</default>
+        <label>PYMES Noreste</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referido de clientes</fullName>
+        <color>#EFAE73</color>
+        <default>false</default>
+        <label>Referido de clientes</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referido por BE&amp;G</fullName>
+        <color>#57F17C</color>
+        <default>false</default>
+        <label>Referido por BE&amp;G</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referido por consejero</fullName>
+        <color>#0B6FCE</color>
+        <default>false</default>
+        <label>Referido por consejero</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sinergia otras bancas</fullName>
+        <color>#78C953</color>
+        <default>false</default>
+        <label>Sinergia otras bancas</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Otros</fullName>
+        <color>#2F5D85</color>
+        <default>false</default>
+        <label>Otros</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Venta Perfecta</fullName>
+        <default>false</default>
+        <label>Venta Perfecta</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelaciones</fullName>
+        <default>false</default>
+        <label>Cancelaciones</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SAC</fullName>
+        <default>false</default>
+        <label>SAC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Speedee</fullName>
+        <default>false</default>
+        <label>Speedee</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mercado Libre</fullName>
+        <default>false</default>
+        <label>Mercado Libre</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Campaña TP</fullName>
+        <default>false</default>
+        <label>Campaña TP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Base Uber</fullName>
+        <default>false</default>
+        <label>Base Uber</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VIVA Anuncio</fullName>
+        <default>false</default>
+        <label>VIVA Anuncio</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Redes Sociales</fullName>
+        <default>false</default>
+        <label>Redes Sociales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound RRSS</fullName>
+        <default>false</default>
+        <label>Inbound RRSS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Google Mobile</fullName>
+        <default>false</default>
+        <label>Google Mobile</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound TLMK</fullName>
+        <default>false</default>
+        <label>Outbound TLMK</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Telemarketing</fullName>
+        <default>false</default>
+        <label>Telemarketing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Advertisement</fullName>
+        <color>#E27001</color>
+        <default>false</default>
+        <label>Advertisement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer Event</fullName>
+        <default>false</default>
+        <label>Customer Event</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employee Referral</fullName>
+        <default>false</default>
+        <label>Employee Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Google AdWords</fullName>
+        <default>false</default>
+        <label>Google AdWords</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Purchased List</fullName>
+        <default>false</default>
+        <label>Purchased List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trade Show</fullName>
+        <default>false</default>
+        <label>Trade Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Webinar</fullName>
+        <default>false</default>
+        <label>Webinar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Website</fullName>
+        <default>false</default>
+        <label>Website</label>
+    </standardValue>
+	<standardValue>
+        <fullName>Banquero</fullName>
+        <default>false</default>
+        <label>Banquero</label>
+    </standardValue>
+</StandardValueSet>

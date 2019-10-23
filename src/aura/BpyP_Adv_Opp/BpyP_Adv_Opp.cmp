@@ -1,0 +1,217 @@
+<!--*
+ * Fecha                Autor               Descripción
+ * 				       	    Creación del componente
+ * 19/12/2018       Mario Calderón      El componente solicita que el número de cliente sea de 8 dígitos y muestra un mensaje de error en caso contrario
+ * 20/12/2018       Mario Calderón      Creación de atributo "StageBypass" tipo Boolean para lograr sobrepasar la regla de validación
+ * 21/12/2018		Adrián Pastor	    Se modifica el componente para poder seleccionar un motivo de descarte si la oportunidad será descartada
+ * 26/12/2018		Mario Calderón	    Modificación del modal de "Descartada/Rechazada" para mostrar motivos de descarte según el tipo de registro de oportunidad
+ * 26/12/2018		Mario Calderón	    Se agrega atributo "valInput" para almacenar los motivos de descarte
+ * 26/12/2018		Mario Calderón	    Se agrega atributo "mDescarte" para mostrar u ocultar los motivos de descarte si la etapa es "Descartada/Rechazada"
+ * 26/12/2018		Mario Calderón	    Se agrega atributo "oMotivo" para mostrar u ocultar un cuadro de texto en caso de que el motivo sea "Otros factores (campo abierto)"
+ * 26/12/2018		Mario Calderón	    Se agrega atributo "razonDescarte" para almacenar el motivo de descarte y que este sea visible para el controlador
+ * 26/12/2018		Mario Calderón	    Se agrega atributo "razonCierre" para almacenar el motivo de cierra de la oportunidad y que este sea visible para el controlador
+ * 26/12/2018		Mario Calderón	    Se agrega handler para detectar los cambios en la etapa de la oportunidad y así llamar al método del controlador correspondiente
+ * 26/12/2018		Mario Calderón	    Se agrega handler para detectar los cambios en los motivos de descarte y así llamar al método del controlador correspondiente
+ * 27/12/2018		Mario Calderón	    Se modifica modal inicial para mostrar los motivos de descarte en caso de que la etapa de la oportunidad sea "Descartada/Rechazada", en cualquier otro caso, se ocultan
+ * 21/01/2019		Adrián Pastor		Se cambian los estilos para que muestre la apariencia del flujo de trabajo y tipografía
+ * 27/03/2019		Antony de la rosa   Se agrega etapa gestionada y nuevas variables.
+ * 04/04/2019		Antony de la rosa   Se Cambia el nombre de etapa de gestionada a En Gestión.
+* -->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId"  access="global" controller="BpyP_Adv_Opp">
+	<ltng:require styles="{!$Resource.SLDS_MAXBBVA + '/assets/styles/salesforce-lightning-design-system-ltng.css'}" />
+	<aura:attribute name="recordId" type="Id" />
+	<aura:attribute name="oppSel" type="Opportunity" />
+	<aura:attribute name="usr" type="User" />
+	<aura:attribute name="abiertaClass" type="String" />
+    <aura:attribute name="GestionadaClass" type="String"/>
+    <aura:attribute name="EtapaOPP" type="String" default=""/>
+	<aura:attribute name="cerradaClass" type="String" />
+	<aura:attribute name="cerradaTitle" type="String" />
+	<aura:attribute name="buttonTitle" type="String" />
+	<aura:attribute name="msgConfirm" type="String" />
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:attribute name="StageBypass" type="Boolean" description="Bandera que simula un bypass para saltar la regla de validación MX_BPyP_rva_CambioEtapaEnFlujo en oportunidades de BPYP" default='True'/>
+	<!--FLUJO DESCARTE-->
+    <aura:attribute name="valInput" type="MX_BPP_Motivos_Descarte__c[]" description="Arreglo que guarda los motivos de descarte según el tipo de registro de la oportunidad"/>
+    <aura:attribute name="mDescarte" type="Boolean" default='false' description="Condición que muestra los motivos de descarte si la etapa de la oportunidad es Descartada/Rechazada"/>
+    <aura:attribute name="oMotivo" type="Boolean" default='false' description="Condición que muestra un cuadro de texto si el motivo de descarte es Otros factores"/>
+    <aura:attribute name="razonDescarte" type="String" default="--Ninguno--" description="Variable que almacena el motivo de descarte de una oportunidad que es necesaria para el controlador"/>
+    <aura:attribute name="razonCierre" type="String" description="Variable que almacena la etapa de la oportunidad que es necesaria para el controlador"/>
+    <aura:attribute name="oMDescarte" type="String" description="Variable que almacena el texto de Otro motivo de descarte"/>
+    <aura:handler name="change" value="{!v.razonDescarte}" action="{!c.OtroMotivo}" description="Handler que controla el cambio de los motivos de descarte para mostrar el cuadro de texto en caso de Otro motivo"/>
+    <aura:handler name="change" value="{!v.razonCierre}" action="{!c.CambioMotivo}" description="Handler que controla el cambio de las etapas de la oportunidad para mostrar las razones de descarte en caso de Descartada/Rechazada"/>
+	<!-- {!v.recordId}<br/><br/> -->
+	<!-- {!v.oppSel.Account.RecordType.DeveloperName} -->
+
+        <div class="slds-grid slds-path__track">
+            <div class="slds-path__scroller" role="application">
+                <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                    <li class="{!v.abiertaClass}" role="presentation">
+                        <a aria-controls="path-content-1" aria-expanded="false" aria-selected="false" class="slds-path__link" id="path-1" role="tab" tabindex="-1" >
+                            <span class="slds-path__stage">
+                                <lightning:icon iconName="utility:check" variant="default"  size="x-small"/>
+                                <span class="slds-assistive-text">Primera Etapa</span>
+                            </span>
+                            <span class="slds-path__title">Abierta</span>
+                        </a>
+                    </li>
+                    <li class="{!v.GestionadaClass}" role="presentation">
+                        <a aria-controls="path-content-2" aria-expanded="false" aria-selected="false" class="slds-path__link" id="path-2" role="tab" tabindex="-1" >
+                            <span class="slds-path__stage">
+                                <lightning:icon iconName="utility:check" variant="default"  size="x-small"/>
+                                <span class="slds-assistive-text">Primera intermedia</span>
+                            </span>
+                            <span class="slds-path__title">En Gestión</span>
+                        </a>
+                    </li>
+                    <li class="{!v.cerradaClass}" role="presentation">
+                        <a aria-controls="path-content-3" aria-expanded="false" aria-selected="false" class="slds-path__link" id="path-3" role="tab" tabindex="-1">
+                            <span class="slds-path__stage">
+                                <lightning:icon iconName="utility:check" variant="default"  size="x-small"/>
+                                <span class="slds-assistive-text">Etapa final y de validación</span>
+                            </span>
+                            <span class="slds-path__title">{!v.cerradaTitle}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="slds-button slds-button_brand slds-path__mark-complete" onclick="{! c.closeOpp }" disabled="{!!(v.usr.Profile.Name=='BPyP Estandar'||v.usr.Profile.Name=='BPyP Director Oficina')}">
+		        {!v.buttonTitle}
+		    </button>
+        </div>
+
+
+	<!--###### MODAL BOX Start From Here ######-->
+    <aura:attribute name="isOpenEtapa" type="boolean" default="false"/>
+	<aura:if isTrue="{!v.isOpenEtapa}">
+
+		<div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open ">
+			<div class="slds-modal__container">
+			  <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+			  <div class="slds-modal__header">
+			    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+			    	<h1 class="slds-page-header__title">X </h1>
+			    	<span class="slds-assistive-text">Cerrar</span>
+			    </button>
+			    <h2 class="slds-text-heading--medium">Cerrar esta oportunidad</h2>
+			  </div>
+			  <!--###### MODAL BOX BODY Part Start From Here ######-->
+			  <div class="slds-modal__content slds-p-around--medium">
+			    <lightning:select aura:id="pklTyCloseOpp" value="{!v.razonCierre}" name="selectClOpp" label="Etapa" required="true">
+			    	<option value="">Seleccione una etapa cerrada...</option>
+	                <option value="Abierta">Abierta</option>
+                    <option value="En Gestión">En Gestión</option>
+	                <option value="Cerrada Ganada">Cerrada Ganada</option>
+	                <option value="Descartada / Rechazada">Descartada / Rechazada</option>
+            	</lightning:select>
+                  <aura:renderIf isTrue="{!v.mDescarte}">
+                      <lightning:select aura:id="pklTyCloseOppDes" value="{!v.razonDescarte}" name="selectClOppDes" label="Motivo de Descarte" required="true" onChange="{!c.OtroMotivo}">
+                          <option value="">--Ninguno--</option>
+                          <aura:iteration items="{!v.valInput}" var="item">
+                              <option class="optionClass">{!item.MX_BPP_Motivo__c}</option>
+                          </aura:iteration>
+                      </lightning:select>
+                  </aura:renderIf>
+                  <aura:renderIf isTrue="{!v.oMotivo}">
+                      <lightning:textarea aura:id="motivo" value="{!v.oMDescarte}" label="Otro motivo de descarte" minlength="1" maxlength="250" messageWhenBadInput="Tiene que poner un motivo.Vuelva a intentarlo."/>
+                  </aura:renderIf>
+			  </div>
+			  <!--###### MODAL BOX FOOTER Part Start From Here ######-->
+			  <div class="slds-modal__footer">
+			    <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Cancelar</button>
+			    <button class="slds-button slds-button--brand" onclick="{!c.continueModel}">Guardar</button>
+			  </div>
+			</div>
+		</div>
+		<div class="slds-backdrop slds-backdrop--open"></div>
+	</aura:if>
+	<!--###### MODAL BOX Part END Here ######-->
+
+	<!--###### MODAL BOX Start From Here ######-->
+    <aura:attribute name="isOpenClN" type="boolean" default="false"/>
+	<aura:if isTrue="{!v.isOpenClN}">
+
+		<div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open ">
+			<div class="slds-modal__container">
+			  <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+			  <div class="slds-modal__header">
+			    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeClN}">
+			    	<h1 class="slds-page-header__title">X </h1>
+			    	<span class="slds-assistive-text">Cerrar</span>
+			    </button>
+			    <h2 class="slds-text-heading--medium">Cerrar esta oportunidad</h2>
+			  </div>
+			  <!--###### MODAL BOX BODY Part Start From Here ######-->
+			  <div class="slds-modal__content slds-p-around--medium">
+			  	<lightning:input aura:id="NumeroCliente" label="Numero de Cliente asignado" value="" required="true" minlength="8" maxlength="8" messageWhenTooShort="Debe contener 8 dígitos" pattern="^[A-Za-z0-9 ]*" />
+			  </div>
+			  <!--###### MODAL BOX FOOTER Part Start From Here ######-->
+			  <div class="slds-modal__footer">
+			    <button class="slds-button slds-button--neutral" onclick="{!c.closeClN}" >Cancelar</button>
+			    <button class="slds-button slds-button--brand" onclick="{!c.continueClNu}">Continuar</button>
+			  </div>
+			</div>
+		</div>
+		<div class="slds-backdrop slds-backdrop--open"></div>
+	</aura:if>
+	<!--###### MODAL BOX Part END Here ######-->
+
+	<!--###### MODAL BOX Start From Here ######-->
+    <aura:attribute name="isOpenAmm" type="boolean" default="false"/>
+	<aura:if isTrue="{!v.isOpenAmm}">
+
+		<div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open ">
+			<div class="slds-modal__container">
+			  <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+			  <div class="slds-modal__header">
+			    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeEt}">
+			    	<h1 class="slds-page-header__title">X </h1>
+			    	<span class="slds-assistive-text">Cerrar</span>
+			    </button>
+			    <h2 class="slds-text-heading--medium">Cerrar esta oportunidad</h2>
+			  </div>
+			  <!--###### MODAL BOX BODY Part Start From Here ######-->
+			  <div class="slds-modal__content slds-p-around--medium">
+			  	<lightning:input type="number" aura:id="Ammount" label="Monto de la oportunidad a cerrar:" value="0" formatter="currency" step="0.10" required="true" min="1"/>
+			  </div>
+			  <!--###### MODAL BOX FOOTER Part Start From Here ######-->
+			  <div class="slds-modal__footer">
+			    <button class="slds-button slds-button--neutral" onclick="{!c.closeEt}" >Cancelar</button>
+			    <button class="slds-button slds-button--brand" onclick="{!c.continueAmmount}">Continuar</button>
+			  </div>
+			</div>
+		</div>
+		<div class="slds-backdrop slds-backdrop--open"></div>
+	</aura:if>
+	<!--###### MODAL BOX Part END Here ######-->
+
+	<!--###### MODAL BOX Start From Here ######-->
+    <aura:attribute name="isOpenCnfmAmm" type="boolean" default="false"/>
+	<aura:if isTrue="{!v.isOpenCnfmAmm}">
+
+		<div role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open ">
+			<div class="slds-modal__container">
+			  <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+			  <div class="slds-modal__header">
+			    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeCnfEt}">
+			    	<h1 class="slds-page-header__title">X </h1>
+			    	<span class="slds-assistive-text">Cerrar</span>
+			    </button>
+			    <h2 class="slds-text-heading--medium">Cerrar esta oportunidad</h2>
+			  </div>
+			  <!--###### MODAL BOX BODY Part Start From Here ######-->
+			  <div class="slds-modal__content slds-p-around--medium">
+			  	<lightning:formattedRichText value="{!'&lt;h1>'+v.msgConfirm+'&lt;/h1>'}" />
+			  </div>
+			  <!--###### MODAL BOX FOOTER Part Start From Here ######-->
+			  <div class="slds-modal__footer">
+			    <button class="slds-button slds-button--neutral" onclick="{!c.closeCnfEt}" >Cancelar</button>
+			    <button class="slds-button slds-button--brand" onclick="{!c.continueCnfmAmmount}">Guardar</button>
+			  </div>
+			</div>
+		</div>
+		<div class="slds-backdrop slds-backdrop--open"></div>
+	</aura:if>
+	<!--###### MODAL BOX Part END Here ######-->
+
+</aura:component>

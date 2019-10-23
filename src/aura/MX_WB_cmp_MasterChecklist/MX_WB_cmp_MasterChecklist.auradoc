@@ -1,0 +1,18 @@
+<aura:documentation>
+	<aura:description>
+         <p>Un <code>c:MX_WB_cmp_MasterChecklist</code> Componente que lee y muestra textos del objeto Master Checklist
+        por etapa de oportunidad y almacena en el objeto Opportunity Checklist las respuestas obtenidas.</p>
+    </aura:description>
+	<aura:example name="MasterCheckList" ref="c:MX_WB_cmp_MasterChecklist" label="Master CheckList">
+       <p>Este componente muestra textos dependiendo de la etapa que recibe como parámetro. <code>MX_WB_cmp_MasterChecklist</code>.</p>
+       <p> Los parametros que recibe son:
+           stageName; Etapa Stage name. Se utiliza para extraer de una configuración personalizada el tipo de registro
+           que almacena los textos que se deben mostrar.
+        </p>
+        <p>producto: Id del producto que se trabaja en la Oportunidad</p>
+        <p>Changelog 02/05/2019</p>
+        <p>Se cambian los valores que se iteran en la respuesta del listado de Objeciones</p>
+        <p>Se agregan parámetros a action para recibir un producto</p>
+	<p>Se cambia checkbox de objeciones por radiobutton</p>
+    </aura:example>
+</aura:documentation>

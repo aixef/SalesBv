@@ -1,0 +1,1 @@
+Buenas tardes {!Contact.FirstName} se te informa que el Alcance final ha cambiado de {!Case.MX_RTE_Alcance_Pre__c} a {!Case.MX_RTE_Alcance_Final__c}

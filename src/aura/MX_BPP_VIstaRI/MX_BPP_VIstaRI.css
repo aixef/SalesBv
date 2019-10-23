@@ -1,0 +1,30 @@
+.THIS .style-general {
+    width: 100%;
+}
+
+.THIS .style-content {
+    height: 400px;
+}
+/*toggleCss.css*/
+.THIS.toggle {
+    display: none;
+}
+.THIS .drop{
+    position: absolute;
+    z-index: 7000;
+    left: 50%;
+    float: left;
+    min-width: 0.001rem;
+    max-width: 20rem;
+    border: 1px solid rgb(221, 219, 218);
+    text-overflow: ellipsis;
+    border-radius: .25rem;
+    padding: .0rem 0;
+    white-space: nowrap;
+    font-size: 1rem;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.32);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}

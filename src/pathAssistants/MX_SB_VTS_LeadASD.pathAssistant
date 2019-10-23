@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>LeadASD</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Producto_Interes__c</fieldNames>
+        <fieldNames>OwnerId</fieldNames>
+        <info>&lt;p&gt;Antes de continuar complete y valide estos campos&lt;/p&gt;</info>
+        <picklistValueName>Abierto</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>MobilePhone</fieldNames>
+        <fieldNames>Email</fieldNames>
+        <info>&lt;p&gt;Antes de continuar por favor verifique los siguientes puntos:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;El número proporcionado puede recibir SMS.&lt;/li&gt;&lt;li&gt;El correo electrónico debe ser correcto.&lt;/li&gt;&lt;li&gt;Debe de ser el Propietario del Candidato&lt;ol&gt;&lt;li&gt;Si no es propietario, por favor cambie el nombre de propietario hacia usted</info>
+        <picklistValueName>Apertura</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>MX_WB_lst_EstatusPrimerContacto__c</fieldNames>
+        <picklistValueName>Cotizada</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>ASD</recordTypeName>
+</PathAssistant>

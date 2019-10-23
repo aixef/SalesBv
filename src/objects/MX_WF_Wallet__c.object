@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto para la aplicación workflow, se utiliza solo para las campañas de tipo Alianzas Comerciales</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Afiliaciones__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Afiliaciones</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fecha_fin_de_promoci_n__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(  MX_WF_Fecha_fin__c  )) &amp;&quot;-&quot;&amp; IF(MONTH(MX_WF_Fecha_fin__c  )&lt;10, &quot;0&quot;&amp;TEXT(MONTH(MX_WF_Fecha_fin__c  )),TEXT(MONTH(MX_WF_Fecha_fin__c  )))&amp;&quot;-&quot;&amp; IF(DAY(MX_WF_Fecha_fin__c  )&lt;10, &quot;0&quot;&amp;TEXT(DAY(MX_WF_Fecha_fin__c  )), TEXT(DAY(MX_WF_Fecha_fin__c  )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fecha fin de promoción</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Afiliaciones__c</fullName>
+        <description>Campo que acepta múltiples afiliaciones, cada afiliación consta de 7 dígitos y se debe separar con una &quot;coma&quot;</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicar las afiliaciones participantes a 7 dígitos separados por coma</inlineHelpText>
+        <label>Afiliaciones</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Campania__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campaña a la que se asocian los comercios wallets</description>
+        <externalId>false</externalId>
+        <label>Campaña</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Wallet</relationshipLabel>
+        <relationshipName>Wallet</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Categor_a_Secundaria_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Categoría Secundaria 1</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Catálogo de Categorias</value>
+            </filterItems>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.MX_WF_Vigente__c</field>
+                <operation>equals</operation>
+                <value>Sí</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MX_WF_Catalogo_Comercios_Wallet__c</referenceTo>
+        <relationshipLabel>Wallets (Categoría Secundaria 1)</relationshipLabel>
+        <relationshipName>Wallets1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Categor_a_Secundaria_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Categoría Secundaria 2</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Catálogo de Categorias</value>
+            </filterItems>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.MX_WF_Vigente__c</field>
+                <operation>equals</operation>
+                <value>Sí</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>MX_WF_Catalogo_Comercios_Wallet__c</referenceTo>
+        <relationshipLabel>Wallets (Categoría Secundaria 2)</relationshipLabel>
+        <relationshipName>Wallets2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Categor_a_Secundaria_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Categoría Secundaria 3</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Catálogo de Categorias</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>MX_WF_Catalogo_Comercios_Wallet__c</referenceTo>
+        <relationshipLabel>Wallets (Categoría Secundaria 3)</relationshipLabel>
+        <relationshipName>Wallets3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Categorias__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo de búsqueda hacia el catálogo de Categorías Wallet</description>
+        <externalId>false</externalId>
+        <label>Categoría Principal</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Catálogo de Categorias</value>
+            </filterItems>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.MX_WF_Vigente__c</field>
+                <operation>equals</operation>
+                <value>Sí</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MX_WF_Catalogo_Comercios_Wallet__c</referenceTo>
+        <relationshipLabel>Categorías</relationshipLabel>
+        <relationshipName>Wallets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Codigo_Categorias__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  OR( CONTAINS(MX_WF_Codigo_categor_a_auxiliar__c, &quot;ECOMMERCE&quot;), NOT(INCLUDES(MX_WF_Tipos_de_uso__c, &quot;Online&quot;)) )  ,MX_WF_Codigo_categor_a_auxiliar__c, MX_WF_Categorias__r.MX_WF_Codigo__c &amp; ( IF ( NOT ( ISBLANK( MX_WF_Categor_a_Secundaria_1__c )),&quot;/&quot;&amp; MX_WF_Categor_a_Secundaria_1__r.MX_WF_Codigo__c , &quot;&quot;))&amp; (IF ( NOT ( ISBLANK( MX_WF_Categor_a_Secundaria_2__c )),&quot;/&quot;&amp; MX_WF_Categor_a_Secundaria_2__r.MX_WF_Codigo__c, &quot;&quot;))&amp; &quot;/ECOMMERCE&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Código de Categorías</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Codigo_categor_a_auxiliar__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Categorias__r.MX_WF_Codigo__c &amp; ( IF ( NOT ( ISBLANK( MX_WF_Categor_a_Secundaria_1__c )),&quot;/&quot;&amp;  MX_WF_Categor_a_Secundaria_1__r.MX_WF_Codigo__c , &quot;&quot;))&amp; (IF ( NOT ( ISBLANK( MX_WF_Categor_a_Secundaria_2__c )),&quot;/&quot;&amp; MX_WF_Categor_a_Secundaria_2__r.MX_WF_Codigo__c, &quot;&quot;))&amp; (IF ( NOT ( ISBLANK( MX_WF_Categor_a_Secundaria_3__c )),&quot;/&quot;&amp; MX_WF_Categor_a_Secundaria_3__r.MX_WF_Codigo__c, &quot;&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Código categoría auxiliar</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Codigo_de_tipo_de_descuento__c</fullName>
+        <description>Código del tipo de descuento</description>
+        <externalId>false</externalId>
+        <formula>MX_WF_Tipo_de_descuento__r.MX_WF_Codigo__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Código de tipo de descuento</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Comercio__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Nombre del comercio donde aplicará la promoción</description>
+        <externalId>false</externalId>
+        <label>Comercio</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Catálogo de Comercios</value>
+            </filterItems>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.MX_WF_Vigente__c</field>
+                <operation>equals</operation>
+                <value>Sí</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MX_WF_Catalogo_Comercios_Wallet__c</referenceTo>
+        <relationshipLabel>Comercios Wallet</relationshipLabel>
+        <relationshipName>Comercios_Wallets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Estado__c</fullName>
+        <description>Campo de estado para el objeto wallet</description>
+        <externalId>false</externalId>
+        <label>Estado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Documentación</fullName>
+                    <default>true</default>
+                    <label>Documentación</label>
+                </value>
+                <value>
+                    <fullName>Vo.Bo. WALLET</fullName>
+                    <default>false</default>
+                    <label>Vo.Bo. WALLET</label>
+                </value>
+                <value>
+                    <fullName>Aprobado</fullName>
+                    <default>false</default>
+                    <label>Aprobado</label>
+                </value>
+                <value>
+                    <fullName>Cancelada</fullName>
+                    <default>false</default>
+                    <label>Cancelada</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_de_publicacion__c</fullName>
+        <description>Fecha de publicación de promoción</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de publicación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_de_publicacion_layout__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR(   MX_WF_Fecha_de_publicacion__c  )) &amp;&quot;-&quot;&amp; IF(MONTH(MX_WF_Fecha_de_publicacion__c  )&lt;10, &quot;0&quot;&amp;TEXT(MONTH(MX_WF_Fecha_de_publicacion__c  )),TEXT(MONTH(MX_WF_Fecha_de_publicacion__c    )))&amp;&quot;-&quot;&amp; IF(DAY(MX_WF_Fecha_de_publicacion__c  )&lt;10, &quot;0&quot;&amp;TEXT(DAY(MX_WF_Fecha_de_publicacion__c    )), TEXT(DAY(MX_WF_Fecha_de_publicacion__c    )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fecha de publicación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_fin__c</fullName>
+        <description>Fecha de fin de promoción</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha fin</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_inicio__c</fullName>
+        <description>Fecha de inicio de promoción</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha inicio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_inicio_promoci_n__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(YEAR( MX_WF_Fecha_inicio__c )) &amp;&quot;-&quot;&amp; IF(MONTH(MX_WF_Fecha_inicio__c)&lt;10, &quot;0&quot;&amp;TEXT(MONTH(MX_WF_Fecha_inicio__c)),TEXT(MONTH(MX_WF_Fecha_inicio__c)))&amp;&quot;-&quot;&amp; IF(DAY(MX_WF_Fecha_inicio__c)&lt;10, &quot;0&quot;&amp;TEXT(DAY(MX_WF_Fecha_inicio__c)), TEXT(DAY(MX_WF_Fecha_inicio__c)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fecha inicio promoción</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Grupo_de_tarjetas__c</fullName>
+        <description>Códigos de los grupos de tarjetas aplicables a la promoción</description>
+        <externalId>false</externalId>
+        <formula>IF ( INCLUDES (  MX_WF_Tarjetas_aplicables__c  , &quot;Crédito Visa&quot; ),&quot;V&quot;,&quot;&quot; ) &amp; 
+IF ( INCLUDES (  MX_WF_Tarjetas_aplicables__c  , &quot;Crédito Platinum&quot; ),&quot;P&quot;,&quot;&quot; ) &amp; 
+IF ( INCLUDES (  MX_WF_Tarjetas_aplicables__c  , &quot;Crédito Infinite&quot; ),&quot;I&quot;,&quot;&quot; ) &amp; 
+IF ( INCLUDES (  MX_WF_Tarjetas_aplicables__c  , &quot;Crédito MasterCard&quot; ),&quot;M&quot;,&quot;&quot; ) &amp; 
+IF ( INCLUDES (  MX_WF_Tarjetas_aplicables__c  , &quot;Débito&quot; ),&quot;DB&quot;,&quot;&quot; ) &amp; 
+IF ( INCLUDES (  MX_WF_Tarjetas_aplicables__c  , &quot;Congelada Visa&quot; ),&quot;C&quot;,&quot;&quot; ) &amp; 
+IF ( INCLUDES (  MX_WF_Tarjetas_aplicables__c  , &quot;Cuenta Express (Mi primera tarjeta)&quot; ),&quot;X&quot;,&quot;&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Grupo de tarjetas</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Hot__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Hot</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Identificador_de_Promocion__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  NOT( ISNULL(MX_WF_Campania__c)), MX_WF_Campania__r.CRM_WF_FIC__c,  Id )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Identificador de Promoción</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Imagen__c</fullName>
+        <description>Nombre de la imagen a mostrar</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Imagen</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Justificaci_n_de_cancelaci_n__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Justificación de cancelación</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Keywords_de_busqueda__c</fullName>
+        <description>Palabras que ayudarán a la búsqueda</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Las palabras que se quieran indicar como keywords deben ir separadas por espacio</inlineHelpText>
+        <label>Keywords de búsqueda</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_La_promoci_n_es_destacada__c</fullName>
+        <externalId>false</externalId>
+        <label>¿La promoción es destacada?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Sí</fullName>
+                    <default>false</default>
+                    <label>Sí</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Nombre_de_promocion__c</fullName>
+        <description>Nombre de la promoción</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Nombre de promoción</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Otro_Tipo_de_Descuento__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo de búsqueda con filtro hacia &quot;Otro&quot; tipo de Descuento</description>
+        <externalId>false</externalId>
+        <label>Otro Tipo de Promoción</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Catálogo Tipo de Descuento</value>
+            </filterItems>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.MX_WF_Vigente__c</field>
+                <operation>equals</operation>
+                <value>Sí</value>
+            </filterItems>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.Tipo_de_cat_logo__c</field>
+                <operation>equals</operation>
+                <value>Otro tipo de descuento</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MX_WF_Catalogo_Comercios_Wallet__c</referenceTo>
+        <relationshipLabel>Otro Tipo de Descuento</relationshipLabel>
+        <relationshipName>Otro_Tipo_de_Descuento</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Promocion_Corta__c</fullName>
+        <description>Breve descripción de promoción</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Promoción Corta</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Promocion_extendida__c</fullName>
+        <description>Descripción completa de promoción</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Promoción extendida</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Resenia_de_comercio__c</fullName>
+        <description>Reseña breve del comercio donde aplica la promoción</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Reseña de comercio</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Restricciones__c</fullName>
+        <description>Términos y condiciones</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Restricciones</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tarjetas_aplicables__c</fullName>
+        <description>Campo que sirve de base para el cálculo del grupo tarjeta</description>
+        <externalId>false</externalId>
+        <label>Tarjetas aplicables</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Crédito Visa</fullName>
+                    <default>false</default>
+                    <label>Crédito Visa</label>
+                </value>
+                <value>
+                    <fullName>Crédito Platinum</fullName>
+                    <default>false</default>
+                    <label>Crédito Platinum</label>
+                </value>
+                <value>
+                    <fullName>Crédito Infinite</fullName>
+                    <default>false</default>
+                    <label>Crédito Infinite</label>
+                </value>
+                <value>
+                    <fullName>Crédito MasterCard</fullName>
+                    <default>false</default>
+                    <label>Crédito MasterCard</label>
+                </value>
+                <value>
+                    <fullName>Débito</fullName>
+                    <default>false</default>
+                    <label>Débito</label>
+                </value>
+                <value>
+                    <fullName>Congelada Visa</fullName>
+                    <default>false</default>
+                    <label>Congelada Visa</label>
+                </value>
+                <value>
+                    <fullName>Cuenta Express (Mi primera tarjeta)</fullName>
+                    <default>false</default>
+                    <label>Cuenta Express (Mi primera tarjeta)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipo_de_descuento__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Descuento aplicable a la promoción</description>
+        <externalId>false</externalId>
+        <label>Tipo de promoción</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Catálogo Tipo de Descuento</value>
+            </filterItems>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.MX_WF_Vigente__c</field>
+                <operation>equals</operation>
+                <value>Sí</value>
+            </filterItems>
+            <filterItems>
+                <field>MX_WF_Catalogo_Comercios_Wallet__c.MX_WF_Categoria_Tipo_Descuento__c</field>
+                <operation>equals</operation>
+                <value>Tipo de Descuento</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>MX_WF_Catalogo_Comercios_Wallet__c</referenceTo>
+        <relationshipLabel>Tipo de descuento</relationshipLabel>
+        <relationshipName>Comercios_Wallets1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipo_de_promoci_n_nombre__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Tipo_de_descuento__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de promoción nombre</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipo_de_uso__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( INCLUDES (  MX_WF_Tipos_de_uso__c   , &quot;Fisicas&quot; ),&quot;Fisicas&quot;,&quot;&quot; ) &amp; 
+IF ( AND( INCLUDES (  MX_WF_Tipos_de_uso__c   , &quot;Fisicas&quot; ), INCLUDES (  MX_WF_Tipos_de_uso__c   , &quot;Online&quot; )), &quot;/Online&quot;,
+     IF ( AND(INCLUDES (  MX_WF_Tipos_de_uso__c  , &quot;Online&quot; ),NOT(INCLUDES (  MX_WF_Tipos_de_uso__c  , &quot;Fisicas&quot;) )),&quot;Online&quot;,&quot;&quot; )) &amp; 
+IF ( ISPICKVAL(  MX_WF_La_promoci_n_es_destacada__c  ,&quot;Sí&quot;),&quot;/Hot&quot;,&quot;&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de uso</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipos_de_uso__c</fullName>
+        <description>Indicador de promoción de uso fisico, online y destacado</description>
+        <externalId>false</externalId>
+        <label>Tipos de uso</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fisicas</fullName>
+                    <default>false</default>
+                    <label>Fisicas</label>
+                </value>
+                <value>
+                    <fullName>Online</fullName>
+                    <default>false</default>
+                    <label>Online</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_WF_URL_de_la_imagen__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>URL de la imagen</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Url_Comercio__c</fullName>
+        <description>URL del comerción donde aplica la promoción</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Url Comercio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Url_promocion__c</fullName>
+        <description>URL de la promoción en caso de ser online</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Url promoción</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Vista_previa_imagen_F__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE ( HYPERLINK(MX_WF_Url_Comercio__c, &quot;URL de la imagen&quot;) , &quot;imageWALLET&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Vista previa imagen F</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Vista_previa_imagen__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Vista previa imagen</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nombre_del_comercio_f__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Comercio__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nombre del comercio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>otro_tipo_de_promoci_n_nombre__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_WF_Otro_Tipo_de_Descuento__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>otro tipo de promoción nombre</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Wallet</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MX_WF_Comercio__c</columns>
+        <columns>MX_WF_Campania__c</columns>
+        <columns>MX_WF_Categorias__c</columns>
+        <columns>MX_WF_Tipo_de_descuento__c</columns>
+        <columns>MX_WF_Fecha_fin__c</columns>
+        <columns>MX_WF_Estado__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>WAL{YY}{MM}{0000}</displayFormat>
+        <label>Folio del registro</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Wallets</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>MX_WF_Cancelar_Solo_Aprobadas</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(ISPICKVAL(PRIORVALUE(  MX_WF_Estado__c ) , &quot;Aprobado&quot;)),
+     NOT(ISBLANK( MX_WF_Justificaci_n_de_cancelaci_n__c )))</errorConditionFormula>
+        <errorDisplayField>MX_WF_Estado__c</errorDisplayField>
+        <errorMessage>Solo puedes cancelar promociones aprobadas</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MX_WF_Comercio_sin_http</fullName>
+        <active>true</active>
+        <description>no deja guardar un registro cuando la url de comercio no contiene http o https</description>
+        <errorConditionFormula>NOT(CONTAINS( MX_WF_Url_Comercio__c , &quot;http&quot;))</errorConditionFormula>
+        <errorDisplayField>MX_WF_Url_Comercio__c</errorDisplayField>
+        <errorMessage>La URL debe contener el protocolo http o https</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>URLPromocion_Obligatorio</fullName>
+        <active>true</active>
+        <description>El campo URL Promoción debe estar informado cuando es de uso Online</description>
+        <errorConditionFormula>AND(ISBLANK( MX_WF_Url_promocion__c ), INCLUDES( MX_WF_Tipos_de_uso__c , &quot;Online&quot;) 
+)</errorConditionFormula>
+        <errorDisplayField>MX_WF_Tipos_de_uso__c</errorDisplayField>
+        <errorMessage>Si el tipo de uso es Online debes informar la URL de la promoción</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>URL_promocion_no_contiene_http</fullName>
+        <active>true</active>
+        <description>No deja guardar el registro si la URL de la prmoción no contiene http o https</description>
+        <errorConditionFormula>AND(INCLUDES( MX_WF_Tipos_de_uso__c , &quot;Online&quot;),
+    NOT( ISBLANK ( MX_WF_Url_promocion__c )),
+    NOT( CONTAINS( MX_WF_Url_promocion__c , &quot;http&quot;) )
+   )</errorConditionFormula>
+        <errorDisplayField>MX_WF_Url_promocion__c</errorDisplayField>
+        <errorMessage>La URL debe contener el protocolo http o https</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

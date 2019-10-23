@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes,lightning:availableForFlowScreens" access="global">   
+    <aura:attribute name="universo" type="Integer" /> <!--Dato que proviene del Arte -->
+    <aura:attribute name="muestra" type="Integer" />
+    <div class="slds-text-align_center">
+        <lightning:select aura:id="confianza" name="confianza" label="Nivel de confianza" required="true">
+           <!-- <option value="">Seleccione nivel de confianza</option>-->
+            <option value="95%">95%</option>
+            <option value="99%">99%</option>
+        </lightning:select>
+        <lightning:input aura:id="intervalo" type="number" name="intervalo" label="% margen de error" value="1" min="0.01" max="50" required="true" messageWhenRangeOverflow="Seleccione un número entre 1-50" messageWhenRangeUnderflow="Seleccione un número entre 1-50" step="0.01"/>
+        <lightning:input aura:id="poblacion" type="number" name="poblacion" label="Total de base de datos en data extensión" placeholder="Tamaño de población..." required="true" value="{!v.universo}" />        
+        <lightning:button label="Calcular" class="slds-m-top--medium" variant="brand" onclick="{!c.calcularMuestra}"/>
+    </div>
+    <hr></hr>
+    <h1 class="res">{!v.muestra}</h1>
+    <hr></hr>
+</aura:component>

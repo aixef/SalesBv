@@ -1,0 +1,8 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="Documentacion" ref="exampleComponentName" label="Label">
+		<p>Construccion del componente base.</p>
+        <p>Atributo recordId almacena el record Id de la cuenta</p>
+        <p>Atributo ownerId almacena el record Id de la dueño de la cuenta</p>
+	</aura:example>
+</aura:documentation>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Empresas</fullName>
+        <default>false</default>
+        <label>Empresas</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gobierno</fullName>
+        <default>false</default>
+        <label>Gobierno</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Financiamiento</fullName>
+        <default>false</default>
+        <label>Financiamiento</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cadena Productiva NAFIN</fullName>
+        <default>false</default>
+        <label>Cadena Productiva NAFIN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Credi-Proveedores</fullName>
+        <default>false</default>
+        <label>Credi-Proveedores</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Comercio internacional</fullName>
+        <default>false</default>
+        <label>Comercio internacional</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inversiones</fullName>
+        <default>false</default>
+        <label>Inversiones</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Coberturas</fullName>
+        <default>false</default>
+        <label>Coberturas</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vista</fullName>
+        <default>false</default>
+        <label>Vista</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tarjetas</fullName>
+        <default>false</default>
+        <label>Tarjetas</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Protección de cheques</fullName>
+        <default>false</default>
+        <label>Protección de cheques</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Servicios</fullName>
+        <default>false</default>
+        <label>Servicios</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cobranza</fullName>
+        <default>false</default>
+        <label>Cobranza</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dispersión</fullName>
+        <default>false</default>
+        <label>Dispersión</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing Business</fullName>
+        <default>false</default>
+        <label>Empresa Existente</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Business</fullName>
+        <default>false</default>
+        <label>Empresa Nueva</label>
+    </standardValue>
+</StandardValueSet>

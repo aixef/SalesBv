@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación Workflow, se envía como solicitud de aprobación de un Canal</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Aprobar Desclub con cambios</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de Aprobación Brief - Folio {!CRM_WF_Brief__c.Name}. FIC {!CRM_WF_Brief__c.CRM_WF_FIC__c}</subject>
+    <textOnly>Solicitud de aprobación Canal - {!CRM_WF_Artes__c.RecordType} con los siguientes datos:
+
+FIC: {!CRM_WF_Artes__c.CRM_WF_FIC__c}
+Historial de cambios: {!CRM_WF_Artes__c.MX_WF_Historial_de_cambios__c}
+Carpetas con logos y fotos: {!CRM_WF_Artes__c.MX_WF_Carpeta_Logos_Fotos__c}
+Canal {!CRM_WF_Artes__c.RecordType}:
+Folio: {!CRM_WF_Artes__c.Name}
+Subject: {!CRM_WF_Artes__c.CRM_WF_Subject__c}
+Preheader: {!CRM_WF_Artes__c.CRM_WF_Preheader__c}
+Comentarios: {!ApprovalRequest.Comments}
+
+BRIEF
+Datos de BRIEF:
+
+Número de Folio Brief : {!CRM_WF_Brief__c.Name}
+Fecha de Solicitud: {!CRM_WF_Brief__c.CRM_WF_Fecha_Solicitud_Brief__c}
+Fecha de Lanzamiento de Campaña: {!CRM_WF_Brief__c.CRM_WF_Fecha_De_Campana__c}
+Área Solicitante: {!CRM_WF_Brief__c.CRM_WF_Area_Solicitante__c}
+Solicitante: {!CRM_WF_Brief__c.GBL_WF_Solicitante__c}
+
+¿Cuentas con landing page taggeada?: {!CRM_WF_Brief__c.CRM_WF_Cuentas_Con_Pagina_Tageada__c}
+¿Porqué no está taggeada? (si aplica): {!CRM_WF_Brief__c.CRM_WF_Porque__c}
+Vigencia de la promoción/oferta: {!CRM_WF_Brief__c.CRM_WF_Vigencia_De_La_Promocion_Oferta__c}
+Canales de comunicación: {!CRM_WF_Brief__c.CRM_WF_Canales_de_Comunicacion__c}
+
+
+Para mayor información consulta el registro de Brief en Salesforce:
+
+Registro del Canal en Salesforce
+
+Puedes consultar el brief general dando clic en el siguiente vínculo:
+
+Registro de Brief en Salesforce
+
+Para aprobar o rechazar haz clic en el siguiente vínculo Registro de Aprobación</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

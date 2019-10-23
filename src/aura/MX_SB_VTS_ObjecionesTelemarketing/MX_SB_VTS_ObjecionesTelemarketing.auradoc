@@ -1,0 +1,21 @@
+<aura:documentation>
+	<aura:description>
+         <p>Un <code>c:MX_SB_VTS_ObjecionesTelemarketing</code> Componente que lee y muestra textos de Objeciones</p>
+    </aura:description>
+	<aura:example name="MX_SB_VTS_ObjecionesTelemarketing" ref="c:MX_SB_VTS_ObjecionesTelemarketing" label="Objeciones Telemarketing">
+       <p>Este componente muestra textos dependiendo de la etapa que recibe como parámetro. 
+		   <code>MX_SB_VTS_ObjecionesTelemarketing</code>.</p>
+      <p>recordId: Id del registro</p>
+      <p>isActive: Indica si se muestra el componente</p>
+      <p>listaTextos: Lista de objeciones</p>
+      <p>genericRecord: variable para guardar los registros</p>
+      <p>lstHeader: Lista de titulos de la tabla de objeciones</p>
+      <p>activeButton: Hábilita el bóton de guardar</p>
+      <p>isObjecSave: Indica si el guardado se realizo correctamente</p>
+      <p>typeObject: Tipo de objeto con el que se esta trabajando</p>
+      <p>errorMsj: Mensaje de error</p>
+      <p>activeCall: Id de llamada activa</p>
+      <p>errorMsjTitle: Titulo de mensaje de error</p>
+      <p>isLoading: Indica si el componente esta cargando</p>
+    </aura:example>
+</aura:documentation>

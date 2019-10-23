@@ -1,0 +1,34 @@
+<aura:documentation>
+    <!--
+    /*
+    * @author:      Marco Antonio Cruz
+    * @date:        20/08/2019
+    * @description  Componente encargado de mostrar URL externa de CLAIM
+    * @Changes
+    *       2019-08-20          Creación                               Marco Antonio Cruz
+    */
+    -->
+    <aura:description>
+        <p><b>NAME</b> MX_SB_MLT_BTNCLAIM</p>
+        <p><b>DESCRIPTION</b>El componente encargado de abrir URL externa de CLAIM.</p>
+        <p><b>ATTRIBUTES</b>
+            <ul>
+                <li><p>attribute record: Id del registro del caso.</p></li>
+                <li><p>attribute simpleRecord: Listado de casos</p></li>
+                <li><p>attribute recordError: Marcado de errores.</p></li>
+                <li><p>attribute idFed: Federation ID del Usuario.</p></li>
+                <li><p>attribute urlClaimLbl: URL inicial de Claim.</p></li>
+            </ul>
+        </p>    
+        <p><b>CONTROLLER METHODS</b>
+            <ul>
+                <li><p><b>navigate</b>Abre URL externa desde Lightning</p></li>
+            </ul>
+        </p>
+        <p><b>HELPER METHODS</b>
+            <ul>
+                <li><p><b>idFederation</b>Promise que obtiene Federation ID del Usuario</p></li>
+            </ul>
+        </p>
+    </aura:description>
+</aura:documentation>

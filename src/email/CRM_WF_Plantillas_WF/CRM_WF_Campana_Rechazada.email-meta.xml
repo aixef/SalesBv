@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Campaña Rechazada</name>
+    <style>formalLetter</style>
+    <subject>La Campaña {!Campaign.Name} con folio {!Campaign.CRM_WF_FIC__c} ha sido rechazada</subject>
+    <textOnly>Por medio de la presente le informamos que la Campaña {!Campaign.Name} ha sido rechazada con los siguientes comentarios:
+
+Comentarios: {!ApprovalRequest.Comments}
+
+
+Para mayor detalle favor de dar clic en la siguiente liga:
+
+Detalle de Campaña en Salesforce</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

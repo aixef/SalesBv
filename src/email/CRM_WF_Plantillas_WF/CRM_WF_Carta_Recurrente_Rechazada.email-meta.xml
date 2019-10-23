@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Carta Recurrente Rechazada</name>
+    <style>formalLetter</style>
+    <subject>Salida de Información {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Folio_Carta_Recurrente__c} ha sido Rechazada</subject>
+    <textOnly>Por medio de la presente le informamos que la Carta Origen {!CRM_WF_Cartas_Origen__c.Name} ha sido rechazada con los siguientes comentarios:
+
+Comentarios: {!ApprovalRequest.Comments}
+
+
+Para mayor detalle favor de dar clic en la siguiente liga:
+
+{!CRM_WF_Cartas_Origen__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

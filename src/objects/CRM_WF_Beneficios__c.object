@@ -1,0 +1,3200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_WF_Beneficios_P_gina_de_registro</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>CRM_WF_Banco__c</fullName>
+        <externalId>false</externalId>
+        <label>Banco</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Beneficio__c</fullName>
+        <externalId>false</externalId>
+        <label>Beneficio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cashback (Reembolso)</fullName>
+                    <default>false</default>
+                    <label>Cashback (Reembolso)</label>
+                </value>
+                <value>
+                    <fullName>Reward (Puntos Acumulados)*</fullName>
+                    <default>false</default>
+                    <label>Reward (Puntos Acumulados)*</label>
+                </value>
+                <value>
+                    <fullName>Redención Puntos *</fullName>
+                    <default>false</default>
+                    <label>Redención Puntos *</label>
+                </value>
+                <value>
+                    <fullName>Delay (Skip Payment)</fullName>
+                    <default>false</default>
+                    <label>Delay (Skip Payment)</label>
+                </value>
+                <value>
+                    <fullName>Installment (MSI)</fullName>
+                    <default>false</default>
+                    <label>Installment (MSI)</label>
+                </value>
+                <value>
+                    <fullName>Cupón E-commerce</fullName>
+                    <default>false</default>
+                    <label>Cupón E-commerce</label>
+                </value>
+                <value>
+                    <fullName>Tasa 0%</fullName>
+                    <default>false</default>
+                    <label>Tasa 0%</label>
+                </value>
+                <value>
+                    <fullName>Descuento directo en tiendas</fullName>
+                    <default>false</default>
+                    <label>Descuento directo en tiendas</label>
+                </value>
+                <value>
+                    <fullName>Cupones de regalo</fullName>
+                    <default>false</default>
+                    <label>Cupones de regalo</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Campana__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Campaña</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipName>Beneficios</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Canal_De_Operacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Canal de operación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Todas</fullName>
+                    <default>false</default>
+                    <label>Todas</label>
+                </value>
+                <value>
+                    <fullName>Normal (TPV)</fullName>
+                    <default>false</default>
+                    <label>Normal (TPV)</label>
+                </value>
+                <value>
+                    <fullName>e-Commerce</fullName>
+                    <default>false</default>
+                    <label>e-Commerce</label>
+                </value>
+                <value>
+                    <fullName>MOTO</fullName>
+                    <default>false</default>
+                    <label>MOTO</label>
+                </value>
+                <value>
+                    <fullName>Paypass (Contactless)</fullName>
+                    <default>false</default>
+                    <label>Paypass (Contactless)</label>
+                </value>
+                <value>
+                    <fullName>QR Ecommerce</fullName>
+                    <default>false</default>
+                    <label>QR Ecommerce</label>
+                </value>
+                <value>
+                    <fullName>QR Normal (TPV)</fullName>
+                    <default>false</default>
+                    <label>QR Normal (TPV)</label>
+                </value>
+                <value>
+                    <fullName>Apli.NET</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Apli.NET</label>
+                </value>
+                <value>
+                    <fullName>Interred</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Interred</label>
+                </value>
+                <value>
+                    <fullName>TPV.NET</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>TPV.NET</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Carga_De_Beneficio__c</fullName>
+        <externalId>false</externalId>
+        <label>Carga de beneficio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>CRM_WF_Beneficio__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Garanti</fullName>
+                    <default>false</default>
+                    <label>Garanti</label>
+                </value>
+                <value>
+                    <fullName>Operaciones</fullName>
+                    <default>false</default>
+                    <label>Operaciones</label>
+                </value>
+                <value>
+                    <fullName>Comercio</fullName>
+                    <default>false</default>
+                    <label>Comercio</label>
+                </value>
+                <value>
+                    <fullName>Informativa</fullName>
+                    <default>false</default>
+                    <label>Informativa</label>
+                </value>
+                <value>
+                    <fullName>Redencion Puntos</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Redencion Puntos</label>
+                </value>
+                <value>
+                    <fullName>Vida Bancomer</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Vida Bancomer</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Cashback (Reembolso)</controllingFieldValue>
+                <controllingFieldValue>Reward (Puntos Acumulados)*</controllingFieldValue>
+                <controllingFieldValue>Redención Puntos *</controllingFieldValue>
+                <controllingFieldValue>Delay (Skip Payment)</controllingFieldValue>
+                <controllingFieldValue>Installment (MSI)</controllingFieldValue>
+                <controllingFieldValue>Cupones de regalo</controllingFieldValue>
+                <valueName>Garanti</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reward (Puntos Acumulados)*</controllingFieldValue>
+                <controllingFieldValue>Redención Puntos *</controllingFieldValue>
+                <valueName>Informativa</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Redención Puntos *</controllingFieldValue>
+                <controllingFieldValue>Delay (Skip Payment)</controllingFieldValue>
+                <controllingFieldValue>Installment (MSI)</controllingFieldValue>
+                <controllingFieldValue>Tasa 0%</controllingFieldValue>
+                <valueName>Operaciones</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Redención Puntos *</controllingFieldValue>
+                <controllingFieldValue>Delay (Skip Payment)</controllingFieldValue>
+                <controllingFieldValue>Cupón E-commerce</controllingFieldValue>
+                <controllingFieldValue>Descuento directo en tiendas</controllingFieldValue>
+                <valueName>Comercio</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Cats_Legales__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>CATS / Legales</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>20</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Comercio_Beneficio__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Cobro por afiliación</inlineHelpText>
+        <label>Comercio - Beneficio</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Comercio_Campana__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Comercio Campaña</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Condiciones__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Condiciones</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Costo_Y_Tarifa_Imp_Maximo__c</fullName>
+        <externalId>false</externalId>
+        <label>Costo y tarifa Imp. Máximo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Comercio</fullName>
+                    <default>false</default>
+                    <label>Comercio</label>
+                </value>
+                <value>
+                    <fullName>Comercio / Banco</fullName>
+                    <default>false</default>
+                    <label>Comercio / Banco</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Costo_Y_Tarifa_Imp_Minimo__c</fullName>
+        <externalId>false</externalId>
+        <label>Costo y tarifa Imp. Mínimo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Comercio</fullName>
+                    <default>false</default>
+                    <label>Comercio</label>
+                </value>
+                <value>
+                    <fullName>Comercio / Banco</fullName>
+                    <default>false</default>
+                    <label>Comercio / Banco</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Cupon__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Cupón</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Desc_Del_Limite_Del_Beneficio__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Descripción del límite del beneficio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Descripcion_Beneficio__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Depende del Beneficio seleccionado</inlineHelpText>
+        <label>Descripción</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Desde__c</fullName>
+        <externalId>false</externalId>
+        <label>Desde</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>00:00 AM</fullName>
+                    <default>false</default>
+                    <label>00:00 AM</label>
+                </value>
+                <value>
+                    <fullName>01:00 AM</fullName>
+                    <default>false</default>
+                    <label>01:00 AM</label>
+                </value>
+                <value>
+                    <fullName>02:00 AM</fullName>
+                    <default>false</default>
+                    <label>02:00 AM</label>
+                </value>
+                <value>
+                    <fullName>03:00 AM</fullName>
+                    <default>false</default>
+                    <label>03:00 AM</label>
+                </value>
+                <value>
+                    <fullName>04:00 AM</fullName>
+                    <default>false</default>
+                    <label>04:00 AM</label>
+                </value>
+                <value>
+                    <fullName>05:00 AM</fullName>
+                    <default>false</default>
+                    <label>05:00 AM</label>
+                </value>
+                <value>
+                    <fullName>06:00 AM</fullName>
+                    <default>false</default>
+                    <label>06:00 AM</label>
+                </value>
+                <value>
+                    <fullName>07:00 AM</fullName>
+                    <default>false</default>
+                    <label>07:00 AM</label>
+                </value>
+                <value>
+                    <fullName>08:00 AM</fullName>
+                    <default>false</default>
+                    <label>08:00 AM</label>
+                </value>
+                <value>
+                    <fullName>09:00 AM</fullName>
+                    <default>false</default>
+                    <label>09:00 AM</label>
+                </value>
+                <value>
+                    <fullName>10:00 AM</fullName>
+                    <default>false</default>
+                    <label>10:00 AM</label>
+                </value>
+                <value>
+                    <fullName>11:00 AM</fullName>
+                    <default>false</default>
+                    <label>11:00 AM</label>
+                </value>
+                <value>
+                    <fullName>12:00 PM</fullName>
+                    <default>false</default>
+                    <label>12:00 PM</label>
+                </value>
+                <value>
+                    <fullName>13:00 PM</fullName>
+                    <default>false</default>
+                    <label>13:00 PM</label>
+                </value>
+                <value>
+                    <fullName>14:00 PM</fullName>
+                    <default>false</default>
+                    <label>14:00 PM</label>
+                </value>
+                <value>
+                    <fullName>15:00 PM</fullName>
+                    <default>false</default>
+                    <label>15:00 PM</label>
+                </value>
+                <value>
+                    <fullName>16:00 PM</fullName>
+                    <default>false</default>
+                    <label>16:00 PM</label>
+                </value>
+                <value>
+                    <fullName>17:00 PM</fullName>
+                    <default>false</default>
+                    <label>17:00 PM</label>
+                </value>
+                <value>
+                    <fullName>18:00 PM</fullName>
+                    <default>false</default>
+                    <label>18:00 PM</label>
+                </value>
+                <value>
+                    <fullName>19:00 PM</fullName>
+                    <default>false</default>
+                    <label>19:00 PM</label>
+                </value>
+                <value>
+                    <fullName>20:00 PM</fullName>
+                    <default>false</default>
+                    <label>20:00 PM</label>
+                </value>
+                <value>
+                    <fullName>21:00 PM</fullName>
+                    <default>false</default>
+                    <label>21:00 PM</label>
+                </value>
+                <value>
+                    <fullName>22:00 PM</fullName>
+                    <default>false</default>
+                    <label>22:00 PM</label>
+                </value>
+                <value>
+                    <fullName>23:00 PM</fullName>
+                    <default>false</default>
+                    <label>23:00 PM</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Detalle_De_Recompensa__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Detalle de recompensa</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Dias_De_La_Semana__c</fullName>
+        <externalId>false</externalId>
+        <label>Días de la semana</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Todos</fullName>
+                    <default>false</default>
+                    <label>Todos</label>
+                </value>
+                <value>
+                    <fullName>Lunes</fullName>
+                    <default>false</default>
+                    <label>Lunes</label>
+                </value>
+                <value>
+                    <fullName>Martes</fullName>
+                    <default>false</default>
+                    <label>Martes</label>
+                </value>
+                <value>
+                    <fullName>Miércoles</fullName>
+                    <default>false</default>
+                    <label>Miércoles</label>
+                </value>
+                <value>
+                    <fullName>Jueves</fullName>
+                    <default>false</default>
+                    <label>Jueves</label>
+                </value>
+                <value>
+                    <fullName>Viernes</fullName>
+                    <default>false</default>
+                    <label>Viernes</label>
+                </value>
+                <value>
+                    <fullName>Sábado</fullName>
+                    <default>false</default>
+                    <label>Sábado</label>
+                </value>
+                <value>
+                    <fullName>Domingo</fullName>
+                    <default>false</default>
+                    <label>Domingo</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Encendido_Bonus_Merchant__c</fullName>
+        <externalId>false</externalId>
+        <label>Encendido Bonus Merchant</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Sí</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_De_Cobro_A_Comercio__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de Cobro a Comercio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Fin_Campana__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Campana__r.EndDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fecha Fin Campaña</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Inicio_Campana__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Campana__r.StartDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fecha Inicio Campaña</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Firma__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Cobro por Grupo-cadena</inlineHelpText>
+        <label>Firma</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Grupo_Cadena__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Grupo-Cadena</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Hasta_Beneficio__c</fullName>
+        <externalId>false</externalId>
+        <label>Hasta</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>00:00 AM</fullName>
+                    <default>false</default>
+                    <label>00:00 AM</label>
+                </value>
+                <value>
+                    <fullName>01:00 AM</fullName>
+                    <default>false</default>
+                    <label>01:00 AM</label>
+                </value>
+                <value>
+                    <fullName>02:00 AM</fullName>
+                    <default>false</default>
+                    <label>02:00 AM</label>
+                </value>
+                <value>
+                    <fullName>03:00 AM</fullName>
+                    <default>false</default>
+                    <label>03:00 AM</label>
+                </value>
+                <value>
+                    <fullName>04:00 AM</fullName>
+                    <default>false</default>
+                    <label>04:00 AM</label>
+                </value>
+                <value>
+                    <fullName>05:00 AM</fullName>
+                    <default>false</default>
+                    <label>05:00 AM</label>
+                </value>
+                <value>
+                    <fullName>06:00 AM</fullName>
+                    <default>false</default>
+                    <label>06:00 AM</label>
+                </value>
+                <value>
+                    <fullName>07:00 AM</fullName>
+                    <default>false</default>
+                    <label>07:00 AM</label>
+                </value>
+                <value>
+                    <fullName>08:00 AM</fullName>
+                    <default>false</default>
+                    <label>08:00 AM</label>
+                </value>
+                <value>
+                    <fullName>09:00 AM</fullName>
+                    <default>false</default>
+                    <label>09:00 AM</label>
+                </value>
+                <value>
+                    <fullName>10:00 AM</fullName>
+                    <default>false</default>
+                    <label>10:00 AM</label>
+                </value>
+                <value>
+                    <fullName>11:00 AM</fullName>
+                    <default>false</default>
+                    <label>11:00 AM</label>
+                </value>
+                <value>
+                    <fullName>12:00 PM</fullName>
+                    <default>false</default>
+                    <label>12:00 PM</label>
+                </value>
+                <value>
+                    <fullName>13:00 PM</fullName>
+                    <default>false</default>
+                    <label>13:00 PM</label>
+                </value>
+                <value>
+                    <fullName>14:00 PM</fullName>
+                    <default>false</default>
+                    <label>14:00 PM</label>
+                </value>
+                <value>
+                    <fullName>15:00 PM</fullName>
+                    <default>false</default>
+                    <label>15:00 PM</label>
+                </value>
+                <value>
+                    <fullName>16:00 PM</fullName>
+                    <default>false</default>
+                    <label>16:00 PM</label>
+                </value>
+                <value>
+                    <fullName>17:00 PM</fullName>
+                    <default>false</default>
+                    <label>17:00 PM</label>
+                </value>
+                <value>
+                    <fullName>18:00 PM</fullName>
+                    <default>false</default>
+                    <label>18:00 PM</label>
+                </value>
+                <value>
+                    <fullName>19:00 PM</fullName>
+                    <default>false</default>
+                    <label>19:00 PM</label>
+                </value>
+                <value>
+                    <fullName>20:00 PM</fullName>
+                    <default>false</default>
+                    <label>20:00 PM</label>
+                </value>
+                <value>
+                    <fullName>21:00 PM</fullName>
+                    <default>false</default>
+                    <label>21:00 PM</label>
+                </value>
+                <value>
+                    <fullName>22:00 PM</fullName>
+                    <default>false</default>
+                    <label>22:00 PM</label>
+                </value>
+                <value>
+                    <fullName>23:00 PM</fullName>
+                    <default>false</default>
+                    <label>23:00 PM</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Horario__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;De&quot; + &quot; &quot; + TEXT (CRM_WF_Desde__c) + &quot; &quot; + &quot;A&quot; + &quot; &quot; + TEXT (CRM_WF_Hasta_Beneficio__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Horario</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Importe_Maximo__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>SOLO APLICA EN BENEFICIOS CARGADOS POR GARANTI</inlineHelpText>
+        <label>Importe máximo $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Importe_Minimo__c</fullName>
+        <description>SOLO APLICA EN BENEFICIOS CARGADOS POR GARANTI</description>
+        <externalId>false</externalId>
+        <label>Importe mínimo $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Informacion_A_Considerar_En_Email__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Slogan, principales atributos de la marca o mensaje a comunicar</inlineHelpText>
+        <label>Información a considerar en email</label>
+        <length>160</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Leyenda_Del_Sms_Mensaje__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Campana__r.CRM_WF_Leyenda_Del_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Leyenda del SMS mensaje</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Leyenda_Estado_De_Cuenta__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Leyenda estado de cuenta</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Limitar_Beneficio__c</fullName>
+        <externalId>false</externalId>
+        <label>Limitar Beneficio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>Si, por beneficios otorgados</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Si, por beneficios otorgados</label>
+                </value>
+                <value>
+                    <fullName>Si, por monto total de campaña</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Si, por monto total de campaña</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Limite_Del_Beneficio_Numero__c</fullName>
+        <externalId>false</externalId>
+        <label>Límite del Beneficio (Número)</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Limite_Del_Beneficio__c</fullName>
+        <externalId>false</externalId>
+        <label>Limite del Beneficio $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Listado_De_Afiliaciones__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Listado de Afiliaciones</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Listado_De_Bines_Producto__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Listado de Bines + Producto</label>
+        <length>5000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Load_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Load date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Tiempo real</fullName>
+                    <default>false</default>
+                    <label>Tiempo real</label>
+                </value>
+                <value>
+                    <fullName>5 días después de la vigencia</fullName>
+                    <default>false</default>
+                    <label>5 días después de la vigencia</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Mecanica__c</fullName>
+        <externalId>false</externalId>
+        <label>Mecánica</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Registrar Cupón en URL</fullName>
+                    <default>false</default>
+                    <label>Registrar Cupón en URL</label>
+                </value>
+                <value>
+                    <fullName>URL</fullName>
+                    <default>false</default>
+                    <label>URL</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Mensaje_Del_Voucher__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Mensaje del Voucher</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Monto_O_Numero_De_Txn__c</fullName>
+        <externalId>false</externalId>
+        <label>Monto</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nacionales_Extranjero_O_Todas__c</fullName>
+        <externalId>false</externalId>
+        <label>Nacionales, extranjero o todas</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Nacionales</fullName>
+                    <default>false</default>
+                    <label>Nacionales</label>
+                </value>
+                <value>
+                    <fullName>Extranjero</fullName>
+                    <default>false</default>
+                    <label>Extranjero</label>
+                </value>
+                <value>
+                    <fullName>Todas</fullName>
+                    <default>false</default>
+                    <label>Todas</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_Del_Brief__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Nombre del Brief</label>
+        <referenceTo>CRM_WF_Brief__c</referenceTo>
+        <relationshipName>Beneficios</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_Plazos_Para_Msi__c</fullName>
+        <externalId>false</externalId>
+        <label>Número plazos para MSI</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_de_TXN__c</fullName>
+        <externalId>false</externalId>
+        <label>Número de TXN</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Objetivos_Beneficio__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Depende del Beneficio seleccionado</inlineHelpText>
+        <label>Objetivos</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Oferta_Multipromocion__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Oferta Multipromoción</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Beneficios (Multipromoción)</relationshipLabel>
+        <relationshipName>Oferta</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Otorgar_El_Beneficio__c</fullName>
+        <externalId>false</externalId>
+        <label>Otorgar el beneficio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Por cada transacción</fullName>
+                    <default>false</default>
+                    <label>Por cada transacción</label>
+                </value>
+                <value>
+                    <fullName>Cuando se acumule un monto de compra (en una o varias txn)</fullName>
+                    <default>false</default>
+                    <label>Cuando se acumule un monto de compra (en una o varias txn)</label>
+                </value>
+                <value>
+                    <fullName>Cuando se llegue a determinado numero de transaccion</fullName>
+                    <default>false</default>
+                    <label>Cuando se llegue a determinado numero de transaccion</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Plazos_Para_MSI__c</fullName>
+        <externalId>false</externalId>
+        <label>Plazos para MSI</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                    <label>6</label>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                    <label>7</label>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                    <label>8</label>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                    <label>9</label>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                    <label>10</label>
+                </value>
+                <value>
+                    <fullName>11</fullName>
+                    <default>false</default>
+                    <label>11</label>
+                </value>
+                <value>
+                    <fullName>12</fullName>
+                    <default>false</default>
+                    <label>12</label>
+                </value>
+                <value>
+                    <fullName>13</fullName>
+                    <default>false</default>
+                    <label>13</label>
+                </value>
+                <value>
+                    <fullName>14</fullName>
+                    <default>false</default>
+                    <label>14</label>
+                </value>
+                <value>
+                    <fullName>15</fullName>
+                    <default>false</default>
+                    <label>15</label>
+                </value>
+                <value>
+                    <fullName>16</fullName>
+                    <default>false</default>
+                    <label>16</label>
+                </value>
+                <value>
+                    <fullName>17</fullName>
+                    <default>false</default>
+                    <label>17</label>
+                </value>
+                <value>
+                    <fullName>18</fullName>
+                    <default>false</default>
+                    <label>18</label>
+                </value>
+                <value>
+                    <fullName>Todos</fullName>
+                    <default>false</default>
+                    <label>Todos</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Pob_Campana__c</fullName>
+        <externalId>false</externalId>
+        <label>POB campaña</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Lista cerrada de TH</fullName>
+                    <default>false</default>
+                    <label>Lista cerrada de TH</label>
+                </value>
+                <value>
+                    <fullName>Abierta al Público</fullName>
+                    <default>false</default>
+                    <label>Abierta al Público</label>
+                </value>
+                <value>
+                    <fullName>Carga masiva</fullName>
+                    <default>false</default>
+                    <label>Carga masiva</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Terminos_Condiciones_Legales__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Términos y condiciones legales</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tipo_De_Campana__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de campaña</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Emisor (Por afiliación)</fullName>
+                    <default>false</default>
+                    <label>Emisor (Por afiliación)</label>
+                </value>
+                <value>
+                    <fullName>Adquirente (Por grupo - cadena)</fullName>
+                    <default>false</default>
+                    <label>Adquirente (Por grupo - cadena)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tipo_De_Operacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Operación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Revolvente</fullName>
+                    <default>false</default>
+                    <label>Revolvente</label>
+                </value>
+                <value>
+                    <fullName>Revolvente / MSI</fullName>
+                    <default>false</default>
+                    <label>Revolvente / MSI</label>
+                </value>
+                <value>
+                    <fullName>MSi</fullName>
+                    <default>false</default>
+                    <label>MSI</label>
+                </value>
+                <value>
+                    <fullName>MCI</fullName>
+                    <default>false</default>
+                    <label>MCI</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tipo_De_Producto__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de producto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>CRM_WF_Beneficio__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Débito</fullName>
+                    <default>false</default>
+                    <label>Débito</label>
+                </value>
+                <value>
+                    <fullName>Crédito</fullName>
+                    <default>false</default>
+                    <label>Crédito</label>
+                </value>
+                <value>
+                    <fullName>Débito y Crédito</fullName>
+                    <default>false</default>
+                    <label>Débito y Crédito</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Cashback (Reembolso)</controllingFieldValue>
+                <controllingFieldValue>Cupón E-commerce</controllingFieldValue>
+                <controllingFieldValue>Tasa 0%</controllingFieldValue>
+                <controllingFieldValue>Descuento directo en tiendas</controllingFieldValue>
+                <controllingFieldValue>Cupones de regalo</controllingFieldValue>
+                <valueName>Débito</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cashback (Reembolso)</controllingFieldValue>
+                <controllingFieldValue>Reward (Puntos Acumulados)*</controllingFieldValue>
+                <controllingFieldValue>Redención Puntos *</controllingFieldValue>
+                <controllingFieldValue>Delay (Skip Payment)</controllingFieldValue>
+                <controllingFieldValue>Installment (MSI)</controllingFieldValue>
+                <controllingFieldValue>Cupón E-commerce</controllingFieldValue>
+                <controllingFieldValue>Tasa 0%</controllingFieldValue>
+                <controllingFieldValue>Descuento directo en tiendas</controllingFieldValue>
+                <controllingFieldValue>Cupones de regalo</controllingFieldValue>
+                <valueName>Crédito</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cashback (Reembolso)</controllingFieldValue>
+                <controllingFieldValue>Cupón E-commerce</controllingFieldValue>
+                <controllingFieldValue>Tasa 0%</controllingFieldValue>
+                <controllingFieldValue>Descuento directo en tiendas</controllingFieldValue>
+                <controllingFieldValue>Cupones de regalo</controllingFieldValue>
+                <valueName>Débito y Crédito</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_URL__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Valor_Diferenciado__c</fullName>
+        <externalId>false</externalId>
+        <label>Valor Diferenciado</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Valor_Original__c</fullName>
+        <externalId>false</externalId>
+        <label>Valor Original</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>$0.07</fullName>
+                    <default>false</default>
+                    <label>$0.07</label>
+                </value>
+                <value>
+                    <fullName>$0.10</fullName>
+                    <default>false</default>
+                    <label>$0.10</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Voucher_De_Th_Beneficio__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Campana__r.CRM_WF_Mensaje_En_El_Voucher__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Voucher del tarjetahabiente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_10_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 10 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>10 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_11_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 11 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>11 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_12_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 12 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>12 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_13_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 13 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>13 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_14_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 14 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>14 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_15_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 15 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>15 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_16_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 16 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>16 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_17_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 17 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>17 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_18_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 18 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>18 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_19_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 19 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>19 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_20_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 20 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>20 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_21_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 21 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>21 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_22_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 22 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>22 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_23_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 23 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>23 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_24_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 24 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>24 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_36_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 36 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>36 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_3_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 3 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>3 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_48_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 48 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>48 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_5_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 5 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>5 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_6_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 6 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>6 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_7_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 7 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>7 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_8_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 8 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>8 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_9_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF, que permite mostrar si en el beneficio aplican 9 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>9 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Bonificacion_boolean_c__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Campo para la aplicación WF, permite saber si la promoción incluye el beneficio de bonificación</description>
+        <externalId>false</externalId>
+        <label>Bonificación</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Cantidad_de_puntos_que_se_acumulan__c</fullName>
+        <description>Permite informar a línea bancomer la cantidad de puntos que se acumulan por transacción.</description>
+        <externalId>false</externalId>
+        <label>Cantidad de puntos que se acumulan</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Descuento_boolean__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Campo para la aplicación WF, permite saber si la promoción incluye el beneficio de descuento</description>
+        <externalId>false</externalId>
+        <label>Descuento</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Encendido_de_Bonus_Merchant__c</fullName>
+        <description>Campo para la aplicación WF permite al usuario determinar sí el bonus merchant se enciende</description>
+        <externalId>false</externalId>
+        <label>Encendido de Bonus Merchant</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Sí</fullName>
+                    <default>false</default>
+                    <label>Sí</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_MSI_boolean__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Campo para la aplicación WF, permite saber si la promoción incluye el beneficio de MSI</description>
+        <externalId>false</externalId>
+        <label>MSI</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Mecanica__c</fullName>
+        <description>Campo tipo texto que almacena la mecánica que se informa en el flujo</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Mecánica</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_10_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 10 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 10 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_11_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 11 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 11 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_12_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 12 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 12 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_13_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 13 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 13 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_14_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 14 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 14 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_15_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 15 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 15 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_16_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 16 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 16 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_17_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 17 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 17 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_18_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 18 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 18 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_19_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 19 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 19 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_20_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 20 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 20 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_21_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 21 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 21 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_22_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 22 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 22 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_23_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 23 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 23 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_24_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 24 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 24 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_2_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 2 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 2 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_36_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 36 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 36 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_3_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 3 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 3 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_48_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 48 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 48 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_4_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 4 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 4 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_5_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 5 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 5 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_6_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 6 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 6 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_7_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 7 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 7 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_8_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 8 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 8 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_maximo_para_9_meses__c</fullName>
+        <description>Monto máximo para que el en el beneficio apliquen los 9 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto máximo para 9 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_10_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 10 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 10 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_11_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 11 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 11 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_12_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 12 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 12 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_13_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 13 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 13 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_14_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 14 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 14 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_15_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 12 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 15 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_16_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 16 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 16 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_17_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 17 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 17 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_18_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 18 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 18 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_19_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 19 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 19 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_20_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 20 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 20 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_21_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 21 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 21 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_22_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 22 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 22 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_23_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 23 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 23 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_24_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 24 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 24 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_2_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 2 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 2 Meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_36_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 36 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 36 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_3_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 3 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 3 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_48_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 48 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 48 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_4_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 4 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 4 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_5_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 5 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 5 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_6_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 6 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 6 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_7_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 7 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 7 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_8_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 8 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 8 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monto_minimo_para_9_meses__c</fullName>
+        <description>Monto mínimo para que el en el beneficio apliquen los 9 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>Monto mínimo para 9 meses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Promocion__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo que almacena la promoción de la campaña</description>
+        <externalId>false</externalId>
+        <label>Promoción</label>
+        <referenceTo>MX_WF_Catalogo_Promociones__c</referenceTo>
+        <relationshipLabel>Beneficios</relationshipLabel>
+        <relationshipName>Beneficios</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Puntos_boolean__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Campo para la aplicación WF, permite saber si la promoción incluye el beneficio de puntos</description>
+        <externalId>false</externalId>
+        <label>Puntos</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Regalo_boolean__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Campo para la aplicación WF, permite saber si la promoción incluye el beneficio de regalo</description>
+        <externalId>false</externalId>
+        <label>Regalo</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Skip_Payment_boolean__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Campo para la aplicación WF, permite saber si la promoción incluye el beneficio de payment</description>
+        <externalId>false</externalId>
+        <label>Skip Payment</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipo_de_carga__c</fullName>
+        <description>Campo para la aplicación WF que permite conocer si la carga la hace adquirente o no</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Tipo de carga</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipo_de_operacion__c</fullName>
+        <description>Campo para la aplicación wf, define el tipo de operación que condiciona al beneficio</description>
+        <externalId>false</externalId>
+        <label>Tipo de operación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Revolvente</fullName>
+                    <default>false</default>
+                    <label>Revolvente</label>
+                </value>
+                <value>
+                    <fullName>MSI</fullName>
+                    <default>false</default>
+                    <label>MSI</label>
+                </value>
+                <value>
+                    <fullName>Revolvente / MSI</fullName>
+                    <default>false</default>
+                    <label>Revolvente / MSI</label>
+                </value>
+                <value>
+                    <fullName>MCI</fullName>
+                    <default>false</default>
+                    <label>MCI</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipo_de_transacci_n__c</fullName>
+        <description>Campo para la aplicación WF, que permite informar el tipo de transacción (Revolvente o MSI) para que aplique la promoción</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Tipo de transacción</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Valor_durante_la_promoci_n__c</fullName>
+        <description>Campo para la aplicación WF, que permite conocer el valor de los puntos BBVA durante la promoción</description>
+        <externalId>false</externalId>
+        <label>Valor durante la promoción</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_X2_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF que permite saber si en el beneficio aplican 2 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>2 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_X4_Meses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación WF que permite saber si en el beneficio aplican 4 meses sin intereses</description>
+        <externalId>false</externalId>
+        <label>4 Meses</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_acumulaci_n_de_puntos_en_la_compra__c</fullName>
+        <description>Campo para la aplicación WF, permite conocer el % de puntos que se acumulan por cada compra</description>
+        <externalId>false</externalId>
+        <label>% de acumulación de puntos en la compra</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Beneficio</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>BN-{0000}</displayFormat>
+        <label>Nombre de Beneficios</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Beneficios</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CRM_WF_Beneficio</fullName>
+        <active>true</active>
+        <label>Beneficio</label>
+        <picklistValues>
+            <picklist>CRM_WF_Beneficio__c</picklist>
+            <values>
+                <fullName>Cashback %28Reembolso%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cupones de regalo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cupón E-commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delay %28Skip Payment%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Descuento directo en tiendas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Installment %28MSI%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Redención Puntos *</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reward %28Puntos Acumulados%29*</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tasa 0%25</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Canal_De_Operacion__c</picklist>
+            <values>
+                <fullName>MOTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal %28TPV%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paypass %28Contactless%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QR Ecommerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QR Normal %28TPV%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Todas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>e-Commerce</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Carga_De_Beneficio__c</picklist>
+            <values>
+                <fullName>Comercio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Garanti</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informativa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operaciones</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Costo_Y_Tarifa_Imp_Maximo__c</picklist>
+            <values>
+                <fullName>Comercio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercio %2F Banco</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Costo_Y_Tarifa_Imp_Minimo__c</picklist>
+            <values>
+                <fullName>Comercio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercio %2F Banco</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Desde__c</picklist>
+            <values>
+                <fullName>00%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>01%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>02%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>04%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>05%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>07%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>22%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Dias_De_La_Semana__c</picklist>
+            <values>
+                <fullName>Domingo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jueves</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lunes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Martes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miércoles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sábado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Todos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Viernes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Encendido_Bonus_Merchant__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Hasta_Beneficio__c</picklist>
+            <values>
+                <fullName>00%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>01%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>02%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>04%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>05%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>07%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>22%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Limitar_Beneficio__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Load_Date__c</picklist>
+            <values>
+                <fullName>5 días después de la vigencia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tiempo real</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Mecanica__c</picklist>
+            <values>
+                <fullName>Registrar Cupón en URL</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Nacionales_Extranjero_O_Todas__c</picklist>
+            <values>
+                <fullName>Extranjero</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nacionales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Todas</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Otorgar_El_Beneficio__c</picklist>
+            <values>
+                <fullName>Cuando se acumule un monto de compra %28en una o varias txn%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuando se llegue a determinado numero de transaccion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Por cada transacción</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Plazos_Para_MSI__c</picklist>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Todos</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Pob_Campana__c</picklist>
+            <values>
+                <fullName>Abierta al Público</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carga masiva</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lista cerrada de TH</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tipo_De_Campana__c</picklist>
+            <values>
+                <fullName>Adquirente %28Por grupo - cadena%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emisor %28Por afiliación%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tipo_De_Operacion__c</picklist>
+            <values>
+                <fullName>MCI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSi</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolvente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolvente %2F MSI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tipo_De_Producto__c</picklist>
+            <values>
+                <fullName>Crédito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Débito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Débito y Crédito</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Valor_Original__c</picklist>
+            <values>
+                <fullName>%240%2E07</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%240%2E10</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_WF_Encendido_de_Bonus_Merchant__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sí</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_WF_Tipo_de_operacion__c</picklist>
+            <values>
+                <fullName>MCI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MSI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolvente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revolvente %2F MSI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

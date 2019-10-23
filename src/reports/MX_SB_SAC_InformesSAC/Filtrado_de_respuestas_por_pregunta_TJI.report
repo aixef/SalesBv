@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SurveyInvitation$MX_SB_SAC_Caso__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>Contiene las preguntas y respuestas a partir de una invitación que tiene cada caso</description>
+    <filter>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <column>SurveyInvitation.SurveyResponses.SurveyQuestionResponses$Question</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Basado exclusiv﻿amente</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SurveyInvitation.SurveyResponses.SurveyQuestionResponses$ResponseValue</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Pregunta 1</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>MX_SB_SAC_invitacionEncuesta__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>SurveyInvitation$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

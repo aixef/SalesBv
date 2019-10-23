@@ -1,0 +1,37 @@
+<aura:documentation>
+    <!--
+    /*
+    * @author:      Alexis Pérez
+    * @date:        15/01/2019
+    * @description  Componente encargado de realizar la conversión de lead a Oportunidad, Contacto y Cuenta.
+    * @Changes
+    *       2019-01-15          Creación                               Alexis Pérez
+    */
+    -->
+    <aura:description>
+        <p><b>NAME</b> MX_WB_CMP_ConvertirLead</p>
+        <p><b>DESCRIPTION</b>El componente se utiliza para realizar la conversión de un Lead a oportunidad, contacto y cuenta.</p>
+        <p><b>ATTRIBUTES</b>
+            <ul>
+                <li><p>attribute recordId: Id del registro oportunidad actual.</p></li>
+                <li><p>attribute mensaje:  Mensaje de éxito o error según suceda.</p></li>
+                <li><p>attribute tipoMensaje: Indica si el mensaje es de error o éxito.</p></li>
+            </ul>
+        </p>
+        <p><b>CONTROLLER METHODS</b>
+            <ul>
+                <li><p><b>convertir</b>Realiza la conversión del Lead.</p></li>
+            </ul>
+        </p>
+        <p><b>HELPER METHODS</b>
+            <ul>
+                <li><p><b>convertir</b>Realiza la conversión del Lead.</p></li>
+            </ul>
+        </p>
+        <p><b>RENDERER</b>
+            <ul>
+                <li><p><b>afterRender</b>Permite iniciar el proceso de conversión, una vez que todos los componentes gráficos han sido cargados.</p></li>
+            </ul>
+        </p>
+    </aura:description>
+</aura:documentation>

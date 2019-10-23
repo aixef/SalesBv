@@ -1,0 +1,1427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_RTE_Pedido_RCI_P_gina_de_registro</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+        <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto para Pedidos de RCI, CCC, IC</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>MX_RTE_Check_List_M_dulo__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo de principal detalle entre Condicionantes y Check List Módulo</description>
+        <externalId>false</externalId>
+        <label>Check List Módulo</label>
+        <referenceTo>MX_RTE_Check_List_Modulo__c</referenceTo>
+        <relationshipLabel>Pedidos</relationshipLabel>
+        <relationshipName>Condicionantes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Comentarios__c</fullName>
+        <description>Se utiliza para redactar información adicional a la solicitud levantada</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Comentarios</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Completado__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para determinar si el condicionante ya fue completado</description>
+        <externalId>false</externalId>
+        <label>Completado</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Descripci_n__c</fullName>
+        <description>La descripción de la condicionante.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Descripción</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Dias_Retraso__c</fullName>
+        <description>Fórmula que arroja los días que se retrasó la entrega real según  la fecha compromiso. Si se entrega antes, el valor será 0.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+	(TODAY() - MX_RTE_Fecha_compromiso__c)&lt;0 || (MX_RTE_Fecha_de_cumplimiento__c -MX_RTE_Fecha_compromiso__c) &lt; 0, 
+0,
+IF(
+MX_RTE_Completado__c  = FALSE,
+TODAY() - MX_RTE_Fecha_compromiso__c,
+	MX_RTE_Fecha_de_cumplimiento__c - MX_RTE_Fecha_compromiso__c
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Días de retraso</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Documento__c</fullName>
+        <description>Campo que muestra los tipos de documentos existentes. Es dependiente de catálogo.</description>
+        <externalId>false</externalId>
+        <label>Documento</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Admisión Mercado Abierto</fullName>
+                    <default>false</default>
+                    <label>Admisión Mercado Abierto</label>
+                </value>
+                <value>
+                    <fullName>Comprobantes de y leyendas de Operación</fullName>
+                    <default>false</default>
+                    <label>Comprobantes de y leyendas de Operación</label>
+                </value>
+                <value>
+                    <fullName>Creación de ristras contables (subproductos)</fullName>
+                    <default>false</default>
+                    <label>Creación de ristras contables (subproductos)</label>
+                </value>
+                <value>
+                    <fullName>Dictamen MSA</fullName>
+                    <default>false</default>
+                    <label>Dictamen MSA</label>
+                </value>
+                <value>
+                    <fullName>Envío y tratamiento de información de clientes    </fullName>
+                    <default>false</default>
+                    <label>Envío y tratamiento de información de clientes    </label>
+                </value>
+                <value>
+                    <fullName>Externalización de servicios (Proveedores) </fullName>
+                    <default>false</default>
+                    <label>Externalización de servicios (Proveedores) </label>
+                </value>
+                <value>
+                    <fullName>Información de Comisiones</fullName>
+                    <default>false</default>
+                    <label>Información de Comisiones</label>
+                </value>
+                <value>
+                    <fullName>Leyendas en estados de cuenta</fullName>
+                    <default>false</default>
+                    <label>Leyendas en estados de cuenta</label>
+                </value>
+                <value>
+                    <fullName>Modificación de Contratos</fullName>
+                    <default>false</default>
+                    <label>Modificación de Contratos</label>
+                </value>
+                <value>
+                    <fullName>Monitoreo de operaciones </fullName>
+                    <default>false</default>
+                    <label>Monitoreo de operaciones </label>
+                </value>
+                <value>
+                    <fullName>Opinión o dictamen Jurídico</fullName>
+                    <default>false</default>
+                    <label>Opinión o dictamen Jurídico</label>
+                </value>
+                <value>
+                    <fullName>Otro</fullName>
+                    <default>false</default>
+                    <label>Otro</label>
+                </value>
+                <value>
+                    <fullName>Procesos de atención en Linea Bancomer (aclaraciones)</fullName>
+                    <default>false</default>
+                    <label>Procesos de atención en Linea Bancomer (aclaraciones)</label>
+                </value>
+                <value>
+                    <fullName>Pruebas contables</fullName>
+                    <default>false</default>
+                    <label>Pruebas contables</label>
+                </value>
+                <value>
+                    <fullName>Pruebas de crédito</fullName>
+                    <default>false</default>
+                    <label>Pruebas de crédito</label>
+                </value>
+                <value>
+                    <fullName>Resguardo en Bóveda electrónica</fullName>
+                    <default>false</default>
+                    <label>Resguardo en Bóveda electrónica</label>
+                </value>
+                <value>
+                    <fullName>Sanción RMC</fullName>
+                    <default>false</default>
+                    <label>Sanción RMC</label>
+                </value>
+                <value>
+                    <fullName>Tasas y Rendimientos</fullName>
+                    <default>false</default>
+                    <label>Tasas y Rendimientos</label>
+                </value>
+                <value>
+                    <fullName>Términos y Condiciones </fullName>
+                    <default>false</default>
+                    <label>Términos y Condiciones </label>
+                </value>
+                <value>
+                    <fullName>Uso de datos personales de clientes </fullName>
+                    <default>false</default>
+                    <label>Uso de datos personales de clientes </label>
+                </value>
+                <value>
+                    <fullName>Uso de nube</fullName>
+                    <default>false</default>
+                    <label>Uso de nube</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Estatus__c</fullName>
+        <description>Identifica la etapa del proceso en que se encuentra un registro</description>
+        <externalId>false</externalId>
+        <label>Estatus</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pendiente</fullName>
+                    <default>true</default>
+                    <label>Pendiente</label>
+                </value>
+                <value>
+                    <fullName>Validación de Documento</fullName>
+                    <default>false</default>
+                    <label>Validación de Documento</label>
+                </value>
+                <value>
+                    <fullName>Completado</fullName>
+                    <default>false</default>
+                    <label>Completado</label>
+                </value>
+                <value>
+                    <fullName>Rechazado</fullName>
+                    <default>false</default>
+                    <label>Rechazado</label>
+                </value>
+                <value>
+                    <fullName>No Procede</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>No Procede</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Estatus_fx__c</fullName>
+        <description>Campo de formula para identificar visualmente la etapa del proceso</description>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT( MX_RTE_Estatus__c),
+&quot;Pendiente&quot;, 
+IMAGE(&quot;/servlet/servlet.FileDownload?file=0156C000000Lgas&quot;, &quot;Pedido Pendiente&quot;, 30, 30), 
+&quot;Validación de Documento&quot;, 
+IMAGE(&quot;/servlet/servlet.FileDownload?file=0156C000000Lgai&quot;, &quot;Pedido Validación&quot;, 30, 30),
+&quot;Completado&quot;,
+IMAGE(&quot;/servlet/servlet.FileDownload?file=0156C000000Lgad&quot;, &quot;Pedido Completado&quot;, 30, 30),
+&quot;Rechazado&quot;,
+IMAGE(&quot;/servlet/servlet.FileDownload?file=0156C000000Lgan&quot;, &quot;Pedido Rechazado&quot;, 30, 30),
+&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Estatus</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Fecha_compromiso__c</fullName>
+        <description>Fecha en la que se compromete a finalizar las condicionantes.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha Requerida</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Fecha_de_cumplimiento__c</fullName>
+        <description>Fecha real en la que se finalizó la condicionante.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de cumplimiento</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Infraccion__c</fullName>
+        <description>Campo de formula tipo imagen que activa a través de una fórmula un semáforo dependiendo de si el campo &quot;días de retraso&quot; lleva igual o más días de retraso.</description>
+        <externalId>false</externalId>
+        <formula>IF( MX_RTE_Dias_Retraso__c &gt; 0, IMAGE(&quot;https://bancomer-retail--wfc--c.cs25.content.force.com/servlet/servlet.ImageServer?id=0151b0000008Rid&amp;oid=00D1b0000008s40&amp;lastMod=1553254868000&quot;, &quot;HAY UN RETRASO EN LA FECHA DE CUMPLIMIENTO RESPECTO A LA FECHA DE COMPROMISO&quot;, 30, 30)
+, IMAGE(&quot;https://bancomer-retail--wfc--c.cs25.content.force.com/servlet/servlet.ImageServer?id=0151b0000008UzQ&amp;oid=00D1b0000008s40&amp;lastMod=1554348738000&quot;, &quot;La fecha de cumplimiento aún no supera la fecha de compromiso&quot;, 30, 30)  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Infracción</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Iniciativa__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo para relacionar un pedido con una iniciativa.</description>
+        <externalId>false</externalId>
+        <label>Iniciativa</label>
+        <referenceTo>MX_RTE_Iniciativa__c</referenceTo>
+        <relationshipLabel>Pedidos</relationshipLabel>
+        <relationshipName>Pedidos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_MVP__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Se utiliza para obtener la relación de lookup con el objeto MVP</description>
+        <externalId>false</externalId>
+        <label>MVP</label>
+        <referenceTo>MX_RTE_Resumen_Ponderacion__c</referenceTo>
+        <relationshipLabel>Pedidos</relationshipLabel>
+        <relationshipName>Pedidos_RCI</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Otro__c</fullName>
+        <description>Campo abierto que permite complementar la información.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Otro</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Producto__c</fullName>
+        <description>Se utiliza por el Rol IC, para identificar a que producto afecta la iniciativa que se presenta</description>
+        <externalId>false</externalId>
+        <label>Producto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>APPs</fullName>
+                    <default>false</default>
+                    <label>APPs</label>
+                </value>
+                <value>
+                    <fullName>ATM</fullName>
+                    <default>false</default>
+                    <label>ATM</label>
+                </value>
+                <value>
+                    <fullName>BCOM</fullName>
+                    <default>false</default>
+                    <label>BCOM</label>
+                </value>
+                <value>
+                    <fullName>BCOM / HIPOTECARIO</fullName>
+                    <default>false</default>
+                    <label>BCOM / HIPOTECARIO</label>
+                </value>
+                <value>
+                    <fullName>BCOM / INVERSIONES</fullName>
+                    <default>false</default>
+                    <label>BCOM / INVERSIONES</label>
+                </value>
+                <value>
+                    <fullName>BCOM / TDC</fullName>
+                    <default>false</default>
+                    <label>BCOM / TDC</label>
+                </value>
+                <value>
+                    <fullName>BCOM / VISTA</fullName>
+                    <default>false</default>
+                    <label>BCOM / VISTA</label>
+                </value>
+                <value>
+                    <fullName>BMOVIL</fullName>
+                    <default>false</default>
+                    <label>BMOVIL</label>
+                </value>
+                <value>
+                    <fullName>CLINTBAN</fullName>
+                    <default>false</default>
+                    <label>CLINTBAN</label>
+                </value>
+                <value>
+                    <fullName>CONSUMO</fullName>
+                    <default>false</default>
+                    <label>CONSUMO</label>
+                </value>
+                <value>
+                    <fullName>CRM</fullName>
+                    <default>false</default>
+                    <label>CRM</label>
+                </value>
+                <value>
+                    <fullName>DATIO</fullName>
+                    <default>false</default>
+                    <label>DATIO</label>
+                </value>
+                <value>
+                    <fullName>DIGITAL</fullName>
+                    <default>false</default>
+                    <label>DIGITAL</label>
+                </value>
+                <value>
+                    <fullName>EECC</fullName>
+                    <default>false</default>
+                    <label>EECC</label>
+                </value>
+                <value>
+                    <fullName>GLOMO</fullName>
+                    <default>false</default>
+                    <label>GLOMO</label>
+                </value>
+                <value>
+                    <fullName>GLOMO / AUTO</fullName>
+                    <default>false</default>
+                    <label>GLOMO / AUTO</label>
+                </value>
+                <value>
+                    <fullName>GLOMO / CONSUMO</fullName>
+                    <default>false</default>
+                    <label>GLOMO / CONSUMO</label>
+                </value>
+                <value>
+                    <fullName>GLOMO / INVERSIONES</fullName>
+                    <default>false</default>
+                    <label>GLOMO / INVERSIONES</label>
+                </value>
+                <value>
+                    <fullName>GLOMO / TDC</fullName>
+                    <default>false</default>
+                    <label>GLOMO / TDC</label>
+                </value>
+                <value>
+                    <fullName>GLOMO / VISTA</fullName>
+                    <default>false</default>
+                    <label>GLOMO / VISTA</label>
+                </value>
+                <value>
+                    <fullName>NOMINA</fullName>
+                    <default>false</default>
+                    <label>NOMINA</label>
+                </value>
+                <value>
+                    <fullName>PATRIMONIAL</fullName>
+                    <default>false</default>
+                    <label>PATRIMONIAL</label>
+                </value>
+                <value>
+                    <fullName>PYME</fullName>
+                    <default>false</default>
+                    <label>PYME</label>
+                </value>
+                <value>
+                    <fullName>SALES FORCE</fullName>
+                    <default>false</default>
+                    <label>SALES FORCE</label>
+                </value>
+                <value>
+                    <fullName>SEGUROS</fullName>
+                    <default>false</default>
+                    <label>SEGUROS</label>
+                </value>
+                <value>
+                    <fullName>TDC</fullName>
+                    <default>false</default>
+                    <label>TDC</label>
+                </value>
+                <value>
+                    <fullName>TPV</fullName>
+                    <default>false</default>
+                    <label>TPV</label>
+                </value>
+                <value>
+                    <fullName>WIBE</fullName>
+                    <default>false</default>
+                    <label>WIBE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Q__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Se indica el Q en el que se hace la solicitud</description>
+        <externalId>false</externalId>
+        <label>Q&apos;s</label>
+        <referenceTo>MX_RTE_PI__c</referenceTo>
+        <relationshipLabel>Pedidos</relationshipLabel>
+        <relationshipName>Pedidos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Tipo__c</fullName>
+        <description>Tipo de módulo.</description>
+        <externalId>false</externalId>
+        <label>Tipo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Precedente</fullName>
+                    <default>false</default>
+                    <label>Precedente</label>
+                </value>
+                <value>
+                    <fullName>Subsecuente</fullName>
+                    <default>false</default>
+                    <label>Subsecuente</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_URL_Documento__c</fullName>
+        <description>En caso de que el documento no se cargue de forma local, se agrega un link para consultarlo en drive</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>URL Documento</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_area_solicitante__c</fullName>
+        <description>Campo que muestra las opciones a elegir entre las condicionantes.</description>
+        <externalId>false</externalId>
+        <label>Área Solicitante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Contables</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Contables</label>
+                </value>
+                <value>
+                    <fullName>Contrato</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Contrato</label>
+                </value>
+                <value>
+                    <fullName>Control de la Operativa</fullName>
+                    <default>false</default>
+                    <label>Control de la Operativa</label>
+                </value>
+                <value>
+                    <fullName>Cumplimiento</fullName>
+                    <default>false</default>
+                    <label>Cumplimiento</label>
+                </value>
+                <value>
+                    <fullName>Dictamen Jurídico</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Dictamen Jurídico</label>
+                </value>
+                <value>
+                    <fullName>Finanzas</fullName>
+                    <default>false</default>
+                    <label>Finanzas</label>
+                </value>
+                <value>
+                    <fullName>Jurídicos </fullName>
+                    <default>false</default>
+                    <label>Jurídicos </label>
+                </value>
+                <value>
+                    <fullName>MSA</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>MSA</label>
+                </value>
+                <value>
+                    <fullName>Normatividad Institucional</fullName>
+                    <default>false</default>
+                    <label>Normatividad Institucional</label>
+                </value>
+                <value>
+                    <fullName>Normativos</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Normativos</label>
+                </value>
+                <value>
+                    <fullName>Operaciones</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Operaciones</label>
+                </value>
+                <value>
+                    <fullName>Reputacional</fullName>
+                    <default>false</default>
+                    <label>Reputacional</label>
+                </value>
+                <value>
+                    <fullName>Riesgos de Crédito</fullName>
+                    <default>false</default>
+                    <label>Riesgos de Crédito</label>
+                </value>
+                <value>
+                    <fullName>Sistemas</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Sistemas</label>
+                </value>
+                <value>
+                    <fullName>Talento y Cultura</fullName>
+                    <default>false</default>
+                    <label>Talento y Cultura</label>
+                </value>
+                <value>
+                    <fullName>Tecnología</fullName>
+                    <default>false</default>
+                    <label>Tecnología</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Fecha_de_Carga__c</fullName>
+        <description>Fecha en la que el documento es cargado</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de Carga</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Pedido</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_area_solicitante__c</columns>
+        <columns>MX_RTE_Documento__c</columns>
+        <columns>MX_RTE_Infraccion__c</columns>
+        <columns>MX_RTE_Dias_Retraso__c</columns>
+        <columns>MX_RTE_Estatus__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <listViews>
+        <fullName>MX_RTE_CCC</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Estatus_fx__c</columns>
+        <columns>MX_RTE_Estatus__c</columns>
+        <columns>MX_RTE_Descripci_n__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>MX_RTE_Pedido_RCI__c.MX_RTE_CCC</value>
+        </filters>
+        <label>CCC</label>
+        <sharedTo>
+            <role>MX_RTE_CCC</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_RTE_Implementacion_Comercial</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Estatus_fx__c</columns>
+        <columns>MX_RTE_Estatus__c</columns>
+        <columns>MX_RTE_Producto__c</columns>
+        <columns>MX_RTE_Descripci_n__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>MX_RTE_Pedido_RCI__c.MX_RTE_IC</value>
+        </filters>
+        <label>Implementación Comercial</label>
+        <sharedTo>
+            <role>MX_RTE_Implementacion_Comercial</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_RTE_RCI</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_area_solicitante__c</columns>
+        <columns>MX_RTE_Estatus_fx__c</columns>
+        <columns>MX_RTE_Documento__c</columns>
+        <columns>MX_RTE_Infraccion__c</columns>
+        <columns>MX_RTE_Dias_Retraso__c</columns>
+        <columns>MX_RTE_Estatus__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>MX_RTE_Pedido_RCI__c.MX_RTE_RCI</value>
+        </filters>
+        <label>RCA</label>
+        <sharedTo>
+            <role>MX_RTE_RCI</role>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>CD-{000000}</displayFormat>
+        <label>Folio</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Pedidos</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>MX_RTE_CCC</fullName>
+        <active>true</active>
+            <description>Captura de Pedidos por parte del rol CCC</description>
+        <label>CCC</label>
+        <picklistValues>
+            <picklist>MX_RTE_Documento__c</picklist>
+            <values>
+                <fullName>Admisión Mercado Abierto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comprobantes de y leyendas de Operación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Creación de ristras contables %28subproductos%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dictamen MSA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envío y tratamiento de información de clientes%C2%A0%C2%A0%C2%A0%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Externalización de servicios %28Proveedores%29%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Información de Comisiones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leyendas en estados de cuenta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modificación de Contratos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monitoreo de operaciones%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opinión o dictamen Jurídico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Procesos de atención en Linea Bancomer %28aclaraciones%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pruebas contables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pruebas de crédito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resguardo en Bóveda electrónica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sanción RMC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tasas y Rendimientos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Términos y Condiciones%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uso de datos personales de clientes%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uso de nube</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_Estatus__c</picklist>
+            <values>
+                <fullName>Completado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pendiente</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rechazado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validación de Documento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_Producto__c</picklist>
+            <values>
+                <fullName>APPs</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_Tipo__c</picklist>
+            <values>
+                <fullName>Precedente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Subsecuente</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_area_solicitante__c</picklist>
+            <values>
+                <fullName>Control de la Operativa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cumplimiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finanzas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jurídicos%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normatividad Institucional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputacional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Riesgos de Crédito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Talento y Cultura</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tecnología</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MX_RTE_IC</fullName>
+        <active>true</active>
+        <description>Captura de Pedidos por parte del rol IC</description>
+        <label>IC</label>
+        <picklistValues>
+            <picklist>MX_RTE_Documento__c</picklist>
+            <values>
+                <fullName>Admisión Mercado Abierto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comprobantes de y leyendas de Operación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Creación de ristras contables %28subproductos%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dictamen MSA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envío y tratamiento de información de clientes%C2%A0%C2%A0%C2%A0%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Externalización de servicios %28Proveedores%29%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Información de Comisiones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leyendas en estados de cuenta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modificación de Contratos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monitoreo de operaciones%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opinión o dictamen Jurídico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Procesos de atención en Linea Bancomer %28aclaraciones%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pruebas contables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pruebas de crédito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resguardo en Bóveda electrónica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sanción RMC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tasas y Rendimientos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Términos y Condiciones%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uso de datos personales de clientes%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uso de nube</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_Estatus__c</picklist>
+            <values>
+                <fullName>Completado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pendiente</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rechazado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validación de Documento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_Producto__c</picklist>
+            <values>
+                <fullName>APPs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCOM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCOM %2F HIPOTECARIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCOM %2F INVERSIONES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCOM %2F TDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCOM %2F VISTA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BMOVIL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLINTBAN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONSUMO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CRM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DATIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIGITAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EECC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GLOMO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GLOMO %2F AUTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GLOMO %2F CONSUMO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GLOMO %2F INVERSIONES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GLOMO %2F TDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GLOMO %2F VISTA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NOMINA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PATRIMONIAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PYME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALES FORCE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEGUROS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TPV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WIBE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_Tipo__c</picklist>
+            <values>
+                <fullName>Precedente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Subsecuente</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_area_solicitante__c</picklist>
+            <values>
+                <fullName>Control de la Operativa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cumplimiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finanzas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jurídicos%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normatividad Institucional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputacional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Riesgos de Crédito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Talento y Cultura</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tecnología</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MX_RTE_RCI</fullName>
+        <active>true</active>
+        <description>Captura de Pedidos por parte del rol RCA</description>
+        <label>RCA</label>
+        <picklistValues>
+            <picklist>MX_RTE_Documento__c</picklist>
+            <values>
+                <fullName>Admisión Mercado Abierto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comprobantes de y leyendas de Operación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Creación de ristras contables %28subproductos%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dictamen MSA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envío y tratamiento de información de clientes%C2%A0%C2%A0%C2%A0%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Externalización de servicios %28Proveedores%29%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Información de Comisiones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leyendas en estados de cuenta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modificación de Contratos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monitoreo de operaciones%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opinión o dictamen Jurídico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Procesos de atención en Linea Bancomer %28aclaraciones%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pruebas contables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pruebas de crédito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resguardo en Bóveda electrónica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sanción RMC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tasas y Rendimientos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Términos y Condiciones%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uso de datos personales de clientes%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uso de nube</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_Estatus__c</picklist>
+            <values>
+                <fullName>Completado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pendiente</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rechazado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validación de Documento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_Producto__c</picklist>
+            <values>
+                <fullName>APPs</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_Tipo__c</picklist>
+            <values>
+                <fullName>Precedente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Subsecuente</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_RTE_area_solicitante__c</picklist>
+            <values>
+                <fullName>Control de la Operativa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cumplimiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finanzas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jurídicos%C2%A0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normatividad Institucional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputacional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Riesgos de Crédito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Talento y Cultura</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tecnología</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>MX_RTE_Completar</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Completar</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/flow/MX_RTE_Completar_Pedidos_RCI?varPedidoRCI={!MX_RTE_Pedido_RCI__c.Id}&amp;retURL={!MX_RTE_Pedido_RCI__c.Id}</url>
+    </webLinks>
+</CustomObject>

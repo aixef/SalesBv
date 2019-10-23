@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+	<fields>
+        <fullName>MX_SB_VTS_OrigenOpp__c</fullName>
+        <description>Origen de la Oportunidad, para diferenciar scripts de Inbound</description>
+        <externalId>false</externalId>
+        <label>Origen</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Call me back</fullName>
+                    <default>false</default>
+                    <label>Call me back</label>
+                </value>
+                <value>
+                    <fullName>Tracking Web</fullName>
+                    <default>false</default>
+                    <label>Tracking Web</label>
+                </value>
+                <value>
+                    <fullName>SAC</fullName>
+                    <default>false</default>
+                    <label>SAC</label>
+                </value>
+                <value>
+                    <fullName>Inbound</fullName>
+                    <default>false</default>
+                    <label>Inbound</label>
+                </value>
+                <value>
+                    <fullName>Outbound TLMK</fullName>
+                    <default>false</default>
+                    <label>Outbound TLMK</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+	<fields>
+        <fullName>MX_WB_Etapa__c</fullName>
+        <externalId>false</externalId>
+        <label>Etapa</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contacto Efectivo</fullName>
+                    <default>false</default>
+                    <label>Contacto Efectivo</label>
+                </value>
+                <value>
+                    <fullName>Objeciones</fullName>
+                    <default>false</default>
+                    <label>Objeciones</label>
+                </value>
+                <value>
+                    <fullName>Políticas</fullName>
+                    <default>false</default>
+                    <label>Políticas</label>
+                </value>
+                <value>
+                    <fullName>Cotización</fullName>
+                    <default>false</default>
+                    <label>Cotización</label>
+                </value>
+                <value>
+                    <fullName>Objeciones Reales</fullName>
+                    <default>false</default>
+                    <label>Objeciones Reales</label>
+                </value>
+                <value>
+                    <fullName>Venta Autorizada</fullName>
+                    <default>false</default>
+                    <label>Venta Autorizada</label>
+                </value>
+                <value>
+                    <fullName>Apertura</fullName>
+                    <default>false</default>
+                    <label>Apertura</label>
+                </value>
+                <value>
+                    <fullName>Cierre llamada no contacto</fullName>
+                    <default>false</default>
+                    <label>Cierre llamada no contacto</label>
+                </value>
+                <value>
+                    <fullName>Información y condiciones</fullName>
+                    <default>false</default>
+                    <label>Información y condiciones</label>
+                </value>
+                <value>
+                    <fullName>Venta cerrada</fullName>
+                    <default>false</default>
+                    <label>Venta cerrada</label>
+                </value>
+                <value>
+                    <fullName>Cierre de llamada sin venta</fullName>
+                    <default>false</default>
+                    <label>Cierre de llamada sin venta</label>
+                </value>
+                <value>
+                    <fullName>Contacto</fullName>
+                    <default>false</default>
+                    <label>Contacto</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WB_FamiliaProductos__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Familia de productos a los que se les asociará el script</description>
+        <externalId>false</externalId>
+        <label>Familia de productos</label>
+        <referenceTo>MX_WB_FamiliaProducto__c</referenceTo>
+        <relationshipLabel>Scripts Stages Products</relationshipLabel>
+        <relationshipName>Scripts_Stages_Products</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WB_Script__c</fullName>
+        <description>Script que será mostrado al asesor. Este script se visualiza dependiendo la etapa y el producto en el que se encuentre.</description>
+        <externalId>false</externalId>
+        <label>Script</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Scripts Stage Product</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <label>Nombre de Scripts Stage Campaign</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Scripts Stages Products</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

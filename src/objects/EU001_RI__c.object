@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>EU_001_Cmp_RV</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>EU_001_Cmp_RV</fullName>
+        <fields>EU001_fm_Propietario__c</fields>
+        <fields>EU001_fm_Segmento_del_Ejecutivo__c</fields>
+        <fields>EU001_ft_Fecha_Inicio__c</fields>
+        <fields>EU001_ft_Fecha_Cierre__c</fields>
+        <label>Revisión Individual (RI)</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Contiene los datos necesarios de la RI para su asociacion con los Compromisos</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Apoyos_del__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Apoyos basados en compromisos asociados al RI</description>
+        <externalId>false</externalId>
+        <label>Apoyos</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Reunión Individual</relationshipLabel>
+        <relationshipName>Reuni_n_Individual_RI_del</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EG001_Valoracion_de_RI_DO__c</fullName>
+        <description>La valoración que el Director de Oficina le da a la RI.</description>
+        <externalId>false</externalId>
+        <label>Valoracion de RI DO</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>Regular</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>Bueno</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>Muy Bueno</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>Excelente</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EG_001_ls_Valoracion_de_RI__c</fullName>
+        <externalId>false</externalId>
+        <label>Valoracion de RI</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>Regular</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>Bueno</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>Muy Bueno</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>Excelente</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EU_001_Un_RI_realizadas__c</fullName>
+        <description>Número de reuniones individuales realizadas.</description>
+        <externalId>false</externalId>
+        <label>RI realizadas</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_fm_UG_Propietario__c</fullName>
+        <description>UG del propietario del registro</description>
+        <externalId>false</externalId>
+        <formula>$User.UG__c</formula>
+        <label>UG Propietario</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_ft_Fecha_Cierre__c</fullName>
+        <description>Fecha y hora de termino de la RI</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de Finalización</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>EU001_ft_Fecha_Inicio__c</fullName>
+        <defaultValue>NOW()</defaultValue>
+        <description>Fecha y hora de inicio de la RI</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de Inicio</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>EU001_ls_Tipo_Compromiso__c</fullName>
+        <description>Campo tipo de compromiso</description>
+        <externalId>false</externalId>
+        <label>Tipo Compromiso</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Compromiso Cartera</fullName>
+                    <default>false</default>
+                    <label>Compromiso Cartera</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EU001_tl_Comentario_DO__c</fullName>
+        <description>El comentario que proporciona el Director de Oficina al momento de valorar la RI.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Comentario DO</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EU001_tl_Comentario_EV__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Comentario EV</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EU001_tx_Estado__c</fullName>
+        <description>Estado en que se encuentra la RI</description>
+        <externalId>false</externalId>
+        <label>Estado</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Preparación</fullName>
+                    <default>true</default>
+                    <label>Preparación</label>
+                </value>
+                <value>
+                    <fullName>Presentación</fullName>
+                    <default>false</default>
+                    <label>Presentación</label>
+                </value>
+                <value>
+                    <fullName>Evaluacion</fullName>
+                    <default>false</default>
+                    <label>Evaluación</label>
+                </value>
+                <value>
+                    <fullName>Finalizacion</fullName>
+                    <default>false</default>
+                    <label>Finalización</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_BPP_OwnerEmplNum__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.EmployeeNumber</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MX_BPP_OwnerEmplNum</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_BPyP_Division_RI__c</fullName>
+        <description>Este campo fórmula muestra la división del creador de la RI.</description>
+        <externalId>false</externalId>
+        <formula>TEXT( CreatedBy.Divisi_n__c )</formula>
+        <label>División de la RI</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_BPyP_Numero_de_empleado_de_la_RI__c</fullName>
+        <description>Este campo fórmula muestra el número de empleado propietario de la Reunión Individual</description>
+        <externalId>false</externalId>
+        <formula>Owner:User.EmployeeNumber</formula>
+        <label>Número de empleado de la RI</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_BPyP_Oficina_RI__c</fullName>
+        <description>Este campo fórmula muestra la oficina del propietario de la Reunión Individual BPyP</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Owner:User.BPyP_ls_NombreSucursal__c )</formula>
+        <label>Oficina</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_fm_Segmento_del_Ejecutivo__c</fullName>
+        <description>Muestra el segmento del ejecutivo</description>
+        <externalId>false</externalId>
+        <formula>TEXT($User.Segmento_Ejecutivo__c)</formula>
+        <label>Liga del Ejecutivo</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_fm_Mismo_CR__c</fullName>
+        <description>bandera para identificar el CR del ejecutivo y del director.</description>
+        <externalId>false</externalId>
+        <formula>$User.CR__c  =  EU001_fm_CR__c</formula>
+        <label>Mismo CR</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EU001_fm_Perfil_DO__c</fullName>
+        <externalId>false</externalId>
+        <formula>OR ($Profile.Name = &quot;Director de oficina&quot;,
+$Profile.Name = &quot;DIR. OF. EMPRESAS&quot;,
+$Profile.Name = &quot;DIR. OF. GOB.&quot;,  
+$Profile.Name = &quot;D CORPORATIVO GOBIER&quot;,
+$Profile.Name = &quot;D CORPORATIVO EMPRES&quot;,
+$Profile.Name = &quot;Administrador del sistema&quot;,
+$Profile.Name = &quot;DWP Delegados&quot;,
+$Profile.Name = &quot;Administrador Delegado&quot;
+)</formula>
+        <label>Perfil DO</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EU001_fm_CR__c</fullName>
+        <description>CR del ejecutivo</description>
+        <externalId>false</externalId>
+        <formula>Owner:User.CR__c</formula>
+        <label>CR</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_fm_Propietario__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.FirstName + &quot; &quot; +  Owner:User.LastName</formula>
+        <label>Propietario ExUnica</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_EU_Actualizacion_del_cintillo__c</fullName>
+        <description>Actualiza la fecha de última carga del cintillo.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Actualización del cintillo</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>EU001_dv_RealAjustado__c</fullName>
+        <externalId>false</externalId>
+        <label>Real Ajustado</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EU001_Fechadecomplemento__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de complemento</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Reunión Individual</label>
+    <nameField>
+        <displayFormat>RI-{0000}</displayFormat>
+        <label>No RI</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Reunión Individual</pluralLabel>
+    <recordTypes>
+        <fullName>MX_BPP_Reu_RI</fullName>
+        <active>true</active>
+        <label>MX_BPP_Reu_RI</label>
+        <picklistValues>
+            <picklist>EG001_Valoracion_de_RI_DO__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EG_001_ls_Valoracion_de_RI__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EU001_tx_Estado__c</picklist>
+            <values>
+                <fullName>Evaluacion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finalizacion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preparación</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Presentación</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>EU001_tx_Estado__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EU001_ft_Fecha_Inicio__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EU001_ft_Fecha_Cierre__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EU001_fm_Segmento_del_Ejecutivo__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>EU001_tx_Estado__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EU001_ft_Fecha_Inicio__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EU001_ft_Fecha_Cierre__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EU001_fm_Segmento_del_Ejecutivo__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU001_tx_Estado__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU001_ft_Fecha_Inicio__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU001_ft_Fecha_Cierre__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU001_fm_Segmento_del_Ejecutivo__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>EU001_tx_Estado__c</searchFilterFields>
+        <searchFilterFields>EU001_ft_Fecha_Inicio__c</searchFilterFields>
+        <searchFilterFields>EU001_ft_Fecha_Cierre__c</searchFilterFields>
+        <searchFilterFields>EU001_fm_Segmento_del_Ejecutivo__c</searchFilterFields>
+        <searchResultsAdditionalFields>EU001_tx_Estado__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EU001_ft_Fecha_Inicio__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EU001_ft_Fecha_Cierre__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EU001_fm_Segmento_del_Ejecutivo__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>EU001_rv_Estatus</fullName>
+        <active>true</active>
+        <description>Valida el estatus para Evaluación.</description>
+        <errorConditionFormula>IF( 
+ISPICKVAL( EU001_tx_Estado__c, &apos;Finalizacion&apos;)  &amp;&amp;   
+ISPICKVAL(EG_001_ls_Valoracion_de_RI__c, &apos;&apos;) &amp;&amp; 
+ISPICKVAL( EG001_Valoracion_de_RI_DO__c,&apos;&apos; ) ||
+ISPICKVAL( EU001_tx_Estado__c, &apos;Finalizacion&apos;) &amp;&amp;
+(ISPICKVAL(EG_001_ls_Valoracion_de_RI__c, &apos;&apos;) || ISPICKVAL( EG001_Valoracion_de_RI_DO__c,&apos;&apos; ))
+, true, false)</errorConditionFormula>
+        <errorMessage>Debe de contar con la evaluación de Ejecutivo y el Director.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU001_rv_cambioEtapa</fullName>
+        <active>true</active>
+        <description>No se puede cambiar a una etapa anterior</description>
+        <errorConditionFormula>OR( 
+   AND (ISCHANGED(EU001_tx_Estado__c), 
+        OR( ISPICKVAL( EU001_tx_Estado__c , &quot;Presentación&quot;) ,
+            ISPICKVAL( EU001_tx_Estado__c , &quot;Preparación&quot;)),
+        ISPICKVAL(PRIORVALUE(EU001_tx_Estado__c), &quot;Evaluacion&quot;)
+        ),
+   AND (ISCHANGED(EU001_tx_Estado__c), 
+        OR(ISPICKVAL( EU001_tx_Estado__c , &quot;Presentación&quot;),
+           ISPICKVAL( EU001_tx_Estado__c , &quot;Preparación&quot;),
+           ISPICKVAL( EU001_tx_Estado__c , &quot;Evaluacion&quot;)),
+       ISPICKVAL(PRIORVALUE(EU001_tx_Estado__c), &quot;Finalizacion&quot;)
+             )
+           )</errorConditionFormula>
+        <errorMessage>No puedes cambiar la etapa del RI a una anterior a la actual.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,286 @@
+<!--
+  @Component Name     : MX_WB_CampaniasCTI_cmp.cmp
+  @Description        : 
+  @Author             : 
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 26/4/2019 12:07:00
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    26/4/2019 10:56:46   Arsenio Perez Lopez      Modificacion nuevo modelo
+-->
+<aura:component controller="MX_WB_CampaniasCTI_cls"
+    implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+    access="global">
+    <aura:attribute name="searchResult" type="List"
+        description="Guarda y muestra los registros de la lista que retorna el sistema" />
+    <aura:attribute name="searchKeyword" type="String" description="Guarda la información que el usuario introdujo" />
+    <aura:attribute name="Message" type="boolean" default="false"
+        description="Muestra mensaje de registros no encontrados" />
+    <aura:attribute name="TotalNumberOfRecord" type="integer" default="0"
+        description="Muestra el número de registros" />
+    <aura:attribute name="lstQeryRsult" type="List" description="Guarda las cadenas que se agregarán a la consultas" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="optVal" type="List" description="Contiene los nombres de las etiquetas del objeto" />
+    <aura:attribute name="value" type="String"
+        description="Contiene el valor de la selección de la lista de etiquetas de la configuración personalizada" />
+    <aura:attribute name="enableDetail" type="boolean" default="false"
+        description="Sirve para visualizar la tarjeta si es true" />
+    <aura:attribute name="enableModal" type="boolean" default="false"
+        description="Sirve para visualizar el modal si es true" />
+    <aura:attribute name="valueSelectOperator" type="String"
+        description="Guarda el valor que se selecciona de los operadores" />
+    <aura:attribute name="valueOperator" type="String" default=""
+        description="Guarda el valor del input de los filtros" />
+    <aura:attribute name="valuesFilter" type="List" description="Guarda la cadena del filtro agregado" />
+    <aura:attribute name="operatorSelect" type="String" default="None"
+        description="Guarda el valor del operador seleccionado" />
+    <aura:attribute name="datosControler" type="String" description="Guarda los valores que regresa el controlador" />
+    <aura:attribute name="iterationQueries" type="Integer" default="0"
+        description="Guarda la lista de la consulta final" />
+    <aura:attribute name="selectedOperator" type="String" description="Guarda el valor del operador seleccionado" />
+    <aura:attribute name="operators" type="List" default="[{'label': '--Ninguno--', 'value': 'None'},{'label': 'igual', 'value': '='},{'label': 'no igual', 'value': '!='},
+                                                          {'label': 'mayor que', 'value': '>'},{'label': 'menor que', 'value': 'menor'},{'label': 'mayor o igual', 'value': '>='},
+                                                          {'label': 'menor o igual', 'value': 'menor o igual'},{'label': 'contiene', 'value': 'CONTAINS'},{'label': 'no contiene', 'value': 'NOT(CONTAINS)'}
+                                                          ]"
+        description="Sirve para desplegar una lista de operadores para aplicar un filtro" />
+    <aura:attribute name="enableSegmentado" type="boolean" default="false"
+        description="Sirve para visualizar la tarjeta si es true" />
+    <!---->
+    <aura:handler name="oSelectedRecordEvent" event="c:MX_SB_VTS_selectedsObjectRecordEvent"
+        action="{!c.handleComponentEvent}" />
+    <aura:handler name="oSelectedLEadEvent" event="c:MX_SB_VTS_ConfLead_event"
+        action="{!c.handleComponentLeadEvent}" />
+    <aura:attribute name="selectedRecord" type="sObject" default="{}"
+        description="Use,for store SELECTED sObject Record" />
+    <aura:attribute name="listOfSearchRecords" type="List"
+        description="Use,for store the list of search records which returns from apex class" />
+    <aura:attribute name="SearchKeyWord2" type="string" />
+    <aura:attribute name="objectAPIName" type="string" default="CampaignMember" />
+    <aura:attribute name="IconName" type="string" default="standard:campaign" />
+    <aura:attribute name="label" type="string" default="Campaña" />
+    <aura:attribute name="Message2" type="String" default="Sin valores" />
+    <aura:attribute name="segmentado2" type="Boolean" default="false" />
+    <aura:attribute name="DateLEad" type="String" default="" />
+    <aura:attribute name="Bandeja" type="String" default="" />
+
+    <!---->
+    <lightning:card title="">
+        <div class="c-container">
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem padding="around-small" size="12">
+                    <lightning:layout>
+                        <lightning:layoutItem padding="around-small" size="3">
+                            <div>
+                                <lightning:spinner variant="brand" size="large" aura:id="Id_spinner"
+                                    class="slds-hide" />
+                                <div class="slds-box">
+                                    <lightning:layout>
+                                        <div onmouseleave="{!c.onblur2}" aura:id="searchRes"
+                                            class="slds-form-element slds-lookup slds-is-close" data-select="single">
+                                            <label class="slds-form-element__label" for="lookup-348">{!v.label}</label>
+                                            <!--This part is for display search bar for lookup-->
+                                            <div class="slds-form-element__control">
+                                                <div class="slds-input-has-icon slds-input-has-icon--right">
+                                                    <!-- This markup is for when an record is selected -->
+                                                    <div aura:id="lookup-pill" class="slds-pill-container slds-hide">
+                                                        <lightning:pill class="pillSize "
+                                                            label="{!v.selectedRecord.Name}"
+                                                            name="{!v.selectedRecord.Name}" onremove="{! c.clear2 }">
+                                                            <aura:set attribute="media">
+                                                                <lightning:icon iconName="{!v.IconName}" size="x-small"
+                                                                    alternativeText="{!v.IconName}" />
+                                                            </aura:set>
+                                                        </lightning:pill>
+                                                    </div>
+                                                    <div aura:id="lookupField" class="slds-show">
+                                                        <lightning:icon class="slds-input__icon slds-show"
+                                                            iconName="utility:search" size="x-small"
+                                                            alternativeText="search" />
+                                                        <span
+                                                            class="slds-icon_container  slds-combobox__input-entity-icon"
+                                                            title="record">
+                                                            <lightning:icon
+                                                                class="slds-icon slds-icon slds-icon_small slds-icon-text-default"
+                                                                iconName="{!v.IconName}" size="x-small"
+                                                                alternativeText="icon" />
+                                                            <span class="slds-assistive-text"></span>
+                                                        </span>
+                                                        <ui:inputText click="{!c.onfocus2}" updateOn="keyup"
+                                                            keyup="{!c.keyPressController2}"
+                                                            class="slds-lookup__search-input slds-input leftPaddingClass"
+                                                            value="{!v.SearchKeyWord2}" placeholder="search.." />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--This part is for Display typehead lookup result List-->
+                                            <ul style="min-height:40px;margin-top:0px !important"
+                                                class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-lookup__menu slds"
+                                                role="listbox">
+                                                <lightning:spinner class="slds-hide" variant="brand" size="small"
+                                                    aura:id="mySpinner" />
+                                                <center> {!v.Message2}</center>
+                                                <aura:iteration items="{!v.listOfSearchRecords}" var="singleRec">
+                                                    <c:MX_SB_VTS_customLookupResult oRecord="{!singleRec}"
+                                                        IconName="{!v.IconName}" />
+                                                </aura:iteration>
+                                            </ul>
+                                        </div>
+                                    </lightning:layout>
+                                    <lightning:layout class="slds-margin-top">
+                                        <aura:if isTrue="{!v.enableSegmentado}">
+                                            <lightning:button class="customButton slds-margin-top_medium"
+                                                onclick="{!c.sendCTI}" variant="success" label="Enviar a Smart"
+                                                iconName="utility:success" />
+                                            <aura:set attribute="else">
+                                                <lightning:button class="customButton slds-margin-top_medium"
+                                                    onclick="{!c.sendCTI}" variant="success" label="Enviar a CTI"
+                                                    iconName="utility:success" />
+                                            </aura:set>
+                                        </aura:if>
+                                    </lightning:layout>
+                                </div>
+                            </div>
+                            <div class="page-section page-right slds-margin-top">
+                                <lightning:select disabled="{!v.TotalNumberOfRecord > 0 ? false:true}" name="mySelect"
+                                    label="Agregar Filtros" aura:id="mySelect" onchange="{!c.onSingleSelectChange}">
+                                    <option value="None">-- Ninguno --</option>
+                                    <aura:iteration items="{!v.optVal}" var="op" indexVar="count">
+                                        <option value="{!op}" text="{!op}"></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                                <aura:if isTrue="{!v.enableDetail}">
+                                    <div class="slds-margin-top">
+                                        <aura:iteration items="{!v.valuesFilter}" var="filter" indexVar="count">
+                                            <lightning:pill aura:id="cardFilter" name="{!count}"
+                                                label="{!filter.field +' ' + filter.labelOperator + ' \'' + filter.fieldFilter+'\''}"
+                                                onremove="{!c.clear}" />
+                                        </aura:iteration>
+                                    </div>
+                                    <aura:if isTrue="{!v.enableModal}">
+                                        <div class="demo-only">
+                                            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01"
+                                                aria-modal="true" aria-describedby="modal-content-id-1"
+                                                class="slds-modal slds-fade-in-open">
+                                                <div class="slds-modal__container">
+                                                    <header class="slds-modal__header">
+                                                        <h1 id="modal-heading-01"
+                                                            class="slds-text-heading_medium slds-hyphenate">
+                                                            Edición de filtros </h1>
+                                                    </header>
+                                                    <div class="slds-modal__content slds-p-around_medium"
+                                                        id="modal-content-id-1">
+                                                        <lightning:select name="selectOperator" label="Operadores"
+                                                            required="true" aura:id="selectIdOperator"
+                                                            onchange="{!c.selectChangeOperator}"
+                                                            value="{!v.operatorSelect}">
+                                                            <aura:iteration items="{!v.operators}" var="operator"
+                                                                indexVar="index">
+                                                                <option text="{!operator.label}" value="{!index}">
+                                                                </option>
+                                                            </aura:iteration>
+                                                        </lightning:select>
+                                                        <lightning:input value="{!v.valueOperator}" required="true"
+                                                            placeholder="Agrega valor..." aura:id="parameterFilter"
+                                                            label="Valor">
+                                                        </lightning:input>
+                                                    </div>
+                                                    <footer class="slds-modal__footer">
+                                                        <lightning:button onclick="{!c.closeModal}" label="Cancelar"
+                                                            variant="neutral" />
+                                                        <lightning:button onclick="{!c.aplicar}" label="Aplicar"
+                                                            variant="brand"
+                                                            disabled="{! v.operatorSelect != 'None' &amp;&amp; v.valueOperator != '' ? false:true}" />
+                                                    </footer>
+                                                </div>
+                                            </section>
+                                            <div class="slds-backdrop slds-backdrop_open"></div>
+                                        </div>
+                                    </aura:if>
+                                </aura:if>
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="around-small" size="9">
+                            <aura:if isTrue="{!v.segmentado2}">
+                                <div class="page-section page-main slds-box">
+                                    <c:MX_SB_VTS_GetListCampain_cmp selectedRecord="{!v.selectedRecord}" />
+                                </div>
+                            </aura:if>
+                            <br />
+                             <div class="page-section page-main">
+                                <table class="slds-table slds-table_bordered slds-table_striped">
+                                    <thead>
+                                        <tr class="slds-text-title_caps">
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="No">N°</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Account Name">Primer Nombre</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Account Name">Apellido paterno</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Apellido Materno">Apellido materno
+                                                </div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Telefono Uno">Teléfono 1</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Telefono Uno">Teléfono 2</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Telefono Uno">Teléfono 3</div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Telefono Uno">CTI</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="{!v.searchResult.length == 0 ? '':'slds-hide'}">
+                                            <td colspan="8">
+                                                <div class="slds-truncate" align="center">Sin registros</div>
+                                            </td>
+                                        </tr>
+                                        <aura:iteration items="{!v.searchResult}" var="acc" indexVar="count">
+                                            <tr>
+                                                <td>
+                                                    <div class="slds-truncate">{!count + 1}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">{!acc.Lead.FirstName}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">{!acc.Lead.LastName}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">{!acc.Lead.Apellido_Materno__c}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">{!acc.Lead.MX_WB_ph_Telefono1__c}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">{!acc.Lead.MX_WB_ph_Telefono2__c}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">{!acc.Lead.MX_WB_ph_Telefono3__c}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-truncate">{!acc.Lead.EnviarCTI__c}</div>
+                                                </td>
+                                            </tr>
+                                        </aura:iteration>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </div>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <auraComponent>MX_PyME_LookUpAccounts_Cmp</auraComponent>
+    <description>Ficha que contiene componente de traspasos masivos de clientes PyME</description>
+    <label>Traspaso masivo de clientes PyME</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom15: People</motif>
+</CustomTab>

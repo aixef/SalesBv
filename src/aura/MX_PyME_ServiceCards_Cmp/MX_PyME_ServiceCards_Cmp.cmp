@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable,force:hasSObjectName" controller="MX_PyME_ServiceCards_Cls" access="global" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />	
+    <aura:handler event="aura:waiting" action="{!c.waiting}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.doneWaiting}"/>
+    <aura:attribute name="HideSpinner" type="Boolean" default="true" description="Used to hide spinner when data is charged."/>
+    
+    <aura:attribute name="nameCards" type="String" default="MX_PyME_Captacion1,MX_PyME_Credito,MX_PyME_Riesgos,MX_PyME_Productos" description="Names of cards that are shown in component."/>
+    <aura:attribute name="infinite" type="Boolean" default="False" description="Boolean to determinate the behavior of carrousel´s scrolling."/>
+    <aura:attribute name="cardsToShow" type="Integer" default="4" description="Number of cards shown in the carrousel."/>
+    <aura:attribute name="relationMode" type="Boolean" default="False" description="Name of table."/>
+    <aura:attribute name="showButtonTable" type="Boolean" default="False" description="Allow if the button that changes between a card or table view is displayed."/>
+    <aura:attribute name="showButtonAdd" type="Boolean" default="False" description="Determinates if a button to add records is displayed."/> 
+    <aura:attribute name="onClick" type="Boolean" default="False" description="Allow events when a card is clicked."/>
+    <aura:attribute name="nameConfigTable" type="String" description="Name of table"/>
+    <aura:attribute name="sizeTable" type="Integer" description="Size of table if showButtonTable is enabled."/>
+ 
+    <div aura:id="cmpTotadas">
+        <!--<qvcd:GBL_Carousel_CMP hasRecordId="{!v.recordId}" allowCardClick="{!v.allowCardClick}" readAllRecords="{!v.readAllRecords}" relationMode="{!v.relationMode}" showButtons="{!v.showButtons}" nameCards="{!v.nameCards}" infinite="{!v.infinite}" slidesToShow="{!v.slidesToShow}"/>-->
+    </div>
+    
+</aura:component>

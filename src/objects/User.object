@@ -1,0 +1,3935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteBannerPhotoAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditUserAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FreezeUserAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LinkToSetupUserDetailAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ManagePermSetsAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>PasswordUnlockAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ResetPasswordAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UpdateBannerPhotoAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UserActivationAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>User_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>User_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Title</fields>
+        <label>User Layout</label>
+    </compactLayouts>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>ManagerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>Agencia__c</fullName>
+        <externalId>false</externalId>
+        <label>Agencia</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Asignaciones_c__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Numero de asignaciones de casos o leads diarias para asesores telefónicos</description>
+        <externalId>false</externalId>
+        <label>Asignaciones__c</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Canal__c</fullName>
+        <externalId>false</externalId>
+        <label>Canal</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Director_de_promocion__c</fullName>
+        <externalId>false</externalId>
+        <label>Director de promoción</label>
+        <relationshipName>Director_promocion</relationshipName>
+        <restrictedAdminField>false</restrictedAdminField>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+     <fields>
+        <fullName>DivisionFormula__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Divisi_n__c )</formula>
+        <label>División</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gestor__c</fullName>
+        <externalId>false</externalId>
+        <formula>Manager.FirstName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gestor</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+     <fields>
+        <fullName>MX_SB_VTS_ProveedorCTI__c</fullName>
+        <description>Campo para especificar el nombre del proveedor al que esta asignado un usuario</description>
+        <externalId>false</externalId>
+        <label>ProveedorCTI</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>MX_SB_VTS_Lista_Proveedores</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MetaDiaria__c</fullName>
+        <defaultValue>10</defaultValue>
+        <description>Campo creado para registrar la meta diaria de ventas por usuario</description>
+        <externalId>false</externalId>
+        <label>Meta diaria</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_PYME_Encargado_de_Campania__c</fullName>
+        <description>Usuario Responsable de campaña</description>
+        <externalId>false</externalId>
+        <label>Encargado de Campaña</label>
+        <relationshipName>DependientesCampaign</relationshipName>
+        <restrictedAdminField>false</restrictedAdminField>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>No_Grupos_ClientesHuerfanos__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Tamaño de portafolio</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>NoAsignacion__c</fullName>
+        <externalId>false</externalId>
+        <label>No Asignación</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RFC__c</fullName>
+        <externalId>false</externalId>
+        <label>RFC</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Servicio__c</fullName>
+        <externalId>false</externalId>
+        <label>Servicio</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Segmento__c</fullName>
+        <externalId>false</externalId>
+        <label>Segmento</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>TP</fullName>
+                    <default>false</default>
+                    <label>TP</label>
+                </value>
+                <value>
+                    <fullName>IN</fullName>
+                    <default>false</default>
+                    <label>IN</label>
+                </value>
+                <value>
+                    <fullName>CB</fullName>
+                    <default>false</default>
+                    <label>CB</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+	<fields>
+        <fullName>SOS__c</fullName>
+        <externalId>false</externalId>
+        <formula>$Setup.sos_auto_setup__c.permission_set__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SOS</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sub_Canal__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub Canal</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Turno__c</fullName>
+        <externalId>false</externalId>
+        <label>Turno</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Matutino</fullName>
+                    <default>false</default>
+                    <label>Matutino</label>
+                </value>
+                <value>
+                    <fullName>Vespertino</fullName>
+                    <default>false</default>
+                    <label>Vespertino</label>
+                </value>
+                <value>
+                    <fullName>Intermedio</fullName>
+                    <default>false</default>
+                    <label>Intermedio</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Usuario__c</fullName>
+        <externalId>false</externalId>
+        <label>Usuario</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+<fields>
+        <fullName>No_de_nomina__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>true</externalId>
+        <label>No. de nómina</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>UG__c</fullName>
+        <description>Unidad gestora</description>
+        <caseSensitive>false</caseSensitive>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>true</externalId>
+        <label>UG</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_pr_Calificaci_n_Certificaci_n_EU__c</fullName>
+        <externalId>false</externalId>
+        <label>Calificación Certificación EU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>EG001_ls_Certificacion_EU__c</fullName>
+        <externalId>false</externalId>
+        <label>Certificación EU</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Elegible</fullName>
+                    <default>false</default>
+                    <label>Elegible</label>
+                </value>
+                <value>
+                    <fullName>No certificable</fullName>
+                    <default>false</default>
+                    <label>No certificable</label>
+                </value>
+                <value>
+                    <fullName>Réplica</fullName>
+                    <default>false</default>
+                    <label>Réplica</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Segmento_Ejecutivo__c</fullName>
+        <externalId>false</externalId>
+        <label>Segmento Ejecutivo</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>MEDIANA EMPRESA</fullName>
+                    <default>false</default>
+                    <label>MEDIANA EMPRESA</label>
+                </value>
+                <value>
+                    <fullName>CORPORATIVO</fullName>
+                    <default>false</default>
+                    <label>CORPORATIVO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESARIAL</fullName>
+                    <default>false</default>
+                    <label>EMPRESARIAL</label>
+                </value>
+                <value>
+                    <fullName>FEDERAL</fullName>
+                    <default>false</default>
+                    <label>FEDERAL</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO RESTO</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO RESTO</label>
+                </value>
+                <value>
+                    <fullName>GRANDES CUENTAS</fullName>
+                    <default>false</default>
+                    <label>GRANDES CUENTAS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Liga__c</fullName>
+        <externalId>false</externalId>
+        <label>Liga</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Empresas Platino</fullName>
+                    <default>false</default>
+                    <label>Empresas Platino</label>
+                </value>
+                <value>
+                    <fullName>Empresas Diamante</fullName>
+                    <default>false</default>
+                    <label>Empresas Diamante</label>
+                </value>
+                <value>
+                    <fullName>Empresas Oro</fullName>
+                    <default>false</default>
+                    <label>Empresas Oro</label>
+                </value>
+                <value>
+                    <fullName>Empresas Plata</fullName>
+                    <default>false</default>
+                    <label>Empresas Plata</label>
+                </value>
+                <value>
+                    <fullName>Empresas Bronce</fullName>
+                    <default>false</default>
+                    <label>Empresas Bronce</label>
+                </value>
+                <value>
+                    <fullName>Gobierno Platino</fullName>
+                    <default>false</default>
+                    <label>Gobierno Platino</label>
+                </value>
+                <value>
+                    <fullName>Gobierno Diamante</fullName>
+                    <default>false</default>
+                    <label>Gobierno Diamante</label>
+                </value>
+                <value>
+                    <fullName>Gobierno Oro</fullName>
+                    <default>false</default>
+                    <label>Gobierno Oro</label>
+                </value>
+                <value>
+                    <fullName>Gobierno Plata</fullName>
+                    <default>false</default>
+                    <label>Gobierno Plata</label>
+                </value>
+                <value>
+                    <fullName>Gobierno Bronce</fullName>
+                    <default>false</default>
+                    <label>Gobierno Bronce</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Director_de_oficina__c</fullName>
+        <externalId>false</externalId>
+        <label>Director de oficina</label>
+        <relationshipName>Directores_oficina</relationshipName>
+        <restrictedAdminField>false</restrictedAdminField>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>Director_divisional__c</fullName>
+        <externalId>false</externalId>
+        <label>Director divisional</label>
+        <relationshipName>Directores_Divisional</relationshipName>
+        <restrictedAdminField>false</restrictedAdminField>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>CR__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>CR</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Oficina__c</fullName>
+        <externalId>false</externalId>
+        <label>Oficina</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Divisi_n__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>EMPRESAS QUERETARO CONSTITUYENTES</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS QUERETARO CONSTITUYENTES</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO D.F.</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO D.F.</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO ESTADO DE MEXICO</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO ESTADO DE MEXICO</label>
+                </value>
+                <value>
+                    <fullName>SECTOR DESARROLLO SOCIAL</fullName>
+                    <default>false</default>
+                    <label>SECTOR DESARROLLO SOCIAL</label>
+                </value>
+                <value>
+                    <fullName>SECTOR EDUCACION</fullName>
+                    <default>false</default>
+                    <label>SECTOR EDUCACION</label>
+                </value>
+                <value>
+                    <fullName>SECTOR INSTITUCIONES</fullName>
+                    <default>false</default>
+                    <label>SECTOR INSTITUCIONES</label>
+                </value>
+                <value>
+                    <fullName>SECTOR SALUD</fullName>
+                    <default>false</default>
+                    <label>SECTOR SALUD</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS AVILA CAMACHO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS AVILA CAMACHO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS BOSQUES DE LAS LOMAS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS BOSQUES DE LAS LOMAS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. CENTRO BANCOMER</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. CENTRO BANCOMER</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. GLORIETA COLON</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. GLORIETA COLON</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. LOMAS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. LOMAS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. PALMAS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. PALMAS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. POLANCO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. POLANCO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. REFORMA FLORENCIA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. REFORMA FLORENCIA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. SAN ANGEL</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. SAN ANGEL</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. SANTA FE</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. SANTA FE</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. VALLEJO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. VALLEJO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS TLALNEPANTLA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS TLALNEPANTLA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS TOLUCA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS TOLUCA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS MONTERREY REVOLUCION</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS MONTERREY REVOLUCION</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS MONTERREY SANTA CATARINA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS MONTERREY SANTA CATARINA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS MONTERREY UNIVERSIDAD NORTE</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS MONTERREY UNIVERSIDAD NORTE</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS MONTERREY VALLE</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS MONTERREY VALLE</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO TAMPICO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO TAMPICO</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO NUEVO LEON</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO NUEVO LEON</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS CD. JUAREZ ZARAGOZA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS CD. JUAREZ ZARAGOZA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS HERMOSILLO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS HERMOSILLO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS MEXICALI</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS MEXICALI</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO CD. JUAREZ RENACIMIENTO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO CD. JUAREZ RENACIMIENTO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO CD. OBREGON</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO CD. OBREGON</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO MAZATLAN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO MAZATLAN</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO CHIHUAHUA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO CHIHUAHUA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS GUADALAJARA AMERICAS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS GUADALAJARA AMERICAS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS GUADALAJARA CHAPULTEPEC</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS GUADALAJARA CHAPULTEPEC</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS GUADALAJARA PLAZA DEL SOL</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS GUADALAJARA PLAZA DEL SOL</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO JALISCO</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO JALISCO</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO MICHOACAN</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO MICHOACAN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS PUEBLA CENTRO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS PUEBLA CENTRO</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO PUEBLA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO PUEBLA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS MERIDA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS MERIDA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO CANCUN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO CANCUN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO PLAYA DEL CARMEN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO PLAYA DEL CARMEN</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO CHIAPAS</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO CHIAPAS</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO TABASCO</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO TABASCO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS AGUASCALIENTES</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS AGUASCALIENTES</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS LEON</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS LEON</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS PACHUCA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS PACHUCA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS QUERETARO ALAMOS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS QUERETARO ALAMOS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS SAN LUIS POTOSI</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS SAN LUIS POTOSI</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO CELAYA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO CELAYA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO IRAPUATO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO IRAPUATO</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO AGUASCALIENTES</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO AGUASCALIENTES</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO GUANAJUATO</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO GUANAJUATO</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO PACHUCA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO PACHUCA</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO QUERETARO</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO QUERETARO</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO Y EMPRESAS ZACATECAS</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO Y EMPRESAS ZACATECAS</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO CHURUBUSCO</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO CHURUBUSCO</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO TLALNEPANTLA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO TLALNEPANTLA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS CHURUBUSCO  (D.F. ERMITA)</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS CHURUBUSCO  (D.F. ERMITA)</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS CUAUTITLAN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS CUAUTITLAN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. ANAHUAC</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. ANAHUAC</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. CENTRO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. CENTRO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. CONDESA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. CONDESA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. FELIX CUEVAS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. FELIX CUEVAS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. GLORIETA CUITLAHUAC</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. GLORIETA CUITLAHUAC</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. GRANJAS MEXICO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. GRANJAS MEXICO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. GUTEMBERG</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. GUTEMBERG</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. INGUARAN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. INGUARAN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. INSURGENTES</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. INSURGENTES</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. NAPOLES</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. NAPOLES</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. TLALPAN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. TLALPAN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS PUENTE DE VIGAS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS PUENTE DE VIGAS</label>
+                </value>
+                <value>
+                    <fullName>CENTRO CORPORATIVO METRO NORTE</fullName>
+                    <default>false</default>
+                    <label>CENTRO CORPORATIVO METRO NORTE</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS MONTERREY APODACA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS MONTERREY APODACA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS MONTERREY VISTA HERMOSA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS MONTERREY VISTA HERMOSA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS SALTILLO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS SALTILLO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO MATAMOROS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO MATAMOROS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO REYNOSA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO REYNOSA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO TORREON</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO TORREON</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO COAHUILA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO COAHUILA</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO TAMAULIPAS / EMPRESAS CD. VICTORIA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO TAMAULIPAS / EMPRESAS CD. VICTORIA</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO Y EMPRESAS DURANGO</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO Y EMPRESAS DURANGO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS CHIHUAHUA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS CHIHUAHUA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS CULIACAN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS CULIACAN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS NOGALES</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS NOGALES</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO ENSENADA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO ENSENADA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO LOS CABOS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO LOS CABOS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO LOS MOCHIS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO LOS MOCHIS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO TIJUANA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO TIJUANA</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO BAJA CALIFORNIA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO BAJA CALIFORNIA</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO BAJA CALIFORNIA SUR / EMPRESAS LA PAZ</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO BAJA CALIFORNIA SUR / EMPRESAS LA PAZ</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO SINALOA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO SINALOA</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO SONORA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO SONORA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS GUADALAJARA PLAZA MEXICO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS GUADALAJARA PLAZA MEXICO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS MORELIA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS MORELIA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO PUERTO VALLARTA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO PUERTO VALLARTA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO TEPATITLAN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO TEPATITLAN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO ZAMORA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO ZAMORA</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO NAYARIT / EMPRESAS TEPIC</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO NAYARIT / EMPRESAS TEPIC</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO Y EMPRESAS COLIMA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO Y EMPRESAS COLIMA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS CUERNAVACA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS CUERNAVACA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS PUEBLA ANIMAS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS PUEBLA ANIMAS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS XALAPA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS XALAPA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO COATZACOALCOS</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO COATZACOALCOS</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO CORDOBA ORIZABA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO CORDOBA ORIZABA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO TUXPAN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO TUXPAN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO VERACRUZ</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO VERACRUZ</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO CUERNAVACA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO CUERNAVACA</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO VERACRUZ</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO VERACRUZ</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO Y EMPRESAS OAXACA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO Y EMPRESAS OAXACA</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO Y EMPRESAS TLAXCALA</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO Y EMPRESAS TLAXCALA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS TUXTLA GUTIERREZ</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS TUXTLA GUTIERREZ</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS VILLAHERMOSA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS VILLAHERMOSA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO ACAPULCO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO ACAPULCO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO CD. DEL CARMEN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO CD. DEL CARMEN</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO CHILPANCINGO</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO CHILPANCINGO</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO QUINTANA ROO / EMPRESAS CHETUMAL</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO QUINTANA ROO / EMPRESAS CHETUMAL</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO Y EMPRESAS CAMPECHE</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO Y EMPRESAS CAMPECHE</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO YUCATAN</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO YUCATAN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS Y GOBIERNO TAPACHULA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS Y GOBIERNO TAPACHULA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS GOMEZ PALACIO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS GOMEZ PALACIO</label>
+                </value>
+                <value>
+                    <fullName>CENTRO CORPORATIVO MU I</fullName>
+                    <default>false</default>
+                    <label>CENTRO CORPORATIVO MU I</label>
+                </value>
+                <value>
+                    <fullName>CENTRO CORPORATIVO GUADALAJARA</fullName>
+                    <default>false</default>
+                    <label>CENTRO CORPORATIVO GUADALAJARA</label>
+                </value>
+                <value>
+                    <fullName>CENTRO CORPORATIVO VALLE BEISTEGUI</fullName>
+                    <default>false</default>
+                    <label>CENTRO CORPORATIVO VALLE BEISTEGUI</label>
+                </value>
+                <value>
+                    <fullName>CENTRO CORPORATIVO MU II</fullName>
+                    <default>false</default>
+                    <label>CENTRO CORPORATIVO MU II</label>
+                </value>
+                <value>
+                    <fullName>CENTRO CORPORATIVO MONTERREY</fullName>
+                    <default>false</default>
+                    <label>CENTRO CORPORATIVO MONTERREY</label>
+                </value>
+                <value>
+                    <fullName>CENTRO CORPORATIVO MONTERREY VALLE</fullName>
+                    <default>false</default>
+                    <label>CENTRO CORPORATIVO MONTERREY VALLE</label>
+                </value>
+                <value>
+                    <fullName>SECTOR FINANZAS E INFRAESTRUCTURA</fullName>
+                    <default>false</default>
+                    <label>SECTOR FINANZAS E INFRAESTRUCTURA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS ECATEPEC</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS ECATEPEC</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS NEZAHUALCOYOTL</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS NEZAHUALCOYOTL</label>
+                </value>
+                <value>
+                    <fullName>OFICINA BAJÍO</fullName>
+                    <default>false</default>
+                    <label>OFICINA BAJÍO</label>
+                </value>
+                <value>
+                    <fullName>OFICINA METROPOLITANA</fullName>
+                    <default>false</default>
+                    <label>OFICINA METROPOLITANA</label>
+                </value>
+                <value>
+                    <fullName>OFICINA NORESTE</fullName>
+                    <default>false</default>
+                    <label>OFICINA NORESTE</label>
+                </value>
+                <value>
+                    <fullName>OFICINA NOROESTE</fullName>
+                    <default>false</default>
+                    <label>OFICINA NOROESTE</label>
+                </value>
+                <value>
+                    <fullName>OFICINA OCCIDENTE</fullName>
+                    <default>false</default>
+                    <label>OFICINA OCCIDENTE</label>
+                </value>
+                <value>
+                    <fullName>OFICINA SUR</fullName>
+                    <default>false</default>
+                    <label>OFICINA SUR</label>
+                </value>
+                <value>
+                    <fullName>OFICINA SURESTE</fullName>
+                    <default>false</default>
+                    <label>OFICINA SURESTE</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME MONCLOVA</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME MONCLOVA</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME DURANGO</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME DURANGO</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME GUADALUPE</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME GUADALUPE</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME LA LAGUNA</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME LA LAGUNA</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME MONTERREY NORTE</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME MONTERREY NORTE</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME MONTERREY NORTE 2</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME MONTERREY NORTE 2</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME APODACA</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME APODACA</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME MTY. SAN NICOLAS</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME MTY. SAN NICOLAS</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME MONTERREY SUR</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME MONTERREY SUR</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME MONTERREY VALLE</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME MONTERREY VALLE</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME SALTILLO</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME SALTILLO</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME TAMAULIPAS NORTE</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME TAMAULIPAS NORTE</label>
+                </value>
+                <value>
+                    <fullName>CENTRO PYME TAMAULIPAS SUR</fullName>
+                    <default>false</default>
+                    <label>CENTRO PYME TAMAULIPAS SUR</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS GUADALAJARA MINERVA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS GUADALAJARA MINERVA</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO ESTADO DE MEXICO NORTE</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO ESTADO DE MEXICO NORTE</label>
+                </value>
+                <value>
+                    <fullName>SECTOR CENTRAL</fullName>
+                    <default>false</default>
+                    <label>SECTOR CENTRAL</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS LERMA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS LERMA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. TORRE POLANCO</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. TORRE POLANCO</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS REAL DE MISIONES</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS REAL DE MISIONES</label>
+                </value>
+                <value>
+                    <fullName>CENTRO CORPORATIVO CANCÚN</fullName>
+                    <default>false</default>
+                    <label>CENTRO CORPORATIVO CANCÚN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS URUAPAN</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS URUAPAN</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS D.F. TORRE BANCOMER</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS D.F. TORRE BANCOMER</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS NAVOJOA</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS NAVOJOA</label>
+                </value>
+                <value>
+                    <fullName>EMPRESAS ORIENTE</fullName>
+                    <default>false</default>
+                    <label>EMPRESAS ORIENTE</label>
+                </value>
+                <value>
+                    <fullName>SECTOR SEGURIDAD NACIONAL</fullName>
+                    <default>false</default>
+                    <label>SECTOR SEGURIDAD NACIONAL</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>CORPORATIVA</controllingFieldValue>
+                <valueName>CENTRO CORPORATIVO METRO NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CORPORATIVA</controllingFieldValue>
+                <valueName>CENTRO CORPORATIVO MU I</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CORPORATIVA</controllingFieldValue>
+                <valueName>CENTRO CORPORATIVO VALLE BEISTEGUI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CORPORATIVA</controllingFieldValue>
+                <valueName>CENTRO CORPORATIVO MU II</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME MONCLOVA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME DURANGO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME GUADALUPE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME LA LAGUNA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME MONTERREY NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME MONTERREY NORTE 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME APODACA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME MTY. SAN NICOLAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME MONTERREY SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME MONTERREY VALLE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME SALTILLO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME TAMAULIPAS NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>CENTRO PYME TAMAULIPAS SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS AVILA CAMACHO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS BOSQUES DE LAS LOMAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. CENTRO BANCOMER</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. GLORIETA COLON</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. LOMAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. PALMAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. POLANCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. REFORMA FLORENCIA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. SAN ANGEL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. SANTA FE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. VALLEJO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS TLALNEPANTLA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS TOLUCA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS CHURUBUSCO  (D.F. ERMITA)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS CUAUTITLAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. ANAHUAC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. CENTRO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. CONDESA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. FELIX CUEVAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. GLORIETA CUITLAHUAC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. GRANJAS MEXICO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. GUTEMBERG</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. INGUARAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. INSURGENTES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. NAPOLES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. TLALPAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS PUENTE DE VIGAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS ECATEPEC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS NEZAHUALCOYOTL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>OFICINA METROPOLITANA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS LERMA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. TORRE POLANCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS D.F. TORRE BANCOMER</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>EMPRESAS ORIENTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS MONTERREY REVOLUCION</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS MONTERREY SANTA CATARINA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS MONTERREY UNIVERSIDAD NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS MONTERREY VALLE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO TAMPICO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>GOBIERNO NUEVO LEON</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS MONTERREY APODACA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS MONTERREY VISTA HERMOSA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS SALTILLO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO MATAMOROS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO REYNOSA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO TORREON</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>GOBIERNO COAHUILA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>GOBIERNO TAMAULIPAS / EMPRESAS CD. VICTORIA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>GOBIERNO Y EMPRESAS DURANGO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>EMPRESAS GOMEZ PALACIO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>CENTRO CORPORATIVO MONTERREY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>CENTRO CORPORATIVO MONTERREY VALLE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>OFICINA NORESTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS CD. JUAREZ ZARAGOZA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS HERMOSILLO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS MEXICALI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO CD. JUAREZ RENACIMIENTO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO CD. OBREGON</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO MAZATLAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>GOBIERNO CHIHUAHUA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS CHIHUAHUA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS CULIACAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS NOGALES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO ENSENADA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO LOS CABOS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO LOS MOCHIS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO TIJUANA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>GOBIERNO BAJA CALIFORNIA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>GOBIERNO BAJA CALIFORNIA SUR / EMPRESAS LA PAZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>GOBIERNO SINALOA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>GOBIERNO SONORA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>OFICINA NOROESTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>EMPRESAS REAL DE MISIONES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>EMPRESAS GUADALAJARA AMERICAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>EMPRESAS GUADALAJARA CHAPULTEPEC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>EMPRESAS GUADALAJARA PLAZA DEL SOL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>GOBIERNO JALISCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>GOBIERNO MICHOACAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>EMPRESAS GUADALAJARA PLAZA MEXICO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>EMPRESAS MORELIA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO PUERTO VALLARTA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO TEPATITLAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO ZAMORA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>GOBIERNO NAYARIT / EMPRESAS TEPIC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>GOBIERNO Y EMPRESAS COLIMA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>CENTRO CORPORATIVO GUADALAJARA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>OFICINA OCCIDENTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>EMPRESAS GUADALAJARA MINERVA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>EMPRESAS URUAPAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>EMPRESAS PUEBLA CENTRO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>GOBIERNO PUEBLA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>EMPRESAS CUERNAVACA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>EMPRESAS PUEBLA ANIMAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>EMPRESAS XALAPA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO COATZACOALCOS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO CORDOBA ORIZABA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO TUXPAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO VERACRUZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>GOBIERNO CUERNAVACA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>GOBIERNO VERACRUZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>GOBIERNO Y EMPRESAS OAXACA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>GOBIERNO Y EMPRESAS TLAXCALA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO ACAPULCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>GOBIERNO CHILPANCINGO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>OFICINA SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>SECTOR INSTITUCIONES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>EMPRESAS MERIDA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO CANCUN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO PLAYA DEL CARMEN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>GOBIERNO CHIAPAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>GOBIERNO TABASCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>EMPRESAS TUXTLA GUTIERREZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>EMPRESAS VILLAHERMOSA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO CD. DEL CARMEN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>GOBIERNO QUINTANA ROO / EMPRESAS CHETUMAL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>GOBIERNO Y EMPRESAS CAMPECHE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>GOBIERNO YUCATAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO TAPACHULA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>OFICINA SURESTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>CENTRO CORPORATIVO CANCÚN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>EMPRESAS QUERETARO CONSTITUYENTES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>EMPRESAS AGUASCALIENTES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>EMPRESAS LEON</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>EMPRESAS PACHUCA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>EMPRESAS QUERETARO ALAMOS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>EMPRESAS SAN LUIS POTOSI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO CELAYA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>EMPRESAS Y GOBIERNO IRAPUATO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>GOBIERNO AGUASCALIENTES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>GOBIERNO GUANAJUATO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>GOBIERNO PACHUCA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>GOBIERNO QUERETARO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>GOBIERNO Y EMPRESAS ZACATECAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>OFICINA BAJÍO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>GOBIERNO D.F.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>GOBIERNO ESTADO DE MEXICO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>SECTOR DESARROLLO SOCIAL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>SECTOR EDUCACION</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>SECTOR SALUD</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>GOBIERNO CHURUBUSCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>GOBIERNO TLALNEPANTLA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>SECTOR FINANZAS E INFRAESTRUCTURA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>GOBIERNO ESTADO DE MEXICO NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>SECTOR CENTRAL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GOBIERNO CENTRO</controllingFieldValue>
+                <valueName>SECTOR SEGURIDAD NACIONAL</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>VP_ls_Banca__c</fullName>
+        <externalId>false</externalId>
+        <label>Banca</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Red BEyG</fullName>
+                    <default>false</default>
+                    <label>Red BEyG</label>
+                </value>
+                <value>
+                    <fullName>Red PyME</fullName>
+                    <default>false</default>
+                    <label>Red PyME</label>
+                </value>
+                <value>
+                    <fullName>Red CF</fullName>
+                    <default>false</default>
+                    <label>Red CF</label>
+                </value>
+                <value>
+                    <fullName>Red HP</fullName>
+                    <default>false</default>
+                    <label>Red HP</label>
+                </value>
+                <value>
+                    <fullName>Red HI</fullName>
+                    <default>false</default>
+                    <label>Red HI</label>
+                </value>
+                <value>
+                    <fullName>Red Hipotecaria</fullName>
+                    <default>false</default>
+                    <label>Red Hipotecaria</label>
+                </value>
+                <value>
+                    <fullName>Red HI Venta Remota</fullName>
+                    <default>false</default>
+                    <label>Red HI Venta Remota</label>
+                </value>
+                <value>
+                    <fullName>Red BPyP</fullName>
+                    <default>false</default>
+                    <label>Red BPyP</label>
+                </value>
+                <value>
+                    <fullName>Red Comercial</fullName>
+                    <default>false</default>
+                    <label>Red Comercial</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+   <fields>
+        <fullName>VP_ls_Zona__c</fullName>
+        <description>Zona del usuario.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Solo Aplica para Banca PyME</inlineHelpText>
+        <label>Zona</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Divisi_n__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AGUASCALIENTES</fullName>
+                    <default>false</default>
+                    <label>AGUASCALIENTES</label>
+                </value>
+                <value>
+                    <fullName>CELAYA</fullName>
+                    <default>false</default>
+                    <label>CELAYA</label>
+                </value>
+                <value>
+                    <fullName>GUANAJUATO</fullName>
+                    <default>false</default>
+                    <label>GUANAJUATO</label>
+                </value>
+                <value>
+                    <fullName>IRAPUATO</fullName>
+                    <default>false</default>
+                    <label>IRAPUATO</label>
+                </value>
+                <value>
+                    <fullName>LEON ORIENTE</fullName>
+                    <default>false</default>
+                    <label>LEON ORIENTE</label>
+                </value>
+                <value>
+                    <fullName>LEON PONIENTE</fullName>
+                    <default>false</default>
+                    <label>LEON PONIENTE</label>
+                </value>
+                <value>
+                    <fullName>PACHUCA NORTE</fullName>
+                    <default>false</default>
+                    <label>PACHUCA NORTE</label>
+                </value>
+                <value>
+                    <fullName>PACHUCA SUR</fullName>
+                    <default>false</default>
+                    <label>PACHUCA SUR</label>
+                </value>
+                <value>
+                    <fullName>QUERETARO ORIENTE</fullName>
+                    <default>false</default>
+                    <label>QUERETARO ORIENTE</label>
+                </value>
+                <value>
+                    <fullName>QUERETARO PONIENTE</fullName>
+                    <default>false</default>
+                    <label>QUERETARO PONIENTE</label>
+                </value>
+                <value>
+                    <fullName>SAN LUIS POTOSI FORANEA</fullName>
+                    <default>false</default>
+                    <label>SAN LUIS POTOSI FORANEA</label>
+                </value>
+                <value>
+                    <fullName>SAN LUIS POTOSI URBANA</fullName>
+                    <default>false</default>
+                    <label>SAN LUIS POTOSI URBANA</label>
+                </value>
+                <value>
+                    <fullName>ZACATECAS</fullName>
+                    <default>false</default>
+                    <label>ZACATECAS</label>
+                </value>
+                <value>
+                    <fullName>AZCAPOTZALCO</fullName>
+                    <default>false</default>
+                    <label>AZCAPOTZALCO</label>
+                </value>
+                <value>
+                    <fullName>CUAUHTEMOC 1</fullName>
+                    <default>false</default>
+                    <label>CUAUHTEMOC 1</label>
+                </value>
+                <value>
+                    <fullName>CUAUTITLAN</fullName>
+                    <default>false</default>
+                    <label>CUAUTITLAN</label>
+                </value>
+                <value>
+                    <fullName>ECATEPEC</fullName>
+                    <default>false</default>
+                    <label>ECATEPEC</label>
+                </value>
+                <value>
+                    <fullName>GUSTAVO A. MADERO</fullName>
+                    <default>false</default>
+                    <label>GUSTAVO A. MADERO</label>
+                </value>
+                <value>
+                    <fullName>MIGUEL HIDALGO 1</fullName>
+                    <default>false</default>
+                    <label>MIGUEL HIDALGO 1</label>
+                </value>
+                <value>
+                    <fullName>NAUCALPAN</fullName>
+                    <default>false</default>
+                    <label>NAUCALPAN</label>
+                </value>
+                <value>
+                    <fullName>SATELITE</fullName>
+                    <default>false</default>
+                    <label>SATELITE</label>
+                </value>
+                <value>
+                    <fullName>TLALNEPANTLA</fullName>
+                    <default>false</default>
+                    <label>TLALNEPANTLA</label>
+                </value>
+                <value>
+                    <fullName>TOLUCA NORTE</fullName>
+                    <default>false</default>
+                    <label>TOLUCA NORTE</label>
+                </value>
+                <value>
+                    <fullName>TOLUCA SUR</fullName>
+                    <default>false</default>
+                    <label>TOLUCA SUR</label>
+                </value>
+                <value>
+                    <fullName>TULTITLAN</fullName>
+                    <default>false</default>
+                    <label>TULTITLAN</label>
+                </value>
+                <value>
+                    <fullName>ALVARO OBREGON</fullName>
+                    <default>false</default>
+                    <label>ALVARO OBREGON</label>
+                </value>
+                <value>
+                    <fullName>BENITO JUAREZ</fullName>
+                    <default>false</default>
+                    <label>BENITO JUAREZ</label>
+                </value>
+                <value>
+                    <fullName>BENITO JUAREZ 2</fullName>
+                    <default>false</default>
+                    <label>BENITO JUAREZ 2</label>
+                </value>
+                <value>
+                    <fullName>COYOACAN</fullName>
+                    <default>false</default>
+                    <label>COYOACAN</label>
+                </value>
+                <value>
+                    <fullName>CUAJIMALPA LAS AGUILAS</fullName>
+                    <default>false</default>
+                    <label>CUAJIMALPA LAS AGUILAS</label>
+                </value>
+                <value>
+                    <fullName>CUAUHTEMOC 2</fullName>
+                    <default>false</default>
+                    <label>CUAUHTEMOC 2</label>
+                </value>
+                <value>
+                    <fullName>IZTAPALAPA</fullName>
+                    <default>false</default>
+                    <label>IZTAPALAPA</label>
+                </value>
+                <value>
+                    <fullName>IZTAPALAPA 2</fullName>
+                    <default>false</default>
+                    <label>IZTAPALAPA 2</label>
+                </value>
+                <value>
+                    <fullName>MIGUEL HIDALGO 2</fullName>
+                    <default>false</default>
+                    <label>MIGUEL HIDALGO 2</label>
+                </value>
+                <value>
+                    <fullName>NEZA</fullName>
+                    <default>false</default>
+                    <label>NEZA</label>
+                </value>
+                <value>
+                    <fullName>TLALPAN XOCHIMILCO</fullName>
+                    <default>false</default>
+                    <label>TLALPAN XOCHIMILCO</label>
+                </value>
+                <value>
+                    <fullName>VENUSTIANO CARRANZA</fullName>
+                    <default>false</default>
+                    <label>VENUSTIANO CARRANZA</label>
+                </value>
+                <value>
+                    <fullName>COAHUILA NORTE</fullName>
+                    <default>false</default>
+                    <label>COAHUILA NORTE</label>
+                </value>
+                <value>
+                    <fullName>DURANGO</fullName>
+                    <default>false</default>
+                    <label>DURANGO</label>
+                </value>
+                <value>
+                    <fullName>GUADALUPE</fullName>
+                    <default>false</default>
+                    <label>GUADALUPE</label>
+                </value>
+                <value>
+                    <fullName>LA LAGUNA</fullName>
+                    <default>false</default>
+                    <label>LA LAGUNA</label>
+                </value>
+                <value>
+                    <fullName>MONTERREY NORTE</fullName>
+                    <default>false</default>
+                    <label>MONTERREY NORTE</label>
+                </value>
+                <value>
+                    <fullName>MONTERREY SAN NICOLAS</fullName>
+                    <default>false</default>
+                    <label>MONTERREY SAN NICOLAS</label>
+                </value>
+                <value>
+                    <fullName>MONTERREY SUR</fullName>
+                    <default>false</default>
+                    <label>MONTERREY SUR</label>
+                </value>
+                <value>
+                    <fullName>MONTERREY VALLE</fullName>
+                    <default>false</default>
+                    <label>MONTERREY VALLE</label>
+                </value>
+                <value>
+                    <fullName>SALTILLO</fullName>
+                    <default>false</default>
+                    <label>SALTILLO</label>
+                </value>
+                <value>
+                    <fullName>TAMAULIPAS NORTE</fullName>
+                    <default>false</default>
+                    <label>TAMAULIPAS NORTE</label>
+                </value>
+                <value>
+                    <fullName>TAMAULIPAS SUR</fullName>
+                    <default>false</default>
+                    <label>TAMAULIPAS SUR</label>
+                </value>
+                <value>
+                    <fullName>CHIHUAHUA FORÁNEAS</fullName>
+                    <default>false</default>
+                    <label>CHIHUAHUA FORÁNEAS</label>
+                </value>
+                <value>
+                    <fullName>CHIHUAHUA PLAZA</fullName>
+                    <default>false</default>
+                    <label>CHIHUAHUA PLAZA</label>
+                </value>
+                <value>
+                    <fullName>JUAREZ</fullName>
+                    <default>false</default>
+                    <label>JUAREZ</label>
+                </value>
+                <value>
+                    <fullName>MEXICALI</fullName>
+                    <default>false</default>
+                    <label>MEXICALI</label>
+                </value>
+                <value>
+                    <fullName>TIJUANA ENSENADA</fullName>
+                    <default>false</default>
+                    <label>TIJUANA ENSENADA</label>
+                </value>
+                <value>
+                    <fullName>TIJUANA PLAZA</fullName>
+                    <default>false</default>
+                    <label>TIJUANA PLAZA</label>
+                </value>
+                <value>
+                    <fullName>GUADALAJARA CENTRO</fullName>
+                    <default>false</default>
+                    <label>GUADALAJARA CENTRO</label>
+                </value>
+                <value>
+                    <fullName>GUADALAJARA DEL SOL</fullName>
+                    <default>false</default>
+                    <label>GUADALAJARA DEL SOL</label>
+                </value>
+                <value>
+                    <fullName>GUADALAJARA INDUSTRIAL</fullName>
+                    <default>false</default>
+                    <label>GUADALAJARA INDUSTRIAL</label>
+                </value>
+                <value>
+                    <fullName>GUADALAJARA ORIENTE</fullName>
+                    <default>false</default>
+                    <label>GUADALAJARA ORIENTE</label>
+                </value>
+                <value>
+                    <fullName>GUADALAJARA TLAQUEPAQUE</fullName>
+                    <default>false</default>
+                    <label>GUADALAJARA TLAQUEPAQUE</label>
+                </value>
+                <value>
+                    <fullName>GUADALAJARA VALLARTA</fullName>
+                    <default>false</default>
+                    <label>GUADALAJARA VALLARTA</label>
+                </value>
+                <value>
+                    <fullName>GUADALAJARA ZAPOPAN</fullName>
+                    <default>false</default>
+                    <label>GUADALAJARA ZAPOPAN</label>
+                </value>
+                <value>
+                    <fullName>BAJA CALIFORNIA SUR</fullName>
+                    <default>false</default>
+                    <label>BAJA CALIFORNIA SUR</label>
+                </value>
+                <value>
+                    <fullName>CULIACAN</fullName>
+                    <default>false</default>
+                    <label>CULIACAN</label>
+                </value>
+                <value>
+                    <fullName>HERMOSILLO</fullName>
+                    <default>false</default>
+                    <label>HERMOSILLO</label>
+                </value>
+                <value>
+                    <fullName>SINALOA NORTE</fullName>
+                    <default>false</default>
+                    <label>SINALOA NORTE</label>
+                </value>
+                <value>
+                    <fullName>SINALOA SUR</fullName>
+                    <default>false</default>
+                    <label>SINALOA SUR</label>
+                </value>
+                <value>
+                    <fullName>SONORA NORTE</fullName>
+                    <default>false</default>
+                    <label>SONORA NORTE</label>
+                </value>
+                <value>
+                    <fullName>SONORA SUR</fullName>
+                    <default>false</default>
+                    <label>SONORA SUR</label>
+                </value>
+                <value>
+                    <fullName>AMECA</fullName>
+                    <default>false</default>
+                    <label>AMECA</label>
+                </value>
+                <value>
+                    <fullName>COLIMA</fullName>
+                    <default>false</default>
+                    <label>COLIMA</label>
+                </value>
+                <value>
+                    <fullName>LA PIEDAD</fullName>
+                    <default>false</default>
+                    <label>LA PIEDAD</label>
+                </value>
+                <value>
+                    <fullName>MORELIA ORIENTE</fullName>
+                    <default>false</default>
+                    <label>MORELIA ORIENTE</label>
+                </value>
+                <value>
+                    <fullName>MORELIA PONIENTE</fullName>
+                    <default>false</default>
+                    <label>MORELIA PONIENTE</label>
+                </value>
+                <value>
+                    <fullName>NAYARIT</fullName>
+                    <default>false</default>
+                    <label>NAYARIT</label>
+                </value>
+                <value>
+                    <fullName>OCOTLAN</fullName>
+                    <default>false</default>
+                    <label>OCOTLAN</label>
+                </value>
+                <value>
+                    <fullName>PUERTO VALLARTA</fullName>
+                    <default>false</default>
+                    <label>PUERTO VALLARTA</label>
+                </value>
+                <value>
+                    <fullName>TEPATITLAN</fullName>
+                    <default>false</default>
+                    <label>TEPATITLAN</label>
+                </value>
+                <value>
+                    <fullName>URUAPAN</fullName>
+                    <default>false</default>
+                    <label>URUAPAN</label>
+                </value>
+                <value>
+                    <fullName>ZAMORA</fullName>
+                    <default>false</default>
+                    <label>ZAMORA</label>
+                </value>
+                <value>
+                    <fullName>COATZACOALCOS</fullName>
+                    <default>false</default>
+                    <label>COATZACOALCOS</label>
+                </value>
+                <value>
+                    <fullName>MORELOS</fullName>
+                    <default>false</default>
+                    <label>MORELOS</label>
+                </value>
+                <value>
+                    <fullName>OAXACA</fullName>
+                    <default>false</default>
+                    <label>OAXACA</label>
+                </value>
+                <value>
+                    <fullName>PUEBLA CENTRO</fullName>
+                    <default>false</default>
+                    <label>PUEBLA CENTRO</label>
+                </value>
+                <value>
+                    <fullName>PUEBLA NORTE</fullName>
+                    <default>false</default>
+                    <label>PUEBLA NORTE</label>
+                </value>
+                <value>
+                    <fullName>PUEBLA PERIFERIA</fullName>
+                    <default>false</default>
+                    <label>PUEBLA PERIFERIA</label>
+                </value>
+                <value>
+                    <fullName>PUEBLA SUR</fullName>
+                    <default>false</default>
+                    <label>PUEBLA SUR</label>
+                </value>
+                <value>
+                    <fullName>TLAXCALA</fullName>
+                    <default>false</default>
+                    <label>TLAXCALA</label>
+                </value>
+                <value>
+                    <fullName>TUXPAN</fullName>
+                    <default>false</default>
+                    <label>TUXPAN</label>
+                </value>
+                <value>
+                    <fullName>VERACRUZ</fullName>
+                    <default>false</default>
+                    <label>VERACRUZ</label>
+                </value>
+                <value>
+                    <fullName>XALAPA</fullName>
+                    <default>false</default>
+                    <label>XALAPA</label>
+                </value>
+                <value>
+                    <fullName>ACAPULCO</fullName>
+                    <default>false</default>
+                    <label>ACAPULCO</label>
+                </value>
+                <value>
+                    <fullName>CAMPECHE</fullName>
+                    <default>false</default>
+                    <label>CAMPECHE</label>
+                </value>
+                <value>
+                    <fullName>CANCUN</fullName>
+                    <default>false</default>
+                    <label>CANCUN</label>
+                </value>
+                <value>
+                    <fullName>CHILPANCINGO</fullName>
+                    <default>false</default>
+                    <label>CHILPANCINGO</label>
+                </value>
+                <value>
+                    <fullName>MERIDA ORIENTE</fullName>
+                    <default>false</default>
+                    <label>MERIDA ORIENTE</label>
+                </value>
+                <value>
+                    <fullName>TAPACHULA</fullName>
+                    <default>false</default>
+                    <label>TAPACHULA</label>
+                </value>
+                <value>
+                    <fullName>TUXTLA</fullName>
+                    <default>false</default>
+                    <label>TUXTLA</label>
+                </value>
+                <value>
+                    <fullName>VILLAHERMOSA NORTE</fullName>
+                    <default>false</default>
+                    <label>VILLAHERMOSA NORTE</label>
+                </value>
+                <value>
+                    <fullName>VILLAHERMOSA SUR</fullName>
+                    <default>false</default>
+                    <label>VILLAHERMOSA SUR</label>
+                </value>
+                <value>
+                    <fullName>LEON NORTE</fullName>
+                    <default>false</default>
+                    <label>LEON NORTE</label>
+                </value>
+                <value>
+                    <fullName>LEON SUR</fullName>
+                    <default>false</default>
+                    <label>LEON SUR</label>
+                </value>
+                <value>
+                    <fullName>INTERLOMAS</fullName>
+                    <default>false</default>
+                    <label>INTERLOMAS</label>
+                </value>
+                <value>
+                    <fullName>POLANCO</fullName>
+                    <default>false</default>
+                    <label>POLANCO</label>
+                </value>
+                <value>
+                    <fullName>REFORMA</fullName>
+                    <default>false</default>
+                    <label>REFORMA</label>
+                </value>
+                <value>
+                    <fullName>TOLUCA CENTRO</fullName>
+                    <default>false</default>
+                    <label>TOLUCA CENTRO</label>
+                </value>
+                <value>
+                    <fullName>TOREO</fullName>
+                    <default>false</default>
+                    <label>TOREO</label>
+                </value>
+                <value>
+                    <fullName>VALLEJO</fullName>
+                    <default>false</default>
+                    <label>VALLEJO</label>
+                </value>
+                <value>
+                    <fullName>CENTRO</fullName>
+                    <default>false</default>
+                    <label>CENTRO</label>
+                </value>
+                <value>
+                    <fullName>COAPA</fullName>
+                    <default>false</default>
+                    <label>COAPA</label>
+                </value>
+                <value>
+                    <fullName>CONDESA</fullName>
+                    <default>false</default>
+                    <label>CONDESA</label>
+                </value>
+                <value>
+                    <fullName>DEL VALLE</fullName>
+                    <default>false</default>
+                    <label>DEL VALLE</label>
+                </value>
+                <value>
+                    <fullName>INSURGENTES</fullName>
+                    <default>false</default>
+                    <label>INSURGENTES</label>
+                </value>
+                <value>
+                    <fullName>LOMAS</fullName>
+                    <default>false</default>
+                    <label>LOMAS</label>
+                </value>
+                <value>
+                    <fullName>ORIENTE</fullName>
+                    <default>false</default>
+                    <label>ORIENTE</label>
+                </value>
+                <value>
+                    <fullName>SAN ANGEL</fullName>
+                    <default>false</default>
+                    <label>SAN ANGEL</label>
+                </value>
+                <value>
+                    <fullName>SANTA FÉ</fullName>
+                    <default>false</default>
+                    <label>SANTA FÉ</label>
+                </value>
+                <value>
+                    <fullName>VIADUCTO</fullName>
+                    <default>false</default>
+                    <label>VIADUCTO</label>
+                </value>
+                <value>
+                    <fullName>MORELOS NORTE</fullName>
+                    <default>false</default>
+                    <label>MORELOS NORTE</label>
+                </value>
+                <value>
+                    <fullName>MORELOS SUR</fullName>
+                    <default>false</default>
+                    <label>MORELOS SUR</label>
+                </value>
+                <value>
+                    <fullName>MERIDA PONIENTE</fullName>
+                    <default>false</default>
+                    <label>MERIDA PONIENTE</label>
+                </value>
+                <value>
+                    <fullName>BENITO JUAREZ 1</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>BENITO JUAREZ 1</label>
+                </value>
+                <value>
+                    <fullName>IZTAPALAPA 1</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>IZTAPALAPA 1</label>
+                </value>
+                <value>
+                    <fullName>MERIDA</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>MERIDA</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>SURESTE PYME</controllingFieldValue>
+                <valueName>CAMPECHE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE PYME</controllingFieldValue>
+                <valueName>CANCUN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE PYME</controllingFieldValue>
+                <valueName>MERIDA ORIENTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE PYME</controllingFieldValue>
+                <valueName>TAPACHULA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE PYME</controllingFieldValue>
+                <valueName>TUXTLA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE PYME</controllingFieldValue>
+                <valueName>VILLAHERMOSA NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE PYME</controllingFieldValue>
+                <valueName>VILLAHERMOSA SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE PYME</controllingFieldValue>
+                <valueName>MERIDA PONIENTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>AGUASCALIENTES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>CELAYA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>GUANAJUATO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>IRAPUATO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>LEON ORIENTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>LEON PONIENTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>PACHUCA NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>PACHUCA SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>QUERETARO ORIENTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>QUERETARO PONIENTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>SAN LUIS POTOSI FORANEA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>SAN LUIS POTOSI URBANA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>ZACATECAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>LEON NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO PYME</controllingFieldValue>
+                <valueName>LEON SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>AZCAPOTZALCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>CUAUHTEMOC 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>CUAUTITLAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>ECATEPEC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>GUSTAVO A. MADERO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>MIGUEL HIDALGO 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>NAUCALPAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>SATELITE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>TLALNEPANTLA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>TOLUCA NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>TOLUCA SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>TULTITLAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>INTERLOMAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>POLANCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>REFORMA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>TOLUCA CENTRO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>TOREO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA NORTE PYME</controllingFieldValue>
+                <valueName>VALLEJO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>ALVARO OBREGON</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>BENITO JUAREZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>BENITO JUAREZ 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>COYOACAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>CUAJIMALPA LAS AGUILAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>CUAUHTEMOC 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>IZTAPALAPA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>IZTAPALAPA 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>MIGUEL HIDALGO 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>NEZA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>TLALPAN XOCHIMILCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>VENUSTIANO CARRANZA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>CENTRO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>COAPA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>CONDESA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>DEL VALLE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>INSURGENTES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>LOMAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>ORIENTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>SAN ANGEL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>SANTA FÉ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA SUR PYME</controllingFieldValue>
+                <valueName>VIADUCTO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>COAHUILA NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>DURANGO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>GUADALUPE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>LA LAGUNA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>MONTERREY NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>MONTERREY SAN NICOLAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>MONTERREY SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>MONTERREY VALLE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>SALTILLO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>TAMAULIPAS NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE PYME</controllingFieldValue>
+                <valueName>TAMAULIPAS SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>COATZACOALCOS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>MORELOS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>OAXACA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>PUEBLA CENTRO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>PUEBLA NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>PUEBLA PERIFERIA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>PUEBLA SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>TLAXCALA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>TUXPAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>VERACRUZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>XALAPA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>ACAPULCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>CHILPANCINGO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>MORELOS NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR PYME</controllingFieldValue>
+                <valueName>MORELOS SUR</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EU001_un_Meta_Reuni_n_Individual__c</fullName>
+        <externalId>false</externalId>
+        <label>Meta Reunión Individual</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BPyP_ls_NombreSucursal__c</fullName>
+        <description>Campo creado para la Banca Patrimonial y Privada que es dependiente de la Division</description>
+        <externalId>false</externalId>
+        <label>Nombre Sucursal BPyP</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Divisi_n__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0680 LOMAS</fullName>
+                    <default>false</default>
+                    <label>0680 LOMAS</label>
+                </value>
+                <value>
+                    <fullName>4214 LOMAS VERDES</fullName>
+                    <default>false</default>
+                    <label>4214 LOMAS VERDES</label>
+                </value>
+                <value>
+                    <fullName>4221 MAZARIK</fullName>
+                    <default>false</default>
+                    <label>4221 MAZARIK</label>
+                </value>
+                <value>
+                    <fullName>6336 UHN MÉXICO</fullName>
+                    <default>false</default>
+                    <label>6336 UHN MÉXICO</label>
+                </value>
+                <value>
+                    <fullName>6340 TORRE BANCOMER</fullName>
+                    <default>false</default>
+                    <label>6340 TORRE BANCOMER</label>
+                </value>
+                <value>
+                    <fullName>6341 SATELITE</fullName>
+                    <default>false</default>
+                    <label>6341 SATELITE</label>
+                </value>
+                <value>
+                    <fullName>6342 CENTRO BANCOMER</fullName>
+                    <default>false</default>
+                    <label>6342 CENTRO BANCOMER</label>
+                </value>
+                <value>
+                    <fullName>6343 PEDREGAL</fullName>
+                    <default>false</default>
+                    <label>6343 PEDREGAL</label>
+                </value>
+                <value>
+                    <fullName>6356 PASEOS DE CHURUBUSCO</fullName>
+                    <default>false</default>
+                    <label>6356 PASEOS DE CHURUBUSCO</label>
+                </value>
+                <value>
+                    <fullName>6357 VITO ALESSIO</fullName>
+                    <default>false</default>
+                    <label>6357 VITO ALESSIO</label>
+                </value>
+                <value>
+                    <fullName>6358 INTERLOMAS</fullName>
+                    <default>false</default>
+                    <label>6358 INTERLOMAS</label>
+                </value>
+                <value>
+                    <fullName>6379 LILAS</fullName>
+                    <default>false</default>
+                    <label>6379 LILAS</label>
+                </value>
+                <value>
+                    <fullName>6385 BANCA PERISUR</fullName>
+                    <default>false</default>
+                    <label>6385 BANCA PERISUR</label>
+                </value>
+                <value>
+                    <fullName>6393 BANCA PLAZA FORUM</fullName>
+                    <default>false</default>
+                    <label>6393 BANCA PLAZA FORUM</label>
+                </value>
+                <value>
+                    <fullName>6398 BANCA ACOXPA</fullName>
+                    <default>false</default>
+                    <label>6398 BANCA ACOXPA</label>
+                </value>
+                <value>
+                    <fullName>6400 BANCA DEL VALLE</fullName>
+                    <default>false</default>
+                    <label>6400 BANCA DEL VALLE</label>
+                </value>
+                <value>
+                    <fullName>6402 TOLUCA</fullName>
+                    <default>false</default>
+                    <label>6402 TOLUCA</label>
+                </value>
+                <value>
+                    <fullName>6345 ZACATECAS</fullName>
+                    <default>false</default>
+                    <label>6345 ZACATECAS</label>
+                </value>
+                <value>
+                    <fullName>6365 IRAPUATO</fullName>
+                    <default>false</default>
+                    <label>6365 IRAPUATO</label>
+                </value>
+                <value>
+                    <fullName>6366 CELAYA</fullName>
+                    <default>false</default>
+                    <label>6366 CELAYA</label>
+                </value>
+                <value>
+                    <fullName>6372 MOROLEON</fullName>
+                    <default>false</default>
+                    <label>6372 MOROLEON</label>
+                </value>
+                <value>
+                    <fullName>6384 AGUASCALIENTES</fullName>
+                    <default>false</default>
+                    <label>6384 AGUASCALIENTES</label>
+                </value>
+                <value>
+                    <fullName>6388 PACHUCA</fullName>
+                    <default>false</default>
+                    <label>6388 PACHUCA</label>
+                </value>
+                <value>
+                    <fullName>6390 QUERETARO</fullName>
+                    <default>false</default>
+                    <label>6390 QUERETARO</label>
+                </value>
+                <value>
+                    <fullName>6391 SAN LUIS POTOSI</fullName>
+                    <default>false</default>
+                    <label>6391 SAN LUIS POTOSI</label>
+                </value>
+                <value>
+                    <fullName>6405 LEON</fullName>
+                    <default>false</default>
+                    <label>6405 LEON</label>
+                </value>
+                <value>
+                    <fullName>0708 MONTERREY VALLE SENA</fullName>
+                    <default>false</default>
+                    <label>0708 MONTERREY VALLE SENA</label>
+                </value>
+                <value>
+                    <fullName>6348 DURANGO</fullName>
+                    <default>false</default>
+                    <label>6348 DURANGO</label>
+                </value>
+                <value>
+                    <fullName>6354 REYNOSA</fullName>
+                    <default>false</default>
+                    <label>6354 REYNOSA</label>
+                </value>
+                <value>
+                    <fullName>6371 MONTERREY COUNTRY</fullName>
+                    <default>false</default>
+                    <label>6371 MONTERREY COUNTRY</label>
+                </value>
+                <value>
+                    <fullName>6386 SALTILLO</fullName>
+                    <default>false</default>
+                    <label>6386 SALTILLO</label>
+                </value>
+                <value>
+                    <fullName>6396 TAMPICO</fullName>
+                    <default>false</default>
+                    <label>6396 TAMPICO</label>
+                </value>
+                <value>
+                    <fullName>6401 TORREON</fullName>
+                    <default>false</default>
+                    <label>6401 TORREON</label>
+                </value>
+                <value>
+                    <fullName>0754 UHN MONTERREY</fullName>
+                    <default>false</default>
+                    <label>0754 UHN MONTERREY</label>
+                </value>
+                <value>
+                    <fullName>6411 CUMBRES</fullName>
+                    <default>false</default>
+                    <label>6411 CUMBRES</label>
+                </value>
+                <value>
+                    <fullName>6350 TUXTLA GUTIERREZ</fullName>
+                    <default>false</default>
+                    <label>6350 TUXTLA GUTIERREZ</label>
+                </value>
+                <value>
+                    <fullName>6351 CANCUN</fullName>
+                    <default>false</default>
+                    <label>6351 CANCUN</label>
+                </value>
+                <value>
+                    <fullName>6359 ACAPULCO</fullName>
+                    <default>false</default>
+                    <label>6359 ACAPULCO</label>
+                </value>
+                <value>
+                    <fullName>6395 VILLAHERMOSA</fullName>
+                    <default>false</default>
+                    <label>6395 VILLAHERMOSA</label>
+                </value>
+                <value>
+                    <fullName>6399 MERIDA</fullName>
+                    <default>false</default>
+                    <label>6399 MERIDA</label>
+                </value>
+                <value>
+                    <fullName>6349 OAXACA</fullName>
+                    <default>false</default>
+                    <label>6349 OAXACA</label>
+                </value>
+                <value>
+                    <fullName>6353 COATZACOALCOS</fullName>
+                    <default>false</default>
+                    <label>6353 COATZACOALCOS</label>
+                </value>
+                <value>
+                    <fullName>6355 XALAPA</fullName>
+                    <default>false</default>
+                    <label>6355 XALAPA</label>
+                </value>
+                <value>
+                    <fullName>6367 PUEBLA</fullName>
+                    <default>false</default>
+                    <label>6367 PUEBLA</label>
+                </value>
+                <value>
+                    <fullName>6383 CUERNAVACA</fullName>
+                    <default>false</default>
+                    <label>6383 CUERNAVACA</label>
+                </value>
+                <value>
+                    <fullName>6397 VERACRUZ</fullName>
+                    <default>false</default>
+                    <label>6397 VERACRUZ</label>
+                </value>
+                <value>
+                    <fullName>6337 CD. OBREGON</fullName>
+                    <default>false</default>
+                    <label>6337 CD. OBREGON</label>
+                </value>
+                <value>
+                    <fullName>6338 CHIHUAHUA</fullName>
+                    <default>false</default>
+                    <label>6338 CHIHUAHUA</label>
+                </value>
+                <value>
+                    <fullName>6339 MEXICALI</fullName>
+                    <default>false</default>
+                    <label>6339 MEXICALI</label>
+                </value>
+                <value>
+                    <fullName>6375 MAZATLAN</fullName>
+                    <default>false</default>
+                    <label>6375 MAZATLAN</label>
+                </value>
+                <value>
+                    <fullName>6392 HERMOSILLO</fullName>
+                    <default>false</default>
+                    <label>6392 HERMOSILLO</label>
+                </value>
+                <value>
+                    <fullName>6403 TIJUANA</fullName>
+                    <default>false</default>
+                    <label>6403 TIJUANA</label>
+                </value>
+                <value>
+                    <fullName>6404 CD. JUAREZ</fullName>
+                    <default>false</default>
+                    <label>6404 CD. JUAREZ</label>
+                </value>
+                <value>
+                    <fullName>6406 CULIACAN</fullName>
+                    <default>false</default>
+                    <label>6406 CULIACAN</label>
+                </value>
+                <value>
+                    <fullName>6408 LOS CABOS</fullName>
+                    <default>false</default>
+                    <label>6408 LOS CABOS</label>
+                </value>
+                <value>
+                    <fullName>0707 ANDARES</fullName>
+                    <default>false</default>
+                    <label>0707 ANDARES</label>
+                </value>
+                <value>
+                    <fullName>6346 COLIMA</fullName>
+                    <default>false</default>
+                    <label>6346 COLIMA</label>
+                </value>
+                <value>
+                    <fullName>6364 GUADALAJARA TERRANOVA</fullName>
+                    <default>false</default>
+                    <label>6364 GUADALAJARA TERRANOVA</label>
+                </value>
+                <value>
+                    <fullName>6368 ZAMORA</fullName>
+                    <default>false</default>
+                    <label>6368 ZAMORA</label>
+                </value>
+                <value>
+                    <fullName>6369 URUAPAN</fullName>
+                    <default>false</default>
+                    <label>6369 URUAPAN</label>
+                </value>
+                <value>
+                    <fullName>6373 TEPIC</fullName>
+                    <default>false</default>
+                    <label>6373 TEPIC</label>
+                </value>
+                <value>
+                    <fullName>6387 TEPATITLAN</fullName>
+                    <default>false</default>
+                    <label>6387 TEPATITLAN</label>
+                </value>
+                <value>
+                    <fullName>6389 MORELIA</fullName>
+                    <default>false</default>
+                    <label>6389 MORELIA</label>
+                </value>
+                <value>
+                    <fullName>6335 UHN GUADALAJARA</fullName>
+                    <default>false</default>
+                    <label>6335 UHN GUADALAJARA</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>0680 LOMAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>4214 LOMAS VERDES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>4221 MAZARIK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6336 UHN MÉXICO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6340 TORRE BANCOMER</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6341 SATELITE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6342 CENTRO BANCOMER</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6343 PEDREGAL</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6356 PASEOS DE CHURUBUSCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6357 VITO ALESSIO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6358 INTERLOMAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6379 LILAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6385 BANCA PERISUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6393 BANCA PLAZA FORUM</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6398 BANCA ACOXPA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6400 BANCA DEL VALLE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>METROPOLITANA</controllingFieldValue>
+                <valueName>6402 TOLUCA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>0708 MONTERREY VALLE SENA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>6348 DURANGO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>6354 REYNOSA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>6371 MONTERREY COUNTRY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>6386 SALTILLO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>6396 TAMPICO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>6401 TORREON</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>0754 UHN MONTERREY</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NORESTE</controllingFieldValue>
+                <valueName>6411 CUMBRES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>6337 CD. OBREGON</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>6338 CHIHUAHUA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>6339 MEXICALI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>6375 MAZATLAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>6392 HERMOSILLO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>6403 TIJUANA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>6404 CD. JUAREZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>6406 CULIACAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NOROESTE</controllingFieldValue>
+                <valueName>6408 LOS CABOS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>0707 ANDARES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>6346 COLIMA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>6364 GUADALAJARA TERRANOVA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>6368 ZAMORA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>6369 URUAPAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>6373 TEPIC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>6387 TEPATITLAN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>6389 MORELIA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OCCIDENTE</controllingFieldValue>
+                <valueName>6335 UHN GUADALAJARA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>6349 OAXACA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>6353 COATZACOALCOS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>6355 XALAPA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>6367 PUEBLA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>6383 CUERNAVACA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SUR</controllingFieldValue>
+                <valueName>6397 VERACRUZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>6350 TUXTLA GUTIERREZ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>6351 CANCUN</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>6359 ACAPULCO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>6395 VILLAHERMOSA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SURESTE</controllingFieldValue>
+                <valueName>6399 MERIDA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>6345 ZACATECAS</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>6365 IRAPUATO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>6366 CELAYA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>6372 MOROLEON</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>6384 AGUASCALIENTES</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>6388 PACHUCA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>6390 QUERETARO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>6391 SAN LUIS POTOSI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>BAJIO</controllingFieldValue>
+                <valueName>6405 LEON</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Divisi_n__c</fullName>
+        <externalId>false</externalId>
+        <label>División</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>VP_ls_Banca__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BAJIO</fullName>
+                    <default>false</default>
+                    <label>BAJIO</label>
+                </value>
+                <value>
+                    <fullName>GOBIERNO CENTRO</fullName>
+                    <default>false</default>
+                    <label>GOBIERNO CENTRO</label>
+                </value>
+                <value>
+                    <fullName>METROPOLITANA</fullName>
+                    <default>false</default>
+                    <label>METROPOLITANA</label>
+                </value>
+                <value>
+                    <fullName>NORESTE</fullName>
+                    <default>false</default>
+                    <label>NORESTE</label>
+                </value>
+                <value>
+                    <fullName>NOROESTE</fullName>
+                    <default>false</default>
+                    <label>NOROESTE</label>
+                </value>
+                <value>
+                    <fullName>OCCIDENTE</fullName>
+                    <default>false</default>
+                    <label>OCCIDENTE</label>
+                </value>
+                <value>
+                    <fullName>SUR</fullName>
+                    <default>false</default>
+                    <label>SUR</label>
+                </value>
+                <value>
+                    <fullName>SURESTE</fullName>
+                    <default>false</default>
+                    <label>SURESTE</label>
+                </value>
+                <value>
+                    <fullName>CORPORATIVA</fullName>
+                    <default>false</default>
+                    <label>CORPORATIVA</label>
+                </value>
+                <value>
+                    <fullName>BAJIO PYME</fullName>
+                    <default>false</default>
+                    <label>BAJIO PYME</label>
+                </value>
+                <value>
+                    <fullName>METROPOLITANA NORTE PYME</fullName>
+                    <default>false</default>
+                    <label>METROPOLITANA NORTE PYME</label>
+                </value>
+                <value>
+                    <fullName>METROPOLITANA SUR PYME</fullName>
+                    <default>false</default>
+                    <label>METROPOLITANA SUR PYME</label>
+                </value>
+                <value>
+                    <fullName>NORESTE PYME</fullName>
+                    <default>false</default>
+                    <label>NORESTE PYME</label>
+                </value>
+                <value>
+                    <fullName>NOROESTE PYME</fullName>
+                    <default>false</default>
+                    <label>NOROESTE PYME</label>
+                </value>
+                <value>
+                    <fullName>OCCIDENTE PYME</fullName>
+                    <default>false</default>
+                    <label>OCCIDENTE PYME</label>
+                </value>
+                <value>
+                    <fullName>REGIONAL NORESTE PYME</fullName>
+                    <default>false</default>
+                    <label>REGIONAL NORESTE PYME</label>
+                </value>
+                <value>
+                    <fullName>REGIONAL OCCIDENTE PYME</fullName>
+                    <default>false</default>
+                    <label>REGIONAL OCCIDENTE PYME</label>
+                </value>
+                <value>
+                    <fullName>SUR PYME</fullName>
+                    <default>false</default>
+                    <label>SUR PYME</label>
+                </value>
+                <value>
+                    <fullName>SURESTE PYME</fullName>
+                    <default>false</default>
+                    <label>SURESTE PYME</label>
+                </value>
+                <value>
+                    <fullName>METRO NORTE</fullName>
+                    <default>false</default>
+                    <label>METRO NORTE</label>
+                </value>
+                <value>
+                    <fullName>METRO SUR</fullName>
+                    <default>false</default>
+                    <label>METRO SUR</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Red BEyG</controllingFieldValue>
+                <controllingFieldValue>Red HP</controllingFieldValue>
+                <controllingFieldValue>Red CF</controllingFieldValue>
+                <controllingFieldValue>Red BPyP</controllingFieldValue>
+                <valueName>BAJIO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red BEyG</controllingFieldValue>
+                <valueName>GOBIERNO CENTRO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red BEyG</controllingFieldValue>
+                <controllingFieldValue>Red HP</controllingFieldValue>
+                <controllingFieldValue>Red BPyP</controllingFieldValue>
+                <valueName>METROPOLITANA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red BEyG</controllingFieldValue>
+                <controllingFieldValue>Red HP</controllingFieldValue>
+                <controllingFieldValue>Red CF</controllingFieldValue>
+                <controllingFieldValue>Red BPyP</controllingFieldValue>
+                <valueName>NORESTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red BEyG</controllingFieldValue>
+                <controllingFieldValue>Red HP</controllingFieldValue>
+                <controllingFieldValue>Red CF</controllingFieldValue>
+                <controllingFieldValue>Red BPyP</controllingFieldValue>
+                <valueName>NOROESTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red BEyG</controllingFieldValue>
+                <controllingFieldValue>Red HP</controllingFieldValue>
+                <controllingFieldValue>Red CF</controllingFieldValue>
+                <controllingFieldValue>Red BPyP</controllingFieldValue>
+                <valueName>OCCIDENTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red BEyG</controllingFieldValue>
+                <controllingFieldValue>Red HP</controllingFieldValue>
+                <controllingFieldValue>Red CF</controllingFieldValue>
+                <controllingFieldValue>Red BPyP</controllingFieldValue>
+                <valueName>SUR</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red BEyG</controllingFieldValue>
+                <controllingFieldValue>Red HP</controllingFieldValue>
+                <controllingFieldValue>Red CF</controllingFieldValue>
+                <controllingFieldValue>Red BPyP</controllingFieldValue>
+                <valueName>SURESTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red BEyG</controllingFieldValue>
+                <valueName>CORPORATIVA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red PyME</controllingFieldValue>
+                <valueName>BAJIO PYME</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red PyME</controllingFieldValue>
+                <valueName>METROPOLITANA NORTE PYME</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red PyME</controllingFieldValue>
+                <valueName>METROPOLITANA SUR PYME</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red PyME</controllingFieldValue>
+                <valueName>NORESTE PYME</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red PyME</controllingFieldValue>
+                <valueName>NOROESTE PYME</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red PyME</controllingFieldValue>
+                <valueName>OCCIDENTE PYME</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red PyME</controllingFieldValue>
+                <valueName>REGIONAL NORESTE PYME</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red PyME</controllingFieldValue>
+                <valueName>REGIONAL OCCIDENTE PYME</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red PyME</controllingFieldValue>
+                <valueName>SUR PYME</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red PyME</controllingFieldValue>
+                <valueName>SURESTE PYME</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red CF</controllingFieldValue>
+                <valueName>METRO NORTE</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Red CF</controllingFieldValue>
+                <valueName>METRO SUR</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+	<listViews>
+        <fullName>ActiveUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Users</label>
+    </listViews>
+    <listViews>
+        <fullName>AdminUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>Administrador del sistema</value>
+        </filters>
+        <label>Admin Users</label>
+    </listViews>
+    <listViews>
+        <fullName>AllUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Users</label>
+    </listViews>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USER_ROLE.NAME</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USER_ROLE.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.PHONE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.EXTENSION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.CELL</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.EMAIL</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+	<validationRules>
+        <fullName>MX_BPP_RestringirCamposUser</fullName>
+        <active>true</active>
+        <description>Regla que Restringe campos standard de usuarios con perfil de BPyP</description>
+        <errorConditionFormula>IF(
+ AND(
+OR(
+$Profile.Name=&apos;BPyP STAFF&apos;,
+$Profile.Name=&apos;BPyP Estandar&apos;,
+$Profile.Name=&apos;BPyP Director Oficina&apos;,
+$Profile.Name=&apos;BPyP Director Divisional&apos;
+),
+OR(
+ ISCHANGED( Title ), 
+ ISCHANGED(  FederationIdentifier ),
+ ISCHANGED(  Segmento_Ejecutivo__c ),
+ ISCHANGED(   EmployeeNumber )
+), 
+NOT(ISNEW())
+)
+,true,false)</errorConditionFormula>
+        <errorMessage>No es posible modificar este campo, contacte a su Administrador.</errorMessage>
+    </validationRules>
+</CustomObject>

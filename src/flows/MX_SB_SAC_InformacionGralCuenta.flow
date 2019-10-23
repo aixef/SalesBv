@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>se ocupara para mostrar la información de la cuenta a un caso</description>
+    <interviewLabel>Informacion General de la Ceunta {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Información General de la Cuenta</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>MX_SB_SAC_ObtenerInfoCuenta</name>
+        <label>Obtener Info Cuenta</label>
+        <locationX>329</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>MX_SB_SAC_DatosGralesCuenta</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>MX_SB_SAC_InfoCuentaID</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.ApellidoMaterno__c</assignToReference>
+            <field>ApellidoMaterno__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.FirstName</assignToReference>
+            <field>FirstName</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.LastName</assignToReference>
+            <field>LastName</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.MX_SB_SAC_CentroEmisor__c</assignToReference>
+            <field>MX_SB_SAC_CentroEmisor__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.MX_SB_SAC_IncisosContratados__c</assignToReference>
+            <field>MX_SB_SAC_IncisosContratados__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.MX_SB_SAC_Tipo__c</assignToReference>
+            <field>MX_SB_SAC_Tipo__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.MX_WB_Cliente_Unico_Seguros__pc</assignToReference>
+            <field>MX_WB_Cliente_Unico_Seguros__pc</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.MX_WB_txt_Clave_Texto__c</assignToReference>
+            <field>MX_WB_txt_Clave_Texto__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.MiddleName</assignToReference>
+            <field>MiddleName</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.Numero_de_Cuenta__c</assignToReference>
+            <field>Numero_de_Cuenta__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.PersonEmail</assignToReference>
+            <field>PersonEmail</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.PersonMobilePhone</assignToReference>
+            <field>PersonMobilePhone</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.Phone</assignToReference>
+            <field>Phone</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuenta.Telefono_Oficina__c</assignToReference>
+            <field>Telefono_Oficina__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <description>obtener datos del caso para ocupar los durante el flujo</description>
+        <name>MX_SB_SAC_ObtenerInformacionCaso</name>
+        <label>Obtener Información de Caso</label>
+        <locationX>168</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>MX_SB_SAC_ObtenerInfoCuenta</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>MX_SB_SAC_InfoCasoID</elementReference>
+            </value>
+        </filters>
+        <object>Case</object>
+        <outputAssignments>
+            <assignToReference>MX_SB_SAC_InfoCuentaID</assignToReference>
+            <field>AccountId</field>
+        </outputAssignments>
+    </recordLookups>
+    <screens>
+        <name>MX_SB_SAC_DatosGralesCuenta</name>
+        <label>Datos Generales de la Cuenta</label>
+        <locationX>510</locationX>
+        <locationY>50</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>MX_SB_SAC_NombreCliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Nombre: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.FirstName} {!MX_SB_SAC_InfoCuenta.MiddleName}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_Clavecliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Clave: &lt;/FONT&gt;&lt;/SPAN&gt; {!MX_SB_SAC_InfoCuenta.MX_WB_txt_Clave_Texto__c}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_ApellidoPaternoCliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Apellido Paterno: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.LastName}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_Clienteunico</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Cliente: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.MX_WB_Cliente_Unico_Seguros__pc}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_ApellidoMaternoCliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Apellido Materno: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.ApellidoMaterno__c}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_IncisoCliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Inciso: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.MX_SB_SAC_IncisosContratados__c}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_CelularCliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Teléfono celular: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.PersonMobilePhone}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_Numerocuentacliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Cuenta: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.Numero_de_Cuenta__c}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_TelefonoCasaCliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Teléfono casa: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.Phone}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_TipodeCuentaCliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Tipo de Cuenta: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.MX_SB_SAC_Tipo__c}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_TlefonoOficinaCliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Teléfono oficina: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.Telefono_Oficina__c}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_EmisorCliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Emisor: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.MX_SB_SAC_CentroEmisor__c}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>MX_SB_SAC_EmailCliente</name>
+            <fieldText>&lt;SPAN ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial Black&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Email: &lt;/FONT&gt;&lt;/SPAN&gt;{!MX_SB_SAC_InfoCuenta.PersonEmail}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>MX_SB_SAC_ObtenerInformacionCaso</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>MX_SB_SAC_InfoCasoID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>MX_SB_SAC_InfoCuenta</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>MX_SB_SAC_InfoCuentaID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

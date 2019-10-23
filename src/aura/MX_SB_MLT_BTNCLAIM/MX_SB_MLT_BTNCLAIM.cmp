@@ -1,0 +1,20 @@
+<aura:component controller="MX_SB_MLT_FederationId" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+  
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="simpleRecord" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="idFed" type="String" />
+    <aura:attribute name="urlClaimLbl" type="String" default="{!$Label.c.MX_SB_MLT_ClaimCenterURL}" />
+    
+      <force:recordData aura:id="recordLoader"
+          recordId="{!v.recordId}"
+          fields="MX_SB_MLT_External_Id__c"
+          targetFields="{!v.simpleRecord}"
+          targetError="{!v.recordError}"
+      />
+    
+    <lightning:navigation aura:id="navigate" />
+    <lightning:button label="Continuar en Claim" onclick="{!c.navigate}"
+                      variant="brand"/>
+    
+</aura:component>

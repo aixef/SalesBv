@@ -1,0 +1,13 @@
+.THIS .FullScreen{
+    position: fixed;
+    background:white;
+}
+
+.THIS .slds-modal__container{
+ position: relative;
+      height: 100% !important;
+      min-height:45rem;
+      width: 100% !important; 
+      max-width: 70rem !important ;
+      top: -30px;
+}

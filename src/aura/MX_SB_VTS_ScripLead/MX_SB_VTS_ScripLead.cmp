@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+    access="global" Controller="MX_SB_VTS_ScripLead_cls">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="etapa" type="String" />
+    <aura:attribute name="script" type="FeedItem" />
+    <aura:attribute name="opport" type="lead" />
+    <aura:attribute name="OpptyRecord" type="Opportunity" />
+    <aura:attribute name="showTab" type="Boolean" default="true" description="Parámetro que muestra objeciones"/>
+    <aura:registerEvent name="recordUpdated" type="c:RecordUpdated" />
+    <aura:handler name="init" value="{!this}" action="{!c.initScript}" />
+    <aura:handler event="c:RecordUpdated" action="{!c.initScript}" />
+    <force:recordData aura:id="recordFor" recordId="{!v.recordId}"
+                      targetRecord="{!v.opport}"
+                      recordUpdated="{!c.initScript}" targetFields="{!v.OpptyRecord}"
+                      layoutType="FULL" />
+    <lightning:card footer="" title="">
+            <div class="slds-page-header slds-section headCmp" onclick="{!c.muestraTabla}">
+                <section class="slds-clearfix">
+                    <div class="slds-float--left" id="border-text">
+                        <lightning:icon iconName="{!v.showTab ? 'utility:chevrondown' : 'utility:chevronright'}" size="x-small" alternativeText="Abierto" aura:id="showTab" />
+                    </div>
+                    <div class="slds-m-left_large"><ui:outputText value="{!v.etapa}"/></div>
+                </section>
+            </div>
+            <aura:if isTrue="{!v.showTab}">
+                <ui:outputRichText class="slds-text-longform borders" value="{!v.script}" />
+            </aura:if>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_63403128</developerName>
+        <masterLabel>Gestión</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.cond__Campaign_Clients__r$cond__Campaign_status_approval_type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>In Progress</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Pending Approval</sourceValue>
+            </sourceValues>
+            <value>Gestionada</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Draft</sourceValue>
+            </sourceValues>
+            <value>No gestionada</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account.cond__Campaign_Clients__r$Name</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>BPyP: Ranking de gestión de campañas en número</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.cond__Campaign_Clients__r$cond__Campaign_status_approval_type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>In Progress,Pending Approval,Closed</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.cond__Campaign_Clients__r$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Ranking gestión de campañas</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>MX_PYME_Campa_as_con_nombre_comercial_del_cliente__c</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.cond__Campaign_Clients__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

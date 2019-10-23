@@ -1,0 +1,1863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_WF_URL_secundarias_P_gina_de_registro</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CRM_WF_Count__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>Campo que tiene como única finalidad tealozre la sumatoria en el componente de lista relacionada dentro del objeto Canal</description>
+        <externalId>false</externalId>
+        <label>Contador</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Cual_Es_La_URL__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Page name (v1)</inlineHelpText>
+        <label>¿Cuál es la URL?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Donde_Va__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>¿Dónde va?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_Del_Arte__c</fullName>
+        <externalId>false</externalId>
+        <label>Nombre del Arte</label>
+        <referenceTo>CRM_WF_Artes__c</referenceTo>
+        <relationshipLabel>URL</relationshipLabel>
+        <relationshipName>URL_secundarias</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_URL_Text__c</fullName>
+        <description>Campo que se llena mediante un PB cada que el campo ¿Cual es la URL? Es modificado</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>¿Cuál es la URL?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Folio_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Nombre_Del_Arte__r.Name+ &quot;-&quot; + 
+IF(
+ ISBLANK(MX_WF_Otro__c), 
+ SUBSTITUTE(TEXT(Nombre__c), &quot; &quot;, &quot;_&quot;), 
+ SUBSTITUTE(MX_WF_Otro__c, &quot; &quot;, &quot;_&quot;)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Folio URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Ad_group_last_touch_channel_detail__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Nombre_Del_Arte__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ad group (last touch channel detail)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_App_approved_e77__c</fullName>
+        <externalId>false</externalId>
+        <label>App approved (e77)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_App_completed_e76__c</fullName>
+        <externalId>false</externalId>
+        <label>App completed (e76)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_App_page_visits_e62__c</fullName>
+        <externalId>false</externalId>
+        <label>App page visits (e62)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Application_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Application flow name (v46)</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>El valor no es un registro valido para Application Name</errorMessage>
+            <filterItems>
+                <field>GBL_WF_Catalogo_Canal__c.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>MX_WF_Application_Name</value>
+            </filterItems>
+            <infoMessage>Application Name</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>GBL_WF_Catalogo_Canal__c</referenceTo>
+        <relationshipName>URL_secundarias</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Campaign_last_touch_channel_detail__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Nombre_Del_Arte__r.CRM_WF_Nombre_Del_Brief__r.CRM_WF_Campana_Brief__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Campaign (last touch channel detail)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Contratado_o_aprobado__c</fullName>
+        <externalId>false</externalId>
+        <label>app approved (e57/e77)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Inicio_Flujo_Contratacion__c</fullName>
+        <externalId>false</externalId>
+        <label>app page visits (e41/e62)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Last_touch_channel__c</fullName>
+        <defaultValue>&quot;Email&quot;</defaultValue>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Last touch channel</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Otro__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Otro</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_T_rmino_flujo_de_contrataci_n__c</fullName>
+        <externalId>false</externalId>
+        <label>app completed (e55/e76)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tracking_Code__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Tracking Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tracking_Code_fx__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Cual_Es_La_URL__c + &quot;?cid=oth:mem:oth:mexico---&quot; +  CRM_WF_Nombre_Del_Arte__r.GBL_WF_Producto__c + &quot;-&quot; +  CRM_WF_Nombre_Del_Arte__r.GBL_WF_Subproducto__c + &quot;-&quot; +    CRM_WF_Nombre_Del_Arte__r.MX_WF_Nombre_Campana_sin_Espacios__c + &quot;-&quot; +  CRM_WF_Nombre_Del_Arte__r.MX_WF_Business_Unit__c + &quot;:&quot; +  Folio_URL__c + &quot;:::::&quot; + TEXT(YEAR(CRM_WF_Nombre_Del_Arte__r.MX_WF_Fecha_de_envio_Solicitud__c)) + 
+IF(
+ MONTH(CRM_WF_Nombre_Del_Arte__r.MX_WF_Fecha_de_envio_Solicitud__c)&lt;10,
+ &quot;0&quot;+TEXT(MONTH(CRM_WF_Nombre_Del_Arte__r.MX_WF_Fecha_de_envio_Solicitud__c)),
+ TEXT(MONTH(CRM_WF_Nombre_Del_Arte__r.MX_WF_Fecha_de_envio_Solicitud__c)) 
+)+ 
+IF(
+ DAY(CRM_WF_Nombre_Del_Arte__r.MX_WF_Fecha_de_envio_Solicitud__c)&lt;10,
+ &quot;0&quot;+TEXT(DAY(CRM_WF_Nombre_Del_Arte__r.MX_WF_Fecha_de_envio_Solicitud__c)),
+ TEXT(DAY(CRM_WF_Nombre_Del_Arte__r.MX_WF_Fecha_de_envio_Solicitud__c)) 
+)+ 
+&quot;:::&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tracking Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Validacion_TC__c</fullName>
+        <externalId>false</externalId>
+        <label>Validación TC</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pendiente</fullName>
+                    <default>true</default>
+                    <label>Pendiente</label>
+                </value>
+                <value>
+                    <fullName>Validado</fullName>
+                    <default>false</default>
+                    <label>Validado</label>
+                </value>
+                <value>
+                    <fullName>No necesita</fullName>
+                    <default>false</default>
+                    <label>No necesita</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Venta_de_Producto__c</fullName>
+        <externalId>false</externalId>
+        <label>Venta de Producto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Nombre__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Nombre</inlineHelpText>
+        <label>Tracking Alias</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Logo BBVA</fullName>
+                    <default>false</default>
+                    <label>Logo BBVA</label>
+                </value>
+                <value>
+                    <fullName>Foto Principal</fullName>
+                    <default>false</default>
+                    <label>Foto Principal</label>
+                </value>
+                <value>
+                    <fullName>CTA principal</fullName>
+                    <default>false</default>
+                    <label>CTA principal</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 1</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 1</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 1</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 1</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 2</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 2</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 2</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 2</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 3</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 3</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 3</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 3</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 4</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 4</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 4</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 4</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 5</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 5</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 5</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 5</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 6</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 6</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 6</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 6</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 7</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 7</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 7</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 7</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 8</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 8</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 8</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 8</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 9</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 9</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 9</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 9</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 10</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 10</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 10</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 10</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 11</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 11</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 11</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 11</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 12</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 12</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 12</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 12</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 13</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 13</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 13</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 13</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 14</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 14</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 14</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 14</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 15</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 15</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 15</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 15</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 16</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 16</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 16</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 16</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 17</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 17</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 17</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 17</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 18</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 18</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 18</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 18</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 19</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 19</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 19</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 19</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 20</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 20</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 20</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 20</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 21</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 21</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 21</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 21</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 22</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 22</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 22</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 22</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 23</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 23</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 23</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 23</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 24</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 24</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 24</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 24</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 25</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 25</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 25</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 25</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 26</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 26</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 26</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 26</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 27</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 27</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 27</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 27</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 28</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 28</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 28</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 28</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 29</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 29</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 29</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 29</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario imagen 30</fullName>
+                    <default>false</default>
+                    <label>CTA secundario imagen 30</label>
+                </value>
+                <value>
+                    <fullName>CTA secundario texto 30</fullName>
+                    <default>false</default>
+                    <label>CTA secundario texto 30</label>
+                </value>
+                <value>
+                    <fullName>Buscador sucursales Pin</fullName>
+                    <default>false</default>
+                    <label>Buscador sucursales Pin</label>
+                </value>
+                <value>
+                    <fullName>Buscador sucursales</fullName>
+                    <default>false</default>
+                    <label>Buscador sucursales</label>
+                </value>
+                <value>
+                    <fullName>Necesitas ayuda</fullName>
+                    <default>false</default>
+                    <label>Necesitas ayuda</label>
+                </value>
+                <value>
+                    <fullName>Facebook</fullName>
+                    <default>false</default>
+                    <label>Facebook</label>
+                </value>
+                <value>
+                    <fullName>Twitter</fullName>
+                    <default>false</default>
+                    <label>Twitter</label>
+                </value>
+                <value>
+                    <fullName>Unsuscribe</fullName>
+                    <default>false</default>
+                    <label>Unsuscribe</label>
+                </value>
+                <value>
+                    <fullName>Aviso privacidad</fullName>
+                    <default>false</default>
+                    <label>Aviso privacidad</label>
+                </value>
+                <value>
+                    <fullName>Telefono1</fullName>
+                    <default>false</default>
+                    <label>Telefono1</label>
+                </value>
+                <value>
+                    <fullName>Telefono 2</fullName>
+                    <default>false</default>
+                    <label>Telefono 2</label>
+                </value>
+                <value>
+                    <fullName>Telefono 3</fullName>
+                    <default>false</default>
+                    <label>Telefono 3</label>
+                </value>
+                <value>
+                    <fullName>Legal 1</fullName>
+                    <default>false</default>
+                    <label>Legal 1</label>
+                </value>
+                <value>
+                    <fullName>Legal 2</fullName>
+                    <default>false</default>
+                    <label>Legal 2</label>
+                </value>
+                <value>
+                    <fullName>Legal 3</fullName>
+                    <default>false</default>
+                    <label>Legal 3</label>
+                </value>
+                <value>
+                    <fullName>Legal 4</fullName>
+                    <default>false</default>
+                    <label>Legal 4</label>
+                </value>
+                <value>
+                    <fullName>Legal 5</fullName>
+                    <default>false</default>
+                    <label>Legal 5</label>
+                </value>
+                <value>
+                    <fullName>Legal 6</fullName>
+                    <default>false</default>
+                    <label>Legal 6</label>
+                </value>
+                <value>
+                    <fullName>Legal 7</fullName>
+                    <default>false</default>
+                    <label>Legal 7</label>
+                </value>
+                <value>
+                    <fullName>Legal 8</fullName>
+                    <default>false</default>
+                    <label>Legal 8</label>
+                </value>
+                <value>
+                    <fullName>Legal 9</fullName>
+                    <default>false</default>
+                    <label>Legal 9</label>
+                </value>
+                <value>
+                    <fullName>Legal 10</fullName>
+                    <default>false</default>
+                    <label>Legal 10</label>
+                </value>
+                <value>
+                    <fullName>Legal 11</fullName>
+                    <default>false</default>
+                    <label>Legal 11</label>
+                </value>
+                <value>
+                    <fullName>Legal 12</fullName>
+                    <default>false</default>
+                    <label>Legal 12</label>
+                </value>
+                <value>
+                    <fullName>Legal 13</fullName>
+                    <default>false</default>
+                    <label>Legal 13</label>
+                </value>
+                <value>
+                    <fullName>Legal 14</fullName>
+                    <default>false</default>
+                    <label>Legal 14</label>
+                </value>
+                <value>
+                    <fullName>Legal 15</fullName>
+                    <default>false</default>
+                    <label>Legal 15</label>
+                </value>
+                <value>
+                    <fullName>Legal 16</fullName>
+                    <default>false</default>
+                    <label>Legal 16</label>
+                </value>
+                <value>
+                    <fullName>Legal 17</fullName>
+                    <default>false</default>
+                    <label>Legal 17</label>
+                </value>
+                <value>
+                    <fullName>Legal 18</fullName>
+                    <default>false</default>
+                    <label>Legal 18</label>
+                </value>
+                <value>
+                    <fullName>Legal 19</fullName>
+                    <default>false</default>
+                    <label>Legal 19</label>
+                </value>
+                <value>
+                    <fullName>Legal 20</fullName>
+                    <default>false</default>
+                    <label>Legal 20</label>
+                </value>
+                <value>
+                    <fullName>Legal 21</fullName>
+                    <default>false</default>
+                    <label>Legal 21</label>
+                </value>
+                <value>
+                    <fullName>Legal 22</fullName>
+                    <default>false</default>
+                    <label>Legal 22</label>
+                </value>
+                <value>
+                    <fullName>Legal 23</fullName>
+                    <default>false</default>
+                    <label>Legal 23</label>
+                </value>
+                <value>
+                    <fullName>Legal 24</fullName>
+                    <default>false</default>
+                    <label>Legal 24</label>
+                </value>
+                <value>
+                    <fullName>Legal 25</fullName>
+                    <default>false</default>
+                    <label>Legal 25</label>
+                </value>
+                <value>
+                    <fullName>Legal 26</fullName>
+                    <default>false</default>
+                    <label>Legal 26</label>
+                </value>
+                <value>
+                    <fullName>Legal 27</fullName>
+                    <default>false</default>
+                    <label>Legal 27</label>
+                </value>
+                <value>
+                    <fullName>Legal 28</fullName>
+                    <default>false</default>
+                    <label>Legal 28</label>
+                </value>
+                <value>
+                    <fullName>Legal 29</fullName>
+                    <default>false</default>
+                    <label>Legal 29</label>
+                </value>
+                <value>
+                    <fullName>Legal 30</fullName>
+                    <default>false</default>
+                    <label>Legal 30</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WF_WF_Visitas_Flujo_De_Contratacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Visits</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_WF_Visitas_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Visitas URL</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_WF_Visitas_Unicas_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Unique visitors</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>URL</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MX_WF_Tracking_Code__c</columns>
+        <columns>MX_WF_Tracking_Code_fx__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>URL-{000000}</displayFormat>
+        <label>Folio</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>URLs</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>MX_WF_URL</fullName>
+        <active>true</active>
+        <label>URL</label>
+        <picklistValues>
+            <picklist>MX_WF_Validacion_TC__c</picklist>
+            <values>
+                <fullName>No necesita</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pendiente</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Validado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_WF_Venta_de_Producto__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Nombre__c</picklist>
+            <values>
+                <fullName>Aviso privacidad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Buscador sucursales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Buscador sucursales Pin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA principal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 19</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 23</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 26</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 27</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 28</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 19</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 23</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 26</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 27</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 28</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foto Principal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 19</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 23</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 26</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 27</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 28</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Logo BBVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Necesitas ayuda</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefono 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefono 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefono1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuscribe</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MX_WF_URL_Secundaria</fullName>
+        <active>true</active>
+        <label>URL Secundaria</label>
+        <picklistValues>
+            <picklist>MX_WF_Validacion_TC__c</picklist>
+            <values>
+                <fullName>No necesita</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pendiente</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Validado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_WF_Venta_de_Producto__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Nombre__c</picklist>
+            <values>
+                <fullName>Aviso privacidad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Buscador sucursales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Buscador sucursales Pin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA principal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 19</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 23</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 26</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 27</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 28</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario imagen 9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 19</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 23</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 26</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 27</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 28</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTA secundario texto 9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foto Principal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 17</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 18</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 19</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 20</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 22</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 23</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 24</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 26</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 27</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 28</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Logo BBVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Necesitas ayuda</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefono 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefono 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefono1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuscribe</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>MX_WF_Trackig_Alias</fullName>
+        <active>true</active>
+        <description>Solo debes llenar un campo: Tracking alias u otro</description>
+        <errorConditionFormula>(NOT(ISPICKVAL( Nombre__c, &quot;&quot;))  &amp;&amp; NOT(ISBLANK( MX_WF_Otro__c )))
+ || 
+(ISPICKVAL( Nombre__c, &quot;&quot;) &amp;&amp; ISBLANK( MX_WF_Otro__c ))</errorConditionFormula>
+        <errorDisplayField>Nombre__c</errorDisplayField>
+        <errorMessage>Solo debes llenar un campo: Tracking alias u otro</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

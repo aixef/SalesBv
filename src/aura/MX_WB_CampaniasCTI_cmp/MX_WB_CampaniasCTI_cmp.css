@@ -1,0 +1,65 @@
+.THIS .leftPaddingClass {
+    padding-left: 2rem;
+    position: sticky;
+}
+
+.THIS .pillSize{
+ 	width:100%;
+    position: sticky;
+}
+
+.THIS.c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+}
+.THIS .page-section {
+    border: solid 1px #ccc;
+    padding: 1rem;
+}
+.THIS .page-header,
+.THIS .page-footer {
+    height: 50px;
+}
+.THIS .page-main {
+    background: #f8f8f8;
+}
+.THIS .page-left,
+.THIS .page-right {
+    background: #f0efef;
+}
+
+.THIS .customButton{
+   background-color: #007b81;
+   color: #fff;
+}
+.THIS .slds-form-campaing{
+    width:100%;
+}
+.THIS .slds-margin-top{
+    margin-top:1rem;
+}
+.THIS .slds-cardFilter{
+    margin-top:20px;
+}
+.THIS .slds-card__header{
+    display:none;
+}
+.THIS .slds-card__body_inner{
+    padding: 0.5 rem 0.5 rem;
+}
+.THIS .slds-pill{
+    width:100%;
+}
+.THIS .slds-pill__action{
+    padding:0.5 rem;
+}
+.THIS .slds-pill+.slds-pill{
+    margin-left:0px;
+}
+.THIS .slds-totalInline{
+    width: fit-content;
+    display: contents;
+}
+.THIS .slds-totalBadge{
+
+}

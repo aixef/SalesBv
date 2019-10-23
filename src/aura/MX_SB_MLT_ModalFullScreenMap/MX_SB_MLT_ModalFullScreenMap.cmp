@@ -1,0 +1,29 @@
+<aura:component Controller="Case" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId"   access="global">
+    <aura:attribute name="bModal" type="boolean" default="false"/>   
+    <body style="background:white;">
+    <lightning:buttonIcon  title="FullScreen" 
+                                        onclick="{!c.fullScreen}" size="large" variant="border-filled"
+                                        iconName="utility:expand" class="fullScreen" alternativeText="FullScreen" />
+    <aura:if isTrue="{!v.bModal}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container" style="width:100%!important;height:600px;" resize="true">
+                    <header class="slds-modal__header">
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Ubicación</h2>
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.handleCancel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>  
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" >
+                        <iframe src="{! '/apex/MX_SB_MLT_ModalCaseMap?Id=' + v.recordId }" style="width:100%!important;height:680px;" frameBorder="0"  /> 
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="brand" label="Close" title="Close" onclick="{! c.handleCancel }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>   
+   </body>    
+</aura:component>

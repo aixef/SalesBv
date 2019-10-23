@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Botón generador de oportunidades para campaña cliente</description>
+    <height>200</height>
+    <label>Crear Oportunidad</label>
+    <lightningComponent>MX_PyME_GenOppsCampaigns_Cmp</lightningComponent>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>LightningComponent</type>
+    <width>-100</width>
+</QuickAction>

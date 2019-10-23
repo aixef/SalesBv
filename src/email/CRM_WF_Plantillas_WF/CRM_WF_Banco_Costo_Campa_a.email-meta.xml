@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Banco % Costo Campaña</name>
+    <style>formalLetter</style>
+    <subject>Participación del Banco en el Costo de la Campaña {!CRM_WF_Beneficios__c.CRM_WF_Campana__c}.</subject>
+    <textOnly>Por medio de la presente le informamos que existe una participación del Banco en el Costo de la Campaña con los siguientes datos:
+
+Datos de la Campaña:
+
+Nombre de la Campaña: {!CRM_WF_Beneficios__c.CRM_WF_Campana__c}
+Fecha de Inicio: {!CRM_WF_Beneficios__c.CRM_WF_Fecha_Inicio_Campana__c}
+Fecha Final: {!CRM_WF_Beneficios__c.CRM_WF_Fecha_Fin_Campana__c}
+Comercio: {!CRM_WF_Beneficios__c.CRM_WF_Comercio_Campana__c}
+
+
+Datos del Beneficio:
+
+Beneficio: {!CRM_WF_Beneficios__c.CRM_WF_Beneficio__c}
+Detalle de la recompensa: {!CRM_WF_Beneficios__c.CRM_WF_Detalle_De_Recompensa__c}
+
+
+Costo de la Campaña (%)
+
+Banco %: {!CRM_WF_Beneficios__c.CRM_WF_Banco__c}
+Comercio: {!CRM_WF_Beneficios__c.CRM_WF_Comercio_Beneficio__c}
+Firma: {!CRM_WF_Beneficios__c.CRM_WF_Firma__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

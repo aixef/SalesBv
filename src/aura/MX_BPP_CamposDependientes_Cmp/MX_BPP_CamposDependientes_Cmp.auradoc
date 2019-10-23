@@ -1,0 +1,18 @@
+<aura:documentation>
+	<aura:description>
+        <p><code>c:MX_BPP_CamposDependientes_Cmp</code> es un componente que recibe una lista de tipos de registro de un objeto, 
+            el nombre API del campo controlador, el nombre API del campo dependiente, el objeto donde se encuentran los campos
+            y regresa los valores dependientes de esos campos</p>
+    </aura:description>
+	<aura:example name="CamposDependientes" ref="c:MX_BPP_CamposDependientes_Cmp" label="Campos Dependientes Opp">
+		<p>Este ejemplo proporciona la lista de familias y sus productos de oportunidades según los tipos de registro recibidos.</p>
+        <p>Los parámetros necesarios son: 
+            listRecordTypes: los tipos de registros necesarios de la oportunidad.
+            controllingFieldAPI: el nombre API del campo controlador.
+            dependingFieldAPI: el nombre API del campo dependiente.
+            objDetail: el objeto donde residen los campos anteriores.
+            etiquetaCampoControllador: Una etiqueta que será presente sobre el campo controlador.
+            etiquetaCampoDependiente: Una etiqueta que será presente sobre el campo dependiente.
+        </p>
+	</aura:example>
+</aura:documentation>

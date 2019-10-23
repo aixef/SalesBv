@@ -1,0 +1,11 @@
+<aura:component  implements="flexipage:availableForAllPageTypes" access="global" controller="MX_SB_MLT_dynamicFormController_cls" >
+    <aura:attribute name="recordId" type="String" /> 
+    <aura:attribute name="objectIn" type="String"/>
+    <aura:attribute name="fieldReferenceIn" type="String"/>
+    <aura:attribute name="objectOut" type="String"/>
+    <aura:attribute name="fieldOut" type="String"/>
+    <aura:attribute name="fieldName" type="String"/>
+    <aura:attribute name="resultado" type="String"/>
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    	<lightning:input aura:id="cuentatxt" label="{!v.fieldName}" readonly="true" value="{!v.resultado}" />
+</aura:component>

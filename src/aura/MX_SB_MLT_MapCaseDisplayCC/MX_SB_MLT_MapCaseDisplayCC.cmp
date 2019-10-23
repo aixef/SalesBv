@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="url" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="recordId" type="Id" />
+    <iframe src="{!v.url+'?Id='+v.recordId}" allowfullscreen="allowfullscreen"  style="width:100%!important;height:470px;" frameBorder="0" />
+</aura:component>

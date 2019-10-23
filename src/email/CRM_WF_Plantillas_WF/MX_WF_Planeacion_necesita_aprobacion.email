@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[Por medio de la presente se le informa que su registro de Planeación Calendario CRM con Folio&nbsp;<b>{!CRM_WF_Planeacion_Calendario_CRM__c.Name} </b>para el día&nbsp;<div><b>&nbsp;{!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c} </b>necesita ser aprobada por CRM.</div><div><br></div><div>Volumen de carga de su base:&nbsp;<b>{!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c}</b></div><div><br></div><div><b>Multicanal</b></div><div>Volumen total de bases aprobadas:&nbsp;<b>{!CRM_WF_Calendario_CRM__c.CRM_WF_Volumen_Aprobado_CRM__c}</b></div><div>Volumen total de bases en lista de espera:&nbsp;<b>{!CRM_WF_Calendario_CRM__c.CRM_WF_Lista_de_Espera_CRM__c}</b></div><div><b><br></b></div><div><b>SMS / Push Notification</b>:</div><div>Volumen total de bases aprobadas:&nbsp;<b>{!CRM_WF_Calendario_CRM__c.CRM_WF_Volumen_Aprobado_SMS_Push__c}</b></div><div>Volumen total de bases en lista de espera:&nbsp;<b>{!CRM_WF_Calendario_CRM__c.CRM_WF_Lista_de_Espera__c}</b></div><div><b><br></b></div><div>Para acceder al detalle de tu registro has clic en el siguiente enlace: <a href="{!CRM_WF_Calendario_CRM__c.Link}">Planeación Calendario CRM</a></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

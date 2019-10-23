@@ -1,0 +1,176 @@
+<!--
+*Proyecto:               Banca Patrimonial y Privada
+*Descripción:            Componente Lightning para gestión de Oportunidades del cliente.
+*Cambios (Versiones)
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0	| 		N/A	     |	   N/A					|	  	Creación
+*1.1	|	05-02-2019	 |	Cristian Espinosa		|	Corrección de incidencia, se agrega zona horaria
+														al lightning:formattedDateTime que contiene la
+														fecha de cierre de las oportunidades, esto debido
+														a que al ser un tipo Date y el campo mostrar un
+														DateTime, debido al cambio de zona horaria muestra
+														la fecha con 7 horas menos, lo que le resta un día.
+
+*2.0	|   28/01/2019	 |   Adrián Pastor Pineda	|       Se agrega la variable bandera que sirve como identificador para saber si entra por RI o inicio.
+*2.1    |   21-05-2019   |   Hugo I. Carrillo B.    |   Correcciones de Code Smell en el controller y helper identificados por Sonar
+-->
+<aura:component controller="BPyP_OppRep" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+	<ltng:require styles="{!$Resource.SLDS_MAXBBVA + '/assets/styles/salesforce-lightning-design-system-ltng.css'}" />
+	<ltng:require scripts="{!$Resource.JqueryLightning}"  />
+    <ltng:require scripts="{!join(',',
+        $Resource.chartjsalm + '/chartjs/Chart.bundle.js',
+        $Resource.chartjsalm + '/chartjs/Chart.bundle.min.js',
+         $Resource.chartjsalm  + '/chartjs/Chart.js',
+           $Resource.chartjsalm  + '/chartjs/Chart.min.js'
+                               )}" afterScriptsLoaded="{!c.generateChart}"/>
+
+    <!-- r.almanza -->
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="seldiv" type="String" description="Selected Division"/>
+    <aura:attribute name="seloff" type="String" description="Selected Office"/>
+    <aura:attribute name="selbkm" type="String" description="Selected Bankman"/>
+    <aura:attribute name="RISelect" type="String" description="RI del Bankman"/>
+    <aura:attribute name="bandera" type="Boolean" default="False" description="Boolean para identificar si entra por RI o Inicio para consultar las oportunidades"/>
+    <aura:attribute name="isOff" type="Boolean" default="False" description="Boolean to know if user is office director"/>
+    <aura:attribute name="isDiv" type="Boolean" default="False" description="Boolean to know if user is div director"/>
+    <aura:attribute name="NumOfPag" type="Integer" description="Number of pages on Opportunity results"/>
+    <aura:attribute name="baseurl" type="String" description="Base URL"/>
+    <aura:attribute name="ActPag" type="Integer" description="Actual Number page on Opportunity results"/>
+    <aura:attribute name="chartHeight" type="Integer" description="Chart height"/>
+    <aura:attribute name="ListOfOpp" type="Opportunity[]" description="store accounts of BPyP"/>
+    <aura:attribute name="ListOfDiv" type="List" description="store option of Divisions of BPyP"/>
+    <aura:attribute name="ListOfOff" type="List" description="store option of Offices based on Div of BPyP"/>
+    <aura:attribute name="ListOfBkMn" type="List" description="store Bankmans on offices and divisions based on Div and offices of BPyP"/>
+    <aura:attribute name="ListOfTyOpp" type="List" description="store option of Divisions of BPyP"/>
+
+    <aura:attribute name="sDate" type="Date" default="" access="GLOBAL"/>
+    <aura:attribute name="eDate" type="Date" default="" access="GLOBAL"/>
+    <aura:attribute name="DateOfUpd" type="String"  />
+    <aura:handler name="changeEDate" value="{!v.eDate}" action="{!c.updOpAc}"/>
+    <aura:handler name="changeSDate" value="{!v.sDate}" action="{!c.updOpAc}"/>
+
+    <div class="slds-page-header" style="">
+        <div class="slds-media__body">
+            <h1 class="slds-page-header__title slds-truncate slds-align-middle slds-clearfix" title="Tipo de reporte"><strong>Oportunidades</strong>
+
+                <!-- <lightning:icon class="slds-float_right" iconName="utility:info" size="xx-small" title="Reporte que muestra Oportunidades analizando su distribución permitiendo acceder a los datos por división oficina y banquero"/> -->
+                <lightning:helptext title="Reporte que muestra Oportunidades analizando su distribución permitiendo acceder a los datos por división oficina y banquero" content="Reporte que muestra Oportunidades analizando su distribución permitiendo acceder a los datos por división oficina y banquero" iconName="utility:info"/>
+            </h1>
+        </div>
+    </div>
+    <div class="slds-grid slds-wrap slds-grid_pull-padded">
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_1-of-7">
+            <lightning:select aura:id="pklTyOppBpyP" name="selectTyOpp" label="Tipo de Oport" onchange="{!c.updOpAc}" >
+                <option value="">TODAS</option>
+                <aura:iteration items="{!v.ListOfTyOpp}" var="tyopp">
+                    <br/><option value="{!tyopp.StageName}" text="{!tyopp.StageName}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_1-of-7">
+        	<ui:inputDate aura:id="expsdate" label="Fecha Inicio" class="field" value="{!v.sDate}" displayDatePicker="true" change="{!c.updOpAc}"/>
+		</div>
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_1-of-7">
+			<ui:inputDate aura:id="expedate" label="Fecha Fin" class="field" value="{!v.eDate}" displayDatePicker="true" change="{!c.updOpAc}"/>
+		</div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_1-of-7">
+            <lightning:select aura:id="pklTyAccBpyP" name="selectDiv" label="Tipo de Cliente" onchange="{!c.updOpAc}">
+                <option value="C" text="CLIENTES"></option>
+                <option value="P" text="PROSPECTOS"></option>
+            </lightning:select>
+        </div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_1-of-7">
+            <lightning:select aura:id="pklDivBpyP" name="selectDiv" label="División" value="{!v.seldiv}" onchange="{!c.updDiv}" >
+                <option value="" selected="{!v.seldiv==''}">TODAS</option>
+                <aura:iteration items="{!v.ListOfDiv}" var="div">
+                    <br/><option value="{!div.Divisi_n__c}" text="{!div.Divisi_n__c}" selected="{!div.Divisi_n__c==v.seldiv}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_1-of-7">
+            <lightning:select aura:id="pklOffBpyP" name="selectOff" label="Oficina" value="{!v.seloff}" onchange="{!c.updOffice}" >
+                <option value="" selected="{!v.seloff==''}">TODAS</option>
+                <aura:iteration items="{!v.ListOfOff}" var="off">
+                    <br/><option value="{!off.BPyP_ls_NombreSucursal__c}" text="{!off.BPyP_ls_NombreSucursal__c}" selected="{!off.BPyP_ls_NombreSucursal__c==v.seloff}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_1-of-7">
+            <lightning:select aura:id="pklBkMnBpyP" name="selectBkMn" label="Banquero" onchange="{!c.updBkM}" >
+                <option value="">TODAS</option>
+                <aura:iteration items="{!v.ListOfBkMn}" var="BkMn">
+                    <br/><option value="{!BkMn.Id}" text="{!BkMn.Name}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+    </div>
+
+    <div class="slds-grid slds-wrap slds-grid_pull-padded">
+        <div class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 slds-p-around_large">
+            <canvas class="c4" aura:id="myChart" style="{! 'height: ' + v.chartHeight +'px'}"></canvas>
+            <div class="slds-text-color_inverse-weak slds-text-body_small">Última actualización {!v.DateOfUpd}.Actualizado en tiempo de ejecución. </div>
+        </div>
+        <aura:if isTrue="{!!v.isOpp}">
+            <div class="slds-table slds-table_bordered slds-table_cell-buffer slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 slds-hyphenate slds-p-around_large slds-box" id="wrapperOpp">
+
+            </div>
+        </aura:if>
+    </div>
+
+    <aura:attribute name="isOpp" type="boolean" default="false"/>
+    <aura:if isTrue="{!v.isOpp}">
+         <div class="slds-grid slds-wrap slds-grid_pull-padded " >
+            <div class="slds-table slds-table_bordered slds-table_cell-buffer slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 slds-p-around_large slds-box slds-hyphenate slds-scrollable">
+                <table role="grid">
+                    <thead>
+                        <tr class="slds-line-height_reset ">
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate"></div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Oportunidad</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Etapa</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Cliente o Prospecto</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Producto</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Subproducto</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Monto</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Fecha de cierre</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Fecha de creación</div></th>
+                            <th class="slds-is-resizable slds-truncate"><div class="slds-th__action slds-th__action_form slds-hyphenate">Banquero</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.ListOfOpp}" var="opp" indexVar="index">
+                            <tr class="slds-hint-parent ">
+                                <td class="slds-truncate slds-hyphenate"><div>{!(index+1)+((v.ActPag-1)*10)}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div><a href="{!v.baseurl+opp.Id+'/view'}">{!opp.Name}</a></div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!opp.StageName}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!opp.Account.Name}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!opp.MX_RTL_Producto__c}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!opp.OpportunityLineItems[0].MX_RTL_SubProducto__c}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!opp.Amount}</div></td>
+                                <td class="slds-truncate slds-hyphenate"><div><lightning:formattedDateTime value="{!opp.CloseDate}" timeZone="UTC" year="numeric" month="2-digit" day="2-digit" /></div></td>
+                                <td class="slds-truncate slds-hyphenate"><div><lightning:formattedDateTime value="{!opp.CreatedDate}" year="numeric" month="2-digit" day="2-digit" /></div></td>
+                                <td class="slds-truncate slds-hyphenate"><div>{!opp.Owner.Name}</div></td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="slds-align_absolute-center slds-button-group">
+            <button class="slds-button slds-button_neutral" onclick="{! c.frst }" disabled="{!v.ActPag==1}">Primero</button>
+            <button class="slds-button slds-button_neutral" onclick="{! c.prev }" disabled="{!v.ActPag==1}">Anterior</button>
+            <ui:outputText class="slds-button slds-button_neutral" value="{!v.ActPag +'/'+ v.NumOfPag}"/>
+            <button class="slds-button slds-button_neutral" onclick="{! c.next }" disabled="{!v.ActPag==v.NumOfPag||v.NumOfPag==0}">Siguiente</button>
+            <button class="slds-button slds-button_neutral" onclick="{! c.lst }" disabled="{!v.ActPag==v.NumOfPag||v.NumOfPag==0}">Ultimo</button>
+        </div>
+    </aura:if>
+
+</aura:component>

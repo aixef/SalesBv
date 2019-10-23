@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>La Url&apos;s para los llamados a los diferentes WS de Bancomer para conectarse con Clipert.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AuthPassword__c</fullName>
+        <description>Contraseña utilizada -como medio de autenticación- para consumir el servicio.</description>
+        <externalId>false</externalId>
+        <label>Contraseña</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AuthUser__c</fullName>
+        <description>Campo donde se almacena el nombre de usuario como medio de autenticación.</description>
+        <externalId>false</externalId>
+        <label>Usuario</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Token__c</fullName>
+        <externalId>false</externalId>
+        <label>Token</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Url__c</fullName>
+        <description>Aqui va la URL para conectarse al WS de Clipert</description>
+        <externalId>false</externalId>
+        <label>Url</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>URL&apos;s Web Services</label>
+    <visibility>Public</visibility>
+</CustomObject>

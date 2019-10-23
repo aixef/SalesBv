@@ -1,0 +1,8 @@
+<aura:documentation>
+    <aura:description>
+        <p>Un <code>EU001_cmp_customLookup</code> componente es un elemento que realiza una búsqueda de Sobjects</p>
+    </aura:description>
+    <aura:example name="Ejemplo" ref="c:EU001_cmp_customLookup" label="Búsqueda sObjects">
+       <p>Este ejemplo muestra el componente que realiza búsquedas de sObjects <code>EU001_cmp_customLookup</code>.</p>
+    </aura:example>
+</aura:documentation>

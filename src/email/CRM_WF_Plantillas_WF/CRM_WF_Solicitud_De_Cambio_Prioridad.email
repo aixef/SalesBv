@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style="font-size: 12pt;"><span style="font-size: 12pt;">Por medio de la presente solicitamos de su apoyo para realizar el cambio de la prioridad a&nbsp;<b>Urgente&nbsp;</b>en la Campaña&nbsp;</span><span style="font-size: medium;"><b>{!Campaign.Name}</b></span><span style="font-size: 12pt;">&nbsp;</span></div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;">Con la siguiente Justificación:&nbsp;<b>{!Campaign.CRM_WF_Justificacion_del__c}</b></div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;">Para realizar el cambio favor de dar clic en el siguiente vínculo:</div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;"><font size="3"><span style="background-color: rgb(255, 255, 255);"><a href="{!Campaign.Link}">{!Campaign.Link}</a></span></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

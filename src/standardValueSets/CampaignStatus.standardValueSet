@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Activa</fullName>
+        <default>false</default>
+        <label>Activa</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Aborted</fullName>
+        <default>false</default>
+        <label>Aborted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Planned</fullName>
+        <default>false</default>
+        <label>Planned</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Documentación</fullName>
+        <default>true</default>
+        <label>Documentación</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vo.Bo. Seguimiento</fullName>
+        <default>false</default>
+        <label>Vo.Bo. Seguimiento</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vo.Bo. Carta y/o Brief</fullName>
+        <default>false</default>
+        <label>Vo.Bo. Carta y/o Brief</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Carga Multicanal</fullName>
+        <default>false</default>
+        <label>Carga Multicanal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vo.Bo. Implementación</fullName>
+        <default>false</default>
+        <label>Vo.Bo. Implementación</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ejecución</fullName>
+        <default>false</default>
+        <label>Ejecución</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Seguimiento Post-Campaña</fullName>
+        <default>false</default>
+        <label>Seguimiento Post-Campaña</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Finalizada</fullName>
+        <default>false</default>
+        <label>Finalizada</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Desestimada</fullName>
+        <default>false</default>
+        <label>Desestimada</label>
+    </standardValue>
+</StandardValueSet>

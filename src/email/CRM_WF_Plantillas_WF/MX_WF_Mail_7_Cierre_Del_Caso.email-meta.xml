@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Mail 7 Cierre del Caso</name>
+    <style>formalLetter</style>
+    <subject>Aviso de cierre de Incidencia {!Case.CaseNumber}</subject>
+    <textOnly>Estimad@ {!Case.Contact}
+
+Tu solicitud con número de folio {!Case.CaseNumber} ha sido atendida y cerrada con la siguiente información:
+
+Comentarios de la aprobación: {!ApprovalRequest.Comments}
+
+Asunto: {!Case.Subject}
+Descripción del cierre del caso:{!Case.MX_WF_Descripcion_Cierre_Caso__c}
+Estatus: {!Case.Status}
+Motivo del Caso: {!Case.Reason}
+Clasificación: {!Case.MX_WF_Clasificacion__c}
+
+
+Contacta al responsable o al administrador para cualquier duda aclaración</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

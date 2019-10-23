@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto para registrar y dar de altas Proveedores de llamadas</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>MX_SB_VTS_Identificador_Proveedor__c</fullName>
+        <description>Identificador único de proveedores</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Seleccione un valor de la lista, si el valor que necesita no existe, por favor delo de alta en la lista global de Proveedores</inlineHelpText>
+        <label>Identificador Proveedor</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>MX_SB_VTS_Lista_Proveedores</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_IsReadyCTI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indica si el proveedor esta preparado para la integración con Salesforce</description>
+        <externalId>false</externalId>
+        <label>CTI Ready</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_PasswordProveedor__c</fullName>
+        <description>Clave de consumo de servicios Post/Rest</description>
+        <externalId>false</externalId>
+        <label>Contraseña</label>
+        <length>100</length>
+        <maskChar>asterisk</maskChar>
+        <maskType>all</maskType>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>EncryptedText</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Proveedor_Adminstrado__c</fullName>
+        <defaultValue>$Label.MX_SB_VTS_ProveedorAdministrado</defaultValue>
+        <description>Campo para filtrar resultados al Administrador</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Proveedor Adminstrado</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_TieneSegmento__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo que indica si el proveedor permite la segmentación de campañas</description>
+        <externalId>false</externalId>
+        <label>Segmentado</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_UrlServicesCTI__c</fullName>
+        <description>Url del servicio expuesto de CTI</description>
+        <encryptionScheme>ProbabilisticEncryption</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Url Servicio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_UsuarioProveedor__c</fullName>
+        <description>Usuario de conexión a servicios del proveedor</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Usuario</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>ProveedorCTI</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_ProveedoresList</fullName>
+        <columns>NAME</columns>
+        <filterScope>Mine</filterScope>
+        <label>Mis Proveedores</label>
+    </listViews>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>Nombre de Proveedores</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>ProveedoresCTI</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>MX_SB_VTS_ProveedoresCTI</fullName>
+        <active>true</active>
+        <description>Registro default</description>
+        <label>ProveedoresCTI</label>
+        <picklistValues>
+            <picklist>MX_SB_VTS_Identificador_Proveedor__c</picklist>
+            <values>
+                <fullName>Ninguno</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>SMART CENTER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Todos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VCIP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

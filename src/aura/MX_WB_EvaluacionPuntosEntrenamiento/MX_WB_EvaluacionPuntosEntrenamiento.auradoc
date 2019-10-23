@@ -1,0 +1,21 @@
+<aura:documentation>
+	<aura:description>
+    <p><b>NAME</b>MX_WB_EvaluacionCalidad</p>
+        <p><b>DESCRIPTION</b>This component shows the concepts defined to be part of an evaluation</p>
+        <p><b>ATTRIBUTES</b>
+            <ul>
+                <li><p><b>lstPuntosEntrenamiento</b>List of options for the Training Points MultiSelect</p></li>
+                <li><p><b>idConcepto</b> The id of the Related Concept</p></li>
+
+            </ul>
+        </p>
+
+
+        <p><b>CONTROLLER METHODS</b>
+            <ul>
+                <li><p><b>fireComponent</b> Fire an Event to notify the parent MX_WB_EvaluacionCalidad component the change</p></li>
+            </ul>
+        </p>
+
+    </aura:description>
+</aura:documentation>

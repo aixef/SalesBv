@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Aprobar Seguimiento</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de Aprobación Campaña {!Campaign.Name} con Folio {!Campaign.CRM_WF_Folio__c}</subject>
+    <textOnly>Por medio de la presente solicitamos de su apoyo para aprobar los indicadores requeridos de la Campaña: {!Campaign.Name} con los siguiente datos:
+
+FIC: {!Campaign.CRM_WF_FIC__c}
+Ärea Solicitante: {!Campaign.CRM_WF_Area_Solicitante__c}
+Fecha Inicio: {!Campaign.StartDate}
+Fecha Final: {!Campaign.EndDate}
+Recurrencia: {!Campaign.CRM_WF_Recurrencia__c}
+KPI Objetivo: {!Campaign.CRM_WF_KPI_Objetivo__c}
+Con Vo.Bo. Seguimiento: {!Campaign.CRM_WF_Con_VoBo_Seguimiento__c}
+Estatus Seguimiento: {!Campaign.CRM_WF_Estatus_De_Seguimiento__c}
+Con criterios: {!Campaign.CRM_WF_Con_Criterios__c}
+Criterios IC: {!Campaign.CRM_WF_Criterios_De_Ic__c}
+Con Modelo: {!Campaign.CRM_WF_Con_Modelo__c}
+Modelo: {!Campaign.CRM_WF_Modelo__c}
+Indicadores requeridos: {!Campaign.CRM_WF_Indicadores_Requeridos__c}
+Canales de comunicación: {!Campaign.CRM_WF_Canales_de_Comunicacion__c}
+
+
+Folio: {!Campaign.CRM_WF_Folio__c}
+
+Para mayor detalle favor de dar clic en el siguiente vínculo:
+
+Detalle Campaña en Salesforce
+
+Para aprobar o rechazar esta campaña, haga clic en este vínculo Aprobación de Campaña en Salesforce o responda a este correo electrónico con una de estas palabras en la primera línea del mensaje: APROBAR, APROBADO, RECHAZAR, RECHAZADO, NO.
+
+Si envía su respuesta a través de email, también puede agregar comentarios en la segunda línea. Los comentarios se almacenarán con la solicitud de aprobación en Salesforce.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

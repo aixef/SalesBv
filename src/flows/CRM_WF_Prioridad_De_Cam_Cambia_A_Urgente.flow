@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Notificacion_solicitud_de_cambio_de_prioridad</name>
+        <label>Notificacion solicitud de cambio de prioridad</label>
+        <locationX>894</locationX>
+        <locationY>127</locationY>
+        <actionName>Campaign.CRM_WF_Solicitud_Cambio_Prioridad</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>CampanaID</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <description>Flujo para cambiar la prioridad a urgente de una campaña mediante un asistente de captura</description>
+    <interviewLabel>Solicitud de cambio de Prioridad {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Solicitud de cambio de Prioridad</label>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Actualizar_campos</name>
+        <label>Actualizar campos</label>
+        <locationX>493</locationX>
+        <locationY>133</locationY>
+        <connector>
+            <targetReference>Cambio_a_Urgente1</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CampanaID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>CRM_WF_Justificacion_del__c</field>
+            <value>
+                <elementReference>Justificaci_n1</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CRM_WF_Prioridad_del__c</field>
+            <value>
+                <stringValue>Solicitud de Urgencia</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <screens>
+        <name>Cambio_a_Urgente1</name>
+        <label>Cambio a Urgente</label>
+        <locationX>714</locationX>
+        <locationY>131</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Notificacion_solicitud_de_cambio_de_prioridad</targetReference>
+        </connector>
+        <fields>
+            <name>Cambioaurgente2</name>
+            <fieldText>{!Cambioaurgente}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Justificaci_n</name>
+        <label>Justificación</label>
+        <locationX>109</locationX>
+        <locationY>130</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Notificaciones_generales</targetReference>
+        </connector>
+        <fields>
+            <name>justtexto</name>
+            <fieldText>{!justtxt}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Justificaci_n1</name>
+            <fieldText>Justificación</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Notificaciones_generales</name>
+        <label>Notificaciones generales</label>
+        <locationX>285</locationX>
+        <locationY>131</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Actualizar_campos</targetReference>
+        </connector>
+        <fields>
+            <name>Notificaciones</name>
+            <fieldText>{!Notificacionesgenerales}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Justificaci_n</startElementReference>
+    <status>Obsolete</status>
+    <textTemplates>
+        <name>Cambioaurgente</name>
+        <text>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:18px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;1&quot;&gt;Se ha enviado la Solicitud para cambiar la prioridad de la &lt;B&gt;Campaña&lt;/B&gt; a &lt;B&gt;Urgente.&lt;/B&gt;&lt;FONT STYLE=&quot;font-size:20px&quot;&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/DIV&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>justtxt</name>
+        <text>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:20px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;1&quot;&gt;Favor de justificar la razón por la cuál esta Solicitando un cambio de prioridad a &lt;B&gt;Urgente&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Notificacionesgenerales</name>
+        <text>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:20px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;1&quot;&gt;Se enviará una notificación por correo electrónico Solicitando un cambio en la prioridad de la &lt;B&gt;Campaña.&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>CampanaID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

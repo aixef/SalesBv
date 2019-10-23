@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación Workflow, se envía en el inicio del proceso de aprobación de la Carta Origen</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Aprobar Carta Origen V2</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de Aprobación Carta Origen - Folio {!CRM_WF_Cartas_Origen__c.Name}</subject>
+    <textOnly>Por medio de la presente solicitamos de su apoyo para aprobar la Carta Origen con los siguientes datos:
+
+Número de Folio: {!CRM_WF_Cartas_Origen__c.Name}
+Tipo de Solicitud: Origen
+Referencia: {!CRM_WF_Cartas_Origen__c.CRM_WF_Referencia__c}
+Comentarios: {!ApprovalRequest.Comments}
+
+SOLICITANTE
+
+Nombre del Solicitante: {!CRM_WF_Cartas_Origen__c.GBL_WF_Nombre_Del_Solicitante__c}
+Área Solicitante: {!CRM_WF_Cartas_Origen__c.GBL_WF_Area_del_solicitante__c}
+Área DG: Campañas CRM
+
+GENERADOR
+
+Nombre del Generador de Información: {!CRM_WF_Cartas_Origen__c.GBL_WF_Generador__c}
+Correo electrónico del Generador de Información:{!CRM_WF_Cartas_Origen__c.GBL_WF_Email_generador__c}
+Teléfono del Generador de Información: {!CRM_WF_Cartas_Origen__c.GBL_WF_Tel_Ext_generador__c}
+
+
+AUTORIZADORES
+
+Nombre Autorizador Generador Campañas: {!CRM_WF_Cartas_Origen__c.GBL_WF_Generador__c}
+Nombre Autorizador DG Campañas CRM: {!CRM_WF_Cartas_Origen__c.GBL_WF_Autorizador__c}
+Nombre Autorizador Inteligencia Comercial: Victor Arrioja Bashchuk
+Nombre Autorizador Fraud Operations MX: Juan Carlos Arena Rosas
+
+DESTINO DE INFORMACIÓN
+
+Destino de la Información: {!CRM_WF_Cartas_Origen__c.GBL_WF_Emp_Area_Bancomer__c}
+Tipo de Envío: {!CRM_WF_Cartas_Origen__c.CRM_WF_Tipo_de_Envio__c}
+Nombre del Custodio de Información (1): {!CRM_WF_Cartas_Origen__c.GBL_WF_Nombre_Custodio_1__c}
+Correo electrónico del Custodio de Información (1): {!CRM_WF_Cartas_Origen__c.GBL_WF_Correo_Electronico_Custodio_1__c}
+Teléfono del Custodio de Información (1): {!CRM_WF_Cartas_Origen__c.GBL_WF_Telefono_Custodio_1__c}
+Nombre del Custodio de Información (2): {!CRM_WF_Cartas_Origen__c.GBL_WF_Nombre_Custodio_2__c}
+Correo electrónico del Custodio de Información (2): {!CRM_WF_Cartas_Origen__c.GBL_WF_Correo_Electronico_Custodio_2__c}
+Teléfono del Custodio de Información (2): {!CRM_WF_Cartas_Origen__c.GBL_WF_Telefono_Custodio_2__c}
+
+ORIGEN DEL PEDIDO
+
+Proyecto /Referencia: {!CRM_WF_Cartas_Origen__c.CRM_WF_Campana_Carta_Custodia__c}
+Objetivo: {!CRM_WF_Cartas_Origen__c.CRM_WF_Objetivo__c}
+
+DATOS DE SALIDA DE INFORMACIÓN
+Vigencia:
+A partir de: {!CRM_WF_Cartas_Origen__c.CRM_WF_A_Partir_De__c} Hasta: {!CRM_WF_Cartas_Origen__c.CRM_WF_Hasta__c}
+Periodicidad del Envío: {!CRM_WF_Cartas_Origen__c.CRM_WF_Frecuencia__c}
+
+Total de Registros a Enviar en la Campaña: {!CRM_WF_Cartas_Origen__c.CRM_WF_Total_de_Registros__c}
+Total de Bases a Enviar en la Campaña: {!CRM_WF_Cartas_Origen__c.CRM_WF_Numero_De_Bases_A_Enviar__c}
+Total de Cartas: Recurrentes (eventos de salida de información) para la Campaña: {!CRM_WF_Cartas_Origen__c.CRM_WF_Total_De_C_Recurrentes__c}
+Total de Registros en Cartas Recurrentes: {!CRM_WF_Cartas_Origen__c.CRM_WF_Total_Registros_En_C_Recurrentes__c}
+Total de Bases en Cartas Recurrentes: {!CRM_WF_Cartas_Origen__c.CRM_WF_Total_Bases_En_C_Recurrentes__c}
+Layout: {!CRM_WF_Cartas_Origen__c.CRM_WF_Layout__c}
+Campos Adicionales al Layout: {!CRM_WF_Cartas_Origen__c.CRM_WF_Adicionales_Al_Layout__c}
+Requiere tarjeta en claro: {!CRM_WF_Cartas_Origen__c.CRM_WF_Requiere_Aprobacion_De_Fraudes__c}
+
+Fecha de solicitud de extensión de borrado de información: {!CRM_WF_Cartas_Origen__c.CRM_WF_Fecha_Solicitud_De_Ext_Borrado__c}.
+
+Justificación de extensión de borrado: {!CRM_WF_Cartas_Origen__c.CRM_WF_Justificacion_Extension_Borrado__c}
+
+
+
+TIPO DE EXTRACCIÓN DE LA INFORMACIÓN
+
+{!CRM_WF_Cartas_Origen__c.CRM_WF_Tarjetas_De_Credito__c}
+{!CRM_WF_Cartas_Origen__c.CRM_WF_Creditos__c}
+{!CRM_WF_Cartas_Origen__c.CRM_WF_Cuentas_De_Captacion__c}
+{!CRM_WF_Cartas_Origen__c.CRM_WF_Servicios_Digitales__c}
+{!CRM_WF_Cartas_Origen__c.CRM_WF_Seguros_Bancomer__c}
+{!CRM_WF_Cartas_Origen__c.CRM_WF_Especificar_Otro_Tipo_De_Ext__c}
+
+Para ver los detalles de la Carta en Salesforce de clic al siguiente vínculo:
+
+Detalla de Carta Origen en Salesforce
+
+
+Para aprobar o rechazar esta solicitud, haga clic en el siguiente vínculo Registro de Aprobación. o responda a este correo electrónico con una de estas palabras en la primera línea del mensaje APROBAR, APROBADO, RECHAZAR, RECHAZADO, NO.
+
+Si envía su respuesta a través de email, también puede agregar comentarios en la segunda línea. Los comentarios se almacenan con la solicitud de aprobación de Salesforce.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

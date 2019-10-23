@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación Workflow, se envía como una alerta durante el proceso de aprobación</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Alerta Brief Arte Aprobado Desclub</name>
+    <style>formalLetter</style>
+    <subject>Se aprobo el Arte con Folio {!CRM_WF_Artes__c.Name}</subject>
+    <textOnly>Arte aprobado con la siguiente información:
+
+Folio de Campaña (FIC): {!CRM_WF_Brief__c.CRM_WF_FIC__c}
+Nombre de la Campaña:{!CRM_WF_Brief__c.CRM_WF_Campana_Brief__c}
+
+Datos Arte:
+
+Nombre de la Versión/Arte: {!CRM_WF_Artes__c.CRM_WF_Nombre_De_La_Version_Arte__c}
+Folio de la Versión/Arte: {!CRM_WF_Artes__c.Name}
+Agencia Creativa: {!CRM_WF_Artes__c.GBL_WF_Agencia_Creativa__c}
+Agencia de Medios:{!CRM_WF_Artes__c.GBL_WF_Agencia_De_Medios__c}
+¿La versión/arte es para campaña masiva?: {!CRM_WF_Artes__c.CRM_WF_El_Material_Es_Parte__c}
+Objetivo de la versión: {!CRM_WF_Artes__c.CRM_WF_Objetivo_De_La_Version__c}
+Tipo de canal: {!CRM_WF_Artes__c.GBL_WF_Tipo_de_Canal__c}
+Canal: {!CRM_WF_Artes__c.GBL_WF_Canal__c}
+Producto: {!CRM_WF_Artes__c.GBL_WF_Producto__c}
+Subproducto: {!CRM_WF_Artes__c.GBL_WF_Subproducto__c}
+Audiencia versión/arte: {!CRM_WF_Artes__c.CRM_WF_Audiencia__c}
+Mensaje principal: {!CRM_WF_Artes__c.CRM_WF_Mensaje_Principal__c}
+Restricción o condicionantes: {!CRM_WF_Artes__c.CRM_WF_Restriccion_O_Condicionantes__c}
+¿El copy requiere datos variables?: {!CRM_WF_Artes__c.CRM_WF_Copy_Requiere_Datos_Variables__c}
+Enlista los datos variables (si aplica): {!CRM_WF_Artes__c.CRM_WF_Enlista_Los_Datos_Variables__c}
+Texto de referencia con datos variables (si aplica): {!CRM_WF_Artes__c.CRM_WF_Texto_Incluyendo_Datos_Variables__c}
+Legales: {!CRM_WF_Artes__c.CRM_WF_Legales__c}
+Links para descarga de material: {!CRM_WF_Artes__c.CRM_WF_Links_Para_Descarga_De_Material__c}
+Open Rate: {!CRM_WF_Artes__c.CRM_WF_Open_Rate__c}
+CTOR: {!CRM_WF_Artes__c.CRM_WF_CTOR__c}
+
+Comentarios de la aprobación: {!ApprovalRequest.Comments}
+
+Datos de BRIEF:
+
+Número de Folio Brief : {!CRM_WF_Brief__c.Name}
+Fecha de Solicitud: {!CRM_WF_Brief__c.CRM_WF_Fecha_Solicitud_Brief__c}
+Fecha de Lanzamiento de Campaña: {!CRM_WF_Brief__c.CRM_WF_Fecha_De_Campana__c}
+Área Solicitante: {!CRM_WF_Brief__c.CRM_WF_Area_Solicitante__c}
+Solicitante: {!CRM_WF_Brief__c.GBL_WF_Solicitante__c}
+
+Artes Solicitados: {!CRM_WF_Brief__c.CRM_WF_Numero_De_Artes__c}
+¿Cuentas con landing page taggeada?: {!CRM_WF_Brief__c.CRM_WF_Cuentas_Con_Pagina_Tageada__c}
+¿Porqué no está taggeada? (si aplica): {!CRM_WF_Brief__c.CRM_WF_Porque__c}
+Vigencia de la promoción/oferta: {!CRM_WF_Brief__c.CRM_WF_Vigencia_De_La_Promocion_Oferta__c}
+Canales de comunicación: {!CRM_WF_Brief__c.CRM_WF_Canales_de_Comunicacion__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

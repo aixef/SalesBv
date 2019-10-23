@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_WF_Carta_Recurrente_P_gina_de_registro3</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>CRM_WF_Carta_Recurrente_Compacto</fullName>
+        <fields>Name</fields>
+        <fields>CRM_WF_A_Partir_De_Carta_Origen__c</fields>
+        <fields>CRM_WF_Hasta_Carta_Origen__c</fields>
+        <fields>CRM_WF_Total_Registros_Carta_Origen__c</fields>
+        <fields>CRM_WF_Total_De_Bases_Carta_Origen__c</fields>
+        <label>Carta Recurrente Compacto</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CRM_WF_A_Partir_De_Carta_Origen__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Carta_Origen_C_Recurrente__r.CRM_WF_A_Partir_De__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>A partir de</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Bases_A_Enviar__c</fullName>
+        <externalId>false</externalId>
+        <label>Bases a Enviar</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Brief__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Brief</label>
+        <referenceTo>CRM_WF_Brief__c</referenceTo>
+        <relationshipLabel>Cartas Recurrentes</relationshipLabel>
+        <relationshipName>Cartas_Recurrentes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Buzun_Squad__c</fullName>
+        <externalId>false</externalId>
+        <label>Buzón Squad</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Canal_de_Comunicacion_Carta__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (CRM_WF_Carta_Origen_C_Recurrente__r.CRM_WF_Canales_Com_Carta_Custodia__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Canal de Comunicación (Carta)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Carta_Origen_C_Recurrente__c</fullName>
+        <externalId>false</externalId>
+        <label>Carta Origen</label>
+        <referenceTo>CRM_WF_Cartas_Origen__c</referenceTo>
+        <relationshipLabel>Cartas Recurrentes</relationshipLabel>
+        <relationshipName>Salidas_de_informaci_n</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Cifras_Control_Bases__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Cifras control para notificar al JM el número de Bases y registros que se envían.</inlineHelpText>
+        <label>Cifras Control Bases</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Contable_C_Recurrente__c</fullName>
+        <defaultValue>1</defaultValue>
+        <externalId>false</externalId>
+        <label>Contable por Carta Recurrente</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Desea_Cancelar_Carta_Recurrente__c</fullName>
+        <description>Campo para la aplicación Workflow, se usa para cancelar una Carta Recurrente</description>
+        <externalId>false</externalId>
+        <label>¿Desea cancelar la Carta Recurrente?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Dias_Ext_Borrado__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Fecha_Aprobada_Ext_Borrado__c  -  CRM_WF_Fecha_limite_Borrado_informaci_n__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Días de extensión de borrado</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Etapa_De_Salida_De_Informacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Etapa de salida de información</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pendiente</fullName>
+                    <default>true</default>
+                    <label>Pendiente</label>
+                </value>
+                <value>
+                    <fullName>Base enviada a proveedor</fullName>
+                    <default>false</default>
+                    <label>Base enviada a proveedor</label>
+                </value>
+                <value>
+                    <fullName>Base recibida por proveedor</fullName>
+                    <default>false</default>
+                    <label>Base recibida por proveedor</label>
+                </value>
+                <value>
+                    <fullName>Cancelada</fullName>
+                    <default>false</default>
+                    <label>Cancelada</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_FIC__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Carta_Origen_C_Recurrente__r.CRM_WF_Campana_Carta_Custodia__r.CRM_WF_FIC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FIC</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Aprobada_Ext_Borrado__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Carta_Origen_C_Recurrente__r.CRM_WF_Fecha_Aprobada_Ext_Borrado__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fecha aprobada de ext. de borrado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Borrado_De_Informacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha aprobada de borrado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_De_Carga_Seguridad__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de carga seguridad</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_De_La_C_Recurrente__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Se actualiza de forma automática con la fecha en que se inicia el proceso de aprobación.</inlineHelpText>
+        <label>Fecha de la Salida</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_limite_Borrado_informaci_n__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( ISBLANK( CRM_WF_Fecha_Aprobada_Ext_Borrado__c ), CRM_WF_Fecha_De_La_C_Recurrente__c + 30, CRM_WF_Fecha_Aprobada_Ext_Borrado__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fecha límite de borrado información</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Folio_Carta_Recurrente__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Carta_Origen_C_Recurrente__r.Name  &amp; &quot;-&quot;  &amp; Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Folio Carta Recurrente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Hasta_Carta_Origen__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Carta_Origen_C_Recurrente__r.CRM_WF_Hasta__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hasta</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Just_De_Cancelacin_Carta__c</fullName>
+        <description>Campo para la aplicación Workflow, se usa para mostrar un valor de texto para Justificar la cancelación de una Carta Recurrente</description>
+        <externalId>false</externalId>
+        <label>Justificación de Cancelación de Carta</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Just_De_Cancelacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Justificación de cancelación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Monitoreo_Registros_en_Bases__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( CRM_WF_Validacion_Registros_de_Bases__c = &quot;0&quot; &amp;&amp; MX_WF_Validacion_De_Bases__c = &quot;0&quot; , IMAGE (&quot;/servlet/servlet.FileDownload?file=0151U000001YpSp&quot;, &quot;Green&quot; ), 
+IMAGE (&quot;/servlet/servlet.FileDownload?file=0151U000001YpSn&quot;, &quot;Red&quot; ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monitoreo de Bases y Registros en Bases</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_De_Registros__c</fullName>
+        <externalId>false</externalId>
+        <label>Número de Registros</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_de_Bases__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Número de Bases en Carta Recurrente</inlineHelpText>
+        <label>Número de Bases</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_de_registros_en_bases__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Suma total de registros en bases de Carta Recurrente</inlineHelpText>
+        <label>Número de registros en bases</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Otro__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Especifique el canal de envío</inlineHelpText>
+        <label>Otro</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Soporte_De_Salida__c</fullName>
+        <externalId>false</externalId>
+        <label>Soporte de salida</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Suma_De_Registros_En_Bases__c</fullName>
+        <externalId>false</externalId>
+        <label>Suma de Registros en Bases</label>
+        <summarizedField>CRM_WF_Bases__c.CRM_WF_Total_Registros_Por_Base__c</summarizedField>
+        <summaryForeignKey>CRM_WF_Bases__c.CRM_WF_Nombre_De_Carta_Recurrente__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tipo_de_Envio__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Envío</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Retargeting</fullName>
+                    <default>false</default>
+                    <label>Retargeting</label>
+                </value>
+                <value>
+                    <fullName>REUS</fullName>
+                    <default>false</default>
+                    <label>REUS</label>
+                </value>
+                <value>
+                    <fullName>Venta</fullName>
+                    <default>false</default>
+                    <label>Venta</label>
+                </value>
+                <value>
+                    <fullName>Otro</fullName>
+                    <default>false</default>
+                    <label>Otro</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Total_De_Bases_Carta_Origen__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (CRM_WF_Carta_Origen_C_Recurrente__r.CRM_WF_Numero_De_Bases_A_Enviar__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total de bases a enviar autorizado en Carta Origen</inlineHelpText>
+        <label>Total de Bases a enviar</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Total_Registros_Carta_Origen__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT ( CRM_WF_Carta_Origen_C_Recurrente__r.CRM_WF_Total_de_Registros__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total de Registros Autorizados en Carta Origen</inlineHelpText>
+        <label>Total de Registros</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Validacion_Registros_de_Bases__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (CRM_WF_Numero_de_registros_en_bases__c - CRM_WF_Suma_De_Registros_En_Bases__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Validación de registros de Bases</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Producto__c</fullName>
+        <description>Campo para aplicación Workflow, en el que especifican producto para la opcion de tipo de envío  Retargeting</description>
+        <externalId>false</externalId>
+        <label>Producto</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Con_VoBo_de_Seguridad_del__c</fullName>
+        <externalId>false</externalId>
+        <label>¿Con VoBo de Seguridad?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Suma_de_Bases__c</fullName>
+        <externalId>false</externalId>
+        <label>Suma de Bases</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Bases__c.CRM_WF_Total_Registros_Por_Base__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Bases__c.CRM_WF_Nombre_De_Carta_Recurrente__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Tipo_de_Servicio__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (CRM_WF_Carta_Origen_C_Recurrente__r.GBL_WF_Emp_Area_Bancomer__r.MX_WF_Tipo_De_Servicio__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de Servicio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Validacion_De_Bases__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT ( CRM_WF_Numero_de_Bases__c - MX_WF_Suma_de_Bases__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Validación de Bases</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Carta Recurrente</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{MM}{000}</displayFormat>
+        <label>Folio</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cartas Recurrentes</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CRM_WF_Carta_Recurrente</fullName>
+        <active>true</active>
+        <label>Carta Recurrente</label>
+        <picklistValues>
+            <picklist>CRM_WF_Desea_Cancelar_Carta_Recurrente__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Etapa_De_Salida_De_Informacion__c</picklist>
+            <values>
+                <fullName>Base enviada a proveedor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Base recibida por proveedor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pendiente</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tipo_de_Envio__c</picklist>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retargeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <searchResultsAdditionalFields>CRM_WF_Just_De_Cancelacion__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CRM_WF_Just_De_Cancelacin_Carta__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>CRM_WF_Bases_A_Enviar_Mayor_A_1</fullName>
+        <active>true</active>
+        <errorConditionFormula>CRM_WF_Bases_A_Enviar__c &lt; 1  
+
+||
+
+ISBLANK( CRM_WF_Bases_A_Enviar__c )</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Bases_A_Enviar__c</errorDisplayField>
+        <errorMessage>El número de bases a enviar en el Plan de envío debe ser mayor o igual a 1</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Canal_Telemarketing_Carta_Recu</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+      CRM_WF_Canal_de_Comunicacion_Carta__c = &quot;Telemarketing&quot;,
+        ISPICKVAL( CRM_WF_Tipo_de_Envio__c , &quot;&quot;) 
+     )</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Tipo_de_Envio__c</errorDisplayField>
+        <errorMessage>Debe especificar el tipo de envío cuando el Canal sea Telemarketing</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Externo_Con_Vobo_Seguridad</fullName>
+        <active>false</active>
+        <description>La validación pide ingresar un valor en la desicion de si requiere VoBo de Seguridad cuando el Tipo de envió es Externo</description>
+        <errorConditionFormula>AND(
+ISPICKVAL( CRM_WF_Carta_Origen_C_Recurrente__r.CRM_WF_Tipo_de_Envio__c , &quot;Externo&quot;),
+ISPICKVAL(  MX_WF_Con_VoBo_de_Seguridad_del__c  , &quot;&quot;) 
+)</errorConditionFormula>
+        <errorDisplayField>MX_WF_Con_VoBo_de_Seguridad_del__c</errorDisplayField>
+        <errorMessage>Cuando eliges el Tipo de envío Externo en la Carta Origen debes especificar si la Salida de Información requiere VoBo de Seguridad</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Justi_Cancelacion_CR_Obligatoria</fullName>
+        <active>true</active>
+        <description>Si seleccionas el valor Si en el campo ¿Desea cancelar la Carta Recurrente? debes agregar una Justificación de Cancelación de Carta</description>
+        <errorConditionFormula>AND( 
+ISPICKVAL( CRM_WF_Desea_Cancelar_Carta_Recurrente__c , &quot;Si&quot;), 
+CRM_WF_Just_De_Cancelacin_Carta__c = &quot;&quot;, 
+RecordType.Name = &quot;Carta Recurrente&quot; 
+)</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Just_De_Cancelacin_Carta__c</errorDisplayField>
+        <errorMessage>Debes agregar una Justificación de Cancelación para la Carta Recurrente</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_No_De_Bases_Mayor_A_1</fullName>
+        <active>true</active>
+        <errorConditionFormula>CRM_WF_Numero_de_Bases__c &lt;=  0</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Numero_de_Bases__c</errorDisplayField>
+        <errorMessage>El número de bases en el Registro de Salida debe ser mayor o igual a 1</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_No_Registros_En_Bases_Mayor_A_1</fullName>
+        <active>true</active>
+        <errorConditionFormula>CRM_WF_Numero_de_registros_en_bases__c  &lt;= 0</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Numero_de_registros_en_bases__c</errorDisplayField>
+        <errorMessage>El número de registros en bases en el Registro de Salida debe ser mayor o igual a 1</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_No_Registros_Mayor_A_1</fullName>
+        <active>true</active>
+        <errorConditionFormula>CRM_WF_Numero_De_Registros__c &lt; 1
+
+|| 
+
+ISBLANK( CRM_WF_Numero_De_Registros__c )</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Numero_De_Registros__c</errorDisplayField>
+        <errorMessage>El número de registros en el Plan de envío debe ser mayor o igual a 1</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Producto_es_obligatorio</fullName>
+        <active>true</active>
+        <description>La validación pide ingresar un valor cuando el tipo de envío es Retargeting</description>
+        <errorConditionFormula>AND( ISPICKVAL( CRM_WF_Tipo_de_Envio__c , &quot;Retargeting&quot;) , ISBLANK( GBL_WF_Producto__c ))</errorConditionFormula>
+        <errorMessage>Cuando eliges el Tipo de envío Retargeting debes especificar el Producto</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_TipodeEnvio_Otro_Obligatorio</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+        ISPICKVAL( CRM_WF_Tipo_de_Envio__c , &quot;Otro&quot;),
+          CRM_WF_Otro__c =&quot;&quot;
+    )</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Otro__c</errorDisplayField>
+        <errorMessage>Especifique el valor de Otro</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Val_Fecha_De_Salida_En_Rango</fullName>
+        <active>false</active>
+        <errorConditionFormula>CRM_WF_Fecha_De_La_C_Recurrente__c &lt;  CRM_WF_A_Partir_De_Carta_Origen__c 
+
+||  
+
+CRM_WF_Fecha_De_La_C_Recurrente__c &gt;
+CRM_WF_Hasta_Carta_Origen__c</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Fecha_De_La_C_Recurrente__c</errorDisplayField>
+        <errorMessage>La fecha de salida de información debe estar dentro del rango de la vigencia autorizada</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Val_No_De_Bases_En_Rango</fullName>
+        <active>true</active>
+        <errorConditionFormula>CRM_WF_Numero_de_Bases__c &gt; CRM_WF_Bases_A_Enviar__c</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Numero_de_Bases__c</errorDisplayField>
+        <errorMessage>El número de bases no puede ser mayor a las bases autorizadas en el plan de envío</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Val_No_De_Registros_En_Rango</fullName>
+        <active>true</active>
+        <errorConditionFormula>CRM_WF_Numero_de_registros_en_bases__c &gt;  CRM_WF_Numero_De_Registros__c</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Numero_de_registros_en_bases__c</errorDisplayField>
+        <errorMessage>El número de registros no puede ser mayor a los registros autorizados en el plan de envío</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

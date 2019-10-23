@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AlgunOtroComentario__c</fullName>
+        <externalId>false</externalId>
+        <label>¿Algún otro comentario que quisieras dar</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CALLENUMEROSMAY__c</fullName>
+        <externalId>false</externalId>
+        <formula>UPPER( CalleNumeros__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CALLE Y NÚMEROS</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CIUDADMAY__c</fullName>
+        <externalId>false</externalId>
+        <formula>UPPER(  Ciudad__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CIUDAD</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COLONIAMAY__c</fullName>
+        <externalId>false</externalId>
+        <formula>UPPER(  Colonia__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>COLONIA</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CPMAY__c</fullName>
+        <externalId>false</externalId>
+        <formula>UPPER(  CP__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CP</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CP__c</fullName>
+        <externalId>false</externalId>
+        <label>Cp</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CalleNumerosFormula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Poliza__r.Account.Numero_Interior__c ), 
+Poliza__r.Account.BillingStreet &amp; &quot;, &quot; &amp;  Poliza__r.Account.Numero_Exterior__c, 
+Poliza__r.Account.BillingStreet &amp; &quot;, &quot; &amp;  Poliza__r.Account.Numero_Exterior__c &amp; &quot;, &quot; &amp;&quot;N° Interior&quot; &amp; &quot; &quot; &amp;  Poliza__r.Account.Numero_Interior__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Calle y Números Fórmula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CalleNumeros__c</fullName>
+        <externalId>false</externalId>
+        <label>Calle y Números</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Caso__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Caso</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Correo Marketing</relationshipLabel>
+        <relationshipName>CorreoMarketing</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ciudad__c</fullName>
+        <externalId>false</externalId>
+        <label>Ciudad</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Colonia__c</fullName>
+        <externalId>false</externalId>
+        <label>Colonia</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contestada__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  VigenciaInvitacion__c   &gt;= 1, &quot;Si&quot;, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contestada</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CorreoCliente__c</fullName>
+        <externalId>false</externalId>
+        <label>Correo cliente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Correo_Contratante__c</fullName>
+        <externalId>false</externalId>
+        <formula>Poliza__r.CorreodelCliente__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Correo Contratante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CuentaBlueTooth__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Permite saber si el dispositivo del cliente tiene bluetooth</description>
+        <externalId>false</externalId>
+        <label>¿Cuenta con bluetooth?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CuentaDispositivoAndroid__c</fullName>
+        <description>Permite saber si el cliente que participa en la campaña de Cool Drive tiene dispositivo Android</description>
+        <externalId>false</externalId>
+        <label>¿Cuenta con dispositivo Android?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cuenta__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Cuenta</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Correo Marketing</relationshipLabel>
+        <relationshipName>Correo_Marketing</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DiasDesdeUltimoUso__c</fullName>
+        <externalId>false</externalId>
+        <formula>today() -  FechaUltimoUso__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Días desde último uso</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DireccionContratante__c</fullName>
+        <externalId>false</externalId>
+        <formula>Poliza__r.DireccionContratante__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DireccionContratante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DireccionEnvioVIT__c</fullName>
+        <description>Dirección a la que será enviada el VIT, proceso de cool drive</description>
+        <externalId>false</externalId>
+        <label>Dirección envío VIT</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DispositivosVIT__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Permite identificar el número de dispositivo VIT que se debe asignar</description>
+        <externalId>false</externalId>
+        <label>Dispositivos VIT</label>
+        <referenceTo>DispositivosVIT__c</referenceTo>
+        <relationshipLabel>Correo Marketing</relationshipLabel>
+        <relationshipName>Correo_Marketing</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ENTRECALLEMAY__c</fullName>
+        <externalId>false</externalId>
+        <formula>UPPER(  EntreCalle__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ENTRE CALLES</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ESTADOMAY__c</fullName>
+        <externalId>false</externalId>
+        <formula>UPPER(  Estado__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ESTADO</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EncuestaDatosMKTCreado__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>EncuestaDatosMKTCreado</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EntreCalle__c</fullName>
+        <externalId>false</externalId>
+        <label>Entre calle</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>EnvioVITDireccionAsociada__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Permite saber si el dispositivo sera enviado a la dirección asociada</description>
+        <externalId>false</externalId>
+        <label>¿Envio de VIT a dirección asociada?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EstaUsandoDispositivo__c</fullName>
+        <externalId>false</externalId>
+        <label>Esta usando el dispositivo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Estado__c</fullName>
+        <externalId>false</externalId>
+        <label>Estado</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EstatusClipert__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Poliza__r.ESTATUS_CLIPERT__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Estatus Clipert</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EstatusCorreoBienvenidaCoolDrive__c</fullName>
+        <externalId>false</externalId>
+        <label>Estatus Correo Bienvenida Cool Drive</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No Enviado</fullName>
+                    <default>true</default>
+                    <label>No Enviado</label>
+                </value>
+                <value>
+                    <fullName>Enviado</fullName>
+                    <default>false</default>
+                    <label>Enviado</label>
+                </value>
+                <value>
+                    <fullName>Abierto</fullName>
+                    <default>false</default>
+                    <label>Abierto</label>
+                </value>
+                <value>
+                    <fullName>No Abierto</fullName>
+                    <default>false</default>
+                    <label>No Abierto</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EstatusCorreo__c</fullName>
+        <description>Permite conocer el estatus de envió del correo electrónico</description>
+        <externalId>false</externalId>
+        <label>Estatus correo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No enviado</fullName>
+                    <default>false</default>
+                    <label>No enviado</label>
+                </value>
+                <value>
+                    <fullName>Enviado</fullName>
+                    <default>false</default>
+                    <label>Enviado</label>
+                </value>
+                <value>
+                    <fullName>Abierto</fullName>
+                    <default>false</default>
+                    <label>Abierto</label>
+                </value>
+                <value>
+                    <fullName>No abierto</fullName>
+                    <default>false</default>
+                    <label>No abierto</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FechaBienvenida__c</fullName>
+        <description>Contiene la fecha en la que se debe enviar la carta de bienvenida</description>
+        <externalId>false</externalId>
+        <label>Fecha de Bienvenida</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FechaEntregaDispositivo__c</fullName>
+        <description>Fecha en la que se entrego el dispositivo al cliente</description>
+        <externalId>false</externalId>
+        <label>Fecha de entrega dispositivo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FechaParticipacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de Participación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FechaUltimoUso__c</fullName>
+        <description>Fecha en la que se uso por ultima vez el dispositivo</description>
+        <externalId>false</externalId>
+        <label>Fecha de último uso</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FolioVIT__c</fullName>
+        <displayFormat>VIT-{0000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Folio VIT</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>HorasTranscurridasVerificacion__c</fullName>
+        <externalId>false</externalId>
+        <formula>((NOW() - CreatedDate) *24)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Horas transcurridas verificación</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IDCliente__c</fullName>
+        <externalId>false</externalId>
+        <formula>Poliza__r.Account.ClienteID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ID Cliente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IdCorreoMarketing__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Id Correo Marketing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ListoEnvioMKTCloud__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Listo envio MKT cloud</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MotivoNoParticipaCool__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo de no participar en Cool Drive</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>NoCaso__c</fullName>
+        <externalId>false</externalId>
+        <label>No caso</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NoPoliza__c</fullName>
+        <externalId>false</externalId>
+        <label>No Póliza</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NombreAjustador__c</fullName>
+        <externalId>false</externalId>
+        <label>Nombre Ajustador</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NombreClienteEspejo__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Poliza__r.Account.IsPersonAccount, 
+Poliza__r.Account.FirstName, 
+Poliza__r.Account.Name 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NombreClienteEspejo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NombreCliente__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Poliza__r.Account.IsPersonAccount, 
+Poliza__r.Account.FirstName, 
+Poliza__r.Account.Name 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NombreCliente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NumeroEncuesta__c</fullName>
+        <externalId>false</externalId>
+        <label>Número de Encuesta</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NumeroPoliza__c</fullName>
+        <externalId>false</externalId>
+        <formula>Poliza__r.NumerodePoliza__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NumeroPoliza</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PAISMAY__c</fullName>
+        <externalId>false</externalId>
+        <formula>UPPER( Pais__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PAÍS</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pais__c</fullName>
+        <externalId>false</externalId>
+        <label>País</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ParticipaCoolDrive__c</fullName>
+        <description>Permite identificar si el cliente va a participar en la campaña de cool dirve</description>
+        <externalId>false</externalId>
+        <label>Participa cool drive</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Poliza__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Permite saber la oportunidad con la que se esta relacionando el correo</description>
+        <externalId>false</externalId>
+        <label>Poliza</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Correo Marketing</relationshipLabel>
+        <relationshipName>Correo_Marketing</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PorqueNoParticipaCool__c</fullName>
+        <externalId>false</externalId>
+        <label>Por qué no participa en cool drive?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RequiereVIT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>¿Requiere VIT?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>StatusEntregaVIT__c</fullName>
+        <description>Identifica el estado de entrega del dispositivo VIT</description>
+        <externalId>false</externalId>
+        <label>Status entrega VIT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Entrega programada</fullName>
+                    <default>false</default>
+                    <label>Entrega programada</label>
+                </value>
+                <value>
+                    <fullName>En proceso de entrega</fullName>
+                    <default>false</default>
+                    <label>En proceso de entrega</label>
+                </value>
+                <value>
+                    <fullName>Entregado</fullName>
+                    <default>false</default>
+                    <label>Entregado</label>
+                </value>
+                <value>
+                    <fullName>Cancelado</fullName>
+                    <default>false</default>
+                    <label>Cancelado</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TipoDispositivo__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo dispositivo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Android</fullName>
+                    <default>false</default>
+                    <label>Android</label>
+                </value>
+                <value>
+                    <fullName>Apple</fullName>
+                    <default>false</default>
+                    <label>Apple</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TipoProceso__c</fullName>
+        <description>Permite saber el proceso al que pertenece el envio de correo</description>
+        <externalId>false</externalId>
+        <label>Tipo de proceso</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bienvenida</fullName>
+                    <default>false</default>
+                    <label>Bienvenida</label>
+                </value>
+                <value>
+                    <fullName>Verificación Digital</fullName>
+                    <default>false</default>
+                    <label>Verificación Digital</label>
+                </value>
+                <value>
+                    <fullName>Cool Drive</fullName>
+                    <default>false</default>
+                    <label>Cool Drive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TipoProducto__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Poliza__r.Producto__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de Producto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VigenciaInvitacion__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOW()-  CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Vigencia de Invitación</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Correo Marketing</label>
+    <nameField>
+        <displayFormat>CMC-{00000000}</displayFormat>
+        <label>Nombre de Correo Marketing</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Correo Marketing</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

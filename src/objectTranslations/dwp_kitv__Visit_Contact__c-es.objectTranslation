@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contacto convocado</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contactos convocados</value>
+    </caseValues>
+    <fields>
+        <label><!-- Decisor/Ejecutor --></label>
+        <name>Decisor_Ejecutor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>MX_BPP_KitV_Title__c</name>
+    </fields>
+    <fields>
+        <help><!-- Activar esta casilla si se desea que no se le envíe ningún tipo de encuestas a este contacto. --></help>
+        <label><!-- No Enviar Encuestas (Unsuscribed) --></label>
+        <name>MX_EUSV_NoEnviarEncuestasUnsuscribed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Encuesta Enviada --></label>
+        <name>MX_EUSV_SurveySent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Correo de contacto --></label>
+        <name>MX_EU_Correo_contacto__c</name>
+    </fields>
+    <fields>
+        <label><!-- SuveySent --></label>
+        <name>SuveySent__c</name>
+    </fields>
+    <fields>
+        <help>Selecciona para marcar como contacto principal</help>
+        <label>Contacto principal</label>
+        <name>dwp_kitv__Main_contact__c</name>
+    </fields>
+    <fields>
+        <help>Selecciona para enviar minuta</help>
+        <label>Enviar minuta</label>
+        <name>dwp_kitv__Send_minutes__c</name>
+        <picklistValues>
+            <masterLabel>CC</masterLabel>
+            <translation><!-- CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CCO</masterLabel>
+            <translation><!-- CCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do not send</masterLabel>
+            <translation>No enviar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To</masterLabel>
+            <translation><!-- To --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>Convocar</label>
+        <name>dwp_kitv__contact_called_type__c</name>
+    </fields>
+    <fields>
+        <label>Correo</label>
+        <name>dwp_kitv__contact_email_desc__c</name>
+    </fields>
+    <fields>
+        <label>Contacto</label>
+        <name>dwp_kitv__contact_id__c</name>
+        <relationshipLabel>Convocado a visitas</relationshipLabel>
+    </fields>
+    <fields>
+        <label>Teléfono</label>
+        <name>dwp_kitv__contact_phone_desc__c</name>
+    </fields>
+    <fields>
+        <label>Visita</label>
+        <name>dwp_kitv__visit_id__c</name>
+        <relationshipLabel>Contactos</relationshipLabel>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Folio</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Debe seleccionarse al menos un Contacto decisor o ejecutor para convocar. --></errorMessage>
+        <name>MX_EU_Visita_Contact_Decisor_Ejecutor</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- La visita solo puede tener un contacto Asignado --></errorMessage>
+        <name>MX_PF_obligaContactoUnico</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No está permitido cambiar el contacto. Por favor borre el contacto de visita.</errorMessage>
+        <name>dwp_kitv__Change_contact</name>
+    </validationRules>
+</CustomObjectTranslation>

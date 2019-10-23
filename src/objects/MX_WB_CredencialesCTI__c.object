@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Contiene las credenciales de los distintos productos que se necesitan para mandar registros de call me back así como de tracking web</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>MX_WB_Contrasenia__c</fullName>
+        <description>Contiene credenciales por producto que se requiera, para consumo de servicio CTI lead.</description>
+        <externalId>false</externalId>
+        <label>Contraseña</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WB_Usuario__c</fullName>
+        <description>Contiene usuarios por producto que se requiera, para consumo de servicio CTI lead.</description>
+        <externalId>false</externalId>
+        <label>Usuario</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>MX_WB_CredencialesCTI</label>
+    <visibility>Public</visibility>
+</CustomObject>

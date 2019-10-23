@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <choices>
+        <name>Decide_cambiar_la_prioridad</name>
+        <choiceText>Decide cambiar la prioridad</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>No</name>
+        <choiceText>No</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Normal_a_Urgente</name>
+        <choiceText>Normal a Urgente</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Normal a Urgente</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Si</name>
+        <choiceText>Si</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Si</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Urgente_a_Normal</name>
+        <choiceText>Urgente a Normal</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Urgente a Normal</stringValue>
+        </value>
+    </choices>
+    <description>Flujo para desestimar una campaña mediante un asistente de captura</description>
+    <interviewLabel>Desestimación de una Campaña {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Desestimación de una Campaña</label>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>El_estatus_cambia_a_Desestimada</name>
+        <label>El estatus cambia a Desestimada</label>
+        <locationX>553</locationX>
+        <locationY>251</locationY>
+        <connector>
+            <targetReference>Mensaje_final</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CampanaID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>CRM_WF_Justificacion_De_Desestimacion__c</field>
+            <value>
+                <elementReference>Justificar_Desestimaci_n</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Desestimada</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Campaign</object>
+    </recordUpdates>
+    <screens>
+        <name>Agregar_justificaci_n_de_Desestimaci_n</name>
+        <label>Justificación de Desestimación</label>
+        <locationX>309</locationX>
+        <locationY>248</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>El_estatus_cambia_a_Desestimada</targetReference>
+        </connector>
+        <fields>
+            <name>Justificaciondesestimada</name>
+            <fieldText>&lt;DIV ALIGN=&quot;CENTER&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:20px&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;1&quot;&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Justificar</name>
+            <fieldText>Describa las razones por las que desea desestimar la campaña:</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Justificar_Desestimaci_n</name>
+            <fieldText>Justificar Desestimación</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Mensaje_final</name>
+        <label>Mensaje final</label>
+        <locationX>768</locationX>
+        <locationY>252</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Mensajefinal</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;El Estado de la Campaña se ha actualizado a &amp;quot;Desestimada&amp;quot;.&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Agregar_justificaci_n_de_Desestimaci_n</startElementReference>
+    <status>Obsolete</status>
+    <textTemplates>
+        <description>En este campo se detallara la justificación en caso de que se haya decidido cambiar la prioridad de normal a urgente</description>
+        <name>Agregajustificacion</name>
+        <text>&lt;DIV ALIGN=&quot;CENTER&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:20px&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Detalle la &lt;B&gt;Justificación&lt;/B&gt; por la cuál se está cambiando la prioridad de la &lt;B&gt;Campaña&lt;/B&gt; a &lt;B&gt;Urgente&lt;/B&gt;.&lt;/FONT&gt;&lt;/DIV&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Si la prioridad de la ReVeCa quedo como Normal se mostrará una pantalla de finalización.</description>
+        <name>Nocambiaprioridad</name>
+        <text>&lt;DIV ALIGN=&quot;CENTER&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:20px&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Se le comunica que la prioridad de la &lt;B&gt;Campaña&lt;/B&gt; cambiará a &lt;B&gt;Normal&lt;/B&gt;&lt;B&gt;&lt;I&gt;.&lt;/I&gt;&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Notificarasuperiores</name>
+        <text>&lt;DIV ALIGN=&quot;CENTER&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:20px&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;La prioridad de la &lt;B&gt;Campaña&lt;/B&gt; cambiará a&lt;B&gt; Urgente&lt;/B&gt; y se le enviara una notificación via corrreo electrónico a los siguientes usuarios:&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;CENTER&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:18px&quot; COLOR=&quot;#FF0000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;CENTER&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:18px&quot; COLOR=&quot;#FF0000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;CENTER&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Eder Emanuel García&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;CENTER&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt; Rodolfo González&lt;/FONT&gt;&lt;/DIV&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Quedeseahacer</name>
+        <text>&lt;DIV ALIGN=&quot;CENTER&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:20px&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;¿Que cambio desea hacer en la prioridad de la&lt;B&gt; Campaña&lt;/B&gt;?&lt;/FONT&gt;&lt;/DIV&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>Sinjustificacionprioridadnormal</name>
+        <text>Sin justificación, la prioridad es Normal</text>
+    </textTemplates>
+    <variables>
+        <name>CampanaID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

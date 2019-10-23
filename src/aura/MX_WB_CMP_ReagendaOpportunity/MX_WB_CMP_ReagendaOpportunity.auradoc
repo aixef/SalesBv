@@ -1,0 +1,58 @@
+<aura:documentation>
+    <!--
+    /*
+    * @author:      Alexis Pérez
+    * @date:        15/01/2019
+    * @description  Componente encargado de realizar la conversión de lead a Oportunidad, Contacto y Cuenta.
+    * @Changes
+    *       2019-01-15          Creación                               Alexis Pérez
+    */
+    -->
+    <aura:description>
+        <p><b>NAME</b> MX_WB_CMP_ReagendaOpportunity</p>
+        <p><b>DESCRIPTION</b>Permite realizar el reagendamiento de una oportunidad.</p>
+        <p><b>ATTRIBUTES</b>
+            <ul>
+                <li><p>attribute recordId: Id del registro oportunidad actual.</p></li>
+                <li><p>attribute turnoSeleccionado: Almacena el turno que ha sido seleccionado.</p></li>
+                <li><p>attribute lstTurnos: Lista con todos los turnos disponibles.</p></li>
+
+                <li><p>attribute fechaMin: Fecha mínima para realizar la reagenda (fecha no anterior a la actual).</p></li>
+                <li><p>attribute fechaElegida: Almacena la fecha elegida para la reagenda.</p></li>
+                <li><p>attribute horariosXTurno: Almacena los horarios que se encuentran en cada turno.</p></li>
+                <li><p>attribute objUser: Almacena al usuario que se encuentra realizando el agendamiento.</p></li>
+
+                <li><p>attribute turno: Turno actual.</p></li>
+
+                <li><p>attribute idUsuarioSeleccionado: Id del asesor seleccionado para la reagenda.</p></li>
+                <li><p>attribute lstUsuarios: Lista con todos los asesores disponibles.</p></li>
+                <li><p>attribute lstUsuariosTurno: Lista de asesores disponibles por turno.</p></li>
+
+                <li><p>attribute strComentarios: Comentarios a realizar en el agendamiento de la oportunidad.</p></li>
+                <li><p>attribute mensaje: Mensaje de éxito o error según suceda.</p></li>
+                <li><p>attribute tipoMensaje: Indica si el mensaje es de error o éxito.</p></li>
+            </ul>
+        </p>
+        <p><b>HANDLER</b></p>
+            <ul>
+                <li><p><b>init</b>Obtiene todos los datos para el reagendamiento.</p></li>
+            </ul>
+        <p><b>CONTROLLER METHODS</b>
+            <ul>
+                <li><p><b>init</b>Recupera toda la información necesaria a visualizar en el componente.</p></li>
+                <li><p><b>iniciaHorario</b>Filtra los usuarios por turno y crea el elemento de hora para la reagenda. </p></li>
+                <li><p><b>cancel</b>Acción del botón cancel.</p></li>
+                <li><p><b>save</b>Acción del botón Save.</p></li>
+            </ul>
+        </p>
+        <p><b>HELPER METHODS</b>
+            <ul>
+                <li><p><b>getFechaMin</b> Obtiene la fecha actual como fecha mínima para el reagendamiento.</p></li>
+                <li><p><b>creaElementoHora</b> Crea el elemento hora. </p></li>
+                <li><p><b>getUserTurno</b> Recupera el usuario seleccionado.</p></li>
+                <li><p><b>creaTarea</b> Realiza la creación de la tarea de reagendamiento con los datos especificados.</p></li>
+                <li><p><b>getAllData</b> Recupera toda la información necesaria a visualizar en el componente.</p></li>
+            </ul>
+        </p>
+    </aura:description>
+</aura:documentation>

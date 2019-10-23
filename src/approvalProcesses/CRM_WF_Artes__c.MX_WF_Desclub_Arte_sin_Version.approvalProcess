@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <submitter>CRM_WF_Journey</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>CRM_WF_Ventas_Digitales</submitter>
+        <type>role</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>CRM_WF_Gerencia_Squads</submitter>
+        <type>roleSubordinates</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>CRM_WF_Audiencia__c</field>
+        <field>CRM_WF_Nombre_De_La_Version_Arte__c</field>
+        <field>CRM_WF_Call_to_Action__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>MX_WF_Etapa_cambia_a_HTML_y_Copy</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <description>Aprobación del Account Manager</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>CRM_WF_Artes__c.CRM_WF_Estatus__c</field>
+                <operation>equals</operation>
+                <value>Aprobación Brief Arte</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Aprobación Brief Arte</label>
+        <name>MX_WF_Aprobacin_Brief_Arte</name>
+        <rejectionActions>
+            <action>
+                <name>MX_WF_Etapa_cambia_a_Brief_Arte</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>MX_WF_Etapa_Cambia_Aprob_Interna_Prop</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <description>Se genera el copy y html del Arte</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>CRM_WF_Artes__c.CRM_WF_Estatus__c</field>
+                <operation>equals</operation>
+                <value>Desarrollo pieza HTML y Copy</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Desarrollo pieza HTML y Copy</label>
+        <name>MX_WF_Desarrollo_Pieza_HTML_Copy</name>
+        <rejectBehavior>
+            <type>BackToPrevious</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>MX_WF_Etapa_cambia_Aprobacion_Brief_Art</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>MX_WF_Canal_Etapa_RMaterial</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <description>Aprobación de Account Manager</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>CRM_WF_Artes__c.CRM_WF_Estatus__c</field>
+                <operation>equals</operation>
+                <value>Aprobación interna de propuesta</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Aprobación interna de propuesta</label>
+        <name>MX_WF_Aprobacion_interna_de_propuesta</name>
+        <rejectBehavior>
+            <type>BackToPrevious</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>MX_WF_Etapa_cambia_a_HTML_y_Copy</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>MX_WF_Etapa_cambia_a_cierre</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <description>Journey revisa el Arte</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>CRM_WF_Artes__c.CRM_WF_Estatus__c</field>
+                <operation>equals</operation>
+                <value>Revisión del material JM</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Revisión material JM</label>
+        <name>Revisi_n_material_JMan</name>
+        <rejectBehavior>
+            <type>BackToPrevious</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>MX_WF_Etapa_Cambia_Aprob_Interna_Prop</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Proceso para la aplicación Workflow se crea y define el Arte para el squad adquirente</description>
+    <emailTemplate>CRM_WF_Plantillas_WF/MX_WF_Aprobar_Email_Desclub</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>CRM_WF_Artes__c.CRM_WF_Estatus__c</field>
+            <operation>equals</operation>
+            <value>Brief Arte</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CRM_WF_Artes__c.RecordType</field>
+            <operation>equals</operation>
+            <value>Email Desclub</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CRM_WF_Artes__c.MX_WF_Carpeta_Logos_Fotos__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>MX_WF_Etapa_cambia_Aprobacion_Brief_Art</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Desclub Arte sin Versión</label>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

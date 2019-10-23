@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>CRM_WF_Cartas_Recurrentes__c</entityName>
+    <fieldName>CRM_WF_Etapa_De_Salida_De_Informacion__c</fieldName>
+    <masterLabel>WF CARTAS RECURRENTE</masterLabel>
+    <recordTypeName>CRM_WF_Carta_Recurrente</recordTypeName>
+</PathAssistant>

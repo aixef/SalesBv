@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Rechazo promoción Wallet</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de aprobación de la promoción con folio: {!MX_WF_Wallet__c.Name}</subject>
+    <textOnly>Por medio de la presente se te notifica que la promoción Wallet con folio {!MX_WF_Wallet__c.Name} fue rechazada con los siguientes comentarios:
+
+Comentarios: {!ApprovalRequest.Comments}
+
+
+Para mayor detalle favor de dar clic en el siguiente vínculo:
+
+Detalle de la promoción Wallet</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

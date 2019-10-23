@@ -1,0 +1,2657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ActivityDate</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <encryptionScheme>None</encryptionScheme>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>IsRecurrence</fullName>
+    </fields>
+    <fields>
+        <fullName>IsReminderSet</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <type>Picklist</type>
+    </fields>
+    <recordTypes>
+        <fullName>Llamada</fullName>
+        <active>true</active>
+        <label>Llamada</label>
+        <picklistValues>
+            <picklist>Hora__c</picklist>
+            <values>
+                <fullName>08%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_WB_EstatusCTI__c</picklist>
+            <values>
+                <fullName>AUTO NO EN LA BASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTO USO COMERCIAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTOFINANCIAMIENTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTOSINIESTRADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AÚN NO COMPRA LA UNIDAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLIENTE CUELGA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLIENTE INTERESADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DESCONFIANZA DEL PRODUCTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMPRESA SIN EXTENSIÓN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EQUIVOCADO INCORRECTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ESTA COMPARANDO COTIZACIÓN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FINADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUERA DE SERVICIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUERA DEL ÁREA DE SERVICIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRABADORA CONTESTADORA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INFORMACIÓN SOBRE PÓLIZA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MALA EXPERIENCIA CON SEGUROS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MODELO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MUY CARO PRECIO ALTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO CONTESTA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO LE INTERESA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO SE ENCUENTRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO TIENE TIEMPO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO VIVE AHÍ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO VOLVER A LLAMAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OCUPADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRUEBA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIN MEDIO DE PAGO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUCURSAL BBVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUSPENDIDO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TONO DE FAX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRANSFERENCIA A SINIESTROS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRANSFERENCIA ATENCIÓN A CLIENTE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VENTA - SEGURO INDIVIDUAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>YA CUENTA CON SEGURO ASD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivo__c</picklist>
+            <values>
+                <fullName>Abierta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cerrada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivos_CONTACTO__c</picklist>
+            <values>
+                <fullName>No contesta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E Equivocado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E inexistente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E ocupado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E suspendido</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivos_de_no_venta__c</picklist>
+            <values>
+                <fullName>Agenda generada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aun cuenta con seguro %28comparando%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto antiguo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto fuera de base</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autofinanciamiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aún no compra la unidad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coberturas  insuficientes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fronterizo %2F legalizado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mayor a 3%2E5 toneladas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motivo no identificado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motivo uso comercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No tiene auto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre emisión</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Precio alto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salvamento %2F Siniestrado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sin medio de pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uso de taxi</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta Realizada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ya cuenta con seguro</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivos_efectivo__c</picklist>
+            <values>
+                <fullName>Contestadora automática</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De viaje</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interesado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mensaje dejado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Aplica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Interesado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Interesado %28CNE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No se encuentra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Se encuentra ocupado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origen__c</picklist>
+            <values>
+                <fullName>BD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call me back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campañas MKT Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Derivados</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referidos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webtracking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wiberizate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resultado_de_Contacto__c</picklist>
+            <values>
+                <fullName>Contestadora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuenta Pagada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deja Mensaje</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Desea Cancelar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ilocalizable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Contesta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Define Pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Reconoce Producto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promesa de Pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Póliza Cancelada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Se Agenda</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Titular Fallecio</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resultado_llamada__c</picklist>
+            <values>
+                <fullName>Contacto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contestadora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Contacto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No contesta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No define pago</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diferido</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En progreso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Esperando a alguien más</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Iniciada</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+	    <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enviar información</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tipo_de_Contacto__c</picklist>
+            <values>
+                <fullName>Contacto Efectivo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacto No Efectivo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacto Útil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interesado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Aplica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Aplica %28CNE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Interesado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No contacto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tipo_de_Resultado_de_Contacto__c</picklist>
+            <values>
+                <fullName>Acudira a Sucursal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuenta con Otra Póliza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicidad de Póliza por Sucursal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Endoso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fecha de Pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Linea Con Servicio de Internet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mal Trato Por Multiasistencia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Le Interesa El Seguro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Tiene Dinero</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Vive Ahí</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No se Puede Dejar Mensaje</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Numero No Existe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nunca Contrato el Seguro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pago TPV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pago TPV %2F Endoso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Se Corta Llamada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefono Ocupado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta de Unidad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ya Realizo Tramite de Cancelación</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tipo_de_llamada__c</picklist>
+            <values>
+                <fullName>Input</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OutBound</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MX_WB_CTIRecords</fullName>
+        <active>true</active>
+        <description>contiene los datos de grabación de las llamadas en CTI.</description>
+        <label>CTI Records</label>
+        <picklistValues>
+            <picklist>Hora__c</picklist>
+            <values>
+                <fullName>08%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_WB_EstatusCTI__c</picklist>
+            <values>
+                <fullName>AUTO NO EN LA BASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTO USO COMERCIAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTOFINANCIAMIENTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTOSINIESTRADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AÚN NO COMPRA LA UNIDAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLIENTE CUELGA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLIENTE INTERESADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DESCONFIANZA DEL PRODUCTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMPRESA SIN EXTENSIÓN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EQUIVOCADO INCORRECTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ESTA COMPARANDO COTIZACIÓN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FINADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUERA DE SERVICIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUERA DEL ÁREA DE SERVICIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRABADORA CONTESTADORA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INFORMACIÓN SOBRE PÓLIZA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MALA EXPERIENCIA CON SEGUROS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MODELO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MUY CARO PRECIO ALTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO CONTESTA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO LE INTERESA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO SE ENCUENTRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO TIENE TIEMPO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO VIVE AHÍ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO VOLVER A LLAMAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OCUPADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRUEBA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIN MEDIO DE PAGO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUCURSAL BBVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUSPENDIDO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TONO DE FAX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRANSFERENCIA A SINIESTROS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRANSFERENCIA ATENCIÓN A CLIENTE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VENTA - SEGURO INDIVIDUAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>YA CUENTA CON SEGURO ASD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivo__c</picklist>
+            <values>
+                <fullName>Abierta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cerrada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivos_CONTACTO__c</picklist>
+            <values>
+                <fullName>No contesta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E Equivocado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E inexistente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E ocupado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E suspendido</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivos_de_no_venta__c</picklist>
+            <values>
+                <fullName>Agenda generada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aun cuenta con seguro %28comparando%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto antiguo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto fuera de base</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autofinanciamiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aún no compra la unidad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coberturas  insuficientes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fronterizo %2F legalizado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mayor a 3%2E5 toneladas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motivo no identificado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motivo uso comercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No tiene auto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre emisión</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Precio alto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salvamento %2F Siniestrado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sin medio de pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uso de taxi</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta Realizada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ya cuenta con seguro</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivos_efectivo__c</picklist>
+            <values>
+                <fullName>Contestadora automática</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De viaje</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mensaje dejado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No se encuentra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Se encuentra ocupado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origen__c</picklist>
+            <values>
+                <fullName>BD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call me back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campañas MKT Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Derivados</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Referidos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webtracking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wiberizate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resultado_de_Contacto__c</picklist>
+            <values>
+                <fullName>Contestadora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuenta Pagada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deja Mensaje</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Desea Cancelar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ilocalizable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Contesta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Define Pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Reconoce Producto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promesa de Pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Póliza Cancelada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Se Agenda</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Titular Fallecio</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resultado_llamada__c</picklist>
+            <values>
+                <fullName>Contestadora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No contesta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No define pago</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diferido</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En progreso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Esperando a alguien más</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Iniciada</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+	    <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enviar información</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tipo_de_Contacto__c</picklist>
+            <values>
+                <fullName>Contacto Efectivo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacto No Efectivo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacto Útil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interesado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Aplica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Aplica %28CNE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Interesado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tipo_de_Resultado_de_Contacto__c</picklist>
+            <values>
+                <fullName>Acudira a Sucursal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuenta con Otra Póliza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicidad de Póliza por Sucursal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Endoso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fecha de Pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Linea Con Servicio de Internet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mal Trato Por Multiasistencia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Le Interesa El Seguro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Tiene Dinero</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Vive Ahí</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No se Puede Dejar Mensaje</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Numero No Existe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nunca Contrato el Seguro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pago TPV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pago TPV %2F Endoso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Se Corta Llamada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefono Ocupado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta de Unidad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ya Realizo Tramite de Cancelación</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tipo_de_llamada__c</picklist>
+            <values>
+                <fullName>Input</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>OutBound</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MX_WB_llamadaCandidato</fullName>
+        <active>true</active>
+        <description>Contiene los campos de llamada CTI que devuelve el servicio call</description>
+        <label>CTI Llamada</label>
+        <picklistValues>
+            <picklist>Hora__c</picklist>
+            <values>
+                <fullName>08%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MX_WB_EstatusCTI__c</picklist>
+            <values>
+                <fullName>AUTO NO EN LA BASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTO USO COMERCIAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTOFINANCIAMIENTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AUTOSINIESTRADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AÚN NO COMPRA LA UNIDAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLIENTE CUELGA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLIENTE INTERESADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DESCONFIANZA DEL PRODUCTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMPRESA SIN EXTENSIÓN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EQUIVOCADO INCORRECTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ESTA COMPARANDO COTIZACIÓN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FINADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUERA DE SERVICIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUERA DEL ÁREA DE SERVICIO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRABADORA CONTESTADORA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INFORMACIÓN SOBRE PÓLIZA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MALA EXPERIENCIA CON SEGUROS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MODELO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MUY CARO PRECIO ALTO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO CONTESTA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO LE INTERESA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO SE ENCUENTRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO TIENE TIEMPO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO VIVE AHÍ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NO VOLVER A LLAMAR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OCUPADO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRUEBA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIN MEDIO DE PAGO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUCURSAL BBVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUSPENDIDO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TONO DE FAX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRANSFERENCIA A SINIESTROS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRANSFERENCIA ATENCIÓN A CLIENTE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VENTA - SEGURO INDIVIDUAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>YA CUENTA CON SEGURO ASD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivo__c</picklist>
+            <values>
+                <fullName>Abierta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cerrada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivos_CONTACTO__c</picklist>
+            <values>
+                <fullName>No contesta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E Equivocado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E inexistente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E ocupado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tel%2E suspendido</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivos_de_no_venta__c</picklist>
+            <values>
+                <fullName>Agenda generada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aun cuenta con seguro %28comparando%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto antiguo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auto fuera de base</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autofinanciamiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aún no compra la unidad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coberturas  insuficientes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fronterizo %2F legalizado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mayor a 3%2E5 toneladas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motivo no identificado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motivo uso comercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No tiene auto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre emisión</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Precio alto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salvamento %2F Siniestrado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sin medio de pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uso de taxi</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta Realizada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ya cuenta con seguro</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Motivos_efectivo__c</picklist>
+            <values>
+                <fullName>Contestadora automática</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De viaje</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interesado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mensaje dejado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Aplica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Interesado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Interesado %28CNE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No se encuentra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Se encuentra ocupado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origen__c</picklist>
+            <values>
+                <fullName>BD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call me back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campañas MKT Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Derivados</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Referidos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webtracking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wiberizate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resultado_de_Contacto__c</picklist>
+            <values>
+                <fullName>Contestadora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuenta Pagada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deja Mensaje</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Desea Cancelar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ilocalizable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Contesta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Define Pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Reconoce Producto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Promesa de Pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Póliza Cancelada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Se Agenda</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Titular Fallecio</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Resultado_llamada__c</picklist>
+            <values>
+                <fullName>Contacto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contestadora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No contacto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No contesta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No define pago</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diferido</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En progreso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Esperando a alguien más</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Iniciada</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+	    <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enviar información</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tipo_de_Contacto__c</picklist>
+            <values>
+                <fullName>Contacto Efectivo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacto No Efectivo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacto Útil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interesado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Aplica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Aplica %28CNE%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Interesado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No contacto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tipo_de_Resultado_de_Contacto__c</picklist>
+            <values>
+                <fullName>Acudira a Sucursal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cuenta con Otra Póliza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicidad de Póliza por Sucursal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Endoso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fecha de Pago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Linea Con Servicio de Internet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mal Trato Por Multiasistencia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Le Interesa El Seguro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Tiene Dinero</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Vive Ahí</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No se Puede Dejar Mensaje</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Numero No Existe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nunca Contrato el Seguro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pago TPV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pago TPV %2F Endoso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Se Corta Llamada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefono Ocupado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Venta de Unidad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ya Realizo Tramite de Cancelación</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Tipo_de_llamada__c</picklist>
+            <values>
+                <fullName>Input</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>OutBound</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Tarea_BPyP</fullName>
+        <active>true</active>
+        <label>Tarea BPyP</label>
+        <picklistValues>
+            <picklist>Estatus_sincronizacion__c</picklist>
+            <values>
+                <fullName>Actualizar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insertar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Plataforma_origen__c</picklist>
+            <values>
+                <fullName>Google</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce%2Ecom</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quien_te_acompa_o__c</picklist>
+            <values>
+                <fullName>Director Banca Hipotecaria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Banca Mayorista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Divisional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Promoción Empresarial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Red EyGH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Regional%2FCentro Corporativo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director de Oficina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Arrendamiento%2FCadenas valor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista CIB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Cash Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Comercio Internacional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Financiamiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Inversiones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Plan Piso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Promoción Fiduciario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Promoción Nómina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Seguros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Venta y Soporte Adquirente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista de la Banca Electrónica</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Aplazada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En progreso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No iniciada</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Enviar información</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Te_acompa_aron__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Fecha especial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Llamada comercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Llamada de seguimiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tarea</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>VP_tre_Tarea_PyME</fullName>
+        <active>true</active>
+        <description>Tarea PyME</description>
+        <label>Tarea_PyME</label>
+        <picklistValues>
+            <picklist>Plataforma_origen__c</picklist>
+            <values>
+                <fullName>Google</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce%2Ecom</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quien_te_acompa_o__c</picklist>
+            <values>
+                <fullName>Director Banca Hipotecaria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Banca Mayorista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Divisional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Promoción Empresarial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Red EyGH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director Regional%2FCentro Corporativo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director de Oficina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Arrendamiento%2FCadenas valor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista CIB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Cash Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Comercio Internacional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Financiamiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Inversiones</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Plan Piso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Promoción Fiduciario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Promoción Nómina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Seguros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista Venta y Soporte Adquirente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Especialista de la Banca Electrónica</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No iniciada</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Enviar información</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Te_acompa_aron__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visita comercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visita de seguimiento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visita estratégica</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <validationRules>
+        <fullName>Estado_Completada</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(
+   AND(
+       $Profile.Name &lt;&gt; &quot;Administrador del sistema&quot;,
+       $Profile.Name &lt;&gt; &quot;DWP Delegados&quot;,
+    $Profile.Name &lt;&gt; &quot;ANALISIS DEL NEGOCIO&quot;,
+    $Profile.Name &lt;&gt; &quot;TEC. ORG. CENTRAL&quot;,
+       ISPICKVAL( PRIORVALUE( Status) , &quot;Completada&quot;),
+       ISPICKVAL( Status , &quot;No iniciada&quot;),
+       ISCHANGED( ActivityDate )
+      ),
+   AND(
+       $Profile.Name &lt;&gt; &quot;Administrador del sistema&quot;,
+       $Profile.Name &lt;&gt; &quot;DWP Delegados&quot;,
+    $Profile.Name &lt;&gt; &quot;ANALISIS DEL NEGOCIO&quot;,
+    $Profile.Name &lt;&gt; &quot;TEC. ORG. CENTRAL&quot;,
+       ISPICKVAL( PRIORVALUE( Status) , &quot;Completada&quot;),
+       ISPICKVAL( Status , &quot;No iniciada&quot;)
+       ),
+   AND(
+       $Profile.Name &lt;&gt; &quot;Administrador del sistema&quot;,
+       $Profile.Name &lt;&gt; &quot;DWP Delegados&quot;,
+    $Profile.Name &lt;&gt; &quot;ANALISIS DEL NEGOCIO&quot;,
+    $Profile.Name &lt;&gt; &quot;TEC. ORG. CENTRAL&quot;,
+       ISPICKVAL( PRIORVALUE( Status) , &quot;Completada&quot;),
+       ISCHANGED( ActivityDate )
+      )
+)</errorConditionFormula>
+        <errorMessage>No puedes modificar la Fecha de vencimiento o el Estado</errorMessage>
+    </validationRules>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

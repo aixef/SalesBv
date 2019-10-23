@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CRM_Dias_Habiles_del_Proceso__c</fullName>
+        <externalId>false</externalId>
+        <formula>(5 * ( FLOOR( ( DATEVALUE (CRM_WF_Fecha_De_Terminacion__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE (CRM_WF_Fecha_De_Terminacion__c) - DATE( 1900, 1, 8), 7 ) ) ) 
+- 
+(5 * ( FLOOR( ( DATEVALUE (CRM_WF_Fecha_De_Envio__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE (CRM_WF_Fecha_De_Envio__c ) - DATE( 1900, 1, 8), 7 ) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Días Hábiles del Proceso</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Creado_Por__c</fullName>
+        <externalId>false</externalId>
+        <label>Creado por</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Dias_Hab_Transcurridos_Del_Paso__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE (MOD ( DATEVALUE ( CRM_WF_Fecha_Fin_Paso__c ) - DATE ( 1985,6,24), 7 ), 
+
+0, CASE ( MOD ( DATEVALUE ( CRM_WF_Fecha_Fin_Paso__c ) - DATEVALUE ( CRM_WF_Fecha_Inicio_Paso__c ) , 7 ), 1,2,2,3,3,4,4,5,5,5,6,5,1 ), 
+1, CASE ( MOD ( DATEVALUE ( CRM_WF_Fecha_Fin_Paso__c ) - DATEVALUE ( CRM_WF_Fecha_Inicio_Paso__c ) , 7 ), 1,2,2,3,3,4,4,4,5,4,6,5,1 ), 
+2, CASE ( MOD ( DATEVALUE ( CRM_WF_Fecha_Fin_Paso__c ) - DATEVALUE ( CRM_WF_Fecha_Inicio_Paso__c ) , 7 ), 1,2,2,3,3,3,4,3,5,4,6,5,1 ), 
+3, CASE ( MOD ( DATEVALUE ( CRM_WF_Fecha_Fin_Paso__c ) - DATEVALUE ( CRM_WF_Fecha_Inicio_Paso__c ) , 7 ), 1,2,2,2,3,2,4,3,5,4,6,5,1 ), 
+4, CASE ( MOD ( DATEVALUE ( CRM_WF_Fecha_Fin_Paso__c ) - DATEVALUE ( CRM_WF_Fecha_Inicio_Paso__c ) , 7 ), 1,1,2,1,3,2,4,3,5,4,6,5,1 ), 
+5, CASE ( MOD ( DATEVALUE ( CRM_WF_Fecha_Fin_Paso__c ) - DATEVALUE ( CRM_WF_Fecha_Inicio_Paso__c ) , 7 ), 1,0,2,1,3,2,4,3,5,4,6,5,0 ), 
+6, CASE ( MOD ( DATEVALUE ( CRM_WF_Fecha_Fin_Paso__c ) - DATEVALUE ( CRM_WF_Fecha_Inicio_Paso__c ) , 7 ), 1,1,2,2,3,3,4,4,5,5,6,5,0 ), 999 )
+ 
++ 
+
+( FLOOR ( ( CRM_WF_Fecha_Fin_Paso__c - CRM_WF_Fecha_Inicio_Paso__c ) / 7 ) * 5 )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Días hábiles transcurridos del paso</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Dias_Habiles_Paso__c</fullName>
+        <externalId>false</externalId>
+        <formula>(5 * ( FLOOR( ( DATEVALUE (CRM_WF_Fecha_Fin_Paso__c)  - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE (CRM_WF_Fecha_Fin_Paso__c) - DATE( 1900, 1, 8), 7 ) ) )
+-
+(5 * ( FLOOR( (  DATEVALUE (CRM_WF_Fecha_Inicio_Paso__c )  - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD(  DATEVALUE (CRM_WF_Fecha_Inicio_Paso__c ) - DATE( 1900, 1, 8), 7 ) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Días Hábiles del Paso</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Dias_Transcurridos_Aprobacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Días transcurridos</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Dias_Transcurridos_Paso__c</fullName>
+        <externalId>false</externalId>
+        <label>Días transcurridos del paso</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Edad_Del_Paso_Dias_Habiles__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(CRM_WF_Estado_Del_Paso__c = &quot;Pendiente&quot;, 
+
+(5 * ( FLOOR( ( Today() - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( Today() - DATE( 1900, 1, 8), 7 ) ) ) 
+- 
+(5 * ( FLOOR( ( DATEVALUE (CRM_WF_Fecha_Inicio_Paso__c ) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE (CRM_WF_Fecha_Inicio_Paso__c ) - DATE( 1900, 1, 8), 7 ) ) ), 
+
+(5 * ( FLOOR( ( DATEVALUE (CRM_WF_Fecha_Fin_Paso__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE (CRM_WF_Fecha_Fin_Paso__c) - DATE( 1900, 1, 8), 7 ) ) ) 
+- 
+(5 * ( FLOOR( ( DATEVALUE (CRM_WF_Fecha_Inicio_Paso__c ) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE (CRM_WF_Fecha_Inicio_Paso__c ) - DATE( 1900, 1, 8), 7 ) ) )
+
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Edad del Paso en Días Hábiles</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Edad_del_Proceso_Dias_Habiles__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(CRM_WF_Estado_De_La_Aprobacion__c = &quot;Pendiente&quot;, 
+
+(5 * ( FLOOR( ( Today() - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( Today() - DATE( 1900, 1, 8), 7 ) ) ) 
+- 
+(5 * ( FLOOR( ( DATEVALUE (CRM_WF_Fecha_De_Envio__c ) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE (CRM_WF_Fecha_De_Envio__c) - DATE( 1900, 1, 8), 7 ) ) ), 
+
+(5 * ( FLOOR( ( DATEVALUE (CRM_WF_Fecha_De_Terminacion__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE (CRM_WF_Fecha_De_Terminacion__c) - DATE( 1900, 1, 8), 7 ) ) ) 
+- 
+(5 * ( FLOOR( ( DATEVALUE (CRM_WF_Fecha_De_Envio__c) - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE (CRM_WF_Fecha_De_Envio__c) - DATE( 1900, 1, 8), 7 ) ) )
+ 
+
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Edad del Proceso en Días Hábiles</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Enviado_Por__c</fullName>
+        <externalId>false</externalId>
+        <label>Enviado por</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Estado_De_La_Aprobacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Estado</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Estado_Del_Paso__c</fullName>
+        <externalId>false</externalId>
+        <label>Estado del paso</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_De_Envio__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de envío</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_De_Terminacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de terminación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Fin_Paso__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha Fin del paso</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Inicio_Paso__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha Inicio del paso</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Horas_Transcurridas_Aprobacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Horas transcurridas</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Horas_Transcurridas_Paso__c</fullName>
+        <externalId>false</externalId>
+        <label>Horas transcurridas del paso</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Id_De_La_Instancia__c</fullName>
+        <externalId>false</externalId>
+        <label>Id de la Instancia</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_Del_Paso__c</fullName>
+        <externalId>false</externalId>
+        <label>Nombre del paso</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_Del_Registro__c</fullName>
+        <externalId>false</externalId>
+        <label>Nombre del registro</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_Paso_Pendiente__c</fullName>
+        <externalId>false</externalId>
+        <label>Nombre del paso pendiente</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_Proceso_De_Aprobacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Nombre del proceso de aprobación</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Registro_De_La_Campana__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Registro de la Campaña</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Niveles de Servicio</relationshipLabel>
+        <relationshipName>Niveles_de_Servicio</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Registro_Enviado_Por__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Registro enviado por</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Niveles_de_Servicio</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tipo_De_Objeto__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Objeto</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Ultimo_Actor_Paso__c</fullName>
+        <externalId>false</externalId>
+        <label>Ültimo actor del paso</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Niveles de Servicio</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CRM_WF_Estado_Del_Paso__c</columns>
+        <columns>CRM_WF_Fecha_Inicio_Paso__c</columns>
+        <columns>CRM_WF_Fecha_Fin_Paso__c</columns>
+        <columns>CRM_WF_Dias_Habiles_Paso__c</columns>
+        <columns>CRM_WF_Nombre_Del_Paso__c</columns>
+        <columns>CRM_WF_Tipo_De_Objeto__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>NV-{00000000}</displayFormat>
+        <label>Folio</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Niveles de Servicio</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

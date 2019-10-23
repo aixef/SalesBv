@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>CRM_Generador_No_Squad</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM - Generador No Squad</label>
+        <sharedTo>
+            <role>CRM_WF_No_Squad_Generador</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Crm</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Aprobador_Seguimiento</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Regla para colaborar entre squads y el aprobador de seguimiento la modificación de cualquier campaña</description>
+        <label>Aprobador Seguimiento</label>
+        <sharedTo>
+            <role>CRM_WF_Seguimiento</role>
+        </sharedTo>
+        <sharedFrom>
+            <group>CRM_WF_Miembros_Generales_Squads</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_CRM_Consumer_Finance</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM - Consumer Finance</label>
+        <sharedTo>
+            <role>CRM_WF_No_Squad_Hipotecario</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Crm</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_CRM_Hipotecario</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CRM - Hipotecario</label>
+        <sharedTo>
+            <role>CRM_WF_No_Squad_CF</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Crm</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Generador_No_Squad_CF</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Generador No Squad - CF</label>
+        <sharedTo>
+            <role>CRM_WF_No_Squad_Generador</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_No_Squad_CF</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Generador_No_Squad_HP</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Generador No Squad - HP</label>
+        <sharedTo>
+            <role>CRM_WF_No_Squad_Generador</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_No_Squad_Hipotecario</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_No_Squad_Consumer_Finance</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>No Squad - Consumer Finance</label>
+        <sharedTo>
+            <role>CRM_WF_No_Squad_CF</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_No_Squad_CF</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_No_Squad_Hipotecario</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>No Squad - Hipotecario</label>
+        <sharedTo>
+            <role>CRM_WF_No_Squad_Hipotecario</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_No_Squad_Hipotecario</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_APPS_Squad_Digitalizacion</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad APPS - Squad Digitalización</label>
+        <sharedTo>
+            <group>CRM_WF_Miembros_Journey_Digitalizacion</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Apps_Verticales</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Adquirente</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Adquirente</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Adquirente</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Adquirente</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Apps_Verticales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Apps Verticales</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Apps_Verticales</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Apps_Verticales</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Consumo</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Consumo</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Consumo</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Consumo</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Digitalizacion</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Digitalizacion</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Digitalizacion</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Digitalizacion</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Inversiones</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Inversiones</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Inversiones</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Inversiones</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Nomina</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Nómina</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Nomina</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Nomina</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Pyme</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Pyme</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Pyme</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Pyme</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Seguro_Auto</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Seguro Auto</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Seguros_Auto</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Seguros_Auto</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Seguro_Danos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Seguro Daños</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Seguros_Danos</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Seguros_Danos</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Seguro_Danos_Squad_Seguro_Auto</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Seguro Daños - Squad Seguro Auto</label>
+        <sharedTo>
+            <group>CRM_WF_Miembros_Journey_Seguros_Auto</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Seguros_Danos</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Seguro_Salud</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Seguro Salud</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Seguros_Salud</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Seguros_Salud</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Seguros_Auto_comparte_a_No_Squad</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Seguros Auto comparte a No Squad</label>
+        <sharedTo>
+            <role>CRM_WF_No_Squad_Generador</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Seguros_Auto</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Tarjetas</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Tarjetas</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Tarjetas</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Tarjetas</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Todo_CRM_con_Seguimiento</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Todo CRM con Seguimiento</label>
+        <sharedTo>
+            <role>CRM_WF_Seguimiento</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>CRM_WF_Gerencia_Squads</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Journey</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Journey</label>
+        <sharedTo>
+            <role>CRM_WF_Journey</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>CRM_WF_Gerencia_Squads</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingCriteriaRules>
+        <fullName>MX_WF_Asesores_comerciales_pueden_ver_campa_as_de_multipromoci_n_y_de_alianzas</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Regla para la aplicación WF que permite a los asesores comerciales ver y editar las campañas y registros hijos cuando el área solicitante sea alianzas comerciales o la campaña sea una multipromoción</description>
+        <label>Asesores comerciales pueden ver campañas de multipromoción y del área alianzas</label>
+        <sharedTo>
+            <role>MX_WF_Asesor_Comercial</role>
+        </sharedTo>
+        <booleanFilter>1 OR (2 AND 3)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Multipromoción</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CRM_WF_Area_Solicitante__c</field>
+            <operation>equals</operation>
+            <value>Alianzas Comerciales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Alianzas Comerciales</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>MX_WF_Asesor_comercial_comparte_con_funci_n_Squad</fullName>
+        <accessLevel>All</accessLevel>
+        <description>Permite que las campañas que sean creadas por el Asesor comercial sean editadas por los usuarios del squad adquirencia</description>
+        <label>Asesor comercial comparte con función Squad</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Adquirente</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>MX_WF_Asesor_Comercial</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_WF_Colaboraci_n_entre_Squad_DIY</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Colaboración entre Squad DIY</label>
+        <sharedTo>
+            <role>MX_WF_SQUAD_DIY_Digital_Servicing</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>MX_WF_SQUAD_DIY_Digital_Servicing</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_WF_Colaboracion_Campa_as_Open_Market_Auto</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Colaboración Campañas Open Market Auto</label>
+        <sharedTo>
+            <role>MX_WF_Open_Market_Auto</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>MX_WF_Open_Market_Auto</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_WF_Colaboracion_Campa_as_Open_Market_Hipotecario</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Colaboración Campañas Open Market Hipotecario</label>
+        <sharedTo>
+            <role>MX_WF_Open_Market_Hipotecario</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>MX_WF_Open_Market_Hipotecario</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_WF_Colaboracion_Campa_as_Open_Market_TDC</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Colaboración Campañas Open Market TDC</label>
+        <sharedTo>
+            <role>MX_WF_Open_Market_TDC</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>MX_WF_Open_Market_TDC</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+	<sharingOwnerRules>
+        <fullName>SmartCenter_Group_Campaign_Rule</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Smart Center Grupo Campaña</label>
+        <sharedTo>
+            <group>MX_SB_VTS_SMART_CENTER_GROUP_CAMPAIGN</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_WF_Tracking_Code</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Tracking Code</label>
+        <sharedTo>
+            <role>MX_WF_Tracking_Code</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>CRM_WF_Gerencia_Squads</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

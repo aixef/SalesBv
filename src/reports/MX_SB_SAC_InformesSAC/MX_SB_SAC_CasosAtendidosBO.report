@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_51321530</developerName>
+        <masterLabel>Asignacion de folio</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Case.MX_SB_SAC_Etapa__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Resolución del tramite</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cerrado</sourceValue>
+            </sourceValues>
+            <value>Folios asignados</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>En espera de atención</sourceValue>
+            </sourceValues>
+            <value>Folios pendientes por asignar</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_51284322</developerName>
+        <masterLabel>Estatus de Casos atendidos por BO</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>STATUS</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>New</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Identificación de cliente</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ejecución de tramite</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aceptado</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>En espera del tramite</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Integración de documentos</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Asignado</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Venta</sourceValue>
+            </sourceValues>
+            <value>Casos Abiertos</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Cerrado</sourceValue>
+            </sourceValues>
+            <value>Casos Cerrados</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarStacked</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>OWNER</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>BucketField_51284322</secondaryGroupingColumn>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Atención de folios</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>Case.MX_SB_SAC_Etapa__c</field>
+    </columns>
+    <columns>
+        <field>Case.MX_SB_SAC_EstatusBO__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>OPEN</field>
+    </columns>
+    <columns>
+        <field>CLOSED</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>visualisara los casos atendidos por B.O</description>
+    <filter>
+        <criteriaItems>
+            <column>Case.MX_SB_SAC_Etapa__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>En espera de atención,Resolución del tramite,Cerrado</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.MX_SB_SAC_FolioOperadoporBO__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Si</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_51284322</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>REASON</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Casos atendidos por BO</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

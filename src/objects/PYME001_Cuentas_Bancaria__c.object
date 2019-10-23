@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>PYME_cmp_CuentaB</fullName>
+        <fields>PYME_ls_Nombre_del_banco__c</fields>
+        <fields>PYME_dv_Monto__c</fields>
+        <fields>PYME_ls_Producto_Financieros__c</fields>
+        <fields>CreatedById</fields>
+        <label>PYME_cmp_CuentaB</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Nuevo objeto para PYME Cuentas Bancarias.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>MX_PYME_Reporte__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Reporte PyME</label>
+        <referenceTo>MX_PyME_Reporte__c</referenceTo>
+        <relationshipLabel>Cuentas Bancarias</relationshipLabel>
+        <relationshipName>Cuentas_Bancarias</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PYME_br_Cliente__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Nombre del Cliente</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Cuentas Bancarias</relationshipLabel>
+        <relationshipName>Cuentas_Bancarias</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PYME_dv_Monto__c</fullName>
+        <description>Nuevo campo Pyme Monto.</description>
+        <externalId>false</externalId>
+        <label>Monto</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PYME_ls_Nombre_del_banco__c</fullName>
+        <description>Campo nuevo para pyme Banco</description>
+        <externalId>false</externalId>
+        <label>Nombre del banco</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Actinver</fullName>
+                    <default>true</default>
+                    <label>Actinver</label>
+                </value>
+                <value>
+                    <fullName>Banamex</fullName>
+                    <default>false</default>
+                    <label>Banamex</label>
+                </value>
+                <value>
+                    <fullName>Banca Afirme</fullName>
+                    <default>false</default>
+                    <label>Banca Afirme</label>
+                </value>
+                <value>
+                    <fullName>Banca Mifel</fullName>
+                    <default>false</default>
+                    <label>Banca Mifel</label>
+                </value>
+                <value>
+                    <fullName>Banco Azteca</fullName>
+                    <default>false</default>
+                    <label>Banco Azteca</label>
+                </value>
+                <value>
+                    <fullName>Banco del Bajio</fullName>
+                    <default>false</default>
+                    <label>Banco del Bajio</label>
+                </value>
+                <value>
+                    <fullName>Banorte / IXE</fullName>
+                    <default>false</default>
+                    <label>Banorte / IXE</label>
+                </value>
+                <value>
+                    <fullName>BanRegio</fullName>
+                    <default>false</default>
+                    <label>BanRegio</label>
+                </value>
+                <value>
+                    <fullName>Base</fullName>
+                    <default>false</default>
+                    <label>Base</label>
+                </value>
+                <value>
+                    <fullName>CI Banco</fullName>
+                    <default>false</default>
+                    <label>CI Banco</label>
+                </value>
+                <value>
+                    <fullName>HSBC</fullName>
+                    <default>false</default>
+                    <label>HSBC</label>
+                </value>
+                <value>
+                    <fullName>INBURSA</fullName>
+                    <default>false</default>
+                    <label>INBURSA</label>
+                </value>
+                <value>
+                    <fullName>Intercam</fullName>
+                    <default>false</default>
+                    <label>Intercam</label>
+                </value>
+                <value>
+                    <fullName>Monex</fullName>
+                    <default>false</default>
+                    <label>Monex</label>
+                </value>
+                <value>
+                    <fullName>Otro</fullName>
+                    <default>false</default>
+                    <label>Otro</label>
+                </value>
+                <value>
+                    <fullName>Santander</fullName>
+                    <default>false</default>
+                    <label>Santander</label>
+                </value>
+                <value>
+                    <fullName>Scotiabank</fullName>
+                    <default>false</default>
+                    <label>Scotiabank</label>
+                </value>
+                <value>
+                    <fullName>Sin Competencia</fullName>
+                    <default>false</default>
+                    <label>Sin Competencia</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PYME_ls_Producto_Financieros__c</fullName>
+        <description>Nuevo campo pyme Producto Financieros</description>
+        <externalId>false</externalId>
+        <label>Producto Financieros</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Amortizable</fullName>
+                    <default>true</default>
+                    <label>Amortizable</label>
+                </value>
+                <value>
+                    <fullName>Revolverte</fullName>
+                    <default>false</default>
+                    <label>Revolverte</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PYME_ls_Tipo_Garantia__c</fullName>
+        <description>Nuevo campo pyme Tipo de garantia.</description>
+        <externalId>false</externalId>
+        <label>Tipo de Garantía</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Grantía GL</fullName>
+                    <default>true</default>
+                    <label>Grantía GL</label>
+                </value>
+                <value>
+                    <fullName>Hipotecaria</fullName>
+                    <default>false</default>
+                    <label>Hipotecaria</label>
+                </value>
+                <value>
+                    <fullName>Obligado Solidario</fullName>
+                    <default>false</default>
+                    <label>Obligado Solidario</label>
+                </value>
+                <value>
+                    <fullName>Prendaria</fullName>
+                    <default>false</default>
+                    <label>Prendaria</label>
+                </value>
+                <value>
+                    <fullName>Sin Garantía</fullName>
+                    <default>false</default>
+                    <label>Sin Garantía</label>
+                </value>
+                <value>
+                    <fullName>Stand By</fullName>
+                    <default>false</default>
+                    <label>Stand By</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PYME_pr_Tasa__c</fullName>
+        <description>Campo nuevo pyme Tasa</description>
+        <externalId>false</externalId>
+        <label>Tasa</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PYME_un_Plazo__c</fullName>
+        <description>Nuevo campo pyme Plazo</description>
+        <externalId>false</externalId>
+        <label>Plazo</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Cuenta Bancaria</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>PYME_ls_Nombre_del_banco__c</columns>
+        <columns>PYME_ls_Producto_Financieros__c</columns>
+        <columns>PYME_dv_Monto__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <listViews>
+        <fullName>Cuentas_Bancarias_PyME</fullName>
+        <columns>NAME</columns>
+        <columns>PYME_ls_Nombre_del_banco__c</columns>
+        <columns>PYME_ls_Producto_Financieros__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>Cuentas Bancarias PyME</label>
+    </listViews>
+    <nameField>
+        <displayFormat>RB-{0000}</displayFormat>
+        <label>Relacion Bancaria</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cuentas Bancarias</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>PYME_tre_Cuenta_Bancaria</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>PYME_cmp_CuentaB</compactLayoutAssignment>
+        <label>Cuenta Bancaria PyME</label>
+        <picklistValues>
+            <picklist>PYME_ls_Nombre_del_banco__c</picklist>
+            <values>
+                <fullName>Actinver</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>BanRegio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banamex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banca Afirme</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banca Mifel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banco Azteca</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banco del Bajio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banorte %2F IXE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Base</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CI Banco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INBURSA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intercam</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Santander</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scotiabank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sin Competencia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PYME_ls_Producto_Financieros__c</picklist>
+            <values>
+                <fullName>Amortizable</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Revolverte</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PYME_ls_Tipo_Garantia__c</picklist>
+            <values>
+                <fullName>Grantía GL</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Hipotecaria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Obligado Solidario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prendaria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sin Garantía</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stand By</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>PYME_ls_Nombre_del_banco__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PYME_ls_Producto_Financieros__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PYME_dv_Monto__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>PYME_ls_Nombre_del_banco__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PYME_ls_Producto_Financieros__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PYME_dv_Monto__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PYME_ls_Nombre_del_banco__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PYME_ls_Producto_Financieros__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PYME_dv_Monto__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>PYME_ls_Nombre_del_banco__c</searchFilterFields>
+        <searchFilterFields>PYME_ls_Producto_Financieros__c</searchFilterFields>
+        <searchFilterFields>PYME_dv_Monto__c</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchResultsAdditionalFields>PYME_ls_Nombre_del_banco__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PYME_ls_Producto_Financieros__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PYME_dv_Monto__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

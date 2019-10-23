@@ -1,0 +1,82 @@
+<aura:component controller="MX_WB_EvaluacionOportunidades_ctrl" implements="lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,force:appHostable" access="global">
+    <aura:attribute name="oppRecords" type="List"/>
+    <aura:attribute name="oppRecordsFiltered" type="Object"/>
+    <aura:attribute name="filterByName" type="String" default=""/>
+    <aura:attribute name="filterByFolio" type="String" default=""/>
+    <aura:attribute name="filterByType" type="String" default=""/>
+
+    <aura:attribute name="openModal" type="Boolean" default="false"/>
+    <aura:attribute name="keyField" type="String" default="id"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="sortedBy" type="String"/>
+    <aura:attribute name="sortedDirection" type="String"/>
+    <aura:attribute name="defaultSortDirection" type="String"/>
+
+    <aura:handler name="saveDisabled" event="c:MX_WB_EvaluacionEvent" action="{!c.buttonDisabled}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div>
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container" title="Evaluación de calidad">
+                            <lightning:icon iconName="action:submit_for_approval" size="medium"/>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <h1 class="slds-card__header-title">
+                            Evaluación de calidad
+                        </h1>
+                        <p>A continuación se muestran las oportunidades cerradas</p>
+                    </div>
+                </header>
+            </div>
+            <footer class="slds-card__footer">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_7-of-12">
+                    </div>
+                    <div class="slds-col">
+                        <lightning:input value="{!v.filterByName}" label="Filtrar por nombre" onchange="{!c.filter}"/>
+                    </div>
+                    <div class="slds-col">
+                        <lightning:input value="{!v.filterByFolio}" label="Filtrar por Folio" onchange="{!c.filter}"/>
+                    </div>
+                    <div class="slds-col">
+                        <lightning:select name="PorTipo" label="Filtrar por tipo" value="{!v.filterByType}" onchange="{!c.filter}" >
+                            <option value="">Selecciona una opción</option>
+                            <option value="Closed Won">Ganada</option>
+                            <option value="Closed Lost">Perdida</option>
+                        </lightning:select>
+                    </div>
+                </div>
+            </footer>
+
+            <lightning:datatable columns="{!v.columns}" data="{!v.oppRecordsFiltered}"
+                  keyField="{!v.keyField}" hideCheckboxColumn="true"
+                  sortedBy="{!v.sortedBy}" resizeColumnDisabled="true"
+                  sortedDirection="{!v.sortedDirection}" onrowaction="{!c.handleRowAction}"
+                  onsort="{!c.updateColumnSorting}" />
+        </article>
+    </div>
+
+    <aura:if isTrue="{!v.openModal}">
+        <div>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+                <div class="slds-modal__container ">
+                    <header class="slds-modal__header">
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Evaluación de calidad</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        {!v.body}
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:buttonIcon iconName="utility:help" class="slds-float__left" size="large" variant="border-filled" alternativeText="Ayuda" onclick="{!c.openHelpDoc}"/>
+                        <button class="slds-button slds-button_neutral" onclick="{!c.closeModal}">Cerrar</button>
+                        <lightning:button aura:id="buttonSave" disabled="true" variant="brand" class="slds-button slds-button_brand" onclick="{!c.toSave}">Guardar</lightning:button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+</aura:component>

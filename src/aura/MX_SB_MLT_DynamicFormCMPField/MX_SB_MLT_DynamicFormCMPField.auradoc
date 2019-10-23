@@ -1,0 +1,36 @@
+<aura:documentation>
+    <!--
+    /*
+    * @author:      Angel Ignacio Nava
+    * @date:        12/07/2019
+    * @description  Componente que muestra campos de un objeto relacionado a un padre.
+    * @Changes
+    *       2019-07-12          Creación                               Angel Ignacio Nava
+    */
+    -->
+    <aura:description>
+        <p><b>NAME</b> MX_SB_MLT_DynamicFormCMPField</p>
+        <p><b>DESCRIPTION</b>El componente se utiliza para dynamic Form en los campos tipo componente el cual particularmente se muestra campos con información de objetos relacionados </p>
+        <p><b>ATTRIBUTES</b>
+            <ul>
+                <li><p>attribute recordId: Identificador del registro contenido.</p></li>
+				<li><p>attribute objectIn: Objeto Padre en búsqueda.</p></li>
+				<li><p>attribute fieldReferenceIn: Campo de referencia del objeto padre.</p></li>
+				<li><p>attribute objectOut: Objeto hijo a buscar.</p></li>
+				<li><p>attribute fieldOut: Campo de referencia en el hijo.</p></li>
+				<li><p>attribute fieldName: Campo a mostrar en el objeto deseado.</p></li>
+				<li><p>attribute resultado: Valor del campo consultado.</p></li>
+            </ul>
+        </p>
+        <p><b>CONTROLLER METHODS</b>
+            <ul>
+                <li><p><b>doInit</b>Invoca método del Helper consultaInicial</p></li>
+            </ul>
+        </p>
+        <p><b>HELPER METHODS</b>
+            <ul>
+                <li><p><b>consultaInicial</b>Realiza llama a método de consulta de campos.</p></li>
+            </ul>
+        </p>
+    </aura:description>
+</aura:documentation>

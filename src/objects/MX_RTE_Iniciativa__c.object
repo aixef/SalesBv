@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_RTE_Iniciativa_P_gina_de_registro</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>No migrar</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>MX_RTE_Alcance_Global_Local__c</fullName>
+        <externalId>false</externalId>
+        <label>Alcance (Global / Local)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Local</fullName>
+                    <default>false</default>
+                    <label>Local</label>
+                </value>
+                <value>
+                    <fullName>Global</fullName>
+                    <default>false</default>
+                    <label>Global</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Ano_PI_Actual__c</fullName>
+        <description>Devuelve los ultimos dos digitos del año actual</description>
+        <externalId>false</externalId>
+        <formula>VALUE( RIGHT(  MX_RTE_PI_Actual__r.Name , 2 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Año Q Actual</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Beneficio_a_la_Red__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Beneficio a la Red</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Beneficio_al_Cliente__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Beneficio al Cliente</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Entregables__c</fullName>
+        <description>Campo para capturar los entregables de una iniciativa</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Propuesta de Valor</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Estatus__c</fullName>
+        <description>Campo para la aplicación RTE, muestra el estatus de la iniciativa</description>
+        <externalId>false</externalId>
+        <label>Estatus</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Nuevo</fullName>
+                    <default>true</default>
+                    <label>Nuevo</label>
+                </value>
+                <value>
+                    <fullName>Ongoing</fullName>
+                    <default>false</default>
+                    <label>Ongoing</label>
+                </value>
+                <value>
+                    <fullName>Transición</fullName>
+                    <default>false</default>
+                    <label>Transición</label>
+                </value>
+                <value>
+                    <fullName>Por Graduarse</fullName>
+                    <default>false</default>
+                    <label>Por Graduarse</label>
+                </value>
+                <value>
+                    <fullName>Graduado</fullName>
+                    <default>false</default>
+                    <label>Graduado</label>
+                </value>
+                <value>
+                    <fullName>On Hold</fullName>
+                    <default>false</default>
+                    <label>On Hold</label>
+                </value>
+                <value>
+                    <fullName>Descartado</fullName>
+                    <default>false</default>
+                    <label>Descartado</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Etiqueta__c</fullName>
+        <description>Campo por el cual, se categoriza a una iniciativa</description>
+        <externalId>false</externalId>
+        <label>Etiqueta</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Advice</fullName>
+                    <default>false</default>
+                    <label>Advice</label>
+                </value>
+                <value>
+                    <fullName>Analytics &amp; Models</fullName>
+                    <default>false</default>
+                    <label>Analytics &amp; Models</label>
+                </value>
+                <value>
+                    <fullName>Capital &amp; Balance Sheet Management</fullName>
+                    <default>false</default>
+                    <label>Capital &amp; Balance Sheet Management</label>
+                </value>
+                <value>
+                    <fullName>Control Interno</fullName>
+                    <default>false</default>
+                    <label>Control Interno</label>
+                </value>
+                <value>
+                    <fullName>CX</fullName>
+                    <default>false</default>
+                    <label>CX</label>
+                </value>
+                <value>
+                    <fullName>CX: Calidad</fullName>
+                    <default>false</default>
+                    <label>CX: Calidad</label>
+                </value>
+                <value>
+                    <fullName>CX: Futuro</fullName>
+                    <default>false</default>
+                    <label>CX: Futuro</label>
+                </value>
+                <value>
+                    <fullName>Data-Driven Organization-Transcendence</fullName>
+                    <default>false</default>
+                    <label>Data-Driven Organization-Transcendence</label>
+                </value>
+                <value>
+                    <fullName>Data Quality &amp; Governance</fullName>
+                    <default>false</default>
+                    <label>Data Quality &amp; Governance</label>
+                </value>
+                <value>
+                    <fullName>Data y CRM</fullName>
+                    <default>false</default>
+                    <label>Data y CRM</label>
+                </value>
+                <value>
+                    <fullName>Digitalización de Procesos</fullName>
+                    <default>false</default>
+                    <label>Digitalización de Procesos</label>
+                </value>
+                <value>
+                    <fullName>DIY</fullName>
+                    <default>false</default>
+                    <label>DIY</label>
+                </value>
+                <value>
+                    <fullName>Eficiencia</fullName>
+                    <default>false</default>
+                    <label>Eficiencia</label>
+                </value>
+                <value>
+                    <fullName>Eficiencia Real</fullName>
+                    <default>false</default>
+                    <label>Eficiencia Real</label>
+                </value>
+                <value>
+                    <fullName>Eficiencia Virtual</fullName>
+                    <default>false</default>
+                    <label>Eficiencia Virtual</label>
+                </value>
+                <value>
+                    <fullName>Existing Data Infrastructure</fullName>
+                    <default>false</default>
+                    <label>Existing Data Infrastructure</label>
+                </value>
+                <value>
+                    <fullName>Human &amp; Physical Touchpoints</fullName>
+                    <default>false</default>
+                    <label>Human &amp; Physical Touchpoints</label>
+                </value>
+                <value>
+                    <fullName>Infraestructura Física</fullName>
+                    <default>false</default>
+                    <label>Infraestructura Física</label>
+                </value>
+                <value>
+                    <fullName>Infraestructura Lógica</fullName>
+                    <default>false</default>
+                    <label>Infraestructura Lógica</label>
+                </value>
+                <value>
+                    <fullName>Infrastructure (Data Center) Transformation</fullName>
+                    <default>false</default>
+                    <label>Infrastructure (Data Center) Transformation</label>
+                </value>
+                <value>
+                    <fullName>New CX &amp; Digital Sales Enablers</fullName>
+                    <default>false</default>
+                    <label>New CX &amp; Digital Sales Enablers</label>
+                </value>
+                <value>
+                    <fullName>Non-Financial Risk Management</fullName>
+                    <default>false</default>
+                    <label>Non-Financial Risk Management</label>
+                </value>
+                <value>
+                    <fullName>On Hold</fullName>
+                    <default>false</default>
+                    <label>On Hold</label>
+                </value>
+                <value>
+                    <fullName>Open Market</fullName>
+                    <default>false</default>
+                    <label>Open Market</label>
+                </value>
+                <value>
+                    <fullName>Other Technology Platforms</fullName>
+                    <default>false</default>
+                    <label>Other Technology Platforms</label>
+                </value>
+                <value>
+                    <fullName>Other Technology Plattforms</fullName>
+                    <default>false</default>
+                    <label>Other Technology Plattforms</label>
+                </value>
+                <value>
+                    <fullName>Process Re-Engineering &amp; Automation</fullName>
+                    <default>false</default>
+                    <label>Process Re-Engineering &amp; Automation</label>
+                </value>
+                <value>
+                    <fullName>Regulatorio</fullName>
+                    <default>false</default>
+                    <label>Regulatorio</label>
+                </value>
+                <value>
+                    <fullName>Regulatorios</fullName>
+                    <default>false</default>
+                    <label>Regulatorios</label>
+                </value>
+                <value>
+                    <fullName>Regulatory &amp; Supervisors</fullName>
+                    <default>false</default>
+                    <label>Regulatory &amp; Supervisors</label>
+                </value>
+                <value>
+                    <fullName>Retail Product Evolution / BAU</fullName>
+                    <default>false</default>
+                    <label>Retail Product Evolution / BAU</label>
+                </value>
+                <value>
+                    <fullName>Technology-driven Tools for Human Touchpoint Productivity</fullName>
+                    <default>false</default>
+                    <label>Technology-driven Tools for Human Touchpoint Productivity</label>
+                </value>
+                <value>
+                    <fullName>Ventas Digitales</fullName>
+                    <default>false</default>
+                    <label>Ventas Digitales</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Metodologia__c</fullName>
+        <externalId>false</externalId>
+        <label>Metodología</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SCRUM</fullName>
+                    <default>true</default>
+                    <label>SCRUM</label>
+                </value>
+                <value>
+                    <fullName>DISCOVERY</fullName>
+                    <default>false</default>
+                    <label>DISCOVERY</label>
+                </value>
+                <value>
+                    <fullName>KANBAN</fullName>
+                    <default>false</default>
+                    <label>KANBAN</label>
+                </value>
+                <value>
+                    <fullName>WATERFALL</fullName>
+                    <default>false</default>
+                    <label>WATERFALL</label>
+                </value>
+                <value>
+                    <fullName>FAST TRACK</fullName>
+                    <default>false</default>
+                    <label>FAST TRACK</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_No_PI_Actual__c</fullName>
+        <description>Calcula el No. de PI según el mes actual</description>
+        <externalId>false</externalId>
+        <formula>VALUE( LEFT(  MX_RTE_PI_Actual__r.Name , 1 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>No. Q Actual</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI_Actual__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Q Actual</label>
+        <referenceTo>MX_RTE_PI__c</referenceTo>
+        <relationshipLabel>Iniciativas (Q Actual)</relationshipLabel>
+        <relationshipName>Iniciativas_PI_Actual</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI_Estimado__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Q en el que se estima se terminará la Iniciativa</description>
+        <externalId>false</externalId>
+        <label>Q Estimado de Finalización</label>
+        <referenceTo>MX_RTE_PI__c</referenceTo>
+        <relationshipLabel>Iniciativas (Q FInal)</relationshipLabel>
+        <relationshipName>Iniciativas1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI_Extendido__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Q al que se ha decidido extender la finalización de la Iniciativa</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Q al que se ha decidido extender la finalización de la Iniciativa</inlineHelpText>
+        <label>Q Extendido</label>
+        <referenceTo>MX_RTE_PI__c</referenceTo>
+        <relationshipLabel>Iniciativas (Q Extendido)</relationshipLabel>
+        <relationshipName>Iniciativas2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI_Faltantes_Reales__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF
+ (
+   ISBLANK(MX_RTE_PI_Extendido__c),
+   MX_RTE_PI_Faltantes__c,
+   IF( 
+   MX_RTE_PI_Extendido__r.MX_RTE_No_PI__c &gt; MX_RTE_No_PI_Actual__c , 
+   ((MX_RTE_PI_Extendido__r.MX_RTE_Ano_PI__c - MX_RTE_Ano_PI_Actual__c )*4)+( MX_RTE_PI_Extendido__r.MX_RTE_No_PI__c - 
+   MX_RTE_No_PI_Actual__c ), 
+   ((MX_RTE_PI_Extendido__r.MX_RTE_Ano_PI__c - MX_RTE_Ano_PI_Actual__c)*4)-( MX_RTE_No_PI_Actual__c - 
+   MX_RTE_PI_Extendido__r.MX_RTE_No_PI__c) 
+   )
+ )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Q&apos;s Faltantes (Reales)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI_Faltantes__c</fullName>
+        <description>IF( 
+
+      MX_RTE_PI_Estimado__r.MX_RTE_No_PI__c &gt;   MX_RTE_No_PI_Actual__c  , 
+
+      ((MX_RTE_PI_Estimado__r.MX_RTE_Ano_PI__c -   MX_RTE_Ano_PI_Actual__c )*4)+( MX_RTE_PI_Estimado__r.MX_RTE_No_PI__c -  
+        MX_RTE_No_PI_Actual__c  ),
+ 
+      ((MX_RTE_PI_Estimado__r.MX_RTE_Ano_PI__c -  MX_RTE_Ano_PI_Actual__c)*4)-( MX_RTE_No_PI_Actual__c  - 
+        MX_RTE_PI_Estimado__r.MX_RTE_No_PI__c)
+   
+)</description>
+        <externalId>false</externalId>
+        <formula>IF
+(
+ ISBLANK( MX_RTE_PI_Final_Real__c ),
+ IF( 
+  ISBLANK(MX_RTE_PI_Extendido__c), 
+  IF( 
+     MX_RTE_PI_Estimado__r.MX_RTE_No_PI__c &gt;   MX_RTE_No_PI_Actual__c  , 
+     ((MX_RTE_PI_Estimado__r.MX_RTE_Ano_PI__c -   MX_RTE_Ano_PI_Actual__c )*4)+ 
+     (MX_RTE_PI_Estimado__r.MX_RTE_No_PI__c - MX_RTE_No_PI_Actual__c  )+1, 
+     ((MX_RTE_PI_Estimado__r.MX_RTE_Ano_PI__c -  MX_RTE_Ano_PI_Actual__c)*4)- 
+     (MX_RTE_No_PI_Actual__c  - MX_RTE_PI_Estimado__r.MX_RTE_No_PI__c)+1
+   ), 
+  IF( 
+     MX_RTE_PI_Extendido__r.MX_RTE_No_PI__c &gt; MX_RTE_No_PI_Actual__c , 
+     ((MX_RTE_PI_Extendido__r.MX_RTE_Ano_PI__c - MX_RTE_Ano_PI_Actual__c )*4)+ 
+     (MX_RTE_PI_Extendido__r.MX_RTE_No_PI__c - MX_RTE_No_PI_Actual__c )+1, 
+     ((MX_RTE_PI_Extendido__r.MX_RTE_Ano_PI__c - MX_RTE_Ano_PI_Actual__c)*4)- 
+     (MX_RTE_No_PI_Actual__c - MX_RTE_PI_Extendido__r.MX_RTE_No_PI__c)+1 
+   ) 
+ ),
+ 0 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Número de Q&apos;s que aún faltan para finalizar la Iniciativa (Se considera también el Q Actual)</inlineHelpText>
+        <label>Q&apos;s Faltantes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI_Final_Real__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Q Final (Real)</label>
+        <referenceTo>MX_RTE_PI__c</referenceTo>
+        <relationshipLabel>Iniciativas (Q Final)</relationshipLabel>
+        <relationshipName>Iniciativas3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI_Inicio__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Q en el cuál comenzó la iniciativa.</description>
+        <externalId>false</externalId>
+        <label>Q Inicial</label>
+        <referenceTo>MX_RTE_PI__c</referenceTo>
+        <relationshipLabel>Iniciativa (Q Inicial)</relationshipLabel>
+        <relationshipName>Iniciativas</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI_Totales_Reales__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF
+(
+ ISBLANK( MX_RTE_PI_Extendido__c ),
+ MX_RTE_PI_Totales__c,
+ IF( 
+ MX_RTE_PI_Extendido__r.MX_RTE_No_PI__c &gt; MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c , 
+ ((MX_RTE_PI_Extendido__r.MX_RTE_Ano_PI__c - MX_RTE_PI_Inicio__r.MX_RTE_Ano_PI__c)*4)+( MX_RTE_PI_Extendido__r.MX_RTE_No_PI__c - 
+ MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c ), 
+ ((MX_RTE_PI_Extendido__r.MX_RTE_Ano_PI__c - MX_RTE_PI_Inicio__r.MX_RTE_Ano_PI__c)*4)-( MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c - 
+ MX_RTE_PI_Extendido__r.MX_RTE_No_PI__c) 
+ )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Q&apos;s Totales (Reales)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI_Totales__c</fullName>
+        <description>IF( 
+
+      MX_RTE_PI_Estimado__r.MX_RTE_No_PI__c &gt;  MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c , 
+
+      ((MX_RTE_PI_Estimado__r.MX_RTE_Ano_PI__c -  MX_RTE_PI_Inicio__r.MX_RTE_Ano_PI__c)*4)+( MX_RTE_PI_Estimado__r.MX_RTE_No_PI__c -  
+        MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c ),
+ 
+      ((MX_RTE_PI_Estimado__r.MX_RTE_Ano_PI__c -  MX_RTE_PI_Inicio__r.MX_RTE_Ano_PI__c)*4)-( MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c - 
+        MX_RTE_PI_Estimado__r.MX_RTE_No_PI__c)
+   
+   )</description>
+        <externalId>false</externalId>
+        <formula>MX_RTE_PI_Transcurridos__c +  MX_RTE_PI_Faltantes__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Número total de Q&apos;s que se mantendrá abierta una Iniciativa</inlineHelpText>
+        <label>Duración (Q&apos;s)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI_Transcurridos__c</fullName>
+        <description>IF( 
+
+       MX_RTE_No_PI_Actual__c  &gt;  MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c , 
+
+      (( MX_RTE_Ano_PI_Actual__c -  MX_RTE_PI_Inicio__r.MX_RTE_Ano_PI__c)*4)+( MX_RTE_No_PI_Actual__c  -  
+        MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c ),
+ 
+      ((MX_RTE_Ano_PI_Actual__c -  MX_RTE_PI_Inicio__r.MX_RTE_Ano_PI__c)*4)-( MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c - 
+        MX_RTE_No_PI_Actual__c )
+   
+   )</description>
+        <externalId>false</externalId>
+        <formula>IF
+(
+   ISBLANK(MX_RTE_PI_Final_Real__c),
+   IF( 
+       MX_RTE_No_PI_Actual__c  &gt;  MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c , 
+      (( MX_RTE_Ano_PI_Actual__c -  MX_RTE_PI_Inicio__r.MX_RTE_Ano_PI__c)*4)+ 
+      (MX_RTE_No_PI_Actual__c  - MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c ), 
+      ((MX_RTE_Ano_PI_Actual__c -  MX_RTE_PI_Inicio__r.MX_RTE_Ano_PI__c)*4)- 
+      (MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c - MX_RTE_No_PI_Actual__c )
+   ),
+   IF( 
+      MX_RTE_PI_Final_Real__r.MX_RTE_No_PI__c   &gt;  MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c , 
+      ((MX_RTE_PI_Final_Real__r.MX_RTE_Ano_PI__c  -  MX_RTE_PI_Inicio__r.MX_RTE_Ano_PI__c)*4)+ 
+      (MX_RTE_PI_Final_Real__r.MX_RTE_No_PI__c  - MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c )+1, 
+      ((MX_RTE_PI_Final_Real__r.MX_RTE_Ano_PI__c -  MX_RTE_PI_Inicio__r.MX_RTE_Ano_PI__c)*4)- 
+      (MX_RTE_PI_Inicio__r.MX_RTE_No_PI__c - MX_RTE_PI_Final_Real__r.MX_RTE_No_PI__c )+1  
+   ) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Campo que calcula cuantos Q&apos;s han transcurrido desde el Q´s Inicial hasta el actual</inlineHelpText>
+        <label>Q&apos;s Transcurridos</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Portafolio__c</fullName>
+        <externalId>false</externalId>
+        <label>Portafolio</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>BD</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>BD</label>
+                </value>
+                <value>
+                    <fullName>BD (Business Development)</fullName>
+                    <default>false</default>
+                    <label>BD (Business Development)</label>
+                </value>
+                <value>
+                    <fullName>BEyG (Banca de Empresas y Gobierno)</fullName>
+                    <default>false</default>
+                    <label>BEyG (Banca de Empresas y Gobierno)</label>
+                </value>
+                <value>
+                    <fullName>BMI</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>BMI</label>
+                </value>
+                <value>
+                    <fullName>CIB (Costumer Invest Banking)</fullName>
+                    <default>false</default>
+                    <label>CIB (Costumer Invest Banking)</label>
+                </value>
+                <value>
+                    <fullName>Compliance</fullName>
+                    <default>false</default>
+                    <label>Compliance</label>
+                </value>
+                <value>
+                    <fullName>Engineering</fullName>
+                    <default>false</default>
+                    <label>Engineering</label>
+                </value>
+                <value>
+                    <fullName>Experiencia Unica y Vinculación</fullName>
+                    <default>false</default>
+                    <label>Experiencia Unica y Vinculación</label>
+                </value>
+                <value>
+                    <fullName>Finanzas</fullName>
+                    <default>false</default>
+                    <label>Finanzas</label>
+                </value>
+                <value>
+                    <fullName>GM</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>GM</label>
+                </value>
+                <value>
+                    <fullName>Juridico</fullName>
+                    <default>false</default>
+                    <label>Juridico</label>
+                </value>
+                <value>
+                    <fullName>Presidencia</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Presidencia</label>
+                </value>
+                <value>
+                    <fullName>Riesgos</fullName>
+                    <default>false</default>
+                    <label>Riesgos</label>
+                </value>
+                <value>
+                    <fullName>TMP</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>TMP</label>
+                </value>
+                <value>
+                    <fullName>TMP (Transformación del modelo productivo)</fullName>
+                    <default>false</default>
+                    <label>TMP (Transformación del modelo productivo)</label>
+                </value>
+                <value>
+                    <fullName>TYC</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>TYC</label>
+                </value>
+                <value>
+                    <fullName>TyC (Talento y Cultura)</fullName>
+                    <default>false</default>
+                    <label>TyC (Talento y Cultura)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Procesos_Back__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Procesos Back</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Product_Owner_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo que se actualiza si la iniciativa cuenta con un Product Owner asignado.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tiene que haber exactamente un Product Owner asignado a la iniciativa.</inlineHelpText>
+        <label>Product Owner check</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Product_Owner__c</fullName>
+        <description>Campo para la aplicación RTE que permite ver el PO responsable de la iniciativa</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Product Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Programa_Anterior__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo para seleccionar el programa inmediato anterior al actual</description>
+        <externalId>false</externalId>
+        <label>Programa Anterior</label>
+        <referenceTo>MX_RTE_Programas__c</referenceTo>
+        <relationshipLabel>Iniciativas (Programa Anterior)</relationshipLabel>
+        <relationshipName>Iniciativas1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Programa_Global__c</fullName>
+        <externalId>false</externalId>
+        <label>Programa</label>
+        <referenceTo>MX_RTE_Programas__c</referenceTo>
+        <relationshipLabel>Iniciativas</relationshipLabel>
+        <relationshipName>Iniciativas</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Ranking_BBVA__c</fullName>
+        <externalId>false</externalId>
+        <label>Ranking BBVA</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_SDATOOL__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>SDATOOL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Scrum_Master_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo que se actualiza si la iniciativa cuenta con Scrum Master asignado.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tiene que haber exactamente un Scrum Master asignado a la iniciativa</inlineHelpText>
+        <label>Scrum Master check</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Scrum_Master__c</fullName>
+        <description>Campo para la aplicación RTE, que permite definir al Scrum Master responsable</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Scrum Master</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Stake_Holder__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo con el cual se relaconada a un usuario (contacto) como stake holder con una iniciativa</description>
+        <externalId>false</externalId>
+        <label>Stake Holder</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Iniciativas</relationshipLabel>
+        <relationshipName>Iniciativas</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Stake_holder_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Nombre del 2do Stake Holder, en caso de que exista alguno.</description>
+        <externalId>false</externalId>
+        <label>Stake holder 2</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Iniciativas (Stake holder 2)</relationshipLabel>
+        <relationshipName>Iniciativas1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_TIER__c</fullName>
+        <description>Clasificación respecto a la globalidad de una Iniciativa</description>
+        <externalId>false</externalId>
+        <inlineHelpText>T0-El Progam Manager Global no conoce este proyecto,
+T1-Lo conoce el PM Global,
+T2-Global Program Manager knows roadmap,
+T3-Definition and Design common to all count,
+T4-Definition, Design, Front developement and/or APIs common to all countries.</inlineHelpText>
+        <label>TIER</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>MX_RTE_Alcance_Global_Local__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>T0</fullName>
+                    <default>false</default>
+                    <label>T0</label>
+                </value>
+                <value>
+                    <fullName>T1</fullName>
+                    <default>false</default>
+                    <label>T1</label>
+                </value>
+                <value>
+                    <fullName>T2</fullName>
+                    <default>false</default>
+                    <label>T2</label>
+                </value>
+                <value>
+                    <fullName>T3</fullName>
+                    <default>false</default>
+                    <label>T3</label>
+                </value>
+                <value>
+                    <fullName>T4</fullName>
+                    <default>false</default>
+                    <label>T4</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Local</controllingFieldValue>
+                <controllingFieldValue>Global</controllingFieldValue>
+                <valueName>T0</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Local</controllingFieldValue>
+                <valueName>T1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Local</controllingFieldValue>
+                <controllingFieldValue>Global</controllingFieldValue>
+                <valueName>T2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Global</controllingFieldValue>
+                <valueName>T3</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Global</controllingFieldValue>
+                <valueName>T4</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Programa__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_RTE_Programa_Global__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Programa</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Iniciativa</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Estatus__c</columns>
+        <columns>MX_RTE_Programa_Global__c</columns>
+        <columns>MX_RTE_Product_Owner__c</columns>
+        <columns>MX_RTE_Scrum_Master__c</columns>
+        <columns>MX_RTE_Stake_Holder__c</columns>
+        <columns>MX_RTE_PI_Inicio__c</columns>
+        <columns>MX_RTE_PI_Actual__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>Nombre de Iniciativa</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Iniciativas</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>MX_RTE_Pi_estimado_no_se_puede_modificar</fullName>
+        <active>true</active>
+        <description>El PI Estimado solo puede modificarse si la iniciativa tiene estatus de &quot;Nuevo&quot;, para extender la duración de la iniciativa, se debe utilizar el botón &quot;Extensión de PI Estimado&quot;</description>
+        <errorConditionFormula>AND( ISCHANGED( MX_RTE_PI_Estimado__c ),
+    NOT(ISPICKVAL( MX_RTE_Estatus__c, &quot;Nuevo&quot;))
+)</errorConditionFormula>
+        <errorMessage>El PI Estimado solo puede modificarse si la iniciativa tiene estatus de &quot;Nuevo&quot;, para extender la duración de la iniciativa, se debe utilizar el botón &quot;Extensión de PI Estimado&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MX_RTE_Graduada_Q</fullName>
+        <active>true</active>
+        <description>Regla de validación que no permite llenar el campo de Q Final Real si la iniciativa no está graduada, ni tampoco que la iniciativa se gradúe sin llenar el Q Final Real.</description>
+        <errorConditionFormula>OR( 
+     AND( ISPICKVAL(MX_RTE_Estatus__c, &quot;Graduado&quot;), ISBLANK( 
+          MX_RTE_PI_Final_Real__c ) )
+
+,
+
+
+     AND( NOT(ISPICKVAL(MX_RTE_Estatus__c, &quot;Graduado&quot;)), NOT(ISBLANK( 
+          MX_RTE_PI_Final_Real__c )) )
+
+)</errorConditionFormula>
+        <errorDisplayField>MX_RTE_PI_Final_Real__c</errorDisplayField>
+        <errorMessage>No es posible llenar el campo Q Final (Real) si la iniciativa no está Graduada.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MX_RTE_Validacion_Ongoing</fullName>
+        <active>true</active>
+        <description>Regla que no permite actualizar el estatus de una iniciativa a Ongoing, a menos que cuente con 1 Scrum Master y 1 Product Owner.</description>
+        <errorConditionFormula>AND
+(OR( MX_RTE_Scrum_Master_Check__c  = FALSE , MX_RTE_Product_Owner_Check__c  = FALSE),
+ISPICKVAL( MX_RTE_Estatus__c , &quot;Ongoing&quot;))</errorConditionFormula>
+        <errorMessage>La iniciativa debe contar con un Scrum Master y un Product Owner para poder cambiar el estatus a Ongoing</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>MX_RTE_Cambiar_Programa</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Cambiar Programa</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/flow/MX_RTE_Cambio_de_Programa?varIdIniciativa={!MX_RTE_Iniciativa__c.Id}&amp;varIdProgramaAnterior={!MX_RTE_Iniciativa__c.MX_RTE_Programa_GlobalId__c}&amp;retURL={!MX_RTE_Iniciativa__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>MX_RTE_Descartar_Iniciativa</fullName>
+        <availability>online</availability>
+        <description>Botón tipo URL el cuál mediante un Flujo cambia la etapa de la Iniciativa a Descartada</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Descartar Iniciativa</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/flow/MX_RTE_Descartar_Iniciativa_Sin_Features_Abiertos?IniciativaID={!MX_RTE_Iniciativa__c.Id}&amp;retURL={!MX_RTE_Iniciativa__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>MX_RTE_Extension_de_PI_Estimado</fullName>
+        <availability>online</availability>
+        <description>Botón tipo URL el cuál mediante un Flujo establece un valor para el PI Final</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Extender duración de la Iniciativa</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/flow/MX_RTE_Extender_duracion_PI?varIdIniciativa={!MX_RTE_Iniciativa__c.Id}&amp;retURL={!MX_RTE_Iniciativa__c.Id}</url>
+    </webLinks>
+</CustomObject>

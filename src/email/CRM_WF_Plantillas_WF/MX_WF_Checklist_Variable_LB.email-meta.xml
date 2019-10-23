@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Checklist Variable LB</name>
+    <style>formalLetter</style>
+    <subject>Notificación de documento agregado al Checklist {!CRM_WF_Checklist__c.Name}</subject>
+    <textOnly>El usuario {!CRM_WF_Checklist_Variables__c.CreatedBy} del área {!CRM_WF_Checklist__c.CRM_WF_Squad_Producto__c} ha agregado un nuevo documento al Checklist {!CRM_WF_Checklist__c.Name} de la Campaña {!CRM_WF_Checklist__c.CRM_WF_Nombre_Estrategia_Proyecto__c}
+
+Datos del Documento:
+
+Folio: {!CRM_WF_Checklist_Variables__c.Name}
+Documento: {!CRM_WF_Checklist_Variables__c.CRM_WF_Variables__c} {!CRM_WF_Checklist_Variables__c.CRM_WF_Otro__c}
+URL del Documento: {!CRM_WF_Checklist_Variables__c.CRM_WF_Documento_Variable__c}
+
+Para mayor detalle puedes ingresar al registro dando clic en la siguiente liga
+
+Registro de Checklist</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

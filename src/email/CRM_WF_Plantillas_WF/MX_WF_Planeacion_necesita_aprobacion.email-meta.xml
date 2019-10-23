@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación Workflow, notifica al usuario que debe mandar a aprobar su registro</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Planeación necesita aprobación</name>
+    <style>formalLetter</style>
+    <subject>La carga de la base para la fecha {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c} requiere ser aprobada por CRM</subject>
+    <textOnly>Por medio de la presente se le informa que su registro de Planeación Calendario CRM con Folio {!CRM_WF_Planeacion_Calendario_CRM__c.Name} para el día
+{!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c} necesita ser aprobada por CRM.
+
+Volumen de carga de su base: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen__c}
+
+Multicanal
+Volumen total de bases aprobadas: {!CRM_WF_Calendario_CRM__c.CRM_WF_Volumen_Aprobado_CRM__c}
+Volumen total de bases en lista de espera: {!CRM_WF_Calendario_CRM__c.CRM_WF_Lista_de_Espera_CRM__c}
+
+SMS / Push Notification:
+Volumen total de bases aprobadas: {!CRM_WF_Calendario_CRM__c.CRM_WF_Volumen_Aprobado_SMS_Push__c}
+Volumen total de bases en lista de espera: {!CRM_WF_Calendario_CRM__c.CRM_WF_Lista_de_Espera__c}
+
+Para acceder al detalle de tu registro has clic en el siguiente enlace: Planeación Calendario CRM</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

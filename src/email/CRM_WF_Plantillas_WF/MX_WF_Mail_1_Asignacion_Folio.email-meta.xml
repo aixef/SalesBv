@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Mail 1 Asignaciòn de Folio</name>
+    <style>formalLetter</style>
+    <subject>Número de Incidencia {!Case.CaseNumber}</subject>
+    <textOnly>Estimad@ {!Case.Contact}
+
+Hemos recibido los datos de tu solicitud con número de folio {!Case.CaseNumber}. Dependiendo del análisis del caso te compartiremos el tiempo de respuesta.
+
+A través de este folio y por medio de Chatter podrás dar seguimiento a tu solicitud, no es necesario enviar un correo nuevo, ya que se duplicará tu solicitud y generará retraso en la solución de tu aclaración.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[Por medio de la presente se le solicita su aprobación del <b>Subject &amp; Preheader</b> para el canal con folio&nbsp;<b>{!CRM_WF_Artes__c.Name}</b><div><b><br></b></div><div>Subject:&nbsp;<b>{!CRM_WF_Artes__c.CRM_WF_Subject__c}</b></div><div>Preheader:&nbsp;<b>{!CRM_WF_Artes__c.CRM_WF_Preheader__c}</b></div><div><b><br></b></div><div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);">Para mayor información consulte el registro de Brief en Salesforce:</div><div style="font-size: 12pt; background-color: rgb(255, 255, 255);"><br></div><div style="background-color: rgb(255, 255, 255);"><b><a href="{!CRM_WF_Artes__c.Link}">Registro del Canal en Salesforce</a></b></div><div style="background-color: rgb(255, 255, 255);"><b><br></b></div><div style="background-color: rgb(255, 255, 255);"><font style="font-size: 12pt; font-variant-numeric: normal; font-variant-east-asian: normal;"><i><b><font color="#000066">Para aprobar o rechazar haga clic en el siguiente vínculo <a href="{!ApprovalRequest.External_URL}">Registro de aprobación</a></font></b></i></font></div></div><div><i style="font-size: 12pt;"><br></i></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

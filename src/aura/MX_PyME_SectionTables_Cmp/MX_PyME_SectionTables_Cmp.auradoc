@@ -1,0 +1,8 @@
+<aura:documentation>
+    <aura:description>
+        <code>c:MX_PyME_SectionTables_Cmp</code>The component shows sections that contains different DataTables with credit or card information.
+    </aura:description>
+    <aura:example name="sectionTables" ref="c:MX_PyME_SectionTables_Cmp" label="Products Component">
+        <p>Section PyME DataTables Component<code>c:MX_PyME_SectionTables_Cmp</code>Section PyME DataTables Component.</p>
+    </aura:example>
+</aura:documentation>

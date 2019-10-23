@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Call me Back</fullName>
+        <default>false</default>
+        <label>Call me Back</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Correo electrónico</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone</fullName>
+        <default>true</default>
+        <label>Teléfono</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Redes Sociales</fullName>
+        <default>false</default>
+        <label>Redes Sociales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chat</fullName>
+        <default>false</default>
+        <label>Chat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ARCO</fullName>
+        <default>false</default>
+        <label>ARCO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Banca Patrimonial</fullName>
+        <default>false</default>
+        <label>Banca Patrimonial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Banca Personal</fullName>
+        <default>false</default>
+        <label>Banca Personal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IRENE</fullName>
+        <default>false</default>
+        <label>IRENE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pilotos</fullName>
+        <default>false</default>
+        <label>Pilotos</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ventas</fullName>
+        <default>false</default>
+        <label>Ventas</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Welcome</fullName>
+        <default>false</default>
+        <label>Welcome</label>
+    </standardValue>
+</StandardValueSet>

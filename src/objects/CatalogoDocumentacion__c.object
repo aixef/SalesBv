@@ -1,0 +1,2026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Activo__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Permite identificar si el registro de catalogo esta activo o no. En caso que no este activo no sera visible al momento de realizar la tipificación de casos</description>
+        <externalId>false</externalId>
+        <label>Activo</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AprobadorDos__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Aprobador Dos</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Catalogo_DocumentacionDos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AprobadorUno__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Aprobador Uno</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Catalogo_Documentacion</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Aprobador__c</fullName>
+        <externalId>false</externalId>
+        <label>Aprobador</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ClienteCandidato__c</fullName>
+        <externalId>false</externalId>
+        <label>ClienteCandidato</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cliente</fullName>
+                    <default>false</default>
+                    <label>Cliente</label>
+                </value>
+                <value>
+                    <fullName>Candidato</fullName>
+                    <default>false</default>
+                    <label>Candidato</label>
+                </value>
+                <value>
+                    <fullName>Ambos</fullName>
+                    <default>false</default>
+                    <label>Ambos</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CorreoApertura__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Correo Apertura</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CorreoCierre__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Correo Cierre</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CreaCasoCierre__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Crea caso al cierre</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DatosTramite__c</fullName>
+        <externalId>false</externalId>
+        <label>Datos del trámite</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Detalle__c</fullName>
+        <externalId>false</externalId>
+        <label>Detalle</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bancomer</fullName>
+                    <default>false</default>
+                    <label>Bancomer</label>
+                </value>
+                <value>
+                    <fullName>Beneficiario preferente</fullName>
+                    <default>false</default>
+                    <label>Beneficiario preferente</label>
+                </value>
+                <value>
+                    <fullName>Bolsa de trabajo</fullName>
+                    <default>false</default>
+                    <label>Bolsa de trabajo</label>
+                </value>
+                <value>
+                    <fullName>Bonus</fullName>
+                    <default>false</default>
+                    <label>Bonus</label>
+                </value>
+                <value>
+                    <fullName>Cambio cobertura</fullName>
+                    <default>false</default>
+                    <label>Cambio cobertura</label>
+                </value>
+                <value>
+                    <fullName>Cambio de forma de pago</fullName>
+                    <default>false</default>
+                    <label>Cambio de forma de pago</label>
+                </value>
+                <value>
+                    <fullName>Cambio de número de cuenta</fullName>
+                    <default>false</default>
+                    <label>Cambio de número de cuenta</label>
+                </value>
+                <value>
+                    <fullName>Cambio de plan</fullName>
+                    <default>false</default>
+                    <label>Cambio de plan</label>
+                </value>
+                <value>
+                    <fullName>Cambio subplan</fullName>
+                    <default>false</default>
+                    <label>Cambio subplan</label>
+                </value>
+                <value>
+                    <fullName>Cargos irregulares</fullName>
+                    <default>false</default>
+                    <label>Cargos irregulares</label>
+                </value>
+                <value>
+                    <fullName>Cargos no reconocidos</fullName>
+                    <default>false</default>
+                    <label>Cargos no reconocidos</label>
+                </value>
+                <value>
+                    <fullName>Chat interrumpido por el cliente</fullName>
+                    <default>false</default>
+                    <label>Chat interrumpido por el cliente</label>
+                </value>
+                <value>
+                    <fullName>Cliente no reconoce compra</fullName>
+                    <default>false</default>
+                    <label>Cliente no reconoce compra</label>
+                </value>
+                <value>
+                    <fullName>Complemento de bonificación</fullName>
+                    <default>false</default>
+                    <label>Complemento de bonificación</label>
+                </value>
+                <value>
+                    <fullName>Con cambio de cuenta</fullName>
+                    <default>false</default>
+                    <label>Con cambio de cuenta</label>
+                </value>
+                <value>
+                    <fullName>Condiciones Generales</fullName>
+                    <default>false</default>
+                    <label>Condiciones Generales</label>
+                </value>
+                <value>
+                    <fullName>Controversia solicitud</fullName>
+                    <default>false</default>
+                    <label>Controversia solicitud</label>
+                </value>
+                <value>
+                    <fullName>Corregir titular / contratante</fullName>
+                    <default>false</default>
+                    <label>Corregir titular / contratante</label>
+                </value>
+                <value>
+                    <fullName>Corte de llamada</fullName>
+                    <default>false</default>
+                    <label>Corte de llamada</label>
+                </value>
+                <value>
+                    <fullName>Cotización adaptación/ equipo especial/conversión</fullName>
+                    <default>false</default>
+                    <label>Cotización adaptación/ equipo especial/conversión</label>
+                </value>
+                <value>
+                    <fullName>Cuenta Asociada</fullName>
+                    <default>false</default>
+                    <label>Cuenta Asociada</label>
+                </value>
+                <value>
+                    <fullName>Datos generales</fullName>
+                    <default>false</default>
+                    <label>Datos generales</label>
+                </value>
+                <value>
+                    <fullName>De cotización</fullName>
+                    <default>false</default>
+                    <label>De cotización</label>
+                </value>
+                <value>
+                    <fullName>De cotización/Call me back</fullName>
+                    <default>false</default>
+                    <label>De cotización/Call me back</label>
+                </value>
+                <value>
+                    <fullName>De medios de contacto</fullName>
+                    <default>false</default>
+                    <label>De medios de contacto</label>
+                </value>
+                <value>
+                    <fullName>De otra aseguradora</fullName>
+                    <default>false</default>
+                    <label>De otra aseguradora</label>
+                </value>
+                <value>
+                    <fullName>De otras áreas</fullName>
+                    <default>false</default>
+                    <label>De otras áreas</label>
+                </value>
+                <value>
+                    <fullName>De productos y servicios</fullName>
+                    <default>false</default>
+                    <label>De productos y servicios</label>
+                </value>
+                <value>
+                    <fullName>Derechos arco</fullName>
+                    <default>false</default>
+                    <label>Derechos arco</label>
+                </value>
+                <value>
+                    <fullName>Desacuerdo en solución</fullName>
+                    <default>false</default>
+                    <label>Desacuerdo en solución</label>
+                </value>
+                <value>
+                    <fullName>Descripción</fullName>
+                    <default>false</default>
+                    <label>Descripción</label>
+                </value>
+                <value>
+                    <fullName>Descuentos no aplicados</fullName>
+                    <default>false</default>
+                    <label>Descuentos no aplicados</label>
+                </value>
+                <value>
+                    <fullName>Desprestigio de Marca</fullName>
+                    <default>false</default>
+                    <label>Desprestigio de Marca</label>
+                </value>
+                <value>
+                    <fullName>De terceros</fullName>
+                    <default>false</default>
+                    <label>De terceros</label>
+                </value>
+                <value>
+                    <fullName>Dudas del APP</fullName>
+                    <default>false</default>
+                    <label>Dudas del APP</label>
+                </value>
+                <value>
+                    <fullName>Dudas Mi wibe</fullName>
+                    <default>false</default>
+                    <label>Dudas Mi wibe</label>
+                </value>
+                <value>
+                    <fullName>Duplicidad</fullName>
+                    <default>false</default>
+                    <label>Duplicidad</label>
+                </value>
+                <value>
+                    <fullName>Economía personal</fullName>
+                    <default>false</default>
+                    <label>Economía personal</label>
+                </value>
+                <value>
+                    <fullName>Envio de póliza</fullName>
+                    <default>false</default>
+                    <label>Envio de póliza</label>
+                </value>
+                <value>
+                    <fullName>Envío de Póliza con cambio de correo electrónico</fullName>
+                    <default>false</default>
+                    <label>Envío de Póliza con cambio de correo electrónico</label>
+                </value>
+                <value>
+                    <fullName>Error APP</fullName>
+                    <default>false</default>
+                    <label>Error APP</label>
+                </value>
+                <value>
+                    <fullName>Error de App</fullName>
+                    <default>false</default>
+                    <label>Error de App</label>
+                </value>
+                <value>
+                    <fullName>Error de pagina</fullName>
+                    <default>false</default>
+                    <label>Error de pagina</label>
+                </value>
+                <value>
+                    <fullName>Error de venta</fullName>
+                    <default>false</default>
+                    <label>Error de venta</label>
+                </value>
+                <value>
+                    <fullName>Error VIT</fullName>
+                    <default>false</default>
+                    <label>Error VIT</label>
+                </value>
+                <value>
+                    <fullName>Incluir equipo especial / adaptaciones</fullName>
+                    <default>false</default>
+                    <label>Incluir equipo especial / adaptaciones</label>
+                </value>
+                <value>
+                    <fullName>Informacion</fullName>
+                    <default>false</default>
+                    <label>Informacion</label>
+                </value>
+                <value>
+                    <fullName>Información de Facturación</fullName>
+                    <default>false</default>
+                    <label>Información de Facturación</label>
+                </value>
+                <value>
+                    <fullName>Inhibición de publicidad</fullName>
+                    <default>false</default>
+                    <label>Inhibición de publicidad</label>
+                </value>
+                <value>
+                    <fullName>Integración de Fotos Verificación</fullName>
+                    <default>false</default>
+                    <label>Integración de Fotos Verificación</label>
+                </value>
+                <value>
+                    <fullName>Integración Documentos</fullName>
+                    <default>false</default>
+                    <label>Integración Documentos</label>
+                </value>
+                <value>
+                    <fullName>Intento de sobregiro o intereses</fullName>
+                    <default>false</default>
+                    <label>Intento de sobregiro o intereses</label>
+                </value>
+                <value>
+                    <fullName>Mal servicio</fullName>
+                    <default>false</default>
+                    <label>Mal servicio</label>
+                </value>
+                <value>
+                    <fullName>Membresía</fullName>
+                    <default>false</default>
+                    <label>Membresía</label>
+                </value>
+                <value>
+                    <fullName>Multiasistencia</fullName>
+                    <default>false</default>
+                    <label>Multiasistencia</label>
+                </value>
+                <value>
+                    <fullName>No reconoce compra</fullName>
+                    <default>false</default>
+                    <label>No reconoce compra</label>
+                </value>
+                <value>
+                    <fullName>No se localiza póliza</fullName>
+                    <default>false</default>
+                    <label>No se localiza póliza</label>
+                </value>
+                <value>
+                    <fullName>Número de cuenta</fullName>
+                    <default>false</default>
+                    <label>Número de cuenta</label>
+                </value>
+                <value>
+                    <fullName>Otra aseguradora</fullName>
+                    <default>false</default>
+                    <label>Otra aseguradora</label>
+                </value>
+                <value>
+                    <fullName>Otros bancos</fullName>
+                    <default>false</default>
+                    <label>Otros bancos</label>
+                </value>
+                <value>
+                    <fullName>Patrocinio</fullName>
+                    <default>false</default>
+                    <label>Patrocinio</label>
+                </value>
+                <value>
+                    <fullName>Placas / motor / serie</fullName>
+                    <default>false</default>
+                    <label>Placas / motor / serie</label>
+                </value>
+                <value>
+                    <fullName>Póliza / condiciones generales</fullName>
+                    <default>false</default>
+                    <label>Póliza / condiciones generales</label>
+                </value>
+                <value>
+                    <fullName>Por trámite</fullName>
+                    <default>false</default>
+                    <label>Por trámite</label>
+                </value>
+                <value>
+                    <fullName>Por Verificar</fullName>
+                    <default>false</default>
+                    <label>Por Verificar</label>
+                </value>
+                <value>
+                    <fullName>Posible Retención</fullName>
+                    <default>false</default>
+                    <label>Posible Retención</label>
+                </value>
+                <value>
+                    <fullName>Posible Venta</fullName>
+                    <default>false</default>
+                    <label>Posible Venta</label>
+                </value>
+                <value>
+                    <fullName>Pre emisión</fullName>
+                    <default>false</default>
+                    <label>Pre emisión</label>
+                </value>
+                <value>
+                    <fullName>Pre emisión - INC</fullName>
+                    <default>false</default>
+                    <label>Pre emisión - INC</label>
+                </value>
+                <value>
+                    <fullName>Promociones</fullName>
+                    <default>false</default>
+                    <label>Promociones</label>
+                </value>
+                <value>
+                    <fullName>Prueba</fullName>
+                    <default>false</default>
+                    <label>Prueba</label>
+                </value>
+                <value>
+                    <fullName>Pruebas</fullName>
+                    <default>false</default>
+                    <label>Pruebas</label>
+                </value>
+                <value>
+                    <fullName>Publicidad</fullName>
+                    <default>false</default>
+                    <label>Publicidad</label>
+                </value>
+                <value>
+                    <fullName>Queja APP</fullName>
+                    <default>false</default>
+                    <label>Queja APP</label>
+                </value>
+                <value>
+                    <fullName>Queja Mi wibe</fullName>
+                    <default>false</default>
+                    <label>Queja Mi wibe</label>
+                </value>
+                <value>
+                    <fullName>Queja Multiasistencia</fullName>
+                    <default>false</default>
+                    <label>Queja Multiasistencia</label>
+                </value>
+                <value>
+                    <fullName>Queja SAC</fullName>
+                    <default>false</default>
+                    <label>Queja SAC</label>
+                </value>
+                <value>
+                    <fullName>Queja Ventas</fullName>
+                    <default>false</default>
+                    <label>Queja Ventas</label>
+                </value>
+                <value>
+                    <fullName>Reactivación</fullName>
+                    <default>false</default>
+                    <label>Reactivación</label>
+                </value>
+                <value>
+                    <fullName>Recibo fiscal alta</fullName>
+                    <default>false</default>
+                    <label>Recibo fiscal alta</label>
+                </value>
+                <value>
+                    <fullName>Recibo fiscal corrección</fullName>
+                    <default>false</default>
+                    <label>Recibo fiscal corrección</label>
+                </value>
+                <value>
+                    <fullName>Recibo fiscal duplicado</fullName>
+                    <default>false</default>
+                    <label>Recibo fiscal duplicado</label>
+                </value>
+                <value>
+                    <fullName>Recibo fiscal preemisión</fullName>
+                    <default>false</default>
+                    <label>Recibo fiscal preemisión</label>
+                </value>
+                <value>
+                    <fullName>Recompra</fullName>
+                    <default>false</default>
+                    <label>Recompra</label>
+                </value>
+                <value>
+                    <fullName>Sac</fullName>
+                    <default>false</default>
+                    <label>Sac</label>
+                </value>
+                <value>
+                    <fullName>Seguimiento de folio</fullName>
+                    <default>false</default>
+                    <label>Seguimiento de folio</label>
+                </value>
+                <value>
+                    <fullName>Servicios</fullName>
+                    <default>false</default>
+                    <label>Servicios</label>
+                </value>
+                <value>
+                    <fullName>Servicios multiasistencia</fullName>
+                    <default>false</default>
+                    <label>Servicios multiasistencia</label>
+                </value>
+                <value>
+                    <fullName>SOS interrumpido por el cliente</fullName>
+                    <default>false</default>
+                    <label>SOS interrumpido por el cliente</label>
+                </value>
+                <value>
+                    <fullName>SPAM</fullName>
+                    <default>false</default>
+                    <label>SPAM</label>
+                </value>
+                <value>
+                    <fullName>TAG</fullName>
+                    <default>false</default>
+                    <label>TAG</label>
+                </value>
+                <value>
+                    <fullName>Tarjeta de gasolina</fullName>
+                    <default>false</default>
+                    <label>Tarjeta de gasolina</label>
+                </value>
+                <value>
+                    <fullName>Trámite Uber</fullName>
+                    <default>false</default>
+                    <label>Trámite Uber</label>
+                </value>
+                <value>
+                    <fullName>Transferencia</fullName>
+                    <default>false</default>
+                    <label>Transferencia</label>
+                </value>
+                <value>
+                    <fullName>Venta</fullName>
+                    <default>false</default>
+                    <label>Venta</label>
+                </value>
+                <value>
+                    <fullName>Venta condicionada</fullName>
+                    <default>false</default>
+                    <label>Venta condicionada</label>
+                </value>
+                <value>
+                    <fullName>Venta de unidad</fullName>
+                    <default>false</default>
+                    <label>Venta de unidad</label>
+                </value>
+                <value>
+                    <fullName>Ventas</fullName>
+                    <default>false</default>
+                    <label>Ventas</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Dias__c</fullName>
+        <externalId>false</externalId>
+        <label>Días</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Natural</fullName>
+                    <default>false</default>
+                    <label>Natural</label>
+                </value>
+                <value>
+                    <fullName>Hábil</fullName>
+                    <default>false</default>
+                    <label>Hábil</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Documentacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Documentación</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EjecutorID__c</fullName>
+        <externalId>false</externalId>
+        <label>EjecutorID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ejecutor__c</fullName>
+        <externalId>false</externalId>
+        <label>Ejecutor</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cola BD</fullName>
+                    <default>false</default>
+                    <label>Cola BD</label>
+                </value>
+                <value>
+                    <fullName>Cola BO2 Abonos</fullName>
+                    <default>false</default>
+                    <label>Cola BO2 Abonos</label>
+                </value>
+                <value>
+                    <fullName>Cola BO3</fullName>
+                    <default>false</default>
+                    <label>Cola BO3</label>
+                </value>
+                <value>
+                    <fullName>Cola de Back Office 2</fullName>
+                    <default>false</default>
+                    <label>Cola de Back Office 2</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Cambios</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Cambios</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Cancelaciones</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Cancelaciones</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Integrador</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Integrador</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Recibos Fiscales</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Recibos Fiscales</label>
+                </value>
+                <value>
+                    <fullName>Cola de Casos Especiales</fullName>
+                    <default>false</default>
+                    <label>Cola de Casos Especiales</label>
+                </value>
+                <value>
+                    <fullName>Cola de Coordinador AC</fullName>
+                    <default>false</default>
+                    <label>Cola de Coordinador AC</label>
+                </value>
+                <value>
+                    <fullName>Cola de Cotizaciones</fullName>
+                    <default>false</default>
+                    <label>Cola de Cotizaciones</label>
+                </value>
+                <value>
+                    <fullName>Cola de Email-to-case</fullName>
+                    <default>false</default>
+                    <label>Cola de Email-to-case</label>
+                </value>
+                <value>
+                    <fullName>Cola de Redes Sociales</fullName>
+                    <default>false</default>
+                    <label>Cola de Redes Sociales</label>
+                </value>
+                <value>
+                    <fullName>Cola de Supervisor AC</fullName>
+                    <default>false</default>
+                    <label>Cola de Supervisor AC</label>
+                </value>
+                <value>
+                    <fullName>Cola de Validación PU</fullName>
+                    <default>false</default>
+                    <label>Cola de Validación PU</label>
+                </value>
+                <value>
+                    <fullName>Cola de Validación Siniestro</fullName>
+                    <default>false</default>
+                    <label>Cola de Validación Siniestro</label>
+                </value>
+                <value>
+                    <fullName>Cola Retención</fullName>
+                    <default>false</default>
+                    <label>Cola Retención</label>
+                </value>
+                <value>
+                    <fullName>Cola Traking Web</fullName>
+                    <default>false</default>
+                    <label>Cola Traking Web</label>
+                </value>
+                <value>
+                    <fullName>Cola de Verificación</fullName>
+                    <default>false</default>
+                    <label>Cola de Verificación</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IdExterno__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>IdExterno</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Motivo__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Aclaración</fullName>
+                    <default>false</default>
+                    <label>Aclaración</label>
+                </value>
+                <value>
+                    <fullName>Alta</fullName>
+                    <default>false</default>
+                    <label>Alta</label>
+                </value>
+                <value>
+                    <fullName>Bonificaciones</fullName>
+                    <default>false</default>
+                    <label>Bonificaciones</label>
+                </value>
+                <value>
+                    <fullName>Cambio de número de cuenta</fullName>
+                    <default>false</default>
+                    <label>Cambio de número de cuenta</label>
+                </value>
+                <value>
+                    <fullName>Cambios</fullName>
+                    <default>false</default>
+                    <label>Cambios</label>
+                </value>
+                <value>
+                    <fullName>Cancelaciones</fullName>
+                    <default>false</default>
+                    <label>Cancelaciones</label>
+                </value>
+                <value>
+                    <fullName>Consulta/Información</fullName>
+                    <default>false</default>
+                    <label>Consulta/Información</label>
+                </value>
+                <value>
+                    <fullName>Cool Drive</fullName>
+                    <default>false</default>
+                    <label>Cool Drive</label>
+                </value>
+                <value>
+                    <fullName>Cotizaciones</fullName>
+                    <default>false</default>
+                    <label>Cotizaciones</label>
+                </value>
+                <value>
+                    <fullName>Información</fullName>
+                    <default>false</default>
+                    <label>Información</label>
+                </value>
+                <value>
+                    <fullName>Interacción</fullName>
+                    <default>false</default>
+                    <label>Interacción</label>
+                </value>
+                <value>
+                    <fullName>Posible Retención</fullName>
+                    <default>false</default>
+                    <label>Posible Retención</label>
+                </value>
+                <value>
+                    <fullName>Promociones</fullName>
+                    <default>false</default>
+                    <label>Promociones</label>
+                </value>
+                <value>
+                    <fullName>Propuesta</fullName>
+                    <default>false</default>
+                    <label>Propuesta</label>
+                </value>
+                <value>
+                    <fullName>Quejas</fullName>
+                    <default>false</default>
+                    <label>Quejas</label>
+                </value>
+                <value>
+                    <fullName>Retención</fullName>
+                    <default>false</default>
+                    <label>Retención</label>
+                </value>
+                <value>
+                    <fullName>Servicios</fullName>
+                    <default>false</default>
+                    <label>Servicios</label>
+                </value>
+                <value>
+                    <fullName>Verificación Digital</fullName>
+                    <default>false</default>
+                    <label>Verificación Digital</label>
+                </value>
+                <value>
+                    <fullName>Integración Documentos</fullName>
+                    <default>false</default>
+                    <label>Integración Documentos</label>
+                </value>
+                <value>
+                    <fullName>Integración de Fotos Verificación</fullName>
+                    <default>false</default>
+                    <label>Integración de Fotos Verificación</label>
+                </value>
+                <value>
+                    <fullName>Consulta</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Consulta</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>NOseguimiento__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Para los casos que deben cerrarse después de crearse</description>
+        <externalId>false</externalId>
+        <label>NOseguimiento</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NS__c</fullName>
+        <externalId>false</externalId>
+        <label>NS</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                    <label>0</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>NivelUnoID__c</fullName>
+        <externalId>false</externalId>
+        <label>NivelUnoID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NivelUno__c</fullName>
+        <externalId>false</externalId>
+        <label>Nivel 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cola BD</fullName>
+                    <default>false</default>
+                    <label>Cola BD</label>
+                </value>
+                <value>
+                    <fullName>Cola BO2 Abonos</fullName>
+                    <default>false</default>
+                    <label>Cola BO2 Abonos</label>
+                </value>
+                <value>
+                    <fullName>Cola BO3</fullName>
+                    <default>false</default>
+                    <label>Cola BO3</label>
+                </value>
+                <value>
+                    <fullName>Cola Bonus</fullName>
+                    <default>false</default>
+                    <label>Cola Bonus</label>
+                </value>
+                <value>
+                    <fullName>Cola de Back Office 2</fullName>
+                    <default>false</default>
+                    <label>Cola de Back Office 2</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Cambios</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Cambios</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Cancelaciones</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Cancelaciones</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Integrador</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Integrador</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Recibos Fiscales</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Recibos Fiscales</label>
+                </value>
+                <value>
+                    <fullName>Cola de Casos Especiales</fullName>
+                    <default>false</default>
+                    <label>Cola de Casos Especiales</label>
+                </value>
+                <value>
+                    <fullName>Cola de Coordinador AC</fullName>
+                    <default>false</default>
+                    <label>Cola de Coordinador AC</label>
+                </value>
+                <value>
+                    <fullName>Cola de Cotizaciones</fullName>
+                    <default>false</default>
+                    <label>Cola de Cotizaciones</label>
+                </value>
+                <value>
+                    <fullName>Cola de Email-to-case</fullName>
+                    <default>false</default>
+                    <label>Cola de Email-to-case</label>
+                </value>
+                <value>
+                    <fullName>Cola de Redes Sociales</fullName>
+                    <default>false</default>
+                    <label>Cola de Redes Sociales</label>
+                </value>
+                <value>
+                    <fullName>Cola de Supervisor AC</fullName>
+                    <default>false</default>
+                    <label>Cola de Supervisor AC</label>
+                </value>
+                <value>
+                    <fullName>Cola de Validación PU</fullName>
+                    <default>false</default>
+                    <label>Cola de Validación PU</label>
+                </value>
+                <value>
+                    <fullName>Cola de Validación Siniestro</fullName>
+                    <default>false</default>
+                    <label>Cola de Validación Siniestro</label>
+                </value>
+                <value>
+                    <fullName>Cola de Verificación</fullName>
+                    <default>false</default>
+                    <label>Cola de Verificación</label>
+                </value>
+                <value>
+                    <fullName>Cola Retención</fullName>
+                    <default>false</default>
+                    <label>Cola Retención</label>
+                </value>
+                <value>
+                    <fullName>Cola Traking Web</fullName>
+                    <default>false</default>
+                    <label>Cola Traking Web</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ReasignadoID__c</fullName>
+        <externalId>false</externalId>
+        <label>ReasignadoID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reasignado__c</fullName>
+        <externalId>false</externalId>
+        <label>Reasignado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Asesor</fullName>
+                    <default>false</default>
+                    <label>Asesor</label>
+                </value>
+                <value>
+                    <fullName>Cola BD</fullName>
+                    <default>false</default>
+                    <label>Cola BD</label>
+                </value>
+                <value>
+                    <fullName>Cola BO2 Abonos</fullName>
+                    <default>false</default>
+                    <label>Cola BO2 Abonos</label>
+                </value>
+                <value>
+                    <fullName>Cola BO3</fullName>
+                    <default>false</default>
+                    <label>Cola BO3</label>
+                </value>
+                <value>
+                    <fullName>Cola de Back Office 2</fullName>
+                    <default>false</default>
+                    <label>Cola de Back Office 2</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Cambios en Cobertura y Descr</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Cambios en Cobertura y Descr</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Cambios Grales y Cuenta</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Cambios Grales y Cuenta</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Cancelaciones</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Cancelaciones</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Integrador</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Integrador</label>
+                </value>
+                <value>
+                    <fullName>Cola de BO2 Recibos Fiscales</fullName>
+                    <default>false</default>
+                    <label>Cola de BO2 Recibos Fiscales</label>
+                </value>
+                <value>
+                    <fullName>Cola de Casos Especiales</fullName>
+                    <default>false</default>
+                    <label>Cola de Casos Especiales</label>
+                </value>
+                <value>
+                    <fullName>Cola de Coordinador AC</fullName>
+                    <default>false</default>
+                    <label>Cola de Coordinador AC</label>
+                </value>
+                <value>
+                    <fullName>Cola de Cotizaciones</fullName>
+                    <default>false</default>
+                    <label>Cola de Cotizaciones</label>
+                </value>
+                <value>
+                    <fullName>Cola de Email-to-case</fullName>
+                    <default>false</default>
+                    <label>Cola de Email-to-case</label>
+                </value>
+                <value>
+                    <fullName>Cola de Redes Sociales</fullName>
+                    <default>false</default>
+                    <label>Cola de Redes Sociales</label>
+                </value>
+                <value>
+                    <fullName>Cola de Supervisor AC</fullName>
+                    <default>false</default>
+                    <label>Cola de Supervisor AC</label>
+                </value>
+                <value>
+                    <fullName>Cola de Validación PU</fullName>
+                    <default>false</default>
+                    <label>Cola de Validación PU</label>
+                </value>
+                <value>
+                    <fullName>Cola de Verificación</fullName>
+                    <default>false</default>
+                    <label>Cola de Verificación</label>
+                </value>
+                <value>
+                    <fullName>Cola Renovación</fullName>
+                    <default>false</default>
+                    <label>Cola Renovación</label>
+                </value>
+                <value>
+                    <fullName>Cola Retención</fullName>
+                    <default>false</default>
+                    <label>Cola Retención</label>
+                </value>
+                <value>
+                    <fullName>Cola Traking Web</fullName>
+                    <default>false</default>
+                    <label>Cola Traking Web</label>
+                </value>
+                <value>
+                    <fullName>SOS Queue</fullName>
+                    <default>false</default>
+                    <label>SOS Queue</label>
+                </value>
+                <value>
+                    <fullName>Sistema</fullName>
+                    <default>false</default>
+                    <label>Sistema</label>
+                </value>
+                <value>
+                    <fullName>AsesorCotizaciones</fullName>
+                    <default>false</default>
+                    <label>AsesorCotizaciones</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RequiereAprobacion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Requiere Aprobación</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RequiereDocumentacion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Requiere Documentación</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RequierePiscaProteccion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Requiere Pisca y Protección</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RequiereRevisionBO__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Requiere revisión de BO</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RequiereValTel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Requiere Validación Telefónica</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RequiereValidacionPU__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Requiere Validación PU</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RequiereValidacionSiniestro__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Requiere Validación de Siniestro</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Revisor__c</fullName>
+        <externalId>false</externalId>
+        <label>Revisor</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BO2</fullName>
+                    <default>false</default>
+                    <label>BO2</label>
+                </value>
+                <value>
+                    <fullName>BO2Cambios1</fullName>
+                    <default>false</default>
+                    <label>BO2Cambios1</label>
+                </value>
+                <value>
+                    <fullName>BO2Cambios2</fullName>
+                    <default>false</default>
+                    <label>BO2Cambios2</label>
+                </value>
+                <value>
+                    <fullName>BO2Cancelaciones</fullName>
+                    <default>false</default>
+                    <label>BO2Cancelaciones</label>
+                </value>
+                <value>
+                    <fullName>BO2Recibos</fullName>
+                    <default>false</default>
+                    <label>BO2Recibos</label>
+                </value>
+                <value>
+                    <fullName>BO2casosEspeciales</fullName>
+                    <default>false</default>
+                    <label>BO2casosEspeciales</label>
+                </value>
+                <value>
+                    <fullName>BO3</fullName>
+                    <default>false</default>
+                    <label>BO3</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subdetalle__c</fullName>
+        <externalId>false</externalId>
+        <label>Subdetalle</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Aceptación en Uber</fullName>
+                    <default>false</default>
+                    <label>Aceptación en Uber</label>
+                </value>
+                <value>
+                    <fullName>Ajustador</fullName>
+                    <default>false</default>
+                    <label>Ajustador</label>
+                </value>
+                <value>
+                    <fullName>Amplio</fullName>
+                    <default>false</default>
+                    <label>Amplio</label>
+                </value>
+                <value>
+                    <fullName>Amplio Plus</fullName>
+                    <default>false</default>
+                    <label>Amplio Plus</label>
+                </value>
+                <value>
+                    <fullName>Anual</fullName>
+                    <default>false</default>
+                    <label>Anual</label>
+                </value>
+                <value>
+                    <fullName>Bancomer</fullName>
+                    <default>false</default>
+                    <label>Bancomer</label>
+                </value>
+                <value>
+                    <fullName>Básico</fullName>
+                    <default>false</default>
+                    <label>Básico</label>
+                </value>
+                <value>
+                    <fullName>Cambiar a pago Mensual</fullName>
+                    <default>false</default>
+                    <label>Cambiar a pago Mensual</label>
+                </value>
+                <value>
+                    <fullName>Cambio a flotilla o grupo</fullName>
+                    <default>false</default>
+                    <label>Cambio a flotilla o grupo</label>
+                </value>
+                <value>
+                    <fullName>Cambio de Producto</fullName>
+                    <default>false</default>
+                    <label>Cambio de Producto</label>
+                </value>
+                <value>
+                    <fullName>Cambio de Titular</fullName>
+                    <default>false</default>
+                    <label>Cambio de Titular</label>
+                </value>
+                <value>
+                    <fullName>Cancelación Chofer privado</fullName>
+                    <default>false</default>
+                    <label>Cancelación Chofer privado</label>
+                </value>
+                <value>
+                    <fullName>Cargo cuenta alterna</fullName>
+                    <default>false</default>
+                    <label>Cargo cuenta alterna</label>
+                </value>
+                <value>
+                    <fullName>Cargos duplicados</fullName>
+                    <default>false</default>
+                    <label>Cargos duplicados</label>
+                </value>
+                <value>
+                    <fullName>Cargos irregulares</fullName>
+                    <default>false</default>
+                    <label>Cargos irregulares</label>
+                </value>
+                <value>
+                    <fullName>Cliente no contesta</fullName>
+                    <default>false</default>
+                    <label>Cliente no contesta</label>
+                </value>
+                <value>
+                    <fullName>Cobertura Chofer Privado a Particular</fullName>
+                    <default>false</default>
+                    <label>Cobertura Chofer Privado a Particular</label>
+                </value>
+                <value>
+                    <fullName>Cobertura Particular a Chofer Privado</fullName>
+                    <default>false</default>
+                    <label>Cobertura Particular a Chofer Privado</label>
+                </value>
+                <value>
+                    <fullName>Coberturas incorrectas</fullName>
+                    <default>false</default>
+                    <label>Coberturas incorrectas</label>
+                </value>
+                <value>
+                    <fullName>Color</fullName>
+                    <default>false</default>
+                    <label>Color</label>
+                </value>
+                <value>
+                    <fullName>Como se inscribe a Cool Drive</fullName>
+                    <default>false</default>
+                    <label>Como se inscribe a Cool Drive</label>
+                </value>
+                <value>
+                    <fullName>Compra mayor a 3 meses</fullName>
+                    <default>false</default>
+                    <label>Compra mayor a 3 meses</label>
+                </value>
+                <value>
+                    <fullName>Compra menor a 3 meses</fullName>
+                    <default>false</default>
+                    <label>Compra menor a 3 meses</label>
+                </value>
+                <value>
+                    <fullName>Corralón</fullName>
+                    <default>false</default>
+                    <label>Corralón</label>
+                </value>
+                <value>
+                    <fullName>Corregir</fullName>
+                    <default>false</default>
+                    <label>Corregir</label>
+                </value>
+                <value>
+                    <fullName>Cuenta no cobrable</fullName>
+                    <default>false</default>
+                    <label>Cuenta no cobrable</label>
+                </value>
+                <value>
+                    <fullName>Datos incorrectos</fullName>
+                    <default>false</default>
+                    <label>Datos incorrectos</label>
+                </value>
+                <value>
+                    <fullName>Demora en asistencia</fullName>
+                    <default>false</default>
+                    <label>Demora en asistencia</label>
+                </value>
+                <value>
+                    <fullName>Demora en trámite</fullName>
+                    <default>false</default>
+                    <label>Demora en trámite</label>
+                </value>
+                <value>
+                    <fullName>Descripción incorrecta</fullName>
+                    <default>false</default>
+                    <label>Descripción incorrecta</label>
+                </value>
+                <value>
+                    <fullName>Descuentos no aplicados</fullName>
+                    <default>false</default>
+                    <label>Descuentos no aplicados</label>
+                </value>
+                <value>
+                    <fullName>Dirección</fullName>
+                    <default>false</default>
+                    <label>Dirección</label>
+                </value>
+                <value>
+                    <fullName>Domicilio (fiscal/correspondencia)</fullName>
+                    <default>false</default>
+                    <label>Domicilio (fiscal/correspondencia)</label>
+                </value>
+                <value>
+                    <fullName>Duplicidad (se valida en cllippert que hay otra póliza para el mismo vehículo)</fullName>
+                    <default>false</default>
+                    <label>Duplicidad (se valida en cllippert que hay otra póliza para el mismo vehículo)</label>
+                </value>
+                <value>
+                    <fullName>Engaño (se valida con la grabación de ventas)</fullName>
+                    <default>false</default>
+                    <label>Engaño (se valida con la grabación de ventas)</label>
+                </value>
+                <value>
+                    <fullName>Envío</fullName>
+                    <default>false</default>
+                    <label>Envío</label>
+                </value>
+                <value>
+                    <fullName>Error en aplicación</fullName>
+                    <default>false</default>
+                    <label>Error en aplicación</label>
+                </value>
+                <value>
+                    <fullName>Error en sistema</fullName>
+                    <default>false</default>
+                    <label>Error en sistema</label>
+                </value>
+                <value>
+                    <fullName>Error en web</fullName>
+                    <default>false</default>
+                    <label>Error en web</label>
+                </value>
+                <value>
+                    <fullName>Escalamiento</fullName>
+                    <default>false</default>
+                    <label>Escalamiento</label>
+                </value>
+                <value>
+                    <fullName>Esencial</fullName>
+                    <default>false</default>
+                    <label>Esencial</label>
+                </value>
+                <value>
+                    <fullName>Excluir</fullName>
+                    <default>false</default>
+                    <label>Excluir</label>
+                </value>
+                <value>
+                    <fullName>Excluir cobertura</fullName>
+                    <default>false</default>
+                    <label>Excluir cobertura</label>
+                </value>
+                <value>
+                    <fullName>Falta de liquidez</fullName>
+                    <default>false</default>
+                    <label>Falta de liquidez</label>
+                </value>
+                <value>
+                    <fullName>Fecha de nacimiento</fullName>
+                    <default>false</default>
+                    <label>Fecha de nacimiento</label>
+                </value>
+                <value>
+                    <fullName>Flex</fullName>
+                    <default>false</default>
+                    <label>Flex</label>
+                </value>
+                <value>
+                    <fullName>General</fullName>
+                    <default>false</default>
+                    <label>General</label>
+                </value>
+                <value>
+                    <fullName>Genero</fullName>
+                    <default>false</default>
+                    <label>Genero</label>
+                </value>
+                <value>
+                    <fullName>Incluir</fullName>
+                    <default>false</default>
+                    <label>Incluir</label>
+                </value>
+                <value>
+                    <fullName>Incluir cobertura</fullName>
+                    <default>false</default>
+                    <label>Incluir cobertura</label>
+                </value>
+                <value>
+                    <fullName>Incluir y Excluir cobertura</fullName>
+                    <default>false</default>
+                    <label>Incluir y Excluir cobertura</label>
+                </value>
+                <value>
+                    <fullName>Incremento en Renovación</fullName>
+                    <default>false</default>
+                    <label>Incremento en Renovación</label>
+                </value>
+                <value>
+                    <fullName>Información</fullName>
+                    <default>false</default>
+                    <label>Información</label>
+                </value>
+                <value>
+                    <fullName>Información incorrecta</fullName>
+                    <default>false</default>
+                    <label>Información incorrecta</label>
+                </value>
+                <value>
+                    <fullName>Información incorrecta (Condiciones Generales)</fullName>
+                    <default>false</default>
+                    <label>Información incorrecta (Condiciones Generales)</label>
+                </value>
+                <value>
+                    <fullName>Legalizado - Salvamento</fullName>
+                    <default>false</default>
+                    <label>Legalizado - Salvamento</label>
+                </value>
+                <value>
+                    <fullName>Mala atención asesor</fullName>
+                    <default>false</default>
+                    <label>Mala atención asesor</label>
+                </value>
+                <value>
+                    <fullName>Mejores coberturas</fullName>
+                    <default>false</default>
+                    <label>Mejores coberturas</label>
+                </value>
+                <value>
+                    <fullName>Mejor precio</fullName>
+                    <default>false</default>
+                    <label>Mejor precio</label>
+                </value>
+                <value>
+                    <fullName>Mejor servicio</fullName>
+                    <default>false</default>
+                    <label>Mejor servicio</label>
+                </value>
+                <value>
+                    <fullName>Mensual</fullName>
+                    <default>false</default>
+                    <label>Mensual</label>
+                </value>
+                <value>
+                    <fullName>Meses sin intereses no aplicados</fullName>
+                    <default>false</default>
+                    <label>Meses sin intereses no aplicados</label>
+                </value>
+                <value>
+                    <fullName>Motor</fullName>
+                    <default>false</default>
+                    <label>Motor</label>
+                </value>
+                <value>
+                    <fullName>MultiAsistencia</fullName>
+                    <default>false</default>
+                    <label>MultiAsistencia</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+                <value>
+                    <fullName>No acepto (se valida con la grabación de ventas)</fullName>
+                    <default>false</default>
+                    <label>No acepto (se valida con la grabación de ventas)</label>
+                </value>
+                <value>
+                    <fullName>No aplico MSI en renovación</fullName>
+                    <default>false</default>
+                    <label>No aplico MSI en renovación</label>
+                </value>
+                <value>
+                    <fullName>No aplico promoción</fullName>
+                    <default>false</default>
+                    <label>No aplico promoción</label>
+                </value>
+                <value>
+                    <fullName>No funciona</fullName>
+                    <default>false</default>
+                    <label>No funciona</label>
+                </value>
+                <value>
+                    <fullName>No guarda los viajes</fullName>
+                    <default>false</default>
+                    <label>No guarda los viajes</label>
+                </value>
+                <value>
+                    <fullName>No le llego póliza</fullName>
+                    <default>false</default>
+                    <label>No le llego póliza</label>
+                </value>
+                <value>
+                    <fullName>No le llegó recibo fiscal</fullName>
+                    <default>false</default>
+                    <label>No le llegó recibo fiscal</label>
+                </value>
+                <value>
+                    <fullName>Nombre (titular/contratante)</fullName>
+                    <default>false</default>
+                    <label>Nombre (titular/contratante)</label>
+                </value>
+                <value>
+                    <fullName>No me llego el VIT</fullName>
+                    <default>false</default>
+                    <label>No me llego el VIT</label>
+                </value>
+                <value>
+                    <fullName>No puede acceder a Cool drive</fullName>
+                    <default>false</default>
+                    <label>No puede acceder a Cool drive</label>
+                </value>
+                <value>
+                    <fullName>No se conecta con VIT</fullName>
+                    <default>false</default>
+                    <label>No se conecta con VIT</label>
+                </value>
+                <value>
+                    <fullName>No se contacto (se valida con la grabación de ventas)</fullName>
+                    <default>false</default>
+                    <label>No se contacto (se valida con la grabación de ventas)</label>
+                </value>
+                <value>
+                    <fullName>No se emitió</fullName>
+                    <default>false</default>
+                    <label>No se emitió</label>
+                </value>
+                <value>
+                    <fullName>No se guardan los viajes</fullName>
+                    <default>false</default>
+                    <label>No se guardan los viajes</label>
+                </value>
+                <value>
+                    <fullName>No se puede conectar</fullName>
+                    <default>false</default>
+                    <label>No se puede conectar</label>
+                </value>
+                <value>
+                    <fullName>No se puede conectar al auto</fullName>
+                    <default>false</default>
+                    <label>No se puede conectar al auto</label>
+                </value>
+                <value>
+                    <fullName>Otros bancos</fullName>
+                    <default>false</default>
+                    <label>Otros bancos</label>
+                </value>
+                <value>
+                    <fullName>Pendiente de Verificar</fullName>
+                    <default>false</default>
+                    <label>Pendiente de Verificar</label>
+                </value>
+                <value>
+                    <fullName>Pérdida de empleo</fullName>
+                    <default>false</default>
+                    <label>Pérdida de empleo</label>
+                </value>
+                <value>
+                    <fullName>Perdida del VIT</fullName>
+                    <default>false</default>
+                    <label>Perdida del VIT</label>
+                </value>
+                <value>
+                    <fullName>Placas</fullName>
+                    <default>false</default>
+                    <label>Placas</label>
+                </value>
+                <value>
+                    <fullName>Póliza wibe</fullName>
+                    <default>false</default>
+                    <label>Póliza wibe</label>
+                </value>
+                <value>
+                    <fullName>Producto / servicio</fullName>
+                    <default>false</default>
+                    <label>Producto / servicio</label>
+                </value>
+                <value>
+                    <fullName>Promociones no aplicadas</fullName>
+                    <default>false</default>
+                    <label>Promociones no aplicadas</label>
+                </value>
+                <value>
+                    <fullName>Proveedor de servicio</fullName>
+                    <default>false</default>
+                    <label>Proveedor de servicio</label>
+                </value>
+                <value>
+                    <fullName>Pruebas</fullName>
+                    <default>false</default>
+                    <label>Pruebas</label>
+                </value>
+                <value>
+                    <fullName>Punto de venta</fullName>
+                    <default>false</default>
+                    <label>Punto de venta</label>
+                </value>
+                <value>
+                    <fullName>Reenvío</fullName>
+                    <default>false</default>
+                    <label>Reenvío</label>
+                </value>
+                <value>
+                    <fullName>RFC</fullName>
+                    <default>false</default>
+                    <label>RFC</label>
+                </value>
+                <value>
+                    <fullName>SAC</fullName>
+                    <default>false</default>
+                    <label>SAC</label>
+                </value>
+                <value>
+                    <fullName>Saldo</fullName>
+                    <default>false</default>
+                    <label>Saldo</label>
+                </value>
+                <value>
+                    <fullName>Se cierra la app</fullName>
+                    <default>false</default>
+                    <label>Se cierra la app</label>
+                </value>
+                <value>
+                    <fullName>Semestral</fullName>
+                    <default>false</default>
+                    <label>Semestral</label>
+                </value>
+                <value>
+                    <fullName>Serie (1 a 2 dígitos)</fullName>
+                    <default>false</default>
+                    <label>Serie (1 a 2 dígitos)</label>
+                </value>
+                <value>
+                    <fullName>Serie (más de 2 dígitos)</fullName>
+                    <default>false</default>
+                    <label>Serie (más de 2 dígitos)</label>
+                </value>
+                <value>
+                    <fullName>Sin datos</fullName>
+                    <default>false</default>
+                    <label>Sin datos</label>
+                </value>
+                <value>
+                    <fullName>Siniestros</fullName>
+                    <default>false</default>
+                    <label>Siniestros</label>
+                </value>
+                <value>
+                    <fullName>Tiempo de tramite</fullName>
+                    <default>false</default>
+                    <label>Tiempo de tramite</label>
+                </value>
+                <value>
+                    <fullName>Titular</fullName>
+                    <default>false</default>
+                    <label>Titular</label>
+                </value>
+                <value>
+                    <fullName>Tradicional</fullName>
+                    <default>false</default>
+                    <label>Tradicional</label>
+                </value>
+                <value>
+                    <fullName>Trimestral</fullName>
+                    <default>false</default>
+                    <label>Trimestral</label>
+                </value>
+                <value>
+                    <fullName>Venta de unidad</fullName>
+                    <default>false</default>
+                    <label>Venta de unidad</label>
+                </value>
+                <value>
+                    <fullName>Ventas</fullName>
+                    <default>false</default>
+                    <label>Ventas</label>
+                </value>
+                <value>
+                    <fullName>Ya cuenta con otra póliza</fullName>
+                    <default>false</default>
+                    <label>Ya cuenta con otra póliza</label>
+                </value>
+                <value>
+                    <fullName>Ya no trabaja como Chofer Privado</fullName>
+                    <default>false</default>
+                    <label>Ya no trabaja como Chofer Privado</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TipificacionCierre__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Tipificación al Cierre</label>
+        <referenceTo>CatalogoDocumentacion__c</referenceTo>
+        <relationshipLabel>Catálogo Documentación</relationshipLabel>
+        <relationshipName>Cat_logo_Documentaci_n</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Catálogo Documentación</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Activo__c</columns>
+        <columns>Dias__c</columns>
+        <columns>NS__c</columns>
+        <columns>RequiereValidacionSiniestro__c</columns>
+        <columns>RequiereDocumentacion__c</columns>
+        <columns>Ejecutor__c</columns>
+        <columns>EjecutorID__c</columns>
+        <columns>Aprobador__c</columns>
+        <columns>AprobadorDos__c</columns>
+        <columns>AprobadorUno__c</columns>
+        <columns>ClienteCandidato__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <label>Nombre del Motivo</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Catálogo Documentación</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Motivo__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Detalle__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Subdetalle__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Crear_caso_cierre_requiere_Tipificacion</fullName>
+        <active>true</active>
+        <description>Cuando se selecciona CrearCasoCierre = true, se requiere la TipificacionCierre</description>
+        <errorConditionFormula>IF(
+  CreaCasoCierre__c ,  
+  IF(ISBLANK(TipificacionCierre__c) , true, false),
+  false
+)</errorConditionFormula>
+        <errorDisplayField>TipificacionCierre__c</errorDisplayField>
+        <errorMessage>La Tipificación al Cierre es requerida</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidaIdExterno</fullName>
+        <active>false</active>
+        <description>Valida que el registro del catálogo tenga un Id Externo</description>
+        <errorConditionFormula>ISBLANK (IdExterno__c)</errorConditionFormula>
+        <errorMessage>Debe ingresar la información del campo Id Externo</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

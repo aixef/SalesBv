@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_7505639</developerName>
+        <masterLabel>Estatus</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>STATUS</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>New</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Identificación de cliente</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ejecución de tramite</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aceptado</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>En espera del tramite</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Integración de documentos</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Venta</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Asignado</sourceValue>
+            </sourceValues>
+            <value>Casos Abiertos</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Cerrado</sourceValue>
+            </sourceValues>
+            <value>Casos Cerrado</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_67670889</developerName>
+        <masterLabel>Folios Operados</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Otros</otherBucketLabel>
+        <sourceColumnName>Case.MX_SB_SAC_EstatusBO__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Procesable</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Procesable</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Recepción  Documentos</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>En espera</sourceValue>
+            </sourceValues>
+            <value>Folios Operados pod BO</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_69951034</developerName>
+        <masterLabel>Folios operados por:</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Otros</otherBucketLabel>
+        <sourceColumnName>Case.MX_SB_SAC_FolioOperadoporBO__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Si</sourceValue>
+            </sourceValues>
+            <value>Folios operados por Backoffice</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>No</sourceValue>
+            </sourceValues>
+            <value>Folios operados únicamente por CCC</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_49134063</developerName>
+        <masterLabel>Nivel de Servicio</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Case.MX_SB_SAC_DentroNS__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>SI</sourceValue>
+            </sourceValues>
+            <value>Folios dentro de NS</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>NO</sourceValue>
+            </sourceValues>
+            <value>Folios fuera de NS</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarGrouped</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CREATED_DATE</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>BucketField_69951034</secondaryGroupingColumn>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>BucketField_7505639</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>REASON</field>
+    </columns>
+    <columns>
+        <field>Case.MX_SB_SAC_Detalle__c</field>
+    </columns>
+    <columns>
+        <field>PRIORITY</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.MX_SB_SAC_Recontacto__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.MX_SB_SAC_FaltaDocInffaltante__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>mostrara la información de los casos por porcentajes por semana</description>
+    <filter>
+        <criteriaItems>
+            <column>REASON</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.MX_SB_SAC_DentroNS__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>CREATED_DATEONLY</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Week</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_69951034</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.MX_SB_SAC_DentroNS__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Casos totales generados</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

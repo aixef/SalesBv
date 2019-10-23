@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>image/png</contentType>
+    <description>Esta imagen se ocupa en un campo de fórmula situado en el objeto secciones ya que si en el campo porcentaje no tiene ningún valor esta imagen debe mostrarse.</description>
+</StaticResource>

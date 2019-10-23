@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación WF, notifica el rechazo de un bloque de contenido</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Bloque de contenido rechazado</name>
+    <style>formalLetter</style>
+    <subject>Canal con folio {!CRM_WF_Artes__c.Name} ha sido rechazado</subject>
+    <textOnly>Por este medio te informamos que el canal con folio {!CRM_WF_Artes__c.Name} ha sido rechazado con los siguientes comentarios Comentarios:
+{!ApprovalRequest.Comments}
+
+Datos del canal:
+Campaña: {!CRM_WF_Artes__c.MX_WF_Campana__c}
+Comercio: {!CRM_WF_Artes__c.MX_WF_Comercio__c}
+
+Para más información puedes dar clic en el siguiente vínculo: Registro del canal en Salesforce</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

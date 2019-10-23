@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+<sharingCriteriaRules>
+        <fullName>MX_SB_SAC_oppsVenta</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Esta regla sirve para que los asesores puedan ver y modificar las oportunidades</description>       
+        <label>MX_SB_SAC_oppsVenta</label>
+        <sharedTo>
+            <role>MX_SB_SAC_GerenteConsultorSeguros</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>MX_SB_SAC_TrackingASD_VCIP</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Tracking Web ASD VCIP</label>
+        <sharedTo>
+            <group>MX_SB_VTS_AsesoresASD</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>MX_SB_VTS_AsesoresASD</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_SB_VTS_SmartOpps</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Regla de colaboración para la rama de calidad</description>
+        <label>Oportunidades Smart</label>
+        <sharedTo>
+            <group>MX_SB_VTS_GrupoCalidad</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>MX_SB_VTS_OpsCordinator</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_SB_VTS_TrackingASD_VCIP</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Tracking Web ASD VCIP</label>
+        <sharedTo>
+            <group>MX_SB_VTS_AsesoresASD</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>MX_SB_VTS_AsesoresASD</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+	<sharingOwnerRules>
+        <fullName>SmartCenter_Group_Opportunity_Rule</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Smart Center Grupo Oportunidad</label>
+        <sharedTo>
+            <group>MX_SB_VTS_SMART_CENTER_GROUP_OPPORTUNITY</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

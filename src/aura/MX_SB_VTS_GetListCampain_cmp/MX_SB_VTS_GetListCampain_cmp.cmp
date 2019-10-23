@@ -1,0 +1,136 @@
+<aura:component controller="MX_SB_VTS_GetListCampa_cls" extensible="true" access="global">
+    <aura:attribute name="Bandejas" type="Object[]" default="" />
+    <aura:attribute name="enableModal" type="Boolean" default="false" />
+    <aura:attribute name="LeadTray" type="MX_SB_VTS_Lead_tray__c" />
+    <aura:attribute name="NameCamp" type="String" />
+    <aura:attribute name="Camp" type="List[]" />
+    <aura:attribute name="ProductID" type="String" />
+    <aura:attribute name="IDBandeja" type="String" />
+    <aura:attribute name="Descrip" type="String" />
+    <aura:attribute name="Message" type="boolean" default="false"
+        description="Muestra mensaje de registros no encontrados" />
+    <aura:attribute name="Message2" type="String" default="Sin valores" />
+    <aura:attribute name="searchKeyword" type="String" description="Guarda la información que el usuario introdujo" />
+    <aura:attribute name="SearchKeyWord2" type="string" />
+    <aura:attribute name="objectAPIName" type="string" default="CampaignMember" />
+    <aura:attribute name="IconName" type="string" default="standard:campaign" />
+    <aura:attribute name="label" type="string" default="Campaña" />
+    <aura:attribute name="selectedRecord" type="sObject" 
+        description="Use,for store SELECTED sObject Record" />
+    <aura:attribute name="Bamdeja" type="String" />
+    <aura:attribute name="Servicio" type="String" />
+    <aura:attribute name="Datelead" type="String"/>
+    <aura:attribute name="ListServicio" type="Object[]" default="" />
+    <aura:attribute name="Servicio1" type="String" />
+    <aura:attribute name="listOfSearchRecords" type="List"
+        description="Use,for store the list of search records which returns from apex class" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="oSelectedRecordEvent" event="c:MX_SB_VTS_ConfLead_event"
+        action="{!c.handleComponentEvent}" />
+        <aura:handler name="change" value="{!v.Datelead}" action="{!c.handleChange}"/>
+        <aura:handler name="change" value="{!v.Bamdeja}" action="{!c.handleChange}"/>
+    <aura:registerEvent name="oSelectedLEadEvent" type="c:MX_SB_VTS_ConfLead_event"/>
+    
+    <h1 class="slds-text-heading_medium slds-hyphenate">Configuracion de envio de lead</h1>
+    <hr />
+    <lightning:layout>
+        <lightning:layoutItem padding="around-small" alignmentBump="top">
+            <lightning:input aura:Id="FechaVariable" type="datetime" name="DateSendLead" dateStyle="short" value="{!v.Datelead}" onchange="{c.handleChange}"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="around-small" alignmentBump="top">
+            <lightning:select name="Select_Bandeja" label="Seleccionar una bandeja." value="{!v.Bamdeja}" >
+                <option value="" text="-Ninguna-" selected = "true"></option>
+                <aura:iteration aura:Id="BandejaID" items="{!v.Bandejas}" var="bandeja">
+                    <option text="{!bandeja.MX_SB_VTS_Description__c}" value="{!bandeja.MX_SB_VTS_ID_Bandeja__c}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </lightning:layoutItem>     
+        <lightning:layoutItem padding="around-small" alignmentBump="top">
+            <lightning:button label="Crear Nueva Bandeja" title="Crear Nueva Bandeja" onclick="{! c.handleClick }" />
+        </lightning:layoutItem>
+    </lightning:layout>
+    <aura:if isTrue="{!v.enableModal}">
+        <div class="demo-only">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <h1 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                            Creacion de bandeja</h1>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <lightning:layout verticalAlign="stretch" multipleRows="true" class="x-large">
+                            <lightning:layoutItem flexibility="auto" padding="around-small">
+                                <lightning:input name="field_Name" value="{!v.NameCamp}" label="Nombre" />
+                                <lightning:input name="field_Bandeja" value="{!v.IDBandeja}" label="ID Bandeja" disabled="true" />
+                                <lightning:input aura:id="field_Desc" name="field_Desc" value="{!v.Descrip}"
+                                    label="Descripcion" />
+                            </lightning:layoutItem>
+                            <lightning:layoutItem flexibility="auto" padding="around-small">
+                                
+                                <div onmouseleave="{!c.onblur2}" aura:id="searchRes"
+                                    class="slds-form-element slds-lookup slds-is-close" data-select="single">
+                                    <label class="slds-form-element__label" for="lookup-348">{!v.label}</label>
+                                    <!--This part is for display search bar for lookup-->
+                                    <div class="slds-form-element__control">
+                                        <div class="slds-input-has-icon slds-input-has-icon--right">
+                                            <!-- This markup is for when an record is selected -->
+                                            <div aura:id="lookup-pill" class="slds-pill-container slds-hide">
+                                                <lightning:pill class="pillSize " label="{!v.selectedRecord.Name}"
+                                                    name="{!v.selectedRecord.Name}" onremove="{! c.clear2 }">
+                                                    <aura:set attribute="media">
+                                                        <lightning:icon iconName="{!v.IconName}" size="x-small"
+                                                            alternativeText="{!v.IconName}" />
+                                                    </aura:set>
+                                                </lightning:pill>
+                                            </div>
+                                            <div aura:id="lookupField" class="slds-show">
+                                                <lightning:icon class="slds-input__icon slds-show"
+                                                    iconName="utility:search" size="x-small" alternativeText="search" />
+                                                <span class="slds-icon_container  slds-combobox__input-entity-icon"
+                                                    title="record">
+                                                    <lightning:icon
+                                                        class="slds-icon slds-icon slds-icon_small slds-icon-text-default"
+                                                        iconName="{!v.IconName}" size="x-small"
+                                                        alternativeText="icon" />
+                                                    <span class="slds-assistive-text"></span>
+                                                </span>
+                                                <ui:inputText click="{!c.onfocus2}" updateOn="keyup"
+                                                    keyup="{!c.keyPressController2}"
+                                                    class="slds-lookup__search-input slds-input leftPaddingClass"
+                                                    value="{!v.SearchKeyWord2}" placeholder="search.." />
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!--This part is for Display typehead lookup result List-->
+                                    <ul style="min-height:40px;margin-top:0px !important"
+                                        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-lookup__menu slds"
+                                        role="listbox">
+                                        <lightning:spinner class="slds-hide" variant="brand" size="small"
+                                            aura:id="mySpinner" />
+                                        <center> {!v.Message2}</center>
+                                        <aura:iteration items="{!v.listOfSearchRecords}" var="singleRec">
+                                            <c:MX_SB_VTS_LookResult oRecord="{!singleRec}"
+                                                IconName="{!v.IconName}" />
+                                        </aura:iteration>
+                                    </ul>
+                                </div>
+                                <lightning:select name="Select_service" label="Seleccionar un Servicio." value="{!v.Servicio}" >
+                                    <option value="" text="-Ninguna-" selected = "true"></option>
+                                    <aura:iteration aura:Id="serviciooID" items="{!v.ListServicio}" var="Servc">
+                                        <option text="{!Servc.MX_SB_VTS_Servicio_NameCompleto__c}" value="{!Servc.MX_SB_VTS_Servicio_ID__c}"></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button onclick="{!c.handleSave}" label="Guardar" variant="neutral" />
+                        <lightning:button onclick="{!c.closeModal}" label="Cancelar" variant="neutral" />
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+</aura:component>

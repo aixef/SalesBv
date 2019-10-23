@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Buen día]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);">Se le notifica que el usuario&nbsp;</span><b style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">{!Account.OwnerFullName}</b><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; background-color: rgb(255, 255, 255);">&nbsp;desea eliminar el Family Group&nbsp;</span><div style=""><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial"><b>&nbsp; &nbsp; &nbsp;&nbsp;</b></font></div><div style=""><font face="arial"><b>{!Account.BPyP_Rb_Family_Group_Candidato__c}</b></font><br><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="background-color: rgb(255, 255, 255);"><br></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="background-color: rgb(255, 255, 255);">que pertenece al Cliente</span><br><div><br></div><div><b><span style="white-space: pre;">	</span>{!Account.Name}</b></div><div><b><br></b></div><div>El cual esta pendiente.</div></div></div></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

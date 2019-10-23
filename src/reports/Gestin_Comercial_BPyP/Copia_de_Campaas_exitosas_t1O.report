@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_63403128</developerName>
+        <masterLabel>Exito</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.cond__Campaign_Clients__r$cond__Campaign_status_approval_type__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed</sourceValue>
+            </sourceValues>
+            <value>Éxito</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Draft</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Pending Approval</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>In Progress</sourceValue>
+            </sourceValues>
+            <value>No éxito</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account$Division1__c</field>
+    </columns>
+    <columns>
+        <field>Account$Oficina1__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.cond__Campaign_Clients__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.cond__Campaign_Clients__r$Owner</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>BPyP: Informe filtrado con las campañas exitosas únicamente.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.cond__Campaign_Clients__r$cond__Campaign_status_approval_type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.cond__Campaign_Clients__r$cond__sub_status_type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Won</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.cond__Campaign_Clients__r$cond__campaign_name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_63403128</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>BPyP: Campañas exitosas</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>MX_PYME_Campa_as_con_nombre_comercial_del_cliente__c</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.cond__Campaign_Clients__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

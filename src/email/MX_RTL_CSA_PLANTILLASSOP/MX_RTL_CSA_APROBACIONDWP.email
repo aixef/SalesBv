@@ -1,0 +1,15 @@
+*** NOTIFICACIÓN SEGUIMIENTO DE TICKET *** 
+
+Se le ha aprobado su ticket con la siguiente información:   
+
+N° de Caso:  {!Case.CaseNumber}
+Tipo:{!Case.Type}
+Unidad de Negocio: {!Case.MX_RTL_CSA_UNIDADESDWP__c}
+
+Asunto:  {!Case.Subject}
+Descripción: {!Case.Description}
+
+Personal Encargado: {!Case.OwnerFullName}
+
+
+Haga clic en el vínculo para acceder directamente al ticket: {!Case.Link}

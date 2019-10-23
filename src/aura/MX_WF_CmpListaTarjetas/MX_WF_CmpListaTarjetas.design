@@ -1,0 +1,6 @@
+<design:component>
+
+    <design:attribute name="Tarjetas" label="Tarjetas" />
+    <design:attribute name="Fecha" label="Fecha" />
+    
+</design:component>

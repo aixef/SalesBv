@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>URL de Servicios ASO para ambiente de Test</description>
+    <disableProtocolSecurity>true</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://maxwebsealdesa.prev.bancomer.mx:6443</url>
+</RemoteSiteSetting>

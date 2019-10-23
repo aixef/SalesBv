@@ -1,0 +1,124 @@
+<!--
+  @Component Name     : MX_WB_CMP_Telemarketing.cmp
+  @Description        : 
+  @Author             : Eduardo Hernández Cuamatzi
+  @Group              : 
+  @Last Modified By   : Eduardo Hernández Cuamatzi
+  @Last Modified On   : 29/4/2019 18:44:54
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    24/4/2019 18:23:04   Eduardo Hernández Cuamatzi     Initial Version
+-->
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" Controller="MX_WB_TelemarketingController">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="etapa" type="String" />
+    <aura:attribute name="producto" type="String" default=""/>
+    <aura:attribute name="script" type="FeedItem" />
+    <aura:attribute name="opport" type="Opportunity" />
+    <aura:attribute name="OpptyRecord" type="Opportunity" />
+    <aura:attribute name="showTab" type="Boolean" default="true" description="Parámetro que muestra objeciones"/>
+    <aura:attribute name="showRichText" type="Boolean" default="true" description="Parámetro que muestra objeciones"/>
+
+    <aura:registerEvent name="recordUpdated" type="c:RecordUpdated" />
+    <aura:handler name="init" value="{!this}" action="{!c.initTlmkt}" />
+    <aura:handler event="c:RecordUpdated" action="{!c.initTlmkt}" />
+    <force:recordData aura:id="recordFor" recordId="{!v.recordId}"
+                      targetRecord="{!v.opport}"
+                      recordUpdated="{!c.initTlmkt}" targetFields="{!v.OpptyRecord}"
+                      layoutType="FULL" />
+    <lightning:card footer="" title="">
+
+        <aura:if isTrue="{!v.etapa == 'Contacto Efectivo' || v.etapa == 'Contacto'}">
+            <div class="slds-page-header slds-section headCmp" onclick="{!c.muestraTabla}">
+                <section class="slds-clearfix">
+                    <div class="slds-float--left" id="border-text">
+                        <lightning:icon iconName="{!v.showTab ? 'utility:chevrondown' : 'utility:chevronright'}" size="x-small" alternativeText="Abierto" aura:id="showTab" />
+                    </div>
+                    <div class="slds-m-left_large">Contacto efectivo</div>
+                </section>
+            </div>
+            <aura:if isTrue="{!v.showTab}">
+                <ui:outputRichText class="slds-text-longform borders" value="{!v.script}" />
+            </aura:if>
+        </aura:if>
+
+        <aura:if isTrue="{!v.etapa == 'Objeciones'}">
+            <div class="slds-page-header slds-section headCmp" onclick="{!c.muestraTabla}">
+                <section class="slds-clearfix">
+                    <div class="slds-float--left " >
+                        <lightning:icon iconName="{!v.showTab ? 'utility:chevrondown' : 'utility:chevronright'}" size="x-small" alternativeText="Abierto" aura:id="showTab" />
+                    </div>
+                    <div class="slds-m-left_large">Objeciones</div>
+                </section>
+            </div>
+            <aura:if isTrue="{!v.showTab &amp;&amp; v.producto !=''}">
+                <c:MX_WB_cmp_MasterChecklist etapaActual="{!v.etapa}" idOpp="{!v.recordId}" producto="{!v.producto}"/>
+            </aura:if>
+        </aura:if>
+
+        <aura:if isTrue="{!v.etapa == 'Políticas'}">
+            <div class="slds-page-header slds-section headCmp" onclick="{!c.muestraTabla}">
+                <section class="slds-clearfix">
+                    <div class="slds-float--left " >
+                        <lightning:icon iconName="{!v.showTab ? 'utility:chevrondown' : 'utility:chevronright'}" size="x-small" alternativeText="Abierto" aura:id="showTab" />
+                    </div>
+                    <div class="slds-m-left_large">Validación Políticas</div>
+                </section>
+            </div>
+            <aura:if isTrue="{!v.showTab}">
+                <ui:outputRichText class="slds-text-longform borders borders" value="{!v.script}" />
+            </aura:if>
+        </aura:if>
+
+        <aura:if isTrue="{!v.etapa == 'Cotización'}">
+            <div class="slds-page-header slds-section headCmp" onclick="{!c.muestraTabla}">
+                <section class="slds-clearfix">
+                    <div class="slds-float--left" id="border-text">
+                        <lightning:icon iconName="{!v.showTab ? 'utility:chevrondown' : 'utility:chevronright'}" size="x-small" alternativeText="Abierto" aura:id="showTab" />
+                    </div>
+                    <div class="slds-m-left_large">Cotización</div>
+                </section>
+            </div>
+            <div>
+                <aura:if isTrue="{!v.showTab}">
+                    <c:MX_WB_TM_Cotizador_cmp aura:id="cmpCotizador" recordId="{!v.recordId}"/>
+                </aura:if>
+            </div>
+            <div>
+                <aura:if isTrue="{!v.showTab}">
+                    <ui:outputRichText class="slds-text-longform borders borders" value="{!v.script}" />
+                </aura:if>
+            </div>
+        </aura:if>
+
+        <aura:if isTrue="{!v.etapa == 'Objeciones Reales'}">
+            <div class="slds-page-header slds-section headCmp" onclick="{!c.muestraTabla}">
+                <section class="slds-clearfix">
+                    <div class="slds-float--left ">
+                        <lightning:icon iconName="{!v.showTab ? 'utility:chevrondown' : 'utility:chevronright'}" size="x-small" alternativeText="Abierto" aura:id="showTab" />
+                    </div>
+                    <div class="slds-m-left_large">Objeciones Reales</div>
+                </section>
+            </div>
+            <aura:if isTrue="{!v.showTab &amp;&amp; v.producto !=''}">
+                <c:MX_WB_cmp_MasterChecklist etapaActual="{!v.etapa}" idOpp="{!v.recordId}" producto="{!v.producto}"/>
+            </aura:if>
+        </aura:if>
+
+        <aura:if isTrue="{!v.etapa == 'Venta Autorizada'}">
+            <div class="slds-page-header slds-section headCmp" onclick="{!c.muestraRichText}">
+                <section class="slds-clearfix">
+                    <div class="slds-float--left " >
+                        <lightning:icon iconName="{!v.showRichText ? 'utility:chevrondown' : 'utility:chevronright'}" size="x-small" alternativeText="Abierto" aura:id="showTab" />
+                    </div>
+                    <div class="slds-m-left_large">Venta autorizada</div>
+                </section>
+            </div>
+            <aura:if isTrue="{!v.showRichText}">
+                <ui:outputRichText class="slds-text-longform borders borders" value="{!v.script}" />
+            </aura:if>
+        </aura:if>
+    </lightning:card>
+</aura:component>

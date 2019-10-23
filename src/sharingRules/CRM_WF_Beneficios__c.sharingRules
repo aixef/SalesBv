@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>CRM_WF_Squad_Adquirente_Beneficios</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Squad Adquirente Beneficios</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Adquirente</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Adquirente</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>MX_WF_Beneficios_Compartidos_con_Producto_CRM</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Beneficios Compartidos con Producto y CRM</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Seguros_Danos</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Squad_Seguros_Danos</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

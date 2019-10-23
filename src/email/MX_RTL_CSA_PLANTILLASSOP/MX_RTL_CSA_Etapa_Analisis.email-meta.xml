@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notifica al creador del caso que ha cambiado de etapa.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MX_RTL_CSA_MEMBRETECASOS</letterhead>
+    <name>Etapa Análisis</name>
+    <style>freeForm</style>
+    <subject>Etapa de Análisis</subject>
+    <textOnly>Hola {!Case.CreatedBy}
+
+
+Quiero informarte que tu ticket con el numero: {!Case.CaseNumber} ha cambiado de etapa a {!Case.Status}.
+
+Seguiremos en contacto contigo para informarte de su trayecto.
+
+Tiempo Estimado para su cierre: {!Case.MX_RTL_CSA_CONTADORDWP__c}
+
+
+Saludos!!
+
+Atentamente
+{!Case.OwnerFullName}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

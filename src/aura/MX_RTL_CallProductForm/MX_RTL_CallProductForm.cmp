@@ -1,0 +1,42 @@
+<aura:component extensible="true" implements="flexipage:availableForAllPageTypes,force:appHostable,force:hasRecordId,force:hasSobjectName" access="global" controller="MX_RTL_CallProductForm">
+    <aura:attribute name="maxProductNumber" type="String" access="global" description="Maximun number of products than can crteate in the product selector" default="1"/>
+    <aura:attribute name="maxDifferentProductNumber" type="String" access="global" description="Maximun number of diferent products than can crteate in the product selector" default="1"/>
+    <aura:attribute name="editButton" type="String" access="global" default='{"style":"neutral","unactiveStyle":"hidden","active":true}' description="Edit button configuration"/>
+    <aura:attribute name="cloneButton" type="String" access="global" default='{"style":"neutral","unactiveStyle":"hidden","active":false}' description="Clone button configuration"/>
+    <aura:attribute name="deleteButton" type="String" access="global" default='{"style":"neutral","unactiveStyle":"hidden","active":false}' description="Delete button configuration"/>
+    <aura:attribute name="newButton" type="String" access="global" default='{"style":"neutral","unactiveStyle":"hidden","active":true}' description="New button configuration"/>
+    <aura:attribute name="compareButton" type="String" access="global" default='{"style":"neutral","unactiveStyle":"hidden","active":true}' description="Compare button configuration"/>  
+    <aura:attribute name="visibilityControlField" type="String" access="global" description="Api name of the OpportunityLineItem field that controls if a product will be shown or not"/>
+    <aura:attribute name="visibilityControlValues" type="String" access="global" description="Values of the field configured as visibility controler to not show a product"/>
+   	<aura:attribute name="comparatorColumns" type="String" access="global" description="Columns that will be shown in the product comparator"/>
+    <aura:attribute name="comparatorFields" type="String" access="global" description="Fields that will be shown in the product comparator"/>
+    <aura:attribute name="enableSharing" type="Boolean" default="false" access="global" description="Enable the sharing settings of the fields displayed in the component"/>
+    <aura:attribute name="onlyImportant" type="Boolean" default="false" access="global" description="Only fields marked as important will be counted in All fields informed and Empty visible fields"/>
+    <aura:attribute name="dynamicAttributes" type="String" access="global" description="Attributes to be used in lightning components"/>
+    <aura:attribute name="disableRefresh" type="Boolean" access="global" description="Indicates whether the handlers and fires of refresh view standard event are disabled or not"/>
+    
+    <aura:attribute name="oppSel" type="Opportunity"/>
+    <aura:attribute name="nProdConf" type="Integer"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="ftProducForm" type="Aura.Component[]"/>
+    <aura:attribute name="truthy" type="Boolean" default="false"/>
+    <aura:attribute name="error" type="Boolean" default="false"/>
+    
+    <aura:if isTrue="{!v.error}">
+
+        <ui:message title="Alerta!" severity="warning" closable="true">
+            {!$Label.c.MX_RTL_ErrorLoadProductForm}
+		</ui:message>
+    	<aura:set attribute="else">
+            <aura:if isTrue="{!v.truthy}">
+                {!v.ftProducForm}
+                <aura:set attribute="else">
+                        <lightning:spinner alternativeText="Loading" />
+                </aura:set>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+    
+    
+</aura:component>

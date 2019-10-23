@@ -1,0 +1,23 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+
+	<ltng:require styles="{!$Resource.SLDS_MAXBBVA + '/assets/styles/salesforce-lightning-design-system-ltng.css'}" /> 
+	<div class="slds-scope slds-theme_default slds-grid slds-wrap slds-grid_pull-padded">
+		<div class="slds-box slds-p-around_small slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 ">
+		    <lightning:tabset >
+		        <lightning:tab label="Clientes">
+		    		<c:BPyP_AccountFiltr />
+		        </lightning:tab>
+		        <lightning:tab label="Oportunidades">
+		    		<c:BPyP_OppRep />
+		        </lightning:tab>
+		        <lightning:tab label="Contactabilidad">
+		    		<c:BPyP_Contact_Acc />
+		        </lightning:tab>
+		        <lightning:tab label="Tipo de Contactabilidad">
+		    		<c:BPyP_Contact_Chan />
+		        </lightning:tab>
+		    </lightning:tabset>
+		</div>
+	</div>
+
+</aura:component>

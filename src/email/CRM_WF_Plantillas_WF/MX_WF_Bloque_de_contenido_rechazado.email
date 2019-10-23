@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Por este medio te informamos que el canal con folio&nbsp;<b>{!CRM_WF_Artes__c.Name}</b>&nbsp;ha sido rechazado con los siguientes comentarios]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="arial"><span style="font-size: 12pt;">Comentarios:</span></font><div style=""><font face="arial"><b>{!ApprovalRequest.Comments}</b></font></div><div style=""><font face="arial"><b><br></b></font></div><div style=""><font face="arial"><b>Datos del canal:</b></font></div><div style=""><font face="arial">Campaña:<b>&nbsp;{!CRM_WF_Artes__c.MX_WF_Campana__c}</b></font></div><div style=""><font face="arial">Comercio:<b>&nbsp;{!CRM_WF_Artes__c.MX_WF_Comercio__c}</b></font></div><div style=""><br></div><div style=""><font face="arial">Para más información puedes dar clic en el siguiente vínculo: <a href="{!CRM_WF_Artes__c.Link}">Registro del canal en Salesforce</a></font></div><div style=""><font face="arial"><br></font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

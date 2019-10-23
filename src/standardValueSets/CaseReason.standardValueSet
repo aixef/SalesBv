@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Nuevo Problema</fullName>
+        <default>false</default>
+        <label>Nuevo Problema</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Desarrollo</fullName>
+        <default>false</default>
+        <label>Desarrollo</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Casuistica no validada</fullName>
+        <default>false</default>
+        <label>Casuística no validada</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Modificación no informada</fullName>
+        <default>false</default>
+        <label>Modificación no informada</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Instalación</fullName>
+        <default>false</default>
+        <label>Instalación</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Operación</fullName>
+        <default>false</default>
+        <label>Operación</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>User didn't attend training</fullName>
+        <default>false</default>
+        <label>User didn't attend training</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Complex functionality</fullName>
+        <default>false</default>
+        <label>Complex functionality</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing problem</fullName>
+        <default>false</default>
+        <label>Existing problem</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Instructions not clear</fullName>
+        <default>false</default>
+        <label>Instructions not clear</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>New problem</fullName>
+        <default>false</default>
+        <label>New problem</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Funcionalidad compleja</fullName>
+        <default>false</default>
+        <label>Funcionalidad compleja</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Problema existente</fullName>
+        <default>false</default>
+        <label>Problema existente</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Instrucciones poco claras</fullName>
+        <default>false</default>
+        <label>Instrucciones poco claras</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>El usuario no asistió a la formación</fullName>
+        <default>false</default>
+        <label>El usuario no asistió a la formación</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cambios con afectación de primas</fullName>
+        <default>false</default>
+        <label>Cambios con afectación de primas</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cambios sin afectación de primas</fullName>
+        <default>false</default>
+        <label>Cambios sin afectación de primas</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelación</fullName>
+        <default>false</default>
+        <label>Cancelación</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Consultas</fullName>
+        <default>false</default>
+        <label>Consultas</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cotización</fullName>
+        <default>false</default>
+        <label>Cotización</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Devolución</fullName>
+        <default>false</default>
+        <label>Devolución</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Incidencia</fullName>
+        <default>false</default>
+        <label>Incidencia</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reactivación</fullName>
+        <default>false</default>
+        <label>Reactivación</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reclamación</fullName>
+        <default>false</default>
+        <label>Reclamación</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Retención</fullName>
+        <default>false</default>
+        <label>Retención</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Servicios</fullName>
+        <default>false</default>
+        <label>Servicios</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Transferencia</fullName>
+        <default>false</default>
+        <label>Transferencia</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Venta</fullName>
+        <default>false</default>
+        <label>Venta</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>CONSUMO</fullName>
+        <default>false</default>
+        <label>CONSUMO</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>TDC</fullName>
+        <default>false</default>
+        <label>TDC</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>AUTO</fullName>
+        <default>false</default>
+        <label>AUTO</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>HIPOTECA</fullName>
+        <default>false</default>
+        <label>HIPOTECA</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>SEGUROS</fullName>
+        <default>false</default>
+        <label>SEGUROS</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>INVERSIONES</fullName>
+        <default>false</default>
+        <label>INVERSIONES</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>CANALES</fullName>
+        <default>false</default>
+        <label>CANALES</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>APP DIGITALES</fullName>
+        <default>false</default>
+        <label>APP DIGITALES</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>VISTA</fullName>
+        <default>false</default>
+        <label>VISTA</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>TDD</fullName>
+        <default>false</default>
+        <label>TDD</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>NOMINA</fullName>
+        <default>false</default>
+        <label>NOMINA</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>CASOS ESPECIALES</fullName>
+        <default>false</default>
+        <label>CASOS ESPECIALES</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+</StandardValueSet>

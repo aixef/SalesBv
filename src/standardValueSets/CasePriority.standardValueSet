@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>High</fullName>
+        <default>false</default>
+        <label>High</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medium</fullName>
+        <default>true</default>
+        <label>Medium</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mediagit</fullName>
+        <default>false</default>
+        <label>Mediagit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Low</fullName>
+        <default>false</default>
+        <label>Low</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ninguna</fullName>
+        <default>false</default>
+        <label>Ninguna</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Baja</fullName>
+        <default>false</default>
+        <label>Baja</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Media</fullName>
+        <default>false</default>
+        <label>Media</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Alta</fullName>
+        <default>false</default>
+        <label>Alta</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Crítica</fullName>
+        <default>false</default>
+        <label>Crítica</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Critical</fullName>
+        <default>false</default>
+        <label>Critical</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Primer Nivel</fullName>
+        <default>false</default>
+        <label>Primer Nivel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Segundo Nivel</fullName>
+        <default>false</default>
+        <label>Segundo Nivel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tercer Nivel</fullName>
+        <default>false</default>
+        <label>Tercer Nivel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cuarto Nivel</fullName>
+        <default>false</default>
+        <label>Cuarto Nivel</label>
+    </standardValue>
+</StandardValueSet>

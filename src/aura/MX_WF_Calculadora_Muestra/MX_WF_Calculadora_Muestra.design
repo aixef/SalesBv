@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="universo" />
+    <design:attribute name="muestra" />
+</design:component>

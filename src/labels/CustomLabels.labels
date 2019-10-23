@@ -1,0 +1,2260 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AVX_DBErrorOnCaseInsert_cl</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>AVX_DBErrorOnCaseInsert_cl</shortDescription>
+        <value>Hubo un error al intentar insertar el caso.</value>
+    </labels>
+    <labels>
+        <fullName>AVX_DBErrorOnLeadInsert_cl</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>AVX_DBErrorOnLeadInsert_cl</shortDescription>
+        <value>Hubo un error al intentar insertar la oportunidad comercial.</value>
+    </labels>
+    <labels>
+        <fullName>MX_BIE_Minuta_confidencial</fullName>
+        <categories>BIE</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Minuta es confidencial</shortDescription>
+        <value>Este documento es confidencial</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPyP_OppAccCampVencida</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Mensaje que se muestra al intentar crear una oportunidad con campaña vencida</shortDescription>
+        <value>La campaña ha vencido</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPyP_OppDuplicadaAccCamp</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Mensaje que se muestra cuando se crea otra oportunidad con la misma campaña</shortDescription>
+        <value>Ya existe una oportunidad relacionada a ésta campaña</value>
+    </labels>
+    <labels>
+        <fullName>MX_ENGMX_NombreBanco</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_ENGMX_NombreBanco</shortDescription>
+        <value>BBVA</value>
+    </labels>
+    <labels>
+        <fullName>MX_ENGMX_RazonSocialBanco</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_ENGMX_RazonSocialBanco</shortDescription>
+        <value>BBVA BANCOMER S.A.</value>
+    </labels>
+    <labels>
+        <fullName>MX_EUSV_Address</fullName>
+        <categories>MX_EUSV</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Dirección Fiscal BBVA Bancomer Reforma</shortDescription>
+        <value>Avenida Paseo de la Reforma 510, colonia Juárez, código postal 06600, alcaldía Cuauhtémoc, Ciudad de México.</value>
+    </labels>
+    <labels>
+        <fullName>MX_EUSV_BBVABancomerFacebook</fullName>
+        <categories>MX_EUSV</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>BBVABancomer Cuenta de Facebook</shortDescription>
+        <value>https://www.facebook.com/BBVABancomer</value>
+    </labels>
+    <labels>
+        <fullName>MX_EUSV_BBVABancomerSite</fullName>
+        <categories>MX_EUSV</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Sitio de BBVABancomer</shortDescription>
+        <value>https://www.bbva.mx/</value>
+    </labels>
+    <labels>
+        <fullName>MX_EUSV_BBVABancomerTwitter</fullName>
+        <categories>MX_EUSV</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>BBVABancomer Cuenta de Twitter</shortDescription>
+        <value>https://twitter.com/BBVABancomer</value>
+    </labels>
+    <labels>
+        <fullName>MX_EUSV_BBVA_BusinessName</fullName>
+        <categories>MX_EUSV</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Razón Social BBVA Bancomer</shortDescription>
+        <value>BBVA Bancomer, S.A., Institución de Banca Múltiple, Grupo Financiero BBVA Bancomer.</value>
+    </labels>
+    <labels>
+        <fullName>MX_EUSV_BBVA_PersonalinfoMessage</fullName>
+        <categories>MX_EUSV</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>BBVA Advertencia de Información Personal</shortDescription>
+        <value>Le recordamos que BBVA Bancomer nunca le solicitará información personal a través de correo electrónico, que realice descargas, actualización de cuentas o dispositivos.</value>
+    </labels>
+    <labels>
+        <fullName>MX_RTL_ErrorLoadProductForm</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error Carga Product Form</shortDescription>
+        <value>No fue posible cargar la vista de su producto favor de actualizar nuevamente</value>
+    </labels>
+    <labels>
+        <fullName>MX_RTL_ErrorProductCode</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>No encuentra Código de Producto</shortDescription>
+        <value>No se encuentra el Código de Producto</value>
+    </labels>
+    <labels>
+        <fullName>MX_RTL_NullFieldsProductForm</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Faltan Campos Product Form</shortDescription>
+        <value>Falta llenar campos obligatorios del producto.</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_BCT_Banquero_Id_Banquero_User</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_BCT_Banquero_Id_Banquero_User</shortDescription>
+        <value>FederationIdentifier</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_BCT_Cliente_Id_Banquero_Account</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_BCT_Cliente_Id_Banquero_Account</shortDescription>
+        <value>MX_SB_BCT_Id_Cliente_Banquero__c</value>
+    </labels>
+	 <labels>
+        <fullName>MX_SB_BCT_Error_ListException</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_BCT_Error_ListException</shortDescription>
+        <value>Este es un error.</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_BCT_Id_Cliente_Externo_Banquero</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_BCT_Id_Cliente_Externo_Banquero</shortDescription>
+        <value>MX_SB_BCT_Id_Cliente__c</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_BCT_Id_Cliente_SF_Banquero</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_BCT_Id_Cliente_SF_Banquero</shortDescription>
+        <value>MX_SB_BCT_Cliente__c</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_BCT_Id_User_Externo_Banquero</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_BCT_Id_User_Externo_Banquero</shortDescription>
+        <value>MX_SB_BCT_Id_Banquero__c</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_BCT_Id_User_SF_Banquero</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_BCT_Id_User_SF_Banquero</shortDescription>
+        <value>MX_SB_BCT_Banquero__c</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_KriptoK</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Tipo Registro ASD</shortDescription>
+        <value>AES256</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_Baja_Lead</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Baja Linea Smart center</shortDescription>
+        <value>Baja_Linea</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_Envio_Lead</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Alta Linea Smart center</shortDescription>
+        <value>EntRegistroGestion</value>
+    </labels>
+    <labels>
+        <fullName>AVX_LblWsPolizaProd</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>AVX_LblWsPolizaProd</shortDescription>
+        <value>False</value>
+    </labels>
+    <labels>
+        <fullName>AVX_SuccessfullyCreationLeadAndCase_cl</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>AVX_SuccessfullyCreationLeadAndCase_cl</shortDescription>
+        <value>El caso ha sido creado exitosamente.</value>
+    </labels>
+    <labels>
+        <fullName>AVX_lblNoDiasConsPolizaFechas</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>AVX_lblNoDiasConsPolizaFechas</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>CondicionOportunidad</fullName>
+        <categories>condiciones</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>CondicionOportunidad</shortDescription>
+        <value>Oportunidad</value>
+    </labels>
+    <labels>
+        <fullName>CotizacionCreada</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cotizacion Creada</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>CotizacionFormalizada</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cotización Formalizada</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>CotizacionTarificada</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cotización Tarificada</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>FamilyGroupNotApproved</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Grupo no aprobado</shortDescription>
+        <value>El Grupo al que pertenece que seleccionaste se en encuentra Pendiente de Aprobación o Rechazado</value>
+    </labels>
+    <labels>
+        <fullName>MX_PyME_Seleccion_Producto</fullName>
+        <categories>PyME</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Selección de productos</shortDescription>
+        <value>Select a product.</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_Buscar</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_MLT_Buscar</shortDescription>
+        <value>Buscar</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_Cancelar</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_MLT_Cancelar</shortDescription>
+        <value>Cancelar</value>
+    </labels>
+  <labels>
+        <fullName>MX_SB_MLT_ClaimCenterURL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Url Claim Center</shortDescription>
+        <value>https://150.250.181.110/CC_DES/cc/service/salesforce/auth?idTask=</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_Coordenadas</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_MLT_Coordenadas</shortDescription>
+        <value>Coordenadas</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_Direccion</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_MLT_Direccion</shortDescription>
+        <value>Dirección</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_ErrorTDT</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error en guardado de Tarea de Datos</shortDescription>
+        <value>Error al guardar la tarea de datos.</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_ExitoTDT</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Exito en guardado de Tarea de Datos</shortDescription>
+        <value>La tarea de datos se guardó exitosamente.</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_GoogleApiKey</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>API Key de Google Maps</shortDescription>
+        <value>AIzaSyA8xASjghs9Of31oR238NPHsxVkcOyHSzM</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_GoogleApisURL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>URL de Google Apis</shortDescription>
+        <value>https://maps.googleapis.com/maps/api/js?key=</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_GoogleMapsURL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_MLT_GoogleMapsURL</shortDescription>
+        <value>https://maps.googleapis.com/maps/api/geocode/json?</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_GoogleURL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>URL de Google</shortDescription>
+        <value>https://maps.google.com/maps/api/js?key=</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_Guardar</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_MLT_Guardar</shortDescription>
+        <value>Guardar</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_JQuery</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>URL de JQuery</shortDescription>
+        <value>https://code.jquery.com/jquery-1.10.2.js</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_LATLONG</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_MLT_LATLONG</shortDescription>
+        <value>19.4227541,-99.177126</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_SupervisorMultiasistencia</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Nombre Perfil Supervisor Multiasistencia</shortDescription>
+        <value>Supervisor Multiasistencia</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_MLT_Ubicacion</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_MLT_Ubicacion</shortDescription>
+        <value>Ubicación</value>
+    </labels>
+    <labels>
+        <fullName>WB_BorrarLog</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>WB_BorrarLog</shortDescription>
+        <value>OK</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_SAC_ErrorBack</fullName>
+        <categories>Siniestros SAC</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_SAC_ErrorBack</shortDescription>
+        <value>Upssss! Algo salio mal, vuelve a intentar.</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_SAC_ErrorConsultaContrato</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_SAC_ErrorConsultaContrato</shortDescription>
+        <value>Error en la consulta del contrato</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_SAC_ErrorDTO</fullName>
+        <categories>SAC</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_SAC_ErrorDTO</shortDescription>
+        <value>errorFormDto</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_SAC_ErrorWS</fullName>
+        <categories>Siniestros SAC</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_SAC_ErrorWS</shortDescription>
+        <value>Falló al consumir Web Service</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_SAC_HorarioOficina</fullName>
+        <categories>SAC</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>NombreHorarioOficinaSAC</shortDescription>
+        <value>Servicio de atención a clientes seguros</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_SAC_IdComunidadIrene</fullName>
+        <categories>SAC</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_SAC_IdComunidadIrene</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_SAC_IdEncuesta</fullName>
+        <categories>SAC</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_SAC_IdEncuesta</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_SAC_NumeroMesIrene</fullName>
+        <categories>SAC</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_SAC_NumeroMesIrene</shortDescription>
+        <value>0.000000001</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ProveedorAdministrado</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Proovedor para Administradores</shortDescription>
+        <value>Todos</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_OppEtapaPoliticas</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etapa Politicas de la Oportunidad</shortDescription>
+        <value>Políticas</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_OppEtapaObjeciones</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etapa Objeciones de la Oportunidad</shortDescription>
+        <value>Objeciones</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_LG_OppCertif</fullName>
+        <categories>Siniestros SAC</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_LG_OppCertif</shortDescription>
+        <value>00001</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_LG_TokenInvalido</fullName>
+        <categories>SAC</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_LG_TokenInvalido</shortDescription>
+        <value>Token inválido</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_SAC_TokenInvalido</fullName>
+        <categories>Siniestros SAC</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_SAC_TokenInvalido</shortDescription>
+        <value>Token Invalido</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_AutoSeguroCorrecto</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Auto Seguro Dinámico</shortDescription>
+        <value>Auto Seguro Dinámico</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_AutoSeguroInCorrecto</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Auto Seguro Dinámico</shortDescription>
+        <value>Auto Seguro Dinamico</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_FamiliaASD</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Familia ASD</shortDescription>
+        <value>ASD</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_InboundLabel</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Origen de Registros Inbound</shortDescription>
+        <value>Inbound</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ProfileAdmin</fullName>
+        <categories>Profile Name</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX_SB_VTS_ProfileAdmin</shortDescription>
+        <value>System Administrator</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_RecordOutbound</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Registro Outbound</shortDescription>
+        <value>Outbound</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_PersonRecord</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Registro tipo PersonAccount</shortDescription>
+        <value>PersonAccount</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_OrigenCallMeBack</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Origen Lead Callme Back</shortDescription>
+        <value>Call me back</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_InvalidRecordLead</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Candidato no valido</shortDescription>
+        <value>No se puede puede convertir este candidato por este flujo, contacte a su Administrador para que se asigne el flujo correcto de conversión.</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ErrorListaNegra</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error lista Negra</shortDescription>
+        <value>Este candidato esta marcado en la lista negra.</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ErrorValidarLead</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error al validar Lead</shortDescription>
+        <value>&apos;El teléfono debe ser numérico y contener 10 dígitos.&apos;</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ReturnElement</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ReturnElement</shortDescription>
+        <value>&lt;return&gt;</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_EtapaCotizada</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cotizada</shortDescription>
+        <value>Cotizada</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ContactoEfectivo</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Contacto Efectivo</shortDescription>
+        <value>Contacto Efectivo</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_RecordTypeASD</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Tipo Registro ASD</shortDescription>
+        <value>ASD</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_InvalidPhone</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error teléfono móvil</shortDescription>
+        <value>El candidato no tiene un número válido</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_InvalidPhoneFormat</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error teléfono móvil</shortDescription>
+        <value>El teléfono debe ser numérico y contener 10 dígitos</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_RecordTypeOut</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Tipo Registro OutBound</shortDescription>
+        <value>MX_WB_rt_Telemarketing</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_SI_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>SI</shortDescription>
+        <value>SI</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_RecordTypeOutOpp</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Tipo Registro OutBound</shortDescription>
+        <value>MX_WB_RT_Telemarketing</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_STATUSEMITIDA_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Estatus Emitida</shortDescription>
+        <value>Emitida</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_SchdProces</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Processo batch VTS</shortDescription>
+        <value>TW_Telemarketing</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_SmartServiceHogar</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etiqueta el Id del servicio Presence</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_TRACKINGWEB_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Tracking Web</shortDescription>
+        <value>Tracking Web</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_Telemarketing_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etiqueta para recordtype de hogar y vida</shortDescription>
+        <value>MX_SB_VTS_Telemarketing</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_TaskCall</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Tipo de registro de Llamada</shortDescription>
+        <value>Llamada</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_USUARIO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Usuario:</shortDescription>
+        <value>Usuario:</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_VENTA_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>VENTA</shortDescription>
+        <value>VENTA</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_RTWCotizacion_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>rtwCotizacion</shortDescription>
+        <value>rtwCotizacion</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_PIPELINE_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Pipeline</shortDescription>
+        <value>Pipeline</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_PROSPECTING_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Prospecting</shortDescription>
+        <value>Prospecting</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_PRODUCTO_HogarDinamico_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Hogar Seguro Dinámico</shortDescription>
+        <value>Hogar Seguro Dinámico</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_JSONError_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>JSON Exception</shortDescription>
+        <value>JSONParserreqCotizacion Exception:</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_LINEA_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Linea</shortDescription>
+        <value>Linea:</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_Hogar</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Producto Hogar</shortDescription>
+        <value>Hogar</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_HogarFam</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Familia Hogar</shortDescription>
+        <value>Hogar</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_HotLeads</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Bandeja hot leads para proveedores Telemarketing</shortDescription>
+        <value>HotLeads</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_MB_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MB</shortDescription>
+        <value>MB</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_MSG1rtwCotizacion_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MsgError rtwCotizacion</shortDescription>
+        <value>EN rtwCotizacion.reqCotizacion Request:</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_MSGERROR2_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error Cotización 2</shortDescription>
+        <value>En upsertCotizacion el siguiente error ha ocurrido:</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_NEWBUSINESS_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>New Business</shortDescription>
+        <value>New Business</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_NOVENTASOPP</fullName>
+        <categories>Error</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Motivo No venta Oportunidad</shortDescription>
+        <value>Error, por favor validar los motivos de no venta de la oportunidad</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_NOVENTASQUOTE</fullName>
+        <categories>Error</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Motivo No venta Presupuesto</shortDescription>
+        <value>&#39;Error, por favor validar motivos de no venta del presupuesto</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_NO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>NO</shortDescription>
+        <value>NO</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_OUTBOUND_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>OUTBOUND</shortDescription>
+        <value>OUTBOUND</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_OportunidadCerradaCotiza</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Oportunidad cerrada</shortDescription>
+        <value>La Oportunidad se encuentra cerrada, no puede seguir cotizando sobre una oportunidad cerrada</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_FORMALIZADA_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Formalizada</shortDescription>
+        <value>Formalizada</value>
+    </labels>
+	 <labels>
+        <fullName>MX_SB_VTS_ErrorCotizacion_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error Cotización</shortDescription>
+        <value>Error al actualizar los datos de la cotización:</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_CotizadorExito_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cotizador exito</shortDescription>
+        <value>Se guardo el registro correctamente.</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_CustoMasterHogar_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Master Label Hogar</shortDescription>
+        <value>URLHSB</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_EstatusEfectivo</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Estatus contacto Efectivo</shortDescription>
+        <value>Se necesita un Estatus de contacto Efectivo antes de convertir</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_EmailRequerido</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Falta Email</shortDescription>
+        <value>Antes de convertir se necesita un correo electrónico valido</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_OwnerLead</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Propietario del Lead</shortDescription>
+        <value>Necesita ser el propietario del Candidato antes de convertirlo</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ProductoInteres</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Producto Lead</shortDescription>
+        <value>Necesita seleccionar un producto de interés antes de convertir</value>
+    </labels>
+     <labels>
+        <fullName>MX_SB_VTS_ProductosNoActivos</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Productos no Activos</shortDescription>
+        <value>No hay productos activos para cotizar</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ERRORUpsert_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error Upsert</shortDescription>
+        <value>Ejecución de Método: upsertCotizacion</value>
+    </labels>
+	 <labels>
+        <fullName>MX_SB_VTS_COBRADA_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>COBRADA</shortDescription>
+        <value>COBRADA</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_COTIZACION_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cotización</shortDescription>
+        <value>Cotización</value>
+    </labels>
+	    <labels>
+        <fullName>MX_SB_VTS_CAUSA_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cuasa</shortDescription>
+        <value>Causa:</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_CLOSEDWON_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Closed Won</shortDescription>
+        <value>Closed Won</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_CLOSED_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Closed</shortDescription>
+        <value>Closed</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_Found</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Mensaje correcto</shortDescription>
+        <value>No fallo</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_1STR_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>1 as string</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>WB_Url_CotizadorAuto</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>WB_Url_CotizadorAuto</shortDescription>
+        <value>https://segbancomer.mx/psmx_mult_web_psmxwebapp_01/wibe/contratacion/seguroDeAuto?</value>
+    </labels>
+    <labels>
+        <fullName>WB_Url_CotizadorCarretero</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>WB_Url_CotizadorCarretero</shortDescription>
+        <value>https://segbancomer.mx/psmx_mult_web_psmxwebapp_01/wibe/contratacion/seguroCarretero?</value>
+    </labels>
+    <labels>
+        <fullName>WB_Url_CotizadorMoto</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>WB_Url_CotizadorMoto</shortDescription>
+        <value>https://www.segbancomer.mx/psmx_mult_web_psmxwebapp_01/wibe/contratacion/seguroDeMoto?</value>
+    </labels>
+    <labels>
+        <fullName>WB_Url_CotizadorSAU</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>WB_Url_CotizadorSAU</shortDescription>
+        <value>https://segbancomer.mx/psmx_mult_web_psmxwebapp_01/wibe/contratacion/seguroDeAuto?</value>
+    </labels>
+    <labels>
+        <fullName>WB_Url_CotizadorSFL</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>WB_Url_CotizadorSFL</shortDescription>
+        <value>https://www.segbancomer.mx/psmx_mult_web_psmxwebapp_01/wibe/contratacion/seguroFronterizoLegalizado?</value>
+    </labels>
+    <labels>
+        <fullName>WB_Url_CotizadorWiberizate</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>WB_Url_CotizadorWiberizate</shortDescription>
+        <value>https://www.segbancomer.mx/psmx_mult_web_psmxwebapp_01/wibe/contratacion/wiberizate?</value>
+    </labels>
+    <labels>
+        <fullName>CalcularAntesDeGuardar</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Si no se ha calculado la evaluación está no se puede guardar y despliega mensaje</shortDescription>
+        <value>Debe calcular la evaluación antes de que pueda guardar.</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Profile_SystemAdministrator</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>System administrator profile name</shortDescription>
+        <value>Administrador del sistema</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_PyME_Error_Generico</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error genérico PyME/ BPyP</shortDescription>
+        <value>Ha ocurrido un error.</value>
+    </labels>
+    <labels>
+        <fullName>MX_PYME_Encargado_de_Campania</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Encargado de Campaña</shortDescription>
+        <value>00518000003rWSzAAM</value>
+    </labels>
+    <labels>
+        <fullName>MX_PyME_Error_2_Division_Faltante</fullName>
+        <categories>PyME</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Mensaje error PyME División Faltante</shortDescription>
+        <value>The executive selected has not assigned a division, please contact your system administrator</value>
+    </labels>
+    <labels>
+        <fullName>MX_PyME_Error_5_Folio_Existente</fullName>
+        <categories>PyME</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Mensaje error PyME Folio Existente</shortDescription>
+        <value>There is already a transfer request related to these clients :</value>
+    </labels>
+    <labels>
+        <fullName>MX_PyME_Error_6_UG_Erronea_Divsion</fullName>
+        <categories>PyME</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Mensaje error PyME UG Errónea División</shortDescription>
+        <value>The division of the current owner of the client does not correspond to the executive´s divisions within yours, please select another client</value>
+    </labels>
+    <labels>
+        <fullName>MX_PyME_Error_7_UG_Faltante</fullName>
+        <categories>PyME</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Mensaje error PyME UG Faltante</shortDescription>
+        <value>It is necessary to add the client number to the load file in order to execute the mass transfer</value>
+    </labels>
+    <labels>
+        <fullName>MX_PyME_Error_8_Referencia_a_cliente_faltante</fullName>
+        <categories>PyME</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Mensaje error PyME Referencia a cliente faltante</shortDescription>
+        <value>You need to search and select at least one client to create a transfer request</value>
+    </labels>
+    <labels>
+        <fullName>MX_PyME_Error_9_Referencia_a_propietario_del_cliente</fullName>
+        <categories>PyME</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Mensaje error PyME Referencia a propietario del cliente</shortDescription>
+        <value>It is necessary to add the FederationIdentifier of the executive to start the single load of the SME portfolio</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_CL_CotizadorError</fullName>
+        <categories>Mensaje de Error</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_CL_CotizadorError</shortDescription>
+        <value>Ocurrió un error y no se pudo mostrar el cotizador</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_CL_ExceptionListMsg</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Exeption List</shortDescription>
+        <value>No se encontraron registros</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_CL_ExceptionListType</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Exeption List Code</shortDescription>
+        <value>System.ListEmptyException</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_CL_LocaleString</fullName>
+        <categories>Idioma Salesforce</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_CL_LocaleString</shortDescription>
+        <value>Locale.MX</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_CL_MustHaveProduct</fullName>
+        <categories>Mensaje de Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_CL_MustHaveProduct</shortDescription>
+        <value>Debe tener un producto</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_ERROR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_ERROR</shortDescription>
+        <value>ERROR:</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_EvaluacionGuardada</fullName>
+        <categories>Evaluación Calidad</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Evaluacion guardada correctamente</shortDescription>
+        <value>La evaluación se ha guardado correctamente</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_HelpDocURL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>URL Help Doc</shortDescription>
+        <value>https://segurosbancomer--tlmkt.my.salesforce.com/sfc/p/R0000001vFTt/a/R00000008Rc6/v0_FotDuJ6CwIA..vqIBjy6kawVF3e27olmzVlMCQp8</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_LG_ErrorBack</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_LG_ErrorBack</shortDescription>
+        <value>Upssss! Algo salio mal, contacte a su Administrador del sistema.</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_LG_ErrorWS</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_LG_ErrorWS</shortDescription>
+        <value>Falló al consumir Web Service</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_lbl_MsgConvertException</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_lbl_MsgConvertException</shortDescription>
+        <value>Alguno de los parámetros de la oportunidad comercial no es válido. Verifique su Lead para proceder con la conversión.</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_lbl_ReagendamientoException</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_lbl_ReagendamientoException</shortDescription>
+        <value>Alguno de los parámetros no es válido. Verifique y vuelva a intentar.</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_lbl_ReagendamientoExito</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_lbl_ReagendamientoExito</shortDescription>
+        <value>Cliente agendado</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_lg_TlmktError</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_lg_TlmktError</shortDescription>
+        <value>Error al obtener la información.</value>
+    </labels>
+    <labels>
+        <fullName>NoSePudoActualizar</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cuando la evaluación no se ha podido actualizar debe aparecer  mensaje de error</shortDescription>
+        <value>Error al registrar la evaluación.</value>
+    </labels>
+    <labels>
+        <fullName>NoSePudoGuardar</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Si hay un error al guardar la evaluación se debe desplegar este mensaje.</shortDescription>
+        <value>Error al registrar la evaluación.</value>
+    </labels>
+    <labels>
+        <fullName>ValorNoValido</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cuando se califica la evaluación solo deben ser con los números permitidos</shortDescription>
+        <value>VALOR NO VALIDO, SELECCIONE 0,1 o 2 Y/O NO DEBE HABER CONCEPTO SIN RESPONDER, DE SER ASÍ DESACTIVE EL CONCEPTO EN LA FICHA CONCEPTOS:</value>
+    </labels>
+    <labels>
+        <fullName>WsCTIAction</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>WsCTIAction</shortDescription>
+        <value>http://201.148.35.186/ws/setCall</value>
+    </labels>
+    <labels>
+        <fullName>soapWS</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>soapWS</shortDescription>
+        <value>http://201.148.35.186/ws/</value>
+    </labels>
+    <labels>
+        <fullName>wsEndPoint</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsEndPoint</shortDescription>
+        <value>http://vcip.com.mx/ws/dialer.php</value>
+    </labels>
+    <labels>
+        <fullName>wsEndPointWibe00</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsEndPointWibe00</shortDescription>
+        <value>http://201.148.35.186/ws/dialer.php</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_CantidadEnvioCTI</fullName>
+        <categories>OutboundCTI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>¿Cuántos leads se mandarán?</shortDescription>
+        <value>20</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_lbl_EstatusCotizacion</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_lbl_EstatusCotizacion</shortDescription>
+        <value>Convertido</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_lbl_MsgNoPerteneceCampania</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_lbl_MsgNoPerteneceCampania</shortDescription>
+        <value>La oportunidad comercial que desea convertir no pertenece a una campaña.</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_lbl_MsgValidPrimerContacto</fullName>
+        <language>es_MX</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_lbl_MsgValidPrimerContacto</shortDescription>
+        <value>Favor de verificar el Estatus de primer contacto y el Estado de oportunidad comercial.</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_lbl_PerfilAsesoresTlmkt</fullName>
+        <language>es_MX</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_lbl_PerfilAsesoresTlmkt</shortDescription>
+        <value>Asesores ASD</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_CamposFiltrados</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CustomSettingEnvioCTI</shortDescription>
+        <value>MX_WB_CamposFiltrados__c</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_endpoint</fullName>
+        <categories>site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>endpoint</shortDescription>
+        <value>http://201.148.35.186/ws/call.php</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_ipHeader</fullName>
+        <categories>site</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>ipHeader</shortDescription>
+        <value>http://201.148.35.186/ws/call</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_lbl_MsgScriptException</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_lbl_MsgScriptException</shortDescription>
+        <value>Ya existe un Script asociado al mismo producto y en la misma etapa. Por favor, elimine primero el Script existente y vuelva a intentarlo.</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_lbl_QueriesReagendamiento</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_lbl_QueriesReagendamiento</shortDescription>
+        <value>Error al recuperar los archivos. Por favor, verifique que los parámetros son correctos</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_ContadorRemarcado</fullName>
+        <categories>OutboundCTI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_ContadorRemarcado</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_estatusBloqueado</fullName>
+        <categories>OutboundCTI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_estatusBloqueado</shortDescription>
+        <value>No bloqueado</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_leadSource</fullName>
+        <categories>OutboundCTI</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX_WB_leadSource</shortDescription>
+        <value>Outbound TLMK</value>
+    </labels>
+    <labels>
+        <fullName>SAN163_WSLeadBlackListValues</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Valor de Oportunidad Comercial para no enviar al CTI.</shortDescription>
+        <value>No le interesa</value>
+    </labels>
+    <labels>
+        <fullName>SAN163_WSOppotunityBlackListStageName</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Valor de Etapa de Cotización para no enviar al CTI.</shortDescription>
+        <value>Closed Lost</value>
+    </labels>
+    <labels>
+        <fullName>SAN163_WSOppotunityBlackListValues</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Valor de Cotización para no enviar al CTI.</shortDescription>
+        <value>No Interesado</value>
+    </labels>
+    <labels>
+        <fullName>SAN163_WSPassword</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Contraseña para Chofer Privado.</shortDescription>
+        <value>gestach7Nut_</value>
+    </labels>
+    <labels>
+        <fullName>SAN163_WSReferenceProduct</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Valor que usa por defecto SAN163_WSUser.</shortDescription>
+        <value>Chofer Privado</value>
+    </labels>
+    <labels>
+        <fullName>SAN163_WSUser</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Usuario para Chofer Privado.</shortDescription>
+        <value>vnzwibewt</value>
+    </labels>
+    <labels>
+        <fullName>wsLadaCDMX</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsLadaCDMX</shortDescription>
+        <value>55</value>
+    </labels>
+    <labels>
+        <fullName>wsLadaNacCel</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsLadaNacCel</shortDescription>
+        <value>044</value>
+    </labels>
+    <labels>
+        <fullName>wsLadaNacional</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsLadaNacional</shortDescription>
+        <value>01</value>
+    </labels>
+    <labels>
+        <fullName>wsLadaProCel</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsLadaProCel</shortDescription>
+        <value>045</value>
+    </labels>
+    <labels>
+        <fullName>wsPaswTrackASD</fullName>
+        <categories>asdCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsPaswTrackASD</shortDescription>
+        <value>iq1AUQ@C*zsa</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoASD</fullName>
+        <categories>asdCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoASD</shortDescription>
+        <value>Auto Seguro Dinamico</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoAutoUDI</fullName>
+        <categories>Auto UDI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoAutoUDI</shortDescription>
+        <value>Seguro de auto Udi</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoFSD</fullName>
+        <categories>asdCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoFSD</shortDescription>
+        <value>Seguro de auto fronterizo bancomer</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoFronterizo</fullName>
+        <categories>Seguro Fronterizo</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoFronterizo</shortDescription>
+        <value>Seguro Fronterizo</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoLegalizado</fullName>
+        <categories>Seguro Legalizado</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoLegalizado</shortDescription>
+        <value>Seguro Legalizado</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoMSD</fullName>
+        <categories>asdCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoMSD</shortDescription>
+        <value>Seguro de Moto Bancomer</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoNSD</fullName>
+        <categories>asdCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoNSD</shortDescription>
+        <value>Seguro de auto nacionalizado</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoSM</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoSM</shortDescription>
+        <value>Seguro de moto</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoSMU</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoSMU</shortDescription>
+        <value>Seguro de Moto UDI</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoSeguroDeAuto</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoSeguroDeAuto</shortDescription>
+        <value>Seguro de Auto</value>
+    </labels>
+    <labels>
+        <fullName>wsProductoWiberizate</fullName>
+        <categories>wiberizate</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsProductoWiberizate</shortDescription>
+        <value>wiberizate</value>
+    </labels>
+    <labels>
+        <fullName>wsPwd</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsPwd</shortDescription>
+        <value>geT8A5He_afU</value>
+    </labels>
+    <labels>
+        <fullName>wsPwdASD</fullName>
+        <categories>asdCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsPwdASD</shortDescription>
+        <value>NDweL_zXGzv*</value>
+    </labels>
+    <labels>
+        <fullName>wsPwdAutoUDI</fullName>
+        <categories>Auto UDI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsPwdAutoUDI</shortDescription>
+        <value>geT8A5He_afU1</value>
+    </labels>
+    <labels>
+        <fullName>wsPwdFyL</fullName>
+        <categories>Fronterizo y Legalizado</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsPwdFyL</shortDescription>
+        <value>gestach7Nut_</value>
+    </labels>
+    <labels>
+        <fullName>wsPwdSMU</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsPwdSMU</shortDescription>
+        <value>7u_uDREkewAb</value>
+    </labels>
+    <labels>
+        <fullName>wsPwdWT</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsPwdWT</shortDescription>
+        <value>gestach7Nut_</value>
+    </labels>
+    <labels>
+        <fullName>wsPwdwiberizate</fullName>
+        <categories>wiberizate</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsPwdwiberizate</shortDescription>
+        <value>pi5*yPre3der</value>
+    </labels>
+    <labels>
+        <fullName>wsUser</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsUser</shortDescription>
+        <value>vnzwibews</value>
+    </labels>
+    <labels>
+        <fullName>wsUserASD</fullName>
+        <categories>asdCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsUserASD</shortDescription>
+        <value>vnzasdcal</value>
+    </labels>
+    <labels>
+        <fullName>wsUserAutoUDI</fullName>
+        <categories>Auto UDI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsUserAutoUDI</shortDescription>
+        <value>vnzwibews1</value>
+    </labels>
+    <labels>
+        <fullName>wsUserFyL</fullName>
+        <categories>Seguro Legalizado</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsUserFyL</shortDescription>
+        <value>vnzwibewt</value>
+    </labels>
+    <labels>
+        <fullName>wsUserSMU</fullName>
+        <categories>Label</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsUserSMU</shortDescription>
+        <value>vnzwibemo</value>
+    </labels>
+    <labels>
+        <fullName>wsUserTW</fullName>
+        <categories>wibeCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsUserTW</shortDescription>
+        <value>vnzwibewt</value>
+    </labels>
+    <labels>
+        <fullName>wsUserTrackASD</fullName>
+        <categories>asdCTI</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsUserTrackASD</shortDescription>
+        <value>tesasdtra</value>
+    </labels>
+    <labels>
+        <fullName>wsUserwiberizate</fullName>
+        <categories>wiberizate</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>wsUserwiberizate</shortDescription>
+        <value>teswibezt</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Comp_StatusPresentacion</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Comp_StatusPresentacion</shortDescription>
+        <value>Presentación</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Comp_StatusPreparacion</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Comp_StatusPreparacion</shortDescription>
+        <value>Preparación</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Comp_StatusAbierto</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Comp_StatusAbierto</shortDescription>
+        <value>Abierto</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Captacion</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Captacion</shortDescription>
+        <value>BPyP_tre_Digital</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_CompCaptacion</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_CompCaptacion</shortDescription>
+        <value>BPyP Captación</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_RI_TipoCompromisoCaptacion</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_RI_TipoCompromisoCaptacion</shortDescription>
+        <value>Captación</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_OpptyColocacion</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_OpptyColocacion</shortDescription>
+        <value>BPyP_tre_Colocacion</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_CompColocacion</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_CompColocacion</shortDescription>
+        <value>BPYP Colocación</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_RI_TipoCompromisoColocacion</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_RI_TipoCompromisoColocacion</shortDescription>
+        <value>Colocación</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_OpptySeguros</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_OpptySeguros</shortDescription>
+        <value>BPyP_tre_Seguros</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_RI_TipoCompromisoSeguros</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_RI_TipoCompromisoSeguros</shortDescription>
+        <value>Seguros</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_OpptyServicios</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_OpptyServicios</shortDescription>
+        <value>BPyP_tre_Digital</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_CompServicios</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_CompServicios</shortDescription>
+        <value>BPYP Servicios</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_RI_TipoCompromisoServicios</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_RI_TipoCompromisoServicios</shortDescription>
+        <value>Servicios</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_CINTILLO</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_CINTILLO</shortDescription>
+        <value>Cintillo</value>
+    </labels>
+    <labels>
+        <fullName>MX_PERFIL_SystemAdministrator</fullName>
+        <categories>Etiqueta para Administrador de Sistema</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MX_PERFIL_SystemAdministrator</shortDescription>
+        <value>System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_EU</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_EU</shortDescription>
+        <value>ExpUnica</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Limite_Pts_Siste</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Limite_Pts_Siste</shortDescription>
+        <value>15</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Limite_Pts_ACC_EECC</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Limite_Pts_ACC_EECC</shortDescription>
+        <value>20</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Limite_Pts_Acc_IGBPyP</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Limite_Pts_Acc_IGBPyP</shortDescription>
+        <value>10</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Limite_Pts_IRENE_2_0</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Limite_Pts_IRENE 2.0</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Limite_Pts_EFICI_CORREOS</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Limite_Pts_EFICI_CORREOS</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Limite_Pts_FORM</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Limite_Pts_FORM</shortDescription>
+        <value>20</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Tablero</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Tablero</shortDescription>
+        <value>Tablero</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Seguros</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_CompSeguros</shortDescription>
+        <value>BPYP Seguros</value>
+    </labels>
+    <labels>
+        <fullName>Url_igbpyp</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Url informacion-de-gestion-banca-patrimonial-y-privada</shortDescription>
+        <value>https://sites.google.com/a/bbva.com/igbpyp-informacion-de-gestion-banca-patrimonial-y-privada/?pli=1</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_RI_Existente</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_RI_Existente</shortDescription>
+        <value>Aún existe una RI en estado Preparación, Presentación o Evaluación, debes finalizar esta RI para poder generar una nueva</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_UG_Sin_Ejecutivo_Insertar</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_UG_Sin_Ejecutivo_Insertar</shortDescription>
+        <value>La UG no tiene Ejecutivo Asignado (insertar) </value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_UG_Sin_Ejecutivo_Actualizar</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_UG_Sin_Ejecutivo_Actualizar</shortDescription>
+        <value>La UG no tiene Ejecutivo Asignado (Actualizar) </value>
+    </labels>
+    <labels>
+        <fullName>MX_BPP_Sin_Campos_Dependientes</fullName>
+        <categories>BPYP</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPP_Sin_Campos_Dependientes</shortDescription>
+        <value>No se encontraron campos dependientes en el objeto</value>
+    </labels>
+    <labels>
+        <fullName>MX_BPyP_CronExpr_Batch</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MX_BPyP_CronExpr_Batch</shortDescription>
+        <value>0 0 0 15 3 ? 2022</value>
+    </labels>
+    <labels>
+        <fullName>MX_PYME_AccCampAccErrOpp</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error msg when no Acc on AccCamp</shortDescription>
+        <value>Ask the Owner of the Campaign to verify the client related to it.</value>
+    </labels>
+    <labels>
+        <fullName>MX_PYME_OppAccDifAccCamp</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error msg when Acc is different on AccCamp and Opp</shortDescription>
+        <value>The client in the Opporunity and in the Campaign should be the same.</value>
+    </labels>
+    <labels>
+        <fullName>MX_PYME_OppAccErrAccCamp</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error msg when AccCamp has no Acc related</shortDescription>
+        <value>The opporunities related to a Campaign should have a Client</value>
+    </labels>
+    <labels>
+        <fullName>MX_PYME_AccCampPrdErrOpp</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error msg when no Prd on Campaign</shortDescription>
+        <value>Ask to the Owner of the Campaign in order to Update the products related to it.</value>
+    </labels>
+    <labels>
+        <fullName>MX_PYME_OppPrdDifAccCamp</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error msg when Prd on AccCamp is different form the Opp</shortDescription>
+        <value>The products didn&apos;t match, please verify product in the Opportunity.</value>
+    </labels>
+    <labels>
+        <fullName>MX_PYME_OppPrdErrAccCamp</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error msg when no Prd on Opp</shortDescription>
+        <value>The related Opportunities to the Campaign, should have a selected product.</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_Quote_Not_Found</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error al no encontrar Quotes</shortDescription>
+        <value>No se encontro ningun presupuesto</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_AUTO_FRONTERIZO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Seguro de auto fronterizo bancomer</shortDescription>
+        <value>Seguro de auto fronterizo bancomer</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_AutoSD</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Auto</shortDescription>
+        <value>Auto</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_CustoMasterVida_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Master Label Vida</shortDescription>
+        <value>URLVSB</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_ErrorMsgProd_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error Producto</shortDescription>
+        <value>Producto no encontrado o no activo</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_ERRORMSGQUOTE_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error al crear presupuesto</shortDescription>
+        <value>Error al crear presupuesto</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_FRONTERIZO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>FRONTERIZO</shortDescription>
+        <value>FRONTERIZO</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_MOTO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MOTO</shortDescription>
+        <value>MOTO</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_NACIONALIZADO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>NACIONALIZADO</shortDescription>
+        <value>NACIONALIZADO</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_OUTBOUND_RT_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Outbound</shortDescription>
+        <value>Outbound</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ObjecionCorrecta</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Objeciones guardadas</shortDescription>
+        <value>Objeciones guardadas correctamente</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ObjecionError</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error en guardado de Objeciones</shortDescription>
+        <value>Error al guardar Objeciones</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ObjecionErrorDet</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error en guardado de Objeciones detalle</shortDescription>
+        <value>No se logro guardar correctamente la selección</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_OUTBOUNDTLMK_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Outbound TLMK</shortDescription>
+        <value>Outbound TLMK</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_SAC_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Sac</shortDescription>
+        <value>SAC</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_M_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>M</shortDescription>
+        <value>M</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ModuloNoDisponible</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Módulo no disponible</shortDescription>
+        <value>Módulo no disponible</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ModuloNoDisponibleDet</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Módulo no disponible detalle</shortDescription>
+        <value>Este módulo no esta disponible para este tipo de registro</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_AUTO_NACIONALIZADO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Seguro de auto nacionalizado</shortDescription>
+        <value>Seguro de auto nacionalizado</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_COTIZADORAUTO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cotizador Auto</shortDescription>
+        <value>Cotizador Auto</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_DINAMICO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>DINAMICO</shortDescription>
+        <value>DINAMICO</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_DINAMICO2_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>DINÁMICO</shortDescription>
+        <value>DINÁMICO</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ContractStatus</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Estatus para contrato</shortDescription>
+        <value>Draft</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_PRODUCTO_AUTO_DINAMICO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Auto Seguro Dinámico</shortDescription>
+        <value>Auto Seguro Dinámico</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_SEGURO_MOTO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Seguro de Moto Bancomer</shortDescription>
+        <value>Seguro de Moto Bancomer</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_CREADA_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Creada</shortDescription>
+        <value>Creada</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_MASCULINO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>MASCULINO</shortDescription>
+        <value>MASCULINO</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_H_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>H</shortDescription>
+        <value>H</value>
+    </labels>
+	<labels>
+        <fullName>MX_SB_VTS_VENTA</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Sac</shortDescription>
+        <value>SAC</value>
+    </labels>
+    <labels>
+        <fullName>MX_WB_OppBlackList</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Lista negra</shortDescription>
+        <value>Esta oportunidad comercial esta marcada en la lista negra</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_errorPhone</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error Telefono</shortDescription>
+        <value>El teléfono debe ser numérico y contener 10 dígitos</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_errorClosedWon</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error Closed Won</shortDescription>
+        <value>La opportunidad aun no se puede marcar como Cerrada - Ganada</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_errorGetObjetions</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error al recuperar objeciones</shortDescription>
+        <value>No se pudo recuperar la información necesaria para mostrar las objeciones</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_errorGetRecords</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error al recuperar registro</shortDescription>
+        <value>Error al recuperar registro</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_errorPermisions</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error en permisos</shortDescription>
+        <value>Error en permisos</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_SCHEDULE_DATE_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>SCHEDULE DATE LBL</shortDescription>
+        <value>2019-06-13T22:16:10.000+0000</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_VIDA</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Producto Vida Label</shortDescription>
+        <value>Vida</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_Legal_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>LEGALIZADO</shortDescription>
+        <value>LEGALIZADO</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_AUTO_LEGALIZADO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Seguro de Auto Legalizado</shortDescription>
+        <value>Seguro de Auto Legalizado</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_InactiveQueue</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cola para registros inactivos</shortDescription>
+        <value>Campaña Inactiva ASD VCIP</value>
+    </labels>
+    <labels>
+      <fullName>MX_SB_SAC_BusquedaPoliza</fullName>
+      <categories>Póliza SAC</categories>
+      <language>es</language>
+      <protected>false</protected>
+      <shortDescription>MX_SB_SAC_BusquedaPoliza</shortDescription>
+      <value>Póliza</value>
+  </labels>
+  <labels>
+      <fullName>MX_SB_SAC_ButBuscarPoliza</fullName>
+      <categories>Póliza SAC</categories>
+      <language>es</language>
+      <protected>false</protected>
+      <shortDescription>MX_SB_SAC_ButBuscarPoliza</shortDescription>
+      <value>Buscar</value>
+  </labels>
+  <labels>
+      <fullName>MX_SB_SAC_ModificaCreaPoliza</fullName>
+      <categories>Póliza SAC</categories>
+      <language>es</language>
+      <protected>false</protected>
+      <shortDescription>MX_SB_SAC_ModificaCreaPoliza</shortDescription>
+      <value>Crea Actualiza</value>
+  </labels>
+  <labels>
+      <fullName>MX_SB_SAC_TipoBusqueda</fullName>
+      <categories>Póliza SAC</categories>
+      <language>es</language>
+      <protected>false</protected>
+      <shortDescription>MX_SB_SAC_TipoBusqueda</shortDescription>
+      <value>Tipo de Busqueda</value>
+  </labels>
+  <labels>
+        <fullName>MX_WF_ErrorGeneralWFC</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error General Workflow Campañas</shortDescription>
+        <value>Error General Workflow Campañas</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_CONTACTO_LBL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etapa Contacto</shortDescription>
+        <value>Contacto</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ResultadoLlamada</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etiqueta resultado de llamada en lead</shortDescription>
+        <value>Contacto</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_Interesado</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etiqueta para tipificacion interesado en lead</shortDescription>
+        <value>Interesado</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_AperturaCuenta</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etiqueta para conversion de lead</shortDescription>
+        <value>Apertura de Cuenta</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_ErrorTipificaciones</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etiqueta para tipificaciones que no permitan convertir el lead</shortDescription>
+        <value>Los niveles de tipificacion no permiten iniciar el proceso de venta</value>
+    </labels>
+    <labels>
+        <fullName>MX_SB_VTS_IntUser</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etiqueta para perfil IntegrationUser</shortDescription>
+        <value>IntegrationUser</value>
+    </labels>
+	    <labels>
+        <fullName>MX_SB_VTS_Nocontacto</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Etiqueta para perfil IntegrationUser</shortDescription>
+        <value>No Contacto</value>
+    </labels>
+</CustomLabels>

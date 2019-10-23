@@ -1,0 +1,61 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" controller="MX_PyME_ServiceCards_Cls" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />	
+    <aura:attribute name="wrapperVPF" type="object" description="Wrapper that recieves boolean values from controller."/>
+    
+    <lightning:accordion activeSectionName="A">
+        <lightning:accordionSection name="A" label="Captación PyME">
+            <aura:set attribute="body">
+                <aura:if isTrue="{!v.wrapperVPF.vista}">
+                <p class="slds-text-heading_medium">Vista</p><br></br> 
+                <c:GBL_DataTable_CMP BVariable="{!v.recordId}" showRecords="5" functionTable="VISTA" /><br></br>
+                </aura:if>
+                <aura:if isTrue="{!v.wrapperVPF.plazo}">
+                <p class="slds-text-heading_medium">Plazo</p><br></br>
+                <c:GBL_DataTable_CMP BVariable="{!v.recordId}" showRecords="5" functionTable="PLAZO" /><br></br>
+                </aura:if>
+                <aura:if isTrue="{!v.wrapperVPF.fondo}">
+                <p class="slds-text-heading_medium">Fondos</p><br></br>
+                <c:GBL_DataTable_CMP BVariable="{!v.recordId}" showRecords="5" functionTable="FONDOS" />           		    
+                </aura:if>
+            </aura:set>
+        </lightning:accordionSection>
+        
+        <lightning:accordionSection name="B" label="Créditos otorgados">
+            <aura:set attribute="body">
+                <aura:if isTrue="{!v.wrapperVPF.TDCNEG}">
+                <p class="slds-text-heading_medium">Tarjeta Negocios</p><br></br>
+                <c:GBL_DataTable_CMP BVariable="{!v.recordId}" showRecords="5" functionTable="TN" PyME="True"/><br></br>
+                </aura:if>
+                <aura:if isTrue="{!v.wrapperVPF.TDMNEG}">
+                <p class="slds-text-heading_medium">Tarjeta Micro Negocios</p><br></br>
+                <c:GBL_DataTable_CMP BVariable="{!v.recordId}" showRecords="5" functionTable="TDMN" PyME="True"/><br></br>
+                </aura:if>
+                <aura:if isTrue="{!v.wrapperVPF.CSIM}">
+                <p class="slds-text-heading_medium">Crédito Simple</p><br></br>
+                <c:GBL_DataTable_CMP BVariable="{!v.recordId}" showRecords="5" functionTable="CREDITO SIMPLE" PyME="True"/>
+                </aura:if>
+                <aura:if isTrue="{!v.wrapperVPF.OCR}">
+                <p class="slds-text-heading_medium">Otros créditos</p><br></br>
+                <c:GBL_DataTable_CMP BVariable="{!v.recordId}" showRecords="5" functionTable="OTROS CREDITOS" />
+                </aura:if>
+             </aura:set>
+        </lightning:accordionSection>
+        
+        <lightning:accordionSection name="C" label="Servicios contratados">
+            <aura:set attribute="body">
+                <aura:if isTrue="{!v.wrapperVPF.CRTC}">
+                <p class="slds-text-heading_medium">Carta de crédito</p><br></br>
+                <c:GBL_DataTable_CMP BVariable="{!v.recordId}" showRecords="5" functionTable="SERVICIOS CRTC" />
+                </aura:if>
+                <aura:if isTrue="{!v.wrapperVPF.TPV}">
+                <p class="slds-text-heading_medium">TPVs</p><br></br>
+                <c:GBL_DataTable_CMP BVariable="{!v.recordId}" showRecords="5" functionTable="SERVICIOS TPVS" />
+                </aura:if>
+                <aura:if isTrue="{!v.wrapperVPF.SGRO}">
+                <p class="slds-text-heading_medium">Seguros</p><br></br>
+                <c:GBL_DataTable_CMP BVariable="{!v.recordId}" showRecords="5" functionTable="SERVICIOS SEGR" />
+                </aura:if>
+            </aura:set>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</aura:component>

@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><span style="background-color: rgb(255, 255, 255);"><span lang="ES" style=""><div style="display: inline;"><div class="gmail_default" style=""><div class="gmail_default" style=""><div class="gmail_default" style=""><font face="Verdana, Helvetica, sans-serif" style="" size="2"><div class="gmail_default" style="color: rgb(0, 0, 0);">El usuario <b style="">{!CRM_WF_Checklist_Variables__c.CreatedBy}</b> del área&nbsp;<b style="">{!CRM_WF_Checklist__c.CRM_WF_Squad_Producto__c}</b> ha agregado un nuevo documento al Checklist&nbsp;<b style="">{!CRM_WF_Checklist__c.Name}</b> de la Campaña&nbsp;<b style="">{!CRM_WF_Checklist__c.CRM_WF_Nombre_Estrategia_Proyecto__c}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><br></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><b>Datos del Documento:</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><br></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">Folio: </span><b>{!CRM_WF_Checklist_Variables__c.Name}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);">Documento:&nbsp;<b>{!CRM_WF_Checklist_Variables__c.CRM_WF_Variables__c}&nbsp;{!CRM_WF_Checklist_Variables__c.CRM_WF_Otro__c}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);">URL del Documento:&nbsp;<b>{!CRM_WF_Checklist_Variables__c.CRM_WF_Documento_Variable__c}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><br></div><div class="gmail_default" style="">Para mayor detalle puedes ingresar al registro dando clic&nbsp;en la siguiente liga</div><div class="gmail_default" style=""><br></div><div class="gmail_default" style=""><a href="{!CRM_WF_Checklist__c.Link}">Registro de Checklist</a>&nbsp;</div></font></div></div></div></div></span></span></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

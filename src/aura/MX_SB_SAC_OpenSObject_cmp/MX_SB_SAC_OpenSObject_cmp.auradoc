@@ -1,0 +1,8 @@
+<aura:documentation>
+	<aura:description>
+        <p>attribute: SObject - SObject a redireccionaar</p>
+    </aura:description>
+    <aura:example name="Redireccionamiento" ref="c:MX_SB_SAC_OpenSObject_cmp" label="Redirecciona al registro">
+		Redirecciona al registro que se acaba de crear dentro edl flujo
+	</aura:example>
+</aura:documentation>

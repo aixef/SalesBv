@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>ASIGNACION DE COLAS LEADS</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>Asesores_ASD_Tlmkt</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Outbound TLMK</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Asesores_ASD</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Call me back</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>ASD</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Producto_Interes__c</field>
+                <operation>contains</operation>
+                <value>Seguro de Moto,Seguro Fronterizo,Seguro de Moto Bancomer,Seguro de auto fronterizo Bancomer,Seguro de auto nacionalizado,Auto Seguro Dinamico,Auto Seguro Dinámico</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_SB_VTS_CBHogar</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Call me back</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Producto_Interes__c</field>
+                <operation>equals</operation>
+                <value>Hogar</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>ASD</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MX_SB_VTS_CBVida</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Call me back</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Producto_Interes__c</field>
+                <operation>equals</operation>
+                <value>Vida</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>ASD</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Asignación de Colas Call Me Back</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>Asesores_ASD</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.LeadSource</field>
+                <operation>equals</operation>
+                <value>Call me back</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>ASD</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

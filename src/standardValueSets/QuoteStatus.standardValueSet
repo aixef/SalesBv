@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Creada</fullName>
+        <default>true</default>
+        <label>Creada</label>
+        <allowEmail>false</allowEmail>
+    </standardValue>
+    <standardValue>
+        <fullName>Cotizada</fullName>
+        <default>false</default>
+        <label>Cotizada</label>
+        <allowEmail>false</allowEmail>
+    </standardValue>
+    <standardValue>
+        <fullName>Tarificada</fullName>
+        <default>false</default>
+        <label>Tarificada</label>
+        <allowEmail>false</allowEmail>
+    </standardValue>
+    <standardValue>
+        <fullName>Formalizada</fullName>
+        <default>false</default>
+        <label>Formalizada</label>
+        <allowEmail>false</allowEmail>
+    </standardValue>
+    <standardValue>
+        <fullName>Emitida</fullName>
+        <color>#006600</color>
+        <default>false</default>
+        <label>Emitida</label>
+        <allowEmail>true</allowEmail>
+    </standardValue>
+</StandardValueSet>

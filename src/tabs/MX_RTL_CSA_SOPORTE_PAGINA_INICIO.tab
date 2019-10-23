@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creado por Generador de aplicación Lightning</description>
+    <flexiPage>MX_RTL_CSA_SOPORTE_PAGINA_INICIO</flexiPage>
+    <label>Inicio</label>
+    <motif>Custom4: Hexagon</motif>
+</CustomTab>

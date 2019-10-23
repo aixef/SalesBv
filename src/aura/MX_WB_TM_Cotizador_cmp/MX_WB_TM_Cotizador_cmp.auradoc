@@ -1,0 +1,52 @@
+<aura:documentation>
+    <!--
+    /*
+    * @author:      Ing. Daniel Goncalves
+    * @date:        15/01/2019
+    * @description  Componente Lightning que embebe el cotizador de productos
+    * @Changes
+    *       2019-01-15          Creación                               Ing. Daniel Goncalves
+    *       2019-02-11          Correcciones Pull Request #108         Ing. Daniel Goncalves
+    *       2019-05-02          Cambio de modelo de datos              Eduardo Hernández
+    *       2019-05-15          Corrección flujo SAC                   Eduardo Hernández
+    */
+    -->
+    <aura:description>
+    <p><b>NAME</b> MX_WB_TM_Cotizador_cmp</p>
+    <p><b>DESCRIPTION</b> El componente se utiliza para mostrar el cotizador y permitir al asesor cotizar una póliza</p>
+     <p><b>ATTRIBUTES</b>
+            <ul>
+                <li><p><b>recordId</b>ID del registro de oportunidad en que se encuentra embebido</p></li>
+                <li><p><b>urlCoti</b>URL generada para el cotizador</p></li>
+                <li><p><b>blShowProdLst</b>Booleano para mostrar listado de productos</p></li>
+                <li><p><b>blShowUrl</b>Boleano para desplegar URL</p></li>
+                <li><p><b>blShowError</b>Boleano para mostrar mensaje de Error</p></li>
+                <li><p><b>blShowMsgPro</b>Boleano para mostrar mensaje de falta producto</p></li>
+                <li><p><b>lstProd</b>Lista de productos a seleccionar</p></li>
+                <li><p><b>msjError</b>Variable para manejar msjs de error</p></li>
+                <li><p><b>genericRecord</b>Variable para almacenar datos de un registro</p></li>
+            </ul>
+        </p>
+
+        <p><b>HANDLERS</b>
+            <ul>
+                <li><p><b>init</b>Llama método de construcción de la URL</p></li>
+            </ul>
+        </p>
+
+        <p><b>CONTROLLER METHODS</b>
+            <ul>
+                <li><p><b>doInit</b> Llama a método del helper que construye la URL</p></li>
+                <li><p><b>addProductCtrl</b> Llama a método del helper para agregar producto a la oportunidad</p></li>
+            </ul>
+        </p>
+
+        <p><b>HELPER METHODS</b>
+            <ul>
+                <li><p><b>buildUrl</b> Construye la URL del cotizador</p></li>
+                <li><p><b>fetchProducts</b> Trae productos de la familia de productos de la oportunidad</p></li>
+                <li><p><b>addProductHlp</b> Método para agregar producto a la oportunidad</p></li>
+            </ul>
+        </p>
+        </aura:description>
+</aura:documentation>

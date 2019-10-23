@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Logotipo de semáforo Verde para aplicación Workflow campañas</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>Logo_Verde</name>
+    <public>true</public>
+</Document>

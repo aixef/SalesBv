@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Contiene los registros para tipificar los casos</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>MX_SB_SAC_CodigoCondusef__c</fullName>
+        <description>Campo que contendrá la información de Conducef y que servirá para actualizar los registros de caso</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Código CONDUSEF</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_DescripcionCausaConducef__c</fullName>
+        <description>Campo que contendrá la información de Conducef y que servirá para actualizar los registros de caso</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Descripción causa CONDUSEF</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_Detalle__c</fullName>
+        <description>Campo que contendrá los mismos detalles de caso y que servirá para el cruce y actualizar los registros de caso</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Detalle</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_DocumentacionRequerida__c</fullName>
+        <description>Campo que contendrá la información de Conducef y que servirá para actualizar los registros de caso</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Documentación requerida</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_Estatus__c</fullName>
+        <description>Campo que contendrá los mismos estatus de caso y se ocupara actualizar los registros de caso</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Estatus</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_Etapa__c</fullName>
+        <description>Campo que se ocupara para actualizar la etapa en el caso, cuando se cumplan los criterios correspondientes</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Etapa</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_InformacionAdicional__c</fullName>
+        <description>Campo que contendrá la misma Información adicional de caso y que servirá para el cruce y actualizar los registros de caso</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Información adicional</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_Motivo__c</fullName>
+        <description>Campo que alojara los motivos que se ocupan en caso, con el fin de realizar el match al momento de autenticar</description>
+        <externalId>false</externalId>
+        <label>Motivo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cambios con afectación de primas</fullName>
+                    <default>true</default>
+                    <label>Cambios con afectación de primas</label>
+                </value>
+                <value>
+                    <fullName>Cambios sin afectación de primas</fullName>
+                    <default>false</default>
+                    <label>Cambios sin afectación de primas</label>
+                </value>
+                <value>
+                    <fullName>Cancelación</fullName>
+                    <default>false</default>
+                    <label>Cancelación</label>
+                </value>
+                <value>
+                    <fullName>Consultas</fullName>
+                    <default>false</default>
+                    <label>Consultas</label>
+                </value>
+                <value>
+                    <fullName>Cotización</fullName>
+                    <default>false</default>
+                    <label>Cotización</label>
+                </value>
+                <value>
+                    <fullName>Devolución</fullName>
+                    <default>false</default>
+                    <label>Devolución</label>
+                </value>
+                <value>
+                    <fullName>Incidencia</fullName>
+                    <default>false</default>
+                    <label>Incidencia</label>
+                </value>
+                <value>
+                    <fullName>Reactivación</fullName>
+                    <default>false</default>
+                    <label>Reactivación</label>
+                </value>
+                <value>
+                    <fullName>Reclamación</fullName>
+                    <default>false</default>
+                    <label>Reclamación</label>
+                </value>
+                <value>
+                    <fullName>Retención</fullName>
+                    <default>false</default>
+                    <label>Retención</label>
+                </value>
+                <value>
+                    <fullName>Servicios</fullName>
+                    <default>false</default>
+                    <label>Servicios</label>
+                </value>
+                <value>
+                    <fullName>Transferencia</fullName>
+                    <default>false</default>
+                    <label>Transferencia</label>
+                </value>
+                <value>
+                    <fullName>Venta</fullName>
+                    <default>false</default>
+                    <label>Venta</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_Producto__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>campo que traerá la relación del producto existente</description>
+        <externalId>false</externalId>
+        <label>Producto</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Catálogos de tipificaciones</relationshipLabel>
+        <relationshipName>Catalogos_de_tipificaciones</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_ProductosParaVenta__c</fullName>
+        <description>Campo que concatenara la información del motivo mas producto, se ocupara para el llenado de producto para venta que vive en el objeto caso</description>
+        <externalId>false</externalId>
+        <formula>TEXT(MX_SB_SAC_Motivo__c)&amp;&quot; &quot;&amp;MX_SB_SAC_Producto__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Productos para venta</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_Subdetalle__c</fullName>
+        <description>Campo que contendrá los mismos subdetalles de caso y que servirá para el cruce y actualizar los registros de caso</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Subdetalle</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_TipoDeRegistro__c</fullName>
+        <description>Se ocupara para la identificación del tipo de registro que se ocupara caso</description>
+        <externalId>false</externalId>
+        <label>Tipo de registro</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Auto</fullName>
+                    <default>false</default>
+                    <label>Auto</label>
+                </value>
+                <value>
+                    <fullName>Vida</fullName>
+                    <default>false</default>
+                    <label>Vida</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Catálogo de tipificación</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MX_SB_SAC_Motivo__c</columns>
+        <columns>MX_SB_SAC_Detalle__c</columns>
+        <columns>MX_SB_SAC_Subdetalle__c</columns>
+        <columns>MX_SB_SAC_InformacionAdicional__c</columns>
+        <columns>MX_SB_SAC_Producto__c</columns>
+        <columns>MX_SB_SAC_ProductosParaVenta__c</columns>
+        <columns>MX_SB_SAC_TipoDeRegistro__c</columns>
+        <columns>MX_SB_SAC_CodigoCondusef__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MX_SB_SAC_Motivo__c</field>
+            <operation>equals</operation>
+            <value>Consultas</value>
+        </filters>
+        <filters>
+            <field>MX_SB_SAC_Producto__c</field>
+            <operation>equals</operation>
+            <value>VW Venta Sin Crédito</value>
+        </filters>
+        <label>Todos</label>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_CambioConAfectPrimasConDOCBO3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Cambio Con Afectación Primas Con DOC BO3</label>
+        <queue>MX_SB_SAC_CambioConAfectPrimasConDOCBO3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_CambioConAfectPrimasSinDOCBO3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Cambio Con Afectación Primas Sin DOC BO3</label>
+        <queue>MX_SB_SAC_CambioConAfectPrimasSinDOCBO3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_CambioSinAfectPrimasConDOCBO3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Cambio Sin Afectación Primas Con DOC BO3</label>
+        <queue>MX_SB_SAC_CambioSinAfectPrimasConDOCBO3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_CambioSinAfectPrimasSinDOCBO3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Cambio Sin Afectación Primas Sin DOC BO3</label>
+        <queue>MX_SB_SAC_CambioSinAfectPrimasSinDOCBO3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_CancelacionConDocumentosBO2_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Cancelación con documentos BO2</label>
+        <queue>MX_SB_SAC_CancelacionConDocumentosBO2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_CancelacionConDocumentosBO3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Cancelación con documentos BO3</label>
+        <queue>MX_SB_SAC_CancelacionConDocumentosBO3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_CancelacionSinDocumentosBO2_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Cancelación sin documentos BO2</label>
+        <queue>MX_SB_SAC_CancelacionSinDocumentosBO2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_DevolucionConDocumentosBO3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Devolución con documentos BO3</label>
+        <queue>MX_SB_SAC_DevolucionConDocumentosBO3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_DevolucionSinDocumentosBO3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Devolución sin documentos BO3</label>
+        <queue>MX_SB_SAC_DevolucionSinDocumentosBO3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_IncidenciasBON3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Incidencias BON3</label>
+        <queue>MX_SB_SAC_IncidenciasBON3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_PagoCIEBO2_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Pago CIE BO2</label>
+        <queue>MX_SB_SAC_PagoCIEBO2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_ReactivacionConDocumentosBO3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Reactivación con documentos BO3</label>
+        <queue>MX_SB_SAC_ReactivacionConDocumentosBO3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_ReactivacionSinDocumentosBO3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Reactivación sin documentos BO3</label>
+        <queue>MX_SB_SAC_ReactivacionSinDocumentosBO3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_ReclamacionesMultiasistencia_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Reclamaciones Multiasistencia</label>
+        <queue>MX_SB_SAC_ReclamacionesMultiasistencia</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_ServicioConDocumentosBON2_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Servicio Con Documentos  BON2</label>
+        <queue>MX_SB_SAC_ServicioConDocumentosBON2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_ServicioConDocumentos_BON3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Servicio Con Documentos BON3</label>
+        <queue>MX_SB_SAC_ServicioConDocumentos_BON3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_ServicioSinDocumentosBON2_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Servicio Sin Documentos BON2</label>
+        <queue>MX_SB_SAC_ServicioSinDocumentosBON2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_SB_SAC_ServicioSinDocumentosBON3_MX_SB_SAC_CatalogoTipificacion</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Servicio Sin Documentos BON3</label>
+        <queue>MX_SB_SAC_ServicioSinDocumentosBON3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>Nombre Catálogo de tipificación</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Catálogos de tipificaciones</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>MX_SB_SAC_Motivo__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>MX_SB_SAC_Detalle__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>MX_SB_SAC_Subdetalle__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>MX_SB_SAC_InformacionAdicional__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>MX_SB_SAC_DocumentacionRequerida__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.FIRST_NAME</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

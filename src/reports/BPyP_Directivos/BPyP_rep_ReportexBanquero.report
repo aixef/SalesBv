@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.HI001_VisitReport__c$OwnerId$Name</field>
+    </columns>
+    <columns>
+        <field>User.HI001_VisitReport__c$OwnerId$CF001_rb_NombreComercialCliente__c</field>
+    </columns>
+    <columns>
+        <field>User.HI001_VisitReport__c$OwnerId$HI_ls_statusVR__c</field>
+    </columns>
+    <columns>
+        <field>User.HI001_VisitReport__c$OwnerId$CF001_ca_CorreoEnviado__c</field>
+    </columns>
+    <columns>
+        <field>User.HI001_VisitReport__c$OwnerId$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User*User$CR__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>Informe que agrupa los reportes de visita por Banquero</description>
+    <filter>
+        <criteriaItems>
+            <column>User*User$VP_ls_Banca__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Red BPyP</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.HI001_VisitReport__c$OwnerId$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.HI001_VisitReport__c$OwnerId$EG_fm_TipoVisita__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Reportes de Visita por Banquero</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Usuarios_Clientes_y_Reportes_de_Visita__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>User.HI001_VisitReport__c$OwnerId$CreatedDate</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>User.HI001_VisitReport__c$OwnerId$CreatedDate</dateColumn>
+        <interval>INTERVAL_LASTTHISMONTH</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Lista Genérica para múltiples valores del flujo de venta.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>MX_SB_VTS_FiltroCampanaLabel__c</fullName>
+        <description>Label from campaing filtring</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>MX_SB_VTS_FiltroCampanaLabel</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_FiltroCampana__c</fullName>
+        <description>Campos para filtrado del objeto campaing</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>MX_SB_VTS_FiltroCampana</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Oli_Item__c</fullName>
+        <description>Field to Opportunity Line Item</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>MX_SB_VTS_Oli_Item</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Quoli_Item__c</fullName>
+        <description>Field to Quote line Item</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>MX_SB_VTS_Quoli_Item</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Servicio_ID__c</fullName>
+        <description>Identificador Único de Lista de servicios.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Identificador de servicios</inlineHelpText>
+        <label>MX_SB_VTS_Servicio_ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Servicio_NameCompleto__c</fullName>
+        <description>Nombre y valor del servicio para mostrar en pantallas</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Servicio + Nombre</inlineHelpText>
+        <label>MX_SB_VTS_Servicio_NameCompleto</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Servicio_Name__c</fullName>
+        <description>Nombre del servicio Nombre valido del servicio.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Nombre del servicio.</inlineHelpText>
+        <label>MX_SB_VTS_Servicio_Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+	<fields>
+        <fullName>MX_SB_BCT_user_Banquero_Default__c</fullName>
+        <description>Id Salesforce Banquero base al que se asignan las cuentas al no existir un banquero asignado.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Id Salesforce Banquero base al que se asignan las cuentas al no existir un banquero asignado.</inlineHelpText>
+        <label>MX_SB_BCT_user_Banquero_Default</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Type__c</fullName>
+        <description>RecordType for the object
+CP1-- Object Quoly to Oli
+CP2-- Filtro Campaing
+CP3-- Servicios Bandejas
+CP4
+CP5--Id Salesforce Banquero base al que se asignan las cuentas al no existir un banquero asignado.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>RecordType for the object 
+CP1 -- Object Quoly to Oli 
+CP2 -- Filtro Campaing 
+CP3 -- Servicios Bandejas
+CP4 --
+CP5--Id Salesforce Banquero base al que se asignan las cuentas al no existir un banquero asignado.</inlineHelpText>
+        <label>MX_SB_VTS_Type</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>MX_SB_VTS_Generica</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,80 @@
+<apex:page >
+  <apex:stylesheet value="{!$Resource.StyleLinksFinancieros}"/>
+
+  <table id="table1">
+    <tr id="rows1" >
+      <td class="tDBlock">
+      </td>
+      <td class="noticiasFinanciero">
+        <strong>Noticias</strong>
+      </td>
+      <td  class="noticiasFinanciero">
+        <strong>El Financiero</strong>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <a href="http://finanzas.infosel.com/bancomer/news.html">
+            <apex:image id="Noticias" url="{!$Resource.Img_News}" width="100" height="100"/>
+        </a>
+      </td>
+      <td>
+        <a href="http://www.elfinanciero.com.mx">
+            <apex:image id="Financiero" url="{!$Resource.Img_Financiero}" width="100" height="100"/>
+        </a>
+      </td>
+    </tr>
+  </table>
+  <br/>
+  <table class="table2">
+    <tr>
+      <td class="tDBlock">
+      </td>
+      <td class="otrosLinks">
+        <strong>Bolsa de Valores</strong>
+      </td>
+      <td class="otrosLinks">
+        <strong>Banco de México</strong>
+      </td>
+    </tr>
+    <tr>
+    <td></td>
+      <td>
+        <a href="http://www.bmv.com.mx">
+            <apex:image id="BolsaDeValores" url="{!$Resource.Img_BolsaValores}" width="100" height="100"/>
+        </a>
+      </td>
+      <td>
+        <a href="http://www.banxico.org.mx">
+            <apex:image id="BancoDeMexico" url="{!$Resource.Img_BancoMexico}" width="100" height="100"/>
+        </a>
+      </td>
+    </tr>
+  </table>
+  <table class="table2">
+    <tr>
+      <td class="tDBlock">
+      </td>
+      <td class="otrosLinks">
+        <strong><br/>Bloomeberg</strong>
+      </td>
+      <td class="otrosLinks">
+        <strong><br/></strong>
+      </td>
+    </tr>
+    <tr>
+    <td></td>
+      <td>
+        <a href="http://www.bloomberg.com/markets">
+            <apex:image id="Bloomeberg" url="{!$Resource.BPyP_rs_bloomberg}" width="100" height="100"/>
+        </a>
+      </td>
+      <td>
+        <a href="http://www.banxico.org.mx">
+            <br/>
+        </a>
+      </td>
+    </tr>
+  </table>
+</apex:page>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_59173832</developerName>
+        <masterLabel>Encuestas contestadas</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>SurveyInvitation$ResponseStatus</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <columns>
+        <field>SurveyInvitation$MX_SB_SAC_Caso__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>Contiene las encuestas completadas</description>
+    <filter>
+        <criteriaItems>
+            <column>SurveyInvitation$MX_SB_SAC_Caso__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SurveyInvitation$ResponseStatus</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>C</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SurveyInvitation$ResponseStatus</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Encuestas completadas</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>MX_SB_SAC_invitacionEncuesta__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>SurveyInvitation$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Prospecting</fullName>
+        <default>false</default>
+        <label>Prospecting</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>10</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+        <label>Closed Won</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+        <label>Closed Lost</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Objeciones</fullName>
+        <default>false</default>
+        <label>Objeciones</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>15</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Políticas</fullName>
+        <default>false</default>
+        <label>Políticas</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>20</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Cotización</fullName>
+        <default>false</default>
+        <label>Cotización</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>40</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Objeciones Reales</fullName>
+        <default>false</default>
+        <label>Objeciones Reales</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>45</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Venta Autorizada</fullName>
+        <default>false</default>
+        <label>Venta Autorizada</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>80</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Documentación / Solicitud</fullName>
+        <default>false</default>
+        <label>Documentación / Solicitud</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Diagnóstico de necesidades</fullName>
+        <default>false</default>
+        <label>Diagnóstico de necesidades</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospecto</fullName>
+        <default>false</default>
+        <label>Prospecto</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>5</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Promoción</fullName>
+        <default>false</default>
+        <label>Promoción</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>15</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Integración de Carpeta</fullName>
+        <default>false</default>
+        <label>Integración de Carpeta</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>20</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Análisis</fullName>
+        <default>false</default>
+        <label>Análisis</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>35</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Abierta</fullName>
+        <default>false</default>
+        <label>Abierta</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Negociación</fullName>
+        <default>false</default>
+        <label>Negociación</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Autorización de Tarifas</fullName>
+        <default>false</default>
+        <label>Autorización de Tarifas</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>55</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Admisión y Sanción</fullName>
+        <default>false</default>
+        <label>Admisión y Sanción</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>60</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Admisión</fullName>
+        <default>false</default>
+        <label>Admisión</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>55</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Sanción</fullName>
+        <default>false</default>
+        <label>Sanción</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>60</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Liberación</fullName>
+        <default>false</default>
+        <label>Liberación</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>60</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Formalización crédito</fullName>
+        <default>false</default>
+        <label>Formalización crédito</label>
+        <closed>false</closed>
+        <forecastCategory>BestCase</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Propuesta</fullName>
+        <default>false</default>
+        <label>Propuesta</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>30</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Manejo de objeciones</fullName>
+        <default>false</default>
+        <label>Manejo de objeciones</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Integración de información</fullName>
+        <default>false</default>
+        <label>Integración de información</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Formalización</fullName>
+        <default>false</default>
+        <label>Formalización</label>
+        <closed>false</closed>
+        <forecastCategory>BestCase</forecastCategory>
+        <probability>80</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Firmas</fullName>
+        <default>false</default>
+        <label>Firmas</label>
+        <closed>false</closed>
+        <forecastCategory>BestCase</forecastCategory>
+        <probability>85</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Áreas centrales</fullName>
+        <default>false</default>
+        <label>Áreas centrales</label>
+        <closed>false</closed>
+        <forecastCategory>Forecast</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Oferta</fullName>
+        <default>false</default>
+        <label>Oferta</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Contratación</fullName>
+        <default>false</default>
+        <label>Contratación</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>89</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Instalación</fullName>
+        <default>false</default>
+        <label>Instalación</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Afiliación</fullName>
+        <default>false</default>
+        <label>Afiliación</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>91</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Entrega Kits</fullName>
+        <default>false</default>
+        <label>Entrega Kits</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>94</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>En Gestión</fullName>
+        <default>false</default>
+        <description>Etapa para las oportunidades de BPyP  que están gestionándose por los divisionales.</description>
+        <label>En Gestión</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Dispersión</fullName>
+        <default>false</default>
+        <label>Dispersión</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>97</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementación</fullName>
+        <default>false</default>
+        <label>Implementación</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementación Fase 1</fullName>
+        <default>false</default>
+        <label>Implementación Fase 1</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementación Fase 2</fullName>
+        <default>false</default>
+        <label>Implementación Fase 2</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>91</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementación Fase 3</fullName>
+        <default>false</default>
+        <label>Implementación Fase 3</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>92</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementación Fase 4</fullName>
+        <default>false</default>
+        <label>Implementación Fase 4</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>93</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementación Fase 5</fullName>
+        <default>false</default>
+        <label>Implementación Fase 5</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>94</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementación Fase 6</fullName>
+        <default>false</default>
+        <label>Implementación Fase 6</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>95</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Activación</fullName>
+        <default>false</default>
+        <label>Activación</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Producto activado</fullName>
+        <default>false</default>
+        <label>Producto activado</label>
+        <closed>false</closed>
+        <forecastCategory>Forecast</forecastCategory>
+        <probability>95</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Sanción BHI</fullName>
+        <default>false</default>
+        <label>Sanción BHI</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>20</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Avalúo</fullName>
+        <default>false</default>
+        <label>Avalúo</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>40</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Notaría</fullName>
+        <default>false</default>
+        <label>Notaría</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>60</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Firma / Desembolso</fullName>
+        <default>false</default>
+        <label>Firma / Desembolso</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>80</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Producto en uso</fullName>
+        <default>false</default>
+        <label>Producto en uso</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Desembolso</fullName>
+        <default>false</default>
+        <label>Desembolso</label>
+        <closed>false</closed>
+        <forecastCategory>Forecast</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Contratación y Disposición</fullName>
+        <default>false</default>
+        <label>Contratación y Disposición</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>89</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Disposición</fullName>
+        <default>false</default>
+        <description>Etapa de disposición de Hipotecaria y Promotor</description>
+        <label>Disposición</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>95</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Crédito dispuesto</fullName>
+        <default>false</default>
+        <label>Crédito dispuesto</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Originación</fullName>
+        <default>false</default>
+        <label>Originación</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>15</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Desembolso PyME</fullName>
+        <default>false</default>
+        <label>Desembolso PyME</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospección</fullName>
+        <default>false</default>
+        <label>Prospección</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Condicionada</fullName>
+        <default>false</default>
+        <label>Condicionada</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>30</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Solicitud Ingresada</fullName>
+        <default>false</default>
+        <label>Solicitud Ingresada</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>40</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Aprobada</fullName>
+        <default>false</default>
+        <label>Aprobada</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>60</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Cerrada Ganada</fullName>
+        <default>false</default>
+        <label>Cerrada Ganada</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Descartada / Rechazada</fullName>
+        <default>false</default>
+        <label>Descartada / Rechazada</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Admisión Jurídico</fullName>
+        <default>false</default>
+        <label>Admisión Jurídico</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>40</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Admisión Promotor</fullName>
+        <default>false</default>
+        <label>Admisión Promotor</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>70</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Formalización Jurídico</fullName>
+        <default>false</default>
+        <label>Formalización Jurídico</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>65</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Formalización Promotor</fullName>
+        <default>false</default>
+        <label>Formalización Promotor</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>70</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Habilitación CSC</fullName>
+        <default>false</default>
+        <label>Habilitación CSC</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Habilitación Promotor</fullName>
+        <default>false</default>
+        <label>Habilitación Promotor</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>95</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacto</fullName>
+        <default>false</default>
+        <label>Contacto</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+</StandardValueSet>

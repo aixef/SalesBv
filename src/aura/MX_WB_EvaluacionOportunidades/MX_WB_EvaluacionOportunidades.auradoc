@@ -1,0 +1,50 @@
+<aura:documentation>
+	<aura:description>
+    	<p><b>NAME</b>MX_WB_EvaluacionOportunidades</p>
+        <p><b>DESCRIPTION</b>This component shows in a DataTable the Opportunities marked as Closed and
+        		leads the user to the poll</p>
+        <p><b>ATTRIBUTES</b>
+            <ul>
+                <li><p><b>oppRecords</b>A list of records retrieved by the Apex Controller</p></li>
+                <li><p><b>oppRecordsFiltered</b>A list of records filtered by Name, Folio or Closed Stage</p></li>
+                <li><p><b>filterByName</b>A Text Input used to filter oppRecords by the property Name</p></li>
+                <li><p><b>filterByFolio</b>A Text Input used to filter oppRecords by the property Folio</p></li>
+                <li><p><b>filterByType</b>A Select Input used to filter oppRecords by the property StageName</p></li>
+
+                <li><p><b>openModal</b>A Boolean flag whose tells if the Modal is shown or not</p></li>
+                <li><p><b>columns</b>A List of descriptions for the fields to be shown in the DataTable</p></li>
+                <li><p><b>keyField</b>Required for better performance. Associates each row with a unique ID.</p></li>
+                <li><p><b>sortedDirection</b>Specifies is the sorting is Ascendent or Descendent</p></li>
+                <li><p><b>sortedBy</b>Required for better performance. Associates each row with a unique ID.</p></li>
+                <li><p><b>defaultSortDirection</b>Specifies de default sirtong direction</p></li>
+            </ul>
+        </p>
+
+        <p><b>HANDLERS</b>
+            <ul>
+                <li><p><b>saveDisabled</b> type: MX_WB_EvaluacionCalidadEvent description: Handles when the event has been fired in the child component and enables or disabled the "buttonSave" button</p></li>
+                <li><p><b>init</b> Fires when the component is ready and loads the records list calling the helper method getOpportunities</p></li>
+            </ul>
+        </p>
+
+        <p><b>CONTROLLER METHODS</b>
+            <ul>
+                <li><p><b>doInit</b> Calls the helper method getOportunities</p></li>
+                <li><p><b>filter</b> Fires when filterByName, filterByFolio or filterByType change on their inputs,
+                        it analizes the records that fulfill the user entries and store them in the oppRecordsFiltered attribute</p></li>
+                <li><p><b>closeModal</b> Fires when its called by the handler "saveDisabled" it destroys the modal content and hide the modal</p></li>
+                <li><p><b>handleRowAction</b> Each row in the DataTable have a Lightning ButtonIcon, when clicked it shows the modal and creates an instance of MX_WB_EvaluacionCalidad component in the modal content</p></li>
+                <li><p><b>updateColumnSorting</b> Fires when the user click on the column name to change the sorting mode in the Lightning DataTable</p></li>
+            </ul>
+        </p>
+
+        <p><b>HELPER METHODS</b>
+            <ul>
+                <li><p><b>getOpportunities</b> Creates a request to the controller and initializes the inputs for the DataTable</p></li>
+                <li><p><b>sortData</b> Used to Sort the data, called by controller method "updateColumnSorting"</p></li>
+                <li><p><b>sortBy</b> Determines the field and the direction when sorting, used by helper method "sortData"</p></li>
+                <li><p><b>getColumnWidths</b> Helps to calculate the width and distribution of the columns for the DataTable</p></li>
+            </ul>
+        </p>
+    </aura:description>
+</aura:documentation>

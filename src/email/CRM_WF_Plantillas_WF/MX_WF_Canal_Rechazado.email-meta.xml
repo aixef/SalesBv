@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Canal Rechazado</name>
+    <style>formalLetter</style>
+    <subject>El canal con folio {!CRM_WF_Artes__c.Name} fue rechazado</subject>
+    <textOnly>Por medio de la presente te informamos que el Canal con folio {!CRM_WF_Artes__c.Name} fue rechazado con los siguientes comentarios.
+
+Comentarios: {!ApprovalRequest.Comments}
+
+
+Para mayor detalle favor de dar clic en la siguiente liga:
+
+Registro de Canal en Salesforce</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

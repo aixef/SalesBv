@@ -1,0 +1,6 @@
+<design:component>
+
+    <design:attribute name="comercio_seleccionado" label="Comercios seleccionados" />
+    <design:attribute name="grupo_comercial" label="Grupo comercial" />
+    
+</design:component>

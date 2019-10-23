@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>CRM_WF_Cartas_Origen__c</entityName>
+    <fieldName>CRM_WF_Etapa_Carta_Custodia__c</fieldName>
+    <masterLabel>WF CARTAS ORIGEN</masterLabel>
+    <recordTypeName>CRM_WF_Carta_Origen</recordTypeName>
+</PathAssistant>

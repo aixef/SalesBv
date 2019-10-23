@@ -1,0 +1,8 @@
+<aura:documentation>
+    <aura:description>
+        <code>c:MX_PyME_GenCampaigns_Cmp</code>The component shows all available products in the related campaign and an opportunity is generated.
+    </aura:description>
+    <aura:example name="ProductPicklist" ref="c:MX_PyME_GenCampaigns_Cmp" label="Products Component">
+        <p>Products Component <code>c:MX_PyME_GenCampaigns_Cmp</code>.</p>
+    </aura:example>
+</aura:documentation>

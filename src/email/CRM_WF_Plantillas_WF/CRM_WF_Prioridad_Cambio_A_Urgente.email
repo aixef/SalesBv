@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" face="arial"><span style="font-size: 12pt;"></span></font>Por medio de la presente le comunicamos que la Campaña <b>{!Campaign.Name}</b>:<div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">A cambiado su prioridad <font size="3">a:</font><b> <br></b></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><b><br></b></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" align="center"><font size="5" color="#FF0000"><b>{!Campaign.CRM_WF_Prioridad_del__c} <br></b></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;" align="center"><b><font size="3" color="#FF0000"><font color="#FF0000"><br></font></font></b></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Para mayor detalle favor de dar clic en el siguiente link:</div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br><a href="{!Campaign.Link}">{!Campaign.Link}</a><br><br><a href="{!CRM_WF_ReVeCa__c.Link}"><i></i></a></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

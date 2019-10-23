@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Parámetros para el tipo de búsqueda de Pólizas a Clipert</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>DescripcionCampos__c</fullName>
+        <description>Descripción de los campos que se requiere por tipo de método (tal cual lo pide el json para el body) separados por coma ejemplo (fechaInic, fechaFin)</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>DescripcionCampos</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Metodo__c</fullName>
+        <description>Descripción del método que permitirá la ejecución del WS a clipert</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Metodo</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>MX_SB_SAC_ParametrosPoliza</label>
+    <visibility>Public</visibility>
+</CustomObject>

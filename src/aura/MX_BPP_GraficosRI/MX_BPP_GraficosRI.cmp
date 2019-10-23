@@ -1,0 +1,32 @@
+<!--
+*Desarrollado por:       Indra
+*Autor:                  Ricardo Almanza
+*Proyecto:               BPyP
+*Descripción:            Componente con grafico dinamico para RI
+*Cambios (Versiones)
+********************************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+********************************************************************************************************
+*1.0    | 05-06-2018     |    Ricardo Almanza      |           Creación   
+*1.1    | 05-20-2019     |    Hugo Carrillo        |  Correcciones de Code Smell identificados por Sonar
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="MX_BPP_GraficosRI">
+  <ltng:require scripts="{!$Resource.JqueryLightning}"  />
+  <ltng:require styles="{!$Resource.SLDS_MAXBBVA + '/assets/styles/salesforce-lightning-design-system-ltng.css'}" />
+  <ltng:require scripts="{!join(',', 
+        $Resource.chartjsalm + '/chartjs/Chart.bundle.js',
+        $Resource.chartjsalm + '/chartjs/Chart.bundle.min.js',
+         $Resource.chartjsalm  + '/chartjs/Chart.js',
+           $Resource.chartjsalm  + '/chartjs/Chart.min.js'
+                               )}" afterScriptsLoaded="{!c.generateChart}"/>
+    <aura:attribute name="wrpObj" type="Object"/>
+    <aura:attribute name="RISelect" type="String"/>
+    <aura:attribute name="chartHeight" type="Integer"/>
+    <aura:attribute name="Titulo" type="String" description="Titulo" default='5'/>
+    <div class="slds-grid slds-wrap slds-grid_pull-padded slds-p-around_large">
+        <div class="slds-p-horizontal_small slds-size_2-of-12 slds-medium-size_2-of-12 slds-large-size_2-of-12"></div>
+        <div class="slds-p-horizontal_small slds-size_8-of-12 slds-medium-size_8-of-12 slds-large-size_8-of-12 slds-p-around_xx-large">
+            <canvas class="c2" aura:id="myChartt2" style="{!'height:'+v.chartHeight+'px !important;'}"></canvas>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Envío de correos a Supervisores cuando un caso es escalado a Back Office</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MX_SB_SAC_MembreteEnviosSac</letterhead>
+    <name>Plantilla de Email SAC</name>
+    <style>formalLetter</style>
+    <subject>Notificación de folio asignado</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

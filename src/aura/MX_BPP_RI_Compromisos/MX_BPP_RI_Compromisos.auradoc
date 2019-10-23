@@ -1,0 +1,10 @@
+<aura:documentation>
+	<aura:description>
+        <p><code>c:MX_BPP_RI_Compromisos</code> es un componente que muestra una lista de oportunidades</p>
+    </aura:description>
+	<aura:example name="BPP RI Oportunidad" ref="c:MX_BPP_RI_Compromisos" label="Opp BPP RI">
+		<p>Este ejemplo proporciona la lista de oportunidades que pueden ser convertidas en compromiso.</p>
+        <p>Las oportunidades pueden ser filtradas por fecha y a través de un componente hijo, pueden filtrarse
+           igualmente por otros campos dependientes.</p>
+	</aura:example>
+</aura:documentation>

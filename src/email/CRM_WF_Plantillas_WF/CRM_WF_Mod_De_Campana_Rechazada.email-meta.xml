@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Modificación de Campaña rechazada</name>
+    <style>formalLetter</style>
+    <subject>La Modificación de Campaña {!CRM_WF_Modificacion__c.Name} ha sido rechazada</subject>
+    <textOnly>Por medio de la presente le informamos que la Modificación a Campaña {!CRM_WF_Modificacion__c.Name} ha sido rechazada con los siguientes comentarios:
+
+Comentarios: {!ApprovalRequest.Comments}
+
+
+Para mayor detalle favor de dar clic en la siguiente liga:
+
+Detalle Modificación en Campaña</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

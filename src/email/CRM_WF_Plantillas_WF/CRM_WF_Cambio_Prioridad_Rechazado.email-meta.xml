@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Cambio de Prioridad Rechazado</name>
+    <style>formalLetter</style>
+    <subject>La prioridad de la Campaña {!Campaign.Name} permanece como Normal</subject>
+    <textOnly>Por medio de la presente se le informa que la prioridad de  la Campaña {!Campaign.Name} permanece como Normal
+
+Para ver el detalle favor de dar clic en el siguiente vínculo:
+
+{!Campaign.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

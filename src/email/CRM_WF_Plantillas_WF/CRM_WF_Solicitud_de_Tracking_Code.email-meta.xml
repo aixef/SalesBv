@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación Workflow, se envía para la solicitud de Tracking Code del Brief</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Solicitud de Tracking Code</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de Tracking Code - Folio {!CRM_WF_Brief__c.Name} - {!CRM_WF_Artes__c.Name}. FIC {!CRM_WF_Brief__c.CRM_WF_FIC__c}</subject>
+    <textOnly>Por medio de la presente solicitamos de su apoyo para la creación del tracking code para la campaña {!CRM_WF_Brief__c.CRM_WF_Campana_Brief__c} con los siguientes datos:
+
+Folio de Campaña (FIC): {!CRM_WF_Brief__c.CRM_WF_FIC__c}
+Área Solicitante: {!CRM_WF_Brief__c.CRM_WF_Area_Solicitante__c}
+Journey: {!CRM_WF_Brief__c.GBL_WF_Solicitante__c}
+Fecha de Lanzamiento de Campaña: {!CRM_WF_Brief__c.CRM_WF_Fecha_De_Campana__c}
+
+
+Datos Del Arte/Versión:
+
+Nombre de la Versión/Arte: {!CRM_WF_Artes__c.CRM_WF_Nombre_De_La_Version_Arte__c}
+Folio de la Versión/Arte: {!CRM_WF_Artes__c.Name}
+Producto: {!CRM_WF_Artes__c.CRM_WF_Producto__c}{!CRM_WF_Artes__c.CRM_WF_Producto__c}
+Subproducto: {!CRM_WF_Artes__c.CRM_WF_Subproducto__c}
+Agencia Creativa: {!CRM_WF_Artes__c.GBL_WF_Agencia_Creativa__c}
+Agencia de Medios: {!CRM_WF_Artes__c.GBL_WF_Agencia_De_Medios__c}
+¿La versión/arte es para campaña masiva?: {!CRM_WF_Artes__c.CRM_WF_El_Material_Es_Parte__c}
+Objetivo de la versión: {!CRM_WF_Artes__c.CRM_WF_Objetivo_De_La_Version__c}
+Tipo de canal: {!CRM_WF_Artes__c.CRM_WF_Tipo_de_Canal__c}
+Canal: {!CRM_WF_Artes__c.CRM_WF_Canal__c}
+Producto: {!CRM_WF_Artes__c.CRM_WF_Producto__c}{!CRM_WF_Artes__c.CRM_WF_Producto__c}
+Subproducto: {!CRM_WF_Artes__c.CRM_WF_Subproducto__c}
+Audiencia versión/arte: {!CRM_WF_Artes__c.CRM_WF_Audiencia__c}
+Mensaje principal: {!CRM_WF_Artes__c.CRM_WF_Mensaje_Principal__c}
+Restricción o condicionantes: {!CRM_WF_Artes__c.CRM_WF_Restriccion_O_Condicionantes__c}
+¿El copy requiere datos variables?: {!CRM_WF_Artes__c.CRM_WF_Copy_Requiere_Datos_Variables__c}
+Enlista los datos variables (si aplica): {!CRM_WF_Artes__c.CRM_WF_Enlista_Los_Datos_Variables__c}
+Texto de referencia con datos variables (si aplica): {!CRM_WF_Artes__c.CRM_WF_Texto_Incluyendo_Datos_Variables__c}
+Legales: {!CRM_WF_Artes__c.CRM_WF_Legales__c}
+Links para descarga de material: {!CRM_WF_Artes__c.CRM_WF_Links_Para_Descarga_De_Material__c}
+URL call to action: {!CRM_WF_Artes__c.CRM_WF_Link_Call_To_Action__c}
+URLS secundarias:
+Open Rate: {!CRM_WF_Artes__c.CRM_WF_Open_Rate__c}
+CTOR: {!CRM_WF_Artes__c.CRM_WF_CTOR__c}
+
+Datos de BRIEF:
+
+Número de Folio Brief : {!CRM_WF_Brief__c.Name}
+Fecha de Solicitud: {!CRM_WF_Brief__c.CRM_WF_Fecha_Solicitud_Brief__c}
+Artes Solicitados: {!CRM_WF_Brief__c.CRM_WF_Numero_De_Artes__c}
+KPIs de la campaña: {!CRM_WF_Brief__c.CRM_WF_Kpis_Apertura__c}
+KPI digital de la campaña: {!CRM_WF_Brief__c.CRM_WF_Kpi_Con_Los_Que_Se_Medira_Envio__c}
+¿Cuentas con landing page taggeada?: {!CRM_WF_Brief__c.CRM_WF_Cuentas_Con_Pagina_Tageada__c}
+¿Porqué no está taggeada? (si aplica): {!CRM_WF_Brief__c.CRM_WF_Porque__c}
+Audiencia (Target): {!CRM_WF_Brief__c.CRM_WF_Audiencia_Target__c}
+Descripción del Mensaje Central: {!CRM_WF_Brief__c.CRM_WF_Descripcion_del_Mensaje_Central__c}
+Vigencia de la promoción/oferta: {!CRM_WF_Brief__c.CRM_WF_Vigencia_De_La_Promocion_Oferta__c}
+Mandatorio adicional: {!CRM_WF_Brief__c.CRM_WF_Mandatorio_Adicional__c}
+Canales de comunicación: {!CRM_WF_Brief__c.CRM_WF_Canales_de_Comunicacion__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

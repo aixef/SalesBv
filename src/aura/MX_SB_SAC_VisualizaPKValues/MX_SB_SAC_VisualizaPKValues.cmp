@@ -1,0 +1,17 @@
+<aura:component implements="lightning:availableForFlowActions,force:lightningQuickAction,lightning:availableForFlowScreens,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="pkValue" type="String" access="global"/>
+
+    <lightning:recordEditForm
+        recordId="{!v.recordId}"
+        objectApiName="Case">
+        
+        <lightning:messages />
+        
+        <lightning:inputField fieldName="MX_SB_SAC_Detalle__c" aura:id="detalle" onchange="{!c.handleChange}"/>
+        <div id="ocultar">
+            <lightning:inputField fieldName="Reason" disable="false"/>
+            <lightning:inputField fieldName="MX_SB_SAC_ProductosParaVenta__c" disable="false" />
+        </div>
+    </lightning:recordEditForm>
+</aura:component>

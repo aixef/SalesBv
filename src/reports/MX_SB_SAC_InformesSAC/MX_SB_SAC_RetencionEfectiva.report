@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_18753039</developerName>
+        <masterLabel>Ejecutadas</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FK_CUSTENT_OWNER_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Cambio Con Afectación Primas Con DOC BO3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cambio Sin Afectación Primas Con DOC BO3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cancelación con documentos BO2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cancelación con documentos BO3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Devolución con documentos BO3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Servicio Con Documentos  BON2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Incidencias BON3</sourceValue>
+            </sourceValues>
+            <value>Con documentos</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Cambio Con Afectación Primas Sin DOC BO3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cambio Sin Afectación Primas Sin DOC BO3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cancelación sin documentos BO2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Devolución sin documentos BO3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Servicio Sin Documentos BON2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Asael Perez</sourceValue>
+            </sourceValues>
+            <value>Sin documentos</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_66067417</developerName>
+        <masterLabel>Ejecutados dentro de NS</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Case.MX_SB_SAC_DentroNS__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>SI</sourceValue>
+            </sourceValues>
+            <value>Si</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>NO</sourceValue>
+            </sourceValues>
+            <value>No</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_3148376</developerName>
+        <masterLabel>Folios operados por:</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Case.MX_SB_SAC_FolioOperadoporBO__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Si</sourceValue>
+            </sourceValues>
+            <value>BO</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>No</sourceValue>
+            </sourceValues>
+            <value>CCC</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Donut</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>REASON</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>true</showPercentage>
+        <showTotal>true</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case.MX_SB_SAC_FaltaDocInffaltante__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>Informe que mostrara la información por semana de cada una de las tipificaciones</description>
+    <filter>
+        <criteriaItems>
+            <column>REASON</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Cancelación,Retención</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Week</dateGranularity>
+        <field>CREATED_DATEONLY</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_18753039</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>REASON</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_3148376</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>Retención efectiva</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList@Case.MX_SB_SAC_Catalogotipificacion__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

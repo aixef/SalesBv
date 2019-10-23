@@ -1,0 +1,169 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes" controller="GBL_DataTable_Ctrl" access="global">
+    <!--GBL Attributes-->
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="functionTable" type="String" access="global"/>
+    <aura:attribute name="showTitle" type="boolean" default="false" access="global"/>
+    <aura:attribute name="showRecords" type="Integer" default="4" access="global"/>
+    <aura:attribute name="nameColumn" type="List"/>
+    <aura:attribute name="ltsData" type="List"/>
+    <aura:attribute name="ltsTempData" type="List"/>
+    <aura:attribute name="page" type="integer" default="1" description="using for store page Number"/>
+    <aura:attribute name="pages" type="integer" description="using for store All Pages page Number"/>
+    <aura:attribute name="resultResponse" type="boolean" default="true"/>
+    <aura:attribute name="errorMessage" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- -->
+    <!--Cash Management Attributes-->
+    <aura:attribute name="BVariable" type="String" 
+                    description="Used to store String variables for Dynamic SOQL or any other use depending on the requirement" />
+    <aura:attribute name="NivelMax" type="String" 
+                    description="Used to store String variables for Dynamic SOQL or any other use depending on the requirement" />
+    <aura:attribute name="VTitle" type="String" 
+                    description="Used to store String variables for Dynamic SOQL or any other use depending on the requirement" />
+    <aura:attribute name="PrefixRole" type="String" 
+                    description="Used to store the UserRole of the user logged in." />
+    <aura:attribute name="CashOn" type="Boolean" default="false"
+                    description="Used to isolate the CashManagement functionality."/>
+    <aura:attribute name="CashOnTams" type="Boolean" default="false"
+                    description="Used to isolate the CashManagement functionality."/>
+    <aura:attribute name="LoggedInF" type="Boolean" default="false"
+                    description="Flag"/>
+    <aura:attribute name="ValidStackTitle" type="Boolean" default="true"
+                    description="Flag"/>
+    <aura:attribute name="StackInit" type="String[]" default="['GPO','UG','CR','DIV','BEYG']" 
+                    description="Used to control the level of acces of the user logged in"/>
+    <aura:attribute name="StackStorage" type="String[]" default="" 
+                    description="Used to control the level of acces of the user logged in"/>
+    <aura:attribute name="StackTitle" type="String[]" default="" 
+                    description="Used to control the level of acces of the user logged in"/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="Spinner" type="Boolean" default="false" 
+                    description ="Flag"/>
+    <aura:attribute name="TamSolucion" type="String" default="" 
+                    description="Variable TamSolucion obtained from the component CH_AP_cmp_FichaTransaccional"/>
+    <aura:attribute name="TamFamilia" type="String" default="" 
+                    description="Variable TamFamilia obtained from the component CH_AP_cmp_FichaTransaccional"/>
+    <aura:attribute name="TamProducto" type="String" default="" 
+                    description="Variable TamProducto obtained from the component CH_AP_cmp_FichaTransaccional"/>
+    <aura:attribute name="TamTDato" type="String" default="" 
+                    description="Variable TamTDato obtained from the component CH_AP_cmp_FichaTransaccional"/>
+    <aura:handler name="change" value="{!v.BVariable}" action="{!c.reloadTable}"/>
+    <aura:handler name="change" value="{!v.PrefixRole}" action="{!c.reloadTable}"/>
+    <aura:handler name="change" value="{!v.TamSolucion}" action="{!c.reloadTable}"/>
+    <aura:handler name="change" value="{!v.TamFamilia}" action="{!c.reloadTable}"/>
+    <aura:handler name="change" value="{!v.TamProducto}" action="{!c.reloadTable}"/>
+    <aura:handler name="change" value="{!v.TamTDato}" action="{!c.reloadTable}"/>
+    <!-- -->
+    <!--PyME Attributes-->
+    <aura:attribute name="PyME" type="Boolean" default="false" description="Used to activate modal component in PyME DataTables."/>
+    <aura:attribute name="PyMEFlag" type="Boolean" default="false" description="Used to determinate if component is working on PyME."/>
+    <aura:attribute name="PyMEFlagProcess" type="Boolean" default="false" description="Used to isolate the PyME functionality."/>
+    <aura:attribute name="listParentData" type="Object" description="Parameter of PyME Modal DataTable component"/>
+    <aura:attribute name="numContract" type="String" description="Used to get string value in PyME process"/>
+    <aura:attribute name="isActive" type="Boolean" default="false" required="false" description="Activate PyME functionality on Modal component" />
+
+	<!-- -->
+    <aura:if isTrue="{!v.resultResponse}">
+        <article class="slds-card">
+            <aura:if isTrue="{!v.showTitle}">
+                <div class="slds-card__header slds-grid">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                        <div class="slds-media__body slds-text-heading_medium">
+                            <h3 class="slds-text-body_small slds-truncate">
+                                {!v.functionTable}
+                            </h3>
+                        </div>
+                    </header>
+                </div>
+            </aura:if>
+            <div class="slds-card__body">
+                <aura:if isTrue="{!v.Spinner}">
+                    <aura:if isTrue="{!v.CashOn}">
+                        <lightning:spinner variant="brand"  size="large" />
+                    </aura:if>
+                </aura:if>
+                <table class="slds-table slds-table_fixed-layout slds-table_bordered slds-table_cell-buffer slds-border_left slds-border_right slds-table_striped slds-no-row-hover">
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <aura:iteration items="{!v.nameColumn}" var="column">
+                                <th scope="col">
+                                    <div class="slds-truncate" title="{!column}">{!column}</div>
+                                </th>
+                            </aura:iteration>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.ltsTempData}" var="row">
+                            <tr>
+                                <aura:iteration items="{!row}" var="column">
+                                    <th scope="row">
+                                        <div class="slds-truncate" title="{!column[0]}">
+                                            <aura:if isTrue="{!v.CashOn}">
+                                                <aura:if isTrue="{!column[1] != null }">
+                                                    <ui:outputURL label="{!column[0]}" title="{!column[0]}" click="{!c.goNavigation}"/>
+                                                    <aura:set attribute="else">
+                                                        <div class="slds-truncate" title="{!column[0]}">{!column[0]}</div>
+                                                    </aura:set>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{!and(!v.CashOn,!v.PyME)}">
+                                                <aura:if isTrue="{!column[1] != null }">
+                                                    <a href="{!'/lightning/r/'+ column[2] + '/' + column[1] + '/view'}" target="_blank">{!column[0]}</a>
+                                                    <aura:set attribute="else">
+                                                        <div class="slds-truncate" title="{!column[0]}">{!column[0]}</div>
+                                                    </aura:set>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{!v.PyME}">
+                                                <aura:if isTrue="{!column[1] != null }">
+                                                    <ui:outputURL label="{!column[0]}" aura:id="detailURL" title="{!column[0]}" click="{!c.getFlag}" />
+                                                    <aura:set attribute="else">
+                                                        <div class="slds-truncate" title="{!column[0]}">{!column[0]}</div>
+                                                    </aura:set>
+                                                </aura:if>
+                                            </aura:if>
+                                        </div>
+                                    </th>
+                                </aura:iteration>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+            <div  align="right">
+                <!--Cash Management-->
+                <aura:if isTrue="{!v.CashOnTams}">
+                    <div class="slds-form-element__control slds-align--absolute-center">
+                        <button onclick="{!c.goNavigationBack}" class="slds-button slds-button--neutral">
+                            Regresar Nivel Anterior
+                        </button>
+                    </div>
+                </aura:if>
+                <!--Cash Management-->
+                Página &nbsp; {!v.page} / {!v.pages} &nbsp;
+                <div class="slds-button-group" role="group">
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled">
+                        <lightning:buttonIcon iconName="utility:left" variant="bare" size="medium" alternativeText="Página anterior" iconClass="dark" disabled="{!v.page == 1}" onclick="{! c.Previous }"/>
+                    </button>
+                    <button class="slds-button slds-button_icon slds-button_icon-border-filled">
+                        <lightning:buttonIcon iconName="utility:right" variant="bare" size="medium" alternativeText="Página siguiente" iconClass="dark" disabled="{!v.page == v.pages}" onclick="{! c.Next }"/>
+                    </button>
+                </div>
+            </div>
+        </article>
+        <aura:set attribute="else">
+            <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                <span class="slds-assistive-text">warning</span>
+                <span class="slds-icon_container slds-icon-utility-warning slds-m-right_x-small" title="Error">
+                    <lightning:icon iconName="utility:warning" size="x-small"/>
+                </span>
+                <h2>{!v.errorMessage}
+                </h2>
+            </div>
+        </aura:set>
+    </aura:if>
+		<div aura:id="component2">
+        	<!--<c:MX_PyME_MdalDataTable_CMP noContract="{!v.numContract}" idValue="{!v.BVariable}" isActive = "{!v.PyMEFlag}" listChildData = "{!v.listParentData}"  />-->
+        </div>
+</aura:component>

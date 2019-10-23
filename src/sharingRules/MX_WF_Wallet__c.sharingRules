@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>MX_WF_Wallet_puede_ver_todas_las_promociones_WALLET</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Wallet puede ver todas las promociones WALLET</label>
+        <sharedTo>
+            <role>MX_WF_Wallet</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value>a</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>MX_WF_Asesores_comerciales_comparten_con_Adquirente</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Asesores comerciales comparten con Adquirente</label>
+        <sharedTo>
+            <role>CRM_WF_Squad_Adquirente</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>MX_WF_Asesor_Comercial</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

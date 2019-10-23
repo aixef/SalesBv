@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign.CRM_WF_FIC__c</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_NAME</field>
+    </columns>
+    <columns>
+        <field>CAMPAIGN_STATUS</field>
+    </columns>
+    <columns>
+        <field>Campaign.CRM_WF_Requiere_Brief__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.CRM_WF_Numero_de_Briefs__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>Campañas que están en VoBo Carta y/o Brief y no lo requieren</description>
+    <filter>
+        <criteriaItems>
+            <column>Campaign.CRM_WF_Requiere_Brief__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>No</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.CRM_WF_Requiere_Carta_Origen__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>No</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CAMPAIGN_STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Vo.Bo. Carta y/o Brief</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.CRM_WF_Area_Solicitante__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>VoBo Cartay/oBrief y no lo requiere</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CampaignList</reportType>
+    <scope>orgAll</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación Workflow, se envía como solicitud de aprobación del Brief</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Aprobación Brief JM</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de Arte - Brief - Folio {!CRM_WF_Brief__c.Name} - {!CRM_WF_Artes__c.Name}. FIC {!CRM_WF_Brief__c.CRM_WF_FIC__c}</subject>
+    <textOnly>Solicitud de Aprobación Brief
+
+Folio de Campaña (FIC): {!CRM_WF_Brief__c.CRM_WF_FIC__c}
+Nombre de la Campaña:{!CRM_WF_Brief__c.CRM_WF_Campana_Brief__c}
+
+Datos de BRIEF:
+
+Número de Folio Brief : {!CRM_WF_Brief__c.Name}
+Fecha de Solicitud: {!CRM_WF_Brief__c.CRM_WF_Fecha_Solicitud_Brief__c}
+Fecha de Lanzamiento de Campaña: {!CRM_WF_Brief__c.CRM_WF_Fecha_De_Campana__c}
+Área Solicitante: {!CRM_WF_Brief__c.CRM_WF_Area_Solicitante__c}
+Solicitante: {!CRM_WF_Brief__c.GBL_WF_Solicitante__c}
+Artes Solicitados: {!CRM_WF_Brief__c.CRM_WF_Numero_De_Artes__c}
+KPIs de la campaña: {!CRM_WF_Brief__c.CRM_WF_Kpis_Apertura__c}
+KPI digital de la campaña: {!CRM_WF_Brief__c.CRM_WF_Kpi_Con_Los_Que_Se_Medira_Envio__c}
+¿Cuentas con landing page taggeada?: {!CRM_WF_Brief__c.CRM_WF_Cuentas_Con_Pagina_Tageada__c}
+¿Porqué no está taggeada? (si aplica): {!CRM_WF_Brief__c.CRM_WF_Porque__c}
+Audiencia (Target): {!CRM_WF_Brief__c.CRM_WF_Audiencia_Target__c}
+Descripción del Mensaje Central: {!CRM_WF_Brief__c.CRM_WF_Descripcion_del_Mensaje_Central__c}
+Vigencia de la promoción/oferta: {!CRM_WF_Brief__c.CRM_WF_Vigencia_De_La_Promocion_Oferta__c}
+Mandatorio adicional: {!CRM_WF_Brief__c.CRM_WF_Mandatorio_Adicional__c}
+Canales de comunicación: {!CRM_WF_Brief__c.CRM_WF_Canales_de_Comunicacion__c}
+
+Canal: {!CRM_WF_Artes__c.RecordType}
+Folio de la Versión/Arte: {!CRM_WF_Artes__c.Name}
+Detalle de Canal: {!CRM_WF_Artes__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

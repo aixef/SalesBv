@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<table border="0" cellpadding="5" width="600" cellspacing="5" height="400"><tbody><tr valign="top" height="50"><td teditid="c1r1" aeditid="c1r1" locked="0" style="background-color: rgb(255, 255, 255); font-size: 12pt;">Estimad@&nbsp;{!Case.Account},</td></tr><tr valign="top" height="300"><td teditid="c1r2" aeditid="c1r2" locked="0" style="background-color: rgb(255, 255, 255); font-size: 12pt;"><div><font face="arial">Seguros BBVA Bancomer agradece su preferencia. Le informamos que el día de hoy&nbsp;{!Case.CreatedDate}</font>, se adjunta el documento para inicio de su trámite correspondiente a:&nbsp;<font face="arial">{!Case.Reason}</font>&nbsp;y fue atendido</div><div><font face="arial">exitosamente con el folio {!Case.CaseNumber}.</font></div><div><font face="arial"><br></font></div><div><font face="arial"><div>Por favor, ayúdenos a contestar la siguiente encuesta de la atención proporcionada:</div><div>“liga de encuesta”</div><div>Para cualquier duda relacionada a su solicitud, favor de comunicarse a nuestra línea de atención a Clientes.</div></font></div></td></tr></tbody></table>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

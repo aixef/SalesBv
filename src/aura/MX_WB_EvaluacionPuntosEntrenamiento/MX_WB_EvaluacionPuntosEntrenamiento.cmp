@@ -1,0 +1,24 @@
+<aura:component >
+    <aura:attribute name="lstPuntosEntrenamiento" type="List"/>
+    <aura:attribute name="idConcepto" type="String"/>
+
+	<aura:registerEvent name="notifyConcept" type="c:MX_WB_PuntosEntrenamientoEvent"/>
+
+    <fieldset class="slds-form-element">
+        <label class="slds-form-element__label" for="text-input-id-1">Seleccione uno o más puntos de entrenamiento</label>
+        <div class="slds-form-element__control">
+            <ul class="checkbox-group" >
+                <aura:iteration items="{!v.lstPuntosEntrenamiento}" var="obj">
+                    <li>
+                        <span class="slds-button slds-checkbox_button">
+                            <input type="checkbox" id="{!obj.label}" checked="{!obj.checked}" name="{!obj.label}" onchange="{!c.fireComponent}"/>
+                            <label class="slds-checkbox_button__label slds-checkbox_faux slds-align-right" for="{!obj.label}">
+                                <span>{!obj.label}</span>
+                            </label>
+                        </span>
+                    </li>
+                </aura:iteration>
+            </ul>
+        </div>
+    </fieldset>
+</aura:component>

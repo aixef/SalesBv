@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Correo que notifica el intento de modificación por parte de un asesor comercial</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Modificación por parte de Asesor Comercial</name>
+    <style>formalLetter</style>
+    <subject>Se ha detectado un movimiento en la campaña {!Campaign.Name} por parte de un asesor comercial</subject>
+    <textOnly>Por medio de la presente se le notifica que se ha detectado una modificación en la campaña {!Campaign.Name} por parte de un asesor comercial.
+
+Haz clic en el siguiente vínculo para ir al registro en Salesforce: Registro Campaña {!Campaign.Name}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

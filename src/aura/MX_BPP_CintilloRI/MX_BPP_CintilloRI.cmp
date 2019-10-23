@@ -1,0 +1,91 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasrecordId" access="global">
+  	<aura:attribute name="recordId" type="Id" description="Se Guarda el Id del RI"/>
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="simpleRecord" type="Object"/>
+    <aura:attribute name="recordCompApoyo" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+
+    <div class="slds-text-color_error">
+    	{!v.recordError}
+    </div>
+	<div class="slds-grid slds-grid_vertical">
+		<div class="slds-col slds-p-around_small slds-box slds-text-align_center slds-text-body_small slds-grid_align-center" style="background-color: #FFFFFF;">
+			<div class="slds-grid slds-wrap">
+			  <div class="slds-col slds-size_1-of-7">
+			  	<span>Experiencia Única</span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  	<span>Puntos (Mensual)</span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  	<span>Puntos (Acumulado)</span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  	<span>Ranking (Mensual)</span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  	<span>Ranking (Acumulado)</span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  	<span>Compromisos Vigentes</span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  	<span>Apoyos Vigentes</span>
+			  </div>
+			</div>
+			<div class="slds-grid slds-wrap slds-text-heading_medium ">
+			  <div class="slds-col slds-size_1-of-7 ">
+				<aura:if isTrue="{!v.simpleRecord.EU_Puntos__c==6}">
+					<img src="{!$Resource.EU001_Medalla_Oro}" width="40" heigh="40"/>
+				</aura:if>
+				<aura:if isTrue="{!v.simpleRecord.EU_Puntos__c==3}">
+					<img src="{!$Resource.EU001_Medalla_Plata}" width="40" heigh="40"/>
+				</aura:if>
+				<aura:if isTrue="{!v.simpleRecord.EU_Puntos__c==0}">
+					<img src="{!$Resource.EU001_Medalla_Azul}" width="40" heigh="40"/>
+				</aura:if>
+				<aura:if isTrue="{!v.simpleRecord.EU_Puntos__c==-6}">
+					<img src="{!$Resource.EU001_Medalla_No_Certificado}" width="40" heigh="40"/>
+				</aura:if>
+		        <aura:if isTrue="{!v.simpleRecord.EU_Puntos__c==-10}">
+					<img src="{!$Resource.EU001_Medalla_No_Certificable}" width="40" heigh="40"/>
+		        </aura:if>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7 slds-p-top_medium">
+			  	<span><strong><ui:outPutNumber aura:id="myNumberFormat" format="#,###,###.00" value="{!v.simpleRecord.MX_BPP_Valor3__c}"/></strong></span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7 slds-p-top_medium">
+			  	<span><strong><ui:outPutNumber aura:id="myNumberFormat2" format="#,###,###.00" value="{!v.simpleRecord.MX_BPP_Valor4__c}"/></strong></span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7 slds-p-top_medium">
+			  	<span style="color:#F8C80A;"><strong>{!v.simpleRecord.EU_Logro__c}</strong></span><span class="slds-text-body_small"> de <strong>{!v.simpleRecord.EU_Logro_Proy_Comp__c}</strong></span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7 slds-p-top_medium">
+			  	<span style="color:#F8C80A;"><strong>{!v.simpleRecord.EU_Compromiso__c}</strong></span><span class="slds-text-body_small"> de <strong>{!v.simpleRecord.EU_Logro_Proy_Comp__c}</strong></span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7 slds-p-top_medium">
+			  	<span><strong>{!v.recordCompApoyo.compVig}</strong></span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7 slds-p-top_medium">
+			  	<span><strong>{!v.recordCompApoyo.apoyVig}</strong></span>
+			  </div>
+			</div>
+			<div class="slds-grid slds-wrap slds-p-top_xxx-small">
+			  <div class="slds-col slds-size_1-of-7 slds-col_bump-left">
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  	<span>Vencidos </span><span style="color:red;"><strong>{!v.recordCompApoyo.compVenc}</strong></span>
+			  </div>
+			  <div class="slds-col slds-size_1-of-7">
+			  	<span>Vencidos </span><span style="color:red;"><strong>{!v.recordCompApoyo.apoyVenc}</strong></span>
+			  </div>
+			</div>
+		</div>
+	</div>
+</aura:component>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>MX_RTE_Pedido_a_Program_Manager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Se comparten los registros con el Propietario de la feature</description>
+        <label>Pedido a Program Manager</label>
+        <sharedTo>
+            <role>MX_RTE_Program_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RCA,CCC,IC</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_RTE_Pedidos_CCC</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Se comparten los registros del objeto Pedidos, del tipo de registro CCC, con los usuarios que tengan rol CCC</description>
+        <label>Pedidos CCC</label>
+        <sharedTo>
+            <role>MX_RTE_CCC</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCC</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_RTE_Pedidos_IC_GFD</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Se comparten los registros del objeto Pedidos, del tipo de registro IC, con los usuarios que tengan rol Implementación Comercial RTE</description>
+        <label>Pedidos IC GFD</label>
+        <sharedTo>
+            <role>MX_RTE_Implementacion_Comercial</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>IC</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_RTE_Pedidos_RCI</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Se comparten los registros del objeto Pedidos, del tipo de registro RCI, con los usuarios que tengan rol RCI</description>
+        <label>Pedidos RCI</label>
+        <sharedTo>
+            <role>MX_RTE_RCI</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>RCA</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_RTE_Pedidos_a_Antonio_Sandoval</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Se comparten los registros del objeto Pedidos, del tipo de registro IC, con el usuario Antonio Sandoval</description>
+        <label>Pedidos a Antonio Sandoval</label>
+        <sharedTo>
+            <group>MX_RTE_Implementacion_Comercial_RTE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>IC</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

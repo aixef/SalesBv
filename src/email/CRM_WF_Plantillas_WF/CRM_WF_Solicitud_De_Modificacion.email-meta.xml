@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Solicitud de Modificación de Campaña</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de Modificación de Campaña {!Campaign.Name} con Folio {!Campaign.CRM_WF_FIC__c}</subject>
+    <textOnly>Por medio de la presente solicitamos sean aprobados las siguientes modificaciones en la Campaña: {!Campaign.Name}:
+
+Folio Identificador de Campaña &quot;FIC&quot;: {!Campaign.CRM_WF_FIC__c}
+Área Solicitante: {!Campaign.CRM_WF_Area_Solicitante__c}
+Descripción:{!CRM_WF_Modificacion__c.CRM_WF_Descripcion__c}
+Clasificación: {!CRM_WF_Modificacion__c.CRM_WF_Clasificacion__c}
+Folio Modificación:{!CRM_WF_Modificacion__c.Name}
+Comentarios: {!ApprovalRequest.Comments}
+
+Para mayor detalle favor de dar clic en el siguiente vínculo:
+
+Detalle Campaña en Salesforce
+
+Para aprobar o rechazar esta solicitud, haga clic en este vínculo Aprobación de Campaña en Salesforce o responda a este correo electrónico con una de estas palabras en la primera línea del mensaje: APROBAR, APROBADO, RECHAZAR, RECHAZADO, NO.
+
+Si envía su respuesta a través de email, también puede agregar comentarios en la segunda línea. Los comentarios se almacenarán con la solicitud de aprobación en Salesforce.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,25 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="MX_SB_SAC_ActSiniestrosCmp" ref="MX_SB_SAC_ActSiniestrosCmp" label="Actualiza siniestros">
+		<!--
+        * @author Eduardo Hernández Cuamatzi
+        * @date 2019
+		* |2018-12-26  Eduardo Hernández Cuamatzi Creación
+		* |2018-12-28  Eduardo Hernández Cuamatzi Función de redundancia para crear token
+		* |2019-01-16  Eduardo Hernández Cuamatzi Limpieza de console logs
+		* |2019-06-21  Karen Belem Sanchez Ruiz   se agrega la parte de design para ejecutar el componente en un flow
+		-->
+        
+		El componente consulta el servicio de Actualizar Siniestros, actualizando el contrato y los siniestros ligados a la misma
+		<p> Atributo recordId : Id del Registro</p>
+		<p> Atributo record : Almacena el data del contrato con la que se trabaja</p>
+		<p> Atributo ContractRecord : Es el layout de campos a recuperar del registro Contract que se trabaja</p>
+		<p> Atributo recordError : Almacena los posibles errores al recuperar la información del contrato</p>
+		<p> Atributo wsCount : Contador de los intentos de peticiones al servicio</p>
+		<p> Atributo detailError : Detalle del error para mostrar al usuario en caso de fallar algo</p>
+		<p> Atributo allCorrect : Booleano para validar si hubo errores en el flujo</p>
+		<p> Handler init : Inicializa el componente</p>
+		<p> force:recordData record : Recupera el registro con el que se trabaja</p>
+		<p> trueFlow : Almacena un true si el componente es ejecutado desde un flow de lo contrario manda un false y muestra el botón de continuar</p>
+	</aura:example>
+</aura:documentation>

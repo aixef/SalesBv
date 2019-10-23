@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Cancelar Solicitud desde Canal {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Cancelar Solicitud desde Canal</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Cancelas_solicitud</name>
+        <label>Cancelas solicitud</label>
+        <locationX>757</locationX>
+        <locationY>43</locationY>
+        <filters>
+            <field>MX_WF_Canal__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varIdCanal</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MX_WF_Etapa_Solicitud_Online__c</field>
+            <value>
+                <stringValue>Cancelado</stringValue>
+            </value>
+        </inputAssignments>
+        <object>CRM_WF_Solicitud_De_envio__c</object>
+    </recordUpdates>
+    <startElementReference>Cancelas_solicitud</startElementReference>
+    <status>Obsolete</status>
+    <variables>
+        <name>varIdCanal</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

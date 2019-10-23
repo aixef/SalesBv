@@ -1,0 +1,8 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="CustomLookUpResult" ref="CustomLookUp" label="Resultados de busqueda">
+		<p>oRecord: Registro obtenido en la busqueda del componente Padre</p>
+        <p>IconName: Icono a mostrar en el resultado</p>
+        <p>oSelectedRecordEvent: Evento que se dispara cuando se cambia el valor seleccionado</p>
+	</aura:example>
+</aura:documentation>

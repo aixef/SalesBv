@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AGUASCALIENTES</fullName>
+        <default>false</default>
+        <label>AGUASCALIENTES</label>
+    </customValue>
+    <customValue>
+        <fullName>BAJA CALIFORNIA</fullName>
+        <default>false</default>
+        <label>BAJA CALIFORNIA</label>
+    </customValue>
+    <customValue>
+        <fullName>BAJA CALIFORNIA SUR</fullName>
+        <default>false</default>
+        <label>BAJA CALIFORNIA SUR</label>
+    </customValue>
+    <customValue>
+        <fullName>CAMPECHE</fullName>
+        <default>false</default>
+        <label>CAMPECHE</label>
+    </customValue>
+    <customValue>
+        <fullName>CHIAPAS</fullName>
+        <default>false</default>
+        <label>CHIAPAS</label>
+    </customValue>
+    <customValue>
+        <fullName>CHIHUAHUA</fullName>
+        <default>false</default>
+        <label>CHIHUAHUA</label>
+    </customValue>
+    <customValue>
+        <fullName>CIUDAD DE MÉXICO</fullName>
+        <default>false</default>
+        <label>CIUDAD DE MÉXICO</label>
+    </customValue>
+    <customValue>
+        <fullName>COAHUILA DE ZARAGOZA</fullName>
+        <default>false</default>
+        <label>COAHUILA DE ZARAGOZA</label>
+    </customValue>
+    <customValue>
+        <fullName>COLIMA</fullName>
+        <default>false</default>
+        <label>COLIMA</label>
+    </customValue>
+    <customValue>
+        <fullName>DURANGO</fullName>
+        <default>false</default>
+        <label>DURANGO</label>
+    </customValue>
+    <customValue>
+        <fullName>ESTADO DE MÉXICO</fullName>
+        <default>false</default>
+        <label>ESTADO DE MÉXICO</label>
+    </customValue>
+    <customValue>
+        <fullName>GUANAJUATO</fullName>
+        <default>false</default>
+        <label>GUANAJUATO</label>
+    </customValue>
+    <customValue>
+        <fullName>GUERRERO</fullName>
+        <default>false</default>
+        <label>GUERRERO</label>
+    </customValue>
+    <customValue>
+        <fullName>HIDALGO</fullName>
+        <default>false</default>
+        <label>HIDALGO</label>
+    </customValue>
+    <customValue>
+        <fullName>JALISCO</fullName>
+        <default>false</default>
+        <label>JALISCO</label>
+    </customValue>
+    <customValue>
+        <fullName>MICHOACÁN DE OCAMPO</fullName>
+        <default>false</default>
+        <label>MICHOACÁN DE OCAMPO</label>
+    </customValue>
+    <customValue>
+        <fullName>MORELOS</fullName>
+        <default>false</default>
+        <label>MORELOS</label>
+    </customValue>
+    <customValue>
+        <fullName>NAYARIT</fullName>
+        <default>false</default>
+        <label>NAYARIT</label>
+    </customValue>
+    <customValue>
+        <fullName>NUEVO LEÓN</fullName>
+        <default>false</default>
+        <label>NUEVO LEÓN</label>
+    </customValue>
+    <customValue>
+        <fullName>OAXACA</fullName>
+        <default>false</default>
+        <label>OAXACA</label>
+    </customValue>
+    <customValue>
+        <fullName>PUEBLA</fullName>
+        <default>false</default>
+        <label>PUEBLA</label>
+    </customValue>
+    <customValue>
+        <fullName>QUERÉTARO</fullName>
+        <default>false</default>
+        <label>QUERÉTARO</label>
+    </customValue>
+    <customValue>
+        <fullName>QUINTANA ROO</fullName>
+        <default>false</default>
+        <label>QUINTANA ROO</label>
+    </customValue>
+    <customValue>
+        <fullName>SAN LUIS POTOSÍ</fullName>
+        <default>false</default>
+        <label>SAN LUIS POTOSÍ</label>
+    </customValue>
+    <customValue>
+        <fullName>SINALOA</fullName>
+        <default>false</default>
+        <label>SINALOA</label>
+    </customValue>
+    <customValue>
+        <fullName>SONORA</fullName>
+        <default>false</default>
+        <label>SONORA</label>
+    </customValue>
+    <customValue>
+        <fullName>TABASCO</fullName>
+        <default>false</default>
+        <label>TABASCO</label>
+    </customValue>
+    <customValue>
+        <fullName>TAMAULIPAS</fullName>
+        <default>false</default>
+        <label>TAMAULIPAS</label>
+    </customValue>
+    <customValue>
+        <fullName>TLAXCALA</fullName>
+        <default>false</default>
+        <label>TLAXCALA</label>
+    </customValue>
+    <customValue>
+        <fullName>VERACRUZ DE IGNACIO DE LA LLAVE</fullName>
+        <default>false</default>
+        <label>VERACRUZ DE IGNACIO DE LA LLAVE</label>
+    </customValue>
+    <customValue>
+        <fullName>YUCATÁN</fullName>
+        <default>false</default>
+        <label>YUCATÁN</label>
+    </customValue>
+    <customValue>
+        <fullName>ZACATECAS</fullName>
+        <default>false</default>
+        <label>ZACATECAS</label>
+    </customValue>
+    <description>Estado del país</description>
+    <masterLabel>Estado</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>o</joinTable>
+        </blockInfo>
+        <columns>
+            <field>CAMPAIGN_NAME</field>
+        </columns>
+        <columns>
+            <field>OPPORTUNITY_NAME</field>
+        </columns>
+        <currency>MXN</currency>
+        <filter>
+            <criteriaItems>
+                <column>Campaign.MX_SB_VTS_NombreProveedorCTI__c</column>
+                <isUnlocked>false</isUnlocked>
+                <operator>equals</operator>
+                <value>VCIP</value>
+            </criteriaItems>
+        </filter>
+        <format>Tabular</format>
+        <name>Campañas con Oportunidades bloque 1</name>
+        <params>
+            <name>open</name>
+            <value>all</value>
+        </params>
+        <params>
+            <name>probability</name>
+            <value>&gt;0</value>
+        </params>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>OpportunityCampaign</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>CAMPAIGN_STARTDATE</dateColumn>
+            <interval>INTERVAL_CURRENT</interval>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
+            <blockId>B0</blockId>
+            <joinTable>Opportunity</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Opportunity$Name</field>
+        </columns>
+        <columns>
+            <field>Opportunity.Evaluaciones__r$Name</field>
+        </columns>
+        <currency>MXN</currency>
+        <format>Tabular</format>
+        <name>Oportunidad - Evaluación - Punt bloque 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>OportunidadEvaluacionPuntosEntrenamiento__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>Opportunity$CreatedDate</dateColumn>
+            <interval>INTERVAL_THISMONTH</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>o</joinTable>
+    </blockInfo>
+    <description>Puntos de entrenamiento capturados en evaluaciones ganadas</description>
+    <format>MultiBlock</format>
+    <name>Puntos Ent. evaluaciones ganadas</name>
+    <params>
+        <name>lsk</name>
+        <value>41</value>
+    </params>
+    <reportType>OpportunityCampaign</reportType>
+    <showDetails>true</showDetails>
+</Report>

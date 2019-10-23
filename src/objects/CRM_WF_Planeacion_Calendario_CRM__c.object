@@ -1,0 +1,1672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_WF_Planeaci_n_Calendario_CRM_P_gina_de_registro</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>CRM_WF_Calendario_CRM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>CRM_WF_Calendario_CRM</fullName>
+        <fields>CRM_WF_Estatus__c</fields>
+        <fields>CRM_WF_Comentarios__c</fields>
+        <fields>CRM_WF_Fecha_Bloqueada__c</fields>
+        <fields>CRM_WF_Monitor_de_Volumen__c</fields>
+        <label>Calendario CRM</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto para la aplicación Workflow relacionado con el objeto &quot;Calendario CRM&quot;, permite llevar a cabo la planeación de las cargas de las bases en las fechas establecidas en el Calendario CRM</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>CRM_WF_ATM__c</fullName>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido  el canal de ATM</description>
+        <externalId>false</externalId>
+        <formula>INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;ATM&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ATM</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Area_solicitante__c</fullName>
+        <description>Campo para la aplicación Workflow,, muestra el área de quien está solicitando la carga de la base</description>
+        <externalId>false</externalId>
+        <formula>TEXT(CRM_WF_Nombre_Campana__r.CRM_WF_Area_Solicitante__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Área solicitante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Bcom__c</fullName>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido  el canal de  Bcom</description>
+        <externalId>false</externalId>
+        <formula>INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;Bcom&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bcom</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Bmovil__c</fullName>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido  el canal de Bmovil</description>
+        <externalId>false</externalId>
+        <formula>INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;Bmovil&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bmovil</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Buzon_Squad__c</fullName>
+        <description>Campo para la aplicación Workflow, muestra el buzón del Squad que solicita la carga</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Nombre_Campana__r.CRM_WF_Buzon_Squad__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Buzón Squad</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_CRM__c</fullName>
+        <description>Devuelve el valor que se pidió para el canal multicanal</description>
+        <externalId>false</externalId>
+        <formula>IF(  RecordType.Name = &quot;Carga Multicanal&quot; ,
+     CRM_WF_Volumen__c , NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Canal Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Canal_CRM__c</fullName>
+        <description>Campo para la aplicación Workflow, es una casilla que depende del tipo de registro de Planeacion Calendario CRM, cuando está activada el layout de la página muestra los informes para Multicanal</description>
+        <externalId>false</externalId>
+        <formula>RecordType.Name == &quot;Carga Multicanal&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Canal CRM</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Canal_SMS_Push__c</fullName>
+        <description>Campo para la aplicación Workflow, es una casilla que depende del tipo de registro de Planeacion Calendario CRM, cuando está activada el layout de la página muestra los informes para el canal SMS o Push Notification</description>
+        <externalId>false</externalId>
+        <formula>RecordType.Name == &quot;Carga SMS Push&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Canal SMS/Push</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Canal_SMS_o_Push__c</fullName>
+        <externalId>false</externalId>
+        <label>¿Canal SMS o Push?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sí</fullName>
+                    <default>false</default>
+                    <label>Sí</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Cancelar_Carga__c</fullName>
+        <description>Campo para la aplicación Workflow para cancelar la carga de la base</description>
+        <externalId>false</externalId>
+        <label>¿Desea cancelar la Carga?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Sí</fullName>
+                    <default>false</default>
+                    <label>Sí</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Comentarios__c</fullName>
+        <description>Campo para la aplicación Workflow, Muestra comentarios de ayuda, dependiendo del estatus del registro</description>
+        <externalId>false</externalId>
+        <formula>CASE (  CRM_WF_Estatus__c , &quot;Documentación&quot;, &quot; La carga de la base debe de ser aprobada por CRM&quot;,
+                                       &quot;Lista de Espera&quot;, &quot; La carga de la base está en lista de espera&quot;, 
+                                       &quot;Aprobado&quot;, &quot; La carga de la base fue aprobada&quot;, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Comentarios</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Dia__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Fecha_Carga__r.CRM_WF_Dia__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Día de la semana</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_EECC__c</fullName>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido  el canal de EECC</description>
+        <externalId>false</externalId>
+        <formula>INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;EECC&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>EECC</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Estatus__c</fullName>
+        <description>Campo para la aplicación Workflow, muestra el estatus en el que se encuentra el registro</description>
+        <externalId>false</externalId>
+        <label>Estatus</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Documentación</fullName>
+                    <default>true</default>
+                    <label>Documentación</label>
+                </value>
+                <value>
+                    <fullName>Lista de espera</fullName>
+                    <default>false</default>
+                    <label>Lista de espera</label>
+                </value>
+                <value>
+                    <fullName>Aprobado</fullName>
+                    <default>false</default>
+                    <label>Aprobado</label>
+                </value>
+                <value>
+                    <fullName>Rechazado</fullName>
+                    <default>false</default>
+                    <label>Rechazado</label>
+                </value>
+                <value>
+                    <fullName>Cancelado</fullName>
+                    <default>false</default>
+                    <label>Cancelado</label>
+                </value>
+                <value>
+                    <fullName>Revision_Saturacion</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Revisión de Saturación</label>
+                </value>
+                <value>
+                    <fullName>Validación</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Validación</label>
+                </value>
+                <value>
+                    <fullName>Validación de carga</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Validación de carga</label>
+                </value>
+                <value>
+                    <fullName>VoBoCRM</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>VoBo CRM</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Bloqueada__c</fullName>
+        <description>Campor para la aplicación Workflow: La fecha seleccionada ha sido bloqueada. Se recomienda seleccionar otra fecha o enviar a aprobación en caso de urgencia</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Fecha_Carga__r.CRM_WF_Bloqueo_de_fecha__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>.</inlineHelpText>
+        <label>Fecha Bloqueada</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Carga__c</fullName>
+        <description>Campo para la aplicación Workflow, busca el registro del día en Calendario CRM, en el cual quiere cargar su base</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Escribe la fecha en formato dd-mmm.-aa y selecciona la fecha en la lista despegable. Ejemplo: 01-sep.-2018</inlineHelpText>
+        <label>Fecha de Carga</label>
+        <referenceTo>CRM_WF_Calendario_CRM__c</referenceTo>
+        <relationshipLabel>Planeaciones Calendario CRM</relationshipLabel>
+        <relationshipName>Planeaciones_Calendario_CRM</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Fin_Campana__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Nombre_Campana__r.EndDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fecha de fin de la campaña</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Inicio_Campana__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Nombre_Campana__r.StartDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fecha de inicio de la campaña</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_real_de_carga__c</fullName>
+        <description>Campo para la aplicación Workflow, permite monitorear la fecha en la que realmente se  cargó la base</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha real de carga</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_IVR__c</fullName>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido  el canal de IVR</description>
+        <externalId>false</externalId>
+        <formula>INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;IVR&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IVR</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Justificaci_n_de_Cancelaci_n__c</fullName>
+        <description>Campo para la aplicación Workflow, obliga al usuario, con una regla de validación, a escribir una justificación de  porqué cancela  su registro</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Justificación de Cancelación</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Monitor_de_Volumen__c</fullName>
+        <description>Campo para la aplicación Workflow. Muestra imágenes de ayuda dependiendo del estatus del registro</description>
+        <externalId>false</externalId>
+        <formula>IF( OR( ISPICKVAL(CRM_WF_Estatus__c, &quot;Documentación&quot;) , ISPICKVAL(CRM_WF_Estatus__c, &quot;Lista de espera&quot;), ISPICKVAL(CRM_WF_Estatus__c, &quot;Rechazado&quot;) ),
+       IMAGE(&quot;/servlet/servlet.FileDownload?file=0151U000001YpSn&quot;, &quot;Red&quot;), 
+       IMAGE(&quot;/servlet/servlet.FileDownload?file=0151U000001YpSp&quot;, &quot;Green&quot; )
+    )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monitor de volúmen</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_Campana__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Relación de búsqueda hacia campaña</description>
+        <externalId>false</externalId>
+        <label>Nombre de la campaña</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Planeaciones Calendario CRM</relationshipLabel>
+        <relationshipName>Planeaciones_Calendario_CRM</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Pregunta_Canal_CRM__c</fullName>
+        <externalId>false</externalId>
+        <label>¿Canal CRM?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sí</fullName>
+                    <default>false</default>
+                    <label>Sí</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Push_Notification_del__c</fullName>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido  el canal de Push Notification</description>
+        <externalId>false</externalId>
+        <formula>INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;Push Notification&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Campaña contiene Push Notification</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_SMS_Push__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( RecordType.Name = &quot;Carga SMS Push&quot;, CRM_WF_Volumen__c , NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Canal SMS/Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_SMS_del__c</fullName>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido  el canal de SMS</description>
+        <externalId>false</externalId>
+        <formula>INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;SMS&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Campaña contiene SMS</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Sdat__c</fullName>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido  el canal de Sdat</description>
+        <externalId>false</externalId>
+        <formula>INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;Sdat&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sdat</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tipo_de_Campa_a__c</fullName>
+        <description>Campo para la aplicación Workflow, permite al usuario elegir el tipo de campaña</description>
+        <externalId>false</externalId>
+        <label>Tipo de Campaña</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>INFORMATIVA</fullName>
+                    <default>false</default>
+                    <label>Informativa</label>
+                </value>
+                <value>
+                    <fullName>OFERTA COMERCIAL</fullName>
+                    <default>false</default>
+                    <label>Oferta Comercial</label>
+                </value>
+                <value>
+                    <fullName>BIDIRECCIONAL</fullName>
+                    <default>false</default>
+                    <label>Bidireccional</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_Adquiriente_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área Adquiriente Multicanal.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Adq_Multicanal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Adquiriente Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_Adquiriente_SMS_Push__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Adq_SMS_Push__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Adquirente SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_Apps_Verticales_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área Apps Verticales.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Apps_Vert_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Apps Verticales Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_Clientes_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área Cliente.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Clientes_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Clientes Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_Consumo_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área Consumo.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Consumo_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Consumo Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_Cuentas_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área Cuentas.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Cuentas_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Cuentas Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_Digital_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área Digital</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Digital_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Digital Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_Inversones_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área Inversiones</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Inversiones_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Inversiones Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_Medios_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área Medios</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Medios_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Medios Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_Nomina_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área Nómina</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Nomina_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Nomina Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_PYME_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área PYME.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_PYME_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total PYME Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_S_Autos_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área S. Autos.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_S_Auto_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total S. Autos Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_S_Danos_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área S. Daños.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_S_Danos_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total S. Daños Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_VT_S_Salud_Multicanal__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área S. Salud</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_S_Salud_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total S. Salud Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Ventanilla__c</fullName>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido  el canal de Ventanilla</description>
+        <externalId>false</externalId>
+        <formula>INCLUDES( CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c , &quot;Ventanilla&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ventanilla</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Aprobado_CRM__c</fullName>
+        <description>Campo para la aplicación Workflow, devuelve el volumen aprobado para Multicanal</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Fecha_Carga__r.CRM_WF_Volumen_Aprobado_CRM__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Aprobado Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Aprobado_SMS_Push__c</fullName>
+        <description>Campo para la aplicación Workflow, volumen aprobado para el canal SMS Pus</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Fecha_Carga__r.CRM_WF_Volumen_Aprobado_SMS_Push__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Aprobado SMS/Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Solicitado_CRM__c</fullName>
+        <description>Campo para la aplicación Workflow, devuelve el  volumen de bases que se han solicitado para esa fecha</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Fecha_Carga__r.CRM_WF_Volumen_Acumulado_CRM__c -  CRM_WF_Fecha_Carga__r.CRM_WF_Volumen_cancelado_CRM__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Solicitado Multicanal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Solicitado_SMS_Push__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Fecha_Carga__r.CRM_WF_Volumen_Acumulado_SMS_Push__c -   CRM_WF_Fecha_Carga__r.CRM_WF_Volumen_cancelado_SMS_Push__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Solicitado SMS/Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_Apps_Verticales_SMS__c</fullName>
+        <description>Volumen Total Adquirente SMS Push</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Apps_Vert_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Apps Verticales SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_Clientes_C_SMS_Push__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Clientes_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Clientes C SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_Consumo_SMS_Push__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Consumo_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Consumo SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_Cuentas_SMS_Push__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Cuentas_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Cuentas SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_Digital_SMS_Push__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Digital_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Digital SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_Inversiones_SMS__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Inversiones_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Inversiones SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_Medios_De_Pago_SMS__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Medios_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Medios de pago SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_Nomina_SMS_Push__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Nomina_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Nómina SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_Pyme_SMS_Push__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_PYME_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total PYME SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_S_Auto_SMS_Push__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_S_Auto_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total S. Auto SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_S_Danos_SMS_Push__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_S_Danos_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total S. Daños SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_Total_S_Salud_SMS_Push__c</fullName>
+        <description>Resumen del campo volumen mas el acumulado por área.</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_S_Salud_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total S. Salud SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen__c</fullName>
+        <description>Campo para la aplicación Workflow, permite al usuario escribir el volumen de registros que tiene la base que desea cargar</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Requiere autorización si el volumen es mayor a 150,000 o existe saturación en la fecha programada de carga.</inlineHelpText>
+        <label>Volumen</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Volumen_real_de_carga__c</fullName>
+        <description>Campo para la aplicación Workflow, permite monitorear el volumen verdadero  que subió el generador</description>
+        <externalId>false</externalId>
+        <label>Volumen real de carga</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Dias_Restantes_Carga_Base__c</fullName>
+        <description>Campo para la aplicación WF, se utiliza en regla de validación, este campo cuenta el número de días que restan para la fecha de carga elegida</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Fecha_Carga__r.CRM_WF_Fecha_de_Carga__c -  TODAY()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Días restantes para carga de la base</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Generador__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo de búsqueda para la aplicación Workflow, busca el nombre del Generador de la Base</description>
+        <externalId>false</externalId>
+        <label>Generador</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.GBL_WF_Funcion__c</field>
+                <operation>equals</operation>
+                <value>Generador</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Planeaciones Calendario CRM</relationshipLabel>
+        <relationshipName>Planeaciones_Calendario_CRM</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_ATM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación Workflow, la casilla la selecciona el usuario cuando en la campaña es elegido el canal de ATM</description>
+        <externalId>false</externalId>
+        <label>ATM</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Area_Solicitante_Auxiliar__c</fullName>
+        <description>Campo texto para la aplicación wf permite traer el valor del área solicitante</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Área solicitante auxiliar</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Bcom__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación Workflow, la casilla la selecciona el usuario cuando en la campaña es elegido el canal de Bcom</description>
+        <externalId>false</externalId>
+        <label>Bcom</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Bmovil__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación Workflow, la casilla la selecciona el usuario cuando en la campaña es elegido el canal de Bmovil</description>
+        <externalId>false</externalId>
+        <label>Bmovil</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Comentarios_Adicionales__c</fullName>
+        <description>Captura de datos adicionales en planeación calendario CRM</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Comentarios Adicionales</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Deposito__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Depósito</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_EECC__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación Workflow, la casilla la selecciona el usuario cuando en la campaña es elegido el canal de EECC</description>
+        <externalId>false</externalId>
+        <label>EECC</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_IVR__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación Workflow, la casilla la selecciona el usuario cuando en la campaña es elegido el canal de IVR</description>
+        <externalId>false</externalId>
+        <label>IVR</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Podio__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo de checkbox para marcar cuando el canal de comunicación &quot;Podio&quot; se incluya en la campaña.</description>
+        <externalId>false</externalId>
+        <label>Podio</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Push_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido el canal de Push Notification</description>
+        <externalId>false</externalId>
+        <label>Push Notification</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_SMS__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación Workflow, la casilla se selecciona cuando en la campaña es elegido  el canal de SMS.</description>
+        <externalId>false</externalId>
+        <label>SMS</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Sdat__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación Workflow, la casilla la selecciona el usuario cuando en la campaña es elegido el canal de Sdat</description>
+        <externalId>false</externalId>
+        <label>Sdat</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_VT_Consumer_Finance_Mult__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Consumer_Fin_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Consumer Finance Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_VT_Consumer_Finance_SMS_Push__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Consumer_Fin_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Consumer Finance SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_VT_DIY_Digital_Servicing_Mult__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c + CRM_WF_Fecha_Carga__r.MX_WF_Volumen_Aprobado_DIY_Digital_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total DIY Digital Servicing Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_VT_DIY_Digital_Servicing_SMS__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_Aprobado_DIY_Digital_S_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total DIY Digital Servicing SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_VT_Open_Mark_Hipotecario_Mult__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprob_Open_Mkt_Hip_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Open Mark Hipotecario Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_VT_Open_Mark_Hipotecario_SMS__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprob_Open_Mkt_Hipot_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Open Mark Hipotecario SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_VT_Open_Market_Auto_Mult__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Open_Mk_Auto_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Open Market Auto Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_VT_Open_Market_Auto_SMS__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Open_Mk_Auto_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Open Market Auto SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_VT_Open_Market_TDC_Mult__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Open_Mk_TDC_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Open Market TDC Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_VT_Open_Market_TDC_SMS__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Open_Mk_TDC_SMS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Open Market TDC SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Ventanilla__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para la aplicación Workflow, la casilla la selecciona el usuario cuando en la campaña es elegido el canal de Ventanilla</description>
+        <externalId>false</externalId>
+        <label>Ventanilla</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_Total_Hipotecario_Mult__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Hipotecario_Mult__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Hipotecario Mult</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Volumen_Total_Hipotecario_SMS_Push__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Volumen__c +  CRM_WF_Fecha_Carga__r.MX_WF_Volumen_aprobado_Hipoteca_SMS_Push__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Volumen Total Hipotecario SMS Push</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Planeación Calendario CRM</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CRM_WF_Estatus__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>CRM_WF_Nombre_Campana__c</columns>
+        <columns>CRM_WF_Area_solicitante__c</columns>
+        <columns>CRM_WF_Fecha_Carga__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <listViews>
+        <fullName>CRM_WF_Tipo_de_canal_y_campana</fullName>
+        <columns>NAME</columns>
+        <columns>CRM_WF_Nombre_Campana__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>CRM_WF_Fecha_Carga__c</columns>
+        <columns>CRM_WF_Dia__c</columns>
+        <columns>CRM_WF_Estatus__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CRM_WF_Area_solicitante__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Tipo de canal y campaña</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PC-{0000000}</displayFormat>
+        <label>Folio planeación calendario CRM</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Planeaciones Calendario CRM</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CRM_WF_Carga_CRM</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>CRM_WF_Calendario_CRM</compactLayoutAssignment>
+        <label>Carga Multicanal</label>
+        <picklistValues>
+            <picklist>CRM_WF_Canal_SMS_o_Push__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sí</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Cancelar_Carga__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Sí</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Estatus__c</picklist>
+            <values>
+                <fullName>Aprobado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Documentación</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lista de espera</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rechazado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Pregunta_Canal_CRM__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sí</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tipo_de_Campa_a__c</picklist>
+            <values>
+                <fullName>BIDIRECCIONAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INFORMATIVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OFERTA COMERCIAL</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CRM_WF_Carga_SMS_Push</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>CRM_WF_Calendario_CRM</compactLayoutAssignment>
+        <label>Carga SMS Push</label>
+        <picklistValues>
+            <picklist>CRM_WF_Canal_SMS_o_Push__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sí</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Cancelar_Carga__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Sí</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Estatus__c</picklist>
+            <values>
+                <fullName>Aprobado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Documentación</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Lista de espera</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rechazado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Pregunta_Canal_CRM__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sí</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tipo_de_Campa_a__c</picklist>
+            <values>
+                <fullName>BIDIRECCIONAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INFORMATIVA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OFERTA COMERCIAL</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>CRM_WF_Carga_mayor_a_21_dias</fullName>
+        <active>true</active>
+        <description>Regla de validación para la aplicación Worfkflow, impide que los usuarios cargen una base con más de tres semanas de anticipación</description>
+        <errorConditionFormula>GBL_WF_Dias_Restantes_Carga_Base__c &gt; 21</errorConditionFormula>
+        <errorMessage>Solo se pueden planear las cargas con 3 semanas de anticipación</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Justificacion_Obligatoria</fullName>
+        <active>true</active>
+        <description>El usuario deberá escribir una justificación cuando quiera cancelar el registro</description>
+        <errorConditionFormula>AND (   ISPICKVAL( CRM_WF_Cancelar_Carga__c  , &quot;Sí&quot;)  ,  CRM_WF_Justificaci_n_de_Cancelaci_n__c = &quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Justificaci_n_de_Cancelaci_n__c</errorDisplayField>
+        <errorMessage>Debes escribir una justificación de la cancelación</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Multicanal_Obligatorio</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+
+RecordType.Name == &quot;Carga Multicanal&quot;,
+MX_WF_Bcom__c == False,
+MX_WF_EECC__c == False,
+MX_WF_Ventanilla__c == False,
+MX_WF_Podio__c == False,
+MX_WF_ATM__c == False,
+MX_WF_Bmovil__c == False,
+MX_WF_IVR__c == False,
+MX_WF_Sdat__c == False
+)</errorConditionFormula>
+        <errorMessage>Debes seleccionar por lo menos un Canal para la Carga Multicanal</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_No_Hay_Canal_CRM</fullName>
+        <active>true</active>
+        <description>No se puede elegir el tipo de registro CRM si la campaña no tienen ningún canal de CRM</description>
+        <errorConditionFormula>AND(
+  
+     NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;ATM&quot;) ) , 
+     NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;Bcom&quot;) ), 
+     NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;Bmovil&quot;) ), 
+     NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;EECC&quot;) ), 
+     NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;IVR&quot;) ), 
+     NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;Sdat&quot;) ),
+     NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c , &quot;Ventanilla&quot;) ) ,
+     NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c , &quot;Podio&quot;) ),
+     NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c , &quot;Bancomer movil&quot;) ),
+     RecordType.Name == &quot;Carga Multicanal&quot;
+    )</errorConditionFormula>
+        <errorMessage>Este tipo de registro no es valido para los canales seleccionados en la campaña</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_No_Hay_Canal_SMS_Push</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+    NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;SMS&quot;) ),
+    NOT( INCLUDES(CRM_WF_Nombre_Campana__r.CRM_WF_Canales_de_Comunicacion__c, &quot;Push Notification&quot;) ), 
+    NOT( CRM_WF_Nombre_Campana__r.CRM_WF_Push_Notification__c ),  
+    NOT( CRM_WF_Nombre_Campana__r.CRM_WF_SMS__c ) ,
+    RecordType.Name == &quot;Carga SMS Push&quot; 
+    )</errorConditionFormula>
+        <errorMessage>Este tipo de registro no es valido para los canales seleccionados en la campaña</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Regla_Cancelacion</fullName>
+        <active>true</active>
+        <description>Para poder cancelar un registro debe de estar previamente aprobado</description>
+        <errorConditionFormula>AND( ISPICKVAL (  CRM_WF_Cancelar_Carga__c , &quot;Sí&quot;),  
+   OR( ISPICKVAL ( CRM_WF_Estatus__c , &quot;Documentación&quot;), 
+       ISPICKVAL ( CRM_WF_Estatus__c , &quot;Lista de espera&quot;),
+       ISPICKVAL ( CRM_WF_Estatus__c , &quot;Rechazado&quot;)
+      )  
+    )</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Cancelar_Carga__c</errorDisplayField>
+        <errorMessage>Solo puedes cancelar registros ya aprobados</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_SMS_PUSH_Obligatorio</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+
+RecordType.Name == &quot;Carga SMS Push&quot;,
+
+MX_WF_SMS__c == False,
+MX_WF_Push_Notification__c == False
+)</errorConditionFormula>
+        <errorMessage>Debes seleccionar por lo menos un Canal para la Carga SMS/Push</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

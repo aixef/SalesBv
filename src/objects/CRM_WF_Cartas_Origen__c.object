@@ -1,0 +1,2433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_WF_Cartas_Custodia_P_gina_de_registro1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>CRM_WF_Etapa_de_la_Campana</fullName>
+        <fields>Name</fields>
+        <fields>CRM_WF_Etapa_Campana__c</fields>
+        <label>Etapa de la Campaña</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CRM_WF_A_Partir_De__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Se actualiza de forma automática con la fecha en que se inicia el proceso de autorización.</inlineHelpText>
+        <label>A partir de</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Adicionales_Al_Layout__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Agregar campos adicionales al Layout mínimo autorizado.</inlineHelpText>
+        <label>Adicionales en Layout</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Ap_De_Extension_Borrado_Inf__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Se considera en días naturales</inlineHelpText>
+        <label>Aprobación de extensión Borrado de Inf</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Area_Autorizador__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Campañas CRM&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Área autorizador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Area_BBVA_Bancomer__c</fullName>
+        <externalId>false</externalId>
+        <label>Área BBVA Bancomer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Area_Jefe_Director__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Campañas CRM&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Área director</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Area_Solicitante__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Campañas CRM&quot;</formula>
+        <label>Área solicitante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Autorizad__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Generador__r.CRM_WF_Autorizador_DG__r.Name&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Autorizador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Buzon_Squad__c</fullName>
+        <externalId>false</externalId>
+        <label>Buzón Squad</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Campana_Carta_Custodia__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaña</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Cartas Origen</relationshipLabel>
+        <relationshipName>Cartas_Origen</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Canales_Com_Carta_Custodia__c</fullName>
+        <externalId>false</externalId>
+        <label>Canales de comunicación</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Correo Directo</fullName>
+                    <default>false</default>
+                    <label>Correo Directo</label>
+                </value>
+                <value>
+                    <fullName>Correo Electrónico</fullName>
+                    <default>false</default>
+                    <label>Correo Electrónico</label>
+                </value>
+                <value>
+                    <fullName>Encuestas Telefónicas</fullName>
+                    <default>false</default>
+                    <label>Encuestas Telefónicas</label>
+                </value>
+                <value>
+                    <fullName>Inserto en edo. cta.</fullName>
+                    <default>false</default>
+                    <label>Inserto en edo. cta.</label>
+                </value>
+                <value>
+                    <fullName>Telemarketing</fullName>
+                    <default>false</default>
+                    <label>Telemarketing</label>
+                </value>
+                <value>
+                    <fullName>Redes Sociales</fullName>
+                    <default>false</default>
+                    <label>Redes Sociales</label>
+                </value>
+                <value>
+                    <fullName>Login Marketing</fullName>
+                    <default>false</default>
+                    <label>Login Marketing</label>
+                </value>
+                <value>
+                    <fullName>Cenefa de edo. cta.</fullName>
+                    <default>false</default>
+                    <label>Cenefa de edo. cta.</label>
+                </value>
+                <value>
+                    <fullName>No aplica</fullName>
+                    <default>false</default>
+                    <label>No aplica</label>
+                </value>
+                <value>
+                    <fullName>Otro</fullName>
+                    <default>false</default>
+                    <label>Otro</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Canales_Comunicacion_Proveedor__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;TEXT ( CRM_WF_Empresa_Area_Bancomer__r.CRM_WF_Canales_De_Comunicacion__c )&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Canales de comunicación proveedor</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Correo_Electronico_Custodio_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Empresa_Area_Bancomer__r.CRM_WF_Correo_Electronico_Custodio1__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Correo Electrónico Custodio 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Correo_Electronico_Custodio_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Empresa_Area_Bancomer__r.CRM_WF_Correo_Electronico_Custodio_2__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Correo Electrónico Custodio 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Creditos__c</fullName>
+        <externalId>false</externalId>
+        <label>Créditos</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Hipotecario</fullName>
+                    <default>false</default>
+                    <label>Hipotecario</label>
+                </value>
+                <value>
+                    <fullName>PPI</fullName>
+                    <default>false</default>
+                    <label>PPI</label>
+                </value>
+                <value>
+                    <fullName>Auto</fullName>
+                    <default>false</default>
+                    <label>Auto</label>
+                </value>
+                <value>
+                    <fullName>Nomina</fullName>
+                    <default>false</default>
+                    <label>Nomina</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Cuentas_De_Captacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Cuentas de captación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ahorro</fullName>
+                    <default>false</default>
+                    <label>Ahorro</label>
+                </value>
+                <value>
+                    <fullName>Fondos, Inversiones y plazo</fullName>
+                    <default>false</default>
+                    <label>Fondos, Inversiones y plazo</label>
+                </value>
+                <value>
+                    <fullName>Cheques</fullName>
+                    <default>false</default>
+                    <label>Cheques</label>
+                </value>
+                <value>
+                    <fullName>Nomina</fullName>
+                    <default>false</default>
+                    <label>Nomina</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Desea_Cancelar_La_Carta_Origen__c</fullName>
+        <externalId>false</externalId>
+        <label>¿Desea cancelar la Carta Origen?</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Destino__c</fullName>
+        <externalId>false</externalId>
+        <label>Destino</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Nacional</fullName>
+                    <default>false</default>
+                    <label>Nacional</label>
+                </value>
+                <value>
+                    <fullName>Extranjero</fullName>
+                    <default>false</default>
+                    <label>Extranjero</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Director__c</fullName>
+        <description>Campo tipo fórmula para Workflow que devuelve el director asociado al Generador</description>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Generador__r.CRM_WF_Director__r.Name&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Director</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Email_Autorizador__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Generador__r.CRM_WF_Autorizador_DG__r.CRM_WF_Correo_Electronico__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email autorizador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Email_Generador__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Generador__r.CRM_WF_Correo_Electronico__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email generador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Email_Suplente__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Generador__r.CRM_WF_Suplente__r.CRM_WF_Correo_Electronico__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email suplente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Especificar_Otro_Canal__c</fullName>
+        <externalId>false</externalId>
+        <label>Especificar Otro Canal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Especificar_Otro_Origen__c</fullName>
+        <externalId>false</externalId>
+        <label>Especificar Otro Origen</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Especificar_Otro_Tipo_De_Ext__c</fullName>
+        <externalId>false</externalId>
+        <label>Especificar Otro Tipo de extracción</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Etapa_Campana__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (CRM_WF_Campana_Carta_Custodia__r.Status)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Etapa Campaña</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Etapa_Carta_Custodia__c</fullName>
+        <externalId>false</externalId>
+        <label>Etapa Carta</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Solicitud</fullName>
+                    <default>true</default>
+                    <label>Solicitud</label>
+                </value>
+                <value>
+                    <fullName>Autorización Generador</fullName>
+                    <default>false</default>
+                    <label>Autorización Generador</label>
+                </value>
+                <value>
+                    <fullName>Autorización CRM</fullName>
+                    <default>false</default>
+                    <label>Autorización CRM</label>
+                </value>
+                <value>
+                    <fullName>Autorización Inteligencia Comercial</fullName>
+                    <default>false</default>
+                    <label>Autorización Inteligencia Comercial</label>
+                </value>
+                <value>
+                    <fullName>Autorización Fraudes</fullName>
+                    <default>false</default>
+                    <label>Autorización Fraudes</label>
+                </value>
+                <value>
+                    <fullName>Autorización Seguridad</fullName>
+                    <default>false</default>
+                    <label>Autorización Seguridad</label>
+                </value>
+                <value>
+                    <fullName>Aprobada</fullName>
+                    <default>false</default>
+                    <label>Aprobada</label>
+                </value>
+                <value>
+                    <fullName>Rechazada</fullName>
+                    <default>false</default>
+                    <label>Rechazada</label>
+                </value>
+                <value>
+                    <fullName>Cancelada</fullName>
+                    <default>false</default>
+                    <label>Cancelada</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_FIC__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Campana_Carta_Custodia__r.CRM_WF_FIC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FIC</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Aprobacion_Seguridad__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de aprobación de seguridad</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Aprobada_Ext_Borrado__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Se considera en días naturales</inlineHelpText>
+        <label>Fecha aprobada de ext. de borrado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Inicio_Aprobacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha Inicio de aprobación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha_Solicitud_De_Ext_Borrado__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Se considera en días naturales</inlineHelpText>
+        <label>Fecha de solicitud de ext. de borrado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Fecha__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Frecuencia__c</fullName>
+        <externalId>false</externalId>
+        <label>Frecuencia</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Única Vez</fullName>
+                    <default>false</default>
+                    <label>Única Vez</label>
+                </value>
+                <value>
+                    <fullName>Semanal</fullName>
+                    <default>false</default>
+                    <label>Semanal</label>
+                </value>
+                <value>
+                    <fullName>Quincenal</fullName>
+                    <default>false</default>
+                    <label>Quincenal</label>
+                </value>
+                <value>
+                    <fullName>Mensual</fullName>
+                    <default>false</default>
+                    <label>Mensual</label>
+                </value>
+                <value>
+                    <fullName>Bimestral</fullName>
+                    <default>false</default>
+                    <label>Bimestral</label>
+                </value>
+                <value>
+                    <fullName>Trimestral</fullName>
+                    <default>false</default>
+                    <label>Trimestral</label>
+                </value>
+                <value>
+                    <fullName>Semestral</fullName>
+                    <default>false</default>
+                    <label>Semestral</label>
+                </value>
+                <value>
+                    <fullName>Anual</fullName>
+                    <default>false</default>
+                    <label>Anual</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Hasta_Carta_Custodia__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>La vigencia de la solicitud es de un mes en caso de ser Ünica vez, para envios recurrentes podrá ser de 3 meses máximo.</inlineHelpText>
+        <label>Hasta</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Hasta__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISPICKVAL (CRM_WF_Frecuencia__c, &quot;Única Vez&quot;),  (CRM_WF_A_Partir_De__c + 30), 
+IF (ISPICKVAL (CRM_WF_Frecuencia__c, &quot;Semanal&quot;),    (CRM_WF_A_Partir_De__c + 90), 
+IF (ISPICKVAL (CRM_WF_Frecuencia__c, &quot;Quincenal&quot;),  (CRM_WF_A_Partir_De__c + 90), 
+IF (ISPICKVAL (CRM_WF_Frecuencia__c, &quot;Mensual&quot;),    (CRM_WF_A_Partir_De__c + 90), 
+IF (ISPICKVAL (CRM_WF_Frecuencia__c, &quot;Bimestral&quot;),  (CRM_WF_A_Partir_De__c + 90),
+IF (ISPICKVAL (CRM_WF_Frecuencia__c, &quot;Trimestral&quot;), (CRM_WF_A_Partir_De__c + 90), 
+IF (ISPICKVAL (CRM_WF_Frecuencia__c, &quot;Semestral&quot;),  (CRM_WF_A_Partir_De__c + 90),
+IF (ISPICKVAL (CRM_WF_Frecuencia__c, &quot;Anual&quot;),      (CRM_WF_A_Partir_De__c + 90),
+null ))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Se calculan 30 días sí la frecuencia es igual a &quot;Única Vez&quot; y 90 días si es diferente.</inlineHelpText>
+        <label>Hasta</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Ic_Participa__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>I.C. participa en la definicion de los criterios para la campaña o proyecto</inlineHelpText>
+        <label>¿I.C. participa?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Jefe__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Nombre_Del_Solicitante__r.CRM_WF_Jefe__r.Name&quot;</formula>
+        <label>Jefe</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Just_De_Cancelacin_Carta__c</fullName>
+        <description>Campo para la aplicación Workflow, se usa para mostrar un valor de texto para Justificar la cancelación de una Carta Origen</description>
+        <externalId>false</externalId>
+        <label>Justificación de Cancelación de Carta</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Justificacion_Extension_Borrado__c</fullName>
+        <externalId>false</externalId>
+        <label>Justificación de extensión de borrado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Layout__c</fullName>
+        <externalId>false</externalId>
+        <label>Layout</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Monitoreo_De_C_Recurrentes__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(CRM_WF_Total_De_C_Recurrentes__c = CRM_WF_Numero_De_Bases_A_Enviar__c,IMAGE(&quot;/servlet/servlet.FileDownload?file=0151U000001YpSn&quot;, &quot;Red&quot; ),
+
+IF(CRM_WF_Total_De_C_Recurrentes__c = 3,IMAGE(&quot;/servlet/servlet.FileDownload?file=0151I000001RXc3&quot;, &quot;Yellow&quot; ),
+
+IMAGE(&quot;/servlet/servlet.FileDownload?file=0151U000001YpSp&quot;, &quot;Green&quot;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monitoreo de Cartas Recurrentes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_Custodio_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Empresa_Area_Bancomer__r.CRM_WF_Nombre_Custodio_1__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nombre Custodio 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Nombre_Custodio_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Empresa_Area_Bancomer__r.CRM_WF_Nombre_Custodio_2__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nombre Custodio 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Notificacion_Monitoreo__c</fullName>
+        <externalId>false</externalId>
+        <label>Notificación de Monitoreo</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_De_Bases_A_Enviar__c</fullName>
+        <externalId>false</externalId>
+        <label>Número de Bases a enviar</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_De_Bases_Enviadas__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Suma de todas las bases enviadas de acuerdo al registro de salida de la Carta Recurrente</inlineHelpText>
+        <label>Número de Bases enviadas</label>
+        <summarizedField>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Numero_de_Bases__c</summarizedField>
+        <summaryForeignKey>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Carta_Origen_C_Recurrente__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Numero_De_Registros_Enviados__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Suma de todos los registros enviados de acuerdo al registros de salida en las Cartas Recurrentes</inlineHelpText>
+        <label>Número de registros enviados</label>
+        <summarizedField>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Numero_de_registros_en_bases__c</summarizedField>
+        <summaryForeignKey>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Carta_Origen_C_Recurrente__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Objetivo__c</fullName>
+        <externalId>false</externalId>
+        <label>Objetivo - Propósito de la Entrega</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Origen__c</fullName>
+        <externalId>false</externalId>
+        <label>Origen</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Campaña</fullName>
+                    <default>false</default>
+                    <label>Campaña</label>
+                </value>
+                <value>
+                    <fullName>Proyecto</fullName>
+                    <default>false</default>
+                    <label>Proyecto</label>
+                </value>
+                <value>
+                    <fullName>Otro</fullName>
+                    <default>false</default>
+                    <label>Otro</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Receptores_Adicionales__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Agregar receptores con Nombre, teléfono y área, sólo si se requiere regreso de la información.</inlineHelpText>
+        <label>Receptores adicionales</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Referencia__c</fullName>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Campana_Carta_Custodia__r.Name + &quot; &quot; + &quot;-&quot; + &quot; &quot; + CRM_WF_Campana_Carta_Custodia__r.CRM_WF_FIC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Referencia</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Registros_En_Primer_Envio__c</fullName>
+        <externalId>false</externalId>
+        <label>Registros en 1er envío</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Regreso_De_Informacion__c</fullName>
+        <externalId>false</externalId>
+        <label>¿Requiere regreso de información?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Requiere_Aprobacion_De_Fraudes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Si el layout requiere el campo de tarjeta en claro - con 16 dígitos, la Carta deberá ser aprobada por Fraudes</inlineHelpText>
+        <label>¿Requiere Tarjeta en Claro?</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Si</fullName>
+                    <default>false</default>
+                    <label>Si</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Salidas_Recibidas__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Número de Salidas de Información que han sido recibidas por Proveedor</inlineHelpText>
+        <label>Cartas Recurrentes enviadas a Proveedor</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Etapa_De_Salida_De_Informacion__c</field>
+            <operation>equals</operation>
+            <value>Base enviada a proveedor, Base recibida por proveedor</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Carta_Origen_C_Recurrente__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Seguros_Bancomer__c</fullName>
+        <externalId>false</externalId>
+        <label>Seguros Bancomer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Autos y Bienes</fullName>
+                    <default>false</default>
+                    <label>Autos y Bienes</label>
+                </value>
+                <value>
+                    <fullName>Accidentes y enfermedades</fullName>
+                    <default>false</default>
+                    <label>Accidentes y enfermedades</label>
+                </value>
+                <value>
+                    <fullName>Vida y familia</fullName>
+                    <default>false</default>
+                    <label>Vida y familia</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Servicios_Digitales__c</fullName>
+        <externalId>false</externalId>
+        <label>Servicios digitales</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>B com</fullName>
+                    <default>false</default>
+                    <label>B com</label>
+                </value>
+                <value>
+                    <fullName>B movil</fullName>
+                    <default>false</default>
+                    <label>B movil</label>
+                </value>
+                <value>
+                    <fullName>BBVA Wallet</fullName>
+                    <default>false</default>
+                    <label>BBVA Wallet</label>
+                </value>
+                <value>
+                    <fullName>BBVA Send</fullName>
+                    <default>false</default>
+                    <label>BBVA Send</label>
+                </value>
+                <value>
+                    <fullName>Bancomer SMS</fullName>
+                    <default>false</default>
+                    <label>Bancomer SMS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Sol_De_Extension_Borrado_Inf__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Se considera en días naturales</inlineHelpText>
+        <label>Solicitud de extensión de Borrado de Inf</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tarjetas_De_Credito__c</fullName>
+        <externalId>false</externalId>
+        <label>Tarjetas de Crédito</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bancarias</fullName>
+                    <default>false</default>
+                    <label>Bancarias</label>
+                </value>
+                <value>
+                    <fullName>Negocios y Micronegocios</fullName>
+                    <default>false</default>
+                    <label>Negocios y Micronegocios</label>
+                </value>
+                <value>
+                    <fullName>VIVE</fullName>
+                    <default>false</default>
+                    <label>VIVE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Telefono_Autorizador__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Generador__r.CRM_WF_Autorizador_DG__r.CRM_WF_Telefono_Extension__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tel/Ext autorizador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Telefono_Custodio_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Empresa_Area_Bancomer__r.CRM_WF_Telefono_Custodio1__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Teléfono Custodio 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Telefono_Custodio_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Empresa_Area_Bancomer__r.CRM_WF_Telefono_Custodio_2__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Teléfono Custodio 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Telefono_Generador__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Generador__r.CRM_WF_Telefono_Extension__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tel/Ext generador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Telefono_Jefe_Director__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Generador__r.CRM_WF_Director__r.CRM_WF_Telefono_Extension__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tel/Ext director</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Telefono_Solicitante__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Nombre_Del_Solicitante__r.CRM_WF_Telefono_Extension__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tel/Ext solicitante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tipo_De_Informacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de información</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Interno BBVA</fullName>
+                    <default>false</default>
+                    <label>Interno BBVA</label>
+                </value>
+                <value>
+                    <fullName>Externo</fullName>
+                    <default>false</default>
+                    <label>Externo</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Tipo_de_Envio__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Envío</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Interno</fullName>
+                    <default>false</default>
+                    <label>Interno</label>
+                </value>
+                <value>
+                    <fullName>Externo</fullName>
+                    <default>false</default>
+                    <label>Externo</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Total_Bases_En_C_Recurrentes__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Bases en Cartas Recurrentes</label>
+        <summarizedField>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Bases_A_Enviar__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Etapa_De_Salida_De_Informacion__c</field>
+            <operation>notEqual</operation>
+            <value>Cancelada</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Carta_Origen_C_Recurrente__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Total_De_C_Recurrentes__c</fullName>
+        <externalId>false</externalId>
+        <label>Total de Cartas Recurrentes</label>
+        <summaryFilterItems>
+            <field>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Etapa_De_Salida_De_Informacion__c</field>
+            <operation>notEqual</operation>
+            <value>Cancelada</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Carta_Origen_C_Recurrente__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Total_Registros_En_C_Recurrentes__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Registros en Cartas Recurrentes</label>
+        <summarizedField>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Numero_De_Registros__c</summarizedField>
+        <summaryFilterItems>
+            <field>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Etapa_De_Salida_De_Informacion__c</field>
+            <operation>notEqual</operation>
+            <value>Cancelada</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CRM_WF_Cartas_Recurrentes__c.CRM_WF_Carta_Origen_C_Recurrente__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Total_de_Registros__c</fullName>
+        <externalId>false</externalId>
+        <label>Total de Registros</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Uso_De_La_Informacion__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Agregar uso de la información, sólo si se requiere regreso de la información.</inlineHelpText>
+        <label>Uso de la información</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Usuario_Red_Custodio_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Empresa_Area_Bancomer__r.CRM_WF_Usuario_Red_Custodio_1__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Usuario Red Custodio 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM_WF_Usuario_Red_Custodio_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;CRM_WF_Empresa_Area_Bancomer__r.CRM_WF_Usuario_Red_Custodio_2__c&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Usuario Red Custodio 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Area_del_solicitante__c</fullName>
+        <description>Campo tipo fórmula para Workflow, regresa la cuenta (Squad) asociada al solicitante</description>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Nombre_Del_Solicitante__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Área del solicitante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Autorizador__c</fullName>
+        <description>Campo de tipo fórmula para Workflow que trae el Autorizador asociado al Generador</description>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Generador__r.GBL_WF_Autorizador_DG__r.GBL_WF_Nombre_Completo__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Autorizador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Canales_Com_Proveedor__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT ( GBL_WF_Emp_Area_Bancomer__r.GBL_WF_Canales_De_Comunicacion__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Canales de comunicación proveedor</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Correo_Electronico_Custodio_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Emp_Area_Bancomer__r.GBL_WF_Correo_Electronico_Custodio_1__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Correo Electrónico Custodio 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Correo_Electronico_Custodio_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Emp_Area_Bancomer__r.GBL_WF_Correo_Electronico_Custodio_2__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Correo Electrónico Custodio 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Director__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Generador__r.GBL_WF_Director__r.GBL_WF_Nombre_Completo__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Director</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Email_autorizador__c</fullName>
+        <description>Campo de tipo fórmula para la aplicación Workflow que devuelve el correo electrónico del Autorizador del Generador</description>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Generador__r.GBL_WF_Autorizador_DG__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email autorizador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Email_generador__c</fullName>
+        <description>Campo de tipo fórmula para la aplicación Workflow que regresa el valor del correo electrónico del Generador</description>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Generador__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email generador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Email_suplente__c</fullName>
+        <description>Campo para la aplicación Workflow que regresa el correo electrónico del suplente del Generador</description>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Generador__r.GBL_WF_Suplente__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email suplente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Emp_Area_Bancomer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo para la aplicación Workflow, que busca y relaciona una Empresa o Área BBVA a la cuenta</description>
+        <externalId>false</externalId>
+        <label>Empresa / Área BBVA</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.GBL_WF_Vigente__c</field>
+                <operation>equals</operation>
+                <value>Sí</value>
+            </filterItems>
+            <infoMessage>El proveedor debe de estar vigente</infoMessage>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Cartas Origen</relationshipLabel>
+        <relationshipName>Cartas_Origen</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Generador__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo que trae el Contacto con función Generador</description>
+        <externalId>false</externalId>
+        <label>Generador</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.GBL_WF_Funcion__c</field>
+                <operation>equals</operation>
+                <value>Generador</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Cartas Origen</relationshipLabel>
+        <relationshipName>Cartas_Origen</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Jefe__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Nombre_Del_Solicitante__r.GBL_WF_Jefe__r.GBL_WF_Nombre_Completo__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Jefe</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Nombre_Custodio_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Emp_Area_Bancomer__r.GBL_WF_Nombre_Custodio_1__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nombre Custodio 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Nombre_Custodio_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Emp_Area_Bancomer__r.GBL_WF_Nombre_Custodio_2__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nombre Custodio 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Nombre_Del_Solicitante__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo de tipo relación de búsqueda, permite elegir solo los contactos de tipo de registro &quot;Usuarios&quot;</description>
+        <externalId>false</externalId>
+        <label>Solicitante</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Usuarios</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Cartas Origen (Solicitante)</relationshipLabel>
+        <relationshipName>Cartas_Origen1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Suplente__c</fullName>
+        <description>Campo de tipo fórmula para la aplicación Workflow que trae el nombre del Suplente del Generador</description>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Generador__r.GBL_WF_Suplente__r.GBL_WF_Nombre_Completo__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Suplente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Tel_Ext_autorizador__c</fullName>
+        <description>Campo de tipo fórmula para la aplicación Workflow, trae el teléfono del Autorizador del Generador</description>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Generador__r.GBL_WF_Autorizador_DG__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tel/Ext autorizador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Tel_Ext_director__c</fullName>
+        <description>Campo de tipo fórmula para la aplicación Workflow, trae el teléfono del Director asociado al Generador</description>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Generador__r.GBL_WF_Director__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tel/Ext director</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Tel_Ext_generador__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Generador__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Campo de tipo fórmula para la aplicación Workflow que trae el teléfono del Generador de la Carta Origen</inlineHelpText>
+        <label>Tel/Ext generador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Tel_Ext_solicitante__c</fullName>
+        <description>Campo de tipo fórmula para la aplicación Workflow que trae el teléfono de quien solicita la carta origen</description>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Nombre_Del_Solicitante__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tel/Ext solicitante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Tel_Ext_suplente__c</fullName>
+        <description>Campo para la aplicación Workflow que trae el teléfono del Suplente del Generador</description>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Generador__r.GBL_WF_Suplente__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tel/Ext suplente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Telefono_Custodio_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Emp_Area_Bancomer__r.GBL_WF_Telefono_Custodio_1__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Teléfono Custodio 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Telefono_Custodio_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Emp_Area_Bancomer__r.GBL_WF_Telefono_Custodio_2__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Teléfono Custodio 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Usuario_Red_Custodio_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Emp_Area_Bancomer__r.GBL_WF_Usuario_Red_Custodio_1__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Usuario Red Custodio 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GBL_WF_Usuario_Red_Custodio_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>GBL_WF_Emp_Area_Bancomer__r.GBL_WF_Usuario_Red_Custodio_2__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Usuario Red Custodio 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monitoreo_Numero_De_Bases__c</fullName>
+        <description>Campo de tipo formula para la aplicación Workflow que monitorea el número de bases a enviar entre la Carta Origen y las Cartas Recurrentes</description>
+        <externalId>false</externalId>
+        <formula>IF ( CRM_WF_Numero_De_Bases_A_Enviar__c &lt;&gt; CRM_WF_Total_Bases_En_C_Recurrentes__c, IMAGE (&quot;/servlet/servlet.FileDownload?file=0151U000001YpSn&quot;, &quot;Red&quot;), 
+IMAGE(&quot;/servlet/servlet.FileDownload?file=0151U000001YpSp&quot;, &quot;Green&quot; ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monitoreo Número de Bases</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Monitoreo_Total_De_Registros__c</fullName>
+        <description>Campo de tipo formula para la aplicación Workflow que monitorea el Total de Registros entre la Carta Origen y las Cartas Recurrentes</description>
+        <externalId>false</externalId>
+        <formula>IF ( CRM_WF_Total_de_Registros__c &lt;&gt; CRM_WF_Total_Registros_En_C_Recurrentes__c , IMAGE (&quot;/servlet/servlet.FileDownload?file=0151U000001YpSn&quot;, &quot;Red&quot;), 
+IMAGE(&quot;/servlet/servlet.FileDownload?file=0151U000001YpSp&quot;, &quot;Green&quot; ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monitoreo Total de Registros</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Validacion_de_Bases__c</fullName>
+        <description>Campo de tipo formula para la aplicación Workflow que calcula el valor de Bases a enviar en la Carta Origen</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Numero_De_Bases_A_Enviar__c - CRM_WF_Total_Bases_En_C_Recurrentes__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Validación de Bases</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WF_Validacion_de_Registros__c</fullName>
+        <description>Campo de tipo formula para la aplicación Workflow que calcula el valor de Registros a enviar en la Carta Origen</description>
+        <externalId>false</externalId>
+        <formula>CRM_WF_Total_de_Registros__c -  CRM_WF_Total_Registros_En_C_Recurrentes__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Validación de Registros</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Carta Origen</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CRM_WF_Etapa_Carta_Custodia__c</columns>
+        <columns>CRM_WF_Tipo_de_Envio__c</columns>
+        <columns>CRM_WF_Total_Bases_En_C_Recurrentes__c</columns>
+        <columns>CRM_WF_Total_De_C_Recurrentes__c</columns>
+        <columns>CRM_WF_Total_de_Registros__c</columns>
+        <columns>CRM_WF_Total_Registros_En_C_Recurrentes__c</columns>
+        <columns>MX_WF_Validacion_de_Bases__c</columns>
+        <columns>MX_WF_Validacion_de_Registros__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <listViews>
+        <fullName>Cartas_en_Documentacion</fullName>
+        <columns>NAME</columns>
+        <columns>CRM_WF_Etapa_Carta_Custodia__c</columns>
+        <columns>CRM_WF_Frecuencia__c</columns>
+        <columns>CRM_WF_A_Partir_De__c</columns>
+        <columns>CRM_WF_Hasta_Carta_Custodia__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CRM_WF_Etapa_Carta_Custodia__c</field>
+            <operation>equals</operation>
+            <value>Solicitud</value>
+        </filters>
+        <label>Cartas en Documentación</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{YY}{00000}</displayFormat>
+        <label>Folio Carta Origen</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cartas Origen</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CRM_WF_Carta_Origen</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+        <label>Carta Origen</label>
+        <picklistValues>
+            <picklist>CRM_WF_Canales_Com_Carta_Custodia__c</picklist>
+            <values>
+                <fullName>Cenefa de edo%2E cta%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Correo Directo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Correo Electrónico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Encuestas Telefónicas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inserto en edo%2E cta%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Login Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No aplica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Redes Sociales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Creditos__c</picklist>
+            <values>
+                <fullName>Auto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hipotecario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nomina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Cuentas_De_Captacion__c</picklist>
+            <values>
+                <fullName>Ahorro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cheques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fondos%2C Inversiones y plazo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nomina</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Desea_Cancelar_La_Carta_Origen__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Destino__c</picklist>
+            <values>
+                <fullName>Extranjero</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nacional</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Etapa_Carta_Custodia__c</picklist>
+            <values>
+                <fullName>Aprobada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autorización CRM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autorización Fraudes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autorización Generador</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autorización Inteligencia Comercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autorización Seguridad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rechazada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitud</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Frecuencia__c</picklist>
+            <values>
+                <fullName>Bimestral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mensual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quincenal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semanal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Única Vez</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Ic_Participa__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Origen__c</picklist>
+            <values>
+                <fullName>Campaña</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proyecto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Regreso_De_Informacion__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Requiere_Aprobacion_De_Fraudes__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Seguros_Bancomer__c</picklist>
+            <values>
+                <fullName>Accidentes y enfermedades</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autos y Bienes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vida y familia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Servicios_Digitales__c</picklist>
+            <values>
+                <fullName>B com</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B movil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BBVA Send</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BBVA Wallet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bancomer SMS</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tarjetas_De_Credito__c</picklist>
+            <values>
+                <fullName>Bancarias</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negocios y Micronegocios</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIVE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tipo_De_Informacion__c</picklist>
+            <values>
+                <fullName>Externo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interno BBVA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tipo_de_Envio__c</picklist>
+            <values>
+                <fullName>Externo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interno</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CRM_WF_Carta_Origen_Readonly</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+        <label>Carta Origen Readonly</label>
+        <picklistValues>
+            <picklist>CRM_WF_Canales_Com_Carta_Custodia__c</picklist>
+            <values>
+                <fullName>Cenefa de edo%2E cta%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Correo Directo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Correo Electrónico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Encuestas Telefónicas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inserto en edo%2E cta%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Login Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No aplica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Redes Sociales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Creditos__c</picklist>
+            <values>
+                <fullName>Auto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hipotecario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nomina</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPI</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Cuentas_De_Captacion__c</picklist>
+            <values>
+                <fullName>Ahorro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cheques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fondos%2C Inversiones y plazo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nomina</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Desea_Cancelar_La_Carta_Origen__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Destino__c</picklist>
+            <values>
+                <fullName>Extranjero</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nacional</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Etapa_Carta_Custodia__c</picklist>
+            <values>
+                <fullName>Aprobada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autorización CRM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autorización Fraudes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autorización Generador</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autorización Inteligencia Comercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autorización Seguridad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rechazada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solicitud</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Frecuencia__c</picklist>
+            <values>
+                <fullName>Bimestral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mensual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quincenal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semanal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Única Vez</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Ic_Participa__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Origen__c</picklist>
+            <values>
+                <fullName>Campaña</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Otro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proyecto</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Regreso_De_Informacion__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Requiere_Aprobacion_De_Fraudes__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Si</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Seguros_Bancomer__c</picklist>
+            <values>
+                <fullName>Accidentes y enfermedades</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Autos y Bienes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vida y familia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Servicios_Digitales__c</picklist>
+            <values>
+                <fullName>B com</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B movil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BBVA Send</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BBVA Wallet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bancomer SMS</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tarjetas_De_Credito__c</picklist>
+            <values>
+                <fullName>Bancarias</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negocios y Micronegocios</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIVE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tipo_De_Informacion__c</picklist>
+            <values>
+                <fullName>Externo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interno BBVA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CRM_WF_Tipo_de_Envio__c</picklist>
+            <values>
+                <fullName>Externo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interno</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>CRM_WF_Canal_De_Com_Iguales_Prov_Y_Carta</fullName>
+        <active>true</active>
+        <description>Regla de Validación que no permite guardar un registro de carta Origen si los canales de comunicación entre el proveedor (cuenta) y la Carta Origen son distintos.</description>
+        <errorConditionFormula>TEXT (CRM_WF_Canales_Com_Carta_Custodia__c) &lt;&gt;  TEXT ( GBL_WF_Emp_Area_Bancomer__r.GBL_WF_Canales_De_Comunicacion__c  )</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Canales_Com_Carta_Custodia__c</errorDisplayField>
+        <errorMessage>Los canales de comunicación entre el proveedor (cuenta) y la Carta Origen no pueden ser distintos.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Cartas_R_De_Acuerdo_A_Frecuencia</fullName>
+        <active>true</active>
+        <description>Regla de validación para que el Total de Cartas recurrentes permitidas este dentro del rango por cada Frecuencia</description>
+        <errorConditionFormula>AND ( ISPICKVAL ( CRM_WF_Frecuencia__c , &quot;Única Vez&quot;),( CRM_WF_Total_De_C_Recurrentes__c &gt; 1 ))  ||
+AND ( ISPICKVAL ( CRM_WF_Frecuencia__c , &quot;Semanal&quot;),( CRM_WF_Total_De_C_Recurrentes__c &gt; 12 ))   ||
+AND ( ISPICKVAL ( CRM_WF_Frecuencia__c , &quot;Quincenal&quot;),( CRM_WF_Total_De_C_Recurrentes__c &gt; 6 ))  ||
+AND ( ISPICKVAL ( CRM_WF_Frecuencia__c , &quot;Mensual&quot;),( CRM_WF_Total_De_C_Recurrentes__c &gt; 3 ))    ||
+AND ( ISPICKVAL ( CRM_WF_Frecuencia__c , &quot;Bimestral&quot;),( CRM_WF_Total_De_C_Recurrentes__c &gt; 2 ))  ||
+AND ( ISPICKVAL ( CRM_WF_Frecuencia__c , &quot;Trimestral&quot;),( CRM_WF_Total_De_C_Recurrentes__c &gt; 1 )) ||
+AND ( ISPICKVAL ( CRM_WF_Frecuencia__c , &quot;Semestral&quot;),( CRM_WF_Total_De_C_Recurrentes__c &gt; 1 ))  ||
+AND ( ISPICKVAL ( CRM_WF_Frecuencia__c , &quot;Anual&quot;),( CRM_WF_Total_De_C_Recurrentes__c &gt; 1 ))</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Frecuencia__c</errorDisplayField>
+        <errorMessage>El Total de Cartas recurrentes no puede ser mayor al rango correspondiente por cada Frecuencia</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Justi_Cancelacion_CO_Obligatoria</fullName>
+        <active>true</active>
+        <description>Si seleccionas el valor Si en el campo ¿Desea cancelar la Carta Origen? debes agregar una Justificación de Cancelación de Carta</description>
+        <errorConditionFormula>AND( 
+ISPICKVAL( CRM_WF_Desea_Cancelar_La_Carta_Origen__c , &quot;Si&quot;), 
+CRM_WF_Just_De_Cancelacin_Carta__c = &quot;&quot;,
+RecordType.Name = &quot;Carta Origen&quot;  || 
+RecordType.Name = &quot;Carta Origen Readonly&quot; 
+)</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Just_De_Cancelacin_Carta__c</errorDisplayField>
+        <errorMessage>Debes agregar una Justificación de Cancelación para la Carta Origen</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_No_De_Bases_Solicitadas_Mayor_A_1</fullName>
+        <active>true</active>
+        <errorConditionFormula>CRM_WF_Numero_De_Bases_A_Enviar__c  &lt; 1</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Numero_De_Bases_A_Enviar__c</errorDisplayField>
+        <errorMessage>El número de bases solicitadas debe ser mayor o igual a 1</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_No_De_Registros_Mayor_A_1</fullName>
+        <active>true</active>
+        <errorConditionFormula>CRM_WF_Total_de_Registros__c &lt; 1</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Total_de_Registros__c</errorDisplayField>
+        <errorMessage>El número total de registros debe ser mayor o igual a 1</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Val_A_Partir_De_En_Rango</fullName>
+        <active>false</active>
+        <errorConditionFormula>CRM_WF_A_Partir_De__c &lt; 
+CRM_WF_Campana_Carta_Custodia__r.StartDate 
+
+|| 
+
+CRM_WF_A_Partir_De__c &gt;
+CRM_WF_Campana_Carta_Custodia__r.EndDate</errorConditionFormula>
+        <errorDisplayField>CRM_WF_A_Partir_De__c</errorDisplayField>
+        <errorMessage>La fecha inicial de la Carta Origen debe estar dentro del rango de la vigencia autorizada en la Campaña</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Validacion_Bases</fullName>
+        <active>true</active>
+        <errorConditionFormula>CRM_WF_Total_Bases_En_C_Recurrentes__c &gt;  CRM_WF_Numero_De_Bases_A_Enviar__c</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Numero_De_Bases_A_Enviar__c</errorDisplayField>
+        <errorMessage>El total de bases en Cartas recurrentes no puede ser mayor al total de bases de la campaña</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CRM_WF_Validacion_Registros</fullName>
+        <active>true</active>
+        <errorConditionFormula>CRM_WF_Total_Registros_En_C_Recurrentes__c &gt;  CRM_WF_Total_de_Registros__c</errorConditionFormula>
+        <errorDisplayField>CRM_WF_Total_de_Registros__c</errorDisplayField>
+        <errorMessage>El total de registros en cartas recurrentes no puede ser mayor al total de registros de la campaña</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

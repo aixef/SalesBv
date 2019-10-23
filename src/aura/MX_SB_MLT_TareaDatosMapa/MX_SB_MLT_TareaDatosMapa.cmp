@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="MX_SB_MLT_MapaTDT_Cls" access="global" >
+     <aura:attribute name="recordId" type="Id" />
+     <aura:attribute name="mapMarkers" type="Object" access="PRIVATE" />
+     <aura:attribute name="markersTitle" type="String" access="PRIVATE" />
+     <aura:attribute name="zoomLevel" type="Integer"  />
+     <aura:attribute name="bModal" type="Boolean" default="false" />
+     <aura:handler name="init" value="{!this}" action="{!c.handleInit}"/>
+     <aura:if isTrue="{!!empty(v.mapMarkers)}" >
+          <lightning:tabset >
+               <lightning:buttonIcon onclick="{!c.fullScreen}" size="large" iconName="utility:expand" class="ExpandMap" />
+               <lightning:map 
+                    mapMarkers="{!v.mapMarkers}" 
+                    markersTitle="{!v.markersTitle}" 
+                    zoomLevel="{!v.zoomLevel}" />
+          </lightning:tabset>
+          <aura:if isTrue="{!v.bModal}" >
+               <c:MX_SB_MLT_BusquedaEnMapa   isActive="{!v.bModal}" mapMarkers="{! v.mapMarkers }" zoomLevel="{!v.zoomLevel}" recordId="{!v.recordId}"  />
+          </aura:if>
+     </aura:if>
+</aura:component>

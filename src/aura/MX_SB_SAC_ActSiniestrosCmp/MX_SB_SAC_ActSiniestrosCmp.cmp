@@ -1,0 +1,53 @@
+<aura:component controller="MX_SB_SAC_WS_ActSiniestros" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,lightning:availableForFlowScreens" access="global" >
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="trueFlow" type="Boolean"  access="global" default="false"/>
+    <aura:attribute name="record" type="Contract" />
+    <aura:attribute name="OpptyRecord" type="Contract" />
+    <aura:attribute name="recordError" type="Object" />
+    <aura:attribute name="wsCount" type="Integer" default="0"/>
+    <aura:attribute name="detailError" type="String" default=""/>
+    <aura:attribute name="allCorrect" type="Boolean" default="false"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+       
+    <force:recordData aura:id="record" layoutType="FULL" recordId="{!v.recordId}" targetError="{!v.recordError}" targetRecord="{!v.record}" targetFields="{!v.OpptyRecord}" recordUpdated="{!c.afterUpdateContract}" mode="VIEW"/>
+    
+    <div class="slds_container">
+        <aura:if isTrue="{!v.detailError != ''}">
+            <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                <label>{!v.detailError}</label><br/>
+            </div>
+        </aura:if>        
+        <aura:if isTrue="{!v.allCorrect}">
+            <div class="slds-notify_container slds-is-relative">
+                <div class="slds-notify slds-notify_toast slds-theme_success" role="status">
+                    <span class="slds-assistive-text">success</span>
+                    <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top">
+                    </span>
+                    <div class="slds-notify__content slds-align_absolute-center">
+                        <span class="slds-text-heading_small">Contratos actualizados</span>
+                    </div>
+                </div>
+            </div>
+            <aura:set attribute="else">
+                <div class="slds-notify_container slds-is-relative">
+                    <div class="slds-notify slds-notify_toast slds-theme_success" role="status">
+                        <span class="slds-assistive-text">error</span>
+                        <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top">
+                        </span>
+                        <div class="slds-notify__content slds-align_absolute-center">
+                            <span class="slds-text-heading_small">En espera...</span>
+                        </div>
+                    </div>
+                </div>
+            </aura:set>
+        </aura:if>
+        <aura:if isTrue="{!v.trueFlow == false}">
+            <div class="slds-grid">
+                <div class="slds-grid slds-grid_vertical slds-size_1-of-1 slds-align_absolute-center slds-m-top_large">
+                    <lightning:button aura:id="btnContinuar" label="Continuar" onclick="{!c.navToRecord}"/> 
+                </div>
+                <lightning:spinner class="slds-hide" aura:id="spinner" variant="brand" size="medium" alternativeText="Consultando..."/>
+            </div>                
+        </aura:if>
+    </div>
+</aura:component>

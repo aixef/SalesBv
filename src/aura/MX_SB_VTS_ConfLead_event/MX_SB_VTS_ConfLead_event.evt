@@ -1,0 +1,18 @@
+<!--
+  @Component Name     : MX_SB_VTS_selectedsObjectRecordEvent.evt
+  @Description        : 
+  @Author             : Arsenio Perez Lopez 
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 26/4/2019 11:58:34
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    26/4/2019 10:56:46   Arsenio Perez Lopez      Initial Version Los componentes que comunican son: MX_SB_VTS_ScripLead y MX_WB_CampaniasCTI_cmp
+-->
+<aura:event type="COMPONENT" description="Event template">
+        <aura:attribute name="recordByEvent" type="sObject"/>
+        <aura:attribute name="DateToLead" type="String"/>
+        <aura:attribute name="Bandeja" type="String"/>
+</aura:event>

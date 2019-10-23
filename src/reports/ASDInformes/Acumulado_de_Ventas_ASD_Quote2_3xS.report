@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity.Quotes$GrandTotal</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>Total de ventas ASD fecha emisión esté mes</description>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.Quotes$MX_SB_VTS_Numero_de_Poliza__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Quotes.QuoteLineItems$MX_WB_noPoliza__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$LastModifiedBy</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>prod-connected-app</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Quotes$MX_SB_VTS_Familia_Productos__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>ASD</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Quotes.QuoteLineItems$Product2</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Acumulado de Ventas ASD Quote2</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OportunidadPresupuestoPartidaPresupuesto__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.Quotes.QuoteLineItems$MX_WB_fechaEmision__c</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

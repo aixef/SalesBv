@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Horas de trabajo de los asesores acorde al turno.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>MX_WB_HorarioMaximo__c</fullName>
+        <description>Horario de salida del turno en cuestión. Definido en formatohh:mm</description>
+        <externalId>false</externalId>
+        <label>MX_WB_HorarioMaximo</label>
+        <length>5</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WB_HorarioMinimo__c</fullName>
+        <description>Horario mínimo del turno en cuestion en formato hh:mm</description>
+        <externalId>false</externalId>
+        <label>MX_WB_HorarioMinimo</label>
+        <length>5</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>MX_WB_TlmktHorarios</label>
+    <visibility>Public</visibility>
+</CustomObject>

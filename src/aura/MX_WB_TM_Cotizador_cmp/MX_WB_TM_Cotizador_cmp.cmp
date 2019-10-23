@@ -1,0 +1,55 @@
+<aura:component controller="MX_WB_TM_Cotizador_cls" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="urlCoti" type="String" default=""/>
+    <aura:attribute name="blShowProdLst" type="boolean" default="false"/>
+    <aura:attribute name="blShowUrl" type="boolean" default="false"/>
+    <aura:attribute name="blShowError" type="boolean" default="false"/>
+    <aura:attribute name="blShowMsgPro" type="boolean" default="false"/>
+    <aura:attribute name="lstProd" type="List"/>
+    <aura:attribute name="msjError" type="String"/>
+    <aura:attribute name="genericRecord" type="sObject" />
+    <force:recordData aura:id="genericDataObject" layoutType="FULL" recordId="{!v.recordId}" recordUpdated="{!c.afterUpDate}" targetFields="{!v.genericRecord}" mode="VIEW"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:MX_SB_VTS_UpdateQuoteCot" action="{!c.updateQuote}"/>
+    
+    <div class="h_iframe">
+        <aura:if isTrue="{!v.blShowUrl}">
+            <iframe width="100%" align="top" src="{!v.urlCoti}" height="1200px"></iframe>
+        </aura:if>
+        <aura:if isTrue="{!v.blShowError}">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="status">
+                <span class="slds-align_absolute-center slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top" title="Warning">
+                    <lightning:icon iconName="utility:error" size="small" variant="warning" alternativeText="WARNING"/>
+                </span>
+                <span class="slds-assistive-text">Error</span>
+                <div class="slds-notify__content">
+                    <h1 class="slds-text-heading_small">{!v.msjError}</h1>
+                </div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.blShowProdLst}">
+            <aura:if isTrue="{!v.blShowMsgPro}">
+                    <div class="slds-align_absolute-center slds-notify slds-notify_toast slds-theme_info" role="status">
+                        <span class="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top" title="Warning">
+                            <lightning:icon iconName="utility:warning" size="small" variant="warning" alternativeText="WARNING"/>
+                        </span>
+                        <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small">{!$Label.c.MX_WB_CL_MustHaveProduct}</h2>
+                        </div>
+                    </div>
+            </aura:if>
+            <div class="slds-align_absolute-center slds-truncate" title="Productos">
+                <lightning:select aura:id="selProd" name="selProd" class="slds-size_2-of-2 slds-p-horizontal_x-small" >
+                    <option value="option" text="Seleccione un producto"></option>
+                    <aura:iteration items="{!v.lstProd}" var="itemProd">
+                        <option value="{!itemProd.Id}" text="{!itemProd.Name}"></option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+            <br/>
+            <div class="slds-align_absolute-center slds-truncate" title="Productos">
+                <lightning:button variant="brand" label="Asignar" onclick="{! c.addProductCtrl }" />
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

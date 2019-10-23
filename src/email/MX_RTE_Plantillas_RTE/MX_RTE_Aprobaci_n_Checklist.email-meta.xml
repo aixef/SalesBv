@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Mensaje que se manda cuando se manda a solicitar un checklist.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Aprobación Checklist</name>
+    <style>none</style>
+    <subject>Estimado {!User.FirstName}, se solicita su aprobación para este checklist.</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

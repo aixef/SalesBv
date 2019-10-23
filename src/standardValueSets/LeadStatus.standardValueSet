@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Abierto</fullName>
+        <default>true</default>
+        <label>Abierto</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Apertura</fullName>
+        <default>false</default>
+        <label>Apertura</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Cotizada</fullName>
+        <default>false</default>
+        <label>Cotizada</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacto</fullName>
+        <default>false</default>
+        <label>Contacto</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Información y Condiciones</fullName>
+        <default>false</default>
+        <label>Información y Condiciones</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Objeciones</fullName>
+        <default>false</default>
+        <label>Objeciones</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Apertura de Cuenta</fullName>
+        <default>false</default>
+        <label>Apertura de Cuenta</label>
+        <converted>true</converted>
+    </standardValue>
+</StandardValueSet>

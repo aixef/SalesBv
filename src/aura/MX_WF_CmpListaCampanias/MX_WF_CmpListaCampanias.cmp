@@ -1,0 +1,28 @@
+<aura:component controller="MX_WF_CampanasController" implements="force:appHostable,lightning:availableForFlowScreens" access="global">
+
+    <!-- attributes -->
+    <aura:attribute name="data" type="List" description="variable para registrar los datos a mostrar en la tabla"/>
+    <aura:attribute name="columns" type="List" description="variable para almacenar las columnas a mostrar en la tabla"/>
+    <aura:attribute name="selectedRowsCount" type="Integer" default="all" description="variable para almacenar cantidad los registros seleccionados"/>
+    <aura:attribute name="maxRowSelection" type="Integer" description="variable para almacenar el máximo de registros seleccionados"/>
+    <aura:attribute name="campana_seleccionada" type="String[]"  description="variable para almacenar los id de registros seleccionados"/>
+    <aura:attribute name="FechaFinVigenciaCampania" type="String" description="variable para almacenar párametro de fecha"/>
+    <aura:attribute name="FechaInicioVigenciaCampania" type="String" description="variable para almacenar párametro de fecha"/> 
+      
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <!-- the container element determine the height of the datatable -->
+    <div style="height: 300px">
+       
+        <lightning:datatable
+            columns="{! v.columns }"
+            data="{! v.data }"
+            keyField="id"
+            onrowselection="{! c.campSelected }"
+            maxRowSelection="{! v.maxRowSelection }"
+             /> 
+          <!--  maxRowSelection="{! v.maxRowSelection }" --> 
+    </div>
+ 
+</aura:component>

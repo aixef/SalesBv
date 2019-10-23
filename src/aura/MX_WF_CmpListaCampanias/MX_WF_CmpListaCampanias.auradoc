@@ -1,0 +1,7 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="CmpListaCampanias" ref="CmpListaCampanias" label="Lista de Campañas">
+		El componente muestra la lista de campañas que cumplen con las condiciones definidas 
+        en el apex controller y devuelve una lista con los id seleccionados.
+	</aura:example>
+</aura:documentation>

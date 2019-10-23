@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div><br></div><table border="0" cellpadding="5" width="600" cellspacing="5" height="400"><tbody><tr valign="top" height="300"><td teditid="c1r2" aeditid="c1r2" locked="0" style="background-color: rgb(255, 255, 255);"><font face="arial" style="font-size: 12pt;"><span style="font-size: 12pt;">Por medio de la presente le informamos que la Modificación a Campaña&nbsp;</span></font><b>{!CRM_WF_Modificacion__c.Name}</b><b style="font-size: 12pt;">&nbsp;</b><span style="font-size: 12pt;">ha sido rechazada con los siguientes comentarios:</span><div style="font-size: 12pt;"><br><font face="arial" style="font-size: 12pt;">Comentarios:&nbsp;</font><b style="font-size: 12pt;">{!ApprovalRequest.Comments}&nbsp;&nbsp;</b><br><div style="font-size: 12pt;"><br></div><br><div style="font-size: 12pt;">Para mayor detalle favor de dar clic en la siguiente liga:</div><div style="font-size: 12pt;"><br></div><div style="font-size: 12pt;"><span style="font-size: 12pt;"><a href="{!CRM_WF_Modificacion__c.Link}">Detalle Modificación en Campaña</a></span></div></div></td></tr></tbody></table>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

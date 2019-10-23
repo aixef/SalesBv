@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Se crea el objeto Personalizado para realizar la matriz de argumentos con base a la retención</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>MX_SB_SAC_ArgumentoBBVA__c</fullName>
+        <description>Se agrega el dialogo Argumento BBVA</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Argumento BBVA</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_ArgumentoConcientizacion__c</fullName>
+        <description>Se agrega el dialogo  argumento Concientización</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Argumento Concientización</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_ArgumentoEstadIsticasReales__c</fullName>
+        <description>Se agrega el dialogo  argumento Argumento Estadísticas Reales</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Argumento Estadísticas Reales</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_Color__c</fullName>
+        <description>Se utiliza para filtrar el color  correspondiente a el caso.</description>
+        <externalId>false</externalId>
+        <label>Color</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Verde</fullName>
+                    <default>false</default>
+                    <label>Verde</label>
+                </value>
+                <value>
+                    <fullName>Amarillo</fullName>
+                    <default>false</default>
+                    <label>Amarillo</label>
+                </value>
+                <value>
+                    <fullName>Rojo</fullName>
+                    <default>false</default>
+                    <label>Rojo</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_Producto__c</fullName>
+        <description>Se utiliza para filtrar el producto correspondiente a el caso.</description>
+        <externalId>false</externalId>
+        <label>Producto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Auto Seguro Bancomer</fullName>
+                    <default>false</default>
+                    <label>Auto Seguro Bancomer</label>
+                </value>
+                <value>
+                    <fullName>Auto Seguro Dinámico</fullName>
+                    <default>false</default>
+                    <label>Auto Seguro Dinámico</label>
+                </value>
+                <value>
+                    <fullName>Auto Seguro Dinámico Amplio</fullName>
+                    <default>false</default>
+                    <label>Auto Seguro Dinámico Amplio</label>
+                </value>
+                <value>
+                    <fullName>Auto Seguro Dinámico Limitado</fullName>
+                    <default>false</default>
+                    <label>Auto Seguro Dinámico Limitado</label>
+                </value>
+                <value>
+                    <fullName>Auto Seguro Dinámico RC</fullName>
+                    <default>false</default>
+                    <label>Auto Seguro Dinámico RC</label>
+                </value>
+                <value>
+                    <fullName>Auto Seguro Basico Estandarizado</fullName>
+                    <default>false</default>
+                    <label>Auto Seguro Basico Estandarizado</label>
+                </value>
+                <value>
+                    <fullName>Auto Seguro Practico Alto</fullName>
+                    <default>false</default>
+                    <label>Auto Seguro Practico Alto</label>
+                </value>
+                <value>
+                    <fullName>Auto Seguro Practico Bajo</fullName>
+                    <default>false</default>
+                    <label>Auto Seguro Practico Bajo</label>
+                </value>
+                <value>
+                    <fullName>RC Legalizado</fullName>
+                    <default>false</default>
+                    <label>RC Legalizado</label>
+                </value>
+                <value>
+                    <fullName>Auto Nacionalizado</fullName>
+                    <default>false</default>
+                    <label>Auto Nacionalizado</label>
+                </value>
+                <value>
+                    <fullName>Auto Fronterizo</fullName>
+                    <default>false</default>
+                    <label>Auto Fronterizo</label>
+                </value>
+                <value>
+                    <fullName>Conductor Seguro</fullName>
+                    <default>false</default>
+                    <label>Conductor Seguro</label>
+                </value>
+                <value>
+                    <fullName>RC USA</fullName>
+                    <default>false</default>
+                    <label>RC USA</label>
+                </value>
+                <value>
+                    <fullName>RC Carretero Obligatorio</fullName>
+                    <default>false</default>
+                    <label>RC Carretero Obligatorio</label>
+                </value>
+                <value>
+                    <fullName>Seguro de moto Bancomer</fullName>
+                    <default>false</default>
+                    <label>Seguro de moto Bancomer</label>
+                </value>
+                <value>
+                    <fullName>Alianza Honda</fullName>
+                    <default>false</default>
+                    <label>Alianza Honda</label>
+                </value>
+                <value>
+                    <fullName>VW Venta Sin Crédito</fullName>
+                    <default>false</default>
+                    <label>VW Venta Sin Crédito</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_RazonCancelacion__c</fullName>
+        <description>Se utiliza para filtrar la tipificación correspondiente al caso.</description>
+        <externalId>false</externalId>
+        <label>Razón de cancelación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Duplicidad</fullName>
+                    <default>false</default>
+                    <label>Duplicidad</label>
+                </value>
+                <value>
+                    <fullName>Economía Personal</fullName>
+                    <default>false</default>
+                    <label>Economía Personal</label>
+                </value>
+                <value>
+                    <fullName>Malas Ventas</fullName>
+                    <default>false</default>
+                    <label>Malas Ventas</label>
+                </value>
+                <value>
+                    <fullName>Mal Servicio</fullName>
+                    <default>false</default>
+                    <label>Mal Servicio</label>
+                </value>
+                <value>
+                    <fullName>Meses sin intereses</fullName>
+                    <default>false</default>
+                    <label>Meses sin intereses</label>
+                </value>
+                <value>
+                    <fullName>No especifica motivo</fullName>
+                    <default>false</default>
+                    <label>No especifica motivo</label>
+                </value>
+                <value>
+                    <fullName>Otra Aseguradora</fullName>
+                    <default>false</default>
+                    <label>Otra Aseguradora</label>
+                </value>
+                <value>
+                    <fullName>Venta</fullName>
+                    <default>false</default>
+                    <label>Venta</label>
+                </value>
+                <value>
+                    <fullName>Créditos</fullName>
+                    <default>false</default>
+                    <label>Créditos</label>
+                </value>
+                <value>
+                    <fullName>Cobranza</fullName>
+                    <default>false</default>
+                    <label>Cobranza</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_SubDetalleCancelacion__c</fullName>
+        <description>Se utiliza para filtrar la tipificación correspondiente al caso subdetalle.</description>
+        <externalId>false</externalId>
+        <label>SubDetalle de cancelación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Error en condiciones de venta</fullName>
+                    <default>false</default>
+                    <label>Error en condiciones de venta</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Argumento</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>ARG-{0000}</displayFormat>
+        <label>Nombre de Argumento</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Argumentos</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

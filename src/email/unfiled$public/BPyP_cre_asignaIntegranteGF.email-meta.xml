@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notificación de una nueva asignación de un integrante a un family group</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BBVA_CS</letterhead>
+    <name>BPyP_cre_asignaIntegranteGF</name>
+    <style>formalLetter</style>
+    <subject>Aprobación para nueva asignación de Family Group</subject>
+    <textOnly>Estimado, Se te informa que el usuario {!Account.OwnerFullName}, desea realizar la asignación del cliente:
+
+{!Account.Name}
+
+al Group Family:
+
+{!Account.Grupo_al_que_pertenece__c}
+
+Esta acción se encuentre pendiente por su aprobación, para poder aprobar/rechazar el registro ingresa a tu aplicación Salesforce.
+
+Banca Privada y Patrimonial
+BBVA Bancomer</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

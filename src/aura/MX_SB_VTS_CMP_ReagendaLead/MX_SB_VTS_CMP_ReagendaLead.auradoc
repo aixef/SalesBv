@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Documentacion</aura:description>
+	<aura:example name="MX_SB_VTS_CMP_ReagendaLead" ref="Reagenda" label="Reagenda">
+		<p>Permite reagendar llamadas a leads para flujo manual y automatizado.</p>
+    </aura:example>
+</aura:documentation>

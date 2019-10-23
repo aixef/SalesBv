@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Carta Origen Rechazada</name>
+    <style>formalLetter</style>
+    <subject>La Carta Origen {!CRM_WF_Cartas_Origen__c.Name} de la Campaña {!Campaign.Name} ha sido rechazada</subject>
+    <textOnly>Por medio de la presente le informamos que la Carta Origen {!CRM_WF_Cartas_Origen__c.Name}  ha sido rechazada con los siguientes comentarios:
+
+Comentarios: {!ApprovalRequest.Comments}
+
+
+Campaña: {!Campaign.Name}
+Folio de Campaña FIC: {!Campaign.CRM_WF_FIC__c}
+
+Vigencia:
+A partir de : {!CRM_WF_Cartas_Origen__c.CRM_WF_A_Partir_De__c} Hasta: {!CRM_WF_Cartas_Origen__c.00N1F000001DADk}
+Frecuencia: {!CRM_WF_Cartas_Origen__c.CRM_WF_Frecuencia__c}
+Número de Bases a Enviar: {!CRM_WF_Cartas_Origen__c.CRM_WF_Numero_De_Bases_A_Enviar__c}
+Total de Registros: {!CRM_WF_Cartas_Origen__c.CRM_WF_Total_de_Registros__c}
+Total de Cartas Recurrentes: {!CRM_WF_Cartas_Origen__c.CRM_WF_Total_De_C_Recurrentes__c}
+Fecha de Aprobación de Seguridad: {!CRM_WF_Cartas_Origen__c.CRM_WF_Fecha_Aprobacion_Seguridad__c}
+
+Fecha de solicitud de extensión de borrado de información: {!CRM_WF_Cartas_Origen__c.CRM_WF_Fecha_Solicitud_De_Ext_Borrado__c}.
+
+Para mayor información, puede ingresar a los detalles del registro:
+
+
+
+Para mayor detalle favor de dar clic en la siguiente liga:
+
+Registro de Carta Origen en Salesforce</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

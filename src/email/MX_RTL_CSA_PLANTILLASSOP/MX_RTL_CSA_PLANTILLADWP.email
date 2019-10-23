@@ -1,0 +1,14 @@
+*** NOTIFICACIÓN DE ASIGNACIÓN DE TICKET NUEVO *** 
+
+Se le ha asignado el siguiente ticket.   
+
+N° de Caso:  {!Case.CaseNumber}
+Tipo:{!Case.Type}
+Unidad de Negocio: {!Case.MX_RTL_CSA_UNIDADESDWP__c}
+Creado por: {!User.Name}
+
+Asunto:  {!Case.Subject}
+Descripción: {!Case.Description}
+
+
+Haga clic en el vínculo para acceder directamente al ticket: {!Case.Link}

@@ -1,0 +1,10 @@
+<aura:documentation>
+    <aura:description>
+        <p>Attribute: <b>recordId: </b> Id del registro a tratar</p>
+        <p>Attribute: <b>pkValue: </b> Valor del picklist de detalle seleccionado</p>
+        <p>Componente que obtiene los valores del campo MX_SB_SAC_Detalle__c acordes a a las dependencias que tiene para seleccionar detalle de una <b>No Mala Venta</b></p>
+    </aura:description>
+    <aura:example name="RetrieveDetailValue" ref="c:MX_SB_SAC_VisualizaPKValues" label="Recupera valores de picklist">
+        Recupera los valores del picklist de detalle.
+    </aura:example>
+</aura:documentation>

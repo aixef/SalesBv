@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notificación interna al propietario del caso cuando se asigna un caso.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SOPORTE:  Notificación de asignación nueva (MUESTRA)</name>
+    <style>none</style>
+    <subject>Nº de caso {!Case.CaseNumber}: {!Case.Subject} le ha sido asignado.</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

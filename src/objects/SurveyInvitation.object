@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewSurveyResponse</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>CommunityId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EmailBrandingId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>InvitationLink</fullName>
+    </fields>
+    <fields>
+        <fullName>InviteExpiryDateTime</fullName>
+    </fields>
+	<fields>
+        <fullName>MX_SB_SAC_90DiasCheck__c</fullName>
+		<description>Campo  para identificar 90 días de exclusión.</description>
+        <externalId>false</externalId>
+        <formula>MX_SB_SAC_Caso__r.Account.MX_SB_SAC_EnvioEncuestaIrene__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MX_SB_SAC_90DiasCheck</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_Caso__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Sirve para relacionar la invitación de las encuestas con el caso</description>
+        <externalId>false</externalId>
+        <label>Caso</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Invitaciones de encuestas</relationshipLabel>
+        <relationshipName>Invitaciones_de_encuestas</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_NombreCuenta__c</fullName>
+        <description>Contiene el nombre del cliente al cual se le hará un envío de correo electrónico</description>	
+        <externalId>false</externalId>
+        <formula>MX_SB_SAC_Caso__r.Account.MX_SB_SAC_NombreCompleto__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nombre Cuenta</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_NoventaDiasCumplidosIrene__c</fullName>
+        <description>Este campo valida sí la fecha de creación mas 90 días es igual al día de &quot;hoy&quot; sí es así  la formula debe mostrar un SI</description>
+        <externalId>false</externalId>
+        <formula>IF( DATETIMEVALUE(ADDMONTHS(CreatedDate, VALUE($Label.MX_SB_SAC_NumeroMesIrene ))) =  DATETIMEVALUE(TODAY()), &apos;SI&apos;, &apos;NO&apos; )</formula>
+        <inlineHelpText>La etiqueta personalizada debe ser un número por la cantidad de meses</inlineHelpText>
+        <label>¿Cumple 90 días para enviar correo?</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_anioCreacion__c</fullName>
+        <description>Almacena el año de la fecha de creación del caso</description>
+        <externalId>false</externalId>
+        <formula>YEAR(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate ))</formula>
+        <label>Año de creación</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_diaCreacion__c</fullName>
+        <description>Este campo guarda el día de la fecha de apertura del caso</description>
+        <externalId>false</externalId>
+        <formula>DAY(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate ) )</formula>
+        <label>Día de creación</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_SAC_mesCreacion__c</fullName>
+        <description>Este campo guarda el mes de la fecha de apertura del caso</description>
+        <externalId>false</externalId>
+        <formula>IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 1,&apos;Enero&apos;,
+ IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 2,&apos;Febrero&apos;,
+  IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 3,&apos;Marzo&apos;,
+   IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 4,&apos;Abril&apos;,
+    IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 5,&apos;Mayo&apos;,
+     IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 6,&apos;Junio&apos;,
+      IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 7,&apos;Julio&apos;,
+       IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 8,&apos;Agosto&apos;,
+        IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 9,&apos;Septiembre&apos;,
+         IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 10,&apos;Octubre&apos;,
+          IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 11,&apos;Noviembre&apos;,
+           IF(MONTH(DATEVALUE( MX_SB_SAC_Caso__r.CreatedDate )) == 12,&apos;Diciembre&apos;,&apos;falso&apos;)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)</formula>
+        <label>Mes de creación</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+    </fields>
+    <fields>
+        <fullName>ParticipantId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ResponseStatus</fullName>
+    </fields>
+    <fields>
+        <fullName>SurveyId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

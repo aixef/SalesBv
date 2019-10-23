@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="MSI" ref="MX_WF_Promocion_Meses" label="Label">
+		Componente para registrar los meses aplicables en promociones con el límite mínimo y máximo correspondiente a cada mes.
+	</aura:example>
+</aura:documentation>

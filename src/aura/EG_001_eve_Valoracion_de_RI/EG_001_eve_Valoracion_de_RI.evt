@@ -1,0 +1,14 @@
+<!--
+*Desarrollado por:       Indra
+*Autor:                  Alberto Galindo Hernandez
+*Proyecto:               Experiencia Única
+*Descripción:            Componente Lightning evento de mostrar modal
+*Cambios (Versiones)
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0    | 23-08-2017     |    Alberto Galindo      |           Creación  
+-->
+<aura:event type="COMPONENT" description="Evento que para BBVA Rating" >
+    <aura:attribute name="rating" type="Integer"/>
+</aura:event>

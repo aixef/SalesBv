@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>MX_SB_SAC_BoColaboracion</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Esta regla sirve para que los de bo puedan ver y modificar los casos que llegan de los asesores</description>
+        <label>MX_SB_SAC_BoColaboracion</label>
+        <sharedTo>
+            <role>MX_SB_SAC_GerenteConsultorSeguros</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_SB_SAC_grupoSAC</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Da permisos a los asesores ante casos que no soy propietarios</description>
+        <label>MX_SB_SAC_grupoSAC</label>
+        <sharedTo>
+            <roleAndSubordinates>MX_SB_SAC_GerenteConsultorSeguros</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_RTE_Features</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Los registros con tipo de registro MX_RTE_Features se comparten con los usuarios de RTE</description>
+        <label>Features</label>
+        <sharedTo>
+            <role>MX_RTE_Admin_RTE</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Features</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_RTE_Features_a_Implementacion_Comercial</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Regla de colaboración que comparte los Features con Implementación Comercial</description>
+        <label>Features a Implementación Comercial</label>
+        <sharedTo>
+            <group>MX_RTE_Implementacion_Comercial_RTE</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Features</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_RTE_Features_a_RCI</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Features a RCI</label>
+        <sharedTo>
+            <role>MX_RTE_RCI</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Features</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_RTE_Features_a_CCC</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Features a CCC</label>
+        <sharedTo>
+            <role>MX_RTE_CCC</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Features</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MX_RTE_Features_a_IC</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Features a IC</label>
+        <sharedTo>
+            <role>MX_RTE_Implementacion_Comercial</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Features</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>MX_WF_Colaboracion_Incidencias_Implementacion_Comercial</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Colaboración Incidencias Implementación Comercial</label>
+        <sharedTo>
+            <role>MX_RTE_Implementacion_Comercial</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>CRM_WF_Gerencia_Squads</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

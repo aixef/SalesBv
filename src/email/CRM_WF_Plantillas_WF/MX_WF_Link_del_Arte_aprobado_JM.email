@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style=""><span style="background-color: rgb(255, 255, 255);"><span lang="ES" style=""><div style="display: inline;"><div class="gmail_default" style=""><div class="gmail_default" style=""><font face="Verdana, Helvetica, sans-serif" style="" size="2"><div class="gmail_default" style=""><div class="gmail_default" style="color: rgb(0, 0, 0);">Estimad@ <b>{!CRM_WF_Artes__c.CreatedBy}</b></div><div class="gmail_default" style="color: rgb(0, 0, 0);"><br></div><div class="gmail_default" style="color: rgb(0, 0, 0);">Favor de ingresar la liga del Arte&nbsp;<b>{!CRM_WF_Artes__c.CRM_WF_Nombre_De_La_Version_Arte__c}</b>&nbsp;con número de folio&nbsp;<b>{!CRM_WF_Artes__c.Name} </b>en el campo&nbsp;<b>"Link del Arte aprobado"</b>.</div><div class="gmail_default" style="color: rgb(0, 0, 0);"><br></div><div class="gmail_default" style="color: rgb(0, 0, 0);">Puedes ingresar desde la siguiente liga para hacer la actualización del registro:</div><div class="gmail_default" style="color: rgb(0, 0, 0);"><br></div><div class="gmail_default" style=""><font color="#3333ff"><b><a href="{!CRM_WF_Artes__c.Link}">Registro Arte&nbsp;{!CRM_WF_Artes__c.Name}</a></b></font></div><div class="gmail_default" style=""><font color="#3333ff"><br></font></div><div class="gmail_default" style=""><font color="#333333">Al ingresar la liga del Arte y guardar el registro, les llegará por correo electrónico a Línea Bancomer y al Buzón de tu Squad.</font></div><div class="gmail_default" style=""><font color="#333333"><br></font></div><div class="gmail_default" style=""><font color="#333333">¡Muchas gracias por tu colaboración!</font></div></div></font></div></div></div></span></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

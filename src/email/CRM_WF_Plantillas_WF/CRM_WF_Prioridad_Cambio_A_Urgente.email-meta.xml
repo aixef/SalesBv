@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Prioridad cambia a Urgente</name>
+    <style>formalLetter</style>
+    <subject>Le informamos que la Campaña {!Campaign.Name} cambio de prioridad a Urgente</subject>
+    <textOnly>Por medio de la presente le comunicamos que la Campaña {!Campaign.Name}:
+
+A cambiado su prioridad a:
+
+{!Campaign.CRM_WF_Prioridad_del__c}
+
+
+Para mayor detalle favor de dar clic en el siguiente link:
+
+{!Campaign.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

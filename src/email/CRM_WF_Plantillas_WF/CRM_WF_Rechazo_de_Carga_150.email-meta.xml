@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Se rechaza la carga mayor a 150mil</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Rechazo de carga +150</name>
+    <style>formalLetter</style>
+    <subject>Rechazo del volumen de la base</subject>
+    <textOnly>Por medio de la presente se le informa que la base con folio {!CRM_WF_Planeacion_Calendario_CRM__c.Name} y fecha de carga {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c} ha sido rechazada con los siguientes comentarios:
+{!ApprovalRequest.Comments}
+Para ver el detalle de su registro de click en el siguiente vínculo Planeación Calendario CRM</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

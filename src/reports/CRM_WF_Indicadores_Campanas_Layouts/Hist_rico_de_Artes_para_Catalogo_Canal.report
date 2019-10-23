@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.Brief__r.Artes__r$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.Brief__r.Artes__r$Id</field>
+    </columns>
+    <columns>
+        <field>Campaign.Brief__r.Artes__r$CRM_WF_Tipo_de_Canal__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Brief__r.Artes__r$CRM_WF_Canal__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Brief__r.Artes__r$CRM_WF_Producto__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Brief__r.Artes__r$CRM_WF_Subproducto__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <format>Tabular</format>
+    <name>Histórico de Artes para Catalogo Canal</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CRM_WF_Campa_as_con_Brief_con_Canales__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Campaign$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

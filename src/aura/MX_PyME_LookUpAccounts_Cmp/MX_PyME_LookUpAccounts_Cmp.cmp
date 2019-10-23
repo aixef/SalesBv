@@ -1,0 +1,82 @@
+<aura:component controller = "MX_PyME_MassiveTransfer_Cls" implements = "force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute Name = "selItem" type="object"  access="public" description="First Object selected"/>
+    <aura:attribute Name = "selItem1" type="object"  access="public" description="Second Object selected"/>
+    <aura:attribute name = "data" type="Object" description="Object with information of an specific type of object"/>
+    <aura:attribute name = "columns" type="List" description="Number of table columns"/>
+    <aura:attribute name = "recordId" type="String" description="Id of the current record"/>
+    <aura:attribute name = "allData" type="List" default="[]" description="List of objects selected from lookUps"/>
+    <aura:attribute name = "currentPageNumber" type="Integer" default="1" description="Current table page number"/>
+    <aura:attribute name = "pageSize" type="Integer" default="10" description="Total number of records showed in one table page"/>
+    <aura:attribute name = "totalPages" type="Integer" default="false" description="Total number of pages in table"/>
+    <aura:attribute name = "pageList" type="List" default="false" description="List of pages content"/>
+    <aura:attribute name = "showPagination" type="Boolean" default="false" description="Indicates if the pagination is showed"/>
+
+    <aura:handler name = "init" value = "{!this}" action = "{!c.doInit}"/>
+
+    <lightning:card title = "Traspaso masivo de clientes" iconName = "standard:account">
+        <div class = "slds-p-bottom_x-small slds-p-top-medium">
+            <lightning:button class = "slds-float_right slds-m-right_xx-large" label = "Carterizar" iconName="utility:change_owner" iconPosition = "left"  variant = "brand" onclick = "{!c.carterizar}" disabled = "{! v.allData == null || v.selItem1 == null}" />
+        </div>
+        <div class = "slds slds-p-top_x-large">
+            <div class = "slds-grid slds-wrap">
+                <div class = "slds-size_2-of-5 slds-p-left_large slds-p-right_medium slds-p-top_small">
+                    <c:MX_PyME_MassiveTransferAccount_Cmp objectName = "Account"
+                                                          field_API_text = "Name"
+                                                          field_API_val = "Id"
+                                                          field_API_noCliente = "No_de_cliente__c"
+                                                          field_API_ugUsuario = ""
+                                                          field_API_divisionUsuario = ""
+                                                          field_API_mbUsuario = ""
+                                                          field_API_bancaUsuario = ""
+                                                          field_API_divisionPropCuenta = "Division1__c"
+                                                          limit = "4"
+                                                          field_API_search = "Name"
+                                                          lookupIcon = "standard:account"
+                                                          selItem = "{!v.selItem}"
+                                                          placeholder = "Pulse la tecla espacio para buscar al cliente"/>
+                </div>
+                <div class = "slds-size_1-of-5 slds-p-left_medium slds-p-top_small">
+                    <lightning:buttonIcon iconName = "utility:new" size = "large" variant = "bare" alternativeText = "Agregar cliente a lista de transferencia" onclick = "{!c.addRecordToList}" disabled = "{! v.selItem == null}" />
+                </div>
+                <div class = "slds-size_2-of-5 slds-p-left_large slds-p-right_large slds-p-top_small">
+                    <c:MX_PyME_MassiveTransferAccount_Cmp objectName = "User"
+                                                          field_API_text = "Name"
+                                                          field_API_val = "Id"
+                                                          field_API_noCliente = ""
+                                                          field_API_ugUsuario = "UG__c"
+                                                          field_API_divisionUsuario = "Divisi_n__c"
+                                                          field_API_mbUsuario = "FederationIdentifier"
+                                                          field_API_bancaUsuario = "VP_ls_Banca__c"
+                                                          field_API_divisionPropCuenta = ""
+                                                          limit = "4"
+                                                          field_API_search = "Name"
+                                                          lookupIcon = "standard:user"
+                                                          selItem = "{!v.selItem1}"
+                                                          placeholder = "Pulse la tecla espacio para buscar al usuario"/>
+                </div>
+            </div>
+            <div class = "slds-p-top_xx-large" style = "height: 300px">
+                <lightning:datatable
+                                     columns = "{! v.columns }"
+                                     data = "{! v.data }"
+                                     keyField = "id"
+                                     onrowaction = "{! c.handleRowAction }"/>
+            </div>
+            <aura:if isTrue = "{!v.showPagination}">
+                <div class="slds-align_absolute-center">
+                    <lightning:button label = "Inicio" iconName = "utility:left" iconPosition = "left"
+                                      onclick = "{!c.clicOnIniButton}" disabled = "{! v.currentPageNumber == 1}"/>
+                    <lightning:button iconName = "utility:chevronleft" iconPosition = "left"
+                                      onclick = "{!c.clicOnPrevButton}" disabled = "{! v.currentPageNumber == 1}"/>
+                    <span class = "slds-p-horizontal_x-small">
+                        <a>Página: {!v.currentPageNumber} de {!v.totalPages} </a>
+                    </span>
+                    <lightning:button iconName = "utility:chevronright" iconPosition = "right"
+                                      disabled = "{! v.currentPageNumber == v.totalPages}" onclick = "{!c.clicOnNextButton}"/>
+                    <lightning:button label = "Fin" iconName="utility:right" iconPosition = "right"
+                                      disabled = "{! v.currentPageNumber == v.totalPages}" onclick = "{!c.clicOnLastButton}"/>
+                </div>
+            </aura:if>
+        </div>
+    </lightning:card>
+</aura:component>

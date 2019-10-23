@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$Name</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$MX_RTE_area_solicitante__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c$Id</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$MX_RTE_Tipo__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$MX_RTE_Fecha_compromiso__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$MX_RTE_Fecha_de_cumplimiento__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$MX_RTE_Dias_Retraso__c</field>
+    </columns>
+    <columns>
+        <field>MX_RTE_Check_List_Modulo__c.Condicionantes__r$MX_RTE_Documento__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>Condicionantes de los checklist.</description>
+    <format>Tabular</format>
+    <name>Condicionantes</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>MX_RTE_Check_List_con_Condicionantes__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>MX_RTE_Check_List_Modulo__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

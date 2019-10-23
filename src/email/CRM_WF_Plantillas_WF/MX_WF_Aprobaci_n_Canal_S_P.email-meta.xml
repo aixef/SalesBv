@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Aprobación Canal S&amp;P</name>
+    <style>formalLetter</style>
+    <subject>Aprobación del Subject y Preheader del Canal con folio {!CRM_WF_Artes__c.Name}</subject>
+    <textOnly>Por medio de la presente se le solicita su aprobación del Subject &amp; Preheader para el canal con folio {!CRM_WF_Artes__c.Name}
+
+Subject: {!CRM_WF_Artes__c.CRM_WF_Subject__c}
+Preheader: {!CRM_WF_Artes__c.CRM_WF_Preheader__c}
+
+Para mayor información puedes consultar el registro de Brief en Salesforce:
+
+Registro del Canal en Salesforce
+
+Para aprobar o rechazar haga clic en el siguiente vínculo Registro de aprobación</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

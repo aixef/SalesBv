@@ -1,0 +1,15 @@
+<aura:documentation>
+	<aura:description>Componente para seguir el proceso de Telemarketing</aura:description>
+	<aura:example name="MX_WB_CMP_Telemarketing" ref="c:MX_WB_CMP_Telemarketing" label="Label">
+		<p>El componente se utiliza para seguir la ruta del proceso de ventas de telemarketing</p>
+        <p>attribute recordId: Id del registro oportunidad actual.</p>
+        <p>attribute etapa: Etapa en la que se encuentra la oportunidad.</p>
+        <p>attribute script: Script recuperado para mostrar en la etapa pertinente.</p>
+        <p>attribute opport: SObject utilizado para el evento de actualización de etapas.</p>
+        <p>attribute OpptyRecord: SObject utilizado para el evento de actualización de etapas.</p>
+        <p>attribute showTab: Atributo que refleja si se debe colapsar o no el split.</p>
+        <p>attribute producto: Atributo que Almacena el producto de interés de la Oportunidad.</p>
+        <p>Changelog 02/05/2019</p>
+        <p>Se agrega condición de producto para mostrar scripts</p>
+	</aura:example>
+</aura:documentation>

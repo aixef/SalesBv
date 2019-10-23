@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MX_RTL_CSA_MEMBRETECASOS</letterhead>
+    <name>Seguros: Aprobación de Revisión</name>
+    <style>freeForm</style>
+    <subject>Aprobación de Revisión.</subject>
+    <textOnly>Hola
+
+
+Quiero informarte que el ticket con el numero: {!Case.CaseNumber} se te ha sido asignado para su aprobación.
+
+
+Saludos!!
+
+Atentamente
+{!Case.OwnerFirstName}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

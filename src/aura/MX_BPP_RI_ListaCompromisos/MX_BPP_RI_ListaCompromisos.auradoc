@@ -1,0 +1,11 @@
+<aura:documentation>
+	<aura:description>
+        <p><code>c:MX_BPP_RI_ListaCompromisos</code> es un componente que muestra una lista de compromisos
+        creados a partir de una oportunidad</p>
+    </aura:description>
+	<aura:example name="BPP RI ListaCompromisis" ref="c:MX_BPP_RI_ListaCompromisos" label="Compromisos BPP RI">
+		<p>Este ejemplo proporciona la lista de compromisos.</p>
+        <p>Los compromisos pueden ser filtrados por fecha, estatus y a través de un componente hijo, 
+            pueden filtrarse igualmente por otros campos dependientes.</p>
+	</aura:example>
+</aura:documentation>

@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Estimado,]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<font face="arial"><span style="font-size: 12pt;">Se te informa que el usuario&nbsp;{!Account.OwnerFullName}, desea realizar la asignación del cliente:</span></font><div><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; white-space: pre;">	</span><font face="arial">{!Account.Name}&nbsp;</font></div><div><font face="arial">al Group Family:</font></div><div><font face="arial"><span style="white-space:pre">	</span>{!Account.Grupo_al_que_pertenece__c}</font></div><div><font face="arial">Esta acción se encuentra en espera de su aprobación, acceda a su aplicación Salesforce para realizar la Aprobación/Rechazo de esta asignación.</font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[Banca Patrimonial y Privada<div>BBVA Bancomer</div>]]></td>
+</tr>
+</table>

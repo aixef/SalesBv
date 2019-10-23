@@ -1,0 +1,40 @@
+<!--
+*Desarrollado por:       Indra
+*Autor:                  Alberto Ganlindo
+*Proyecto:               Experiencia Única
+*Descripción:            Componente Lightning para valoración del RI
+*Cambios (Versiones)
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0    | 23-08-2017     |    Alberto Galindo    |          Creación
+*1.1    | 15-03-2018     |    Francisco J Licona |          Se crean atributos para vista de valoraciones.
+*1.2	| 03-01-2019	 |	  Cristian Espinosa	 |			Se crea el atributo 'ownerHierarchy', que representa
+															la función del propietario del RI. Por default es vacio.
+-->
+<aura:component controller="ValoracionRI_cls" implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickAction,force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="Id" description="Id del registro concurrido"/>
+    <aura:attribute name="apiName" type="String" description="Api Name del registro concurrido"/>
+    <aura:attribute name="colorOn" type="String" default="#00A1E0" description="Color que asigna tras el evento check"/>
+    <aura:attribute name="colorOff" type="String" default="#EEEEEE" description="Color que asigna tras el evento uncheck"/>
+    <aura:attribute name="rating" type="integer" description="Calificación del registro"/>
+    <aura:attribute name="strokeWidth" type="integer" default="1" description="Contorno y grosor"/>
+    <aura:attribute name="stroke" type="String" default="#505050" description="Color del contorno" />
+    <aura:attribute name="childAttribute" type="String"/>
+    <aura:attribute name="status" type="String" />
+    <aura:attribute name="class" type="Boolean" default="true"/>
+    <aura:attribute name="ownerHierarchy" type="String" default="" description="Atributo que contiene la jerarquia del usuario propietario del registro RI"/>
+    
+    <aura:registerEvent name="change" type="c:EG_001_eve_Valoracion_de_RI" />
+    <aura:if isTrue="{!v.class}">
+        <div class="slds-box">
+            <span aura:id="container" onclick="{!c.starClick}" />
+        </div>
+        <aura:set attribute="else">
+            <div>
+                <span aura:id="container"/>
+            </div>
+        </aura:set>
+    </aura:if>
+        
+</aura:component>

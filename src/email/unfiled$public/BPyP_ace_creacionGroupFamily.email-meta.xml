@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notificación de creación de un nuevo Group Family</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BBVA_CS</letterhead>
+    <name>BPyP_ace_creacionGroupFamily</name>
+    <style>formalLetter</style>
+    <subject>Aprobación Nuevo Group Family</subject>
+    <textOnly>Buen día 
+
+Se le notifica que el usuario {!Account.OwnerFullName} desea realizar la creación del Group Family:
+
+{!Account.Name}
+
+El cual se encuentra pendiente de su aprobación, para aprobar o rechazar, ingrese a su aplicación de Salesforce.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

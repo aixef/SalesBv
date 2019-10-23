@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto intermedio para asignar familias a proveedores</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>MX_SB_VTS_Familia_de_productos__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Nombre de la familia de productos.</description>
+        <externalId>false</externalId>
+        <label>Familia de productos</label>
+        <referenceTo>MX_WB_FamiliaProducto__c</referenceTo>
+        <relationshipLabel>Familia Productos Proveedores</relationshipLabel>
+        <relationshipName>Familia_Productos_Proveedores</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_Identificador_Proveedor__c</fullName>
+        <description>Código de proveedor.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(MX_SB_VTS_ProveedorCTI__r.MX_SB_VTS_Identificador_Proveedor__c)</formula>
+        <label>Identificador Proveedor</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_SB_VTS_ProveedorCTI__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Nombre del proveedor.</description>
+        <externalId>false</externalId>
+        <label>ProveedorCTI</label>
+        <referenceTo>MX_SB_VTS_ProveedoresCTI__c</referenceTo>
+        <relationshipLabel>Familia Productos Proveedores</relationshipLabel>
+        <relationshipName>Familia_Productos_Proveedores</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Familia Producto Proveedor</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <encryptionScheme>None</encryptionScheme>
+        <label>Nombre de Familia Producto Proveedor</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Familia Productos Proveedores</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

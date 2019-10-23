@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Se mandara cuando se escale un caso sin documentos</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MX_SB_SAC_MembreteEnviosSac</letterhead>
+    <name>MX_SB_SAC_Escalar sin documentos</name>
+    <style>formalLetter</style>
+    <subject>Apertura de folio {!Case.CaseNumber}</subject>
+    <textOnly>Estimad@ “{!Case.Account}”,
+
+
+
+Con la finalidad de dar seguimiento a su trámite, le informamos que el día de hoy “{!Case.CreatedDate}”, su &quot;{!Case.Reason}&quot; cancelación por “{!Case.MX_SB_SAC_Detalle__c}” correspondiente a la póliza “{!Case.MX_SB_SAC_Contrato__c}”, inició con el folio “{!Case.CaseNumber}” y será ejecutada dentro del nivel de servicio proporcionado por el asesor telefónico.
+
+
+
+Para cualquier duda relacionada a su solicitud, favor de comunicarse a nuestra línea de atención a Clientes.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[Por medio de la presente se le solicita su apoyo para aprobar o rechazar la Feature&nbsp;<b>{!Case.Subject}</b> con los siguientes datos:<div><br></div><div>Programa:&nbsp;<b>{!Case.00N4B000000yIcN}</b></div><div>Iniciativa: <b>{!Case.MX_RTE_Iniciativa__c}</b></div><div>Prioridad para el equipo:<b> {!Case.MX_RTE_Prioridad_para_equipo__c}</b></div><div>SDATOOL:<b> {!Case.00N4B000000yJSn}</b></div><div>Portafolio:<b> {!Case.00N4B000000yJSs}</b></div><div>Ponderación:&nbsp;<b>{!Case.MX_RTE_Ponderacion__c}</b></div><div>Dependencia 01:&nbsp;<b>{!Case.MX_RTE_Dependencia_01__c}&nbsp;</b></div><div>Dependencia 02:&nbsp;<b>{!Case.MX_RTE_Dependencia_02__c}</b></div><div>Dependencia 03:&nbsp;<b>{!Case.MX_RTE_Dependencia_03__c}</b></div><div>Dependencia 04:<b>&nbsp;{!Case.MX_RTE_Dependencia_04__c}</b></div><div><br></div><div>Has clic en el siguiente vínculo para ir al <a href="{!Case.Link}">Detalle</a> de la Feature</div><div><br></div><div><span style="background-color: rgb(255, 255, 255);">Para aprobar o rechazar esta campaña, haga clic en este vínculo <a href="{!ApprovalRequest.External_URL}">Aprobac<u>ión Feature</u></a></span><span style="font-size: 12pt; background-color: rgb(255, 255, 255);">&nbsp;</span><span style="font-size: 12pt; background-color: rgb(255, 255, 255);">o responda a este correo electrónico con una de estas palabras en la primera línea del mensaje: APROBAR,&nbsp;<span class="il">APROBADO</span>, RECHAZAR, RECHAZADO, NO</span></div><div><br></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,13 @@
+<aura:component controller="MX_SB_BCT_UpdateAccountcla" implements="force:lightningQuickAction,force:hasRecordId"  access="global">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="ownerId" type="String" />
+    <div class="slds-box-hidden">
+        <div class="slds-page-header__title slds-text-body_regular slds-text-align_center">
+           <p class="slds-align-center slds-text-heading_large">Al presionar el botón de "Actualizar", los datos de su cuenta serán actualizados.</p>
+        </div>
+        <div class="slds-var-p-around_small slds-truncate slds-align-center slds-box-hidden slds-m-top_xx-large">
+          <lightning:button label="Actualizar"  class="slds-align_absolute-center" onclick= "{!c.updateAccountContro}"/>     
+        </div>
+     </div>	
+
+</aura:component>

@@ -1,0 +1,7 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="CmpListatarjetas" ref="CmpListatarjetas" label="Lista de Tarjetas participantes">
+	    El componente muestra la lista de tarjetas participantes para multipromociones que cumplen con las 
+        condiciones definidas en el apex controller y devuelve una lista con los id seleccionados.
+	</aura:example>
+</aura:documentation>

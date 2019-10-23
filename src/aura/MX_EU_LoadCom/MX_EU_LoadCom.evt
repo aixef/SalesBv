@@ -1,0 +1,18 @@
+<!-- ***************************************************************************************
+Autor:                  Luis Fernando Romero                              
+Proyecto:               Exeriencia Única
+version:                1.0                                            
+Descripción:            evento para recargar lista de acuerdos y monto de oportunidades
+***************************************************************************************** 
+*Cambios (Versiones)
+*************************************************************************************
+*No.    |     Fecha      |     Autor                |          Descripción
+*************************************************************************************
+*1.0    | 	10/09/18     |    Luis Fernando R.      |          se agregan parámetros de indicador y concepto          -->
+<aura:event type="COMPONENT" access="global" >
+    <aura:attribute name="lock" type="boolean"/>
+    <aura:attribute name="obj" type="string"/>
+	<aura:attribute name="divId" type="string"/> 
+    <aura:attribute name="indicador" type="string"/>
+    <aura:attribute name="concepto" type="string"/>
+</aura:event>

@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>EU_001_fpa_Compromiso</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>EU_001_fpa_Compromiso</fullName>
+        <fields>EU_001_ls_Indicadores_de_cartera__c</fields>
+        <fields>Name</fields>
+        <fields>EU_001_Rb_Oportunidad__c</fields>
+        <fields>EU_001_Fm_Monto__c</fields>
+        <fields>EU_fm_Fecha_Cierre__c</fields>
+        <label>Compromiso EU</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Compromisos Experiencia Única</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Cliente__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Cliente</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Compromiso EU</relationshipLabel>
+        <relationshipName>Compromiso_EU</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EU001_Fm_Cambio_Fecha__c</fullName>
+        <description>Alerta para cambio de fecha</description>
+        <externalId>false</externalId>
+        <formula>IF( EU001_ca_Bandera_Fecha__c  = True, IMAGE(&quot;https://maxbbvabancomer--maxdevexp--c.cs25.visual.force.com/resource/1505298677000/EU001_warning&quot;,&quot;Amarillo&quot;,30, 30 ) , &apos;&apos;)</formula>
+        <label>Cambio Fecha</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_fm_CR__c</fullName>
+        <description>Fórmula que obtiene el número de oficina del propietario del registro.</description>
+        <externalId>false</externalId>
+        <formula>Owner:User.CR__c</formula>
+        <label>CR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Divisa__c</fullName>
+        <description>Divisa Experiencia única</description>
+        <externalId>false</externalId>
+        <formula>TEXT(  EU_001_Rb_Oportunidad__r.CR_SEL_Moneda__c  )</formula>
+        <label>Divisa</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Etapa__c</fullName>
+        <description>Etapa de la oportunidad Experiencia Única</description>
+        <externalId>false</externalId>
+        <formula>TEXT(EU_001_Rb_Oportunidad__r.StageName)</formula>
+        <label>Etapa</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_Fm_Fecha_actual__c</fullName>
+        <description>Fecha actual</description>
+        <externalId>false</externalId>
+        <formula>EU_fm_Fecha_Cierre__c  &lt;  TODAY()</formula>
+        <label>Compara Fecha</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Fija_Tasa_Cobrada__c</fullName>
+        <description>Tasa Fija Experiencia Única</description>
+        <externalId>false</externalId>
+        <formula>EU_001_Rb_Oportunidad__r.CR_NU_TasaCobrada1__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(Fija) Tasa Cobrada (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>EU001_Fm_Grupo__c</fullName>
+        <description>Fórmula que obtiene el número de cliente del grupo relacionado a la oportunidad del compromiso.</description>
+        <externalId>false</externalId>
+        <formula>EU_001_Rb_Oportunidad__r.Grupo__r.No_de_cliente__c</formula>
+        <label>Grupo del cliente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_fm_Mismo_CR__c</fullName>
+        <description>Fórmula que indica si el CR del propietario del registro es igual al CR del usuario actual.</description>
+        <externalId>false</externalId>
+        <formula>$User.CR__c  =  EU001_fm_CR__c</formula>
+        <label>Mismo CR</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EU001_Fm_Monto_Promedio__c</fullName>
+        <description>Monto Promedio de la Oportunidad</description>
+        <externalId>false</externalId>
+        <formula>EU_001_Rb_Oportunidad__r.Monto_Promedio__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monto Promedio</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Motivo_descarte__c</fullName>
+        <description>Motivo de descarte Experiencia única asociado a la oportunidad</description>
+        <externalId>false</externalId>
+        <formula>TEXT(EU_001_Rb_Oportunidad__r.HI_ls_MotivoDescarte__c)</formula>
+        <label>Motivo descarte</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_fm_Perfil_DO__c</fullName>
+        <description>Fórmula que indica si el perfil del usuario actual es alguno de los siguientes perfiles: DIR. OF. EMPRESAS, DIR. OF. GOB., D CORPORATIVO GOBIER, D CORPORATIVO EMPRES, Administrador del sistema, DWP Delegados o Administrador Delegado.</description>
+        <externalId>false</externalId>
+        <formula>OR( $Profile.Name = &quot;Director de oficina&quot;,
+$Profile.Name = &quot;DIR. OF. EMPRESAS&quot;,
+$Profile.Name = &quot;DIR. OF. GOB.&quot;,
+$Profile.Name = &quot;D CORPORATIVO GOBIER&quot;,
+$Profile.Name = &quot;D CORPORATIVO EMPRES&quot;,
+$Profile.Name =  &quot;Administrador del sistema&quot;,
+$Profile.Name =  &quot;DWP Delegados&quot;,
+$Profile.Name = &quot;Administrador Delegado&quot;
+)</formula>
+        <label>Perfil DO</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Plazo__c</fullName>
+        <description>Plazo Experiencia Única</description>
+        <externalId>false</externalId>
+        <formula>TEXT(   EU_001_Rb_Oportunidad__r.CR_SEL_Plazo__c  )</formula>
+        <label>Plazo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Reservas_Iniciales__c</fullName>
+        <externalId>false</externalId>
+        <formula>Cliente__r.EU_001_un_Reservas_Iniciales__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Reservas Iniciales</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU_CA_001_Resto_del_mes__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Resto del mes Experiencia Única</description>
+        <externalId>false</externalId>
+        <label>Resto del mes</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Saldo_promedio__c</fullName>
+        <description>Saldo promedio de Cuentas de Cheques MN Experiencia Unica</description>
+        <externalId>false</externalId>
+        <formula>EU_001_Rb_Oportunidad__r.Saldo_promedio__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Saldo promedio</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Saneamiento_del_Cliente__c</fullName>
+        <externalId>false</externalId>
+        <formula>Cliente__r.Saneamiento_del_cliente__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Saneamiento del Cliente</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Tipo_credito__c</fullName>
+        <description>Experiencia única Tipo de crédito referente al Producto asociado a la oportunidad</description>
+        <externalId>false</externalId>
+        <formula>TEXT(EU_001_Rb_Oportunidad__r.Tipo_Producto__c)</formula>
+        <label>Tipo de crédito</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU_001_ls_Tipo_operacion__c</fullName>
+        <description>Lista de seleccion para tipo de operación experiencia única</description>
+        <externalId>false</externalId>
+        <label>Tipo de operación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Línea existente</fullName>
+                    <default>false</default>
+                    <label>Línea existente</label>
+                </value>
+                <value>
+                    <fullName>Nueva operación</fullName>
+                    <default>false</default>
+                    <label>Nueva operación</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Tipo_de_oportunidad__c</fullName>
+        <description>Tipo de oportunidad Experiencia Única</description>
+        <externalId>false</externalId>
+        <formula>TEXT(EU_001_Rb_Oportunidad__r.Tipo_de_Oportunidad__c)</formula>
+        <label>Tipo de oportunidad</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_Fm_Tipo_Registro__c</fullName>
+        <description>Tipo de Registro de la Oportunidad</description>
+        <externalId>false</externalId>
+        <formula>TEXT(EU_001_Rb_Oportunidad__r.Tipo_de_Registro_Manual2__c)</formula>
+        <label>Tipo Registro</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Tipo_de_Tasa__c</fullName>
+        <description>Tipo de tasa Experiencia única</description>
+        <externalId>false</externalId>
+        <formula>TEXT( EU_001_Rb_Oportunidad__r.CR_SEL_TipoTasa__c )</formula>
+        <label>Tipo de tasa</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Variable_Tasa_Cobrada_Pbs__c</fullName>
+        <description>Tasa Cobrada (Pbs) Experiencia Única</description>
+        <externalId>false</externalId>
+        <formula>EU_001_Rb_Oportunidad__r.Spread_Cliente__c/100</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(Variable ) Tasa Cobrada (Pbs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_tx_Destino__c</fullName>
+        <description>Descripción corta destino</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Destino</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_Un_nivelPriorizacion__c</fullName>
+        <description>Nivel al que corresponde la priorización del compromio</description>
+        <externalId>false</externalId>
+        <label>Nivel Priorización</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_ca_priorizado__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Bandera de priorización de compromiso</description>
+        <externalId>false</externalId>
+        <label>Priorizado</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EU001_tl_comentariosDO__c</fullName>
+        <description>Comentarios del DO sobre el compromiso</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Comentarios del director, relacionados con el compromiso</inlineHelpText>
+        <label>Comentarios DO</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EU001_tl_comentariosEC__c</fullName>
+        <description>Comentarios del ejecutivo</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Comentarios del ejecutivo relacionados al compromiso</inlineHelpText>
+        <label>Comentarios EC</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Fecha_cierre__c</fullName>
+        <description>Fecha de cierre Experiencia única</description>
+        <externalId>false</externalId>
+        <formula>EU_001_Rb_Oportunidad__r.CloseDate</formula>
+        <label>Fecha</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Impacto__c</fullName>
+        <description>Calculo del impacto en saldo medio para Compromiso</description>
+        <externalId>false</externalId>
+        <formula>IF(CONTAINS(&apos;Cartera Vigente CP:Cartera Vigente LP:Inversiones:Vista MN:Vista MN:Resto Captación&apos;, TEXT(EU_001_ls_Indicadores_de_cartera__c)) &amp;&amp; (ISPICKVAL(EU_001_ls_Estatus__c , &apos;Abierto&apos;) || ISPICKVAL(EU_001_ls_Estatus__c , &apos;Reprogramado&apos;))&amp;&amp; EU_fm_Fecha_Cierre__c &gt;= Today(), 
+((EU_001_dv_Compromiso__c*EU_001_Fm_exito__c*EU_fm_dias__c)/Day(DATE(YEAR(Today()),IF(MONTH(TODAY()) = 12, 1,MONTH(TODAY()) + 1),1)-1))/1000, 
+IF(CONTAINS(&apos;INF No Recurrentes:Margen Bruto:INF Recurrentes:Saneamiento:Usuario Nvo de Credito&apos;, TEXT(EU_001_ls_Indicadores_de_cartera__c)) &amp;&amp; (ISPICKVAL(EU_001_ls_Estatus__c , &apos;Abierto&apos;) || ISPICKVAL(EU_001_ls_Estatus__c , &apos;Reprogramado&apos;)) &amp;&amp; EU_fm_Fecha_Cierre__c &gt;= Today(), 
+(EU_001_dv_Compromiso__c*EU_001_Fm_exito__c)/1000,
+IF(CONTAINS(&apos;Stock Nomina&apos;, TEXT(EU_001_ls_Indicadores_de_cartera__c)) &amp;&amp; (ISPICKVAL(EU_001_ls_Estatus__c , &apos;Abierto&apos;) || ISPICKVAL(EU_001_ls_Estatus__c , &apos;Reprogramado&apos;)) &amp;&amp; EU_fm_Fecha_Cierre__c &gt;= Today(), 
+(EU_001_dv_Compromiso__c*EU_001_Fm_exito__c),0)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Impacto</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_Rb_Oportunidad__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Relación a Oportunidad Experiencia única</description>
+        <externalId>false</externalId>
+        <label>Oportunidad</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Compromiso EU</relationshipLabel>
+        <relationshipName>Compromiso_EU</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_Rb_Revisi_n_Individual_RI__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Revisión Individual (RI)</description>
+        <externalId>false</externalId>
+        <label>Reunión Individual</label>
+        <referenceTo>EU001_RI__c</referenceTo>
+        <relationshipLabel>Compromiso EU</relationshipLabel>
+        <relationshipName>Compromiso_EU</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_dv_Compromiso__c</fullName>
+        <description>Monto en pesos para el compromiso de Experiencia única</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pesos</inlineHelpText>
+        <label>Compromiso</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_ls_Estatus__c</fullName>
+        <description>Estatus para identificar el compromiso Experiencia única</description>
+        <externalId>false</externalId>
+        <label>Estatus del Compromiso</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Abierto</fullName>
+                    <default>true</default>
+                    <label>Abierto</label>
+                </value>
+                <value>
+                    <fullName>Descartado</fullName>
+                    <default>false</default>
+                    <label>Descartado</label>
+                </value>
+                <value>
+                    <fullName>En Gestion</fullName>
+                    <default>false</default>
+                    <label>En Gestión</label>
+                </value>
+                <value>
+                    <fullName>Hecho</fullName>
+                    <default>false</default>
+                    <label>Hecho</label>
+                </value>
+                <value>
+                    <fullName>Reprogramado</fullName>
+                    <default>false</default>
+                    <label>Reprogramado</label>
+                </value>
+                <value>
+                    <fullName>Vencido</fullName>
+                    <default>false</default>
+                    <label>Vencido</label>
+                </value>
+                <value>
+                    <fullName>Cambiar Fecha de disposición</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Cambiar Fecha de disposición</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EU_001_ls_Indicadores_de_cartera__c</fullName>
+        <description>Listado indicadores de cartera para experiencia única</description>
+        <externalId>false</externalId>
+        <label>Tipo de compromiso</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cartera Vigente CP</fullName>
+                    <default>false</default>
+                    <label>Cartera Vigente CP</label>
+                </value>
+                <value>
+                    <fullName>Cartera Vigente LP</fullName>
+                    <default>false</default>
+                    <label>Cartera Vigente LP</label>
+                </value>
+                <value>
+                    <fullName>Cartera Vigente</fullName>
+                    <default>false</default>
+                    <label>Cartera Vigente</label>
+                </value>
+                <value>
+                    <fullName>Vista MN</fullName>
+                    <default>false</default>
+                    <label>Vista MN</label>
+                </value>
+                <value>
+                    <fullName>Inversiones</fullName>
+                    <default>false</default>
+                    <label>Inversiones</label>
+                </value>
+                <value>
+                    <fullName>Resto Captación</fullName>
+                    <default>false</default>
+                    <label>Resto Captación</label>
+                </value>
+                <value>
+                    <fullName>INF Recurrentes</fullName>
+                    <default>false</default>
+                    <label>INF Recurrentes</label>
+                </value>
+                <value>
+                    <fullName>Stock Nomina</fullName>
+                    <default>false</default>
+                    <label>Stock Nomina</label>
+                </value>
+                <value>
+                    <fullName>Usuarios nuevos crédito</fullName>
+                    <default>false</default>
+                    <label>Usuarios nuevos crédito</label>
+                </value>
+                <value>
+                    <fullName>Saneamiento</fullName>
+                    <default>false</default>
+                    <label>Saneamiento</label>
+                </value>
+                <value>
+                    <fullName>Usuario Nvo de Credito</fullName>
+                    <default>false</default>
+                    <label>Usuario Nvo de Credito</label>
+                </value>
+                <value>
+                    <fullName>INF No Recurrentes</fullName>
+                    <default>false</default>
+                    <label>INF No Recurrentes</label>
+                </value>
+                <value>
+                    <fullName>Margen Bruto</fullName>
+                    <default>false</default>
+                    <label>Margen Bruto</label>
+                </value>
+                <value>
+                    <fullName>Análisis de crédito</fullName>
+                    <default>false</default>
+                    <label>Análisis de crédito</label>
+                </value>
+                <value>
+                    <fullName>IReNe</fullName>
+                    <default>false</default>
+                    <label>IReNe</label>
+                </value>
+                <value>
+                    <fullName>Plan de Cuenta</fullName>
+                    <default>false</default>
+                    <label>Plan de Cuenta</label>
+                </value>
+                <value>
+                    <fullName>Visitas</fullName>
+                    <default>false</default>
+                    <label>Visitas</label>
+                </value>
+                <value>
+                    <fullName>Otros</fullName>
+                    <default>false</default>
+                    <label>Otros</label>
+                </value>
+                <value>
+                    <fullName>Captación</fullName>
+                    <default>false</default>
+                    <label>Captación</label>
+                </value>
+                <value>
+                    <fullName>Colocación</fullName>
+                    <default>false</default>
+                    <label>Colocación</label>
+                </value>
+                <value>
+                    <fullName>Seguros</fullName>
+                    <default>false</default>
+                    <label>Seguros</label>
+                </value>
+                <value>
+                    <fullName>Servicios</fullName>
+                    <default>false</default>
+                    <label>Servicios</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EU_001_tx_Compromiso__c</fullName>
+        <description>Descripción del compromiso</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <inlineHelpText>Describa el compromiso</inlineHelpText>
+        <label>Compromiso</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>EU_fm_Fecha_Cierre__c</fullName>
+        <description>Fecha de cierre Experiencia única</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de cierre</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_EU_Avance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Compromiso Actividad/Cierre</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Seleccionado: Actividad,
+No seleccionado: Cierre</inlineHelpText>
+        <label>Actividad</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_EU_TipoPriorizacion__c</fullName>
+        <description>Determina quien priorizó basandose en el campo: nivel de priorización</description>
+        <externalId>false</externalId>
+        <formula>CASE( EU001_Un_nivelPriorizacion__c ,1, &apos;DO&apos; ,2, &apos;DR&apos; ,3, &apos;DD&apos; ,&apos;-&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de Priorización</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_Fm_Historico_Cambios_Fecha_Cierre__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Almacena el historico de los cambios de la fecha de cierre del compromiso.</description>
+        <externalId>false</externalId>
+        <label>Historico Cambios Fecha Cierre</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Cliente__c</fullName>
+        <description>Nombre comercial del cliente Experiencia única</description>
+        <externalId>false</externalId>
+        <formula>EU_001_Rb_Oportunidad__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Cliente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_Monto__c</fullName>
+        <description>Experiencia única Monto del crédito o línea (Pesos)</description>
+        <externalId>false</externalId>
+        <formula>EU_001_Rb_Oportunidad__r.op_amountPivote_dv__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monto del crédito o línea</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EU_001_Fm_exito__c</fullName>
+        <description>Permite identificar el porcentaje de compromiso Experiencia única</description>
+        <externalId>false</externalId>
+        <formula>EU_001_Rb_Oportunidad__r.Probability</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>% de Exito</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>EU_fm_dias__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(MONTH(Today()) = MONTH( EU_fm_Fecha_Cierre__c ) 
+&amp;&amp; EU_fm_Fecha_Cierre__c &gt;= Today() 
+&amp;&amp; (ISPICKVAL(EU_001_ls_Estatus__c , &apos;Abierto&apos;) 
+|| ISPICKVAL(EU_001_ls_Estatus__c , &apos;Reprogramado&apos;)), 
+DAY(DATE( YEAR(TODAY()),IF(MONTH(TODAY()) = 12, 1,MONTH(TODAY()) + 1) , 1)- 1) -DAY( EU_fm_Fecha_Cierre__c )+1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Días</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_Fm_Producto__c</fullName>
+        <description>Nombre del producto asociado a la oportunidad</description>
+        <externalId>false</externalId>
+        <formula>if(EU_001_Rb_Oportunidad__r.Producto_BEyG__r.Name != null,EU_001_Rb_Oportunidad__r.Producto_BEyG__r.Name,if(ISPICKVAL(EU_001_Rb_Oportunidad__r.Tipo_Producto__c,&apos;&apos;),&apos;&apos; ,TEXT(EU_001_Rb_Oportunidad__r.Tipo_Producto__c)))</formula>
+        <label>Producto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hecho_Descartado__c</fullName>
+        <description>Campo fórmula para mostrar icono Hecho / Descartado Experiencia única</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(EU_001_ls_Estatus__c,&apos;Abierto&apos;),IMAGE(&quot;/resource/EU001_pendiente?isdtp=p1&quot;,&quot;Rojo&quot;,30,30),IF(ISPICKVAL(EU_001_ls_Estatus__c,&apos;Hecho&apos;),IMAGE(&quot;/resource/EU001_hecho?isdtp=p1&quot;,&quot;Blanco&quot;,30,30),IF(ISPICKVAL(EU_001_ls_Estatus__c, &apos;Descartado&apos;),IMAGE(&quot;/resource/	EU001_descartado?isdtp=p1&quot;,&quot;Blanco&quot;,30, 30 ),&apos;&apos;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hecho / Descartado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EU001_ca_Bandera_Fecha__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Bandera para identificar el cambio de fecha.</description>
+        <externalId>false</externalId>
+        <label>Bandera Fecha</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Compromiso EU</label>
+    <nameField>
+        <displayFormat>EUCP-{0000}</displayFormat>
+        <label>Compromiso EU</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Compromiso EU</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>MX_BPP_Com_Captacion</fullName>
+        <active>true</active>
+        <label>BPyP Captación</label>
+        <picklistValues>
+            <picklist>EU_001_ls_Estatus__c</picklist>
+            <values>
+                <fullName>Abierto</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Descartado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En Gestion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hecho</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reprogramado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vencido</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EU_001_ls_Indicadores_de_cartera__c</picklist>
+            <values>
+                <fullName>Captación</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MX_BPP_CompColocacion</fullName>
+        <active>true</active>
+        <label>BPYP Colocación</label>
+        <picklistValues>
+            <picklist>EU_001_ls_Estatus__c</picklist>
+            <values>
+                <fullName>Abierto</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Descartado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En Gestion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hecho</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reprogramado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vencido</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EU_001_ls_Indicadores_de_cartera__c</picklist>
+            <values>
+                <fullName>Colocación</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MX_BPP_Seguros</fullName>
+        <active>true</active>
+        <label>BPYP Seguros</label>
+        <picklistValues>
+            <picklist>EU_001_ls_Estatus__c</picklist>
+            <values>
+                <fullName>Abierto</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Descartado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En Gestion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hecho</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reprogramado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vencido</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EU_001_ls_Indicadores_de_cartera__c</picklist>
+            <values>
+                <fullName>Seguros</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MX_BPP_Servicios</fullName>
+        <active>true</active>
+        <label>BPYP Servicios</label>
+        <picklistValues>
+            <picklist>EU_001_ls_Estatus__c</picklist>
+            <values>
+                <fullName>Abierto</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Descartado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En Gestion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hecho</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reprogramado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vencido</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>EU_001_ls_Indicadores_de_cartera__c</picklist>
+            <values>
+                <fullName>Servicios</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>EU_001_ls_Indicadores_de_cartera__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EU_001_ls_Estatus__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EU_001_Rb_Oportunidad__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Cliente__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EU001_Fm_Producto__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EU_001_dv_Compromiso__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EU_fm_Fecha_Cierre__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EU_001_Rb_Revisi_n_Individual_RI__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Hecho_Descartado__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>EU_001_ls_Indicadores_de_cartera__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EU_001_ls_Estatus__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EU_001_Rb_Oportunidad__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EU_001_Fm_Cliente__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EU001_Fm_Producto__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EU_001_dv_Compromiso__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EU_fm_Fecha_Cierre__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EU_001_Rb_Revisi_n_Individual_RI__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Hecho_Descartado__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU_001_ls_Indicadores_de_cartera__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU_001_ls_Estatus__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU_001_Rb_Oportunidad__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU_001_Fm_Cliente__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU001_Fm_Producto__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU_001_dv_Compromiso__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU_fm_Fecha_Cierre__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>EU_001_Rb_Revisi_n_Individual_RI__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Hecho_Descartado__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>EU_001_ls_Indicadores_de_cartera__c</searchFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>EU_001_ls_Estatus__c</searchFilterFields>
+        <searchFilterFields>EU_001_Rb_Oportunidad__c</searchFilterFields>
+        <searchFilterFields>EU_001_Fm_Cliente__c</searchFilterFields>
+        <searchFilterFields>EU001_Fm_Producto__c</searchFilterFields>
+        <searchFilterFields>EU_001_dv_Compromiso__c</searchFilterFields>
+        <searchFilterFields>EU_fm_Fecha_Cierre__c</searchFilterFields>
+        <searchFilterFields>EU_001_Rb_Revisi_n_Individual_RI__c</searchFilterFields>
+        <searchFilterFields>Hecho_Descartado__c</searchFilterFields>
+        <searchResultsAdditionalFields>EU_001_ls_Indicadores_de_cartera__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EU_001_ls_Estatus__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EU_001_Rb_Oportunidad__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EU_001_Fm_Cliente__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EU001_Fm_Producto__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EU_001_dv_Compromiso__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EU_fm_Fecha_Cierre__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EU_001_Rb_Revisi_n_Individual_RI__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Hecho_Descartado__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

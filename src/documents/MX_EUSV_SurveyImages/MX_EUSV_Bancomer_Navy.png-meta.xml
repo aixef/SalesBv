@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Imagen de pie de página de BBVA Bancomer</description>
+    <internalUseOnly>false</internalUseOnly>
+    <keywords>MX_EUSV</keywords>
+    <name>MX_EUSV_Bancomer_Navy</name>
+    <public>true</public>
+</Document>

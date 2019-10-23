@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>AGROPECUARIO</fullName>
+        <default>false</default>
+        <label>AGROPECUARIO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Agriculture</fullName>
+        <default>false</default>
+        <label>Agriculture</label>
+    </standardValue>
+    <standardValue>
+        <fullName>COMERCIO, RESTAURANTES Y HOTELES</fullName>
+        <default>false</default>
+        <label>COMERCIO, RESTAURANTES Y HOTELES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CONSTRUCCION</fullName>
+        <default>false</default>
+        <label>CONSTRUCCION</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ELECTRICIDAD</fullName>
+        <default>false</default>
+        <label>ELECTRICIDAD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INDUSTRIA MANUFACTURERA</fullName>
+        <default>false</default>
+        <label>INDUSTRIA MANUFACTURERA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MINERIA</fullName>
+        <default>false</default>
+        <label>MINERIA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SERVICIOS COMUNALES, SOCIALES Y PERSONAL</fullName>
+        <default>false</default>
+        <label>SERVICIOS COMUNALES, SOCIALES Y PERSONAL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SERVICIOS FINANCIEROS, SEGUROS Y BIENES</fullName>
+        <default>false</default>
+        <label>SERVICIOS FINANCIEROS, SEGUROS Y BIENES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TRANSPORTE, ALMACENAMIENTO Y COMUNICACIO</fullName>
+        <default>false</default>
+        <label>TRANSPORTE, ALMACENAMIENTO Y COMUNICACIO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Agroindustria</fullName>
+        <default>false</default>
+        <label>Agroindustria</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Industria</fullName>
+        <default>false</default>
+        <label>Industria</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Comercio</fullName>
+        <default>false</default>
+        <label>Comercio</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inmobiliario</fullName>
+        <default>false</default>
+        <label>Inmobiliario</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Servicios</fullName>
+        <default>false</default>
+        <label>Servicios</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transporte</fullName>
+        <default>false</default>
+        <label>Transporte</label>
+    </standardValue>
+    <standardValue>
+        <fullName>H&amp;C</fullName>
+        <default>false</default>
+        <label>H&amp;C</label>
+    </standardValue>
+    <standardValue>
+        <fullName>C&amp;R</fullName>
+        <default>false</default>
+        <label>C&amp;R</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IND</fullName>
+        <default>false</default>
+        <label>IND</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RE</fullName>
+        <default>false</default>
+        <label>RE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ENE</fullName>
+        <default>false</default>
+        <label>ENE</label>
+    </standardValue>
+</StandardValueSet>

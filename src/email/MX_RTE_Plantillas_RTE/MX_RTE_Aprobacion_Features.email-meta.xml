@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Solicitud de aprobación Feature</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Aprobación Feature RTE</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de aprobación Feature</subject>
+    <textOnly>Por medio de la presente se le solicita su apoyo para aprobar o rechazar la Feature {!Case.Subject} con los siguientes datos:
+
+Programa: {!Case.00N4B000000yIcN}
+Iniciativa: {!Case.MX_RTE_Iniciativa__c}
+Prioridad para el equipo: {!Case.MX_RTE_Prioridad_para_equipo__c}
+SDATOOL: {!Case.00N4B000000yJSn}
+Portafolio: {!Case.00N4B000000yJSs}
+Ponderación: {!Case.MX_RTE_Ponderacion__c}
+Dependencia 01: {!Case.MX_RTE_Dependencia_01__c}
+Dependencia 02: {!Case.MX_RTE_Dependencia_02__c}
+Dependencia 03: {!Case.MX_RTE_Dependencia_03__c}
+Dependencia 04: {!Case.MX_RTE_Dependencia_04__c}
+
+Has clic en el siguiente vínculo para ir al Detalle de la Feature
+
+Para aprobar o rechazar esta campaña, haga clic en este vínculo Aprobación Feature o responda a este correo electrónico con una de estas palabras en la primera línea del mensaje: APROBAR, APROBADO, RECHAZAR, RECHAZADO, NO</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

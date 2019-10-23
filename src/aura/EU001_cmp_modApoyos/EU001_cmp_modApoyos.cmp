@@ -1,0 +1,109 @@
+<aura:component description="Marco Modal nuevos Apoyos" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasrecordId,force:hasSObjectName" access="GLOBAL" controller="EU001_modApoyos_Ctrl">
+
+	<aura:attribute name="NombreRI" type="String" default="" />
+    <aura:attribute name="Responsable" type="String" default="" />
+    <aura:attribute name="IdResponsable" type="String" default="" />
+    <aura:attribute name="UserID" type="String" default="" />
+    <aura:attribute name="isActive" type="Boolean" default="false" required="true" />
+    <aura:attribute name="title" type="String" default="" required="false" />
+    <aura:attribute name="footer" type="Aura.Component[]" required="false" />
+	<aura:attribute name="PropietarioRI" type="String" default="" />
+    <aura:attribute name="picklistValues" type="Object" />
+    <aura:attribute name="picklistValuesEstatusComp" type="Object" />
+
+    <c:EU001_cmp_PickListValues sObjectName="EU_001_Compromiso__c" fieldName="EU_001_ls_Estatus__c" picklistValues="{!v.picklistValuesEstatusComp}" />
+<aura:attribute name="RecordTypeId" type="String" default=""/>
+
+    <aura:attribute name="selectedLookUpRecordAcc" type="sObject" default="null"/>
+    <aura:attribute name="selectedLookUpRecordRI" type="sObject" default="null" />
+    <aura:attribute name="selectedLookUpRecordOpp" type="sObject" default="null" />
+    <aura:attribute name="selectedLookUpRecordCorResponsable1" type="sObject" default="null" />
+    <aura:attribute name="selectedLookUpRecordCorResponsable2" type="sObject" default="null" />
+
+    <aura:attribute name="IdRICompromiso" type="String" default=""/>
+    <aura:attribute name="filtroEstatusCompromisos" type="String" default=""/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+
+        <div>
+            <aura:renderIf isTrue="{!v.isActive}">
+                 <div role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open"  style="z-index=9000 !important">
+        <div class="slds-modal__container style-general" >
+            <!-- HEADER -->
+            <header class="slds-modal__header">
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Apoyo Reunión Individual</h2>
+            </header>
+            <!-- CONTENT -->
+            <div class="slds-modal__content slds-p-around_medium slds-grid slds-wrap slds-grid_align-spread" id="modal-content-id-1">
+
+                <div class="slds-size_1-of-1 slds-p-horizontal_x-small" style="padding: 0.5rem; background: rgb(243, 242, 242);"  >
+                    <div class="slds-text-heading_small">Datos General</div>
+                </div>
+                 <lightning:select aura:id="selTipoApoyo" name="selTipoApoyo" label="Tipo de apoyo" class="slds-size_1-of-2 slds-p-horizontal_x-small" >
+                    <option value="">--Ninguno--</option>
+                    <option value="Proceso de crédito">Proceso de crédito</option>
+                    <option value="Producto">Producto</option>
+                    <option value="Capacitación">Capacitación</option>
+                    <option value="Coaching">Coaching</option>
+                    <option value="Visitas">Visitas</option>
+                    <option value="IReNe">IReNe</option>
+                    <option value="Otros">Otros</option>
+                </lightning:select>
+            <div class="slds-size_1-of-2 slds-p-horizontal_x-small" >
+                <lightning:select aura:id="selEstado" name="selEstado" label="Estado" disabled="true" >
+                    <option value="abierto">Abierto</option>
+                </lightning:select>
+            </div>
+            <div class="slds-size_1-of-2 slds-p-horizontal_x-small" >
+                <ui:inputDate required="true" aura:id="dtFechaCierre" label="Fecha de Cierre"    displayDatePicker="true" class="slds-size_1-of-2 slds-p-horizontal_x-small" />
+            </div>
+            <div class="slds-size_1-of-2 slds-p-horizontal_x-small" >
+                    <c:EU001_cmp_customLookup objectAPIName="account" IconName="standard:account" selectedRecord="{!v.selectedLookUpRecordAcc}" label="Cliente" />
+                </div>
+
+                <lightning:textarea required="true" aura:id="txtDesc" name="txtDesc" value="" label="Descripción" maxlength="300" class="slds-size_1-of-2 slds-p-horizontal_x-small"/>
+
+                <div class="slds-size_1-of-2 slds-p-horizontal_x-small" >
+                    <c:EU001_cmp_customLookup objectAPIName="opportunity" IconName="standard:opportunity" selectedRecord="{!v.selectedLookUpRecordOpp}" label="Oportunidad" />
+                </div>
+
+                <div class="slds-size_1-of-2 slds-p-horizontal_x-small"  >
+                    <lightning:input label="Reunión Individual (RI)" aura:id="idRIField" name="idRIField" value="{!v.NombreRI}" disabled="true" />
+
+                </div>
+                <br/> <br/>&nbsp;
+                <div class="slds-size_1-of-1 slds-p-horizontal_x-small" style="padding: 0.5rem; background: rgb(243, 242, 242);"  >
+                  <div class="slds-text-heading_small">Información Adicional</div>
+                </div>
+                   <div class="slds-size_1-of-2 slds-p-horizontal_x-small"  >
+                    Propietario<br/>
+                    {!v.PropietarioRI}
+                    </div>
+                    <div class="slds-size_1-of-2 slds-p-horizontal_x-small"  >
+                    Responsable<br/>
+                    {!v.Responsable}
+                    </div>
+
+                <div class="slds-size_1-of-2 slds-p-horizontal_x-small" >
+                    <c:EU001_cmp_customLookup objectAPIName="user" IconName="standard:user" selectedRecord="{!v.selectedLookUpRecordCorResponsable1}" label="Corresponsable BBVA 1" />
+                </div>
+                <div class="slds-size_1-of-2 slds-p-horizontal_x-small" >
+                    <c:EU001_cmp_customLookup objectAPIName="user" IconName="standard:user" selectedRecord="{!v.selectedLookUpRecordCorResponsable2}" label="Corresponsable BBVA 2" />
+                </div>
+
+
+                <br/>&nbsp;
+
+            </div>
+            <div class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" onclick="{!c.handleCancel}">Cancel</button>
+                <lightning:button class="slds-button slds-button_brand" onclick="{!c.saveRecord}">Save</lightning:button>
+            </div>
+        </div>
+    </div>
+            </aura:renderIf>
+
+            <div class="{!'slds-backdrop ' + ((v.isActive) ? 'slds-backdrop_open' : 'slds-backdrop_close')}"></div>
+        </div>
+
+</aura:component>

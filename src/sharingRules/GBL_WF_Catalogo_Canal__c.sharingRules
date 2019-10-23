@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Compartir_C_talogo_canal_con_Ventas_Digitales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Compartir Cátalogo canal con Ventas Digitales</label>
+        <sharedTo>
+            <role>CRM_WF_Ventas_Digitales</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Producto - Subproducto</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Tipo de Canal - Canal</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Compartir_Catalogo_canal_con_CRM</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Compartir Cátalogo canal con CRM</label>
+        <sharedTo>
+            <role>CRM_WF_Crm</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Producto - Subproducto</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Tipo de Canal - Canal</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

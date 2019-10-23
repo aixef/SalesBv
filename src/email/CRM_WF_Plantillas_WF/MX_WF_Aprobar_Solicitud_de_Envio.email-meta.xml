@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación Workflow, se envía como solicitud de aprobación de una Solicitud de Envio</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Aprobar Solicitud de Envio</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de Envio - Folio: {!CRM_WF_Solicitud_De_envio__c.Name}, Nombre de la Campaña: {!CRM_WF_Solicitud_De_envio__c.CRM_WF_Nombre_de_la_Campana__c}</subject>
+    <textOnly>Solicitud de aprobación para una solicitud de envío con los siguientes datos:
+
+Folio : {!CRM_WF_Brief__c.CRM_WF_FIC__c}
+Nombre de la campaña: {!CRM_WF_Solicitud_De_envio__c.CRM_WF_Nombre_de_la_Campana__c}
+Arte Control: {!CRM_WF_Solicitud_De_envio__c.MX_WF_Canal__c}
+Arte de Prueba: {!CRM_WF_Solicitud_De_envio__c.MX_WF_Nombre_Arte_de_Prueba__c}
+Fecha Programada de envío: {!CRM_WF_Solicitud_De_envio__c.MX_WF_Fecha_De_Solicitud_Online__c}
+Business Unit: {!CRM_WF_Solicitud_De_envio__c.MX_WF_Cuenta_del_Remitente__c}
+
+
+A/B TESTING
+Requiere A/B Testing: {!CRM_WF_Solicitud_De_envio__c.MX_WF_AB_Testing__c}
+Tipo de A/B Testing: {!CRM_WF_Solicitud_De_envio__c.Tipo_A_B_Testing__c}
+Fecha de Inició Testing: {!CRM_WF_Solicitud_De_envio__c.MX_WF_Fecha_de_Inicio_Testing__c}
+Fecha Final Testing: {!CRM_WF_Solicitud_De_envio__c.MX_WF_Fecha_Final_Testing__c}
+Hipotesis: {!CRM_WF_Solicitud_De_envio__c.CRM_WF_Razon_prueba__c}
+
+
+
+Para mayor información consulte el registro de Solicitud de envío en Salesforce:
+
+Registro de Solicitud de Envío en Salesforce
+Registro de Canal en Salesforce
+
+Para aprobar o rechazar esta solicitud, haga clic en el siguiente vínculo Registro de Aprobación. o responda a este correo electrónico con una de estas palabras en la primera línea del mensaje APROBAR, APROBADO, RECHAZAR, RECHAZADO.
+
+Si envía su respuesta a través de email, también puede agregar comentarios en la segunda línea. Los comentarios se almacenan con la solicitud de aprobación de Salesforce.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

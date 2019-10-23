@@ -1,0 +1,5 @@
+<design:component>
+	<design:attribute name="functionTable" label="Nombre de tabla" description="Es el nombre de la función a implementar en el controlador" />
+    <design:attribute name="showTitle" label="Mostrar nombre de tabla" description="Habilita si desea que se muestre el título de la tabla" />
+    <design:attribute name="showRecords" label="Registros a mostrar" description="Número de registros a mostrar en cada página" />
+</design:component>

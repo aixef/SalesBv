@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Acción que permite ejecutar un flujo para agregar features a un pedido</description>
+    <flowDefinition>MX_RTE_Agregar_Features_al_Pedido</flowDefinition>
+    <label>Agregar Features al Pedido</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

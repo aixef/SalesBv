@@ -1,0 +1,14 @@
+<aura:documentation>
+  <aura:description>
+        <p> <code>c:BPyP_Adv_Opp</code> Componente que cierra la oportunidad que se está visualizando</p>
+        <p>Con parametros de entrada:</p>
+        <li>recordId = "Tipo de registro"</li>
+        <li>oppSel = "Oportunidad seleccionada"</li>
+        <li>usr = "Usuario que cierra la oportunidad"</li>
+    </aura:description>
+  <aura:example name="BPyP_Adv_Opp" ref="c:BPyP_Adv_Opp" label="Cerrar una oportunidad con componente c:BPyP_Adv_Opp">
+    <p> 
+      Componente para cerrar una oportunidad abierta al seleccionar "Cerrada ganada" y al ingresar el número de cliente y un monto de cierre.
+        </p>
+  </aura:example>
+</aura:documentation>

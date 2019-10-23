@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Enciende/apaga los trigger del objeto oportunidad.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ADQ_ReasignaActividadesOportGogle__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Swithc ADQ_ReasignaActividadesOportGogle_cls</description>
+        <externalId>false</externalId>
+        <label>ADQ_ReasignaActividadesOportGogle</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AsignarUSAC_Oportunidad__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>AsignarUSAC_Oportunidad</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BPyP_ClienteImportar_cls__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Campo de verificación para BPyP_ClienteImportar_cls__c</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Si se encuentra seleccionado se ejecuta el trigger BPyP_ClienteImportar_cls__c</inlineHelpText>
+        <label>BPyP_ClienteImportar_cls</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CF_Amountformalized_cls__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>CF_Amountformalized_cls</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CF_OP_ValidacionEtapas__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Enciende/apaga el trigger CF_OP_ValidacionEtapas</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enciende/apaga el trigger CF_OP_ValidacionEtapas</inlineHelpText>
+        <label>CF_OP_ValidacionEtapas</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CH_Asignar_Productos_Standar__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>switch trigger standar</description>
+        <externalId>false</externalId>
+        <label>CH_Asignar_Productos_Standar</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CH_OP_ValidacionEtapas__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Trigger que valida las etapas de las oportunidades de cash management.</description>
+        <externalId>false</externalId>
+        <label>CH_OP_ValidacionEtapas</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cases__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Cases</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ContarOppsGrupo__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Switch ContarOppsGrupo</description>
+        <externalId>false</externalId>
+        <label>ContarOppsGrupo</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EG009_AC_FinanciamientoPipeline_cls__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Checkbox encargado de desactivar/activar el Trigger: EG009_AC_FinanciamientoPipeline_cls</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Al activar este checkbox se activa la funcionalidad del trigger EG009_AC_FinanciamientoPipeline_cls del proyecto financiamiento pipeline.</inlineHelpText>
+        <label>EG009_AC_FinanciamientoPipeline_cls</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ENGMX_CalificacionOli_cls__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Enciende/apaga el trigger ENGMX_CalificacionOli_cls</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enciende/apaga el trigger ENGMX_CalificacionOli_cls</inlineHelpText>
+        <label>ENGMX_CalificacionOli_cls</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>HI001_PushNotificationsOpp__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Siwthc validacion</description>
+        <externalId>false</externalId>
+        <label>HI001_PushNotificationsOpp</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>HI_OP_StageLoad__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Encience/apaga el trigger HI_OP_StageLoad</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Encience/apaga el trigger HI_OP_StageLoad</inlineHelpText>
+        <label>HI_OP_StageLoad</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OPFI001_Incidencias__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Swithc de encendido y apagado</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Encendido / apagado</inlineHelpText>
+        <label>OPFI001_Incidencias</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Service__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>swithc Opportunity_Service</description>
+        <externalId>false</externalId>
+        <label>Opportunity_Service</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TriggerOportunidad_Master__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Enciende/Apaga todos los trigger del objeto Opportunty.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enciende/Apaga todos los trigger del objeto Opportunty.</inlineHelpText>
+        <label>TriggerOportunidad_Master</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>User_tgr__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Switch de validacion del trigger User_tgr</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Encendido o apgado</inlineHelpText>
+        <label>User_tgr</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Trigger_Oportunidad</label>
+    <visibility>Public</visibility>
+</CustomObject>

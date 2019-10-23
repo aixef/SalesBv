@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign.Cartas_Origen__r$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.Cartas_Origen__r.Salidas_de_informaci_n__r$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.Cartas_Origen__r.Salidas_de_informaci_n__r$CRM_WF_Folio_Carta_Recurrente__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Cartas_Origen__r.Salidas_de_informaci_n__r.Bases__r$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.Cartas_Origen__r.Salidas_de_informaci_n__r$CRM_WF_Etapa_De_Salida_De_Informacion__c</field>
+    </columns>
+    <columns>
+        <field>Campaign.Cartas_Origen__r.Salidas_de_informaci_n__r$CRM_WF_Fecha_De_La_C_Recurrente__c</field>
+    </columns>
+    <currency>MXN</currency>
+    <description>Cartas recurrentes que están pendientes de aprobación por el JM y tienen más de 3 días desde su fecha de salida.</description>
+    <filter>
+        <criteriaItems>
+            <column>Campaign.Cartas_Origen__r.Salidas_de_informaci_n__r$CRM_WF_Etapa_De_Salida_De_Informacion__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Pendiente</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.Cartas_Origen__r$CRM_WF_Canales_Com_Carta_Custodia__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Correo Electrónico</value>
+        </criteriaItems>
+        <language>es</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign$CRM_WF_Area_Solicitante__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Cartas Recurrentes Pendientes por JM</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CRM_WF_Camp_con_Cartas_O_con_Cartas_R_con_Bases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Campaign.Cartas_Origen__r.Salidas_de_informaci_n__r$CRM_WF_Fecha_De_La_C_Recurrente__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

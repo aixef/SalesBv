@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Sirve para agregar los campos para filtrar los miembros de campañas</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Limite__c</fullName>
+        <externalId>false</externalId>
+        <label>Limite</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_WB_ph_Telefono1__c</fullName>
+        <description>Campo que sirve para guardar el teléfono de un miembro de campaña</description>
+        <externalId>false</externalId>
+        <label>Teléfono 1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>MX_WB_ph_Telefono2__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>MX_WB_ph_Telefono3__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono 3</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <label>Campos de filtrado</label>
+    <visibility>Public</visibility>
+</CustomObject>

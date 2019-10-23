@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación Workflow, es mandada en el  inicio de la solicitud de carga de base del canal CRM</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Lista de Espera CRM</name>
+    <style>formalLetter</style>
+    <subject>Solicitud de carga de base por {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Area_solicitante__c} para el {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c} Canal CRM</subject>
+    <textOnly>Solicitud de Carga de Base
+Solicitante:
+
+{!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Area_solicitante__c}
+
+{!CRM_WF_Planeacion_Calendario_CRM__c.GBL_WF_Generador__c}
+
+Folio: {!CRM_WF_Planeacion_Calendario_CRM__c.Name}.
+
+Fecha de Carga:{!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Carga__c}
+Día de la semana: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Dia__c}
+
+
+
+Canal Solicitado: CRM
+
+Volumen solicitado: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_CRM__c}
+
+Volumen acumulado solicitado: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen_Solicitado_CRM__c}
+
+Volumen aprobado: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Volumen_Aprobado_CRM__c}
+
+Lista de Espera: {!CRM_WF_Calendario_CRM__c.CRM_WF_Lista_de_Espera_CRM__c}
+
+Rechazado: {!CRM_WF_Calendario_CRM__c.CRM_WF_Rechazado_CRM__c}
+
+
+
+Campaña:
+
+
+
+Nombre: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Nombre_Campana__c}
+
+Tipo de Campaña: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Tipo_de_Campa_a__c}
+
+Fecha de inicio de campaña: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Inicio_Campana__c}
+
+Fecha fin de campaña: {!CRM_WF_Planeacion_Calendario_CRM__c.CRM_WF_Fecha_Fin_Campana__c}
+
+
+
+Da click en el siguiente vínculo para ver el detalle del registro: Planeación Calendario CRM
+
+
+
+Da click en el siguiente vínculo para ver el detalle completo de la fecha en el Calendario CRM
+Para aprobar o rechazar esta campaña, haga clic en este vínculo Aprobación de Carga o responda a este correo electrónico con una de estas palabras en la primera línea del mensaje: APROBAR, APROBADO, RECHAZAR, RECHAZADO, NO.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,17 @@
+<!--  
+  @Event Name			: MX_SB_VTS_UpdateQuoteCot
+  @Description        	: Evento para actualizar cotizacón de la oportunidad
+  @Author             	: Eduardo Hernández Cuamatzi
+  @Proyecto				: BBVA
+  @Last Modified By   	: Eduardo Hernández Cuamatzi
+  @Usos                	: 
+    MX_WB_TM_Cotizador_cmp
+    MX_SB_VTS_QuoteFinder_Aura
+  ==============================================================================
+  Ver         Date                     Author      		      	Modification
+  ==============================================================================
+  1.0    	20/06/2019 			Eduardo Hernández Cuamatzi		Versión inicial
+-->
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="FolioCotizacion" type="String"/>
+</aura:event>

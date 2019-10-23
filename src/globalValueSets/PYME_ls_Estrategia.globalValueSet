@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Atracción de nuevos socios</fullName>
+        <default>false</default>
+        <label>Atracción de nuevos socios</label>
+    </customValue>
+    <customValue>
+        <fullName>Cierre línea de negocios</fullName>
+        <default>false</default>
+        <label>Cierre línea de negocios</label>
+    </customValue>
+    <customValue>
+        <fullName>Compra, sustitución de maquinaria</fullName>
+        <default>false</default>
+        <label>Compra, sustitución de maquinaria</label>
+    </customValue>
+    <customValue>
+        <fullName>Crecimiento de instalaciones</fullName>
+        <default>false</default>
+        <label>Crecimiento de instalaciones</label>
+    </customValue>
+    <customValue>
+        <fullName>Desinversión</fullName>
+        <default>false</default>
+        <label>Desinversión</label>
+    </customValue>
+    <customValue>
+        <fullName>Diversificación de mercado</fullName>
+        <default>false</default>
+        <label>Diversificación de mercado</label>
+    </customValue>
+    <customValue>
+        <fullName>Eficiencias de costos/gastos</fullName>
+        <default>false</default>
+        <label>Eficiencias de costos/gastos</label>
+    </customValue>
+    <customValue>
+        <fullName>Expansión de puntos de venta</fullName>
+        <default>false</default>
+        <label>Expansión de puntos de venta</label>
+    </customValue>
+    <customValue>
+        <fullName>Exportación</fullName>
+        <default>false</default>
+        <label>Exportación</label>
+    </customValue>
+    <customValue>
+        <fullName>Incremento capital</fullName>
+        <default>false</default>
+        <label>Incremento capital</label>
+    </customValue>
+    <customValue>
+        <fullName>Mejora tecnológica</fullName>
+        <default>false</default>
+        <label>Mejora tecnológica</label>
+    </customValue>
+    <customValue>
+        <fullName>Nueva planta</fullName>
+        <default>false</default>
+        <label>Nueva planta</label>
+    </customValue>
+    <customValue>
+        <fullName>Nuevos productos y servicios</fullName>
+        <default>false</default>
+        <label>Nuevos productos y servicios</label>
+    </customValue>
+    <customValue>
+        <fullName>Renegociación, sustitución de proveedores</fullName>
+        <default>false</default>
+        <label>Renegociación, sustitución de proveedores</label>
+    </customValue>
+    <customValue>
+        <fullName>Eciencias de costos/gastos</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Eciencias de costos/gastos</label>
+    </customValue>
+    <description>Lista de selección global para los valores de los campos de estrategia de los reportes de visita de riesgos PYME</description>
+    <masterLabel>Estrategia PYME</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

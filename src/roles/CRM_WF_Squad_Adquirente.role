@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Squad Adquirente</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Squad Adquirente</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>CRM_WF_Gerencia_Squads</parentRole>
+</Role>

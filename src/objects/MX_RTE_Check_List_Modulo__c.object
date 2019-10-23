@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_RTE_M_dulo_RCI_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>MX_RTE_Modulo_RCI</fullName>
+        <fields>Name</fields>
+        <fields>MX_RTE_Estatus__c</fields>
+        <label>Módulo RCI</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto donde se encuentra la información necesaria del RCI</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>MX_RTE_Area__c</fullName>
+        <description>Área que solicita el RSI</description>
+        <externalId>false</externalId>
+        <label>Área que solicita</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Seguros</fullName>
+                    <default>false</default>
+                    <label>Seguros</label>
+                </value>
+                <value>
+                    <fullName>Hipotecario</fullName>
+                    <default>false</default>
+                    <label>Hipotecario</label>
+                </value>
+                <value>
+                    <fullName>CRM</fullName>
+                    <default>false</default>
+                    <label>CRM</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Cat_logo__c</fullName>
+        <description>Catálogo de RCI</description>
+        <externalId>false</externalId>
+        <label>Catálogo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>MSA</fullName>
+                    <default>false</default>
+                    <label>MSA</label>
+                </value>
+                <value>
+                    <fullName>Contrato</fullName>
+                    <default>false</default>
+                    <label>Contrato</label>
+                </value>
+                <value>
+                    <fullName>Dictamen Jurídico</fullName>
+                    <default>false</default>
+                    <label>Dictamen Jurídico</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Comite_ARO__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Comité ARO</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Dias_de_Retraso__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+(TODAY() -  MX_RTE_Fecha_de_Compromiso__c )&lt;0 || ( MX_RTE_Fecha_de_cumplimiento__c  -MX_RTE_Fecha_de_Compromiso__c) &lt; 0,
+0,
+IF( ISBLANK(MX_RTE_Fecha_de_cumplimiento__c),TODAY()- MX_RTE_Fecha_de_Compromiso__c, MX_RTE_Fecha_de_cumplimiento__c - MX_RTE_Fecha_de_Compromiso__c)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Días de Retraso</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Estatus__c</fullName>
+        <description>Estatus del RCI</description>
+        <externalId>false</externalId>
+        <label>Estatus</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pendiente</fullName>
+                    <default>false</default>
+                    <label>Pendiente</label>
+                </value>
+                <value>
+                    <fullName>En proceso</fullName>
+                    <default>false</default>
+                    <label>En proceso</label>
+                </value>
+                <value>
+                    <fullName>Atendida</fullName>
+                    <default>false</default>
+                    <label>Atendida</label>
+                </value>
+                <value>
+                    <fullName>Desestimada</fullName>
+                    <default>false</default>
+                    <label>Desestimada</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Feature__c</fullName>
+        <description>Campo de principal detalle con Casos</description>
+        <externalId>false</externalId>
+        <label>Feature</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Pedidos</relationshipLabel>
+        <relationshipName>M_dulos_RCI</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Fecha_de_Compromiso__c</fullName>
+        <description>Fecha de compromiso para el cumplimiento del Módulo RCI</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de Compromiso</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Fecha_de_cumplimiento__c</fullName>
+        <description>Fecha de cumplimiento de RCI</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha de cumplimiento</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Infraccion__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  MX_RTE_Dias_de_Retraso__c &gt; 0, IMAGE(&quot;https://bancomer-retail--wfc--c.cs25.content.force.com/servlet/servlet.ImageServer?id=0151b0000008Rid&amp;oid=00D1b0000008s40&amp;lastMod=1553254868000&quot;, &quot;HAY UN RETRASO EN LA FECHA DE CUMPLIMIENTO RESPECTO A LA FECHA DE COMPROMISO&quot;, 30, 30)
+, IMAGE(&quot;https://bancomer-retail--wfc--c.cs25.content.force.com/servlet/servlet.ImageServer?id=0151b0000008UzQ&amp;oid=00D1b0000008s40&amp;lastMod=1554348738000&quot;, &quot;La fecha de cumplimiento aún no supera la fecha de compromiso&quot;, 30, 30)  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Infracción</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Justificaci_n_de_Cambio_de_Fecha__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Justificación de Cambio de Fecha</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Mesa_de_especialistas__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Mesa de especialistas</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Notas_Observaciones__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Notas/Observaciones</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Organo_de_sanci_n__c</fullName>
+        <description>Órgano de sanción</description>
+        <externalId>false</externalId>
+        <label>Estatus</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>En Proceso</fullName>
+                    <default>true</default>
+                    <label>En Proceso</label>
+                </value>
+                <value>
+                    <fullName>Aprobado</fullName>
+                    <default>false</default>
+                    <label>Aprobado</label>
+                </value>
+                <value>
+                    <fullName>Comité ARO</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Comité ARO</label>
+                </value>
+                <value>
+                    <fullName>Documentación</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Documentación</label>
+                </value>
+                <value>
+                    <fullName>Mesa de especialistas</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Mesa de especialistas</label>
+                </value>
+                <value>
+                    <fullName>RCI/Contraloría</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>RCI/Contraloría</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Otro__c</fullName>
+        <description>Campo para escribir otra opción que no esté sugerida.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Otro</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Pedido__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo de lookup en checklist módulo para asociarle un pedido</description>
+        <externalId>false</externalId>
+        <label>Pedido</label>
+        <referenceTo>MX_RTE_Pedido_RCI__c</referenceTo>
+        <relationshipLabel>Features</relationshipLabel>
+        <relationshipName>Check_List_M_dulos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_RCI_Contraloria__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>RCI/Contraloría</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Tipo__c</fullName>
+        <description>Tipo de RCI</description>
+        <externalId>false</externalId>
+        <label>Tipo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Presente</fullName>
+                    <default>false</default>
+                    <label>Presente</label>
+                </value>
+                <value>
+                    <fullName>Subsecuente</fullName>
+                    <default>false</default>
+                    <label>Subsecuente</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Tipo_de_Registro_del_Pedido__c</fullName>
+        <description>Campo para identificar a que tipo de registro pertenece el pedido</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Tipo de Registro del Pedido</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Validado_Por_Mesa__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>¿El checklist está validado por la mesa de especialistas?</description>
+        <externalId>false</externalId>
+        <label>¿Validado por mesa de especialistas?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Validado__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>¿Está validado el RCI?</description>
+        <externalId>false</externalId>
+        <label>Validado</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Check List Módulo</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Asunto__c</columns>
+        <columns>MX_RTE_Iniciativa__c</columns>
+        <columns>MX_RTE_Notas_Observaciones__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Checklist en Proceso</label>
+    </listViews>
+    <nameField>
+        <displayFormat>MOD-{000000}</displayFormat>
+        <label>Folio</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Check List Módulos</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>MX_RTE_Justificar_Cambio_de_Fecha</fullName>
+        <active>true</active>
+        <description>Justifica el cambio de fecha de Cumplimiento</description>
+        <errorConditionFormula>NOT(ISBLANK(PRIORVALUE( MX_RTE_Fecha_de_cumplimiento__c)))&amp;&amp;  ISCHANGED(MX_RTE_Fecha_de_cumplimiento__c) &amp;&amp; ISBLANK( MX_RTE_Justificaci_n_de_Cambio_de_Fecha__c )</errorConditionFormula>
+        <errorDisplayField>MX_RTE_Justificaci_n_de_Cambio_de_Fecha__c</errorDisplayField>
+        <errorMessage>Justifica el cambio de fecha de Cumplimiento</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>MX_RTE_Agregar_Condicionantes</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Agregar Condicionantes</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/flow/MX_RTE_Crear_Condicionantes?retURL={!MX_RTE_Check_List_Modulo__c.Id}&amp;IdCheckList={!MX_RTE_Check_List_Modulo__c.Id}</url>
+    </webLinks>
+</CustomObject>

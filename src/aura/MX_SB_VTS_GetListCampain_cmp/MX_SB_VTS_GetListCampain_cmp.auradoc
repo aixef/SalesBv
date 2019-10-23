@@ -1,0 +1,29 @@
+<aura:documentation>
+	<aura:description>Obtiene las bandejas y permite crear bandejas para campañas de ser necesario.</aura:description>
+	<aura:example name="Documentación" ref="exampleComponentName" label="Label">
+		<p>Construccion del componente base.</p>
+		<p>El componente se utiliza para recuperar las listas y/o crear las bandejas del servicio</p>
+        <p>attribute Bandejas: Lista que almacena las bandejas existentes.</p>
+		<p>attribute enableModal: Boolean que activa desactiva el modal.</p>
+		<p>attribute LeadTray: Objeto que almacena los registros de bandejas nuevas.</p>
+		<p>attribute NameCamp: Nombre de la campaña</p>
+		<p>attribute Camp: Id del registro Campaña actual.</p>
+		<p>attribute ProductID: Id del registro Producto actual.</p>
+		<p>attribute IDBandeja: Id del registro Bandeja actual.</p>
+		<p>attribute Descrip: Descripcion de la bandeja.</p>
+		<p>attribute Message: Mensaje de error.</p>
+		<p>attribute Message2: Mensaje de error2.</p>
+		<p>attribute searchKeyword: Palabra utilizada para realizar busqueda 1 valor.</p>
+		<p>attribute SearchKeyWord2: Palabra utilizada para realizar busqueda 2 valor.</p>
+		<p>attribute objectAPIName: Objeto usado para la busqueda de la campaña</p>
+		<p>attribute IconName: Nombre del icono.</p>
+		<p>attribute label: Etiqueta de registro</p>
+		<p>attribute selectedRecord: ID del registro seleccionado.</p>
+		<p>attribute Bamdeja: Bandeja seleccionada</p>
+		<p>attribute Datelead: Fecha seleccionada.</p>
+		<p>Event init: Evento Invocado la inicio del componente.</p>
+		<p>Event oSelectedRecordEvent: Evento detonado al cambio de campaña</p>
+		<p>Event oSelectedLEadEvent: Evento que envia los datos de la campaña.</p>
+		<p>Se agrega el guardado del servicio para las bandejas de smart</p>
+	</aura:example>
+</aura:documentation>

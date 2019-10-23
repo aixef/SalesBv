@@ -1,0 +1,53 @@
+<aura:component controller="MX_SB_VTS_APX_ReagendaLead" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:lightningQuickActionWithOutHeader" access="global" >
+
+    <aura:attribute name="newTask" type="Task" default="{'sobjectType':'Task',
+                                                         'Subject': '',
+                                                         'Description': '',
+                                                         'FechaHoraReagenda__c': ''}"/>
+    <aura:attribute name="manager" type="Object[]" />
+    <aura:attribute name="taskSubject" type="String" />
+    <aura:attribute name="taskActivityDate" type="datetime" />
+    <aura:attribute name="taskDescription" type="String" />
+    <aura:attribute name="currentDate" type="datetime" />
+    <aura:attribute name="isDisabled" type="boolean" />
+    <aura:attribute name="isSegmented"  type="boolean" />
+	<aura:handler name="init" action="{!c.getUsr}" value="{!this}"/>
+
+    <div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h4 class="slds-text-heading--medium">Reagendar</h4>
+    </div>
+    <aura:if isTrue="{!v.isSegmented}">
+        <aura:set attribute="else">
+            <lightning:input value="{!v.manager[0].Manager.Name}" label="Asignado a supervisor: "  disabled="true" />
+        </aura:set>
+    </aura:if>
+    <lightning:input  label="Motivo: " required="true" placeholder="Ingrese el motivo..." value="{!v.taskSubject}"  messageWhenValueMissing="Este campo es requerido." onchange="{!c.handleChange}" disabled="true"/>
+    <lightning:input type="datetime" required="true"  messageWhenValueMissing="Este campo es requerido." aura:id="taskDate" label="Horario: " value="{!v.taskActivityDate}" onchange="{!c.handleChange}" displayDatePicker="true"/>
+
+    <label class="slds-form-element__label" style="margin-right: 0.5rem;">Notas: </label>
+    <lightning:helptext content="Opcional."/>
+    <lightning:textarea aura:id="taskDescription" maxlength="140" rows="5"  onchange="{!c.handleChange}" value="{!v.taskDescription}" class="customIcon"/><br/>
+
+    <lightning:button disabled="{!v.isDisabled}" variant="brand" class="slds-button slds-button_neutral" label="Agregar" onclick="{!c.createNewTask}"/>
+    <lightning:button variant="brand" class="slds-button slds-button_neutral" label="Cerrar" onclick="{!c.cancelBtn}"/>
+
+    <aura:html tag="style">
+       .slds-modal__container{
+        height : auto;
+        width: 75%;
+        max-width: 60rem;
+        }
+		.modal-body{
+        height : 600px !important;
+        max-height: 500px !important;
+        }
+
+		.customFooter{
+        display: inline !important;
+        }
+        .slds-textarea {
+    	height:100px !important;
+        }
+    </aura:html>
+
+</aura:component>

@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>MX_RTE_Entregable_P_gina_de_registro</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>MX_RTE_EQ</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>MX_RTE_EQ</fullName>
+        <fields>Name</fields>
+        <fields>MX_RTE_Cumplimiento__c</fields>
+        <fields>MX_RTE_Porcentaje_de_Cumplimiento__c</fields>
+        <fields>MX_RTE_Ponderacion__c</fields>
+        <fields>MX_RTE_Capex__c</fields>
+        <fields>MX_RTE_Opex__c</fields>
+        <fields>MX_RTE_Iniciativa__c</fields>
+        <fields>Programa__c</fields>
+        <label>EQ</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Unión de Iniciativas con Features</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>MX_RTE_Ponderacion_disponible__c</fullName>
+        <description>Se utiliza para indicar visualmente el porcentaje con el que aún se cuenta en el MVP</description>
+        <externalId>false</externalId>
+        <formula>1 -  MX_RTE_Resumen__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ponderacion disponible</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>   
+ <fields>
+        <fullName>MX_RTE_Agrupador__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( MX_RTE_Resumen__c *100)&amp;&apos;% - CAPEX: &apos; &amp; 
+TEXT(ROUND(( MX_RTE_Capex__c/1000),0)) &amp; &apos;K - OPEX: &apos; &amp; 
+TEXT(ROUND(( MX_RTE_Opex__c/1000),0)) &amp; &apos;K&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agrupador</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Capex_Final__c</fullName>
+        <externalId>false</externalId>
+        <label>Capex Final</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Capex__c</fullName>
+        <description>Resumen de Capex de los Features asociados</description>
+        <externalId>false</externalId>
+        <label>Capex</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Comite_ARO__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo para identificar si un MVP requiere validación por parte del Comité ARO</description>
+        <externalId>false</externalId>
+        <label>Comité ARO</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Cumplimiento__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF
+(
+  MX_RTE_Porcentaje_de_Cumplimiento__c &lt;= 0.20,
+  IMAGE(&quot;/servlet/servlet.FileDownload?file=0151b0000008aDN&quot;, &quot;Incumplimiento&quot;,52,52),
+  IF
+  (
+    MX_RTE_Porcentaje_de_Cumplimiento__c &gt; 0.20 &amp;&amp; MX_RTE_Porcentaje_de_Cumplimiento__c &lt;= 0.80,
+    IMAGE(&quot;/servlet/servlet.FileDownload?file=0151b0000008aDI&quot;, &quot;En proceso&quot;,52,52),
+    IMAGE(&quot;/servlet/servlet.FileDownload?file=0151b0000008aDD&quot;, &quot;Cumplimiento&quot;,52,52)
+  )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>% Cumplimiento</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Descripcion__c</fullName>
+        <description>Campo para describir al MVP</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Descripción</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Estado__c</fullName>
+        <externalId>false</externalId>
+        <label>Estado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Validación Portafolio</fullName>
+                    <default>true</default>
+                    <label>Validación Portafolio</label>
+                </value>
+                <value>
+                    <fullName>Aprobado Portafolio</fullName>
+                    <default>false</default>
+                    <label>Aprobado Portafolio</label>
+                </value>
+                <value>
+                    <fullName>Descartado Portafolio</fullName>
+                    <default>false</default>
+                    <label>Descartado Portafolio</label>
+                </value>
+                <value>
+                    <fullName>Confirmado</fullName>
+                    <default>false</default>
+                    <label>Confirmado</label>
+                </value>
+                <value>
+                    <fullName>Sin Atención</fullName>
+                    <default>false</default>
+                    <label>Sin Atención</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Features_en_validacion_Portafolio__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Campo de resumen para cada Feature que esta en validación portafolio</description>
+        <externalId>false</externalId>
+        <label>Features en validación Portafolio</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Fecha_Estimada_de_Instalacion__c</fullName>
+        <description>Campo que indica la fecha en la que se estima que el MVP será instalado.</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Fecha Estimada de Instalación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Iniciativa__c</fullName>
+        <description>Campo de busqueda al objeto Iniciativa.</description>
+        <externalId>false</externalId>
+        <label>Iniciativa</label>
+        <referenceTo>MX_RTE_Iniciativa__c</referenceTo>
+        <relationshipName>Resumen_Ponderaciones</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Listo_para_Portafolio__c</fullName>
+        <description>Solo es verdadero cuando todas las features de ese EQ están en la etapa de validación portafolio</description>
+        <externalId>false</externalId>
+        <formula>IF
+(
+ MX_RTE_No_Features__c&gt;0 &amp;&amp; (MX_RTE_No_Features__c =  MX_RTE_Features_en_validacion_Portafolio__c),
+ TRUE,
+ FALSE
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Listo para Portafolio</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Mesa_de_especialistas__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo que indica si el MVP requiere revisión por parte de la Mesa de especialistas</description>
+        <externalId>false</externalId>
+        <label>Mesa de especialistas</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Motivo_de_Descarte__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo de Descarte</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>MX_RTE_Estado__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Backlog</fullName>
+                    <default>false</default>
+                    <label>Backlog</label>
+                </value>
+                <value>
+                    <fullName>Portafolio</fullName>
+                    <default>false</default>
+                    <label>Portafolio</label>
+                </value>
+                <value>
+                    <fullName>Presupuesto</fullName>
+                    <default>false</default>
+                    <label>Presupuesto</label>
+                </value>
+                <value>
+                    <fullName>Área de Apoyo</fullName>
+                    <default>false</default>
+                    <label>Área de Apoyo</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Descartado Portafolio</controllingFieldValue>
+                <controllingFieldValue>Sin Atención</controllingFieldValue>
+                <valueName>Portafolio</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Descartado Portafolio</controllingFieldValue>
+                <controllingFieldValue>Sin Atención</controllingFieldValue>
+                <valueName>Presupuesto</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Descartado Portafolio</controllingFieldValue>
+                <controllingFieldValue>Sin Atención</controllingFieldValue>
+                <valueName>Área de Apoyo</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_No_Features_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;No. Features: &apos; &amp; TEXT( MX_RTE_No_Features__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>No. Features Formula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_No_Features__c</fullName>
+        <description>Contador de Features asociados</description>
+        <externalId>false</externalId>
+        <label>No. Features</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Opex_Final__c</fullName>
+        <externalId>false</externalId>
+        <label>Opex Final</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Opex__c</fullName>
+        <description>Resumen de Opex de los Features asociados</description>
+        <externalId>false</externalId>
+        <label>Opex</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_PI__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo de busqueda al Objeto de PI</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selecciona el Q para el que aplica el Entregable</inlineHelpText>
+        <label>Q</label>
+        <referenceTo>MX_RTE_PI__c</referenceTo>
+        <relationshipLabel>MVPs</relationshipLabel>
+        <relationshipName>Resumen_Ponderaciones</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Ponderacion__c</fullName>
+        <description>Campo espejo para el resumen de ponderación</description>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Ponderación</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Porcentaje_de_Cumplimiento__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>% Cumplimiento</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_RCI_Contraloria__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo que indica si el MVP requiere revisión por parte de RCI/Contraloría</description>
+        <externalId>false</externalId>
+        <label>RCI/Contraloría</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Resumen__c</fullName>
+        <description>Campo de Resumen a través del Flow Resumen Ponderación</description>
+        <externalId>false</externalId>
+        <label>Ponderación</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Validacion_CCC__c</fullName>
+        <description>Campo que indica si el MVP requiere la validación por parte de CCC.</description>
+        <externalId>false</externalId>
+        <label>Validación CCC</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>MX_RTE_Validaciones_GFD</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Validacion_Imp_Comercial__c</fullName>
+        <description>Campo que indica si el MVP requiere la validación de IC.</description>
+        <externalId>false</externalId>
+        <label>Validación Implementación Comercial</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>MX_RTE_Validaciones_GFD</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MX_RTE_Validacion_RCI__c</fullName>
+        <description>Campo que indica si el MVP requiere validación por parte de RCI</description>
+        <externalId>false</externalId>
+        <label>Validación RCI</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>MX_RTE_Validaciones_GFD</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Programa__c</fullName>
+        <externalId>false</externalId>
+        <formula>MX_RTE_Iniciativa__r.MX_RTE_Programa_Global__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Programa</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>MVP</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Descripcion__c</columns>
+        <columns>MX_RTE_Iniciativa__c</columns>
+        <columns>MX_RTE_PI__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MX_RTE_PI__c</field>
+            <operation>equals</operation>
+            <value>2Q19</value>
+        </filters>
+        <filters>
+            <field>MX_RTE_Listo_para_Portafolio__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Todos</label>
+    </listViews>
+    <listViews>
+        <fullName>Entregables_CRM</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Estado__c</columns>
+        <columns>MX_RTE_Descripcion__c</columns>
+        <columns>MX_RTE_Iniciativa__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Programa__c</field>
+            <operation>contains</operation>
+            <value>CRM</value>
+        </filters>
+        <filters>
+            <field>MX_RTE_Estado__c</field>
+            <operation>equals</operation>
+            <value>Aprobado Portafolio,Descartado Portafolio,Confirmado,Sin Atención</value>
+        </filters>
+        <label>Entregables CRM</label>
+    </listViews>
+    <listViews>
+        <fullName>MX_RTE_CCC</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Descripcion__c</columns>
+        <columns>MX_RTE_Iniciativa__c</columns>
+        <columns>MX_RTE_PI__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MX_RTE_Estado__c</field>
+            <operation>equals</operation>
+            <value>Confirmado</value>
+        </filters>
+        <label>CCC</label>
+        <sharedTo>
+            <role>MX_RTE_CCC</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_RTE_Detalle_Entregables</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Descripcion__c</columns>
+        <columns>MX_RTE_Iniciativa__c</columns>
+        <columns>MX_RTE_Features_en_validacion_Portafolio__c</columns>
+        <columns>MX_RTE_PI__c</columns>
+        <columns>Programa__c</columns>
+        <columns>MX_RTE_Ponderacion__c</columns>
+        <columns>MX_RTE_Capex__c</columns>
+        <columns>MX_RTE_Capex_Final__c</columns>
+        <columns>MX_RTE_Opex__c</columns>
+        <columns>MX_RTE_Opex_Final__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Detalle Entregables</label>
+    </listViews>
+    <listViews>
+        <fullName>MX_RTE_Implementacion_Comercial</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Descripcion__c</columns>
+        <columns>MX_RTE_Iniciativa__c</columns>
+        <columns>MX_RTE_PI__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MX_RTE_Estado__c</field>
+            <operation>equals</operation>
+            <value>Confirmado</value>
+        </filters>
+        <label>Implementación Comercial</label>
+        <sharedTo>
+            <role>MX_RTE_Implementacion_Comercial</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MX_RTE_RCI</fullName>
+        <columns>NAME</columns>
+        <columns>MX_RTE_Descripcion__c</columns>
+        <columns>MX_RTE_Iniciativa__c</columns>
+        <columns>MX_RTE_PI__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MX_RTE_Estado__c</field>
+            <operation>equals</operation>
+            <value>Confirmado</value>
+        </filters>
+        <label>RCI</label>
+        <sharedTo>
+            <role>MX_RTE_RCI</role>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>ENT-{000000}</displayFormat>
+        <label>Folio</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>MVPs</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>MX_RTE_Descripcion__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

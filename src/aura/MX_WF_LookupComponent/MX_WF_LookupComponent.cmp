@@ -1,0 +1,11 @@
+<aura:component implements="lightning:availableForFlowScreens" access="global">
+    <aura:attribute name="objectApiName" type="String" access="public" />
+    <aura:attribute name="fieldLabel" type="String" access="public" />
+    <aura:attribute name="fieldName" type="String" access="public" />
+    <aura:attribute name="selectedRecordId" type="String" access="public" />
+       
+    <lightning:recordEditForm objectApiName="{!v.objectApiName}">
+        <label class="fieldLabel">{!v.fieldLabel}</label>
+    	<lightning:inputField fieldName="{!v.fieldName}" onchange="{!c.handleOnChange}" />
+    </lightning:recordEditForm>
+</aura:component>

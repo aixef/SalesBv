@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación WF, se envía al JM confirmación de aprobación al siguiente estado</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Canal pasa a planeación Eg+</name>
+    <style>formalLetter</style>
+    <subject>El canal con folio {!CRM_WF_Artes__c.Name} se encuentra en la etapa de planeación y asignación de recursos</subject>
+    <textOnly>Te informamos que el Canal con folio: {!CRM_WF_Artes__c.Name}, ha sido validado por la agencia y se encuentra en la etapa &quot;Planeación y asignación de recursos&quot;, para más información puedes dar clic en la siguiente liga:
+
+Registro del canal en Salesforce</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

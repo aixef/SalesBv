@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>CRM_WF_Artes__c</entityName>
+    <fieldName>CRM_WF_Estatus__c</fieldName>
+    <masterLabel>Silverpop con cambios</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>CRM_WF_Subject__c</fieldNames>
+        <fieldNames>CRM_WF_Preheader__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;&lt;b&gt;Para que el Arte pueda llegar a su aprobación final por parte del Journey Manager es necesario llenar los campos de Subject y Preheader.&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Subject &amp; Preheader</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Email_Silverpop_con_cambios</recordTypeName>
+</PathAssistant>

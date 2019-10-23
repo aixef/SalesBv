@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Mail 4 Aviso al especialista que apoya</name>
+    <style>formalLetter</style>
+    <subject>Asignación de Incidencia {!Case.CaseNumber}</subject>
+    <textOnly>Por medio de la presente te informamos que la solicitud con número de folio {!Case.CaseNumber} ha sido asignada para tu apoyo con la siguiente información.
+Asunto: {!Case.Subject}
+Motivo del Caso: {!Case.Reason}
+Clasificación: {!Case.MX_WF_Clasificacion__c}
+Tipo de Asignación: {!Case.MX_WF_Tipo_de_Asignacion__c}
+
+Comentarios: {!ApprovalRequest.Comments}
+
+Si has recibido y procesado de forma exitosa la información favor de Aprobar o Rechazar el registro utilizando la siguiente liga:
+
+Incidencia Implementación Comercial</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

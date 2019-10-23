@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para la aplicación Workflow, se envía notificación del proceso de salida de información</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Notificación Salida con Brief</name>
+    <style>formalLetter</style>
+    <subject>Notificación de Salida de Información - Folio Carta Recurrente {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Folio_Carta_Recurrente__c}</subject>
+    <textOnly>Por medio de la presente le notificamos que se ha iniciado un proceso de Salida de Información con los siguientes datos:
+
+Nombre de la Campaña: {!Campaign.Name}
+Folio de la Campaña: {!Campaign.CRM_WF_FIC__c}
+
+Etapa de Salida de Información: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Etapa_De_Salida_De_Informacion__c}
+Número de Folio Campaña (FIC): {!Campaign.CRM_WF_FIC__c}
+Nombre de la Campaña: {!Campaign.Name}
+Tipo de Solicitud: Recurrente (Salida de Información)
+Folio Carta Recurrente: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Folio_Carta_Recurrente__c}
+Comentarios: {!ApprovalRequest.Comments}
+
+
+
+
+DATOS DE SALIDA DE INFORMACIÓN
+
+Número de bases: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Numero_de_Bases__c}
+Número de registros en bases: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Numero_de_registros_en_bases__c}
+Semáforo Cifras Control:{!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Monitoreo_Registros_en_Bases__c}
+Fecha de Salida de Información: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Fecha_De_La_C_Recurrente__c}
+Soporte de Salida: {!CRM_WF_Cartas_Recurrentes__c.CRM_WF_Soporte_De_Salida__c}
+Liga registro Carta Recurrente
+
+
+Criterios Autorizados en Carta Origen:
+
+Folio Carta Origen: {!CRM_WF_Cartas_Origen__c.Name}
+Vigencia:
+A partir de : {!CRM_WF_Cartas_Origen__c.CRM_WF_A_Partir_De__c} Hasta: {!CRM_WF_Cartas_Origen__c.CRM_WF_Hasta__c}
+Periodicidad del Envío: {!CRM_WF_Cartas_Origen__c.CRM_WF_Frecuencia__c}
+
+Total de Registros a Enviar en la Campaña: {!CRM_WF_Cartas_Origen__c.CRM_WF_Total_de_Registros__c}
+Total de Bases a Enviar en la Campaña: {!CRM_WF_Cartas_Origen__c.CRM_WF_Numero_De_Bases_A_Enviar__c}
+Total de Cartas: Recurrentes (eventos de salida de información) para la Campaña: {!CRM_WF_Cartas_Origen__c.CRM_WF_Total_De_C_Recurrentes__c}
+Total de Registros en Cartas Recurrentes:{!CRM_WF_Cartas_Origen__c.CRM_WF_Total_Registros_En_C_Recurrentes__c}
+Total de Bases en Cartas Recurrentes: {!CRM_WF_Cartas_Origen__c.CRM_WF_Total_Bases_En_C_Recurrentes__c}
+Fecha de Borrado de Información: La fecha límite del borrado es 30 días a partir de la aprobación de Seguridad
+Liga registro Carta Origen:
+
+SOLICITANTE
+
+Nombre del Solicitante: {!CRM_WF_Cartas_Origen__c.GBL_WF_Nombre_Del_Solicitante__c}
+Área Solicitante: {!CRM_WF_Cartas_Origen__c.CRM_WF_Area_Del_Solicitante__c}
+Área DG: Campañas CRM
+
+GENERADOR
+
+Nombre del Generador de Información: {!CRM_WF_Cartas_Origen__c.GBL_WF_Generador__c}
+Correo electrónico del Generador de Información: {!CRM_WF_Cartas_Origen__c.GBL_WF_Email_generador__c}
+Teléfono del Generador de Información: {!CRM_WF_Cartas_Origen__c.GBL_WF_Tel_Ext_generador__c}
+
+
+AUTORIZADORES
+
+Nombre Autorizador Generador Campañas: {!CRM_WF_Cartas_Origen__c.GBL_WF_Generador__c}
+Nombre Autorizador DG Campañas CRM: {!CRM_WF_Cartas_Origen__c.GBL_WF_Autorizador__c}
+Nombre Autorizador Inteligencia Comercial: Victor Arrioja Bashchuk
+Nombre Autorizador Fraud Operations MX: Juan Carlos Arena Rosas
+
+DESTINO DE INFORMACIÓN
+
+Destino de la Información: {!CRM_WF_Cartas_Origen__c.CRM_WF_Empresa_Area_Bancomer__c}
+Tipo de Envío: {!CRM_WF_Cartas_Origen__c.CRM_WF_Tipo_de_Envio__c}
+Nombre del Custodio de Información (1): {!CRM_WF_Cartas_Origen__c.GBL_WF_Nombre_Custodio_1__c}
+Correo electrónico del Custodio de Información (1): {!CRM_WF_Cartas_Origen__c.GBL_WF_Correo_Electronico_Custodio_1__c}
+Teléfono del Custodio de Información (1): {!CRM_WF_Cartas_Origen__c.GBL_WF_Telefono_Custodio_1__c}
+Nombre del Custodio de Información (2): {!CRM_WF_Cartas_Origen__c.GBL_WF_Nombre_Custodio_2__c}
+Correo electrónico del Custodio de Información (2): {!CRM_WF_Cartas_Origen__c.GBL_WF_Correo_Electronico_Custodio_2__c}
+Teléfono del Custodio de Información (2): {!CRM_WF_Cartas_Origen__c.GBL_WF_Telefono_Custodio_2__c}
+
+ORIGEN DEL PEDIDO
+
+Proyecto /Referencia: {!CRM_WF_Cartas_Origen__c.CRM_WF_Campana_Carta_Custodia__c}
+Objetivo: {!CRM_WF_Cartas_Origen__c.CRM_WF_Objetivo__c}
+
+
+REGRESO DE LA INFORMACIÓN
+
+¿Requiere regreso de información?: {!CRM_WF_Cartas_Origen__c.CRM_WF_Regreso_De_Informacion__c}
+Receptores adicionales: {!CRM_WF_Cartas_Origen__c.CRM_WF_Receptores_Adicionales__c}
+Uso de la información: {!CRM_WF_Cartas_Origen__c.CRM_WF_Uso_De_La_Informacion__c}
+
+
+Si ha recibido y procesado de forma exitosa la información favor de responder en la primera línea de este correo con alguna de las siguientes palabras: Aprobar, Aprobado, en caso contrario escribir Rechazar, Rechazado, No. Puede agregar comentarios en la segunda línea del correo.
+
+Si lo prefiere, puede Aprobar o Rechazar utilizando la siguiente liga:
+
+Registro de Aprobación</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

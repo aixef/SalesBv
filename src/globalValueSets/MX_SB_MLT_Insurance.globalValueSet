@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CONTIGO BANCOMER</fullName>
+        <default>false</default>
+        <label>CONTIGO BANCOMER</label>
+    </customValue>
+    <customValue>
+        <fullName>CONTIGO BANCOMER PLUS</fullName>
+        <default>false</default>
+        <label>CONTIGO BANCOMER PLUS</label>
+    </customValue>
+    <customValue>
+        <fullName>EMPRESA SEGURA BANCOMER</fullName>
+        <default>false</default>
+        <label>EMPRESA SEGURA BANCOMER</label>
+    </customValue>
+    <customValue>
+        <fullName>HOGAR SEGURO PLUS SB</fullName>
+        <default>false</default>
+        <label>HOGAR SEGURO PLUS SB</label>
+    </customValue>
+    <customValue>
+        <fullName>IVR SEGUROS BANCOMER</fullName>
+        <default>false</default>
+        <label>IVR SEGUROS BANCOMER</label>
+    </customValue>
+    <customValue>
+        <fullName>MULTIASISTENCIA</fullName>
+        <default>false</default>
+        <label>MULTIASISTENCIA</label>
+    </customValue>
+    <customValue>
+        <fullName>PENSIONES BANCOMER</fullName>
+        <default>false</default>
+        <label>PENSIONES BANCOMER</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGURO CASA HABITACION</fullName>
+        <default>false</default>
+        <label>SEGURO CASA HABITACION</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGUROS BANCOMER</fullName>
+        <default>false</default>
+        <label>SEGUROS BANCOMER</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGUROS PATRIMONIAL</fullName>
+        <default>false</default>
+        <label>SEGUROS PATRIMONIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGUROS SALUD</fullName>
+        <default>false</default>
+        <label>SEGUROS SALUD</label>
+    </customValue>
+    <description>Aseguradoras</description>
+    <masterLabel>Aseguradora</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

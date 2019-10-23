@@ -1,0 +1,31 @@
+<apex:page standardController="CRM_WF_Cartas_Origen__c" >
+  <hr/>
+  <p>  
+  <li>
+          La vigencia para el uso de las bases de datos es de máximo 30 días hábiles contados a partir de la autorización 
+          de la solicitud Origen/Madre o Recurrente correspondiente,siendo responsabilidad del custodio, el borrado seguro 
+          de dicha información y envío de la evidencia de la eliminación a más tardar el día siguiente hábil.
+  </li>
+  <li>
+          El generador de la información deberá indicar el número de registros que contiene el archivo al entregarlo para su 
+          cifrado al área de Protección Ciso Bancomer con copia a Autorizaciones México, así como las cifras de control (incluyendo
+          peso por base, número de registros y cifras totales en el mismo archivo). Una vez autorizada la solicitud, el generador 
+          dispone de 10 días hábiles para efectuar el depósito de la información en el servidor de seguridad o el folio asignado se
+          cancela.  
+  </li>
+  <li>
+          La forma de envío de la información es por mail cifrado, salvo que el tamaño de la base a entregar requiera de un medio físico
+          para el cuál deberá firmarse una responsiva que será entregada a 'Protección Ciso Bancomer'.
+  </li>
+  </p>
+  <hr/>  
+  <p>
+    <li>
+         El área de GESTIÓN CAMPAÑAS y CRM es responsable de filtrar a los clientes que hayan ejercido sus 'Derechos ARCO' y su registro en 
+         'REUS', previo a la entrega de la información solicitada para las campañas publicitarias, lo anterior, con el objetivo de que Grupo 
+         Bancomer y sus proveedores no ocupen la información para realizar oferta de productos, servicios o promociones (mercadeo) a los
+         mismos. Su incumplimiento puede ocasionar multas significativas a la institución.
+   </li>
+  </p>    
+  <hr/>  
+</apex:page>

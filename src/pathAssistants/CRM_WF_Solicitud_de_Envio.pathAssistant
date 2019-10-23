@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>CRM_WF_Solicitud_De_envio__c</entityName>
+    <fieldName>MX_WF_Etapa_Solicitud_Online__c</fieldName>
+    <masterLabel>CRM_WF_Solicitud_de_Envio</masterLabel>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

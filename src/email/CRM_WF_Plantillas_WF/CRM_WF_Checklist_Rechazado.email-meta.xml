@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>CRM_WF_Membrete_BBVA_WF</letterhead>
+    <name>Checklist Rechazado</name>
+    <style>formalLetter</style>
+    <subject>El Checklist {!CRM_WF_Checklist__c.Name} de la Campaña {!Campaign.Name} ha sido rechazado</subject>
+    <textOnly>Por medio de la presente le informamos el Checklist {!CRM_WF_Checklist__c.Name} ha sido rechazado con los siguientes datos:
+
+Comentarios: {!ApprovalRequest.Comments}
+
+Campaña: {!Campaign.Name}
+Folio (FIC): {!Campaign.CRM_WF_FIC__c}
+Área Solicitante: {!Campaign.CRM_WF_Area_Solicitante__c}
+Propietario de la Campaña: {!Campaign.CreatedBy}
+Estado de la Campaña: {!Campaign.Status}
+
+CHECKLIST - PIPELINE
+
+Documento de la Campaña: {!CRM_WF_Checklist__c.CRM_WF_Liga_Documento_De_Campana__c}
+
+Fecha de publicación: {!CRM_WF_Checklist__c.CRM_WF_Fecha_Publicacion__c}
+Fecha de carga: {!CRM_WF_Checklist__c.CRM_WF_Fecha_Carga__c}
+Fecha de Inicio Campaña: {!CRM_WF_Checklist__c.CRM_WF_Fecha_Inicio__c}
+Fecha Fin Campaña: {!CRM_WF_Checklist__c.CRM_WF_Fecha_Fin__c}
+
+Entrega de Campaña: {!CRM_WF_Checklist__c.CRM_WF_Entrega_De_Campana__c}
+Tipo de Campaña: {!CRM_WF_Checklist__c.CRM_WF_Tipo_de_Campana__c}
+
+Nombre de la Estrategia / Proyeto: {!CRM_WF_Checklist__c.CRM_WF_Nombre_Estrategia_Proyecto__c}
+Squad / Producto: {!CRM_WF_Checklist__c.CRM_WF_Squad_Producto__c}
+Objetivo: {!CRM_WF_Checklist__c.CRM_WF_Objetivo__c}
+Actividad: {!CRM_WF_Checklist__c.CRM_WF_Actividad__c}
+
+
+Para mayor información consulte el registro de Checklist en Salesforce:
+
+Registro de Checklist en Salesforce</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

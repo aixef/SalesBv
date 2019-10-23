@@ -1,0 +1,12 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+		<p>El componente se utiliza para seguir la ruta del proceso de ventas en los Lead</p>
+        <p>attribute recordId: Id del registro oportunidad actual.</p>
+        <p>attribute etapa: Etapa en la que se encuentra la oportunidad.</p>
+        <p>attribute script: Script recuperado para mostrar en la etapa pertinente.</p>
+        <p>attribute opport: SObject utilizado para el evento de actualización de etapas.</p>
+        <p>attribute OpptyRecord: SObject utilizado para el evento de actualización de etapas.</p>
+        <p>attribute showTab: Atributo que refleja si se debe colapsar o no el split.</p>
+	</aura:example>
+</aura:documentation>

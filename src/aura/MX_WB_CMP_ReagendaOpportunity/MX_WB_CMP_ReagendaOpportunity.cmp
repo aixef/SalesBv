@@ -1,0 +1,104 @@
+<aura:component controller="MX_WB_ReagendaOpportunityController" implements="force:lightningQuickActionWithoutHeader,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+
+    <aura:attribute name="recordId" type="Id" />
+
+    <aura:attribute name="turnoSeleccionado" type="String" />
+    <aura:attribute name="lstTurnos" type="List" />
+
+    <aura:attribute name="fechaMin" type="String" />
+    <aura:attribute name="fechaElegida" type="String" />
+
+    <aura:attribute name="horariosXTurno" type="List"/>
+    <aura:attribute name="turno" type="List"/>
+
+    <aura:attribute name="idUsuarioSeleccionado" type="String" />
+    <aura:attribute name="lstUsuarios" type="List" />
+    <aura:attribute name="lstUsuariosTurno" type="List" />
+    <aura:attribute name="objUser" type="User" />
+
+    <aura:attribute name="strComentarios" type="String" />
+
+    <aura:attribute name="mensaje" type="String" />
+    <aura:attribute name="tipoMensaje" type="String" />
+
+    <aura:handler name="init" action="{!c.init}" value="{!this}" />
+
+    <div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h1 class="title slds-text-heading--medium" >Reagendar</h1>
+    </div>
+
+    <div class="slds-modal__content slds-p-around--x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative" aura:id="modalbody" id="modalbody">
+        <form class="slds-form--stacked">
+
+            <div align="center">
+                <aura:if isTrue="{! !empty(v.mensaje)}">
+                    <div class="{! 'slds-notify slds-notify_alert ' + v.tipoMensaje}" role="alert" aura:id="idDviMessage">
+                        {!v.mensaje}
+                    </div>
+                </aura:if>
+
+            </div>
+
+            <lightning:select name="turnos" label="Turno" required="true" onchange="{!c.iniciaHorario}" value="{!v.turnoSeleccionado}">
+                <option value="">Selecciona opción</option>
+                <aura:iteration items="{!v.lstTurnos}" var="turno">
+                    <option value="{!turno}">{!turno}</option>
+                </aura:iteration>
+            </lightning:select>
+
+            <div class="slds-grid slds-gutters">
+
+                <div class="slds-col slds-size_4-of-7">
+                    <lightning:input aura:id="validaFecha" type="date" min="{!v.fechaMin}"
+                                     label="Fecha de reagenda" name="pagovencimiento" value="{!v.fechaElegida}"
+                                     required="true" messageWhenValueMissing="Campo requerido" />
+                </div>
+
+                <div class="slds-col slds-size_3-of-7">
+                    {!v.body}
+                </div>
+            </div>
+
+            <lightning:select name="asesores" label="Asignar a" required="true" value="{!v.idUsuarioSeleccionado}">
+                <option value="">Selecciona opción</option>
+                <aura:iteration items="{!v.lstUsuariosTurno}" var="user">
+                    <option value="{!user.Id}">{!user.Name}</option>
+                </aura:iteration>
+            </lightning:select>
+
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning:textarea name="Notas" value="{!v.strComentarios}" class="topText" label="Notes" maxlength="300" resize="false" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+        <div class="forceChangeRecordTypeFooter">
+            <ui:button class="slds-button slds-button_neutral" label="Cancel" press="{! c.cancel}" />
+            <lightning:button label="Save" onclick="{!c.save}"/>
+        </div>
+    </div>
+
+    <aura:html tag="style">
+        .cuf-content {
+        	padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        	padding: 0rem !important;
+        }
+        .slds-modal__content{
+        	overflow-y:hidden !important;
+        	height:unset !important;
+        	max-height:unset !important;
+        }
+        .slds-modal__container{
+        	max-width: 25rem;
+        }
+
+        .slds-p-around_x-small, .slds-p-around--x-small {
+        	padding: 2rem;
+        }
+    </aura:html>
+</aura:component>
